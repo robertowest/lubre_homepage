@@ -1,0 +1,54 @@
+{% load static %}
+
+<header id="home" class="welcome-area">
+    <div class="header-top-information-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="header-top-info-left">
+                        <p>info@lubresrl.com.ar</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="header-top-info-right">
+                        {% include 'homepage/_social.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <img src="{% static 'logo.svg' %}" style="height: 30px; width: auto;"/> <a href="{% url 'homepage:homepage' %}">Lubre SRL</a>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="mainmenu">
+                        <div class="navbar navbar-nobg">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        <a class="smoth-scroll" href="{% url 'homepage:homepage' %}">Inicio</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'blog/_home.html' %}
+</header>

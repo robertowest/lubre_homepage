@@ -1,0 +1,66 @@
+{% extends 'tienda_base.html' %}
+{% load static %}
+
+{% block title %}
+    {% if categoria %}{{ categoria.descripcion }} {% else %} Productos {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% include 'tienda/_header.html' %}
+
+    <section id="service" class="service-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>{{object.descripcion}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 no-padding wow fadeInUp" data-wow-delay=".8s">
+                    imagen
+                </div>
+                <div class="col-md-8">
+                    <form>
+                        {% csrf_token %}
+
+                        <div class="form-group col-md-12">
+                            <label>Detalle :</label> 
+                            <textarea rows="6" name="detalle" class="form-control" value={{object.detalle}}></textarea>
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label>Categoría :</label> 
+                            <input type="text" name="categoria" class="form-control" value={{object.categoria}}>
+                        </div>
+    
+                        <div class="form-group col-md-4">
+                            <label>Precio :</label> 
+                            <input type="text" name="precio" class="form-control" placeholder="Precio" value={{object.precio}}>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label>Unidad :</label> 
+                            <input type="text" name="unidad" class="form-control" placeholder="Unidad" value={{object.unidad}}>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label>Litros :</label> 
+                            <input type="text" name="litros" class="form-control" placeholder="Litros" value={{object.litros}}>
+                        </div>
+    
+                        <div class="col-md-12">
+                            <div class="actions">
+                                <input type="submit" value="Cotizar" name="submit" id="submitButton" class="btn btn-lg btn-contact-bg" title="Envíe su mensaje">
+                            </div>
+                        </div>
+                    </form>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'homepage/_footer_bottom.html' %}
+
+{% endblock %}

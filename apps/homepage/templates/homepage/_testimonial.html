@@ -1,0 +1,33 @@
+{% load static %}
+
+<section id="testimonial" class="testimonial-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>Nuestros <span>clientes</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="testimonial-list wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
+                {% for obj in message %}
+                <div class="single-testimonial text-center">
+                    <img src="{{obj.image.url}}" class="img-circle" alt="">
+                    <h6 class="text-muted">{{obj.label}}</h6>
+                    <p>{{obj.text_large|safe}}</p>
+                    <h5>{{obj.text_short|safe}}</h5>
+                    <div class="rating">
+                        <ul>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

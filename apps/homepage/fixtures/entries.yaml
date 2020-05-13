@@ -1,0 +1,850 @@
+- model: homepage.entries
+  pk: 1
+  fields:
+    section: home
+    label: <i class="fa fa-home"></i> Home
+    text_short: '#home'
+    text_large: homepage/_header.html
+    image: ''
+    ordered: 0
+    active: true
+- model: homepage.entries
+  pk: 2
+  fields:
+    section: home
+    label: <i class="fa fa-heart"></i> Nosotros
+    text_short: '#about'
+    text_large: homepage/_about.html
+    image: ''
+    ordered: 7
+    active: true
+- model: homepage.entries
+  pk: 3
+  fields:
+    section: home
+    label: <i class="fa fa-cogs"></i> Servicios
+    text_short: '#service2'
+    text_large: homepage/_service2.html
+    image: ''
+    ordered: 1
+    active: true
+- model: homepage.entries
+  pk: 4
+  fields:
+    section: home
+    label: <i class="fa fa-users"></i> Equipo
+    text_short: '#team'
+    text_large: homepage/_team.html
+    image: ''
+    ordered: 0
+    active: false
+- model: homepage.entries
+  pk: 5
+  fields:
+    section: home
+    label: "<i class=\"fa fa-calculator\"></i> C\xE1lculos"
+    text_short: '#equivalencias'
+    text_large: homepage/_separator_1.html
+    image: ''
+    ordered: 2
+    active: true
+- model: homepage.entries
+  pk: 6
+  fields:
+    section: home
+    label: "\xBFPor qu\xE9 elegirnos?"
+    text_short: null
+    text_large: homepage/_why_choose_us.html
+    image: ''
+    ordered: 0
+    active: false
+- model: homepage.entries
+  pk: 7
+  fields:
+    section: home
+    label: video
+    text_short: null
+    text_large: homepage/_video.html
+    image: ''
+    ordered: 0
+    active: false
+- model: homepage.entries
+  pk: 8
+  fields:
+    section: home
+    label: <i class="fa fa-cogs"></i> Productos y Servicios
+    text_short: '#servicesCatalog'
+    text_large: homepage/_catalog.html
+    image: ''
+    ordered: 1
+    active: false
+- model: homepage.entries
+  pk: 9
+  fields:
+    section: home
+    label: <i class="fa fa-tasks"></i> Proyectos
+    text_short: null
+    text_large: homepage/_service_catalog.html
+    image: ''
+    ordered: 0
+    active: false
+- model: homepage.entries
+  pk: 10
+  fields:
+    section: home
+    label: <i class="fa fa-bullhorn"></i> Testimonio
+    text_short: '#testimonial'
+    text_large: homepage/_testimonial.html
+    image: ''
+    ordered: 0
+    active: false
+- model: homepage.entries
+  pk: 11
+  fields:
+    section: home
+    label: <i class="fa fa-dollar"></i> Ofertas
+    text_short: '#pricing'
+    text_large: homepage/_pricing.html
+    image: ''
+    ordered: 4
+    active: false
+- model: homepage.entries
+  pk: 12
+  fields:
+    section: home
+    label: <i class="fa fa-user"></i> Soy cliente
+    text_short: '#login'
+    text_large: homepage/_separator_2.html
+    image: ''
+    ordered: 8
+    active: true
+- model: homepage.entries
+  pk: 13
+  fields:
+    section: home
+    label: <i class="fa fa-file-text"></i> Blog
+    text_short: '#blog'
+    text_large: homepage/_blog.html
+    image: ''
+    ordered: 5
+    active: false
+- model: homepage.entries
+  pk: 14
+  fields:
+    section: home
+    label: <i class="fa fa-envelope"></i> Contacto
+    text_short: '#contact'
+    text_large: homepage/_contact.html
+    image: ''
+    ordered: 9
+    active: true
+- model: homepage.entries
+  pk: 15
+  fields:
+    section: home
+    label: "pie de p\xE1gina superior"
+    text_short: null
+    text_large: homepage/_footer_top.html
+    image: ''
+    ordered: 10
+    active: true
+- model: homepage.entries
+  pk: 16
+  fields:
+    section: home
+    label: "pie de p\xE1gina inferior"
+    text_short: null
+    text_large: homepage/_footer_bottom.html
+    image: ''
+    ordered: 11
+    active: true
+- model: homepage.entries
+  pk: 17
+  fields:
+    section: whyus
+    label: "Misi\xF3n de la Organizaci\xF3n"
+    text_short: null
+    text_large: "Somos una empresa que a trav\xE9s de la distribuci\xF3n de productos\
+      \ YPF, busca satisfacer a la clientela brindando un servicio de excelencia a\
+      \ partir del desarrollo de nuestros recursos humanos, de una estructura adecuada\
+      \ y alineada a la estrategia de nuestro principal proveedor, buscamos a partir\
+      \ de resultados, maximizar nuestro desempe\xF1o organizacional."
+    image: ''
+    ordered: 1
+    active: true
+- model: homepage.entries
+  pk: 18
+  fields:
+    section: whyus
+    label: "Vis\xF3n de la Organizaci\xF3n"
+    text_short: null
+    text_large: "Ser una empresa solida, que a partir de conformar una alianza estrat\xE9\
+      gica con nuestro principal proveedor, de su accionar con elevados est\xE1ndares\
+      \ \xE9ticos y profesionales, y de su desempe\xF1o eficiente, y de la entrega\
+      \ de un servicio diferenciado sea reconocida y elegida por el mercado tucumano."
+    image: ''
+    ordered: 2
+    active: true
+- model: homepage.entries
+  pk: 19
+  fields:
+    section: whyus
+    label: Nuestros Valores
+    text_short: null
+    text_large: "<b>Compromiso</b>: Con los objetivos y valores de la organizaci\xF3\
+      n.<br>\n<b>Responsabilidad</b>: Para utilizar todas las capacidades para cumplir\
+      \ con la tarea asignada.<br>\n<b>Profesionalismo</b>: Que implica desempe\xF1\
+      arse con idoneidad en sus tareas para lo cual se fomenta la capacitaci\xF3n\
+      \ permanente.<br>\n<b>Solidaridad</b>: Para desarrollar un ambiente laboral\
+      \ que promueva el bienestar de todos los integrantes y propicie la relaci\xF3\
+      n con la comunidad.<br>\n<b>Sentido de pertenencia</b>: Entendido como identificaci\xF3\
+      n con la cultura de la organizaci\xF3n.<br>\n<b>Transparencia</b>: Para difundir\
+      \ informaci\xF3n adecuada, fiel y veraz de la gesti\xF3n. Comunicaci\xF3n clara\
+      \ tanto interna como externa.<br>\n<b>Trabajo en equipo</b>: Como una manera\
+      \ de afrontar el desaf\xEDo laboral."
+    image: ''
+    ordered: 3
+    active: true
+- model: homepage.entries
+  pk: 20
+  fields:
+    section: whyus
+    label: RRHH
+    text_short: null
+    text_large: "El perfil de nuestros colaboradores se define por su iniciativa,\
+      \ capacidad de trabajo en equipo, resoluci\xF3n de problemas, toma de decisiones,\
+      \ predisposici\xF3n al aprendizaje y confiabilidad."
+    image: ''
+    ordered: 4
+    active: false
+- model: homepage.entries
+  pk: 21
+  fields:
+    section: whyus
+    label: Recursos Materiales
+    text_short: null
+    text_large: "Para desarrollar una gesti\xF3n eficiente, nuestra organizaci\xF3\
+      n considera de fundamental importancia contar con los recursos materiales y\
+      \ la tecnolog\xEDa necesaria para garantizar el cumplimiento de sus objetivos.\
+      \ Para ello disponemos de: Instalaciones: un local de ventas y oficinas administrativas\
+      \ ubicadas en el microcentro de San Miguel de Tucum\xE1n y un predio de casi\
+      \ 2 Has donde se ubica adem\xE1s de 600 metros cuadrados de oficinas administrativas,\
+      \ la planta de gas oil y el dep\xF3sito de 650 metros cuadrados destinado al\
+      \ almacenamiento de lubricantes, fertilizantes y agroqu\xEDmicos; este predio\
+      \ esta ubicado a 4 km de las cuidad sobre Ruta Nacional N\xB0 9 - autopista."
+    image: ''
+    ordered: 5
+    active: false
+- model: homepage.entries
+  pk: 22
+  fields:
+    section: whyus
+    label: Equipos
+    text_short: null
+    text_large: "Para la distribuci\xF3n de nuestros productos contamos con camionetas\
+      \ y camiones especialmente adaptados para estas tareas."
+    image: ''
+    ordered: 6
+    active: false
+- model: homepage.entries
+  pk: 23
+  fields:
+    section: whyus
+    label: "Tecnolog\xEDa"
+    text_short: null
+    text_large: "Contamos con tecnolog\xEDa de punta en nuestro sistema inform\xE1\
+      tico para poder mantener la fluidez de nuestra comunicaciones y brindar un servicio\
+      \ diferenciado a nuestros clientes ."
+    image: ''
+    ordered: 7
+    active: false
+- model: homepage.entries
+  pk: 24
+  fields:
+    section: about
+    label: Acerca de nosotros ...
+    text_short: Bienvenido a <span>Lubre SRL</span>
+    text_large: "Para alcanzar una posici\xF3n m\xE1s competitiva dentro de nuestra\
+      \ actividad buscamos la transformaci\xF3n de nuestra estructura organizacional\
+      \ adapt\xE1ndola a las exigencias del mercado. Para ello identificamos que nuestro\
+      \ prop\xF3sito es:<br><br>\n<b>Ser una empresa sustentable a partir de entregar\
+      \ una propuesta de valor a nuestros clientes, desarrollar las capacidades de\
+      \ nuestros colaboradores y obtener el reconocimiento de nuestra comunidad.</b><br><br>\n\
+      Para llevar adelante, hemos definido las bases que identifican y orientan nuestro\
+      \ actuar. A partir de la incorporaci\xF3n de nuevas unidades de negocio hemos\
+      \ planteado nuestra MISION y VISION para toda la organizaci\xF3n."
+    image: ''
+    ordered: 1
+    active: true
+- model: homepage.entries
+  pk: 25
+  fields:
+    section: service
+    label: YPF Agro
+    text_short: Texto breve sobre este grupo de servicio.
+    text_large: "Texto largo con informaci\xF3n de la servicio.\n<br><br>\nInformaci\xF3\
+      n de los productos que se ofrecen y posibles caracter\xEDsticas.\n<br><br>\n\
+      Enlaces a otroas p\xE1ginas ..."
+    image: agro
+    ordered: 1
+    active: true
+- model: homepage.entries
+  pk: 26
+  fields:
+    section: service
+    label: Combustibles
+    text_short: Texto breve sobre este grupo de servicio.
+    text_large: "Texto largo con informaci\xF3n de la servicio.\n<br><br>\nInformaci\xF3\
+      n de los productos que se ofrecen y posibles caracter\xEDsticas.\n<br><br>\n\
+      Enlaces a otroas p\xE1ginas ..."
+    image: combustible
+    ordered: 2
+    active: true
+- model: homepage.entries
+  pk: 27
+  fields:
+    section: service
+    label: "Estaci\xF3n de Servicio"
+    text_short: Texto breve sobre este grupo de servicio.
+    text_large: "Texto largo con informaci\xF3n de la servicio.\n<br><br>\nInformaci\xF3\
+      n de los productos que se ofrecen y posibles caracter\xEDsticas.\n<br><br>\n\
+      Enlaces a otroas p\xE1ginas ..."
+    image: full
+    ordered: 4
+    active: true
+- model: homepage.entries
+  pk: 28
+  fields:
+    section: service
+    label: "Log\xEDstica"
+    text_short: Texto breve sobre este grupo de servicio.
+    text_large: "Texto largo con informaci\xF3n de la servicio.\n<br><br>\nInformaci\xF3\
+      n de los productos que se ofrecen y posibles caracter\xEDsticas.\n<br><br>\n\
+      Enlaces a otroas p\xE1ginas ..."
+    image: logistica
+    ordered: 5
+    active: false
+- model: homepage.entries
+  pk: 29
+  fields:
+    section: service
+    label: "Construcci\xF3n"
+    text_short: Texto breve sobre este grupo de servicio.
+    text_large: "Texto largo con informaci\xF3n de la servicio.\n<br><br>\nInformaci\xF3\
+      n de los productos que se ofrecen y posibles caracter\xEDsticas.\n<br><br>\n\
+      Enlaces a otroas p\xE1ginas ..."
+    image: construccion
+    ordered: 5
+    active: true
+- model: homepage.entries
+  pk: 30
+  fields:
+    section: service
+    label: Gas
+    text_short: Texto breve sobre este grupo de servicio.
+    text_large: "Texto largo con informaci\xF3n de la servicio.\n<br><br>\nInformaci\xF3\
+      n de los productos que se ofrecen y posibles caracter\xEDsticas.\n<br><br>\n\
+      Enlaces a otroas p\xE1ginas ..."
+    image: gas
+    ordered: 6
+    active: true
+- model: homepage.entries
+  pk: 31
+  fields:
+    section: cataTag
+    label: Todos
+    text_short: '*'
+    text_large: null
+    image: ''
+    ordered: 1
+    active: true
+- model: homepage.entries
+  pk: 32
+  fields:
+    section: cataTag
+    label: Agro
+    text_short: .agro
+    text_large: null
+    image: ''
+    ordered: 2
+    active: true
+- model: homepage.entries
+  pk: 33
+  fields:
+    section: cataTag
+    label: Combustible
+    text_short: .combustible
+    text_large: null
+    image: ''
+    ordered: 3
+    active: true
+- model: homepage.entries
+  pk: 34
+  fields:
+    section: cataTag
+    label: Lubricante
+    text_short: .lubricante
+    text_large: null
+    image: ''
+    ordered: 4
+    active: true
+- model: homepage.entries
+  pk: 35
+  fields:
+    section: catalog
+    label: Infinia
+    text_short: combustible infinia
+    text_large: "primera l\xEDnea\nsegunda l\xEDnea\ntercera l\xEDnea"
+    image: catalog/1.jpg
+    ordered: 1
+    active: true
+- model: homepage.entries
+  pk: 36
+  fields:
+    section: catalog
+    label: Infinia Diesel
+    text_short: combustible infinia diesel
+    text_large: null
+    image: catalog/2.jpg
+    ordered: 2
+    active: true
+- model: homepage.entries
+  pk: 37
+  fields:
+    section: catalog
+    label: ELAION
+    text_short: lubricante
+    text_large: lubricante
+    image: catalog/3.jpg
+    ordered: 3
+    active: true
+- model: homepage.entries
+  pk: 38
+  fields:
+    section: catalog
+    label: Best Air
+    text_short: lubricante
+    text_large: lubricante
+    image: catalog/4.jpg
+    ordered: 4
+    active: true
+- model: homepage.entries
+  pk: 39
+  fields:
+    section: catalog
+    label: Bolsas
+    text_short: agro
+    text_large: agro
+    image: catalog/5.jpg
+    ordered: 5
+    active: true
+- model: homepage.entries
+  pk: 40
+  fields:
+    section: catalog
+    label: Cipermetrina
+    text_short: agro
+    text_large: agro
+    image: catalog/6.jpg
+    ordered: 6
+    active: true
+- model: homepage.entries
+  pk: 41
+  fields:
+    section: catalog
+    label: Plus Soliar
+    text_short: agro
+    text_large: agro
+    image: catalog/1.jpg
+    ordered: 7
+    active: true
+- model: homepage.entries
+  pk: 42
+  fields:
+    section: catalog
+    label: Cloruro de Potasio
+    text_short: agro
+    text_large: agro
+    image: catalog/2.jpg
+    ordered: 8
+    active: true
+- model: homepage.entries
+  pk: 43
+  fields:
+    section: catalog
+    label: Nitrato de Plata
+    text_short: agro
+    text_large: agro
+    image: catalog/3.jpg
+    ordered: 9
+    active: true
+- model: homepage.entries
+  pk: 44
+  fields:
+    section: message
+    label: Alfredo Diaz
+    text_short: Camionero
+    text_large: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+    image: message/3.jpg
+    ordered: 2
+    active: true
+- model: homepage.entries
+  pk: 45
+  fields:
+    section: message
+    label: Sergio Adjel
+    text_short: Comercial
+    text_large: Pellentesque in dolor sed turpis posuere bibendum a sed lorem. Quisque
+      sagittis mauris vel viverra auctor.
+    image: message/2.jpg
+    ordered: 1
+    active: true
+- model: homepage.entries
+  pk: 46
+  fields:
+    section: message
+    label: Corina Mariona
+    text_short: Secretaria
+    text_large: Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+      per inceptos himenaeos. Ut convallis dignissim libero, eu tempus tortor ultricies
+      vitae. Curabitur aliquam neque sed lacus consectetur, sit amet interdum lacus
+      vulputate. Quisque et nulla vel est gravida blandit. Interdum et malesuada fames
+      ac ante ipsum primis in faucibus. Phasellus quis eleifend mauris. Vestibulum
+      ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+      Nullam rhoncus ligula non dolor dignissim bibendum.
+    image: message/1.jpg
+    ordered: 3
+    active: true
+- model: homepage.entries
+  pk: 47
+  fields:
+    section: cataTag
+    label: Fertilizante
+    text_short: .fertilizante
+    text_large: null
+    image: ''
+    ordered: 5
+    active: true
+- model: homepage.entries
+  pk: 48
+  fields:
+    section: catalog
+    label: Nafta Super
+    text_short: combustible
+    text_large: null
+    image: catalog/4.jpg
+    ordered: 10
+    active: true
+- model: homepage.entries
+  pk: 49
+  fields:
+    section: catalog
+    label: Diesel 500
+    text_short: combustible
+    text_large: https://www.ypf.com/productosyservicios/Paginas/Diesel-500.aspx
+    image: catalog/5.jpg
+    ordered: 11
+    active: true
+- model: homepage.entries
+  pk: 50
+  fields:
+    section: catalog
+    label: UltraDiesel
+    text_short: combustible
+    text_large: https://www.ypf.com/productosyservicios/Paginas/Ultradiesel.aspx
+    image: catalog/6.jpg
+    ordered: 12
+    active: true
+- model: homepage.entries
+  pk: 51
+  fields:
+    section: catalog
+    label: Azul 32
+    text_short: combustible
+    text_large: https://www.ypf.com/productosyservicios/Paginas/Azul-32.aspx
+    image: catalog/4.jpg
+    ordered: 13
+    active: true
+- model: homepage.entries
+  pk: 52
+  fields:
+    section: service
+    label: Lubricantes
+    text_short: Texto breve sobre este grupo de servicio.
+    text_large: "Texto largo con informaci\xF3n de la servicio.\n<br><br>\nInformaci\xF3\
+      n de los productos que se ofrecen y posibles caracter\xEDsticas.\n<br><br>\n\
+      Enlaces a otroas p\xE1ginas ...\n<br><br>\n<img src=\"http://prodimsa.com/wp-content/uploads/2016/10/2016-12-03.jpg\"\
+      >"
+    image: lubricante
+    ordered: 3
+    active: true
+- model: homepage.entries
+  pk: 53
+  fields:
+    section: home
+    label: separador3
+    text_short: null
+    text_large: homepage/_separator_products.html
+    image: ''
+    ordered: 6
+    active: false
+- model: homepage.entries
+  pk: 54
+  fields:
+    section: scLabel
+    label: Todo
+    text_short: '*'
+    text_large: null
+    image: ''
+    ordered: 1
+    active: true
+- model: homepage.entries
+  pk: 55
+  fields:
+    section: scLabel
+    label: Distribuidor
+    text_short: .distri
+    text_large: null
+    image: ''
+    ordered: 2
+    active: true
+- model: homepage.entries
+  pk: 56
+  fields:
+    section: scLabel
+    label: EESS
+    text_short: .eess
+    text_large: null
+    image: ''
+    ordered: 3
+    active: true
+- model: homepage.entries
+  pk: 57
+  fields:
+    section: serviceCatalog
+    label: YPF Agro|distri
+    text_short: YPF Agro ofrece soluciones integrales para tu campo.
+    text_large: null
+    image: agro
+    ordered: 1
+    active: true
+- model: homepage.entries
+  pk: 58
+  fields:
+    section: serviceCatalog
+    label: Combustibles|distri
+    text_short: "YPF es l\xEDder en calidad de combustibles."
+    text_large: "<b>YPF <span style=\"color: #00ae42;\">agro</span></b> es el canal\
+      \ de venta integral de <b>YPF</b> con cobertura en todas las zonas agro industriales\
+      \ de nuestro pa\xEDs y que llega directamente al productor agropecuario.<br><br>\n\
+      \nCada <b>YPF <span style=\"color: #00ae42;\">agro</span></b> tiene un promedio\
+      \ de tres tanques de combustible di\xE9sel de 100 metros c\xFAbicos, que aseguran\
+      \ el abastecimiento continuo a las necesidades del campo.<br><br>\n\n300 m3\
+      \ equivalen a 300 mil litros de gasoil, cantidad suficiente para abastecer unos\
+      \ 3 mil tractores o cosechadoras.<br><br>\n\n<img src=\"/media/serviceCatalog/combustible-tanques.jpg\"\
+      >\n<br><br>\n\n<a href=\"https://www.ypf.com/infinia/Paginas/Infinia-la-evolucion-del-combustible.html\"\
+      \ target=_blank>m\xE1s informaci\xF3n</a>\n"
+    image: combustible
+    ordered: 2
+    active: true
+- model: homepage.entries
+  pk: 59
+  fields:
+    section: serviceCatalog
+    label: Lubricantes|distri
+    text_short: "YPF dise\xF1a y provee los mejores lubricantes que cumplen las m\xE1\
+      s elevadas normas de calidad."
+    text_large: null
+    image: lubricante
+    ordered: 3
+    active: true
+- model: homepage.entries
+  pk: 60
+  fields:
+    section: serviceCatalog
+    label: Combustible & Gas|eess
+    text_short: Texto breve sobre este grupo de servicio.
+    text_large: "Texto largo con informaci\xF3n de la servicio.\n<br><br>\nInformaci\xF3\
+      n de los productos que se ofrecen y posibles caracter\xEDsticas.\n<br><br>\n\
+      Enlaces a otroas p\xE1ginas ...\n"
+    image: gas
+    ordered: 4
+    active: true
+- model: homepage.entries
+  pk: 61
+  fields:
+    section: serviceCatalog
+    label: FULL|eess
+    text_short: No es solo una tienda, es un espacio de encuentro y permanencia placentera.
+    text_large: null
+    image: full
+    ordered: 5
+    active: true
+- model: homepage.entries
+  pk: 62
+  fields:
+    section: serviceCatalog
+    label: Boxes|eess
+    text_short: YPF Boxes es un servicio automotriz que cuenta con una extensa cobertura
+      en el territorio argentino.
+    text_large: <img src="/media/serviceCatalog/boxes-imagen.gif">
+    image: boxes
+    ordered: 6
+    active: true
+- model: homepage.entries
+  pk: 63
+  fields:
+    section: whyus
+    label: Politica de Calidad
+    text_short: null
+    text_large: "<b>Pol\xEDtica de Calidad, Medio ambiente y Seguridad</b> en <span\
+      \ style=\"color: #00ae42; font-weight:bold\">LUBRE S.R.L.</span>\n<br>\nNuestro\
+      \ objetivo principal es desarrollar todas las actividades de producci\xF3n,\
+      \ distribuci\xF3n, ventas y transporte dentro de un marco ordenado que deviene\
+      \ de la implementaci\xF3n de las normas ISO 9001:2015, ISO 14001:2015 y OHSAS\
+      \ 18001:2007 con la finalidad de proporcionar a nuestros clientes, tanto internos\
+      \ como externos, la mayor satisfacci\xF3n en nuestros servicios, promover el\
+      \ control del Medio Ambiente y evitar la ocurrencia de accidentes. Nuestros\
+      \ objetivos y forma de lograrlos, podemos enumerarlos de la siguiente manera:\n\
+      <ol>\n<li>Implementaci\xF3n y mantenimiento de los Sistemas de Gesti\xF3n de\
+      \ Calidad, Medio Ambiente y Seguridad</li>\n<li>Cumplimiento de toda la legislaci\xF3\
+      n vigente y otras normas aplicables</li>\n<li>Mantener permanentemente capacitado\
+      \ a todo el personal respecto a Calidad, Medio Ambiente y Seguridad, as\xED\
+      \ como tambi\xE9n en producto y servicio, para lograr excelencia en servicios\
+      \ realizados, minimizar los impactos producidos al Medio Ambiente y que la prevenci\xF3\
+      n sea tarea de todos los d\xEDas</li>\n<li>Optimizar la log\xEDstica para el\
+      \ cumplimiento de nuestros servicios a trav\xE9s de un sistema organizado y\
+      \ eficiente</li>\n<li>Realizar los mayores esfuerzos para evitar no conformidades\
+      \ internas y externas</li>\n<li>Fomentar la mejora continua en todas nuestras\
+      \ actividades por medio de la capacitaci\xF3n y de provisi\xF3n de los elementos\
+      \ necesarios para la consecuci\xF3n de los objetivos</li>\n<li>Realizar permanentemente\
+      \ auditorias tanto internas como externas para verificar el cumplimiento de\
+      \ los sistemas implementados</li>\n<li>Cumplir con los plazos de entrega acordados\
+      \ y exigir a nuestros proveedores el cumplimiento de esta meta</li>\n<li>Proveer\
+      \ de los recursos necesarios para llevar adelante la Gesti\xF3n de Calidad,\
+      \ Medio Ambiente y Seguridad</li>\n<li>Resguardar la salud, seguridad e integridad\
+      \ psicol\xF3gica de nuestros empleados y terceros afectados directa o indirectamente\
+      \ por nuestras actividades</li>\n<li>Explicitar los lineamientos principales\
+      \ de nuestra organizaci\xF3n y las responsabilidades por nivel, haciendo hincapi\xE9\
+      \ en que la responsabilidad del cumplimiento de las metas y objetivos fijados\
+      \ es de todos y cada uno de los integrantes de la empresa, comenzando con el\
+      \ ejemplo impartido por la alta direcci\xF3n</li>\n<ol>\n"
+    image: ''
+    ordered: 4
+    active: true
+- model: homepage.entries
+  pk: 64
+  fields:
+    section: service2
+    label: Combustibles y Lubricantes
+    text_short: null
+    text_large: null
+    image: combustible
+    ordered: 1
+    active: true
+- model: homepage.entries
+  pk: 65
+  fields:
+    section: service2
+    label: Fertilizantes
+    text_short: null
+    text_large: null
+    image: fertilizante
+    ordered: 2
+    active: true
+- model: homepage.entries
+  pk: 66
+  fields:
+    section: service2
+    label: "Protecci\xF3n de Cultivos"
+    text_short: null
+    text_large: null
+    image: proteccion-cultivo
+    ordered: 3
+    active: true
+- model: homepage.entries
+  pk: 67
+  fields:
+    section: service2
+    label: Bolsa para Silo
+    text_short: null
+    text_large: null
+    image: silo-bolsa
+    ordered: 4
+    active: true
+- model: homepage.entries
+  pk: 68
+  fields:
+    section: service2
+    label: Combustibles
+    text_short: null
+    text_large: "La industria automotriz perfecciona el dise\xF1o de los motores de\
+      \ forma permanente para mejorar su rendimiento y disminuir el impacto ambiental.<br><br>\n\
+      \nYPF trabaja activamente para estar a la vanguardia del adelanto tecnol\xF3\
+      gico y acompa\xF1ar con la calidad de nuestros combustibles el desarrollo de\
+      \ la industria y el requerimiento de nuestros clientes.<br><br>\n\nNuestros\
+      \ productos cumplen con los m\xE1ximos niveles de calidad en el mercado porque\
+      \ ofrecen la mejor performance del motor junto a un exigente cuidado al medio\
+      \ ambiente.<br><br>\n\n<b>LOS COMBUSTIBLES DE YPF SON SIN\xD3NIMO DE:</b>\n\
+      <ul>\n<li>Potencia</li>\n<li>Cuidado del motor</li>\n<li>Cuidado del medio ambiente</li>\n\
+      <li>Confiabilidad</li>\n<li>Vanguardia tecnol\xF3gica</li>\n</ul>\n"
+    image: combustible
+    ordered: 5
+    active: true
+- model: homepage.entries
+  pk: 69
+  fields:
+    section: service2
+    label: YPF Full
+    text_short: null
+    text_large: "Te esperamos para disfrutar de un espacio confortable para conectarte,\
+      \ trabajar, pasar un rato y cargar energ\xEDa.\nAdem\xE1s, te ofrecemos una\
+      \ variada oferta de comidas y alternativas sin gluten.<br><br>\nAdem\xE1s, te\
+      \ ofrecemos una variada oferta de comidas y alternativas sin gluten."
+    image: full
+    ordered: 6
+    active: true
+- model: homepage.entries
+  pk: 70
+  fields:
+    section: service2
+    label: YPF Boxes
+    text_short: null
+    text_large: "Servicio de Lubricaci\xF3n y Diagn\xF3stico de YPF<br><br>\nEn BOXES\
+      \ adem\xE1s de cambiarte el aceite, un especialista te revisar\xE1 los puntos\
+      \ m\xE1s importantes de tu auto sin cargo (partes mec\xE1nicas, fluidos y filtros,\
+      \ elementos de seguridad y lubricantes).<br><br>\n"
+    image: boxes
+    ordered: 7
+    active: true
+- model: homepage.entries
+  pk: 71
+  fields:
+    section: service2
+    label: ServiCLUB
+    text_short: null
+    text_large: "Si a\xFAn no eres socio, podr\xE1s obtener tu tarjeta ServiClub en\
+      \ cualquiera de nuestras Estaciones de Servicio, y luego registrala aqu\xED\
+      .<br><br>\n\n<button class=\"routerLink gold-filled-button\" href=\"join-us\"\
+      >\xA1Registr\xE1 tu tarjeta y Adherite aqu\xED!</button>\n<br><br>\n\nSum\xE1\
+      \ PUNTOS al instante con tus compras en m\xE1s de 1.500 estaciones a lo largo\
+      \ del pa\xEDs.<br><br>\n\n<button class=\"routerLink gold-filled-button\" href=\"\
+      conoce-serviclub\">Conoc\xE9 m\xE1s detalles del programa</button>\n<br><br>\n\
+      \nCon tus PUNTOS ServiClub acced\xE9 a descuentos inmediatos en nuestras Estaciones\
+      \ de Servicio o Canjealos por muchos premios m\xE1s.<br><br>\n\n<button class=\"\
+      routerLink gold-filled-button\" href=\"rewards\">Empez\xE1 a canjear</button>\n\
+      <br><br>\n"
+    image: serviclub
+    ordered: 8
+    active: true
+- model: homepage.entries
+  pk: 72
+  fields:
+    section: home
+    label: "<i class=\"fa fa-cogs\"></i> Cat\xE1logo"
+    text_short: '#catalog'
+    text_large: homepage/_catalog.html
+    image: ''
+    ordered: 1
+    active: false

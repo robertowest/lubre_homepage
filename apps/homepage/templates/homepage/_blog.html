@@ -1,0 +1,28 @@
+{% load static %}
+
+<section id="blog" class="blog-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>Artículos recientes</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for obj in post %}
+            <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                <div class="single-blog">
+                    <img src="{{obj.image.url}}" alt="" class="blog-img-small">
+                    <a href="{% url 'homepage:post_detail' obj.slug %}">
+                        <h4>{{obj.title}}</h4>
+                    </a>
+                    <h6 class="text-muted">{{obj.publish_on}}</h6>
+                    <p>{{obj.content|safe|truncatechars:150}}</p>
+                    <a href="{% url 'homepage:post_detail' obj.slug %}" class="read-more">Leer más</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

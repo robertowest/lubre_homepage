@@ -1,0 +1,80 @@
+{% load static %}
+
+<section class="get-started section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="get-text text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    {% if user.is_authenticated %}
+                        <h2>Sesión activa</h2>
+                        <p>Usted a iniciado sesión como {{ user.email }}</p>
+                        <a href="{% url 'logout' %}" class="read-more">Cerrar sesión</a>
+                    {% else %}
+                        <h2>Inicia Sesión</h2>
+                        <p>Ingresa al sistema para poder acceder a las aplicaciones que necesitas para gestionar tu negocio y obtener información actualizada.</p>
+                        <a href="#" class="read-more" data-toggle="modal" data-target="#loginModal">Iniciar</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="loginModalLabel">Iniciar Sesión</h4>
+            </div>
+            <div class="modal-body">
+                <!-- h5>Iniciar sesión con:</h5 -->
+                <div class="col-md-12">
+                    <ul class="social-network social-circle">
+                        <li>
+                            <a class="icoGoogle" title="Google+" href="{% url 'social:begin' 'google-oauth2' %}">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoYoutube" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+                        <!--
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        -->
+                    </ul>
+                    <small id="soaiclHelp" class="form-text text-muted">Identifiquese con su red social.</small>
+                </div>
+
+                <hr><br>
+
+                <div class="form-group">
+                    <form method="post" action="{% url 'accounts:login' %}">
+                        {% csrf_token %}
+                        <table>
+                            <tr>
+                                <td>{{ form.username.label_tag }}</td>
+                                <td>{{ form.username }}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ form.password.label_tag }}</td>
+                                <td>{{ form.password }}</td>
+                            </tr>
+                        </table>
+
+                        <input type="submit" value="login" />
+                        <input type="hidden" name="next" value="{{ next }}" />
+                    </form>
+                    <small id="emailHelp" class="form-text text-muted">Ingrese sus datos para iniciar sesión.</small>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <p>¿Olvidó su contraseña?</p>
+            </div>
+        </div>
+    </div>
+</div>

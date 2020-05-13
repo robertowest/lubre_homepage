@@ -1,0 +1,1653 @@
+- model: homepage.producto
+  pk: 1
+  fields:
+    nombre: ELAION COMPETICION
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ 4 tiempo a nafta sometidos a altas exigencias</dd>\n\n  <dt>ORIGEN</dt>\n\
+      \  <dd>100% sint\xE9tico</dd>\n\n  <dt>GRADO</dt>\n  <dd>5W-50</dd>\n</dl> \n\
+      <br><br>\n\n<h3>DESCRIPCION</h3><br>\nElaion Competici\xF3n es un lubricante\
+      \ desarrollado espec\xEDficamente para proteger al motor frente a exigencias\
+      \ extremas.<br><br>\n\nLa moderna tecnolog\xEDa de sus aditivos permite afrontar\
+      \ situaciones cr\xEDticas, tales como:<br><br>\n\n<ul>\n  <li>alta carga t\xE9\
+      rmica</li>\n  <li>exposici\xF3n al cizallado</li>\n  <li>diluci\xF3n por combustible</li>\n\
+      </ul>\n\n<br><br>\nLa protecci\xF3n al desgaste que ofrece este producto ha\
+      \ sido verificada en banco mediante ensayos HFRR, como as\xED tambi\xE9n en\
+      \ pista."
+    grupo: 1
+    imagen: ''
+    ficha_tecnica: https://www.ypf.com/productosyservicios/Descargas/Elaion-Competicion.pdf
+    ficha_seguridad: null
+    activo: true
+- model: homepage.producto
+  pk: 2
+  fields:
+    nombre: ELAION F10 15W-40
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ con requerimientos de potencia y exigencia moderada</dd>\n\n  <dt>ORIGEN</dt>\n\
+      \  <dd>Mineral</dd>\n\n  <dt>GRADO</dt>\n  <dd>Multigrado</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nLa l\xEDnea de lubricantes ELAION est\xE1 dise\xF1\
+      ada por YPF para cada tipo de motorizaci\xF3n bajo los m\xE1s altos est\xE1\
+      ndares de calidad a nivel mundial.<br><br>\n\nLuego de un exhaustivo proceso\
+      \ de investigaci\xF3n y desarrollo, estos productos son testeados, aprobados\
+      \ y posteriormente recomendados por los principales fabricantes de veh\xEDculos.<br><br>\n\
+      \nELAION contempla en su dise\xF1o la exclusiva tecnolog\xEDa TAS\xAE, que permite\
+      \ proteger al m\xE1ximo el motor, manteni\xE9ndolo tal como fue dise\xF1ado\
+      \ de f\xE1brica."
+    grupo: 1
+    imagen: product/00002.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df4e697eaef79f69f1dd287a.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4e697eaf06441e69b7d880.pdf
+    activo: true
+- model: homepage.producto
+  pk: 3
+  fields:
+    nombre: ELAION F10 20W-50
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>veh\xED\
+      culos con alto kilometraje</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\n\
+      \  <dt>GRADO</dt>\n  <dd>Multigrado</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      La l\xEDnea de lubricantes ELAION est\xE1 dise\xF1ada por YPF para cada tipo\
+      \ de motorizaci\xF3n bajo los m\xE1s altos est\xE1ndares de calidad a nivel\
+      \ mundial.<br><br>\n\nLuego de un exhaustivo proceso de investigaci\xF3n y desarrollo,\
+      \ estos productos son testeados, aprobados y posteriormente recomendados por\
+      \ los principales fabricantes de veh\xEDculos.<br><br>\n\nELAION contempla en\
+      \ su dise\xF1o la exclusiva tecnolog\xEDa TAS\xAE, que permite proteger al m\xE1\
+      ximo el motor, manteni\xE9ndolo tal como fue dise\xF1ado de f\xE1brica."
+    grupo: 1
+    imagen: product/00003.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df4e7e7b186aec4c813d8685.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4e7e7b18724782ec441f84.pdf
+    activo: true
+- model: homepage.producto
+  pk: 4
+  fields:
+    nombre: ELAION F30 10W-40
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Requerimientos\
+      \ de potencia y exigencia intermedia</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\
+      \n  <dt>GRADO</dt>\n  <dd>10W-40</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Lubricante semi-sint\xE9tico multigrado recomendado para requerimientos de potencia\
+      \ y exigencia intermedia."
+    grupo: 1
+    imagen: product/00004.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df4e88251150816c65b0963e.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4e88251159081d59d96acf.pdf
+    activo: true
+- model: homepage.producto
+  pk: 5
+  fields:
+    nombre: ELAION F50 5W-40
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>DPF para\
+      \ los autom\xF3viles Diesel y los TWC para motores nafteros</dd>\n\n  <dt>ORIGEN</dt>\n\
+      \  <dd>Mineral</dd>\n\n  <dt>GRADO</dt>\n  <dd>5W-40</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nLubricantes 100% sint\xE9ticos especialmente formulados\
+      \ para cubrir la m\xE1s alta exigencia de la industria automotriz.<br><br>\n\
+      \nConcebido para motores que posean sistemas de post-tratamiento de gases de\
+      \ escape de \xFAltima tecnolog\xEDa, tales como los DPF (Diesel Particulate\
+      \ Filter) para los autom\xF3viles Diesel y los TWC (Three Way Catalyst) para\
+      \ los motores nafteros."
+    grupo: 1
+    imagen: product/00005.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df4e9061e545199bdacbeeb5.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4e9061e54d0d24b529e858.pdf
+    activo: true
+- model: homepage.producto
+  pk: 6
+  fields:
+    nombre: ELAION F50 D1 5W-30
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Veh\xED\
+      culos nafteros</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>100% Sint\xE9tico </dd>\n\n\
+      \  <dt>GRADO</dt>\n  <dd>5W-30</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Lubricantes 100% sint\xE9ticos especialmente formulados para cubrir la m\xE1\
+      s alta exigencia de los veh\xEDculos fabricados por General Motors.<br><br>\n\
+      \nSu formulaci\xF3n contempla el uso del mismo en motores equipados con sistema\
+      \ de post-tratamiento de gases de escape, tales como los DPF (Diesel Particulate\
+      \ Filter) para los autom\xF3viles Diesel y los TWC (Three Way Catalyst) para\
+      \ los motores nafteros.<br><br>\n\nEsta l\xEDnea de productos contempla en su\
+      \ dise\xF1o la exclusiva tecnolog\xEDa TAS\xAE, que permite proteger al m\xE1\
+      ximo el motor, manteni\xE9ndolo tal como fue dise\xF1ado de f\xE1brica.\n"
+    grupo: 1
+    imagen: product/00006.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df4ea0a471215c6b8cefbea4.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4ea0a471309f440223d7ba.pdf
+    activo: true
+- model: homepage.producto
+  pk: 7
+  fields:
+    nombre: ELAION F50 D2 5W-30
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Veh\xED\
+      culos Diesel</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>100% Sint\xE9tico </dd>\n\n  <dt>GRADO</dt>\n\
+      \  <dd>5W-30</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nLubricantes\
+      \ 100% sint\xE9ticos especialmente formulados para cubrir la m\xE1s alta exigencia\
+      \ de los veh\xEDculos fabricados por General Motors.<br><br>\n\nSu formulaci\xF3\
+      n contempla el uso del mismo en motores equipados con sistema de post-tratamiento\
+      \ de gases de escape, tales como los DPF (Diesel Particulate Filter) para los\
+      \ autom\xF3viles Diesel y los TWC (Three Way Catalyst) para los motores nafteros.<br><br>\n\
+      \nEsta l\xEDnea de productos contempla en su dise\xF1o la exclusiva tecnolog\xED\
+      a TAS\xAE, que permite proteger al m\xE1ximo el motor, manteni\xE9ndolo tal\
+      \ como fue dise\xF1ado de f\xE1brica.\n"
+    grupo: 1
+    imagen: product/00007.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df4ea7969234d6ebc0a496ab.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4ea796923d496269045737.pdf
+    activo: true
+- model: homepage.producto
+  pk: 8
+  fields:
+    nombre: ELAION F50 DPF 5W30
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ nafteros y Diesel 4 tiempos</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>100% Sint\xE9\
+      tico </dd>\n\n  <dt>GRADO</dt>\n  <dd>5W-30</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Elaion F50 DPF es un lubricante 100% sint\xE9tico, especialmente dise\xF1ado\
+      \ para proteger aquellos dispositivos que tratan los gases de la combusti\xF3\
+      n en los nuevos motores que hoy se incorporan al mercado.<br><br>\n\nSi bien\
+      \ su formulaci\xF3n contempla ambas motorizaciones, la principal raz\xF3n de\
+      \ su uso radica en aquellos motores Diesel que poseen filtro de part\xEDculas,\
+      \ tambi\xE9n conocido como DPF (Diesel Particulate Filter).<br><br>\n\nELAION\
+      \ F50 DPF contempla en su dise\xF1o la exclusiva tecnolog\xEDa TAS\xAE, que\
+      \ permite proteger al m\xE1ximo el motor, manteni\xE9ndolo tal como fue dise\xF1\
+      ado de f\xE1brica."
+    grupo: 1
+    imagen: product/00008.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4eb470a0e4d38333ec3b94.pdf
+    activo: true
+- model: homepage.producto
+  pk: 9
+  fields:
+    nombre: ELAION F50 PLUS 5W-40
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ 4 tiempos a gasolina o Diesel</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>100% Sint\xE9\
+      tico </dd>\n\n  <dt>GRADO</dt>\n  <dd>5W-40</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Lubricante para motor 100% sint\xE9tico.<br><br>\n\n\xC9ste producto contempla\
+      \ una excelente protecci\xF3n frente al desgaste en la m\xE1s alta exigencia\
+      \ y superior capacidad de limpieza.<br><br>\n\nApto para motores que utilicen\
+      \ cualquier tipo de combustible.<br><br>\n\nElaion F50 Plus forma parte de la\
+      \ nueva l\xEDnea ELAION, la cual contempla en su dise\xF1o la exclusiva tecnolog\xED\
+      a TAS\xAE, que permite proteger al m\xE1ximo el motor, manteni\xE9ndolo tal\
+      \ como fue dise\xF1ado de f\xE1brica."
+    grupo: 1
+    imagen: product/00009.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df4f1f6b15f03d0e74b00379.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4f1f6b15fe9df258913e18.pdf
+    activo: true
+- model: homepage.producto
+  pk: 10
+  fields:
+    nombre: ELAION F50 d1 0W-20
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ Nafteros</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>100% Sint\xE9tico </dd>\n\n  <dt>GRADO</dt>\n\
+      \  <dd>0W-20</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nLubricantes\
+      \ 100% sint\xE9ticos especialmente formulados para cubrir la m\xE1s alta exigencia\
+      \ de los veh\xEDculos fabricados por General Motors.<br><br>\n\nSu formulaci\xF3\
+      n contempla el uso del mismo en motores equipados con sistema de post-tratamiento\
+      \ de gases de escape, tales como los DPF (Diesel Particulate Filter) para los\
+      \ autom\xF3viles Diesel y los TWC (Three Way Catalyst) para los motores nafteros.<br><br>\n\
+      \nEsta l\xEDnea de productos contempla en su dise\xF1o la exclusiva tecnolog\xED\
+      a TAS\xAE, que permite proteger al m\xE1ximo el motor, manteni\xE9ndolo tal\
+      \ como fue dise\xF1ado de f\xE1brica."
+    grupo: 1
+    imagen: product/00010.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df4e98eea5024e9c7ffca639.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4e98eea510c3284b105962.pdf
+    activo: true
+- model: homepage.producto
+  pk: 11
+  fields:
+    nombre: ELAION F50E 5W-30
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Todo tipo\
+      \ de motor y combustibles</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>100% Sint\xE9tico\
+      \ </dd>\n\n  <dt>GRADO</dt>\n  <dd>5W-30</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Lubricante multigrado 100% sint\xE9tico especialmente dise\xF1ado para los veh\xED\
+      culos Ford equipados con cualquier tipo de motorizaci\xF3n y que utilicen cualquier\
+      \ tipo de combustible.<br><br>\n\nSe destaca en el mismo su baja viscosidad\
+      \ para cubrir requerimientos en econom\xEDa de combustible."
+    grupo: 1
+    imagen: product/00011.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4f27370dcc823c8b3c442b.pdf
+    activo: true
+- model: homepage.producto
+  pk: 12
+  fields:
+    nombre: ELAION F50F 5W-40
+    descripcion: null
+    grupo: 1
+    imagen: product/00012.jpg
+    ficha_tecnica: null
+    ficha_seguridad: null
+    activo: false
+- model: homepage.producto
+  pk: 13
+  fields:
+    nombre: ELAION F50J 0W-20
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ 4 tiempos a gasolina</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>100% Sint\xE9tico</dd>\n\
+      \n  <dt>GRADO</dt>\n  <dd>0W-20</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Elaion F50J es un lubricante 100% sint\xE9tico dise\xF1ado para satisfacer las\
+      \ m\xE1s exigentes especificaciones del mercado Japon\xE9s, tal el caso de Honda.<br><br>\n\
+      \nDentro de sus caracter\xEDsticas principales se destacan su excelente econom\xED\
+      a de combustible gracias a su baja viscosidad en todo el rango de temperaturas,\
+      \ manteniendo un excelente control del desgaste por medio de un paquete de aditivos\
+      \ de \xFAltima generaci\xF3n.<br><br>\n\nELAION F50J contempla en su dise\xF1\
+      o la exclusiva tecnolog\xEDa TAS\xAE, que permite proteger al m\xE1ximo el motor,\
+      \ manteni\xE9ndolo tal como fue dise\xF1ado de f\xE1brica."
+    grupo: 1
+    imagen: product/00013.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df4f4cb6b37062b4b2aa63cf.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4f4cb6b37992c38ff9183c.pdf
+    activo: true
+- model: homepage.producto
+  pk: 14
+  fields:
+    nombre: AT Turbo 30
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ Diesel de cuatro tiempos</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\n\
+      \  <dt>GRADO SAE</dt>\n  <dd>30 y 40</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Aceite monogrado para c\xE1rter, elaborado con bases minerales altamente refinadas\
+      \ y un adecuado paquete de aditivos que le confieren una alta resistencia a\
+      \ la oxidaci\xF3n, capacidad anticorrosiva y un adecuado control sobre los dep\xF3\
+      sitos."
+    grupo: 3
+    imagen: product/00014.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4e4f13561f55d4805c1285.pdf
+    activo: true
+- model: homepage.producto
+  pk: 15
+  fields:
+    nombre: ATF-DIII
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Trasmisiones\
+      \ autom\xE1ticas</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\n  <dt>PRESENTACION</dt>\n\
+      \  <dd>Bid\xF3n de 4 litros</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Lubricante para transmisiones autom\xE1ticas, elaborado con bases no convencionales\
+      \ y aditivos seleccionados.<br><br>\n\nPara el dise\xF1o de este producto se\
+      \ contemplaron las especificaciones de los principales fabricantes de estos\
+      \ equipos en la industria automotriz."
+    grupo: 4
+    imagen: product/00015.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4e57dd67ee7794cd553ac4.pdf
+    activo: true
+- model: homepage.producto
+  pk: 16
+  fields:
+    nombre: AZUL 32
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ Diesel</dd>\n\n  <dt>PRESENTACION</dt>\n  <dd>Bid\xF3n de 10 litros</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nLubricante para transmisiones\
+      \ autom\xE1ticas, elaborado con bases no convencionales y aditivos seleccionados.<br><br>\n\
+      \nPara el dise\xF1o de este producto se contemplaron las especificaciones de\
+      \ los principales fabricantes de estos equipos en la industria automotriz."
+    grupo: 5
+    imagen: product/00016.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4e5efa11758b500cb0e87a.pdf
+    activo: true
+- model: homepage.producto
+  pk: 17
+  fields:
+    nombre: Extravida XV-600
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ Diesel de cuatro tiempos</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Sint\xE9tico</dd>\n\
+      \n  <dt>GRADO SAE</dt>\n  <dd>10W-40</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      L\xEDnea de lubricantes minerales, semisinteticos y sinteticos para motores\
+      \ Diesel pesados que operan en el agro, la industria y el transporte.<br><br>\n\
+      \nSu dise\xF1o surge a partir de las diversas tecnolog\xEDas Euro para motores,\
+      \ que incorporan los m\xE1s modernos sistemas de postratamiento de gases de\
+      \ escape.<br><br>\n\nPor un lado est\xE1n los sistemas que requieren el uso\
+      \ de Urea grado automotriz (SCR), y por otro aquellos equipados con filtro de\
+      \ part\xEDculas (DPF).<br><br>\n\n\nLa l\xEDnea Extravida XV cuenta con una\
+      \ amplia gama de productos, la cual incluye cada una de las tecnolog\xEDas mencionadas,\
+      \ permitiendo optar por el m\xE1s adecuado atento al tipo de servicio. Adem\xE1\
+      s, dicha l\xEDnea satisface los \xFAltimos requerimientos de calidad establecidos\
+      \ tanto en el mercado americano como europeo."
+    grupo: 2
+    imagen: product/00017.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df573b0ca2a19e71a72e9ebc.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df573b0ca34ae0dcb4345d1d.pdf
+    activo: true
+- model: homepage.producto
+  pk: 18
+  fields:
+    nombre: Extravida XV-500 5W-30
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ Diesel de cuatro tiempos</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Sint\xE9tico</dd>\n\
+      \n  <dt>GRADO SAE</dt>\n  <dd>5W-40</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      L\xEDnea de lubricantes minerales, semisinteticos y sinteticos para motores\
+      \ Diesel pesados que operan en el agro, la industria y el transporte.<br><br>\n\
+      \nSu dise\xF1o surge a partir de las diversas tecnolog\xEDas Euro para motores,\
+      \ que incorporan los m\xE1s modernos sistemas de postratamiento de gases de\
+      \ escape.<br><br>\n\nPor un lado est\xE1n los sistemas que requieren el uso\
+      \ de Urea grado automotriz (SCR), y por otro aquellos equipados con filtro de\
+      \ part\xEDculas (DPF).<br><br>\n\n\nLa l\xEDnea Extravida XV cuenta con una\
+      \ amplia gama de productos, la cual incluye cada una de las tecnolog\xEDas mencionadas,\
+      \ permitiendo optar por el m\xE1s adecuado atento al tipo de servicio. Adem\xE1\
+      s, dicha l\xEDnea satisface los \xFAltimos requerimientos de calidad establecidos\
+      \ tanto en el mercado americano como europeo."
+    grupo: 2
+    imagen: product/00018.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df573f89e3cfa6be853a242b.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df573f89e4456b98b7dcd900.pdf
+    activo: true
+- model: homepage.producto
+  pk: 19
+  fields:
+    nombre: Extravida XV-500 10W40
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ Diesel de cuatro tiempos</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Sint\xE9tico</dd>\n\
+      \n  <dt>GRADO SAE</dt>\n  <dd>5W-40</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      L\xEDnea de lubricantes minerales, semisinteticos y sinteticos para motores\
+      \ Diesel pesados que operan en el agro, la industria y el transporte.<br><br>\n\
+      \nSu dise\xF1o surge a partir de las diversas tecnolog\xEDas Euro para motores,\
+      \ que incorporan los m\xE1s modernos sistemas de postratamiento de gases de\
+      \ escape.<br><br>\n\nPor un lado est\xE1n los sistemas que requieren el uso\
+      \ de Urea grado automotriz (SCR), y por otro aquellos equipados con filtro de\
+      \ part\xEDculas (DPF).<br><br>\n\n\nLa l\xEDnea Extravida XV cuenta con una\
+      \ amplia gama de productos, la cual incluye cada una de las tecnolog\xEDas mencionadas,\
+      \ permitiendo optar por el m\xE1s adecuado atento al tipo de servicio. Adem\xE1\
+      s, dicha l\xEDnea satisface los \xFAltimos requerimientos de calidad establecidos\
+      \ tanto en el mercado americano como europeo."
+    grupo: 2
+    imagen: product/00018.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df57555e7dc34137125871eb.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df57555e7e48bd63aff87820.pdf
+    activo: true
+- model: homepage.producto
+  pk: 20
+  fields:
+    nombre: Extravida XV-400
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ Diesel de cuatro tiempos</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\n\
+      \  <dt>GRADO SAE</dt>\n  <dd>15W-40</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      L\xEDnea de lubricantes minerales, semisinteticos y sinteticos para motores\
+      \ Diesel pesados que operan en el agro, la industria y el transporte.<br><br>\n\
+      \nSu dise\xF1o surge a partir de las diversas tecnolog\xEDas Euro para motores,\
+      \ que incorporan los m\xE1s modernos sistemas de postratamiento de gases de\
+      \ escape.<br><br>\n\nPor un lado est\xE1n los sistemas que requieren el uso\
+      \ de Urea grado automotriz (SCR), y por otro aquellos equipados con filtro de\
+      \ part\xEDculas (DPF).<br><br>\n\n\nLa l\xEDnea Extravida XV cuenta con una\
+      \ amplia gama de productos, la cual incluye cada una de las tecnolog\xEDas mencionadas,\
+      \ permitiendo optar por el m\xE1s adecuado atento al tipo de servicio.<br><br>\n\
+      \nAdem\xE1s, dicha l\xEDnea satisface los \xFAltimos requerimientos de calidad\
+      \ establecidos tanto en el mercado\namericano como europeo."
+    grupo: 2
+    imagen: product/00020.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df57570c7665a4ffeaa7710b.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df57570c76da22ff92eaa3c2.pdf
+    activo: true
+- model: homepage.producto
+  pk: 21
+  fields:
+    nombre: Extravida XV-300
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ Diesel de cuatro tiempos</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\n\
+      \  <dt>GRADO SAE</dt>\n  <dd>15W-40</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      L\xEDnea de lubricantes minerales, semisinteticos y sinteticos para motores\
+      \ Diesel pesados que operan en el agro, la industria y el transporte.<br><br>\n\
+      \nSu dise\xF1o surge a partir de las diversas tecnolog\xEDas Euro para motores,\
+      \ que incorporan los m\xE1s modernos sistemas de postratamiento de gases de\
+      \ escape.<br><br>\n\nPor un lado est\xE1n los sistemas que requieren el uso\
+      \ de Urea grado automotriz (SCR), y por otro aquellos equipados con filtro de\
+      \ part\xEDculas (DPF).<br><br>\n\n\nLa l\xEDnea Extravida XV cuenta con una\
+      \ amplia gama de productos, la cual incluye cada una de las tecnolog\xEDas mencionadas,\
+      \ permitiendo optar por el m\xE1s adecuado atento al tipo de servicio.<br><br>\n\
+      \nAdem\xE1s, dicha l\xEDnea satisface los \xFAltimos requerimientos de calidad\
+      \ establecidos tanto en el mercado\namericano como europeo."
+    grupo: 2
+    imagen: product/00021.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df5759b39d61787b791684b6.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df5759b39e13cd7e1c2b14be.pdf
+    activo: true
+- model: homepage.producto
+  pk: 22
+  fields:
+    nombre: Extravida XV-100
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ Diesel de cuatro tiempos</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\n\
+      \  <dt>GRADO SAE</dt>\n  <dd>15W-40</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      L\xEDnea de lubricantes minerales, semisinteticos y sinteticos para motores\
+      \ Diesel pesados que operan en el agro, la industria y el transporte.<br><br>\n\
+      \nSu dise\xF1o surge a partir de las diversas tecnolog\xEDas Euro para motores,\
+      \ que incorporan los m\xE1s modernos sistemas de postratamiento de gases de\
+      \ escape.<br><br>\n\nPor un lado est\xE1n los sistemas que requieren el uso\
+      \ de Urea grado automotriz (SCR), y por otro aquellos equipados con filtro de\
+      \ part\xEDculas (DPF).<br><br>\n\n\nLa l\xEDnea Extravida XV cuenta con una\
+      \ amplia gama de productos, la cual incluye cada una de las tecnolog\xEDas mencionadas,\
+      \ permitiendo optar por el m\xE1s adecuado atento al tipo de servicio.<br><br>\n\
+      \nAdem\xE1s, dicha l\xEDnea satisface los \xFAltimos requerimientos de calidad\
+      \ establecidos tanto en el mercado\namericano como europeo."
+    grupo: 2
+    imagen: product/00022.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df575b5f398742586fb048aa.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df575b5f39fdf697c9042545.pdf
+    activo: true
+- model: homepage.producto
+  pk: 23
+  fields:
+    nombre: "FT S\xFAper 50"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Transmisiones,\
+      \ convertidores de torque,mandos finales, frenos h\xFAmedos y sistemas hidr\xE1\
+      ulicos</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\n  <dt>GRADO SAE</dt>\n\
+      \  <dd>50W</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nAceite mineral\
+      \ orientado a la maquinaria de servicio pesado con requerimientos de altas cargas\
+      \ y exigente control de la fricci\xF3n.<br><br>\n\nSu formulaci\xF3n se adecua\
+      \ a los actuales requerimientos de Caterpillar, Allison y Komatsu."
+    grupo: 6
+    imagen: product/00023.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df57305c928b47f179ff0f4f.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df57305c93380fbaece2219d.pdf
+    activo: true
+- model: homepage.producto
+  pk: 24
+  fields:
+    nombre: "FT S\xFAper 30"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Transmisiones,\
+      \ convertidores de torque,mandos finales, frenos h\xFAmedos y sistemas hidr\xE1\
+      ulicos</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\n  <dt>GRADO SAE</dt>\n\
+      \  <dd>30W</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nAceite mineral\
+      \ orientado a la maquinaria de servicio pesado con requerimientos de altas cargas\
+      \ y exigente control de la fricci\xF3n.<br><br>\n\nSu formulaci\xF3n se adecua\
+      \ a los actuales requerimientos de Caterpillar, Allison y Komatsu."
+    grupo: 6
+    imagen: product/00023.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df5733c0a79d6401a0070267.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df5733c0a811e33ca0db20e3.pdf
+    activo: true
+- model: homepage.producto
+  pk: 25
+  fields:
+    nombre: "FT S\xFAper 10"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Transmisiones,\
+      \ convertidores de torque,mandos finales, frenos h\xFAmedos y sistemas hidr\xE1\
+      ulicos</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\n  <dt>GRADO SAE</dt>\n\
+      \  <dd>10W</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nAceite mineral\
+      \ orientado a la maquinaria de servicio pesado con requerimientos de altas cargas\
+      \ y exigente control de la fricci\xF3n.<br><br>\n\nSu formulaci\xF3n se adecua\
+      \ a los actuales requerimientos de Caterpillar, Allison y Komatsu."
+    grupo: 6
+    imagen: product/00023.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df5737ca16c733c92347b52b.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df5737ca173f33ea13dbb8c7.pdf
+    activo: true
+- model: homepage.producto
+  pk: 26
+  fields:
+    nombre: Multiturbo 25W-50
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ Diesel pesados y de 4 tiempos</dd>\n\n  <dt>GRADO SAE</dt>\n  <dd>25W-50</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nLubricante mineral multigrado,\
+      \ formulado para cumplir con las exigencias del segmento Diesel pesado.<br><br>\n\
+      \nPara su desarrollo se han tenido en cuenta los requerimientos de este tipo\
+      \ de operaci\xF3n con alta temperatura ambiental."
+    grupo: 7
+    imagen: product/00023.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df51b02e96b43820598d9cdc.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df51b02e96bdea1031ec8740.pdf
+    activo: true
+- model: homepage.producto
+  pk: 27
+  fields:
+    nombre: Hipoidal 85W-140
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \  cajas de velocidades y diferenciales de veh\xEDculos</dd>\n\n  <dt>GRADO\
+      \ SAE</dt>\n  <dd>85W-140</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      L\xEDnea de lubricantes para engranajes automotrices.<br><br>\n\nEstos productos\
+      \ tienen fundamental aplicaci\xF3n en aquellos casos donde se evidencie alta\
+      \ carga o bien donde el dise\xF1o del mecanismo exija la utilizaci\xF3n de aditivos\
+      \ EP, tal el caso de engranajes hipoidales."
+    grupo: 7
+    imagen: product/00027.jpg
+    ficha_tecnica: ''
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df51ab0c19af52513b4b3245.pdf
+    activo: true
+- model: homepage.producto
+  pk: 28
+  fields:
+    nombre: Hipoidal 80W-90
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \  cajas de velocidades y diferenciales de veh\xEDculos</dd>\n\n  <dt>GRADO\
+      \ SAE</dt>\n  <dd>85W-140</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      L\xEDnea de lubricantes para engranajes automotrices.<br><br>\n\nEstos productos\
+      \ tienen fundamental aplicaci\xF3n en aquellos casos donde se evidencie alta\
+      \ carga o bien donde el dise\xF1o del mecanismo exija la utilizaci\xF3n de aditivos\
+      \ EP, tal el caso de engranajes hipoidales."
+    grupo: 7
+    imagen: product/00028.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df51a52c0961471f2a000785.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df51a52c096ad83208045772.pdf
+    activo: true
+- model: homepage.producto
+  pk: 29
+  fields:
+    nombre: "Hipodial S\xFAper S 75W-90"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \  sistemas de transmisi\xF3n en general </dd>\n\n  <dt>GRADO SAE</dt>\n  <dd>75W-90</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nAceite lubricante de composici\xF3\
+      n sint\xE9tica con \xF3ptimas caracter\xEDsticas de fluidez a baja temperatura\
+      \ y extrema presi\xF3n.<br><br>\n\nAdem\xE1s se destaca su excelente protecci\xF3\
+      n frente al desgaste y su excepcional estabilidad t\xE9rmica."
+    grupo: 7
+    imagen: product/00029.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df50bee0214b497ce938792b.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df50bee021596ee1b5fa23e2.pdf
+    activo: true
+- model: homepage.producto
+  pk: 30
+  fields:
+    nombre: Hidro ATF
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Cajas de\
+      \ velocidades autom\xE1ticas, convertidores de torque, determinadas cajas manuales,\
+      \ direcciones hidr\xE1ulicas, etc.</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Lubricante hidr\xE1ulico de alto \xEDndice de viscosidad y adecuada capacidad\
+      \ antidesgaste, dise\xF1ado para satisfacer los exigentes requerimientos de\
+      \ determinadas transmisiones automotrices que requieren de estas caracter\xED\
+      sticas."
+    grupo: 7
+    imagen: product/00023.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df50b87e956ab97722c49c5a.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df50b87e9573b83ffd40cda4.pdf
+    activo: true
+- model: homepage.producto
+  pk: 31
+  fields:
+    nombre: Hidro 19
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>M\xE1quinas\
+      \ agr\xEDcolas.</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nProducto\
+      \ formulado para satisfacer los m\xFAltiples requerimientos a los que se somete\
+      \ un fluido de caracter\xEDsticas UTTOs (Universal Tractor Transmission Oils),\
+      \ lo cual implica responder a las exigencias de engranajes, sistemas hidr\xE1\
+      ulicos y frenos h\xFAmedos."
+    grupo: 7
+    imagen: product/00031.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df50b135cf30e74a8dc6be5b.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df50b135cf379a9a94ecec1f.pdf
+    activo: true
+- model: homepage.producto
+  pk: 32
+  fields:
+    nombre: Helicoidal STL 75W-90
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Para la\
+      \ lubricaci\xF3n de cajas de velocidades automotrices</dd>\n\n  <dt>ORIGEN</dt>\n\
+      \  <dd>Mineral</dd>\n\n  <dt>GRADO SAE</dt>\n  <dd>75W-90</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nLubricante sint\xE9tico formulado para cubrir requerimientos\
+      \ de efectiva fluidez y excelente protecci\xF3n del mecanismo dentado bajo moderadas\
+      \ condiciones de carga y exigentes condiciones de temperatura."
+    grupo: 7
+    imagen: product/00023.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df50abc783ea57da396fa213.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df50abc783f8ce2201e036fb.pdf
+    activo: true
+- model: homepage.producto
+  pk: 33
+  fields:
+    nombre: Helicoidal M 80W
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Para transmisiones\
+      \ automotrices de accionamiento manual</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\
+      \n  <dt>GRADO SAE</dt>\n  <dd>80W</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Lubricante para cajas de velocidades automotrices.<br><br>\n\nSu balanceada\
+      \ formulaci\xF3n permite alcanzar requerimientos de alta fluidez y excelente\
+      \ protecci\xF3n contra el desgaste en todos los elementos del sistema a\xFA\
+      n bajo condiciones extremas de temperatura."
+    grupo: 7
+    imagen: product/00033.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df50a39577da3c47b6a2cf32.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df50a39577e7d63d448d24bd.pdf
+    activo: true
+- model: homepage.producto
+  pk: 34
+  fields:
+    nombre: HD Suplemento 1
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motor naftero\
+      \ y Diesel de baja exigencia</dd>\n\n  <dt>ORIGEN</dt>\n  <dd>Mineral</dd>\n\
+      \n  <dt>GRADO SAE</dt>\n  <dd>10W</dd>\n</dl>\n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Lubricante monogrado para motores de cuatro tiempos, de composici\xF3n mineral,\
+      \ con alta resistencia a la oxidaci\xF3n y propiedades antiherrumbre, antidesgaste\
+      \ y detergente-dispersante."
+    grupo: 7
+    imagen: product/00023.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df572c67f6f6d17bc1b46047.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df572c67f76858a942b0d5ac.pdf
+    activo: true
+- model: homepage.producto
+  pk: 35
+  fields:
+    nombre: Normal 50
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ nafteros</dd>\n\n  <dt>GRADO SAE</dt>\n  <dd>50</dd>\n</dl>\n<br><br>\n\n\
+      <h3>DESCRIPCION</h3><br>\nLubricante de c\xE1rter para veh\xEDculos nafteros\
+      \ de baja exigencia.<br><br>\n\nSe trata de una l\xEDnea de aceites elaborados\
+      \ con bases altamente refinadas, formulados con compuestos capaces de controlar\
+      \ la oxidaci\xF3n, la corrosi\xF3n y el desgaste."
+    grupo: 8
+    imagen: product/00023.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df521a36fe37b542e59cec55.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df521a36fe40918148608628.pdf
+    activo: true
+- model: homepage.producto
+  pk: 36
+  fields:
+    nombre: Normal 40
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ nafteros</dd>\n\n  <dt>GRADO SAE</dt>\n  <dd>40</dd>\n</dl>\n<br><br>\n\n\
+      <h3>DESCRIPCION</h3><br>\nLubricante de c\xE1rter para veh\xEDculos nafteros\
+      \ de baja exigencia.<br><br>\n\nSe trata de una l\xEDnea de aceites elaborados\
+      \ con bases altamente refinadas, formulados con compuestos capaces de controlar\
+      \ la oxidaci\xF3n, la corrosi\xF3n y el desgaste."
+    grupo: 8
+    imagen: product/00023.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df52155952e1cddef9387da7.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df52155952f0d891b6fc56b9.pdf
+    activo: true
+- model: homepage.producto
+  pk: 37
+  fields:
+    nombre: Normal 30
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ nafteros</dd>\n\n  <dt>GRADO SAE</dt>\n  <dd>30</dd>\n</dl>\n<br><br>\n\n\
+      <h3>DESCRIPCION</h3><br>\nLubricante de c\xE1rter para veh\xEDculos nafteros\
+      \ de baja exigencia.<br><br>\n\nSe trata de una l\xEDnea de aceites elaborados\
+      \ con bases altamente refinadas, formulados con compuestos capaces de controlar\
+      \ la oxidaci\xF3n, la corrosi\xF3n y el desgaste."
+    grupo: 8
+    imagen: product/00023.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df51b9e92b488dde5a2a6292.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df51b9e92b63a536742299e8.pdf
+    activo: true
+- model: homepage.producto
+  pk: 38
+  fields:
+    nombre: Normal 20
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Motores\
+      \ nafteros</dd>\n\n  <dt>GRADO SAE</dt>\n  <dd>20</dd>\n</dl>\n<br><br>\n\n\
+      <h3>DESCRIPCION</h3><br>\nLubricante de c\xE1rter para veh\xEDculos nafteros\
+      \ de baja exigencia.<br><br>\n\nSe trata de una l\xEDnea de aceites elaborados\
+      \ con bases altamente refinadas, formulados con compuestos capaces de controlar\
+      \ la oxidaci\xF3n, la corrosi\xF3n y el desgaste."
+    grupo: 8
+    imagen: product/00023.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df51b56afbcdd2f6d97d718c.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df51b56afbf62da289ebddab.pdf
+    activo: true
+- model: homepage.producto
+  pk: 39
+  fields:
+    nombre: "Transmisi\xF3n 90"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Para lubricar\
+      \ cajas de velocidades y engranajes en general</dd>\n\n  <dt>GRADO SAE</dt>\n\
+      \  <dd>90</dd>\n</dl>\n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nL\xEDnea de lubricantes\
+      \ elaborados con bases minerales de alta refinaci\xF3n, la misma esta dirigida\
+      \ a cubrir los requerimientos de aquellos mecanismos dentados que por su dise\xF1\
+      o y carga son considerados de exigencia moderada."
+    grupo: 9
+    imagen: product/00023.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df5227929d62c1875650807c.pdf
+    activo: true
+- model: homepage.producto
+  pk: 40
+  fields:
+    nombre: "Transmisi\xF3n 250"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Para lubricar\
+      \ cajas de velocidades y engranajes en general</dd>\n\n  <dt>GRADO SAE</dt>\n\
+      \  <dd>250</dd>\n</dl>\n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nL\xEDnea de lubricantes\
+      \ elaborados con bases minerales de alta refinaci\xF3n, la misma esta dirigida\
+      \ a cubrir los requerimientos de aquellos mecanismos dentados que por su dise\xF1\
+      o y carga son considerados de exigencia moderada."
+    grupo: 9
+    imagen: product/00023.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df52230bff4ed662350a3c98.pdf
+    activo: true
+- model: homepage.producto
+  pk: 41
+  fields:
+    nombre: "Transmisi\xF3n 140"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>APLICACION</dt>\n  <dd>Para lubricar\
+      \ cajas de velocidades y engranajes en general</dd>\n\n  <dt>GRADO SAE</dt>\n\
+      \  <dd>140</dd>\n</dl>\n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nL\xEDnea de lubricantes\
+      \ elaborados con bases minerales de alta refinaci\xF3n, la misma esta dirigida\
+      \ a cubrir los requerimientos de aquellos mecanismos dentados que por su dise\xF1\
+      o y carga son considerados de exigencia moderada."
+    grupo: 9
+    imagen: product/00023.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df521ee181571008c6ef0587.pdf
+    activo: true
+- model: homepage.producto
+  pk: 42
+  fields:
+    nombre: Diesel 500
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>TIPO DE MOTOR</dt>\n  <dd>Diesel</dd>\n\
+      \n  <dt>MODELO</dt>\n  <dd>Diesel 500</dd>\n</dl>\n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Combustible dirigido a motorizaciones Diesel que requieran la utilizaci\xF3\
+      n de un gasoil grado 2 para su adecuado funcionamiento."
+    grupo: 10
+    imagen: product/00042.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df5234e73bbba4df4aab857f.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df5234e73c258510abb315dd.pdf
+    activo: true
+- model: homepage.producto
+  pk: 43
+  fields:
+    nombre: Ultradiesel
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>TIPO DE MOTOR</dt>\n  <dd>Diesel</dd>\n\
+      \n  <dt>MODELO</dt>\n  <dd>Ultra Diesel</dd>\n</dl>\n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Combustible dirigido a motorizaciones Diesel que requieran la utilizaci\xF3\
+      n de un gasoil grado 2 para su adecuado funcionamiento."
+    grupo: 10
+    imagen: product/00043.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df5236010b49d73089e68f1a.pdf
+    ficha_seguridad: null
+    activo: true
+- model: homepage.producto
+  pk: 44
+  fields:
+    nombre: Infinia Diesel
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>TIPO DE MOTOR</dt>\n  <dd>Diesel</dd>\n\
+      \n  <dt>MODELO</dt>\n  <dd>Infinia Diesel</dd>\n</dl>\n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      INFINIA DIESEL es un combustible especialmente dirigido a motorizaciones Diesel\
+      \ modernas que requieran la utilizaci\xF3n de un gasoil grado 3 para su adecuado\
+      \ funcionamiento.<br><br>\n\nPara su dise\xF1o, YPF se ha basado en los lineamientos\
+      \ mundiales m\xE1s exigentes, asegurando as\xED un bajo contenido de azufre\
+      \ (menor a 10 ppm).<br><br>\n\nSu exclusiva formulaci\xF3n satisface las exigencias\
+      \ de veh\xEDculos equipados con tecnolog\xEDa Euro V.<br><br>\n\nEste producto\
+      \ cumple con la Ley 26093/06, con la Resoluci\xF3n 1283/06 y sus modificatorias\
+      \ 478/09 y 5/16 de la Secretar\xEDa de Recursos Hidrocarbur\xEDferos."
+    grupo: 10
+    imagen: product/00044.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df523baca61eca65cebf2274.pdf
+    ficha_seguridad: null
+    activo: true
+- model: homepage.producto
+  pk: 45
+  fields:
+    nombre: FLUMIOXAZIN
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>Flumioxazin\
+      \ 48%</dd>\n\n  <dt>FORMULACI\xD3N</dt>\n  <dd>Suspensi\xF3n concentrada</dd>\n\
+      \n  <dt>MODO DE ACCI\xD3N</dt>\n  <dd>PPO</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Herbicida residual, con accion de contacto para uso en pre-emergencia de cultivo.<br><br>\n\
+      \nExcelente eficacia en el control de las principales malezas de hoja ancha\
+      \ y supresi\xF3n de gram\xEDneas anuales en pre- emergencia del cultivo. Muy\
+      \ buen control de Yuyo Colorado."
+    grupo: 11
+    imagen: product/00045.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21a8d31de23d1aa4de7e45.pdf
+    ficha_seguridad: null
+    activo: true
+- model: homepage.producto
+  pk: 46
+  fields:
+    nombre: SULFENTRAZONE
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>Sulfentrazone\
+      \ 50%</dd>\n\n  <dt>FORMULACI\xD3N</dt>\n  <dd>Suspensi\xF3n concentrada</dd>\n\
+      \n  <dt>MODO DE ACCI\xD3N</dt>\n  <dd>PPO</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Herbicida sist\xE9mico residual, familia de las triazolinonas y del grupo de\
+      \ los PPO. Selectivo para el control de malezas de hoja ancha.<br><br>\n\nAplicaci\xF3\
+      n preemergente de la maleza. Especialmente recomendado para control de yuyo\
+      \ colorado resistente. Formulaci\xF3n SC."
+    grupo: 11
+    imagen: product/00046.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21b846b344f5d1f83f6672.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21b846b3bfbafd9f8e580e.pdf
+    activo: true
+- model: homepage.producto
+  pk: 47
+  fields:
+    nombre: PARAQUAT
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Paraquat\
+      \ dichloride, 27,6% (eq. \xE1c. 20%)</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n \
+      \   <dd>Concentrado Soluble</dd>\n\n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>FI</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nHerbicida de contacto no residual\
+      \ para control total (no selectivo) de malezas en postemergencia de las mismas.\
+      \ Ideal para practicar reseteos de lote, doble golpe y rotaci\xF3n de principios\
+      \ activos de herbicidas.<br><br>\nFormulaci\xF3n SL."
+    grupo: 11
+    imagen: product/00047.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21c711c7a68fcb2efec002.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21c711c86d102db9265a66.pdf
+    activo: true
+- model: homepage.producto
+  pk: 48
+  fields:
+    nombre: S-METOLACLORO
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>S-metolacloro\
+      \ 96%</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n    <dd>Concentrado emulsionable</dd>\n\
+      \n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>Inh div celular</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nHerbicida pre-emergente de acci\xF3n sist\xE9mica\
+      \ para ma\xEDz, girasol, soja y man\xED.<br><br>\nControla un amplio espectro\
+      \ de malezas de hoja angosta y algunas de hoja ancha. Permite el desarrollo\
+      \ de un cultivo libre de competencia de malezas desde la emergencia, pudiendo\
+      \ obtener un mayor stand de plantas, mejor desarrollo y un mayor rendimiento\
+      \ final."
+    grupo: 11
+    imagen: ''
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21deda66b1f0ab1b815b6f.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21deda677ebc5692621691.pdf
+    activo: true
+- model: homepage.producto
+  pk: 49
+  fields:
+    nombre: METOLACLORO
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Metolaclor\
+      \ 96%</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n    <dd>Concentrado emulsionable</dd>\n\
+      \n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>Inh div celular</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nHerbicida sist\xE9mico y residual, familia de las\
+      \ cloroacetamidas.<br><br>\nSelectivo para control de malezas de hoja angosta\
+      \ (gram\xEDneas principalmente) y algunas de hoja ancha.<br><br>\nAplicaci\xF3\
+      n al suelo, preemergente de la maleza principalmente, con cierto control v\xED\
+      a foliar en malezas emergidas. Requiere humedad en el suelo para activarse.<br><br>\n\
+      Para controlar Cyperus spp. debe ser incorporado. Compatible con Atrazina YPF,\
+      \ Fomesafen YPF, Imazetapir YPF, en preemergencia. Formulaci\xF3n EC.\n"
+    grupo: 11
+    imagen: product/00049.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21ee47ea6b1a4aed76dbd8.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21ee47ebf5e07ffaefd22c.pdf
+    activo: true
+- model: homepage.producto
+  pk: 50
+  fields:
+    nombre: IMAZETAPIR
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Imazetapyr\
+      \ 10,6%, (eq. \xE1c. 10%)</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n    <dd>Concentrado\
+      \ Soluble</dd>\n\n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>ALS</dd>\n</dl> \n\
+      <br><br>\n\n<h3>DESCRIPCION</h3><br>\nHerbicida sist\xE9mico, familia de las\
+      \ imidazolinonas. Selectivo para el control de malezas de hoja ancha y de algunas\
+      \ de hoja angosta (gram\xEDneas y ciperus).<br><br>\nPuede tener 2 tipos de\
+      \ uso: foliar (no residual), en postemergencia de la maleza; o al suelo (residual),\
+      \ en preemergencia de la maleza.<br><br>\nUso compatible con Metolacloro YPF,\
+      \ para ampliar el espectro de control preemergente de gram\xEDneas. Formulaci\xF3\
+      n SL.\n"
+    grupo: 11
+    imagen: product/00050.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df220da903fb9a7a1b6cd28c.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df220da904a01637e2d4105b.pdf
+    activo: true
+- model: homepage.producto
+  pk: 51
+  fields:
+    nombre: HALOXIFOP CONCENTRADO
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Haloxifop-p-metil\
+      \ 54% (eq. \xE1c. 52%)</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n    <dd>Concentrado\
+      \ emulsionable</dd>\n\n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>ACCasa</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nHerbicida sist\xE9mico no residual,\
+      \ del grupo de los graminicidas FOP. Selectivo para el control postemergente\
+      \ de malezas anuales y perennes de gram\xEDneas (hoja angosta).<br><br>\nPermite\
+      \ rotar principios activos con los graminicidas del grupo DIM. Formulaci\xF3\
+      n EC l\xEDquida de alta concentraci\xF3n, que simplifica su manipuleo.<br><br>\n\
+      Siempre aplicar junto a Adyuvante 80 YPF o Aceite Coadyuvante YPF."
+    grupo: 11
+    imagen: product/00051.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df26aab14fa4c9bb05b0fa8e.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df26aab15023a419fb7c9062.pdf
+    activo: true
+- model: homepage.producto
+  pk: 52
+  fields:
+    nombre: GLUFOSINATO
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Glufosinato\
+      \ de amonio 20%</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n    <dd>Concentrado soluble</dd>\n\
+      \n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>Inh glut sint</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nHerbicida de contacto (con leve efecto sist\xE9\
+      mico) no residual, utilizado para control total (no selectivo) de malezas en\
+      \ postemergencia de las mismas.<br><br>\nIdeal para practicar reseteos de lote,\
+      \ doble golpe y rotaci\xF3n de principios activos de herbicidas.<br><br>\nAplicar\
+      \ siempre con Sulfato de Amonio YPF."
+    grupo: 11
+    imagen: product/00052.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df220337d5bdd96c5762b4e5.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df220337d648743ac8373709.doc
+    activo: true
+- model: homepage.producto
+  pk: 53
+  fields:
+    nombre: GLIFOSATO 54%
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Glifosato,\
+      \ mezcla de sales, pot\xE1sica 66,2%, (eq. \xE1c. 54%)</dd>\n\n    <dt>FORMULACI\xD3\
+      N</dt>\n    <dd>Concentrado soluble</dd>\n\n    <dt>MODO DE ACCI\xD3N</dt>\n\
+      \    <dd>EPSPS</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nHerbicida\
+      \ sist\xE9mico no residual, para control total (no selectivo) en postemergencia\
+      \ de malezas.<br><br>\nContiene aditivos que potencian su acci\xF3n herbicida.<br><br>\n\
+      Formulaci\xF3n SL l\xEDquida de alta concentraci\xF3n."
+    grupo: 11
+    imagen: product/00053.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df26bbbc7d571f6ced5a265f.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df26bbbc7ed20620f9a6cf4a.pdf
+    activo: true
+- model: homepage.producto
+  pk: 54
+  fields:
+    nombre: GLIFOSATO GRANULADO 68,8%
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Glifosato,\
+      \ sal amonio 75,7%, (eq. \xE1c. 68,8%)</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n\
+      \    <dd>Concentrado soluble</dd>\n\n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>EPSPS</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nHerbicida sist\xE9mico no residual,\
+      \ utilizado para control total (no selectivo) en postemergencia de malezas.<br><br>\n\
+      Es un herbicida postemergente para barbechos qu\xEDmicos y labranza qu\xEDmica.\
+      \ Adem\xE1s es selectivo para cultivos de algod\xF3n, soja y ma\xEDz transg\xE9\
+      nicos, resistentes a glifosato.<br><br>\nAlta compatibilidad con 2,4-D Amina\
+      \ YPF.<br><br>\nFormulaci\xF3n s\xF3lida SG/WG de alta concentraci\xF3n que\
+      \ simplifica su uso y manipuleo."
+    grupo: 11
+    imagen: product/00054.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21e9195e3a2bc2183ed66c.pdf
+    activo: true
+- model: homepage.producto
+  pk: 55
+  fields:
+    nombre: FOMESAFEN
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Fomesafen\
+      \ 25%</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n    <dd>Concentrado soluble</dd>\n\
+      \n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>PPO</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Herbicida de contacto o sist\xE9mico, del grupo de los PPO. Selectivo para control\
+      \ de malezas de hoja ancha. Especialmente recomendado para control de yuyo colorado\
+      \ resistente.<br><br>\nPuede tener 2 tipos de uso: foliar (de contacto) no residual,\
+      \ en posemergencia de la maleza; o al suelo (sist\xE9mico) residual, en preemergencia\
+      \ de la maleza.<br><br>\nCompatible con Metolacloro YPF, para ampliar el espectro\
+      \ de control preemergente a gram\xEDneas. Formulaci\xF3n SL."
+    grupo: 11
+    imagen: product/00055.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21d93c447577e188cf4ab7.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21d93c44ebc34c8d6ec927.pdf
+    activo: true
+- model: homepage.producto
+  pk: 56
+  fields:
+    nombre: DICAMBA
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Dicamba\
+      \ 57,8% (eq. \xE1c. 48%)</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n    <dd>Concentrado\
+      \ soluble</dd>\n\n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>Hormonal</dd>\n</dl>\
+      \ \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nHerbicida sist\xE9mico no residual,\
+      \ del grupo de los hormonales. Selectivo para el control de malezas de hoja\
+      \ ancha, principalmente especies de la familias compuestas, poligon\xE1ceas,\
+      \ chenopodi\xE1ceas, amarant\xE1ceas, api\xE1ceas, urtic\xE1ceas, viol\xE1ceas.<br><br>\n\
+      Uso postemergente de la maleza. Alta compatibilidad y complementariedad en mezclas\
+      \ con 2,4-D, Picloram.<br><br>\nMenor riesgo de fitotoxicidad en aplicaciones\
+      \ en ma\xEDz que 2,4-D. Formulaci\xF3n SL.<br><br>\nRelacionados: Alta compatibilidad\
+      \ y complementariedad en mezclas con 2,4-D, Picloram. Menor riesgo de fitotoxicidad\
+      \ en aplicaciones en ma\xEDz que 2,4-D. Formulaci\xF3n SL."
+    grupo: 11
+    imagen: product/00056.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21cf79122c79145730035a.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21cf7912a6150d89d651d6.pdf
+    activo: true
+- model: homepage.producto
+  pk: 57
+  fields:
+    nombre: CLETODIM
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Cletodim\
+      \ 24%</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n    <dd>Concentrado emulsionable</dd>\n\
+      \n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>ACCasa</dd>\n</dl> \n<br><br>\n\n\
+      <h3>DESCRIPCION</h3><br>\nHerbicida sist\xE9mico no residual, del grupo de los\
+      \ graminicidas DIM. Selectivo para el control postemergente de malezas anuales\
+      \ y perennes de la familia gram\xEDneas (hoja angosta).<br><br>\nPermite rotar\
+      \ con los graminicidas del grupo FOP.<br><br>\nSiempre aplicar junto a Adyuvante\
+      \ 80 YPF o Aceite Coadyuvante YPF. Formulaci\xF3n EC."
+    grupo: 11
+    imagen: product/00057.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21bf2a0d44bfe9c6ad3862.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21bf2a0dbe918d78fd8cf5.pdf
+    activo: true
+- model: homepage.producto
+  pk: 58
+  fields:
+    nombre: ATRAZINA GRANULADA
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Atrazina\
+      \ 90%</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n    <dd>Concentrado dispersables</dd>\n\
+      \n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>FII</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Herbicida sist\xE9mico y residual, de la familia de las triazinas. Selectivo\
+      \ para el control de malezas de hoja ancha y algunas gram\xEDneas anuales.<br><br>\n\
+      Aplicaci\xF3n preemergente de la maleza principalmente, con cierto control por\
+      \ v\xEDa foliar en malezas ya emergidas. Formulaci\xF3n s\xF3lida de alta concentraci\xF3\
+      n, de f\xE1cil disoluci\xF3n y manipulaci\xF3n.<br><br>\nUso compatible con\
+      \ Metolacloro YPF, para ampliar el espectro de control preemergente a gram\xED\
+      neas."
+    grupo: 11
+    imagen: product/00058.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21afd339746d67e16599ca.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21afd339ebfb9f8caf40b8.pdf
+    activo: true
+- model: homepage.producto
+  pk: 59
+  fields:
+    nombre: ATRAZINA
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Atrazina\
+      \ 50%</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n    <dd>Suspensi\xF3n concentrada</dd>\n\
+      \n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>FII</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Herbicida sist\xE9mico y residual, de la familia de las triazinas. Selectivo\
+      \ para el control de malezas de hoja ancha y algunas gram\xEDneas anuales.<br><br>\n\
+      Aplicaci\xF3n preemergente de la maleza principalmente, con cierto control por\
+      \ v\xEDa foliar en malezas ya emergidas. Formulaci\xF3n l\xEDquida.<br><br>\n\
+      Uso compatible con Metolacloro YPF, para ampliar el espectro de control preemergente\
+      \ a gram\xEDneas."
+    grupo: 11
+    imagen: product/00059.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21a5d0550c519ac478bfeb.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21a5d055b194078740224f.pdf
+    activo: true
+- model: homepage.producto
+  pk: 60
+  fields:
+    nombre: "2.4 D ETHEX \xC9STER"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>2,4-D\
+      \ etil hexil, \xE9ster 89%, (eq. \xE1c. 59%)</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n\
+      \    <dd>Concentrado emulsionable</dd>\n\n    <dt>MODO DE ACCI\xD3N</dt>\n \
+      \   <dd>Hormonal</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nHerbicida\
+      \ sist\xE9mico no residual, del grupo de los hormonales.<br><br>\nSelectivo\
+      \ para el control de malezas de hoja ancha, principalmente especies de la familias\
+      \ compuestas, cruc\xEDferas, chenopodi\xE1ceas, amarant\xE1ceas.<br><br>\nUso\
+      \ postemergente de la maleza. R\xE1pido efecto herbicida.<br><br>\nFormulaci\xF3\
+      n l\xEDquida concentrada emulsionable de baja volatilidad, en nivel similar\
+      \ a las formulaciones amina.<br><br>\nAlta compatibilidad y complementariedad\
+      \ con Dicamba YPF o Picloram."
+    grupo: 11
+    imagen: product/00060.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21903dd1d59fa4cb53aa3b.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21903dd2558b58dfc24dad.pdf
+    activo: true
+- model: homepage.producto
+  pk: 61
+  fields:
+    nombre: 2.4 D AMINA
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>2,4-D,\
+      \ dietilamina 80,4%, (eq. \xE1c. 60%)</dd>\n\n    <dt>FORMULACI\xD3N</dt>\n\
+      \    <dd>Concentrado soluble</dd>\n\n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>Hormonal</dd>\n\
+      \n    <dt>PRESENTACI\xD3N</dt>\n    <dd>Bid\xF3n 20L</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nHerbicida sist\xE9mico no residual, del grupo de\
+      \ los hormonales.<br><br>\nSelectivo para el control de malezas de hoja ancha,\
+      \ principalmente especies de las familias compuestas, cruc\xEDferas, chenopodi\xE1\
+      ceas, amarant\xE1ceas. Uso postemergente de la maleza.<br><br>\nFormulaci\xF3\
+      n l\xEDquida de baja volatilidad."
+    grupo: 11
+    imagen: product/00061.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df2189e2964f673262cb55ce.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2189e2e806feb04372c82b.pdf
+    activo: true
+- model: homepage.producto
+  pk: 62
+  fields:
+    nombre: MIXTAR
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt>\n    <dd>Azoxistrobina\
+      \ 20%, Cyproconazole 8%</dd>\n\n    <dt>MODO DE ACCI\xD3N</dt>\n    <dd>Act\xFA\
+      a mediante control preventivo, curativo y erradicante. Posee acci\xF3n</dd>\n\
+      \n    <dt>PRESENTACI\xD3N</dt>\n    <dd>5 L</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Mezcla de fungicidas compuesta por una estrobilurina (Azoxistrobina) y un triazol\
+      \ (Cyproconazole), que le confieren 2 modos de acci\xF3n diferentes, menor riesgo\
+      \ de desarrollo de resistencia y un amplio espectro de acci\xF3n. Act\xFAa mediante\
+      \ control preventivo, curativo y erradicante.<br>\nPosee acci\xF3n sist\xE9\
+      mica en la planta, lo que le brinda alta persistencia. Controla royas, manchas,\
+      \ tiz\xF3n y enfermedades de fin de ciclo (EFC). Formulaci\xF3n SC.\n"
+    grupo: 12
+    imagen: product/00062.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df7e24e3a81b4e86a1b730f9.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df7e24e3a897d6bcb0992c91.pdf
+    activo: true
+- model: homepage.producto
+  pk: 63
+  fields:
+    nombre: I-ULTRA HV TR
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>CONCENTRACI\xD3N</dt>\n    <dd>Aceite\
+      \ mineral paraf\xEDnico</dd>\n\n    <dt>PRESENTACI\xD3N</dt>\n    <dd>205 L</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nAceite mineral insecticida-acaricida\
+      \ emulsionable ultra refinado de \xFAltima generaci\xF3n. De rango estrecho\
+      \ y m\xE1ximo poder insecticida. No fitot\xF3xico en condiciones recomendadas\
+      \ de uso.<br><br>\nControla principalmente cochinillas, ara\xF1uelas y pulgones.\
+      \ No desarrolla resistencia. Formulaci\xF3n EC."
+    grupo: 13
+    imagen: ''
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df2222ae7697ee4eb1ec4f17.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2222ae7712698703f97384.pdf
+    activo: true
+- model: homepage.producto
+  pk: 64
+  fields:
+    nombre: I-CURAFRUTAL HV
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>CONCENTRACI\xD3N</dt>\n    <dd>Aceite\
+      \ mineral paraf\xEDnico</dd>\n\n    <dt>PRESENTACI\xD3N</dt>\n    <dd>205 L</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nAceite insecticida-acaricida emulsionable\
+      \ de rotura intermedia. Controla principalmente cochinillas, ara\xF1uelas, pulgones.<br><br>\n\
+      Para aplicaciones en oto\xF1o-invierno en frutales de hoja caduca y vides, y\
+      \ durante todo el a\xF1o en c\xEDtricos. No desarrolla resistencia. Formulaci\xF3\
+      n EC.\n"
+    grupo: 13
+    imagen: ''
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df221f9aac2772736ccca59f.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df221f9aac8fb4edaa224574.pdf
+    activo: true
+- model: homepage.producto
+  pk: 65
+  fields:
+    nombre: I-ULTRA LV TR
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>CONCENTRACI\xD3N</dt>\n    <dd>Aceite\
+      \ mineral paraf\xEDnico</dd>\n\n    <dt>PRESENTACI\xD3N</dt>\n    <dd>205 L</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nAceite mineral insecticida-acaricida\
+      \ emulsionable ultra refinado de \xFAltima generaci\xF3n. De rango estrecho\
+      \ y m\xE1ximo poder insecticida.<br><br>\nNo fitot\xF3xico en condiciones recomendadas\
+      \ de uso.<br><br>\nControla principalmente cochinillas, ara\xF1uelas y pulgones.\
+      \ No desarrolla resistencia. Formulaci\xF3n EC."
+    grupo: 13
+    imagen: ''
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df2219f28a76e54d77a3700a.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2219f28b0033cff39ec1fa.pdf
+    activo: true
+- model: homepage.producto
+  pk: 66
+  fields:
+    nombre: I-CURAFRUTAL LV
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>CONCENTRACI\xD3N</dt>\n    <dd>Aceite\
+      \ mineral paraf\xEDnico</dd>\n\n    <dt>PRESENTACI\xD3N</dt>\n    <dd>205 L</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nAceite insecticida-acaricida emulsionable\
+      \ de rotura intermedia.<br><br>\nControla principalmente cochinillas, ara\xF1\
+      uelas, pulgones.<br><br>\nNo desarrolla resistencia. Formulaci\xF3n EC."
+    grupo: 13
+    imagen: ''
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df2215995bafe1cbf1a23f40.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2215995c26bff644d797aa.pdf
+    activo: true
+- model: homepage.producto
+  pk: 67
+  fields:
+    nombre: "BIFENTR\xCDN + IMIDA"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>CONCENTRACI\xD3N</dt>\n    <dd>Bifentr\xED\
+      n 3% + Imidacloprid 10%</dd>\n\n    <dt>GRUPO QU\xCDMICO</dt>\n    <dd>Piretroide\
+      \ 4ta Generaci\xF3n + Neonicotinoide</dd>\n\n    <dt>PRESENTACI\xD3N</dt>\n\
+      \    <dd>20 L</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nMezcla de\
+      \ insecticidas compuesta por un piretroide de 4ta generaci\xF3n purificado (Bifentr\xED\
+      n) y un neonicotinoide (Imidacloprid).<br><br>\nAct\xFAa por contacto e ingesti\xF3\
+      n. De acci\xF3n sist\xE9mica en la planta. Alta persistencia. Controla chinche\
+      \ verde, chinche de la alfalfa,trips, orugas, pulg\xF3n. Formulaci\xF3n SC.\n"
+    grupo: 13
+    imagen: product/00067.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21fe2917ae23e2b7f65197.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21fe29183fce0e3f5e79e6.pdf
+    activo: true
+- model: homepage.producto
+  pk: 68
+  fields:
+    nombre: LAMBDA-CIALOTRINA
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>CONCENTRACI\xD3N</dt>\n    <dd>Lambdacialotrina,\
+      \ 24%</dd>\n\n    <dt>GRUPO QU\xCDMICO</dt>\n    <dd>Piretroide 4ta Generaci\xF3\
+      n</dd>\n\n    <dt>PRESENTACI\xD3N</dt>\n    <dd>500 g</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nInsecticida piretroide (4ta generaci\xF3n). Act\xFA\
+      a por contacto, ingesti\xF3n y repelencia. De r\xE1pida acci\xF3n y alto poder\
+      \ de volteo. Alta compatibilidad aplicado con Clorpirif\xF3s YPF.<br><br>\n\
+      Controla isocas, orugas, gusanos cortadores, polillas, chicharrita, bicho canasto,\
+      \ chinche verde y mosquita del sorgo. Formulaci\xF3n SG/WG con tecnolog\xED\
+      a Sorbie\xAE, que combina amplio espectro y poder residual.\n"
+    grupo: 13
+    imagen: product/00068.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21a0bbed0aa3a460d46c5e.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21a0bbed8a92076452f378.pdf
+    activo: true
+- model: homepage.producto
+  pk: 69
+  fields:
+    nombre: "CLORPIRIF\xD3S"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>CONCENTRACI\xD3N</dt>\n    <dd>Clorpirif\xF3\
+      s, etil 48%</dd>\n\n    <dt>GRUPO QU\xCDMICO</dt>\n    <dd>Organo fosforado</dd>\n\
+      \n    <dt>PRESENTACI\xD3N</dt>\n    <dd>20 L</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Insecticida \xF3rgano-fosforado de amplio espectro. Controla por inhalaci\xF3\
+      n, contacto e ingesti\xF3n. De acci\xF3n translaminar en la planta, persistencia\
+      \ de acci\xF3n media.<br><br>\nAlta compatibilidad con Lambda-Cialotrina YPF.\
+      \ Controla pulg\xF3n, isocas, orugas, gusanos cortadores, barrenador del brote,\
+      \ mosquita del sorgo, chinche, bicho canasto, ara\xF1uela roja. Formulaci\xF3\
+      n EC.\n"
+    grupo: 13
+    imagen: product/00069.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df21991eea92e056e352ab47.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df21991eeb5157042564b793.pdf
+    activo: true
+- model: homepage.producto
+  pk: 70
+  fields:
+    nombre: PACK Y-TERRA
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>COMPOSICI\xD3N</dt><dd>Y-TERRA\
+      \ Trichoderma harzianum cepa Y-TEC Trch3. YPF INOCULANTE Brandyrhizobium japonicum\
+      \ cepa E 109 INTAC. YOF BIOPROTECTOR</dd>\n    <dt>PRESENTACI\xD3N</dt><dd>9\
+      \ L</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nY-TERRA pack SOJA est\xE1\
+      \ conformado por: un inoculante de alta concentraci\xF3n, el cual aporta las\
+      \ bacterias fijadoras de nitr\xF3geno (Bradyrhizobium japonicum); un formulado\
+      \ (Y-TERRA) a base de un aislado espec\xEDfico de Trichoderma harzianum, reconocido\
+      \ biocontrolador natural, que adem\xE1s incrementa la tasa de crecimiento y\
+      \ desarrollo de las plantas; y un bioprotector espec\xEDfico que garantiza la\
+      \ protecci\xF3n, nutrici\xF3n y adherencia de los microorganismos a la semilla.<br><br>\n\
+      Y-TERRA facilita la solubilizaci\xF3n y absorci\xF3n de nutrientes mediante\
+      \ procesos naturales que transforman compuestos nitrogenados, fosforados y azufrados\
+      \ org\xE1nicos en inorg\xE1nicos. Y- TERRA promueve la biodisponibilizaci\xF3\
+      n de los minerales del suelo a trav\xE9s de procesos 100% biol\xF3gicos que\
+      \ mejoran el estado fitosanitario del cultivo y que tienen un fuerte impacto\
+      \ en el rendimiento de la cosecha.\n"
+    grupo: 14
+    imagen: product/00070.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df7e22b5dc0b15f04f26ac8a.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df7e22b5dc8a85d5e1e9b8df.pdf
+    activo: true
+- model: homepage.producto
+  pk: 71
+  fields:
+    nombre: COA LAVADOR AGROTANQUE
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>1,230\
+      \ g/cm\xB3 a 25\xB0C</dd>\n    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE\
+      \ ACTIVO</dt><dd>Octilsulfato, de sodio 30% p/p</dd>\n    <dt>PRESENTACI\xD3\
+      N</dt><dd>1 L</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nPrincipio\
+      \ activo limpiador, removedor e inactivador de restos de agroqu\xEDmicos en\
+      \ tanques de pulverizaci\xF3n luego de aplicar.<br><br>\nAyuda a prevenir la\
+      \ ocurrencia de fitotoxicidad por residuos indeseados en tanque. Formulaci\xF3\
+      n SL.\n"
+    grupo: 15
+    imagen: product/00071.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df225afe732e8f949268d2a3.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df225afe73b97438378a988c.pdf
+    activo: true
+- model: homepage.producto
+  pk: 72
+  fields:
+    nombre: COA ANTIESPUMA
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>1,0 g/cm\xB3\
+      \ a 20\xB0C</dd>\n    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE ACTIVO</dt><dd>Polidimetilsiloxano\
+      \ 20% p/v</dd>\n    <dt>PRESENTACI\xD3N</dt><dd>1 L</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nDisminuye la formaci\xF3n de espuma en los tanques\
+      \ de pulverizaci\xF3n, optimiza el tiempo de llenado, evitando derrames, contaminaciones\
+      \ y fallas en la aplicaci\xF3n. Formulaci\xF3n DC.\n"
+    grupo: 15
+    imagen: product/00072.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df225809f4cf29d43d1e083f.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df225809f54a04f591f690a2.pdf
+    activo: true
+- model: homepage.producto
+  pk: 73
+  fields:
+    nombre: COA CORRECTOR SECUESTRANTE
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>N/D</dd>\n\
+      \    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE ACTIVO</dt><dd>\xC1cido\
+      \ fosf\xF3rico, 75% p/v</dd>\n    <dt>PRESENTACI\xD3N</dt><dd>1 L</dd>\n</dl>\
+      \ \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nCorrige el pH por su acci\xF3n buffer\
+      \ y secuestrante de cationes, inhibidores de fitosanitarios en los caldos de\
+      \ aplicaci\xF3n, como son el calcio, el magnesio, el hierro, el aluminio y el\
+      \ sodio. Formulaci\xF3n SL."
+    grupo: 15
+    imagen: product/00073.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df224c48c974dbe01d22fb4d.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df224c48c9f14935993758fd.pdf
+    activo: true
+- model: homepage.producto
+  pk: 74
+  fields:
+    nombre: COA SILICONADA 100
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>1,01\
+      \ g/cm\xB3 [DIN 51757] a 25\xB0C</dd>\n    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE\
+      \ ACTIVO</dt><dd>Heptametiltrisiloxano 100% p/v</dd>\n    <dt>PRESENTACI\xD3\
+      N</dt><dd>1 L</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nTensioactivo\
+      \ siliconado (humectante) de \xFAltima generaci\xF3n, con el m\xE1ximo poder\
+      \ de humectaci\xF3n y dispersi\xF3n del mercado.<br><br>\nLibre de nonil-fenol.\
+      \ Formulaci\xF3n SL.\n"
+    grupo: 15
+    imagen: product/00074.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df2248cea6f43f7e58f75e7a.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2248cea76de501459cfa42.pdf
+    activo: true
+- model: homepage.producto
+  pk: 75
+  fields:
+    nombre: COA VEGETAL SILICONADO
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>N/D</dd>\n\
+      \    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE ACTIVO</dt><dd>Lecitina\
+      \ de soja35% p/v<br>Aceite metilado. Aditivo \xF3rgano-siliconado</dd>\n   \
+      \ <dt>PRESENTACI\xD3N</dt><dd>5 L</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Mezcla de lecitina y aceite metilado con tensioactivo siliconado (humectante)\
+      \ de \xFAltima generaci\xF3n, con el m\xE1ximo poder antideriva y antievaporante\
+      \ del mercado.<br><br>\nFunci\xF3n antideriva, antievaporante, tensioactivo\
+      \ y penetrante. Formulaci\xF3n EC.\n"
+    grupo: 15
+    imagen: product/00075.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df22458dc55fc069916b670d.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df22458dc5da84f5680bd62a.pdf
+    activo: true
+- model: homepage.producto
+  pk: 76
+  fields:
+    nombre: "C\u2219COA VEGETAL"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>0.930\
+      \ g/cm3 t\xEDpica a 15 oC</dd>\n    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE\
+      \ ACTIVO</dt><dd>Aceite vegetal 80,5% p/v</dd>\n    <dt>PRESENTACI\xD3N</dt><dd>20\
+      \ L</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nAceite vegetal emulsionable\
+      \ desgomado, recomendado para aplicaciones de fitosanitarios con condiciones\
+      \ agroclim\xE1ticas de baja humedad relativa y temperaturas medias. Funci\xF3\
+      n antievaporante. Formulaci\xF3n EC.\n"
+    grupo: 15
+    imagen: product/00076.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df223f5e80f7efde11a2e17c.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df223f5e817202a47b223349.pdf
+    activo: true
+- model: homepage.producto
+  pk: 77
+  fields:
+    nombre: "C\u2219ACEITE COADYUVANTE"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>0.885\
+      \ g/cm3 t\xEDpico a 15 oC</dd>\n    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE\
+      \ ACTIVO</dt><dd>Aceite mineral paraf\xEDnico 83,31% p/v</dd>\n    <dt>PRESENTACI\xD3\
+      N</dt><dd>20 L</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nAceite mineral\
+      \ paraf\xEDnico emulsionable para aplicaciones de fitosanitarios en condiciones\
+      \ clim\xE1ticas de baja humedad relativa y alta temperatura.<br><br>\nFunci\xF3\
+      n antievaporante, tensioactivo y penetrante. Formulaci\xF3n EC.\n"
+    grupo: 15
+    imagen: product/00077.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df223b0dbd8b85942e5cca94.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df223b0dbe047b895b05fb6e.pdf
+    activo: true
+- model: homepage.producto
+  pk: 78
+  fields:
+    nombre: "C\u2219ADYUVANTE 80"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>0.853\
+      \ g/cm3 t\xEDpico a 15o C</dd>\n    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE\
+      \ ACTIVO</dt><dd>Aceite mineral paraf\xEDnico 80.5% p/v</dd>\n    <dt>PRESENTACI\xD3\
+      N</dt><dd>20 L</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nAceite emulsionable\
+      \ para aplicaciones de fito-sanitarios en condiciones clim\xE1ticas de baja\
+      \ humedad relativa y alta temperatura.<br><br>\nEspecialmente desarrollado para\
+      \ aplicaciones de graminicidas. Funci\xF3n antievaporante, tensioactivo y penetrante.\
+      \ Formulaci\xF3n EC."
+    grupo: 15
+    imagen: product/00078.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df2237536e31ee8725da1dd3.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2237536eb1856b60f42168.pdf
+    activo: true
+- model: homepage.producto
+  pk: 79
+  fields:
+    nombre: NPS ZINC
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>12%\
+      \ N 40% pentoxido de fosforo 5% azufre 1% Zinc</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n\
+      \  <dd>12-40-0- 5S-1 Zn</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n  <dd>Granulado,\
+      \ Bolsa 50kg, Granel, Big bag 500 o mil kg</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Mezcla qu\xEDmica s\xF3lida de base balanceada con los principales nutrientes\
+      \ que demandan los cultivos, lo que asegura distribuci\xF3n homog\xE9nea de\
+      \ todos los elementos en cada grano, y nutrici\xF3n balanceada planta a planta.<br><br>\n\
+      \nPuede ser utilizado en mezclas f\xEDsicas."
+    grupo: 16
+    imagen: ''
+    ficha_tecnica: ''
+    ficha_seguridad: ''
+    activo: true
+- model: homepage.producto
+  pk: 80
+  fields:
+    nombre: 'UAN-S '
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>UAN\
+      \ + tiosulfato de amonio</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n  <dd>30-0-0\
+      \ 2,6 S  28-0-0 5,2 S 26-0-0 7,8 S</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n  <dd>L\xED\
+      quido, A granel</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nUAN + tiosulfato\
+      \ de amonio.<br><br>\nEl agregado de tiosulfato aporta azufre a la mezcla l\xED\
+      quida generando un efecto sin\xE9rgico junto al nitr\xF3geno en la planta.<br><br>\n\
+      El tiosulfato aporta una fracci\xF3n residual de S durante el ciclo del cultivo\
+      \ y reduce la tasa de volatilizaci\xF3n del nitr\xF3geno."
+    grupo: 17
+    imagen: ''
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df3e7ae0fc735734ddb17152.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4e0e9cfe50bab1e2943fd1.pdf
+    activo: true
+- model: homepage.producto
+  pk: 81
+  fields:
+    nombre: SUPERFOSFATO TRIPLE
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>46%\
+      \ pentoxido de fosforo</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n  <dd>0-46-0 14\
+      \ Ca</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n  <dd>S\xF3lida, Bolsa 50kg</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nFertilizante fosfatado de mayor\
+      \ concentraci\xF3n disponible sin nitr\xF3geno.<br><br>\nS\xF3lido e ideal para\
+      \ utilizar en cultivos de leguminosas."
+    grupo: 18
+    imagen: product/00081.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2b5b75111759bb5f67e8fc.pdf
+    activo: true
+- model: homepage.producto
+  pk: 82
+  fields:
+    nombre: SUPERFOSFATO SIMPLE
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>21%\
+      \ pentoxido de fosforo 12% azufre 18-20% calcio (KO)</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n\
+      \  <dd>0-21-0- 12S-20 Ca</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n  <dd>S\xF3lida,\
+      \ Bolsa 50kg</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nSuperfosfato\
+      \ simple combina f\xF3sforo, azufre y calcio en forma s\xF3lida.<br><br>\nTiene\
+      \ una excelente relaci\xF3n al menor costo, y puede combinarse con otros elementos\
+      \ en mezclas f\xEDsicas, como excelente fuente de P, S y Ca.\n"
+    grupo: 18
+    imagen: product/00082.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2b4f5556d9d4a77b2bf704.pdf
+    activo: true
+- model: homepage.producto
+  pk: 83
+  fields:
+    nombre: "FOSFATO DIAM\xD3NICO"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>18%\
+      \ Nitrogeno 46% Pentoxido de fosforo</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n\
+      \  <dd>18-46-0</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n  <dd>S\xF3lida, Bolsa 50kg</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nExcelente fertilizante s\xF3lido\
+      \ para ser utilizado a la siembra, por su alto contenido de f\xF3sforo que favorece\
+      \ el desarrollo radicular de las plantas.<br><br>\nEl nitr\xF3geno que aporta\
+      \ permite cubrir las necesidades de este elemento durante las etapas iniciales\
+      \ del cultivo."
+    grupo: 18
+    imagen: product/00083.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2b3ed9cff611fa5d07dc3a.pdf
+    activo: true
+- model: homepage.producto
+  pk: 84
+  fields:
+    nombre: "FOSFATO MONOAM\xD3NICO"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>11%\
+      \ Nitrogeno 52% Pentoxido de fosforo</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n\
+      \  <dd>11-52-0</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n  <dd>Granulado, Bolsa 50kg,\
+      \ Granel, Big bag 500 o mil kg</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Excelente fertilizante s\xF3lido para ser utilizado a la siembra, por su alto\
+      \ contenido de fosforo que favorece el desarrollo radicular de las plantas.<br><br>\n\
+      El nitr\xF3geno que suma permite cubrir las necesidades de este elemento durante\
+      \ las etapas iniciales del cultivo. M\xE1s adecuado para mezclas que el DAP.\n"
+    grupo: 18
+    imagen: product/00084.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2b2b448ba9ea0ebcfb78ec.pdf
+    activo: true
+- model: homepage.producto
+  pk: 85
+  fields:
+    nombre: UAN-SZ
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>UAN\
+      \ + tiosulfato de amonio + sulfato de zinc</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n\
+      \  <dd>27-0-0- 5S - 0,5 Zn</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n  <dd>L\xEDquido,\
+      \ A granel</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nUAN + tiosulfato\
+      \ de amonio + sulfato de zinc. El tiosulfato suma azufre a la mezcla l\xEDquida\
+      \ dando un efecto sin\xE9rgico junto al nitr\xF3geno en la planta y disminuye\
+      \ la volatilizaci\xF3n del nitr\xF3geno.<br><br>\nEl zinc es un microelemento\
+      \ esencial para la planta, muy involucrado en metabolismo del nitr\xF3geno y\
+      \ en otros procesos metab\xF3licos fundamentales."
+    grupo: 19
+    imagen: ''
+    ficha_tecnica: ''
+    ficha_seguridad: ''
+    activo: true
+- model: homepage.producto
+  pk: 86
+  fields:
+    nombre: UAN
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>UAN</dd>\n\
+      \n  <dt>GRADO EQUIVALENTE</dt>\n  <dd>32-0-0</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n\
+      \  <dd>L\xEDquido, A granel</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Fuente l\xEDquida que aporta nitr\xF3geno en todas sus formas posibles (ureica,\
+      \ n\xEDtrica y amoniacal)."
+    grupo: 20
+    imagen: ''
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2aefcd6dadbd099cf4e432.pdf
+    activo: true
+- model: homepage.producto
+  pk: 87
+  fields:
+    nombre: UREA N-GRADUAL
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>Nitr\xF3\
+      geno Total: 46,0% Aaditivo: N-YIELD (NBPT)</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n\
+      \  <dd>46-0-0</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n  <dd>Granulado, Bolsa 50kg</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nUrea tratada con N-YIELD que inhibe\
+      \ la acci\xF3n de la enzima ureasa sobre el nitr\xF3geno de la urea, reduciendo\
+      \ las p\xE9rdidas por volatilizaci\xF3n y, por consiguiente, garantiza una mayor\
+      \ disponibilidad de nitr\xF3geno en el suelo."
+    grupo: 20
+    imagen: product/00087.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df2ae1078aa10ca868803849.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2ae586cb68e2ee2ace64f1.pdf
+    activo: true
+- model: homepage.producto
+  pk: 88
+  fields:
+    nombre: UREA GRANULADA
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>Nitr\xF3\
+      geno Total: 46,0%</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n  <dd>46-0-0</dd>\n\n\
+      \  <dt>PRESENTACI\xD3N</dt>\n  <dd>Granulado, Bolsa 25kg y 50kg, Granel, Big\
+      \ bag 500 o mil kg</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nLa fuente\
+      \ s\xF3lida con mayor concentraci\xF3n de nitr\xF3geno en el mercado.<br><br>\n\
+      De granulometr\xEDa uniforme y sin presencia de polvo."
+    grupo: 20
+    imagen: product/00088.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2ae6a0e81aaddbff062aee.pdf
+    activo: true
+- model: homepage.producto
+  pk: 89
+  fields:
+    nombre: SULFATO DE AMONIO
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>1.28\
+      \ g/cm3 a 0 oC</dd>\n    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE ACTIVO</dt><dd>Sulfato\
+      \ de amonio CAS # 7783-20-2 Rango: 100%</dd>\n    <dt>PRESENTACI\xD3N</dt><dd>Caja\
+      \ 20L, Bolsa 50kg</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nExcelente\
+      \ fuente de nitr\xF3geno amonical. Es la fuente con mayor contenido de azufre\
+      \ como sulfato, de alta disponibilidad para cultivos. Compatible en mezclas\
+      \ con todos las fuentes fosfatadas y pot\xE1sicas.\n"
+    grupo: 20
+    imagen: product/00089.jpg
+    ficha_tecnica: https://www.ypfagro.com.ar/img/documentos/5df225500492d292064e8e21b.pdf
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df22550049a90b7ae4a81745.pdf
+    activo: true
+- model: homepage.producto
+  pk: 90
+  fields:
+    nombre: NITRATO DE POTASIO
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>GRADO EQUIVALENTE</dt>\n  <dd>13-0-44</dd>\n\
+      \n  <dt>PRESENTACI\xD3N</dt>\n  <dd>S\xF3lida, Bolsa 50kg</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nS\xF3lido de alt\xEDsima solubilidad, e inmediata\
+      \ disponibilidad de sus nutrientes.<br><br>\n\nFuente de alta concentraci\xF3\
+      n de potasio libre de cloruros, combinada con nitr\xF3geno-n\xEDtrico.<br><br>\n\
+      \nIdeal para cultivos sensibles a la presencia de cloruros."
+    grupo: 21
+    imagen: product/00090.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2b9a6240671ab8710d4828.pdf
+    activo: true
+- model: homepage.producto
+  pk: 91
+  fields:
+    nombre: SULFATO DE POTASIO
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>50%\
+      \ oxido de potacio 18% azufre</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n  <dd>0-0-50\
+      \ 18 S</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n  <dd>S\xF3lida, Bolsa 50kg</dd>\n\
+      </dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nFertilizante s\xF3lido que combina\
+      \ alta concentraci\xF3n de potasio y azufre.<br><br>\n\nDe excelente presentaci\xF3\
+      n y granulometr\xEDa, y muy buena solubilidad.<br><br>\n\nOtorga calidad a los\
+      \ frutos y sanidad general a los cultivos.<br><br>\n\nFuente de potasio ideal\
+      \ para cultivos que demandan fertilizantes libres de cloruros."
+    grupo: 21
+    imagen: product/00091.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2b89463fc5b7278dbf050d.pdf
+    activo: true
+- model: homepage.producto
+  pk: 92
+  fields:
+    nombre: CLORURO DE POTASIO
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>60%\
+      \ cloruro de potasio</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n  <dd>0-0-60</dd>\n\
+      \n  <dt>PRESENTACI\xD3N</dt>\n  <dd>S\xF3lida, Bolsa 50kg</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nLa fuente de potasio s\xF3lida granulada de mayor\
+      \ concentraci\xF3n del mercado.<br><br>\n\nCloro como nutriente acompa\xF1ante,\
+      \ que en ciertos cultivos otorga mayor resistencia a enfermedades."
+    grupo: 21
+    imagen: product/00092.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2b7d13aeac0d323517b6f9.pdf
+    activo: true
+- model: homepage.producto
+  pk: 93
+  fields:
+    nombre: SULPOMAG
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>22%\
+      \ dioxido de potacio 11% dioxido de magnecio 22% azufre</dd>\n\n  <dt>GRADO\
+      \ EQUIVALENTE</dt>\n  <dd>0-0-22-22 S-11 Mg</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n\
+      \  <dd>S\xF3lida, Bolsa 50kg</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Excelente fertilizante s\xF3lido que combina potasio, asufre y magnesio, 100%\
+      \ disponibles para la planta."
+    grupo: 21
+    imagen: product/00093.jpg
+    ficha_tecnica: null
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df4e0b2ec1e4e2925285ec1f.pdf
+    activo: true
+- model: homepage.producto
+  pk: 94
+  fields:
+    nombre: "MEZCLAS F\xCDSICAS GRANULADAS"
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>GRADO EQUIVALENTE</dt>\n  <dd>N-P-K-S-Mg-Ca-Zn</dd>\n\
+      \n  <dt>PRESENTACI\xD3N</dt>\n  <dd>L\xEDquido, Bid\xF3n 5L</dd>\n</dl> \n<br><br>\n\
+      \n<h3>DESCRIPCION</h3><br>\nResponden a la necesidad de los cultivos de una\
+      \ nutrici\xF3n balanceada para alcanzar su m\xE1ximo rendimiento.<br><br>\n\n\
+      Combinan nutrientes de distintas fuentes en la relaci\xF3n justa, seg\xFAn cada\
+      \ cultivo."
+    grupo: 22
+    imagen: product/00094.jpg
+    ficha_tecnica: ''
+    ficha_seguridad: ''
+    activo: true
+- model: homepage.producto
+  pk: 95
+  fields:
+    nombre: NANO ZINC
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>COMPOSICI\xD3N</dt>\n  <dd>100%\
+      \ p/v = 1.000 g/l zinc (Zn) 50% p/p</dd>\n\n  <dt>GRADO EQUIVALENTE</dt>\n \
+      \ <dd>0-0-0</dd>\n\n  <dt>PRESENTACI\xD3N</dt>\n  <dd>L\xEDquido, Bid\xF3n 5\
+      \ L</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\xD3xido de zinc nanoparticulado.<br><br>\n\
+      Fertilizante en suspensi\xF3n concentrada."
+    grupo: 23
+    imagen: product/00095.jpg
+    ficha_tecnica: ''
+    ficha_seguridad: https://www.ypfagro.com.ar/img/documentos/5df2ba9daf216ef145b23f07a.pdf
+    activo: true
+- model: homepage.producto
+  pk: 96
+  fields:
+    nombre: BOLSAS PARA FORRAJE
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>MEDIDAS Y CAPACIDADES</dt>\n \
+      \ <dd>9 pies x 75 m est\xE1ndar. 89/125 tn</dd>\n  <dd>9 pies x 60 m est\xE1\
+      ndar. 71/100 tn</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\nSus cualidades\
+      \ de impermeabilidad al agua y gases, opacidad a la luz, resistencia mec\xE1\
+      nica y elasticidad, aseguran el logro de materiales con alto porcentaje de digestibilidad\
+      \ y una \xF3ptima conservaci\xF3n del forraje."
+    grupo: 24
+    imagen: product/00096.jpg
+    ficha_tecnica: null
+    ficha_seguridad: ''
+    activo: true
+- model: homepage.producto
+  pk: 97
+  fields:
+    nombre: BOLSAS PARA GRANO SECO
+    descripcion: "<h3>DETALLE</h3><br>\n<dl>\n  <dt>MEDIDAS Y CAPACIDADES</dt>\n \
+      \ <dd>9 pies x 75 m reforzada. 250/260 tn</dd>\n  <dd>9 pies x 60 m reforzada.\
+      \ 200/210 tn</dd>\n  <dd>6 pies x 60 m reforzada. 90/100 tn</dd>\n  <dd>5 pies\
+      \ x 60 m reforzada. 55/60 tn</dd>\n</dl> \n<br><br>\n\n<h3>DESCRIPCION</h3><br>\n\
+      Sus cualidades de impermeabilidad al agua y gases, opacidad a la luz, resistencia\
+      \ mec\xE1nica y elasticidad, aseguran m\xE1xima durabilidad, y \xF3ptima protecci\xF3\
+      n y conservaci\xF3n del grano."
+    grupo: 24
+    imagen: product/00096.jpg
+    ficha_tecnica: null
+    ficha_seguridad: null
+    activo: true

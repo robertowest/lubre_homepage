@@ -1,0 +1,127 @@
+{% load static %}
+
+<section class="footer-top-area section-padding">
+    <div class="container">
+        <div class="row">
+            <!-- texto -->
+            <div class="col-md-4 col-sm-6">
+                <div class="single-footer wow fadeInUp" data-wow-delay=".2s">
+                    <h2>Distribuidor</h2>
+                    <p>
+                        <i class="fa fa-map-marker"></i> 
+                        <a href="https://www.google.com/maps/place/Lubre+SRL/@-26.7262022,-65.2232547,17z/data=!3m1!4b1!4m5!3m4!1s0x94226710b015ba25:0xefa46d4f71331abe!8m2!3d-26.726207!4d-65.221066?hl=es-419" target="blank"">
+                            Ruta 9 km 1306<br>
+                            T4101 Los Nogales - Tucuman, Argentina 
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fa fa-whatsapp"></i> 
+                        <a href="href="https://api.whatsapp.com/send?phone=3816655864&text=Buenos%20d&iacute;as,%20necesito%20informaci&oacute;n" target="blank"">
+                            +54 381 665-5864
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fa fa-at"></i>
+                        <a href="mailito:info@lubresrl.com.ar">
+                            info@lubresrl.com.ar
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- entradas -->
+            <div class="col-md-4 col-sm-6">
+                <div class="single-footer wow fadeInUp" data-wow-delay=".4s">
+                    <h2>EESS</h2>
+                    <p>
+                        <i class="fa fa-map-marker"></i> 
+                        <a href="https://www.google.com/maps/place/Estaci%C3%B3n+de+Servicios+Lubre+SRL-+YPF/@-27.0389338,-65.3804781,17.25z/data=!4m13!1m7!3m6!1s0x9422495f856e7667:0x5db3a97c9858f934!2zRmFtYWlsbMOhLCBUdWN1bcOhbiwgQXJnZW50aW5h!3b1!8m2!3d-27.0560551!4d-65.4021683!3m4!1s0x94224fae2a5f7c5d:0x228582e51fbc2520!8m2!3d-27.0380175!4d-65.3787173?hl=es-419" target="blank"">
+                            Ruta Nacional 38, km 779<br>
+                            T4132 Famaillá - Tucumán, Argentina
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fa fa-whatsapp"></i> 
+                        <a href="href="https://api.whatsapp.com/send?phone=3816655884&text=Buenos%20d&iacute;as,%20necesito%20informaci&oacute;n" target="blank"">
+                            +54 381 665-5884
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fa fa-at"></i>
+                        <a href="mailito:info@lubresrl.com.ar">
+                            info@lubresrl.com.ar
+                        </a>
+                    </p>
+    
+                    {% comment %}
+                    <h2>Entradas</h2>
+                    <div class="footer-menu">
+                        <ul>
+                            {% for obj in pages %}
+                                {% if obj.text_short %}
+                                <li>
+                                    <a href="{{obj.text_short}}">{{obj.label|safe}}</a>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endcomment %}
+                </div>
+            </div>
+
+            <!-- START SINGLE FOOTER DESIGN AREA 
+            <div class="col-md-3 col-sm-6">
+                <div class="single-footer wow fadeInUp" data-wow-delay=".6s">
+                    <h2>notas recientes</h2>
+                    <div class="single-recent-post">
+                        <img src="{% static 'images/blog/blog1.jpg' %}" alt="">
+                        <a href="">
+                            <p>Lorem Ipsum is simply dummy.</p>
+                        </a>
+                    </div>
+                    <div class="single-recent-post">
+                        <img src="{% static 'images/blog/blog2.jpg' %}" alt="">
+                        <a href="">
+                            <p>Lorem Ipsum is simply dummy.</p>
+                        </a>
+                    </div>
+                    <div class="single-recent-post">
+                        <img src="{% static 'images/blog/blog3.jpg' %}" alt="">
+                        <a href="">
+                            <p>Lorem Ipsum is simply dummy.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            -->
+            
+            <!-- enlaces -->
+            <div class="col-md-4 col-sm-12">
+                <div class="single-footer wow fadeInUp" data-wow-delay=".8s">
+                    <h2>red social</h2>
+                    <div class="footer-social-link">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/lubresrl.ypfagro/" target="blank">            
+                                    <i class="fa fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/lubresrl.ypfagro/" target="blank">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://ar.linkedin.com/company/lubre-srl" target="blank">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- / END SINGLE FOOTER DESIGN AREA -->
+        </div>
+    </div>
+</section>

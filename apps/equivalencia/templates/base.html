@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+{# http://www.wordpressboss.com/tf/getx-demo/getx/ #}
+{% load static %}
+
+<html lang="es">
+    <head>
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- PAGE TITLE -->
+        <title>Lubre SRL</title>
+        <!-- FAVI ICON -->
+        <link rel="icon" type="image/png" href="{% static 'images/faviicon.png' %}" sizes="32x32">
+        <!-- BOOTSTRAP CSS -->
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+        <!-- ALL GOOGLE FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400,500,600,700,800,900&subset=latin-ext" rel="stylesheet">
+        <!-- FONT AWESOME 4 https://fontawesome.com/v4.7.0/icons/ -->
+        <link rel="stylesheet" href="{% static 'fontawesome/css/font-awesome.min.css' %}">
+        <!-- OWL CAROSEL CSS -->
+        <link rel="stylesheet" href="{% static 'owlcarousel/css/owl.carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'owlcarousel/css/owl.theme.css' %}">
+        <!-- LIGHTBOX CSS -->
+        <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+        <!-- YOUTUBE CSS -->
+        <link rel="stylesheet" href="{% static 'css/YTPlayer.css' %}">
+        <!-- MAGNIFIC CSS -->
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+        <!-- ANIMATE CSS -->
+        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/component.css' %}">
+        <link rel="stylesheet" href="{% static 'css/set2.css' %}">
+        <!-- MAIN STYLE CSS -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!-- RESPONSIVE CSS -->
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        {% block css %}
+        {% endblock %}
+    </head>
+    <body>
+        {# muestra el gráfico de carga #}
+        <div class="preloader">
+            <div class="status">
+                <div class="status-mes"></div>
+            </div>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <!-- botón para ir arriba -->
+        <div class="scroll-to-up">
+            <div class="scrollup">
+                <i class="fa fa-angle-up"></i>
+            </div>
+        </div>
+
+        <!-- LATEST JQUERY -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <!-- BOOTSTRAP JS -->
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+        <!-- PROGRESS JS  -->
+        <script src="{% static 'js/jquery.appear.js' %}"></script>
+        <!-- OWL CAROUSEL JS  -->
+        <script src="{% static 'owlcarousel/js/owl.carousel.min.js' %}"></script>
+        <!-- MAGNIFICANT JS -->
+        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- STEALLER JS -->
+        <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+        <!-- COUNTER UP JS -->
+        <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+        <!-- WOW JS -->
+        <script src="{% static 'js/wow.min.js' %}"></script>
+        <!-- ISOTOP JS -->
+        <script src="{% static 'js/isotope.pkgd.js' %}"></script>
+        <!-- STICKY JS -->
+        <script src="{% static 'js/jquery.sticky.js' %}"></script>
+        <!-- FOEEM JS -->
+        <script src="{% static 'js/form-contact.js' %}"></script>
+        <!-- YOUTUBE JS -->
+        <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+        <script type="text/javascript">
+            $('.player').mb_YTPlayer();
+        </script>
+        <!-- GOOGLE MAP JS -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU"></script>
+        <script src="{% static 'js/gmap3.min.js' %}"></script>
+        <!-- scripts js -->
+        <script src="{% static 'js/scripts.js' %}"></script>
+        {% block jscript %}
+        {% endblock %}
+    </body>
+</html>

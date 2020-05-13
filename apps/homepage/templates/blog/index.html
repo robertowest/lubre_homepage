@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% include 'blog/_header.html' %}
+
+    <div class="single-blogarea section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- columna de noticias -->
+                <div class="col-md-8">
+                    <!-- imagen superior -->
+                    <div class="single-blog-details wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
+                        <img src="{% static '/images/blog/banner.jpg' %}" class="img-responsive" alt="">
+                    </div>
+
+                    <!-- noticias -->
+                    {% for obj in object_list %}
+                    <div class="single-blog-details wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
+                        <h4>{{obj.title}}</h4>
+                        <h6 class="text-muted">{{obj.publish_on}}</h6>
+                        {# obj.content|safe|truncatechars_html:150 #}
+                        <p>{{obj.content|safe}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- columna para sidebar -->
+                <div class="col-md-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <!-- búsqueda -->
+                    <div class="search single-sidebar">
+                        <input type="text" class="form-control" placeholder="Búsqueda ...">
+                    </div>
+
+                    <!-- categorías -->
+                    <div class="categories single-sidebar">
+                        <h4 style="color: #FBBC05; text-align:center">categorías</h4>
+                        <ul>
+                            {% for obj in categories %}
+                            <li>
+                                <a href="#"><i class="fa fa-caret-right"></i> {{obj.name}}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

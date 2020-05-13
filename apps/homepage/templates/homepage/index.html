@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/service.css' %}">
+    <link rel="stylesheet" href="{% static 'css/social-icons.css' %}">
+
+    <style>
+        .parent {
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        
+        .child {
+            position: absolute;
+            margin: auto;
+            vertical-align: middle;
+            height: 50%;
+        }
+
+        .icono {
+            display: inline-block;
+            mask-size: cover;
+            /* width: 120px; */
+            /* height: 120px; */
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    {% for obj in pages %}
+        {% with template_name=obj.text_large %}
+            {% include template_name %}
+        {% endwith %}
+    {% endfor %}
+{% endblock %}
+
+
+{% block jscript %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#about-more-btn").click(function () {
+                $("#about-more-div").toggle("slow");
+            });
+        });
+    </script>
+{% endblock %}

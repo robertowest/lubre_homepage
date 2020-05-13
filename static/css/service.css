@@ -1,0 +1,105 @@
+.service-area {
+    background: #F0F0F0;
+}
+.service-catalog-area {
+    background: #F0F0F0;
+}
+
+.single-service {
+    background: #fff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+.single-service i {
+    color: #abc642;
+    font-size: 50px;
+    line-height: 95px;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+.single-service h4 p {
+    background: #4f6389;
+}
+
+.single-service p {
+    margin-top: 20px;
+}
+
+.service-area a {
+    text-decoration: none;
+    -webkit-transition: .3s;
+    transition: .3s;
+    font-family: "Montserrat", sans-serif;
+    color: unset;
+    background: blanchedalmond;
+}
+.service-area a:hover {
+    text-decoration: none;
+    /* opacity: .6; */
+    /* background: blanchedalmond; */
+    color: unset;
+}
+.service-area a:focus {
+    outline: none;
+    text-decoration: none;
+    color: unset;
+}
+
+
+.icon-agro {
+    -webkit-mask-image: url('../images/svgs/tractor.svg');
+    width: 64px;
+    height: 51px;
+}
+.icon-lubricante {
+    -webkit-mask-image: url('../images/svgs/oil-can.svg');
+    width: 64px;
+    height: 51px;
+}
+.icon-full {
+    -webkit-mask-image: url('../images/svgs/coffee.svg');
+    width: 64px;
+    height: 51px;
+}
+.icon-logistica {
+    -webkit-mask-image: url('../images/svgs/truck.svg');
+    width: 64px;
+    height: 51px;
+}
+.icon-combustible {
+    -webkit-mask-image: url('../images/svgs/gas-pump.svg');
+    width: 51px;
+    height: 51px;
+}
+.icon-construccion {
+    -webkit-mask-image: url('../images/svgs/tools.svg');
+    width: 51px;
+    height: 51px;
+}
+.icon-gas {
+    -webkit-mask-image: url('../images/svgs/gas-pump.svg');
+    width: 51px;
+    height: 51px;
+}
+.icon-boxes {
+    -webkit-mask-image: url('../images/svgs/boxes.svg');
+    width: 51px;
+    height: 51px;
+}
+
+.icon {
+    display: inline-block;
+    mask-size: cover;
+    background-color: #abc642;
+}
+/*
+.icon:hover,
+.icon:focus {
+    background: green;
+}
+*/

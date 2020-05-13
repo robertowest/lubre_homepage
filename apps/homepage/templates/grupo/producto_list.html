@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load mathfilters %}
+
+{% block content %}
+    {% include 'grupo/_header.html' %}
+
+    <section id="catalog" class="work section-padding">
+        {% comment %}
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="/"><i class="fa fa-home"></i> Inicio</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Búsqueda</li>
+            </ol>
+        </nav>
+        {% endcomment %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>Búsqueda de Productos</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div col-md-12">
+                    <div class="work-inner">
+                        <div class="row work-posts grid">
+                            {% for obj in productos %}
+                            <div class="element-item col-md-3 col-sm-4 col-xs-6 filtro_{{obj.grupo_id|stringformat:'03d'}}">
+                                <div class="item wow fadeInUp" data-wow-delay=".1s">
+                                    <a href="{% url 'homepage:producto_detail' obj.pk %}">
+                                        <figure class="effect-apollo">
+                                                {% if obj.imagen %}
+                                                <img src="/media/{{obj.imagen|thumb_product_path}}" alt="">
+                                                {% else %}
+                                                <img src="/media/product/thumb/none.jpg" alt="">
+                                                {% endif %}
+    
+                                                <p style="color: black; background-color: white; text-transform: unset;">
+                                                    {{obj.nombre}}
+                                                </p>
+                                                
+                                                <figcaption>
+                                                    <h2>{{obj.nombre}}</h2>
+                                                </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>    
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    {# include 'homepage/_footer_bottom.html' #}
+{% endblock %}

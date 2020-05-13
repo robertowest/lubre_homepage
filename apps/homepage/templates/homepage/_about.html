@@ -1,0 +1,76 @@
+{% load static %}
+
+<section id="about" class="about-us-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title text-center">
+                    <h2>{{about.0.label}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
+                <div class="about-text">
+                    <h4>{{about.0.text_short|safe}}</h4>
+                    <p>{{about.0.text_large|safe}}</p>
+                    {# url 'homepage:about' #}
+                    <a id="about-more-btn" href="javascript:void(0)" class="read-more">Saber más</a>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="0">
+                <div class="about-image-area">
+                    <img src="{% static 'images/about.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- about more -->
+<section id="about-more-div" class="about-more section-padding" style="display:none">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>¿Por qué elegirnos?</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="0">
+                <div class="why-chosse-image">
+                    <img src="{% static 'images/why-choose-us.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="0">
+                <div class="why-choose-us-text">
+                    <div class="according-area">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            {% for obj in whyus %}
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading{{obj.pk}}">
+                                    <h4 class="panel-title">
+                                        <a role="button" class="collapsed"
+                                                         data-toggle="collapse"
+                                                         data-target="#collapse{{obj.pk}}"
+                                                         data-parent="#accordion"
+                                                         aria-expanded="false" aria-controls="collapse{{obj.pk}}">
+                                        {{obj.label}}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse{{obj.pk}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{obj.pk}}">
+                                    <div class="panel-body">
+                                        {{obj.text_large|safe}}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

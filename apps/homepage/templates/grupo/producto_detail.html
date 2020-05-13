@@ -1,0 +1,52 @@
+{% extends 'tienda_base.html' %}
+{% load static %}
+
+{% block title %}
+    {# if categoria %}{{ categoria.descripcion }} {% else %} Productos {% endif #}
+{% endblock %}
+
+{% block content %}
+    {% include 'tienda/_header.html' %}
+
+    <section id="about" class="about-us-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>{{object.nombre}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 no-padding wow fadeInUp" data-wow-delay=".8s">
+                    {% if object.imagen %}
+                        <img src="/media/{{object.imagen}}" alt="">
+                    {% else %}
+                        <img src="/media/product/none.jpg" alt="">
+                    {% endif %}
+
+                    {% if object.ficha_tecnica %}
+                        <p>
+                            Ficha técnica&nbsp;
+                            <a href="{{object.ficha_tecnica}}"><i class="fa fa-download"></i></a>&nbsp;&nbsp;&nbsp;
+                        </p>
+                    {% endif %}
+
+                    {% if object.ficha_seguridad %}
+                        <p>
+                            Ficha de seguridad&nbsp;
+                            <a href="{{object.ficha_tecnica}}"><i class="fa fa-download"></i></a>&nbsp;&nbsp;&nbsp;
+                        </p>
+                    {% endif %}
+
+                </div>
+                <div class="col-md-8">
+                    {{object.descripcion|safe}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# include 'homepage/_footer_bottom.html' #}
+
+{% endblock %}

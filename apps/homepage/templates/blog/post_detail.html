@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% include 'blog/_header.html' %}
+
+    <div class="single-blogarea section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- columna de noticias -->
+                <div class="col-md-9">
+                    <!-- noticia -->
+                    <div class="single-blog-details wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
+                        <img src="{{object.image.url}}" class="blog-img-large" alt="">
+                        <h4>{{object.title}}</h4>
+                        <!-- <h6 class="text-muted">oct. 20, 2019</h6> -->
+                        <p class=" text-muted">{{object.author}} | {{object.publish_on}}</p>
+                        <p>{{object.content|safe}}</p>
+                    </div>
+
+                    <!-- comentarios -->
+
+                    <!-- formulario -->
+
+                </div>
+
+                <!-- columna para sidebar -->
+                <div class="col-md-3 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
+                    <!-- recientes -->
+                    <div class="recent-post  single-sidebar">
+                        <h4 style="color: #FBBC05; text-align:center">más recientes</h4>
+                        {% for obj in recents %}
+                        <div class="recent-single">
+                            <a href="{% url 'homepage:post_detail' obj.slug %}">
+                                <img src="{{obj.image.url}}" class="blog-img-small" alt="">
+                            </a>
+                            <h4>{{obj.title}}</h4>
+                            <span>{{obj.publish_on}}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+
+
+
+
+{% comment %}
+                    <!-- comentarios -->
+                    <div class="comment-section wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
+                        <h4>Recent comments</h4>
+                        <div class="single-comment">
+                            <div class="row">
+                                <div class="col-md-3 text-center">
+                                    <img src="{% static '/images/blog/1.jpg' %}" alt="" class="img-circle">
+                                    <h6 class="text-muted text-center">john doe</h6>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="text-muted">24 hour ago</h6>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed augue nulla. Maecenas sit amet ligula est. Fusce fringilla sollicitudin enim in varius. Praesent nisi neque, condimentum sit amet lacus in.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-comment">
+                            <div class="media">
+                                <div class="col-md-3 text-center">
+                                    <img src="{% static '/images/blog/2.jpg' %}" alt="" class="img-circle">
+                                    <h6 class="text-muted text-center">namitha</h6>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="text-muted">30 minuites ago</h6>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed augue nulla. Maecenas sit amet ligula est. Fusce fringilla sollicitudin enim in varius. Praesent nisi neque, condimentum sit amet lacus in.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- formulario -->
+                    <div class="contact-form wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
+                        <h3 class="contact-title">Give your comment Here</h3>
+                        <div class="row">
+                            <form action="{% static '/php/mail.php' %}" method="post">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" id="first-name" placeholder="*Enter Your Name" required="required">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="* Enter Your Email" required="required">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <textarea rows="6" name="message" class="form-control" id="description" placeholder="* Enter Your Comment" required="required"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <button>add comment</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+{% endcomment %}
+

@@ -1,0 +1,80 @@
+{% load static %}
+{% load mathfilters %}
+
+<section id="service2" class="service-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title text-center">
+                    <h2>¿Qué hacemos?</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- búsqueda en artículos de planta -->
+        <div class="row" style="background: rgba(166, 196, 166, 0.6);">
+            <!-- búsqueda de productos -->
+            <form method="post" action="/producto/busqueda/">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td style="width: 100%; padding-left: 25px; padding-top: 10px;">
+                            <input type="text" name="producto" class="form-control"
+                                placeholder="ingrese descripción del producto">
+                        </td>
+                        <td>&nbsp;</td>
+                        <td style="padding-top: 8px; padding-right: 25px; ">
+                            <input type="submit" value="Buscar" 
+                                name="submit" id="submitButton" 
+                                class="btn btn-lg"
+                                title="Envíe su mensaje">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <!-- planta -->
+        <div class="row" style="background: rgba(166, 196, 166, 0.6)">
+            <div class="col-md-12">
+                {% for obj in dist %}
+                <div class="element-item col-xs-6 col-sm-4 col-md-3 wow fadeInUp" 
+                     data-wow-delay="0,2s" style="padding-bottom: 25px;"> 
+                     <div>
+                        <a href="{% url 'homepage:categoria_list' obj.categoria %}">
+                            <div class="single-service">
+                                <img class="icono" src="{% static 'images/svgs/' %}{{obj.icono}}.png">
+                            </div>
+                        </a>
+                     </div>
+                     <div style="text-align: center;">
+                         {{obj.texto|safe}}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <br>
+
+        <!-- estación de servicio -->
+        <div class="row" style="background: rgba(170, 203, 229, 0.6)">
+            <div class="col-md-12">
+                {% for obj in eess %}
+                <div class="element-item col-xs-6 col-sm-4 col-md-3 wow fadeInUp" 
+                     data-wow-delay="0,2s" style="padding-bottom: 25px;">
+                    <div>
+                        <a href="{% url 'homepage:service_detail' obj.categoria %}">
+                            <div class="single-service">
+                                <img class="icono" src="{% static 'images/svgs/' %}{{obj.icono}}.png">
+                            </div>
+                        </a>
+                    </div>
+                    <div style="text-align: center;">
+                        {{obj.texto|safe}}
+                   </div>
+               </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

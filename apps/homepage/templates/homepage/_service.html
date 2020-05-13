@@ -1,0 +1,38 @@
+{% load static %}
+{% load mathfilters %}
+
+<section id="service" class="service-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title text-center">
+                    <h2>¿Qué hacemos?</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for obj in service %}
+            <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="{{ obj.ordered|mul:0.2 }}s">
+                <a href="{% url 'homepage:service_detail' obj.pk %}">
+                    <div class="single-service">
+                        {% comment %}
+                        <span class="icon icon-{{obj.image}}"></span>
+                        <img src="{% static '/images/' %}{{obj.image}}">
+                        <i class="fa fa-{{obj.image}}"></i>
+                        {% endcomment %}
+
+                        {% if obj.image %}
+                            <span class="icon icon-{{obj.image}}"></span>
+                        {% else %}
+                            <i class="fa fa-yelp"></i>
+                        {% endif %}
+
+                        <h4>{{obj.label}}</h4>
+                        <p>{{obj.text_short|safe}}</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

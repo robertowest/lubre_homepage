@@ -1,0 +1,57 @@
+{% load static %}
+{% load mathfilters %}
+{% load homepage_tags %}
+
+<section id="servicesCatalog" class="work service-catalog-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>¿Que hacemos?</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="filters col-md-12">
+                <ul id="filters">
+                    {% for obj in scLabel %}
+                        {% if obj.ordered == 1 %}
+                            <li class="active" data-filter="*">{{obj.label}}</li>
+                        {% else %}
+                            <li data-filter="{{obj.text_short}}">{{obj.label}}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="work-inner">
+            <div class="row work-posts grid">
+            
+                {% for obj in serviceCatalog %}
+                    {% with obj.label|split:"|" as skills %}
+                    {# for skill in skills } {{ skill }}<br> { endfor #}
+
+                    <div class="{{skills.1}} col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="{{ obj.ordered|mul:0.2 }}s">
+                        <a href="{% url 'homepage:service_detail' obj.pk %}">
+                            <div class="single-service" style="background-color: {{obj.label|color}};">
+                                {% if obj.image %}
+                                    <span class="icon icon-{{obj.image}}"></span>
+                                {% else %}
+                                    <i class="fa fa-yelp"></i>
+                                {% endif %}
+        
+                                <h4>{{skills.0}}</h4>
+                                <p>{{obj.text_short|safe}}</p>
+                            </div>
+                        </a>
+                    </div>
+                    {% endwith %}
+                {% endfor %}
+                                    
+            </div>
+        </div>
+    
+    </div>
+</section>

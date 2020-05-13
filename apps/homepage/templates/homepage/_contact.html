@@ -1,0 +1,93 @@
+{% load static %}
+
+<section id="contact" class="contact-area section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>Contáctanos</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 no-padding wow fadeInUp" data-wow-delay=".8s">
+                <!-- mapa de google -->
+                <!--  
+                <div class="map"></div>
+                <div class="mymap">
+                    <img src="{% static '/images/lubre/mapa.png' %}">
+                </div>
+                -->
+
+                <div class="mymap">
+                    <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=-26.725714,-65.221712&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
+            <!-- bloque de contacto -->
+            <div class="col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
+                <div class="contact-form">
+
+                    {% comment %}
+                    <div class="row">
+                        <!-- area de información -->
+                        <div class="contact-details">
+                            <div class="col-md-4">
+                                <div class="single-contact">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <h6 class="text-muted">Los Nogales, Tucumán</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="single-contact">
+                                    <!--
+                                    <a href="https://api.whatsapp.com/send?phone=3816655864&text=Buenos%20días,%20necesito%20informaci&oacute;n">
+                                    </a>
+                                    -->
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <h6 class="text-muted">+54 (381) 15-665-5864</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="single-contact">
+                                    <!--
+                                    <a href="mailto:info@lubresrl.com.ar">
+                                    </a> 
+                                    -->
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <h6 class="text-muted">info@lubresrl.com.ar</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endcomment %}
+
+                    <div class="row">
+                        <!-- area de contacto -->
+                        <form action="." method="post" name="contact-form">
+                            {% csrf_token %}
+
+                            <div class="form-group col-md-6">
+                                <input type="text" name="name" class="form-control" id="first-name" placeholder="Nombre" required="required">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="e-Mail" required="required">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" name="subject" class="form-control" id="subject" placeholder="Asunto">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <textarea rows="6" name="message" class="form-control" id="description" placeholder="Tu mensaje" required="required"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="actions">
+                                    <input type="submit" value="Enviar mensaje" name="submit" id="submitButton" class="btn btn-lg btn-contact-bg" title="Envíe su mensaje">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+{% load static %}
+
+<section class="get-started section-padding" id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="get-text text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                    {% if user.is_authenticated %}
+                        <h2>Sesión activa</h2>
+                        <p>Usted a iniciado sesión como {{ user.email|default:user.username }}</p>
+                        <a href="{% url 'logout' %}" class="read-more">Cerrar sesión</a>
+                    {% else %}
+                        <h2>Inicia Sesión</h2>
+                        <p>Ingresa al sistema para poder acceder a las aplicaciones que necesitas para gestionar tu negocio y obtener información actualizada.</p>
+                        <a href="{% url 'login' %}" class="read-more">Iniciar</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

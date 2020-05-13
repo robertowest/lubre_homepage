@@ -1,0 +1,94 @@
+{% load static %}
+{% load mathfilters %}
+
+<section id="catalog" class="work section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>Nuestros Catálogos</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="filters col-md-12">
+                <ul id="filters">
+                    {% for obj in cataTag %}
+                        {% if obj.ordered == 1 %}
+                            <li class="active" data-filter="*">{{obj.label}}</li>
+                        {% else %}
+                            <li data-filter="{{obj.text_short}}">{{obj.label}}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="work-inner">
+            <div class="row work-posts grid">
+
+                <div class="col-md-4 col-sm-6 agro">
+                    <div class="item wow fadeInUp" data-wow-delay=".2s">
+                        <a href="/media/catalog/grande/1.jpg" class="work-popup">
+                            <figure class="effect-apollo">
+                                <img src="/media/catalog/1.jpg" alt="">
+                                <figcaption>
+                                    <h2>Titulo</h2>
+                                    <div class="category">
+                                        <span>descripción del artículo</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-6 agro">
+                    <div class="item wow fadeInUp" data-wow-delay=".4s">
+                        <a href="/media/catalog/grande/2.jpg" class="work-popup">
+                            <figure class="effect-apollo">
+                                <img src="/media/catalog/2.jpg" alt="">
+                                <figcaption>
+                                    <h2>Titulo</h2>
+                                    <div class="category">
+                                        <span>descripción del artículo</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+{% comment %}
+        <div class="work-inner">
+            <div class="row work-posts grid">
+                {% for obj in catalog %}
+                <div class="col-md-4 col-sm-6 {{obj.text_short}}">
+                    <div class="item wow fadeInUp" data-wow-delay="{{ obj.ordered|mul:0.2 }}s">
+                        <a href="{{obj.image.url}}" class="work-popup" target="_blank">
+                            <figure class="effect-apollo">
+                                <img src="{{obj.image.url}}" alt="">
+                                <figcaption>
+                                    <h2>{{obj.label}}</h2>
+                                    <!--
+                                    <div class="category">
+                                        <span>segunda línea</span>
+                                    </div>
+                                    -->
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+{% endcomment %}
+
+    </div>
+</section>

@@ -1,0 +1,48 @@
+{% load static %}
+
+<section class="why-choose-us-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>¿Por qué elegirnos?</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 wow fadeInLeft" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0">
+                <div class="why-chosse-image">
+                    <img src="{% static 'images/why-choose-us.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="0">
+                <div class="why-choose-us-text">
+                    <div class="according-area">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            {% for obj in whyus %}
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading{{obj.pk}}">
+                                    <h4 class="panel-title">
+                                        <a role="button" class="collapsed"
+                                                         data-toggle="collapse"
+                                                         data-target="#collapse{{obj.pk}}"
+                                                         data-parent="#accordion"
+                                                         aria-expanded="false" aria-controls="collapse{{obj.pk}}">
+                                        {{obj.label}}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse{{obj.pk}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{obj.pk}}">
+                                    <div class="panel-body">
+                                        {{obj.text_large|safe}}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

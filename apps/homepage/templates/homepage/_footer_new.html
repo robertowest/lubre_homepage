@@ -1,0 +1,130 @@
+<footer id="footer" ng-controller="footer" class="ng-scope">
+    <div class="container-fluid">
+        <div class="footer">
+            <div class="row">
+                <div class="col col-md-4 col-sm-12 col-xs-12">
+                    <div class="block block-subscribe">
+                        <div class="block">
+                            <span class="title-block ng-binding">CONOCÉ LAS ÚLTIMAS NOVEDADES</span>
+                            <form action="/newsletter/subscriber/new/" method="post" onsubmit="setDataLayerFooter('Users','Newsletter Suscription')" id="newsletter-validate-detail" class="ng-pristine ng-valid">
+                                <div class="block-content">
+                                    <div class="input-box">
+                                        <input type="email" spellcheck="false" name="email" id="newsletter" title="Registrarse para nuestro newsletter" placeholder="Ingresá tu mail y enterate" class="input-text required-entry validate-email">
+                                    </div>
+                                    <div class="actions-footer">
+                                        <button type="submit" title="Enviar" class="button"><span><span class="ng-binding">Enviar</span></span></button>
+                                    </div>
+                                </div>
+                            </form>
+                            <script type="text/javascript"></script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-2 col-sm-3 col-xs-4 footer-list">
+                    <div class="footer-custom-links">
+                        <span class="title-block ng-binding">Acerca De</span>
+                        <ul>
+                            <!-- ngIf: configs.show_help -->
+                            <li ng-if="configs.show_help" class="hidden-xs ng-scope"><a title="Ayuda" href="http://ayuda.agrofy.com" class="Acerca De" onclick="setDataLayerFooter('Navigation','Footer','About')" target="blank">Ayuda</a></li>
+                            <!-- end ngIf: configs.show_help -->
+                            <!-- ngIf: configs.show_about_us -->
+                            <li ng-if="configs.show_about_us" class="ng-scope"><a title="Quiénes Somos" href="/quienes-somos" class="Acerca De" onclick="setDataLayerFooter('Navigation','Footer','About')">Quiénes Somos</a></li>
+                            <!-- end ngIf: configs.show_about_us -->
+                            <!-- ngIf: configs.show_contact -->
+                            <li ng-if="configs.show_contact" class="ng-scope"><a title="Contacto" href="/contacts" class="Acerca De" onclick="setDataLayerFooter('Navigation','Footer','About')">Contacto</a></li>
+                            <!-- end ngIf: configs.show_contact -->
+                            <!-- ngIf: configs.show_join_us -->
+                            <li ng-if="configs.show_join_us" class="ng-scope"><a title="Sumate a Nuestro Equipo" href="/profesionales" class="Acerca De" onclick="setDataLayerFooter('Navigation','Footer','About')">Sumate a Nuestro Equipo</a></li>
+                            <!-- end ngIf: configs.show_join_us -->
+                            <!-- ngIf: configs.show_get_agroshop -->
+                            <li ng-if="configs.show_get_agroshop" class="ng-scope"><a title="Tené tu Sucursal Online" href="/sucursal-online" class="Acerca De" onclick="setDataLayerFooter('Navigation','Footer','About')">Tené tu Sucursal Online</a></li>
+                            <!-- end ngIf: configs.show_get_agroshop -->
+                            <!-- ngIf: configs.show_mm -->
+                            <li ng-if="configs.show_mm" class="hidden-xs ng-scope"><a title="Programa Market Makers" href="http://marketmakers.agrofy.com.ar/" class="Acerca De" onclick="setDataLayerFooter('Navigation','Footer','About')">Programa Market Makers</a></li>
+                            <!-- end ngIf: configs.show_mm -->
+                            <!-- ngIf: configs.show_news -->
+                            <li ng-if="configs.show_news" class="ng-scope"><a title="AgrofyNews - El medio de negocios del agro" href="https://news.agrofy.com.ar/" target="_blank" class="Acerca De" onclick="setDataLayerFooter('Navigation','Footer','About')">Agrofy News</a></li>
+                            <!-- end ngIf: configs.show_news -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-md-2 col-sm-3 col-xs-4 footer-list hidden-xs">
+                    <div class="mi-cuenta">
+                        <span class="title-block ng-binding">Mi Cuenta</span>
+                        <ul>
+                            <li><a rel="nofollow" href="/customer/account/index/" class="Mi Cuenta" onclick="setDataLayerFooter('Navigation','Footer','My account')">Mi Cuenta</a></li>
+                            <li><a rel="nofollow" href="/idscustomer/account-misventas-misavisos/activos/" class="Mi Cuenta" onclick="setDataLayerFooter('Navigation','Footer','My account')">Mis avisos</a></li>
+                            <li><a rel="nofollow" href="/wishlist/index/index/" class="Mi Cuenta" onclick="setDataLayerFooter('Navigation','Footer','My account')">Mis favoritos</a></li>
+                            <!-- ngIf: configs.show_help -->
+                            <li ng-if="configs.show_help" class="ng-scope"><a title="Ayuda" href="http://ayuda.agrofy.com" rel="nofollow" target="blank" class="Mi Cuenta" onclick="setDataLayerFooter('Navigation','Footer','My account')">Ayuda</a></li>
+                            <!-- end ngIf: configs.show_help -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-md-2 col-sm-3 col-xs-4 footer-list">
+                    <div class="footer-custom-links">
+                        <span class="title-block ng-binding">Categorias</span>
+                        <!-- ngRepeat: category in configs.categories -->
+                        <ul ng-repeat="category in configs.categories" class="ng-scope">
+                            <li><a title="Herramientas para el Agro en Agrofy" href="/herramientas" class="Categorias" onclick="setDataLayerFooter('Navigation','Footer','Categories')">Herramientas</a></li>
+                        </ul>
+                        <!-- end ngRepeat: category in configs.categories -->
+                        <ul ng-repeat="category in configs.categories" class="ng-scope">
+                            <li><a title="Infraestructura para el Agro en Agrofy" href="/infraestructura" class="Categorias" onclick="setDataLayerFooter('Navigation','Footer','Categories')">Infraestructura</a></li>
+                        </ul>
+                        <!-- end ngRepeat: category in configs.categories -->
+                        <ul ng-repeat="category in configs.categories" class="ng-scope">
+                            <li><a title="Maquinaria Agrícola en Agrofy" href="/maquinaria-agricola" class="Categorias" onclick="setDataLayerFooter('Navigation','Footer','Categories')">Maquinaria Agrícola</a></li>
+                        </ul>
+                        <!-- end ngRepeat: category in configs.categories -->
+                        <ul ng-repeat="category in configs.categories" class="ng-scope">
+                            <li><a title="Campos en Agrofy" href="/campos" class="Categorias" onclick="setDataLayerFooter('Navigation','Footer','Categories')">Campos</a></li>
+                        </ul>
+                        <!-- end ngRepeat: category in configs.categories -->
+                        <ul ng-repeat="category in configs.categories" class="ng-scope">
+                            <li><a title="Insumos Agropecuarios en Agrofy" href="/insumos-agricolas" class="Categorias" onclick="setDataLayerFooter('Navigation','Footer','Categories')">Insumos Agropecuarios</a></li>
+                        </ul>
+                        <!-- end ngRepeat: category in configs.categories -->
+                        <ul ng-repeat="category in configs.categories" class="ng-scope">
+                            <li><a title="Vehículos en Agrofy" href="/rodados" class="Categorias" onclick="setDataLayerFooter('Navigation','Footer','Categories')">Vehículos</a></li>
+                        </ul>
+                        <!-- end ngRepeat: category in configs.categories -->
+                        <ul ng-repeat="category in configs.categories" class="ng-scope">
+                            <li><a title="Sucursales Online en Agrofy" href="/sucursales-online?tab=todas" class="Categorias" onclick="setDataLayerFooter('Navigation','Footer','Categories')">Sucursales Online</a></li>
+                        </ul>
+                        <!-- end ngRepeat: category in configs.categories -->
+                    </div>
+                </div>
+                <!-- ngIf: configs.show_title_socials -->
+                <div ng-if="configs.show_title_socials" class="col col-md-2 col-sm-3 col-xs-12 hidden-xs ng-scope">
+                    <div class="redes-sociales">
+                        <span class="title-block ng-binding">Seguinos En</span>
+                        <p>
+                            <a id="fb" href="https://www.facebook.com/AgrofyARG" target="_blank" class="Seguinos En Facebook" onclick="setDataLayerFooter('Navigation','Footer','Follow us on-Facebook')" ng-class="{'no-display': configs.fb_link === ''}">Facebook</a> 
+                            <a id="tt" href="https://twitter.com/AgrofyARG" target="_blank" class="Seguinos En Twitter" onclick="setDataLayerFooter('Navigation','Footer','Follow us on-Twitter')" ng-class="{'no-display': configs.twitter_link === ''}">Twitter</a>
+                            <a id="ln" href="https://www.linkedin.com/company/agrofy" target="_blank" class="Seguinos En Linkedin" onclick="setDataLayerFooter('Navigation','Footer','Follow us on-Linkedin')" ng-class="{'no-display': configs.linkin_link === ''}">Linkedin</a> 
+                            <a id="gg" href="https://plus.google.com/+AgrofyARG" rel="publisher" target="_blank" class="Seguinos En Google" onclick="setDataLayerFooter('Navigation','Footer','Follow us on-Google+')" ng-class="{'no-display': configs.gplus_link === ''}">Google</a>
+                        </p>
+                        <!-- ngIf: configs.show_afip -->
+                        <div ng-if="configs.show_afip" class="ng-scope"> <a id="afip" href="http://qr.afip.gob.ar/?qr=kl97ZzOrePSttu_XTrPgIg,," target="_F960AFIPInfo" title="afip"></a></div>
+                        <!-- end ngIf: configs.show_afip -->
+                    </div>
+                </div>
+                <!-- end ngIf: configs.show_title_socials -->
+            </div>
+            <div class="row">
+                <div class="col col-md-12">
+                    <div class="legales">
+                        <p class="fyo-trademark ng-binding">
+                            ® Agrofy 2019 - Todos los derechos reservados.
+                            <!-- ngIf: configs.show_term_conditions --><a class="terminos ng-binding ng-scope" target="_blank" rel="nofollow" ng-if="configs.show_term_conditions" href="/terminos-y-condiciones/">Términos y Condiciones</a><!-- end ngIf: configs.show_term_conditions -->
+                            <!-- ngIf: configs.show_privacy_link --><a class="terminos ng-binding ng-scope" target="_blank" rel="nofollow" ng-if="configs.show_privacy_link" href="/politicas-de-privacidad/">Políticas de Privacidad</a><!-- end ngIf: configs.show_privacy_link -->
+                            <a class="terminos ng-binding" target="_blank" rel="nofollow" href="/politicas-de-publicacion/">Políticas de Publicación</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+

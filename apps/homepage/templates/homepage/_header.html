@@ -1,0 +1,80 @@
+{% load static %}
+
+<header id="home" class="welcome-area">
+    <div class="header-top-information-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="header-top-info-left">
+                        <!--
+                        <p>info@lubresrl.com.ar</p>
+                        -->
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="header-top-info-right">
+                        {# include 'homepage/_social.html' #}
+                        {% include 'homepage/_session.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="{% url 'homepage:homepage' %}">
+                            <img src="{% static 'images/lubre/logo.png' %}" style="height: 50px; width: auto;"/> 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="mainmenu">
+                        <div class="navbar navbar-nobg">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    {% for obj in pages %}
+                                        {% if obj.text_short %}
+                                        <li>
+                                            <a class="smoth-scroll" href="{{obj.text_short}}">{{obj.label|safe}}</a>
+                                        </li>
+                                        {% endif %}
+                                    {% endfor %}
+
+                                    <!-- solo para los usuarios registrados -->
+                                    {% comment %}
+                                        {% if user.is_authenticated %}
+                                        <li>
+                                            {% if user.is_staff %}
+                                                <a class="smoth-scroll" href="#">
+                                                    <i class="fa fa-address-card"></i> Empleado
+                                                </a>
+                                            {% else %}
+                                                <a class="smoth-scroll" href="#">
+                                                    <i class="fa fa-address-card"></i> Cliente
+                                                </a>
+                                            {% endif %}    
+                                        </li>
+                                        {% endif %}
+                                    {% endcomment %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'homepage/_home_carousel.html' %}
+</header>
