@@ -1,5 +1,6 @@
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
@@ -10,8 +11,6 @@ class SignUpTemplateView(generic.TemplateView):
     success_url = reverse_lazy('top')
 
     def post(self, request, *args, **kwargs):
-        import pdb; pdb.set_trace()
-        
         username = request.POST['username']
         email = request.POST['email']
         password = request.POST['password']
@@ -25,3 +24,12 @@ class SignUpTemplateView(generic.TemplateView):
             return reverse_lazy('login')  # HttpResponseRedirect(reverse('login'))
         else:
             return reverse_lazy('register')
+
+
+def LoginRedirect(request):
+    if request.user is not None and request.user.is_active:
+        if request.user.is_superuser:
+            return HttpResponseRedirect("/admin/")    
+        elif request.user.is_staff:
+            # return HttpResponseRedirect("/tienda/")
+            return HttpResponseRedirect("/")

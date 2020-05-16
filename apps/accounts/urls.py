@@ -10,6 +10,7 @@ urlpatterns = [
      path('logout/', LogoutView.as_view(), name='logout'),
 
      path('signup/', views.SignUpTemplateView.as_view(), name='signup'),
+     path('redirect/', views.LoginRedirect, name='redirect'),
 
      path('password/reset/', 
           PasswordResetView.as_view(template_name='accounts/password_reset.html'), 

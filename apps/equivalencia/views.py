@@ -29,17 +29,15 @@ def cargar_productos_ajax(request):
     marcaId = request.GET['marcaId']
     tipoId = request.GET['tipoId']
 
-    if tipoId == 'None':
-        sql = 'SELECT id, producto FROM equivalencia_equivalencia WHERE marca={0} ORDER BY producto'
-    else:
-        sql = 'SELECT id, producto FROM equivalencia_equivalencia WHERE marca={0} and tipo={1} ORDER BY producto'
-
-    data = models.Equivalencia.objects.raw(sql.format(marcaId, tipoId))
-    context = {'productos': data}
-
-    return render(request, 'equivalencia/cargar_productos_ajax.html', context)
-
-    
+    # if tipoId == 'None':
+    #     sql = 'SELECT id, producto FROM equivalencia_equivalencia WHERE marca={0} ORDER BY producto'
+    # else:
+    #     sql = 'SELECT id, producto FROM equivalencia_equivalencia WHERE marca={0} and tipo={1} ORDER BY producto'
+    # data = models.Equivalencia.objects.raw(sql.format(marcaId, tipoId))
+    data = models.Equivalencia.objects.filter(marca=marcaId).order_by('producto')
+    if tipoId:
+        data = data.filter(tipo=tipoId)
+    return render(request, 'equivalencia/cargar_productos_ajax.html', {'productos': data})
 
 
 class EquivalenciaDetail(generic.DetailView):

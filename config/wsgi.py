@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 import os, sys
 
 sys.path.append('/var/www/lubresrl.com.ar/')
-os.environ['DJANGO_SETTINGS_MODULE'] = 'config.settings.production'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'config.custom'
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()

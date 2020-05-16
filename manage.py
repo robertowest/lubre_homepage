@@ -3,11 +3,12 @@ import os
 import sys
 
 if __name__ == '__main__':
-    # determinamos el entorno de trabajo
-    if 'runserver' in sys.argv:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.development')
-    else:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.production') 
+    # # determinamos el entorno de trabajo
+    # if 'runserver' in sys.argv:
+    #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.development')
+    # else:
+    #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.production') 
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.custom') 
 
     try:
         from django.core.management import execute_from_command_line
