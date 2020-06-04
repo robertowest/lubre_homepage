@@ -26,6 +26,7 @@ def Equivalencia(request):
 
 
 def cargar_productos_ajax(request):
+    # http://lubresrl.com.ar/equivalencia/cargar/productos/ajax/?marcaId=1&tipoId=2
     marcaId = request.GET['marcaId']
     tipoId = request.GET['tipoId']
 
@@ -34,8 +35,9 @@ def cargar_productos_ajax(request):
     # else:
     #     sql = 'SELECT id, producto FROM equivalencia_equivalencia WHERE marca={0} and tipo={1} ORDER BY producto'
     # data = models.Equivalencia.objects.raw(sql.format(marcaId, tipoId))
+
     data = models.Equivalencia.objects.filter(marca=marcaId).order_by('producto')
-    if tipoId:
+    if tipoId != 'None':
         data = data.filter(tipo=tipoId)
     return render(request, 'equivalencia/cargar_productos_ajax.html', {'productos': data})
 

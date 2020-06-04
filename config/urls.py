@@ -21,15 +21,31 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    # homepage y equivalencias (juntos)
+    # homepage-------------------------------------------------------------------------
     path('', include('apps.homepage.urls', namespace='homepage')),
     path('equivalencia/', include('apps.equivalencia.urls', namespace='equivalencia')),
-
-    # inicio de sesión
-    path('accounts/', include('apps.accounts.urls')),
     path('tienda/', include('apps.tienda.urls')),
+
+    # inicio de sesión ----------------------------------------------------------------
+    path('accounts/', include('apps.accounts.urls')),
+
+    # cartera -------------------------------------------------------------------------
+    path('comunicacion/', include('apps.comunes.urls.comunicacion')),
+    path('diccionario/', include('apps.comunes.urls.diccionario')),
+    path('domicilio/', include('apps.comunes.urls.domicilio')),
+
+    path('empresa/', include('apps.empresa.urls.empresa')),
+    path('empresa/actividad/', include('apps.empresa.urls.actividad')),
+
+    path('persona/', include('apps.persona.urls')),
 ] 
 
+# Dashboard
+from django.views.generic import TemplateView
+urlpatterns += [
+    # path('', TemplateView.as_view(template_name='dashboard.html'))
+    path('cartera/', TemplateView.as_view(template_name='cartera_base.html'), name='cartera')
+]
 
 # -----------------------------------------------------------------------------
 # DEBUG

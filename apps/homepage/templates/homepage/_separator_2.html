@@ -1,4 +1,5 @@
 {% load static %}
+{% load homepage_tags %}
 
 <section class="get-started section-padding" id="login">
     <div class="container">
@@ -7,7 +8,10 @@
                 <div class="get-text text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
                     {% if user.is_authenticated %}
                         <h2>Sesión activa</h2>
-                        <p>Usted a iniciado sesión como {{ user.email|default:user.username }}</p>
+                        <p>{{ user|greeting_to_time }}</p>
+                        {% if user.is_staff %}
+                            <a href="{% url 'cartera' %}" class="read-more">Gestión</a>
+                        {% endif %}
                         <a href="{% url 'logout' %}" class="read-more">Cerrar sesión</a>
                     {% else %}
                         <h2>Inicia Sesión</h2>

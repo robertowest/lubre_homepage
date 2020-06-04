@@ -3,12 +3,15 @@ import os
 import sys
 
 if __name__ == '__main__':
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.custom')
+    # os.environ.setdefault('DJANGO_SECRET_KEY', '#wts4s%*u&p397rd_aj=y&j&5x18nb%9(x#d%0@321w45#d7wd')
     # # determinamos el entorno de trabajo
     # if 'runserver' in sys.argv:
-    #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.development')
+    #     os.environ.setdefault('DJANGO_DEBUG', 'True')
+    #     os.environ.setdefault('DJANGO_ALLOWED_HOSTS', '*')
     # else:
-    #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.production') 
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.custom') 
+    #     os.environ.setdefault('DJANGO_DEBUG', 'False')
+    #     os.environ.setdefault('DJANGO_ALLOWED_HOSTS', 'localhost, 127.0.0.1')
 
     try:
         from django.core.management import execute_from_command_line

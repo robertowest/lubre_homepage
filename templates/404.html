@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+        <title dir='ltr'>Revue - We couldn't find that page.</title>
+        <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+        <!--[if lt IE 9]>
+        <script src="//d3jbm9h03wxzi9.cloudfront.net/assets/html5shiv-d3d35aa8c5c7074d41080b04f1324ad142a05add2f6e1e2ac7028b1eb3bece66.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" media="all" href="//d3jbm9h03wxzi9.cloudfront.net/assets/errors-a6eb6c18fe25fb03c7f08bc2d1cebf3d37522f5c68d48a90ccafcbe95c318002.css" />
+        <script src="//use.typekit.net/onj1iqq.js"></script>
+        <script>
+            try{Typekit.load();}catch(e){}
+        </script>
+        <link href='//d3jbm9h03wxzi9.cloudfront.net/assets/favicon-84fc7f228d52c2410eb7aa839e279caeaa491588c7c75229ed33e1c7f69fe75d.ico' rel='shortcut icon' size='16x16'>
+    </head>
+    <body class='errors'>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-58968534-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <header>
+            <div class='container'>
+                <a href="/"><img alt="Lubre" src="{% static 'logo.svg' %}" /></a>
+            </div>
+        </header>
+        <section id='error'>
+            <div class='container'>
+                <h1>No pudimos encontrar esta página</h1>
+                <p>Es posible que intente acceder a una página inexistente.</p>
+                <a class="btn btn-primary" href="/">Regresar a la página de principal</a>
+            </div>
+        </section>
+        <script id="IntercomSettingsScriptTag">window.intercomSettings = {"app_id":"kf0drtzp"};(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/kf0drtzp';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}};})()</script>
+    </body>
+</html>

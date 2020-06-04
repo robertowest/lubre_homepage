@@ -41,3 +41,24 @@ def product_path(value):
 def thumb_product_path(value):
     """Agregar thumb/ a la ruta de la imagen"""
     return str(value.name).replace('product/', 'product/thumb/')
+
+
+@register.filter
+def greeting_to_time(user):
+    import datetime, pytz
+    from django.conf import settings
+
+    if user.first_name:
+        name = user.first_name
+        if user.last_name:
+            name = name + ' ' + user.last_name
+    else:
+        name = user.username
+
+    cur_time = datetime.datetime.now(tz=pytz.timezone(str(settings.TIME_ZONE)))
+    if cur_time.hour < 12:
+        return 'Buenos días {}'.format(name)
+    elif cur_time.hour < 20:
+        return 'Buenas tardes {}'.format(name)
+    else:
+        return 'Buena noches {}'.format(name)

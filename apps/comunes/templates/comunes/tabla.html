@@ -1,0 +1,107 @@
+{% extends 'cartera_base.html' %}
+
+{% load static %}
+{% load mis_tags %}
+
+
+{% block style %}
+    <!-- dataTables.bootstrap4.min.css -->
+    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/datatables/jquery.dataTables.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/floating-button-action.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/datatable.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+
+{% block content %}
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Listado de {{object_list|verbose_name_plural}}</h6>
+                <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    {% with object_list|verbose_name|lower|add:':create' as button_add %}
+                    <a class="dropdown-item" href="{% url button_add %}">Nuevo</a>
+                    {% endwith %}
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            {# https://datatables.net #}
+
+            <!-- tabla de contenido -->
+            <div class="card-body">
+                
+                <div class="table-responsive">
+                    <table id="{{ tableID|default:'dataTable' }}" class="display compact" style="width:100%">
+                        {% include object_list|verbose_name|lower|add:'/includes/_tabla.html' %}
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block floating-button-action %}
+<button class="fixed-button-add wobble" type="button">
+    {% with object_list|verbose_name|lower|add:':create' as button_add %}
+    <a href="{% url button_add %}">
+        <i class="fas fa-plus"></i>
+    </a>
+    {% endwith %}
+</button>
+{% endblock %}
+
+{# boton de accion flotante y ventana modal #}
+{% comment %}
+    {% block boton-accion %}
+        <!-- botón de acción -->
+        <button class="fixed-button-add wobble" type="button">
+            <!--
+            <a href="{% url 'persona:create' %}"><i class="fas fa-plus"></i></a>
+            -->
+            <a href="{% url 'persona:create' %}" data-toggle="modal" data-target="#createModal">
+                <i class="fas fa-plus"></i>
+            </a>
+        </button>
+    {% endblock %}
+
+
+    {% block emergente %}
+        <!-- modal -->
+        <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Nueva {{object_list|verbose_name}}</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {% include 'persona/form.html' %}
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="submit" form="SubmitForm">Grabar</button>
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+{% endcomment %}
+
+
+{% block js %}
+    <!-- Page level custom scripts -->
+    <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+{% endblock %}

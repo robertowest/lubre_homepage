@@ -1,0 +1,232 @@
+{% extends 'comunes/detalle.html' %}
+
+{% load static %}
+{% load mis_tags %}
+
+
+{% block contenido %}
+
+    <!-- izquierda -->
+    <div class="col-lg-6">
+        <!-- empresa -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Datos de la Empresa</h6>
+                <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="{{object.get_update_url}}">Modificar</a>
+                        <a class="dropdown-item" href="{{object.get_delete_url}}">Eliminar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                {% include 'includes/_detail_snippet.html' %}
+            </div>
+            <div class="card-footer">
+                <a href="{% url object|url_action:'update' object.pk %}" class="btn btn-primary btn-icon-split">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-pen"></i>
+                    </span>
+                    <span class="text">Modificar</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- derecha -->
+    <div class="col-lg-6">
+        <!-- comunicaciones -->
+        <div class="card shadow mb-4">
+            <a href="#comunicacionCard" class="d-block card-header py-3" 
+               data-toggle="collapse" role="button" aria-expanded="false" 
+               aria-controls="comunicacionCard">
+                <h6 class="m-0 font-weight-bold text-primary">Comunicaciones</h6>
+            </a>
+            <div class="collapse" id="comunicacionCard">
+                <div class="card-body">
+
+                    {% if comunicaciones  %}
+
+                    <table class="table" id="dataTable" width="100%" cellspacing="0">
+                        <!--
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        -->
+                        <tbody>
+                            {% for registro in comunicaciones %}
+                            <tr>
+                                <td>{{registro.tipo.texto}}</td>
+                                <td>
+                                    <a href="{{registro.get_update_url}}">
+                                        {{registro.texto}}
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    {% endif  %}
+                </div>
+                <div class="card-footer">
+                    <!-- agregar nuevo contacto y asociarlo a la empresa -->
+                    <a href="{{object.get_related_url_with_comunication}}" class="btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="text">Nuevo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- domicilios -->
+        <div class="card shadow mb-4">
+            <a href="#domicilioCard" class="d-block card-header py-3" 
+                data-toggle="collapse" role="button" aria-expanded="false" 
+                aria-controls="domicilioCard">
+                <h6 class="m-0 font-weight-bold text-primary">Domicilios</h6>
+            </a>
+            <div class="collapse" id="domicilioCard">
+                <div class="card-body">
+                    {% if domicilios  %}
+                    <table class="table" id="dataTable" width="100%" cellspacing="0">
+                        <!--
+                        <thead>
+                            <tr>
+                                <th>Domicilio</th>
+                                <th>Localidad</th>
+                                <th>Ciudad</th>
+                            </tr>
+                        </thead>
+                        -->
+                        <tbody>
+                            {% for registro in domicilios %}
+                            <tr>
+                                <td><a href="{{registro.get_update_url}}">{{registro}}</a></td>
+                                <td>{{registro.provincia_texto}}</td>
+                                <td>{{registro.localidad_texto}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif  %}
+                </div>
+                <div class="card-footer">
+                    <!-- agregar nuevo domicilio y asociarlo a la empresa -->
+                    <a href="{{object.get_related_url_with_address}}" class="btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="text">Nuevo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- contactos -->
+        <div class="card shadow mb-4">
+            <a href="#contactoCard" class="d-block card-header py-3" 
+               data-toggle="collapse" role="button" aria-expanded="false" 
+               aria-controls="contactoCard">
+                <h6 class="m-0 font-weight-bold text-primary">Contactos</h6>
+            </a>
+            <div class="collapse" id="contactoCard">
+                <div class="card-body">
+                    {% if contactos  %}
+                    <table class="table" id="dataTable" width="100%" cellspacing="0">
+                        <!--
+                        <thead>
+                            <tr>
+                                <th>Persona</th>
+                                <th>Celular</th>
+                            </tr>
+                        </thead>
+                        -->
+                        <tbody>
+                            {% for registro in contactos %}
+                            <tr>
+                                <td>
+                                    <a href="{{registro.get_detail_url}}" target="_blank">{{registro}}</a>
+                                </td>
+                                <td>
+                                    {% for movil in registro.comunicaciones.all %}
+                                        {% if movil.tipo == 'movil' %}
+                                            {{movil.texto}}<br>
+                                        {%endif%}
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif  %}
+                </div>
+                <div class="card-footer">
+                    <!-- agregar nuevo contacto y asociarlo a la empresa -->
+                    <a href="{{object.get_related_url_with_contact}}" class="btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="text">Nuevo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- actividades -->
+        <div class="card shadow mb-4">
+            <a href="#actividadCard" class="d-block card-header py-3" 
+               data-toggle="collapse" role="button" aria-expanded="false" 
+               aria-controls="actividadCard">
+                <h6 class="m-0 font-weight-bold text-primary">Actividades</h6>
+            </a>
+            <div class="collapse" id="actividadCard">
+                <div class="card-body">
+                    {% if actividades  %}
+                    <table class="table" id="dataTable" width="100%" cellspacing="0">
+                        <tbody>
+
+                            {% for registro in actividades %}
+                            <tr>
+                                <td>
+                                    {% comment %}
+                                    <a href="{{registro.get_update_url}}">
+                                        {{registro}}
+                                    </a>
+                                    {% endcomment %}
+                                    <a href="{{registro.get_update_url}}">
+                                        {{registro}}
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+
+                        </tbody>
+                    </table>
+                    {% endif  %}
+                </div>
+                {% comment %}
+                <div class="card-footer">
+                    <!-- agregar nuevo contacto y asociarlo a la empresa -->
+                    <a href="{{object.get_related_url_with_actividad}}" class="btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span class="text">Asignar actividades</span>
+                    </a>
+                </div>
+                {% endcomment %}
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

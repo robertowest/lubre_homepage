@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -19,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#wts4s%*u&p397rd_aj=y&j&5x18nb%9(x#d%0@321w45#d7wd'
+# os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -66,12 +67,9 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-# LANGUAGE_CODE = 'en-us'
-# TIME_ZONE = 'UTC'
-
 # internalización
-LANGUAGE_CODE = 'es'
-TIME_ZONE = 'America/Argentina/Tucuman'
+LANGUAGE_CODE = config('DEJANGO_LANGUAGE_CODE', default='en')
+TIME_ZONE = config('DEJANGO_TIME_ZONE', default='UTC')
 
 USE_I18N = True
 USE_L10N = True
@@ -84,15 +82,23 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+# -------------------------------------------------------------------
+# aplicaciones del proyecto
+# -------------------------------------------------------------------
 INSTALLED_APPS += [
-    # aplicaciones de terceros para DESA y PROD
+    # aplicaciones de terceros -------------
     'mathfilters',
-    # 'social_django',
     'ckeditor',
+    # 'social_django',
 
-    # mis aplicaciones (DESA y PROD)
+    # homepage -----------------------------
     'apps.homepage',
     'apps.equivalencia',
     'apps.accounts',
     'apps.tienda',
+
+    # cartera ------------------------------
+    'apps.comunes',
+    'apps.empresa',
+    'apps.persona',
 ]

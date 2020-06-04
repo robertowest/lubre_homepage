@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from django.urls import reverse_lazy
+from django.urls import reverse, reverse_lazy
 from django.views import generic
 
 # Create your views here.
@@ -20,10 +20,16 @@ class SignUpTemplateView(generic.TemplateView):
             user = User.objects.create_user(username, email, password)
             user.save()
             user = authenticate(username=user, password=password)
-            #login
-            return reverse_lazy('login')  # HttpResponseRedirect(reverse('login'))
+
+            from django.core.mail import send_mail
+            # (subject, message, from_email, recipient_list)
+            send_mail('nuevo usuario registrado', 
+                      'se registró el usuario {}'.format(username),
+                      'homepage@lubresrl.com.ar', ['info@lubresrl.com.ar'])
+
+            return HttpResponseRedirect(reverse('login'))
         else:
-            return reverse_lazy('register')
+            return HttpResponseRedirect(reverse('signup'))
 
 
 def LoginRedirect(request):
@@ -32,4 +38,6 @@ def LoginRedirect(request):
             return HttpResponseRedirect("/admin/")    
         elif request.user.is_staff:
             # return HttpResponseRedirect("/tienda/")
+            return HttpResponseRedirect("/cartera/")
+        else:
             return HttpResponseRedirect("/")

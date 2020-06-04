@@ -326,6 +326,7 @@ fabric.properties
 
 ### Mis Configuraciones ###
 /apps/*/migrations/
+/config/settings.ini
 .env/
 .vscode/
 *.bak
@@ -336,3 +337,5 @@ fabric.properties
 *.zip
 
 datos/
+dbtest.py
+push.sh

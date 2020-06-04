@@ -76,8 +76,7 @@ try:
     print('conexión correcta')
 except OperationalError:
     print('error de conexión')
-else:
-    connected = True
+db_conn.close()
 ```
 
 

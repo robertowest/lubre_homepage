@@ -1,0 +1,21 @@
+<thead>
+    <tr>
+        <th>#</th>
+        <th>Nombre</th>
+    </tr>
+</thead>
+<tbody>
+    {% for object in object_list %}
+    <tr>
+        <td>
+            <a href="{{object.get_update_url}}">
+                {{object.pk}}
+            </a>
+        </td>
+        <td>
+            {% if object.parent%}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% endif %}
+            {{object.nombre}}
+        </td>
+    </tr>
+    {% endfor %}
+</tbody>
