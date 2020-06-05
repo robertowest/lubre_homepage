@@ -38,6 +38,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },    
+    'test': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'carteralubre',
+        'HOST': '172.17.0.2',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': 'roberto',
+    },
     'production': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'homepage_dj',
@@ -60,9 +68,21 @@ DATABASES = {
 if ENV == 'PROD':
     DATABASES['default'] = DATABASES['production']
 elif ENV == 'TEST':
-    DATABASES['default'] = DATABASES['development']
+    DATABASES['default'] = DATABASES['test']
 else:
     DATABASES['default'] = DATABASES['development']
+
+# # para utilizar migration
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'carteralubre',
+#         'HOST': '172.17.0.2',
+#         'PORT': '3306',
+#         'USER': 'root',
+#         'PASSWORD': 'roberto',
+#     },
+# }
 
 
 # -------------------------------------------------------------------
@@ -134,6 +154,15 @@ if DEBUG:
 # -------------------------------------------------------------------
 INSTALLED_APPS += ['crispy_forms',]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# -------------------------------------------------------------------
+# configuración para django-templated-email
+# -------------------------------------------------------------------
+TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBackend'
+TEMPLATED_EMAIL_AUTO_PLAIN = False
+TEMPLATED_EMAIL_TEMPLATE_DIR = 'templated_email/'
+TEMPLATED_EMAIL_FILE_EXTENSION = 'email'
 
 
 # -------------------------------------------------------------------

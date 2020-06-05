@@ -14,3 +14,13 @@ urlpatterns = [
 
     path('producto/busqueda/', views.BusquedaListView.as_view(), name='producto_search'),
 ]
+
+
+
+
+from apps.comunes.views import mails
+urlpatterns += [
+    path('send_mail/', mails.test_send_mail),
+    path('send_mail_template/', mails.test_send_mail_template),
+    path('send_simple_mail/', mails.test_simple_mail),
+]

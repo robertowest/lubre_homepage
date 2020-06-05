@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 from django.views import generic
 
+
 # Create your views here.
 class SignUpTemplateView(generic.TemplateView):
     template_name = 'accounts/signup.html'

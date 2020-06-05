@@ -87,8 +87,8 @@ STATIC_URL = '/static/'
 # -------------------------------------------------------------------
 INSTALLED_APPS += [
     # aplicaciones de terceros -------------
-    'mathfilters',
     'ckeditor',
+    'mathfilters',
     # 'social_django',
 
     # homepage -----------------------------

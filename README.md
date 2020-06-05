@@ -86,3 +86,65 @@ sudo apt-get install python3-dev python3-mysqldb libmysqlclient-dev libmariadbcl
 sudo apt-get install mariadb-client
 pip install mysqlclient
 ```
+
+
+## Carga datos iniciales
+```
+./manage.py migrate
+./manage.py makemigrations
+./manage.py migrate
+
+./manage.py loaddata entries
+./manage.py loaddata category
+./manage.py loaddata tag
+./manage.py loaddata post
+./manage.py loaddata grupo
+./manage.py loaddata producto
+```
+
+
+
+
+
+#
+# Extraer datos de la tabla
+#
+
+# comunes
+./manage.py dumpdata --format yaml -o apps/comunes/fixtures/diccionario.yaml  comunes.diccionario
+./manage.py dumpdata --format yaml -o apps/comunes/fixtures/domicilio.yaml    comunes.domicilio
+./manage.py dumpdata --format yaml -o apps/comunes/fixtures/comunicacion.yaml comunes.comunicacion
+./manage.py dumpdata --format yaml -o apps/comunes/fixtures/pais.yaml         comunes.pais
+./manage.py dumpdata --format yaml -o apps/comunes/fixtures/ciudad.yaml       comunes.ciudad
+./manage.py dumpdata --format yaml -o apps/comunes/fixtures/localidad.yaml    comunes.localidad
+
+# personas
+./manage.py dumpdata --format yaml -o apps/persona/fixtures/persona.yaml      persona.persona
+
+# terceros
+./manage.py dumpdata --format yaml -o apps/empresa/fixtures/comercial.yaml    empresa.comercial
+./manage.py dumpdata --format yaml -o apps/empresa/fixtures/empresa.yaml      empresa.empresa
+
+
+#
+# Cargar datos a la tabla
+#
+
+# comunes
+./manage.py loaddata diccionario --settings=config.settings.development
+./manage.py loaddata domicilio --settings=config.settings.development
+./manage.py loaddata comunicacion --settings=config.settings.development
+
+./manage.py loaddata persona --settings=config.settings.development
+
+./manage.py loaddata actividad --settings=config.settings.development
+./manage.py loaddata comercial --settings=config.settings.development
+./manage.py loaddata empresa --settings=config.settings.development
+
+
+
+# local
+./manage.py loaddata equivalencia --settings=config.settings.local
+
+# produccion
+heroku run python manage.py loaddata equivalencia --settings=config.settings.heroku
