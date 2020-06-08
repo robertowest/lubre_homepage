@@ -6,8 +6,8 @@ from django.urls import reverse
 # Create your models here.
 class UserProfile(User):
     class Meta:
-        verbose_name = 'UserProfile'
-        verbose_name_plural = 'UserProfiles'
+        verbose_name = 'Perfil de Usuario'
+        verbose_name_plural = 'Perfíl de Usuarios'
         
     def __str__(self):
         name = ''
@@ -20,14 +20,4 @@ class UserProfile(User):
                 name = self.last_name
         if name is None:
             name = self.username
-        return name
-
-    def get_absolute_url(self):
-        # reverse('persona:info', kwargs={'pk': self.pk})
-        return reverse('comercial:detail', args=(self.pk,))
-
-    def get_update_url(self):
-        return reverse('comercial:update', args=(self.pk,))
-
-    def get_delete_url(self):
-        return reverse('comercial:delete', args=(self.pk,))
+        return 'name'

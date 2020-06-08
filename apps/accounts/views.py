@@ -7,7 +7,7 @@ from django.urls import reverse, reverse_lazy
 from django.views import generic
 
 from apps.comunes.views.mails import signup_mail
-from . import forms, models
+from . import forms
 
 # Create your views here.
 def LoginRedirect(request):
@@ -47,31 +47,19 @@ class SignUpTemplateView(generic.TemplateView):
             return HttpResponseRedirect(reverse('signup'))
 
 
-# class ProfileView(generic.TemplateView):
-#      model = User
-#     template_name = 'accounts/profile.html'
-#     def get_object(self):
-#         return self.request.user
-class ProfileView(generic.UpdateView):
-    model = models.UserProfile
-    form_class = forms.UserForm
-    template_name = 'comunes/formulario.html'
-    form_title = 'Modificación de Actividad'
-
+class ProfileView(generic.TemplateView):
+    model = User
+    template_name = 'accounts/profile.html'
     def get_object(self):
         return self.request.user
+        
+# class ProfileView(generic.UpdateView):
+#     model = User
+#     form_class = forms.User
+#     template_name = 'accounts/profile.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['form_title'] = 'Perfíl de usuario'
-        return context
-
-    def form_valid(self, form):
-        response = super().form_valid(form)
-        # terminamos, ¿hacia dónde vamos?
-        if 'previous_url' in self.request._post:
-            return HttpResponseRedirect(self.request._post['previous_url'])
-        return response
+#     def get_object(self):
+#         return self.request.user
 
 
 @login_required(login_url='/accounts/login/')

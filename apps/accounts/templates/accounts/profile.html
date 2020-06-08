@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block panel-heading %}
-    <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Perfil
+    <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{object}}
 {% endblock %}
 
 {% block panel-body %}
@@ -22,32 +22,55 @@
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-at"></i></span>
-                <input type="email" name="email" id="email" class="form-control" placeholder="correo electrónico" required="required">
+                <input type="email" class="form-control"
+                       name="email" value="{{object.email}}"
+                       placeholder="correo electrónico" required="required">
             </div>
         </div>
 
         <div class="form-group">
             <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="password" class="form-control" name="password" placeholder="contraseña" required="required">
+                <span class="input-group-addon"><i class="fa fa-edit"></i></span>
+                <input type="text" class="form-control" 
+                       name="first_name" value='{{object.first_name}}'>
             </div>
         </div>
 
         <div class="form-group">
             <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="password" name="password2" id="password2" class="form-control" placeholder="confirmar contraseña" required="required">
+                <span class="input-group-addon"><i class="fa fa-edit"></i></span>
+                <input type="text" class="form-control" 
+                       name="last_name" value='{{object.last_name}}'>
             </div>
         </div>
+
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" 
+                   id="is_active" name="is_active" value='{{object.is_active}}'>
+            <label class="custom-control-label" for="is_active">¿Usuario activo?</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" 
+                   id="is_staff" name="is_staff" value='{{object.is_staff}}'>
+            <label class="custom-control-label" for="is_staff">¿Es empleado?</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" 
+                   id="is_superuser" name="is_superuser" value='{{object.is_superuser}}'>
+            <label class="custom-control-label" for="is_superuser">¿Es administrador?</label>
+        </div>
+
 
         <br>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block login-btn">
-                <span class="glyphicon glyphicon-send" aria-hidden="true"></span>&nbsp;&nbsp;Registrar
+                <span class="glyphicon glyphicon-save" aria-hidden="true"></span>&nbsp;&nbsp;Grabar
             </button>
         </div>
     </form>
     <div class="hint-text small">
-            <a href="{% url 'login' %}" class="pull-right text-success">Soy usuario</a>
+            <a href="{% url 'login' %}" class="pull-right text-success">Ya soy usuario</a>
     </div>
 {% endblock %}

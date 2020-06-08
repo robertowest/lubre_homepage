@@ -88,17 +88,15 @@ else:
 # -------------------------------------------------------------------
 # restricciones para las claves de usuarios
 # -------------------------------------------------------------------
-if ENV == 'DEV':
-    AUTH_PASSWORD_VALIDATORS = [
-        {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
-    ]
-else:
+if ENV == 'PROD':
     AUTH_PASSWORD_VALIDATORS = [
         {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
         {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',},
         {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',},
         {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',},
     ]
+else:
+    AUTH_PASSWORD_VALIDATORS = []
 
 
 # -------------------------------------------------------------------
