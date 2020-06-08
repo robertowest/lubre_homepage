@@ -1,7 +1,3 @@
-{% block subject %}
-  Correo para {{username}}
-{% endblock %}
-
 {% block html %}
   <body style="margin: 0; padding: 0;">
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -21,57 +17,19 @@
                       <tbody>
                         <tr>
                           <td style="color:#153643;font-family:Arial,sans-serif;font-size:24px">
-                            <b>Lorem ipsum dolor sit amet!</b>
+                            <b>Bienvenido {{username}}</b>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding:20px 0 30px 0;color:#153643;font-family:Arial,sans-serif;font-size:16px;line-height:20px">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in posuere mauris neque at erat.
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td width="260" valign="top">
-                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                      <tbody>
-                                        <tr>
-                                          <td>
-                                            <img src="http://lubresrl.com.ar/static/img/templated_email/left.gif?raw=true" alt="" width="100%" height="140" style="display:block" class="CToWUd">
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td style="padding:25px 0 0 0;color:#153643;font-family:Arial,sans-serif;font-size:16px;line-height:20px">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in posuere mauris neque at erat.
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </td>
-                                  <td style="font-size:0;line-height:0" width="20">
-                                    &nbsp;
-                                  </td>
-                                  <td width="260" valign="top">
-                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                      <tbody>
-                                        <tr>
-                                          <td>
-                                            <img src="http://lubresrl.com.ar/static/img/templated_email/right.gif?raw=true" alt="" width="100%" height="140" style="display:block" class="CToWUd">
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td style="padding:25px 0 0 0;color:#153643;font-family:Arial,sans-serif;font-size:16px;line-height:20px">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in posuere mauris neque at erat.
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                            Usted recibió este correo electrónico por haberse registrado en nuestra página.<br>
+                            Este correo es solo informativo y no debe responderlo.<br>
+                            Los datos de registro son los siguientes:
+                            <dl>
+                              <dt>usuario</dt><dd>{{username}}</dd>
+                              <dt>correo</dt><dd>{{email}}</dd>
+                              <dt>registro</dt><dd>{{joined}}</dd>
+                            </dl>
                           </td>
                         </tr>
                       </tbody>
@@ -79,13 +37,13 @@
                   </td>
                 </tr>
                 <tr>
-                  <td bgcolor="#ee4c50" style="padding:30px 30px 30px 30px">
+                  <td bgcolor="#776e6e" style="padding:30px 30px 30px 30px">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tbody>
                         <tr>
                           <td style="color:#ffffff;font-family:Arial,sans-serif;font-size:14px" width="75%">
-                            ® Someone, somewhere 2013<br>
-                            <a href="#m_7911230003936283951_" style="color:#ffffff"><font color="#ffffff">Unsubscribe</font></a> to this newsletter instantly
+                            Ruta 9 km 1306<br>
+                            T4101 Los Nogales - Tucuman, Argentinato
                           </td>
                           <td align="right" width="25%">
                             <table border="0" cellpadding="0" cellspacing="0">

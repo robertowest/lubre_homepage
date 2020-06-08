@@ -35,12 +35,13 @@
         </div>    
     </form>
 
-{% comment %}
     <br>
     <div class="or-seperator"><i>o con red social</i></div>
 
-    <!-- https://lipis.github.io/bootstrap-social/ --> 
+    {# https://lipis.github.io/bootstrap-social/ #}
     <div class="text-center social-btn">
+        {% comment %}
+        <!-- botones grandes -->
         <a href="{% url 'social:begin' 'github' %}" class="btn btn-block btn-social btn-github">
             <span class="fa fa-github"></span> Ingresa con <b>Github</b>
         </a>
@@ -52,31 +53,20 @@
         <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-block btn-social btn-facebook">
             <span class="fa fa-facebook"></span> Ingresa con <b>Facebook</b>
         </a>
+        {% endcomment %}
 
-
-        <!-- botones grandes
-        <a href="#" class="btn btn-block btn-social btn-facebook">
-            <span class="fa fa-facebook"></span> Ingresa con <b>Facebook</b>
-        </a>
-
-        <a href="{# url 'social:begin' 'google-oauth2' #}" class="btn btn-block btn-social btn-google">
-            <span class="fa fa-google"></span> Ingresa con <b>Google+</b>
-        </a>
-        -->
-
-        <!-- botones pequeños
-        <a class="btn btn-social-icon btn-github">
-            <span class="fa fa-github"></span>
-        </a>
-        <a class="btn btn-social-icon btn-facebook">
+        <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-social-icon btn-facebook">
             <span class="fa fa-facebook"></span>
         </a>
-        <a class="btn btn-social-icon btn-google">
+        <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-social-icon btn-google">
             <span class="fa fa-google"></span>
         </a>
-        -->
+        <a class="btn btn-social-icon btn-instagram">
+            <span class="fa fa-instagram"></span>
+        </a>
+
     </div>
-{% endcomment %}
+
 
     <br>
     <div class="hint-text small">

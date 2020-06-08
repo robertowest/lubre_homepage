@@ -1,0 +1,15 @@
+{% block subject %}Nuevo registro para {{username}}{% endblock %}
+
+{% block html %}
+  <p>Hola {{username}},</p>
+
+  <p>Usted se registró en nuestro sitio utilizando los siguientes datos:
+      <dl>
+        <dt>Usuario</dt><dd>{{username}}</dd>
+        <dt>Correo electrónico</dt><dd>{{email}}</dd>
+        <dt>Fecha de alta</dt><dd>{{date_joined}}</dd>
+      </dl>
+  </p>
+
+  <p>Muchas gracias</p>
+{% endblock %}

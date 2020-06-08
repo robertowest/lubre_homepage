@@ -69,18 +69,20 @@ def test_send_mail_template(request):
 
 # django-templated-email
 from templated_email import send_templated_mail
+from decouple import config
 
 def test_simple_mail(request):
-
+    # template='welcome'
+    template='signup'
     try:
         send_templated_mail(
-            template_name='welcome',
+            template_name=template,
             from_email='info@lubresrl.com.ar',
             recipient_list=['roberto.west@gmail.com'],
             context={
                 'username': request.user.username,
-                'full_name': request.user.get_full_name(),
-                'signup_date': request.user.date_joined
+                'email': request.user.email,
+                'date_joined': request.user.date_joined
             },
             # Optional:
             # cc=['cc@example.com'],
@@ -92,3 +94,20 @@ def test_simple_mail(request):
         return HttpResponse('Mensaje enviado correctamente.')
     except BadHeaderError:
         return HttpResponse('Asegúrese que todos los campos estén ingresados ​​y sean válidos.')
+
+
+def signup_mail(to, username, joined):
+    try:
+        from_email = config('DJANGO_EMAIL_HOST_USER')
+        send_templated_mail(
+            template_name = 'signup',
+            from_email = from_email,
+            recipient_list = [to],
+            context={
+                'username': username,
+                'email': to,
+                'date_joined': joined,
+            },
+        )
+    except:
+        raise

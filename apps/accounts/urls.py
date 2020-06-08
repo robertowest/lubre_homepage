@@ -11,6 +11,9 @@ urlpatterns = [
 
      path('signup/', views.SignUpTemplateView.as_view(), name='signup'),
      path('redirect/', views.LoginRedirect, name='redirect'),
+     
+     # path('profile/', views.profile, name='profile'),
+     path('profile/', views.ProfileView.as_view(), name='profile'),
 
      path('password/reset/', 
           PasswordResetView.as_view(template_name='accounts/password_reset.html'), 
@@ -27,5 +30,5 @@ urlpatterns = [
           name='password_change_done'),
 
      # esta estrada es para las redes sociales
-     # path('oauth/', include('social_django.urls', namespace='social')),
+     path('oauth/', include('social_django.urls', namespace='social')),
 ]

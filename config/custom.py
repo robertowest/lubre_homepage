@@ -72,7 +72,7 @@ elif ENV == 'TEST':
 else:
     DATABASES['default'] = DATABASES['development']
 
-# # para utilizar migration
+# # para realizar la migration conviene configurar directamente 'default'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -141,6 +141,15 @@ else:
 
 
 # -------------------------------------------------------------------
+# redirecciona a home al realizar un login exitoso
+# -------------------------------------------------------------------
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/accounts/redirect/'
+LOGOUT_URL = '/accounts/logout/'
+LOGOUT_REDIRECT_URL = '/'
+
+
+# -------------------------------------------------------------------
 # configuración para debug
 # -------------------------------------------------------------------
 if DEBUG:
@@ -166,9 +175,23 @@ TEMPLATED_EMAIL_FILE_EXTENSION = 'email'
 
 
 # -------------------------------------------------------------------
-# redirecciona a home al realizar un login exitoso
+# configuración para django-social-auth
 # -------------------------------------------------------------------
-LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/accounts/redirect/'
-LOGOUT_URL = '/accounts/logout/'
-LOGOUT_REDIRECT_URL = '/'
+AUTHENTICATION_BACKENDS = [
+    # 'social_core.backends.google.GoogleOpenId',
+    # 'social_core.backends.google.GoogleOAuth2',
+    # 'social_core.backends.google.GoogleOAuth',
+    # 'social_core.backends.linkedin.LinkedinOAuth2',
+    # 'social_core.backends.open_id.OpenIdAuth',
+    # 'social_core.backends.twitter.TwitterOAuth',
+    # 'social_core.backends.yahoo.YahooOpenId',
+    'social_core.backends.instagram.InstagramOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+SOCIAL_AUTH_FACEBOOK_KEY = config('DJANGO_FACEBOOK_KEY')
+SOCIAL_AUTH_FACEBOOK_SECRET = config('DJANGO_FACEBOOK_SECRET')
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {'fields': 'id, name, email, picture.type(large), link'}
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [('name', 'name'), ('email', 'email'), ('picture', 'picture'), ('link', 'profile_url'),]

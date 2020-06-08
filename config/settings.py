@@ -56,6 +56,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # social-auth-app-django
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -89,7 +92,7 @@ INSTALLED_APPS += [
     # aplicaciones de terceros -------------
     'ckeditor',
     'mathfilters',
-    # 'social_django',
+    'social_django',
 
     # homepage -----------------------------
     'apps.homepage',
