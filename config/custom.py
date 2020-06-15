@@ -72,17 +72,17 @@ elif ENV == 'TEST':
 else:
     DATABASES['default'] = DATABASES['development']
 
-# # para realizar la migration conviene configurar directamente 'default'
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'carteralubre',
-#         'HOST': '172.17.0.2',
-#         'PORT': '3306',
-#         'USER': 'root',
-#         'PASSWORD': 'roberto',
-#     },
-# }
+# para realizar la migration conviene configurar directamente 'default'
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'carteralubre',
+        'HOST': '172.17.0.2',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': 'roberto',
+    },
+}
 
 
 # -------------------------------------------------------------------

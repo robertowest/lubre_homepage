@@ -1,5 +1,8 @@
+from django.db import transaction
+from django.contrib import messages
 from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -7,7 +10,8 @@ from django.urls import reverse, reverse_lazy
 from django.views import generic
 
 from apps.comunes.views.mails import signup_mail
-from . import forms
+from .models import UserProfile
+from .forms import UserForm, UserProfileForm
 
 # Create your views here.
 def LoginRedirect(request):
@@ -47,19 +51,41 @@ class SignUpTemplateView(generic.TemplateView):
             return HttpResponseRedirect(reverse('signup'))
 
 
-class ProfileView(generic.TemplateView):
-    model = User
+class UserProfileView(LoginRequiredMixin, generic.UpdateView):
+    model = UserProfile
     template_name = 'accounts/profile.html'
-    def get_object(self):
-        return self.request.user
-        
-# class ProfileView(generic.UpdateView):
-#     model = User
-#     form_class = forms.User
-#     template_name = 'accounts/profile.html'
+    success_url = reverse_lazy('profile')
 
-#     def get_object(self):
-#         return self.request.user
+    def get(self, request, **kwargs):
+        self.object = UserProfile.objects.get(id=self.request.user.id)
+        form_class = self.get_form_class()
+        form = self.get_form(form_class)
+        context = self.get_context_data(object=self.object, form=form)
+        return self.render_to_response(context)
+
+    def get_form_class(self):
+        return UserProfileForm
+
+    def get_object(self, queryset=None):
+        return UserProfile.objects.get(id=self.request.user.id)
+
+    # def get_success_url(self):
+    #     view_name = 'update_mymodel'
+    #     return reverse_lazy(view_name, kwargs={'model_name_slug': self.kwargs.get('model_name_slug','')})
+
+    # def form_valid(self, form):
+    #     self.object = form.save(commit=False)
+    #     # self.object.user = UserProfile.objects.get(id=self.request.user.id)
+    #     # self.object.user = self.request.user
+    #     self.object.save()
+    #     return HttpResponseRedirect(self.get_success_url())
+    # def form_valid(self, form):
+    #     response = super().form_valid(form)
+    #     self.object = form.save()
+    #     return response
+    def form_valid(self, form):
+        form.save(self.request.user)
+        return super(UserProfileView, self).form_valid(form)
 
 
 @login_required(login_url='/accounts/login/')

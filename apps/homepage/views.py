@@ -194,5 +194,5 @@ class BusquedaListView(generic.ListView):
 
     def post(self, request, *args, **kwargs):
         busqueda = request.POST.get("producto")
-        productos = models.Producto.objects.filter(activo=1).filter(nombre__contains=busqueda)
+        productos = models.Producto.objects.filter(activo=1).filter(nombre__icontains=busqueda)
         return render(request, self.template_name, {'productos': productos})

@@ -6,6 +6,18 @@
 {% endblock %}
 
 {% block panel-body %}
+    {% if messages %}
+    <ul class="messages">
+        {% for msg in messages %}
+        <li>
+            <div class="alert alert-{{msg.level_tag}}" role="alert">
+                {{msg.message}}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
     <form method="post">
         {% csrf_token %}
         <input type="hidden" name="next" value="{{ next }}" />
@@ -14,7 +26,7 @@
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
                 <input type="text" class="form-control" 
-                       name="username" value='{{object.username}}'
+                       name="username" value='{{object.user.username}}'
                        placeholder="nombre de usuario" required="required">
             </div>
         </div>
@@ -23,7 +35,7 @@
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-at"></i></span>
                 <input type="email" class="form-control"
-                       name="email" value="{{object.email}}"
+                       name="email" value="{{object.user.email}}"
                        placeholder="correo electrónico" required="required">
             </div>
         </div>
@@ -32,7 +44,7 @@
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-edit"></i></span>
                 <input type="text" class="form-control" 
-                       name="first_name" value='{{object.first_name}}'>
+                       name="first_name" value='{{object.user.first_name}}'>
             </div>
         </div>
 
@@ -40,28 +52,33 @@
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-edit"></i></span>
                 <input type="text" class="form-control" 
-                       name="last_name" value='{{object.last_name}}'>
+                       name="last_name" value='{{object.user.last_name}}'>
             </div>
         </div>
 
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" 
-                   id="is_active" name="is_active" value='{{object.is_active}}'>
-            <label class="custom-control-label" for="is_active">¿Usuario activo?</label>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-calculator"></i></span>
+                <input type="text" class="form-control" 
+                       name="last_name" value='{{object.cuit}}'>
+            </div>
         </div>
 
+        {% comment %}
+        {% endcomment %}
         <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" 
-                   id="is_staff" name="is_staff" value='{{object.is_staff}}'>
-            <label class="custom-control-label" for="is_staff">¿Es empleado?</label>
-        </div>
+                   id="is_staff" name="is_staff" {% if object.user.is_staff %}checked{% endif %}>
+            <label class="custom-control-label" for="is_staff">Empleado &nbsp;</label>
 
-        <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" 
-                   id="is_superuser" name="is_superuser" value='{{object.is_superuser}}'>
-            <label class="custom-control-label" for="is_superuser">¿Es administrador?</label>
-        </div>
+                   id="is_superuser" name="is_superuser" {% if object.user.is_superuser %}checked{% endif %}>
+            <label class="custom-control-label" for="is_superuser">Administrador &nbsp;</label>
 
+            <input type="checkbox" class="custom-control-input" 
+                   id="is_active" name="is_active" {% if object.user.is_active %}checked{% endif %}>
+            <label class="custom-control-label" for="is_active">Activo</label>
+        </div>
 
         <br>
         <div class="form-group">
