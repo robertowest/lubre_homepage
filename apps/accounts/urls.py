@@ -11,7 +11,8 @@ urlpatterns = [
 
      path('redirect/', views.LoginRedirect, name='redirect'),
      path('signup/', views.SignUpTemplateView.as_view(), name='signup'),
-     path('profile/', views.UserProfileView.as_view(), name='profile'),
+     # path('profile/', views.UserProfileView.as_view(), name='profile'),
+     path('profile/', views.update_profile, name='profile'),
 
      path('password/reset/', 
           PasswordResetView.as_view(template_name='accounts/password_reset.html'), 

@@ -29,3 +29,9 @@ class DiccionarioForm(forms.ModelForm):
         self.helper.layout.append(layout.HTML("<hr>"))
         self.helper.layout.append(layout.HTML(bSave))
         self.helper.layout.append(layout.HTML(bCancel))
+
+        # # el botón cancel utiliza el historial del navegador
+        # self.helper.layout.append(Submit('submit', 'Save'))
+        # self.helper.layout.append(Button('cancel', 'Cancel',
+        #                                  css_class='btn-default',
+        #                                  onclick="window.history.back()"))

@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.urls import reverse
 
@@ -17,6 +18,16 @@ class UserProfile(models.Model):
             name = self.user.username
         return name
 
+    def save(self, *args, **kwargs):
+        # # Check how the current values differ from ._loaded_values. For example,
+        # # prevent changing the creator_id of the model. (This example doesn't
+        # # support cases where 'creator_id' is deferred).
+        # if not self._state.adding and (
+        #         self.creator_id != self._loaded_values['creator_id']):
+        #     raise ValueError("Updating the value of creator isn't allowed")
+        self.cuit = '333'
+        super().save(*args, **kwargs)
+
 
 @receiver(models.signals.post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
@@ -24,6 +35,6 @@ def create_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
 
 
-# @receiver(models.signals.post_save, sender=User)
-# def save_user_profile(sender, instance, **kwargs):
-#     instance.userprofile.save()
+@receiver(models.signals.post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.userprofile.save()
