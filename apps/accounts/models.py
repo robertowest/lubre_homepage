@@ -4,6 +4,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.urls import reverse
 
+from apps.firebird.models import Clientes
+
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -25,7 +27,19 @@ class UserProfile(models.Model):
         # if not self._state.adding and (
         #         self.creator_id != self._loaded_values['creator_id']):
         #     raise ValueError("Updating the value of creator isn't allowed")
-        self.cuit = '333'
+       
+        fcuit = "".join([x for x in self.cuit if x.isdigit()])
+        if len(fcuit) == 11:
+            fcuit = fcuit[:2] + '-' + fcuit[2:10] + '-' + fcuit[-1:]
+            cliente = Clientes.objects.using('firebird').filter(cuit=fcuit)
+            if cliente:
+                # id = cliente[len(cliente)-1].idcliente
+                # si existe un cliente con ese cuit, marcamos el usuario como cliente
+                self.cuit = fcuit
+            else:
+                self.cuit = None
+        else:
+            self.cuit = None
         super().save(*args, **kwargs)
 
 
