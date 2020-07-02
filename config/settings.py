@@ -104,4 +104,7 @@ INSTALLED_APPS += [
     'apps.comunes',
     'apps.empresa',
     'apps.persona',
+
+    # gestion ------------------------------
+    'apps.firebird',
 ]
