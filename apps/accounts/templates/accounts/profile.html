@@ -6,22 +6,11 @@
 {% endblock %}
 
 {% block panel-body %}
-    {% if messages %}
-    <ul class="messages">
-        {% for msg in messages %}
-        <li>
-            <div class="alert alert-{{msg.level_tag}}" role="alert">
-                {{msg.message}}
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-
     <form method="post">
         {% csrf_token %}
+
         <input type="hidden" name="next" value="{{ next }}" />
-    
+
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
@@ -60,25 +49,25 @@
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-calculator"></i></span>
                 <input type="text" class="form-control" 
-                       name="last_name" value='{{object.cuit}}'
+                       name="cuit" value='{{object.cuit}}'
                        placeholder="número de cuit 00-00000000-0">
             </div>
         </div>
 
-        {% comment %}
-        {% endcomment %}
         <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" 
-                   id="is_staff" name="is_staff" {% if object.user.is_staff %}checked{% endif %}>
+                   id="is_staff" name="is_staff" {% if user.is_staff %}checked{% endif %}>
             <label class="custom-control-label" for="is_staff">Empleado &nbsp;</label>
 
-            <input type="checkbox" class="custom-control-input" 
-                   id="is_superuser" name="is_superuser" {% if object.user.is_superuser %}checked{% endif %}>
-            <label class="custom-control-label" for="is_superuser">Administrador &nbsp;</label>
-
-            <input type="checkbox" class="custom-control-input" 
-                   id="is_active" name="is_active" {% if object.user.is_active %}checked{% endif %}>
+            <input type="checkbox" class="custom-control-input"
+                   id="is_active" name="is_active" {% if user.is_active %}checked{% endif %}>
             <label class="custom-control-label" for="is_active">Activo</label>
+
+            {% comment %}
+            <input type="checkbox" class="custom-control-input"
+                   id="is_superuser" name="is_superuser" {% if user.is_superuser %}checked{% endif %}>
+            <label class="custom-control-label" for="is_superuser">Administrador &nbsp;</label>
+            {% endcomment %}
         </div>
 
         <br>

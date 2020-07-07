@@ -5,10 +5,13 @@ from django.utils.text import slugify
 from ckeditor.fields import RichTextField
 
 from apps.tienda.models import Categoria
+from django.contrib.auth.models import User
+'accounts.User'
 
 
 def upload_path_handler(instance, filename):
     return '{dir}/{file}'.format(dir=instance.section.lower(), file=filename)
+
 
 def upload_product_path_handler(instance, filename):
     path = 'product'
@@ -72,7 +75,7 @@ class Tag(models.Model):
 class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
     tags = models.ManyToManyField(Tag, blank=True)
-    author = models.ForeignKey('auth.User', on_delete=models.CASCADE, blank=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     title = models.CharField(max_length=64, unique=True)
     slug = models.SlugField(max_length=128, blank=True)
     # content = models.TextField()

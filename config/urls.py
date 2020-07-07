@@ -27,6 +27,7 @@ urlpatterns = [
     path('tienda/', include('apps.tienda.urls')),
 
     # inicio de sesión ----------------------------------------------------------------
+    # path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('apps.accounts.urls')),
 
     # cartera -------------------------------------------------------------------------

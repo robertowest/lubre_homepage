@@ -337,7 +337,6 @@ fabric.properties
 apps/*/migrations/
 datos/
 config/settings.ini
-config/custom.py
 dbtest.py
 push.sh
 

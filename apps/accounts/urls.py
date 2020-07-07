@@ -5,14 +5,22 @@ from django.urls import include, path
 
 from . import views
 
+# accounts/ login/ [name='login']
+# accounts/ logout/ [name='logout']
+# accounts/ password_change/ [name='password_change']
+# accounts/ password_change/done/ [name='password_change_done']
+# accounts/ password_reset/ [name='password_reset']
+# accounts/ password_reset/done/ [name='password_reset_done']
+# accounts/ reset/<uidb64>/<token>/ [name='password_reset_confirm']
+# accounts/ reset/done/ [name='password_reset_complete']
+
 urlpatterns = [
-     path('login/', LoginView.as_view(template_name='accounts/login.html'), name='login'),
+     path('login/', views.login_view, name='login'),
      path('logout/', LogoutView.as_view(), name='logout'),
 
      path('redirect/', views.LoginRedirect, name='redirect'),
-     path('signup/', views.SignUpTemplateView.as_view(), name='signup'),
-     # path('profile/', views.UserProfileView.as_view(), name='profile'),
-     path('profile/', views.update_profile, name='profile'),
+     path('signup/', views.signup, name='signup'),
+     path('profile/', views.profile, name='profile'),
 
      path('password/reset/', 
           PasswordResetView.as_view(template_name='accounts/password_reset.html'), 
