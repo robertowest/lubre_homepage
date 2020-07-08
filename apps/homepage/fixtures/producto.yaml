@@ -1305,7 +1305,7 @@
 - model: homepage.producto
   pk: 76
   fields:
-    nombre: "C-COA VEGETAL"
+    nombre: "C\u2219COA VEGETAL"
     descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>0.930\
       \ g/cm3 t\xEDpica a 15 oC</dd>\n    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE\
       \ ACTIVO</dt><dd>Aceite vegetal 80,5% p/v</dd>\n    <dt>PRESENTACI\xD3N</dt><dd>20\
@@ -1321,7 +1321,7 @@
 - model: homepage.producto
   pk: 77
   fields:
-    nombre: "C-ACEITE COADYUVANTE"
+    nombre: "C\u2219ACEITE COADYUVANTE"
     descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>0.885\
       \ g/cm3 t\xEDpico a 15 oC</dd>\n    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE\
       \ ACTIVO</dt><dd>Aceite mineral paraf\xEDnico 83,31% p/v</dd>\n    <dt>PRESENTACI\xD3\
@@ -1337,7 +1337,7 @@
 - model: homepage.producto
   pk: 78
   fields:
-    nombre: "C-ADYUVANTE 80"
+    nombre: "C\u2219ADYUVANTE 80"
     descripcion: "<h3>DETALLE</h3><br>\n<dl>\n    <dt>DENSIDAD(G/ML)</dt><dd>0.853\
       \ g/cm3 t\xEDpico a 15o C</dd>\n    <dt>COMPOSICI\xD3N/PRINCIPIO ACTIVO/INGREDIENTE\
       \ ACTIVO</dt><dd>Aceite mineral paraf\xEDnico 80.5% p/v</dd>\n    <dt>PRESENTACI\xD3\

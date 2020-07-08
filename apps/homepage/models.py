@@ -6,7 +6,6 @@ from ckeditor.fields import RichTextField
 
 from apps.tienda.models import Categoria
 from django.contrib.auth.models import User
-'accounts.User'
 
 
 def upload_path_handler(instance, filename):

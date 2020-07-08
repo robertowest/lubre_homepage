@@ -824,17 +824,17 @@
     section: service2
     label: ServiCLUB
     text_short: null
-    text_large: "Si a\xFAn no eres socio, podr\xE1s obtener tu tarjeta ServiClub en\
-      \ cualquiera de nuestras Estaciones de Servicio, y luego registrala aqu\xED\
-      .<br><br>\n\n<button class=\"routerLink gold-filled-button\" href=\"join-us\"\
-      >\xA1Registr\xE1 tu tarjeta y Adherite aqu\xED!</button>\n<br><br>\n\nSum\xE1\
-      \ PUNTOS al instante con tus compras en m\xE1s de 1.500 estaciones a lo largo\
-      \ del pa\xEDs.<br><br>\n\n<button class=\"routerLink gold-filled-button\" href=\"\
-      conoce-serviclub\">Conoc\xE9 m\xE1s detalles del programa</button>\n<br><br>\n\
-      \nCon tus PUNTOS ServiClub acced\xE9 a descuentos inmediatos en nuestras Estaciones\
-      \ de Servicio o Canjealos por muchos premios m\xE1s.<br><br>\n\n<button class=\"\
-      routerLink gold-filled-button\" href=\"rewards\">Empez\xE1 a canjear</button>\n\
-      <br><br>\n"
+    text_large: "<p>Si a&uacute;n no eres socio, podr&aacute;s obtener tu tarjeta\
+      \ ServiClub en cualquiera de nuestras Estaciones de Servicio, y luego registrala\
+      \ aqu&iacute;.</p>\r\n\r\n<p><a href=\"https://serviclub.ypf.com/join-us\" class=\"\
+      btn\" target=\"_blank\">&iexcl;Registr&aacute; tu tarjeta y Adherite aqu&iacute;!</a></p>\r\
+      \n\r\n<p>Sum&aacute; PUNTOS al instante con tus compras en m&aacute;s de 1.500\
+      \ estaciones a lo largo del pa&iacute;s.</p>\r\n\r\n<p><a href=\"https://serviclub.ypf.com/conoce-serviclub\"\
+      \ class=\"btn\" target=\"_blank\">Conoc&eacute; m&aacute;s detalles del programa</a></p>\r\
+      \n\r\n<p>Con tus PUNTOS ServiClub acced&eacute; a descuentos inmediatos en nuestras\
+      \ Estaciones de Servicio o Canjealos por muchos premios m&aacute;s.</p>\r\n\r\
+      \n<p><a href=\"https://serviclub.ypf.com/rewards\" class=\"btn\" target=\"_blank\"\
+      >Empez&aacute; a canjear</a></p>\r\n"
     image: serviclub
     ordered: 8
     active: true

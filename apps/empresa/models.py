@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 
@@ -11,6 +12,8 @@ class Comercial(CommonStruct):
                                         blank=True, limit_choices_to = {'active': True})
     comunicaciones = models.ManyToManyField(Comunicacion, related_name='comercial_comunicaciones',
                                             blank=True, limit_choices_to = {'active': True})
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True, 
+                                   limit_choices_to = {'active': True})
 
     class Meta:
         verbose_name = 'Comercial'
