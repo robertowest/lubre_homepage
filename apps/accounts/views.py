@@ -57,41 +57,8 @@ def signup(request):
         return render(request, 'accounts/signup.html', {'form': form})
 
 
-# # the decorator: To access the profile page, users should login
-# @login_required
-# def profile(request):
-#     if request.method == 'POST':
-#         user_form = UserUpdateForm(request.POST, instance=request.user)
-#         profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
-#
-#         if user_form.is_valid() and profile_form.is_valid():
-#             user_form.save()
-#             profile_form.save()
-#             messages.success(request, f'Sus datos fueron actualizados correctamente.')
-#             return redirect('profile')
-#     else:
-#         user_form = UserUpdateForm(instance=request.user)
-#         profile_form = ProfileUpdateForm(instance=request.user.profile)
-#
-#     context = {
-#         'u_form': user_form,
-#         'p_form': profile_form,
-#         'object': Profile.objects.get(user_id=request.user.id),
-#     }
-#
-#     return render(request, 'accounts/profile.html', context)
-
 @login_required(login_url='/accounts/login/')
 def profile(request):
-    # if request.method == 'POST':
-    #     user_form = UserForm(request.POST, instance=request.user)
-    #     profile_form = UserProfileForm(request.POST, instance=request.user.userprofile)
-    #     if user_form.is_valid() and profile_form.is_valid():
-    #         user_form.save()
-    #         profile_form.save()
-    # else:
-    #     # context = {'object': User.objects.get(id=request.user.id)}
-    # return render(request, 'accounts/profile.html', context)
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(request.POST, instance=request.user.profile)

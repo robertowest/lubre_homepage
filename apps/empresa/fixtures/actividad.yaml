@@ -1,124 +1,260 @@
 - model: empresa.actividad
   pk: 1
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Lubricentro
+    parent: null
 - model: empresa.actividad
   pk: 2
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Industria
+    parent: null
 - model: empresa.actividad
   pk: 3
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Agro
+    parent: null
 - model: empresa.actividad
   pk: 4
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Transporte
+    parent: null
 - model: empresa.actividad
   pk: 5
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Otros
+    parent: null
 - model: empresa.actividad
   pk: 6
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Estado
+    parent: null
 - model: empresa.actividad
   pk: 7
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Lubricentro
     parent: 1
 - model: empresa.actividad
   pk: 8
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Talleres y Reventa
     parent: 1
 - model: empresa.actividad
   pk: 9
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Concesionarios
     parent: 1
 - model: empresa.actividad
   pk: 10
   fields:
-    nombre: Estación de Servicios
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    nombre: "Estaci\xF3n de Servicios"
     parent: 1
 - model: empresa.actividad
   pk: 11
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Ingenios Azucareros
     parent: 2
 - model: empresa.actividad
   pk: 12
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Empresas Constructoras
     parent: 2
 - model: empresa.actividad
   pk: 13
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Empresas Viales
     parent: 2
 - model: empresa.actividad
   pk: 14
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Obras Industriales
     parent: 2
 - model: empresa.actividad
   pk: 15
   fields:
-    nombre: Explotaciones Agrícolas
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    nombre: "Explotaciones Agr\xEDcolas"
     parent: 3
 - model: empresa.actividad
   pk: 16
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Servicios para Agro
     parent: 3
 - model: empresa.actividad
   pk: 17
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Transporte de Carga
     parent: 4
 - model: empresa.actividad
   pk: 18
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Transporte de Pasajeros
     parent: 4
 - model: empresa.actividad
   pk: 19
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Servicios a Terceros
     parent: 5
 - model: empresa.actividad
   pk: 20
   fields:
-    nombre: Distribución Gas Granel
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    nombre: "Distribuci\xF3n Gas Granel"
     parent: 5
 - model: empresa.actividad
   pk: 21
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Parafinas
     parent: 5
 - model: empresa.actividad
   pk: 22
   fields:
-    nombre: Caña
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    nombre: "Ca\xF1a"
     parent: 3
 - model: empresa.actividad
   pk: 23
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Citrus
     parent: 3
 - model: empresa.actividad
   pk: 24
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Granos
     parent: 3
 - model: empresa.actividad
   pk: 25
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Otros
     parent: 3
 - model: empresa.actividad
   pk: 26
   fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
     nombre: Servicios al Estado
     parent: 6

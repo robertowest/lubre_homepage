@@ -1,14 +1,1 @@
-- model: homepage.post
-  pk: 1
-  fields:
-    category: 1
-    author: 1
-    title: Bienvenidos
-    slug: bienvenidos
-    content: "Les damos la más cordial bienvenida a nuestro blog institucional.<br><br>Gracias por tu visita."
-    image: blog/bienvenidos.png
-    created_on: 2019-12-04
-    updated_on: 2019-12-04
-    publish_on: 2019-12-04
-    tags:
-    - 1
+[]
