@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from .models import Profile
 
+
 def LoginRedirect(request):
     if request.user is not None and request.user.is_active:
         if request.user.is_superuser:
