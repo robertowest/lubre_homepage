@@ -46,7 +46,8 @@ from django.views.generic import TemplateView
 urlpatterns += [
     # path('', TemplateView.as_view(template_name='dashboard.html'))
     # path('cartera/', TemplateView.as_view(template_name='cartera_base.html'), name='cartera')
-    path('cartera/', TemplateView.as_view(template_name='dashboard.html'), name='cartera')
+    # path('cartera/', TemplateView.as_view(template_name='dashboard.html'), name='cartera')
+    path('cartera/', include('apps.firebird.urls')),
 ]
 
 # -----------------------------------------------------------------------------
