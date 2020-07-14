@@ -20,7 +20,7 @@ urlpatterns = [
      path('login/', views.login_view, name='login'),
      path('logout/', LogoutView.as_view(), name='logout'),
 
-     # path('redirect/', views.LoginRedirect, name='redirect'),
+     path('redirect/', views.LoginRedirect, name='redirect'),
      path('signup/', views.signup, name='signup'),
      path('profile/', views.profile, name='profile'),
 

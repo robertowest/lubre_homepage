@@ -7,14 +7,19 @@ from django.contrib.auth.models import User
 
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from .models import Profile
+from apps.empresa.models import Comercial
 
 def LoginRedirect(request):
     if request.user is not None and request.user.is_active:
         if request.user.is_superuser:
             return HttpResponseRedirect("/admin/")
         elif request.user.is_staff:
-            # return HttpResponseRedirect("/tienda/")
-            return HttpResponseRedirect("/cartera/")
+            # si el empleado es un comercial, enviamos hacia otro destino
+            comercial = Comercial.objects.get(usuario=request.user)
+            if comercial:
+                return HttpResponseRedirect("/comercial/")
+            else:
+                return HttpResponseRedirect("/empleado/")
         else:
             return HttpResponseRedirect("/")
 

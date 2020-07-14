@@ -1,5 +1,7 @@
-{% extends 'cartera_base.html' %}
+{% extends 'default_base.html' %}
 {% load static %}
+{% load mis_tags %}
+
 
 {% block content %}
 
@@ -56,6 +58,35 @@
 
 {% endblock %}
 
+
+{% block modal %}
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ventana de ejemplo</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Usuario: {{request.user}}<br>
+                Comercial: {{comercial}}<br>
+                Persona: {{comercial.persona}}<br>
+                Referencia: {{comercial.persona.referencia_id}} (sistema de gestión)
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" href="#">Aceptar</a>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+
 {% block js %}
     <!-- Page level plugins -->
     <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
@@ -79,6 +110,21 @@
             pointHitRadius: 10,
             pointBorderWidth: 2,
           }],
+        },
+        options: {
+          maintainAspectRatio: false,
+          responsive: true,
+          layout: {
+            padding: {
+              left: 10,
+              right: 25,
+              top: 25,
+              bottom: 0
+            }
+          },
+          legend: {
+            display: false
+          },
         },
       };
 

@@ -17,6 +17,8 @@ class Persona(CommonStruct):
     comunicaciones = models.ManyToManyField(Comunicacion, related_name='persona_comunicaciones', 
                                             blank=True, limit_choices_to = {'active': True})
     persona_similar = models.IntegerField('Persona Similar', null=True, blank=True)
+    # referencia_id = firebird.vendedir.idvendedor
+    referencia_id = models.IntegerField('Referencia Externa', null=True, blank=True, unique=True)
 
     # configuración para admin
     list_display = ['apellido_nombre', 'documento', 'active']

@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.views.generic import TemplateView
 
+from apps.accounts.views import LoginRedirect
 # admin.autodiscover()
 
 urlpatterns = [
@@ -30,6 +32,9 @@ urlpatterns = [
     # path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('apps.accounts.urls')),
 
+    # redireccionamiento --------------------------------------------------------------
+    path('redirect/', LoginRedirect, name='redirect'),
+
     # cartera -------------------------------------------------------------------------
     path('comunicacion/', include('apps.comunes.urls.comunicacion')),
     path('diccionario/', include('apps.comunes.urls.diccionario')),
@@ -39,15 +44,9 @@ urlpatterns = [
     path('empresa/actividad/', include('apps.empresa.urls.actividad')),
 
     path('persona/', include('apps.persona.urls')),
-] 
 
-# Dashboard
-from django.views.generic import TemplateView
-urlpatterns += [
-    # path('', TemplateView.as_view(template_name='dashboard.html'))
-    # path('cartera/', TemplateView.as_view(template_name='cartera_base.html'), name='cartera')
-    # path('cartera/', TemplateView.as_view(template_name='dashboard.html'), name='cartera')
-    path('cartera/', include('apps.firebird.urls')),
+    path('empleado/', TemplateView.as_view(template_name='default_base.html'), name='empleado'),
+    path('comercial/', include('apps.firebird.urls')),
 ]
 
 # -----------------------------------------------------------------------------

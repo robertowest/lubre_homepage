@@ -15,6 +15,10 @@ class Comercial(CommonStruct):
     usuario = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True, 
                                    limit_choices_to = {'active': True})
 
+    list_display = ['persona_id', 'persona', 'usuario']
+    list_display_links = ['persona']
+    search_fields = ['persona__apellido']
+
     class Meta:
         verbose_name = 'Comercial'
         verbose_name_plural = 'Comerciales'

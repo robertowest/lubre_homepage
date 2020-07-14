@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
 from django.shortcuts import render
 
+from apps.empresa.models import Comercial
 
 def cartera(request):
     # labels = []
@@ -24,8 +24,9 @@ def cartera(request):
         'area_chart_data': area_chart_data,
         'pie_chart_labels': pie_chart_labels,
         'pie_chart_data': pie_chart_data,
+        'comercial': Comercial.objects.get(usuario=request.user)
     }
-    return render(request, 'dashboard.html', context)
+    return render(request, 'firebird/dashboard.html', context)
 
 
 def area_chart():
