@@ -50,3 +50,9 @@ def url_action(obj, action):
 @register.filter
 def url_action_pk(url, pk):
     return '{url} {id}'.format(url=url, id=pk)
+
+
+@register.simple_tag()
+def var_dump(var):
+    # forma de uso en html: {% var_dump VARIABLE %}
+    return vars(var)

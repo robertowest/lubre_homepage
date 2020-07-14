@@ -1,9 +1,15 @@
 from django.contrib import admin
 from . import models
 
-# Register your models here.
+# admin.site.register(models.Comercial)
+@admin.register(models.Comercial)
+class ComercialAdmin(admin.ModelAdmin):
+    model = models.Comercial
+    list_display = model.list_display
+    list_display_links = model.list_display_links
+    search_fields = model.search_fields
 
-admin.site.register(models.Comercial)
+
 admin.site.register(models.Actividad)
 # @admin.register(models.Actividad)
 # class ActividadAdmin(admin.ModelAdmin):
