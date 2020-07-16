@@ -387,3 +387,28 @@ class ActividadUpdateView(generic.UpdateView):
 
 class ActividadDeleteView(generic.DeleteView):
     pass
+
+
+
+
+from next_prev import next_in_order, prev_in_order
+
+
+class EmpresaBrowseView(generic.DetailView):
+    model = models.Empresa
+    template_name = 'empresa/one_by_one.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['previous_object'] = prev_in_order(context['empresa'])
+        context['next_object'] = next_in_order(context['empresa'])
+
+        context['domicilios'] = context['empresa'].domicilios.filter(active=True)
+        context['comunicaciones'] = context['empresa'].comunicaciones.filter(active=True)
+        context['contactos'] = context['empresa'].contactos.filter(active=True)
+        context['actividades'] = context['empresa'].actividades.filter(active=True)
+        # context['empresa'].contactos.filter(tipo='movil').filter(active=True)
+        # cargamos los celulares de los contactos
+        # for reg in context['contactos']:
+        #     reg.comunicaciones = reg.comunicaciones.filter(tipo='movil').filter(active=True)
+        return context
