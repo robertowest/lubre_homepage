@@ -131,7 +131,8 @@ class EmpresaDeleteView(generic.DeleteView):
 class FilterListView(generic.ListView):
     model = models.Empresa
     # template_name = '{app}/list.html'.format(app=model._meta.verbose_name.lower())
-    template_name = 'comunes/tabla.html'
+    # template_name = 'comunes/tabla.html'
+    template_name = 'empresa/tabla.html'
 
     def url_name(self):
         attrib = resolve(self.request.path)
@@ -434,8 +435,3 @@ class EmpresaBrowseView(generic.DetailView):
         # for reg in context['contactos']:
         #     reg.comunicaciones = reg.comunicaciones.filter(tipo='movil').filter(active=True)
         return context
-
-    # def get_queryset(self):
-    #     """Filter pages by a book"""
-    #     # return self.queryset.filter(comercial_id=self.kwargs.get('book_id'))
-    #     return self.queryset.filter(active=True)

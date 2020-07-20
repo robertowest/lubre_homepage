@@ -10,7 +10,7 @@
                         <h2>Sesión activa</h2>
                         <p>{{ user|greeting_to_time }}</p>
                         {% if user.is_staff %}
-                            <a href="{% url 'cartera' %}" class="read-more">Gestión</a>
+                            <a href="{% url 'redirect' %}" class="read-more">Gestión</a>
                         {% endif %}
                         <a href="{% url 'logout' %}" class="read-more">Cerrar sesión</a>
                     {% else %}

@@ -29,7 +29,7 @@ urlpatterns = [
 from django.contrib.auth.decorators import login_required
 
 urlpatterns += [
-    path('recorrer/', views.Recorrer),
+    path('recorrer/', views.Recorrer, name="recorrer"),
     # path('recorrer/<int:comercial>/<int:empresa>/', 
     path('recorrer/<int:pk>/', 
          login_required(views.EmpresaBrowseView.as_view()), name="browse"),

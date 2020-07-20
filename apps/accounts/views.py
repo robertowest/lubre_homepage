@@ -18,7 +18,7 @@ def LoginRedirect(request):
             comercial = Comercial.objects.get(usuario=request.user)
             if comercial:
                 # return HttpResponseRedirect("/comercial/")
-                # return HttpResponseRedirect("/recorrer/")
+                # return HttpResponseRedirect("/empresa/recorrer/")
                 return HttpResponseRedirect("/empresa/filtro_comercial/" + str(comercial.id))
             else:
                 return HttpResponseRedirect("/empleado/")

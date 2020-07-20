@@ -14,6 +14,8 @@ from . import views
 # accounts/ reset/<uidb64>/<token>/ [name='password_reset_confirm']
 # accounts/ reset/done/ [name='password_reset_complete']
 
+app_name = __package__.split('.')[1]
+
 urlpatterns = [
      path('', views.LoginRedirect, name='redirect'),
 
