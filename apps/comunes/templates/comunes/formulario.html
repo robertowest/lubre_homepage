@@ -22,11 +22,18 @@
     </div>
 {% endblock %}
 
-
 {% block js %}
     <script>
     $('#myform').append('<input type="hidden" name="previous_url" value="'+document.referrer+'" />');
     </script>
+
+    {% with object.get_app_label|add:"/comunes_formulario.html" as template_name %}
+        {% if template_name|file_exists %}
+            <!-- agregamos funciones personalizadas -->
+            {% include template_name %}
+        {% endif %}
+    {% endwith %}
+
 {% endblock %}
 
 

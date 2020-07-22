@@ -18,6 +18,19 @@ urlpatterns = [
     path('<int:fk>/domicilio/', views.CreateAddressView.as_view(), name='associate_with_address'),
     path('<int:fk>/contacto/', views.CreateContactView.as_view(), name='associate_with_contact'),
     path('<int:fk>/actividad/', views.ActividadMultiListView.as_view(), name='associate_with_actividad'),
+]
 
-    path('<int:pk>/recorrer/', views.EmpresaBrowseView.as_view(), name='browse'),
+# controlar login a nivel de path
+# path('<int:pk>/recorrer/', login_required(views.EmpresaBrowseView.as_view()), name='browse'),
+
+# ----------------------------------------------------------------------------------
+# quitar despues de haber controlado todos los clientes por parte de los comerciales
+# ----------------------------------------------------------------------------------
+from django.contrib.auth.decorators import login_required
+
+urlpatterns += [
+    path('recorrer/', views.Recorrer, name="recorrer"),
+    # path('recorrer/<int:comercial>/<int:empresa>/', 
+    path('recorrer/<int:pk>/', 
+         login_required(views.EmpresaBrowseView.as_view()), name="browse"),
 ]

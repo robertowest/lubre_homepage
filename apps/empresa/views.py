@@ -131,7 +131,8 @@ class EmpresaDeleteView(generic.DeleteView):
 class FilterListView(generic.ListView):
     model = models.Empresa
     # template_name = '{app}/list.html'.format(app=model._meta.verbose_name.lower())
-    template_name = 'comunes/tabla.html'
+    # template_name = 'comunes/tabla.html'
+    template_name = 'empresa/tabla.html'
 
     def url_name(self):
         attrib = resolve(self.request.path)
@@ -144,10 +145,10 @@ class FilterListView(generic.ListView):
         if self.kwargs['filtro'] == 0:
             self.kwargs['filtro'] = None
         if name == 'filtro_actividad':
-            return self.model.objects.filter(actividad=self.kwargs['filtro'])
+            return self.model.objects.filter(actividad=self.kwargs['filtro']).order_by('razon_social')
         if name == 'filtro_comercial':
-            return self.model.objects.filter(comercial=self.kwargs['filtro'])
-        return self.model.objects.all()
+            return self.model.objects.filter(comercial=self.kwargs['filtro']).order_by('razon_social')
+        return self.model.objects.all().order_by('razon_social')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -391,17 +392,39 @@ class ActividadDeleteView(generic.DeleteView):
 
 
 
+# ----------------------------------------------------------------------------------
+# quitar despues de haber controlado todos los clientes por parte de los comerciales
+# ----------------------------------------------------------------------------------
+from django.contrib.auth.decorators import login_required
 from next_prev import next_in_order, prev_in_order
+
+@login_required(login_url='/accounts/login/')
+def Recorrer(request):
+    comercial = models.Comercial.objects.get(usuario=request.user)
+    empresa = models.Empresa.objects.filter(comercial=comercial).order_by('razon_social').first()
+    url = "/empresa/recorrer/" + str(empresa.id) + "/"
+    # return render(request, 'accounts/profile.html', {'object': empresa})
+    # return HttpResponse(url)
+    return HttpResponseRedirect(url)
 
 
 class EmpresaBrowseView(generic.DetailView):
     model = models.Empresa
+    # model = models.Empresa.objects.filter(comercial=context['comercial']).get(id=context['empresa'])
     template_name = 'empresa/one_by_one.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['previous_object'] = prev_in_order(context['empresa'])
-        context['next_object'] = next_in_order(context['empresa'])
+        # context['previous_object'] = prev_in_order(context['empresa'])
+        # context['next_object'] = next_in_order(context['empresa'])
+
+        # custom ordering
+        emp_id = context['empresa'].id
+        com_id = context['empresa'].comercial_id
+        qs = models.Empresa.objects.filter(comercial=com_id).order_by('razon_social')
+        newest = qs.get(id=emp_id)
+        context['previous_object'] = prev_in_order(newest, qs=qs)
+        context['next_object'] = next_in_order(newest, qs=qs)
 
         context['domicilios'] = context['empresa'].domicilios.filter(active=True)
         context['comunicaciones'] = context['empresa'].comunicaciones.filter(active=True)

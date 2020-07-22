@@ -7,779 +7,7207 @@
   pk: 2
   fields:
     nivel: 02
-    nombre: Tucumán
-    parent_id: 1
+    nombre: Catamarca
+    parent: 1
+    georef_id: 10
+    georef_nombre: Catamarca
 - model: comunes.georef
   pk: 3
   fields:
     nivel: 03
-    nombre: Burruyacú
-    parent_id: 2
+    nombre: Ambato
+    parent: 2
+    georef_id: 10007
+    georef_nombre: Ambato
 - model: comunes.georef
   pk: 4
   fields:
-    nivel: 03
-    nombre: Capital
-    parent_id: 2
+    nivel: 05
+    nombre: Chuchucaruana
+    parent: 3
+    georef_id: 10007010000
+    georef_nombre: CHUCHUCARUANA
 - model: comunes.georef
   pk: 5
   fields:
-    nivel: 03
-    nombre: Cicligasta
-    parent_id: 2
+    nivel: 05
+    nombre: Colpes
+    parent: 3
+    georef_id: 10007020000
+    georef_nombre: COLPES
 - model: comunes.georef
   pk: 6
   fields:
-    nivel: 03
-    nombre: Cruz Alta
-    parent_id: 2
+    nivel: 05
+    nombre: El Bolson
+    parent: 3
+    georef_id: 10007030000
+    georef_nombre: EL BOLSON
 - model: comunes.georef
   pk: 7
   fields:
-    nivel: 03
-    nombre: Famaillá
-    parent_id: 2
+    nivel: 05
+    nombre: El Rodeo
+    parent: 3
+    georef_id: 10007040000
+    georef_nombre: EL RODEO
 - model: comunes.georef
   pk: 8
   fields:
-    nivel: 03
-    nombre: Graneros
-    parent_id: 2
+    nivel: 05
+    nombre: Huaycama
+    parent: 3
+    georef_id: 10007050000
+    georef_nombre: HUAYCAMA
 - model: comunes.georef
   pk: 9
   fields:
-    nivel: 03
-    nombre: Juan Bautista Alberdi
-    parent_id: 2
+    nivel: 05
+    nombre: La Puerta
+    parent: 3
+    georef_id: 10007060000
+    georef_nombre: LA PUERTA
 - model: comunes.georef
   pk: 10
   fields:
-    nivel: 03
-    nombre: La Cocha
-    parent_id: 2
+    nivel: 05
+    nombre: Las Chacritas
+    parent: 3
+    georef_id: 10007070000
+    georef_nombre: LAS CHACRITAS
 - model: comunes.georef
   pk: 11
   fields:
-    nivel: 03
-    nombre: Leales
-    parent_id: 2
+    nivel: 05
+    nombre: Las Juntas
+    parent: 3
+    georef_id: 10007080000
+    georef_nombre: LAS JUNTAS
 - model: comunes.georef
   pk: 12
   fields:
-    nivel: 03
-    nombre: Lules
-    parent_id: 2
+    nivel: 05
+    nombre: Los Castillos
+    parent: 3
+    georef_id: 10007090000
+    georef_nombre: LOS CASTILLOS
 - model: comunes.georef
   pk: 13
   fields:
-    nivel: 03
-    nombre: Monteros
-    parent_id: 2
+    nivel: 05
+    nombre: Los Talas
+    parent: 3
+    georef_id: 10007100000
+    georef_nombre: LOS TALAS
 - model: comunes.georef
   pk: 14
   fields:
-    nivel: 03
-    nombre: Río Chico
-    parent_id: 2
+    nivel: 05
+    nombre: Los Varela
+    parent: 3
+    georef_id: 10007110000
+    georef_nombre: LOS VARELA
 - model: comunes.georef
   pk: 15
   fields:
-    nivel: 03
-    nombre: Simoca
-    parent_id: 2
+    nivel: 05
+    nombre: Singuil
+    parent: 3
+    georef_id: 10007120000
+    georef_nombre: SINGUIL
 - model: comunes.georef
   pk: 16
   fields:
     nivel: 03
-    nombre: Tafí del Valle
-    parent_id: 2
+    nombre: Ancasti
+    parent: 2
+    georef_id: 10014
+    georef_nombre: Ancasti
 - model: comunes.georef
   pk: 17
   fields:
-    nivel: 03
-    nombre: Tafí Viejo
-    parent_id: 2
+    nivel: 05
+    nombre: Ancasti
+    parent: 16
+    georef_id: 10014010000
+    georef_nombre: ANCASTI
 - model: comunes.georef
   pk: 18
   fields:
-    nivel: 03
-    nombre: Trancas
-    parent_id: 2
+    nivel: 05
+    nombre: Anquincila
+    parent: 16
+    georef_id: 10014020000
+    georef_nombre: ANQUINCILA
 - model: comunes.georef
   pk: 19
   fields:
-    nivel: 03
-    nombre: Yerba Buena
-    parent_id: 2
+    nivel: 05
+    nombre: La Candelaria
+    parent: 16
+    georef_id: 10014030000
+    georef_nombre: LA CANDELARIA
 - model: comunes.georef
   pk: 20
   fields:
-    nivel: 04
-    nombre: Burruyacú
-    parent_id: 3
+    nivel: 05
+    nombre: La Majada
+    parent: 16
+    georef_id: 10014040000
+    georef_nombre: LA MAJADA
 - model: comunes.georef
   pk: 21
   fields:
-    nivel: 04
-    nombre: El Chañar
-    parent_id: 3
+    nivel: 03
+    nombre: Andalgalá
+    parent: 2
+    georef_id: 10021
+    georef_nombre: Andalgalá
 - model: comunes.georef
   pk: 22
   fields:
-    nivel: 04
-    nombre: El Naranjo y El Sunchal
-    parent_id: 3
+    nivel: 05
+    nombre: Aconquija
+    parent: 21
+    georef_id: 10021060001
+    georef_nombre: ACONQUIJA
 - model: comunes.georef
   pk: 23
   fields:
-    nivel: 04
-    nombre: El Puestito
-    parent_id: 3
+    nivel: 05
+    nombre: Alto De Las Juntas
+    parent: 21
+    georef_id: 10021060002
+    georef_nombre: ALTO DE LAS JUNTAS
 - model: comunes.georef
   pk: 24
   fields:
-    nivel: 04
-    nombre: El Timbó
-    parent_id: 3
+    nivel: 05
+    nombre: Amanao
+    parent: 21
+    georef_id: 10021010000
+    georef_nombre: AMANAO
 - model: comunes.georef
   pk: 25
   fields:
-    nivel: 04
-    nombre: Gobernador Garmendia
-    parent_id: 3
+    nivel: 05
+    nombre: Andalgala
+    parent: 21
+    georef_id: 10021020000
+    georef_nombre: ANDALGALA
 - model: comunes.georef
   pk: 26
   fields:
-    nivel: 04
-    nombre: Gobernador Piedrabuena
-    parent_id: 3
+    nivel: 05
+    nombre: Buena Vista
+    parent: 21
+    georef_id: 10021050001
+    georef_nombre: BUENA VISTA
 - model: comunes.georef
   pk: 27
   fields:
-    nivel: 04
-    nombre: La Ramada y La Cruz
-    parent_id: 3
+    nivel: 05
+    nombre: Chaquiago
+    parent: 21
+    georef_id: 10021030000
+    georef_nombre: CHAQUIAGO
 - model: comunes.georef
   pk: 28
   fields:
-    nivel: 04
-    nombre: Padre Monti
-    parent_id: 3
+    nivel: 05
+    nombre: Choya
+    parent: 21
+    georef_id: 10021040000
+    georef_nombre: CHOYA
 - model: comunes.georef
   pk: 29
   fields:
-    nivel: 04
-    nombre: Siete de Abril
-    parent_id: 3
+    nivel: 05
+    nombre: El Alamito
+    parent: 21
+    georef_id: 10021050002
+    georef_nombre: EL ALAMITO
 - model: comunes.georef
   pk: 30
   fields:
-    nivel: 04
-    nombre: Villa Benjamín Araoz
-    parent_id: 3
+    nivel: 05
+    nombre: El Lindero
+    parent: 21
+    georef_id: 10021060003
+    georef_nombre: EL LINDERO
 - model: comunes.georef
   pk: 31
   fields:
-    nivel: 04
-    nombre: San Miguel de Tucumán
-    parent_id: 4
+    nivel: 05
+    nombre: El Potrero
+    parent: 21
+    georef_id: 10021070000
+    georef_nombre: EL POTRERO
 - model: comunes.georef
   pk: 32
   fields:
-    nivel: 04
-    nombre: Concepción
-    parent_id: 5
+    nivel: 05
+    nombre: La Aguada
+    parent: 21
+    georef_id: 10021080000
+    georef_nombre: LA AGUADA
 - model: comunes.georef
   pk: 33
   fields:
-    nivel: 04
-    nombre: Alpachiri y El Molino
-    parent_id: 5
+    nivel: 05
+    nombre: La Mesada
+    parent: 21
+    georef_id: 10021060004
+    georef_nombre: LA MESADA
 - model: comunes.georef
   pk: 34
   fields:
-    nivel: 04
-    nombre: Alto Verde y Los Gucheas
-    parent_id: 5
+    nivel: 03
+    nombre: Antofagasta De La Sierra
+    parent: 2
+    georef_id: 10028
+    georef_nombre: Antofagasta de la Sierra
 - model: comunes.georef
   pk: 35
   fields:
-    nivel: 04
-    nombre: Arcadia
-    parent_id: 5
+    nivel: 05
+    nombre: Antofagasta De La Sierra
+    parent: 34
+    georef_id: 10028010000
+    georef_nombre: ANTOFAGASTA DE LA SIERRA
 - model: comunes.georef
   pk: 36
   fields:
-    nivel: 04
-    nombre: Gastona y Belicha
-    parent_id: 5
+    nivel: 05
+    nombre: Antofalla
+    parent: 34
+    georef_id: 10028020000
+    georef_nombre: ANTOFALLA
 - model: comunes.georef
   pk: 37
   fields:
-    nivel: 04
-    nombre: La Trinidad
-    parent_id: 5
+    nivel: 05
+    nombre: El Peñon
+    parent: 34
+    georef_id: 10028030000
+    georef_nombre: EL PEÑON
 - model: comunes.georef
   pk: 38
   fields:
-    nivel: 04
-    nombre: Medinas 
-    parent_id: 5
+    nivel: 05
+    nombre: Los Nacimientos
+    parent: 34
+    georef_id: 10028040000
+    georef_nombre: LOS NACIMIENTOS
 - model: comunes.georef
   pk: 39
   fields:
-    nivel: 04
-    nombre: Banda del Río Salí
-    parent_id: 6
+    nivel: 03
+    nombre: Belén
+    parent: 2
+    georef_id: 10035
+    georef_nombre: Belén
 - model: comunes.georef
   pk: 40
   fields:
-    nivel: 04
-    nombre: Alderetes
-    parent_id: 6
+    nivel: 05
+    nombre: Barranca Larga
+    parent: 39
+    georef_id: 10035010000
+    georef_nombre: BARRANCA LARGA
 - model: comunes.georef
   pk: 41
   fields:
-    nivel: 04
-    nombre: Colombres
-    parent_id: 6
+    nivel: 05
+    nombre: Belen
+    parent: 39
+    georef_id: 10035020000
+    georef_nombre: BELEN
 - model: comunes.georef
   pk: 42
   fields:
-    nivel: 04
-    nombre: Delfín Gallo
-    parent_id: 6
+    nivel: 05
+    nombre: Condor Huasi
+    parent: 39
+    georef_id: 10035030000
+    georef_nombre: CONDOR HUASI
 - model: comunes.georef
   pk: 43
   fields:
-    nivel: 04
-    nombre: El Bracho y El Cevilar
-    parent_id: 6
+    nivel: 05
+    nombre: Corral Quemado
+    parent: 39
+    georef_id: 10035040000
+    georef_nombre: CORRAL QUEMADO
 - model: comunes.georef
   pk: 44
   fields:
-    nivel: 04
-    nombre: El Naranjito
-    parent_id: 6
+    nivel: 05
+    nombre: El Durazno
+    parent: 39
+    georef_id: 10035050000
+    georef_nombre: EL DURAZNO
 - model: comunes.georef
   pk: 45
   fields:
-    nivel: 04
-    nombre: La Florida y Luisiana
-    parent_id: 6
+    nivel: 05
+    nombre: Farallon Negro
+    parent: 39
+    georef_id: 10035060000
+    georef_nombre: FARALLON NEGRO
 - model: comunes.georef
   pk: 46
   fields:
-    nivel: 04
-    nombre: Las Cejas
-    parent_id: 6
+    nivel: 05
+    nombre: Hualfin
+    parent: 39
+    georef_id: 10035070000
+    georef_nombre: HUALFIN
 - model: comunes.georef
   pk: 47
   fields:
-    nivel: 04
-    nombre: Los Bulacio y Los Villagra
-    parent_id: 6
+    nivel: 05
+    nombre: Jacipunco
+    parent: 39
+    georef_id: 10035080000
+    georef_nombre: JACIPUNCO
 - model: comunes.georef
   pk: 48
   fields:
-    nivel: 04
-    nombre: Los Pereyra
-    parent_id: 6
+    nivel: 05
+    nombre: La Puntilla
+    parent: 39
+    georef_id: 10035090000
+    georef_nombre: LA PUNTILLA
 - model: comunes.georef
   pk: 49
   fields:
-    nivel: 04
-    nombre: Los Pérez
-    parent_id: 6
+    nivel: 05
+    nombre: Las Juntas
+    parent: 39
+    georef_id: 10035100000
+    georef_nombre: LAS JUNTAS
 - model: comunes.georef
   pk: 50
   fields:
-    nivel: 04
-    nombre: Los Ralos
-    parent_id: 6
+    nivel: 05
+    nombre: Londres
+    parent: 39
+    georef_id: 10035110000
+    georef_nombre: LONDRES
 - model: comunes.georef
   pk: 51
   fields:
-    nivel: 04
-    nombre: Ranchillos y San Miguel
-    parent_id: 6
+    nivel: 05
+    nombre: Los Nacimientos
+    parent: 39
+    georef_id: 10035120000
+    georef_nombre: LOS NACIMIENTOS
 - model: comunes.georef
   pk: 52
   fields:
-    nivel: 04
-    nombre: San Andrés 
-    parent_id: 6
+    nivel: 05
+    nombre: Puerta De Corral Quemado
+    parent: 39
+    georef_id: 10035130000
+    georef_nombre: PUERTA DE CORRAL QUEMADO
 - model: comunes.georef
   pk: 53
   fields:
-    nivel: 04
-    nombre: Famaillá
-    parent_id: 7
+    nivel: 05
+    nombre: Puerta De San Jose
+    parent: 39
+    georef_id: 10035140000
+    georef_nombre: PUERTA DE SAN JOSE
 - model: comunes.georef
   pk: 54
   fields:
-    nivel: 04
-    nombre: Graneros
-    parent_id: 8
+    nivel: 05
+    nombre: Villa Vil
+    parent: 39
+    georef_id: 10035150000
+    georef_nombre: VILLA VIL
 - model: comunes.georef
   pk: 55
   fields:
-    nivel: 04
-    nombre: Lamadrid
-    parent_id: 8
+    nivel: 03
+    nombre: Capayán
+    parent: 2
+    georef_id: 10042
+    georef_nombre: Capayán
 - model: comunes.georef
   pk: 56
   fields:
-    nivel: 04
-    nombre: Taco Ralo 
-    parent_id: 8
+    nivel: 05
+    nombre: Adolfo E. Carranza
+    parent: 55
+    georef_id: 10042010000
+    georef_nombre: ADOLFO E. CARRANZA
 - model: comunes.georef
   pk: 57
   fields:
-    nivel: 04
-    nombre: Juan Bautista Alberdi
-    parent_id: 9
+    nivel: 05
+    nombre: Balde De La Punta
+    parent: 55
+    georef_id: 10042020000
+    georef_nombre: BALDE DE LA PUNTA
 - model: comunes.georef
   pk: 58
   fields:
-    nivel: 04
-    nombre: Escaba
-    parent_id: 9
+    nivel: 05
+    nombre: Capayan
+    parent: 55
+    georef_id: 10042030000
+    georef_nombre: CAPAYAN
 - model: comunes.georef
   pk: 59
   fields:
-    nivel: 04
-    nombre: Villa Belgrano
-    parent_id: 9
+    nivel: 05
+    nombre: Chumbicha
+    parent: 55
+    georef_id: 10042040000
+    georef_nombre: CHUMBICHA
 - model: comunes.georef
   pk: 60
   fields:
-    nivel: 04
-    nombre: La Cocha
-    parent_id: 10
+    nivel: 05
+    nombre: Colonia Del Valle
+    parent: 55
+    georef_id: 10042050000
+    georef_nombre: COLONIA DEL VALLE
 - model: comunes.georef
   pk: 61
   fields:
-    nivel: 04
-    nombre: El Sacrificio
-    parent_id: 10
+    nivel: 05
+    nombre: Colonia Nueva Coneta
+    parent: 55
+    georef_id: 10042060000
+    georef_nombre: COLONIA NUEVA CONETA
 - model: comunes.georef
   pk: 62
   fields:
-    nivel: 04
-    nombre: Huasa Pampa Sud
-    parent_id: 10
+    nivel: 05
+    nombre: Concepcion
+    parent: 55
+    georef_id: 10042070000
+    georef_nombre: CONCEPCION
 - model: comunes.georef
   pk: 63
   fields:
-    nivel: 04
-    nombre: Rumi Punco
-    parent_id: 10
+    nivel: 05
+    nombre: Coneta
+    parent: 55
+    georef_id: 10042080000
+    georef_nombre: CONETA
 - model: comunes.georef
   pk: 64
   fields:
-    nivel: 04
-    nombre: San Ignacio
-    parent_id: 10
+    nivel: 05
+    nombre: El Bañado
+    parent: 55
+    georef_id: 10042090000
+    georef_nombre: EL BAÑADO
 - model: comunes.georef
   pk: 65
   fields:
-    nivel: 04
-    nombre: San José de la Cocha
-    parent_id: 10
+    nivel: 05
+    nombre: Huillapima
+    parent: 55
+    georef_id: 10042100000
+    georef_nombre: HUILLAPIMA
 - model: comunes.georef
   pk: 66
   fields:
-    nivel: 04
-    nombre: Yánima
-    parent_id: 10
+    nivel: 05
+    nombre: Los Angeles
+    parent: 55
+    georef_id: 10042110000
+    georef_nombre: LOS ANGELES
 - model: comunes.georef
   pk: 67
   fields:
-    nivel: 04
-    nombre: Bella Vista
-    parent_id: 11
+    nivel: 05
+    nombre: Los Angeles Norte
+    parent: 55
+    georef_id: 10042110001
+    georef_nombre: LOS ANGELES NORTE
 - model: comunes.georef
   pk: 68
   fields:
-    nivel: 04
-    nombre: Agua Dulce y La Soledad
-    parent_id: 11
+    nivel: 05
+    nombre: Los Angeles Sur
+    parent: 55
+    georef_id: 10042110002
+    georef_nombre: LOS ANGELES SUR
 - model: comunes.georef
   pk: 69
   fields:
-    nivel: 04
-    nombre: El Mojón
-    parent_id: 11
+    nivel: 05
+    nombre: Miraflores
+    parent: 55
+    georef_id: 10042120000
+    georef_nombre: MIRAFLORES
 - model: comunes.georef
   pk: 70
   fields:
-    nivel: 04
-    nombre: Esquina y Mancopa
-    parent_id: 11
+    nivel: 05
+    nombre: San Martin
+    parent: 55
+    georef_id: 10042130000
+    georef_nombre: SAN MARTIN
 - model: comunes.georef
   pk: 71
   fields:
-    nivel: 04
-    nombre: Estación Araoz y Tacanas
-    parent_id: 11
+    nivel: 05
+    nombre: San Pablo
+    parent: 55
+    georef_id: 10042140000
+    georef_nombre: SAN PABLO
 - model: comunes.georef
   pk: 72
   fields:
-    nivel: 04
-    nombre: Las Talas
-    parent_id: 11
+    nivel: 05
+    nombre: San Pedro
+    parent: 55
+    georef_id: 10042150000
+    georef_nombre: SAN PEDRO
 - model: comunes.georef
   pk: 73
   fields:
-    nivel: 04
-    nombre: Los Gómez
-    parent_id: 11
+    nivel: 03
+    nombre: Capital
+    parent: 2
+    georef_id: 10049
+    georef_nombre: Capital
 - model: comunes.georef
   pk: 74
   fields:
-    nivel: 04
-    nombre: Los Puestos
-    parent_id: 11
+    nivel: 05
+    nombre: El Pantanillo
+    parent: 73
+    georef_id: 10049020000
+    georef_nombre: EL PANTANILLO
 - model: comunes.georef
   pk: 75
   fields:
-    nivel: 04
-    nombre: Manuel García Fernández
-    parent_id: 11
+    nivel: 05
+    nombre: San Fernando Del Valle De Catamarca
+    parent: 73
+    georef_id: 10049030000
+    georef_nombre: SAN FERNANDO DEL VALLE DE CATAMARCA
 - model: comunes.georef
   pk: 76
   fields:
-    nivel: 04
-    nombre: Quilmes y Los Sueldos
-    parent_id: 11
+    nivel: 03
+    nombre: El Alto
+    parent: 2
+    georef_id: 10056
+    georef_nombre: El Alto
 - model: comunes.georef
   pk: 77
   fields:
-    nivel: 04
-    nombre: Río Colorado
-    parent_id: 11
+    nivel: 05
+    nombre: El Alto
+    parent: 76
+    georef_id: 10056010000
+    georef_nombre: EL ALTO
 - model: comunes.georef
   pk: 78
   fields:
-    nivel: 04
-    nombre: Santa Rosa de Leales
-    parent_id: 11
+    nivel: 05
+    nombre: Guayamba
+    parent: 76
+    georef_id: 10056020000
+    georef_nombre: GUAYAMBA
 - model: comunes.georef
   pk: 79
   fields:
-    nivel: 04
-    nombre: Villa de Leales
-    parent_id: 11
+    nivel: 05
+    nombre: Infanzon
+    parent: 76
+    georef_id: 10056030000
+    georef_nombre: INFANZON
 - model: comunes.georef
   pk: 80
   fields:
-    nivel: 04
-    nombre: San Isidro de Lules
-    parent_id: 12
+    nivel: 05
+    nombre: Los Corrales
+    parent: 76
+    georef_id: 10056040000
+    georef_nombre: LOS CORRALES
 - model: comunes.georef
   pk: 81
   fields:
-    nivel: 04
-    nombre: El Manantial
-    parent_id: 12
+    nivel: 05
+    nombre: Tapso
+    parent: 76
+    georef_id: 10056050000
+    georef_nombre: TAPSO
 - model: comunes.georef
   pk: 82
   fields:
-    nivel: 04
-    nombre: San Felipe y Santa Bárbara
-    parent_id: 12
+    nivel: 05
+    nombre: Vilisman
+    parent: 76
+    georef_id: 10056060000
+    georef_nombre: VILISMAN
 - model: comunes.georef
   pk: 83
   fields:
-    nivel: 04
-    nombre: San Pablo y Villa Nougués 
-    parent_id: 12
+    nivel: 03
+    nombre: Fray Mamerto Esquiú
+    parent: 2
+    georef_id: 10063
+    georef_nombre: Fray Mamerto Esquiú
 - model: comunes.georef
   pk: 84
   fields:
-    nivel: 04
-    nombre: Monteros
-    parent_id: 13
+    nivel: 05
+    nombre: Collagasta
+    parent: 83
+    georef_id: 10063010000
+    georef_nombre: COLLAGASTA
 - model: comunes.georef
   pk: 85
   fields:
-    nivel: 04
-    nombre: Acheral
-    parent_id: 13
+    nivel: 05
+    nombre: El Hueco
+    parent: 83
+    georef_id: 10063040001
+    georef_nombre: EL HUECO
 - model: comunes.georef
   pk: 86
   fields:
-    nivel: 04
-    nombre: Amberes
-    parent_id: 13
+    nivel: 05
+    nombre: La Carrera
+    parent: 83
+    georef_id: 10063040002
+    georef_nombre: LA CARRERA
 - model: comunes.georef
   pk: 87
   fields:
-    nivel: 04
-    nombre: Capitán Cáceres
-    parent_id: 13
+    nivel: 05
+    nombre: La Falda De San Antonio
+    parent: 83
+    georef_id: 10063040003
+    georef_nombre: LA FALDA DE SAN ANTONIO
 - model: comunes.georef
   pk: 88
   fields:
-    nivel: 04
-    nombre: El Cercado
-    parent_id: 13
+    nivel: 05
+    nombre: La Tercena
+    parent: 83
+    georef_id: 10063040004
+    georef_nombre: LA TERCENA
 - model: comunes.georef
   pk: 89
   fields:
-    nivel: 04
-    nombre: Los Sosas
-    parent_id: 13
+    nivel: 05
+    nombre: Pomancillo Este
+    parent: 83
+    georef_id: 10063020000
+    georef_nombre: POMANCILLO ESTE
 - model: comunes.georef
   pk: 90
   fields:
-    nivel: 04
-    nombre: Río Seco
-    parent_id: 13
+    nivel: 05
+    nombre: Pomancillo Oeste
+    parent: 83
+    georef_id: 10063030000
+    georef_nombre: POMANCILLO OESTE
 - model: comunes.georef
   pk: 91
   fields:
-    nivel: 04
-    nombre: Santa Lucía
-    parent_id: 13
+    nivel: 05
+    nombre: San Antonio
+    parent: 83
+    georef_id: 10063040005
+    georef_nombre: SAN ANTONIO
 - model: comunes.georef
   pk: 92
   fields:
-    nivel: 04
-    nombre: Santa Rosa y Los Rojo
-    parent_id: 13
+    nivel: 05
+    nombre: San Jose
+    parent: 83
+    georef_id: 10063040006
+    georef_nombre: SAN JOSE
 - model: comunes.georef
   pk: 93
   fields:
-    nivel: 04
-    nombre: Sargento Moya
-    parent_id: 13
+    nivel: 05
+    nombre: Villa Las Pirquitas
+    parent: 83
+    georef_id: 10063050000
+    georef_nombre: VILLA LAS PIRQUITAS
 - model: comunes.georef
   pk: 94
   fields:
-    nivel: 04
-    nombre: Soldado Maldonado
-    parent_id: 13
+    nivel: 03
+    nombre: La Paz
+    parent: 2
+    georef_id: 10070
+    georef_nombre: La Paz
 - model: comunes.georef
   pk: 95
   fields:
-    nivel: 04
-    nombre: Teniente Berdina
-    parent_id: 13
+    nivel: 05
+    nombre: Casa De Piedra
+    parent: 94
+    georef_id: 10070010000
+    georef_nombre: CASA DE PIEDRA
 - model: comunes.georef
   pk: 96
   fields:
-    nivel: 04
-    nombre: Villa Quinteros
-    parent_id: 13
+    nivel: 05
+    nombre: El Aybal
+    parent: 94
+    georef_id: 10070020000
+    georef_nombre: EL AYBAL
 - model: comunes.georef
   pk: 97
   fields:
-    nivel: 04
-    nombre: Aguilares
-    parent_id: 14
+    nivel: 05
+    nombre: El Bañado
+    parent: 94
+    georef_id: 10070030000
+    georef_nombre: EL BAÑADO
 - model: comunes.georef
   pk: 98
   fields:
-    nivel: 04
-    nombre: El Polear
-    parent_id: 14
+    nivel: 05
+    nombre: El Divisadero
+    parent: 94
+    georef_id: 10070040000
+    georef_nombre: EL DIVISADERO
 - model: comunes.georef
   pk: 99
   fields:
-    nivel: 04
-    nombre: Los Sarmientos y La Tipa
-    parent_id: 14
+    nivel: 05
+    nombre: El Quimilo
+    parent: 94
+    georef_id: 10070050000
+    georef_nombre: EL QUIMILO
 - model: comunes.georef
   pk: 100
   fields:
-    nivel: 04
-    nombre: Monte Bello
-    parent_id: 14
+    nivel: 05
+    nombre: Esquiu
+    parent: 94
+    georef_id: 10070060000
+    georef_nombre: ESQUIU
 - model: comunes.georef
   pk: 101
   fields:
-    nivel: 04
-    nombre: Santa Ana
-    parent_id: 14
+    nivel: 05
+    nombre: Icaño
+    parent: 94
+    georef_id: 10070070000
+    georef_nombre: ICAÑO
 - model: comunes.georef
   pk: 102
   fields:
-    nivel: 04
-    nombre: Simoca
-    parent_id: 15
+    nivel: 05
+    nombre: La Dorada
+    parent: 94
+    georef_id: 10070080000
+    georef_nombre: LA DORADA
 - model: comunes.georef
   pk: 103
   fields:
-    nivel: 04
-    nombre: Atahona
-    parent_id: 15
+    nivel: 05
+    nombre: La Guardia
+    parent: 94
+    georef_id: 10070090000
+    georef_nombre: LA GUARDIA
 - model: comunes.georef
   pk: 104
   fields:
-    nivel: 04
-    nombre: Buena Vista
-    parent_id: 15
+    nivel: 05
+    nombre: Las Esquinas
+    parent: 94
+    georef_id: 10070100000
+    georef_nombre: LAS ESQUINAS
 - model: comunes.georef
   pk: 105
   fields:
-    nivel: 04
-    nombre: Ciudacita
-    parent_id: 15
+    nivel: 05
+    nombre: Las Palmitas
+    parent: 94
+    georef_id: 10070110000
+    georef_nombre: LAS PALMITAS
 - model: comunes.georef
   pk: 106
   fields:
-    nivel: 04
-    nombre: Manuela Pedraza
-    parent_id: 15
+    nivel: 05
+    nombre: Quiros
+    parent: 94
+    georef_id: 10070120000
+    georef_nombre: QUIROS
 - model: comunes.georef
   pk: 107
   fields:
-    nivel: 04
-    nombre: Monteagudo
-    parent_id: 15
+    nivel: 05
+    nombre: Ramblones
+    parent: 94
+    georef_id: 10070130000
+    georef_nombre: RAMBLONES
 - model: comunes.georef
   pk: 108
   fields:
-    nivel: 04
-    nombre: Pampa Mayo
-    parent_id: 15
+    nivel: 05
+    nombre: Recreo
+    parent: 94
+    georef_id: 10070140000
+    georef_nombre: RECREO
 - model: comunes.georef
   pk: 109
   fields:
-    nivel: 04
-    nombre: Río Chico y Nueva Trinidad
-    parent_id: 15
+    nivel: 05
+    nombre: San Antonio
+    parent: 94
+    georef_id: 10070150000
+    georef_nombre: SAN ANTONIO
 - model: comunes.georef
   pk: 110
   fields:
-    nivel: 04
-    nombre: San Pedro y San Antonio
-    parent_id: 15
+    nivel: 03
+    nombre: Paclín
+    parent: 2
+    georef_id: 10077
+    georef_nombre: Paclín
 - model: comunes.georef
   pk: 111
   fields:
-    nivel: 04
-    nombre: Santa Cruz y La Tuna
-    parent_id: 15
+    nivel: 05
+    nombre: Amadores
+    parent: 110
+    georef_id: 10077010000
+    georef_nombre: AMADORES
 - model: comunes.georef
   pk: 112
   fields:
-    nivel: 04
-    nombre: Villa Chicligasta
-    parent_id: 15
+    nivel: 05
+    nombre: El Rosario
+    parent: 110
+    georef_id: 10077020000
+    georef_nombre: EL ROSARIO
 - model: comunes.georef
   pk: 113
   fields:
-    nivel: 04
-    nombre: Yerba Buena
-    parent_id: 15
+    nivel: 05
+    nombre: La Bajada
+    parent: 110
+    georef_id: 10077030000
+    georef_nombre: LA BAJADA
 - model: comunes.georef
   pk: 114
   fields:
-    nivel: 04
-    nombre: Tafí del Valle
-    parent_id: 16
+    nivel: 05
+    nombre: La Higuera
+    parent: 110
+    georef_id: 10077040000
+    georef_nombre: LA HIGUERA
 - model: comunes.georef
   pk: 115
   fields:
-    nivel: 04
-    nombre: Amaichá del Valle
-    parent_id: 16
+    nivel: 05
+    nombre: La Merced
+    parent: 110
+    georef_id: 10077050000
+    georef_nombre: LA MERCED
 - model: comunes.georef
   pk: 116
   fields:
-    nivel: 04
-    nombre: Colalao del Valle
-    parent_id: 16
+    nivel: 05
+    nombre: La Viña
+    parent: 110
+    georef_id: 10077060000
+    georef_nombre: LA VIÑA
 - model: comunes.georef
   pk: 117
   fields:
-    nivel: 04
-    nombre: El Mollar
-    parent_id: 16
+    nivel: 05
+    nombre: Las Lajas
+    parent: 110
+    georef_id: 10077070000
+    georef_nombre: LAS LAJAS
 - model: comunes.georef
   pk: 118
   fields:
-    nivel: 04
-    nombre: Tafí Viejo
-    parent_id: 17
+    nivel: 05
+    nombre: Monte Potrero
+    parent: 110
+    georef_id: 10077080000
+    georef_nombre: MONTE POTRERO
 - model: comunes.georef
   pk: 119
   fields:
-    nivel: 04
-    nombre: Anca Juli
-    parent_id: 17
+    nivel: 05
+    nombre: Palo Labrado
+    parent: 110
+    georef_id: 10077090000
+    georef_nombre: PALO LABRADO
 - model: comunes.georef
   pk: 120
   fields:
-    nivel: 04
-    nombre: Choromoro
-    parent_id: 17
+    nivel: 05
+    nombre: San Antonio
+    parent: 110
+    georef_id: 10077100000
+    georef_nombre: SAN ANTONIO
 - model: comunes.georef
   pk: 121
   fields:
-    nivel: 04
-    nombre: El Cadillal
-    parent_id: 17
+    nivel: 05
+    nombre: Villa De Balcozna
+    parent: 110
+    georef_id: 10077110000
+    georef_nombre: VILLA DE BALCOZNA
 - model: comunes.georef
   pk: 122
   fields:
-    nivel: 04
-    nombre: La Esperanza
-    parent_id: 17
+    nivel: 03
+    nombre: Pomán
+    parent: 2
+    georef_id: 10084
+    georef_nombre: Pomán
 - model: comunes.georef
   pk: 123
   fields:
-    nivel: 04
-    nombre: Las Talitas
-    parent_id: 17
+    nivel: 05
+    nombre: Apoyaco
+    parent: 122
+    georef_id: 10084010000
+    georef_nombre: APOYACO
 - model: comunes.georef
   pk: 124
   fields:
-    nivel: 04
-    nombre: Los Nogales
-    parent_id: 17
+    nivel: 05
+    nombre: Colana
+    parent: 122
+    georef_id: 10084020000
+    georef_nombre: COLANA
 - model: comunes.georef
   pk: 125
   fields:
-    nivel: 04
-    nombre: Raco
-    parent_id: 17
+    nivel: 05
+    nombre: Colpes
+    parent: 122
+    georef_id: 10084030000
+    georef_nombre: COLPES
 - model: comunes.georef
   pk: 126
   fields:
-    nivel: 04
-    nombre: Trancas
-    parent_id: 18
+    nivel: 05
+    nombre: El Pajonal
+    parent: 122
+    georef_id: 10084040000
+    georef_nombre: EL PAJONAL
 - model: comunes.georef
   pk: 127
   fields:
-    nivel: 04
-    nombre: San Pedro de Colalao
-    parent_id: 18
+    nivel: 05
+    nombre: Joyango
+    parent: 122
+    georef_id: 10084050000
+    georef_nombre: JOYANGO
 - model: comunes.georef
   pk: 128
   fields:
-    nivel: 04
-    nombre: Tapia 
-    parent_id: 18
+    nivel: 05
+    nombre: Mutquin
+    parent: 122
+    georef_id: 10084060000
+    georef_nombre: MUTQUIN
 - model: comunes.georef
   pk: 129
   fields:
-    nivel: 04
-    nombre: Yerba Buena
-    parent_id: 19
+    nivel: 05
+    nombre: Poman
+    parent: 122
+    georef_id: 10084070000
+    georef_nombre: POMAN
 - model: comunes.georef
   pk: 130
   fields:
-    nivel: 04
-    nombre: Cevil Redondo
-    parent_id: 19
+    nivel: 05
+    nombre: Rincon
+    parent: 122
+    georef_id: 10084080000
+    georef_nombre: RINCON
 - model: comunes.georef
   pk: 131
   fields:
+    nivel: 05
+    nombre: San Miguel
+    parent: 122
+    georef_id: 10084090000
+    georef_nombre: SAN MIGUEL
+- model: comunes.georef
+  pk: 132
+  fields:
+    nivel: 05
+    nombre: Saujil
+    parent: 122
+    georef_id: 10084100000
+    georef_nombre: SAUJIL
+- model: comunes.georef
+  pk: 133
+  fields:
+    nivel: 05
+    nombre: Sijan
+    parent: 122
+    georef_id: 10084110000
+    georef_nombre: SIJAN
+- model: comunes.georef
+  pk: 134
+  fields:
+    nivel: 03
+    nombre: Santa María
+    parent: 2
+    georef_id: 10091
+    georef_nombre: Santa María
+- model: comunes.georef
+  pk: 135
+  fields:
+    nivel: 05
+    nombre: Andalhuala
+    parent: 134
+    georef_id: 10091010000
+    georef_nombre: ANDALHUALA
+- model: comunes.georef
+  pk: 136
+  fields:
+    nivel: 05
+    nombre: Casa De Piedra
+    parent: 134
+    georef_id: 10091140001
+    georef_nombre: CASA DE PIEDRA
+- model: comunes.georef
+  pk: 137
+  fields:
+    nivel: 05
+    nombre: Caspichango
+    parent: 134
+    georef_id: 10091020000
+    georef_nombre: CASPICHANGO
+- model: comunes.georef
+  pk: 138
+  fields:
+    nivel: 05
+    nombre: Chañar Punco
+    parent: 134
+    georef_id: 10091030001
+    georef_nombre: CHAÑAR PUNCO
+- model: comunes.georef
+  pk: 139
+  fields:
+    nivel: 05
+    nombre: El Cajon
+    parent: 134
+    georef_id: 10091040000
+    georef_nombre: EL CAJON
+- model: comunes.georef
+  pk: 140
+  fields:
+    nivel: 05
+    nombre: El Cerrito
+    parent: 134
+    georef_id: 10091110001
+    georef_nombre: EL CERRITO
+- model: comunes.georef
+  pk: 141
+  fields:
+    nivel: 05
+    nombre: El Desmonte
+    parent: 134
+    georef_id: 10091050000
+    georef_nombre: EL DESMONTE
+- model: comunes.georef
+  pk: 142
+  fields:
+    nivel: 05
+    nombre: El Puesto
+    parent: 134
+    georef_id: 10091060000
+    georef_nombre: EL PUESTO
+- model: comunes.georef
+  pk: 143
+  fields:
+    nivel: 05
+    nombre: Famatanca
+    parent: 134
+    georef_id: 10091070001
+    georef_nombre: FAMATANCA
+- model: comunes.georef
+  pk: 144
+  fields:
+    nivel: 05
+    nombre: Fuerte Quemado
+    parent: 134
+    georef_id: 10091080000
+    georef_nombre: FUERTE QUEMADO
+- model: comunes.georef
+  pk: 145
+  fields:
+    nivel: 05
+    nombre: La Hoyada
+    parent: 134
+    georef_id: 10091090000
+    georef_nombre: LA HOYADA
+- model: comunes.georef
+  pk: 146
+  fields:
+    nivel: 05
+    nombre: La Loma
+    parent: 134
+    georef_id: 10091100000
+    georef_nombre: LA LOMA
+- model: comunes.georef
+  pk: 147
+  fields:
+    nivel: 05
+    nombre: La Puntilla
+    parent: 134
+    georef_id: 10091140002
+    georef_nombre: LA PUNTILLA
+- model: comunes.georef
+  pk: 148
+  fields:
+    nivel: 05
+    nombre: Lampacito
+    parent: 134
+    georef_id: 10091030002
+    georef_nombre: LAMPACITO
+- model: comunes.georef
+  pk: 149
+  fields:
+    nivel: 05
+    nombre: Las Mojarras
+    parent: 134
+    georef_id: 10091110002
+    georef_nombre: LAS MOJARRAS
+- model: comunes.georef
+  pk: 150
+  fields:
+    nivel: 05
+    nombre: Loro Huasi
+    parent: 134
+    georef_id: 10091120000
+    georef_nombre: LORO HUASI
+- model: comunes.georef
+  pk: 151
+  fields:
+    nivel: 05
+    nombre: Medanitos
+    parent: 134
+    georef_id: 10091030003
+    georef_nombre: MEDANITOS
+- model: comunes.georef
+  pk: 152
+  fields:
+    nivel: 05
+    nombre: Palo Seco
+    parent: 134
+    georef_id: 10091140003
+    georef_nombre: PALO SECO
+- model: comunes.georef
+  pk: 153
+  fields:
+    nivel: 05
+    nombre: Punta De Balasto
+    parent: 134
+    georef_id: 10091130000
+    georef_nombre: PUNTA DE BALASTO
+- model: comunes.georef
+  pk: 154
+  fields:
+    nivel: 05
+    nombre: San Jose Banda
+    parent: 134
+    georef_id: 10091070002
+    georef_nombre: SAN JOSE BANDA
+- model: comunes.georef
+  pk: 155
+  fields:
+    nivel: 05
+    nombre: San Jose Norte
+    parent: 134
+    georef_id: 10091140004
+    georef_nombre: SAN JOSE NORTE
+- model: comunes.georef
+  pk: 156
+  fields:
+    nivel: 05
+    nombre: San Jose Villa
+    parent: 134
+    georef_id: 10091140005
+    georef_nombre: SAN JOSE VILLA
+- model: comunes.georef
+  pk: 157
+  fields:
+    nivel: 05
+    nombre: Santa Maria
+    parent: 134
+    georef_id: 10091150000
+    georef_nombre: SANTA MARIA
+- model: comunes.georef
+  pk: 158
+  fields:
+    nivel: 05
+    nombre: Yapes
+    parent: 134
+    georef_id: 10091160000
+    georef_nombre: YAPES
+- model: comunes.georef
+  pk: 159
+  fields:
+    nivel: 03
+    nombre: Santa Rosa
+    parent: 2
+    georef_id: 10098
+    georef_nombre: Santa Rosa
+- model: comunes.georef
+  pk: 160
+  fields:
+    nivel: 05
+    nombre: Alijilan
+    parent: 159
+    georef_id: 10098010000
+    georef_nombre: ALIJILAN
+- model: comunes.georef
+  pk: 161
+  fields:
+    nivel: 05
+    nombre: Bañado De Ovanta
+    parent: 159
+    georef_id: 10098020000
+    georef_nombre: BAÑADO DE OVANTA
+- model: comunes.georef
+  pk: 162
+  fields:
+    nivel: 05
+    nombre: Las Cañas
+    parent: 159
+    georef_id: 10098030000
+    georef_nombre: LAS CAÑAS
+- model: comunes.georef
+  pk: 163
+  fields:
+    nivel: 05
+    nombre: Lavalle
+    parent: 159
+    georef_id: 10098040000
+    georef_nombre: LAVALLE
+- model: comunes.georef
+  pk: 164
+  fields:
+    nivel: 05
+    nombre: Los Altos
+    parent: 159
+    georef_id: 10098050000
+    georef_nombre: LOS ALTOS
+- model: comunes.georef
+  pk: 165
+  fields:
+    nivel: 05
+    nombre: Manantiales
+    parent: 159
+    georef_id: 10098060000
+    georef_nombre: MANANTIALES
+- model: comunes.georef
+  pk: 166
+  fields:
+    nivel: 05
+    nombre: San Pedro
+    parent: 159
+    georef_id: 10098070000
+    georef_nombre: SAN PEDRO
+- model: comunes.georef
+  pk: 167
+  fields:
+    nivel: 03
+    nombre: Tinogasta
+    parent: 2
+    georef_id: 10105
+    georef_nombre: Tinogasta
+- model: comunes.georef
+  pk: 168
+  fields:
+    nivel: 05
+    nombre: Anillaco
+    parent: 167
+    georef_id: 10105010000
+    georef_nombre: ANILLACO
+- model: comunes.georef
+  pk: 169
+  fields:
+    nivel: 05
+    nombre: Antinaco
+    parent: 167
+    georef_id: 10105020000
+    georef_nombre: ANTINACO
+- model: comunes.georef
+  pk: 170
+  fields:
+    nivel: 05
+    nombre: Banda De Lucero
+    parent: 167
+    georef_id: 10105030000
+    georef_nombre: BANDA DE LUCERO
+- model: comunes.georef
+  pk: 171
+  fields:
+    nivel: 05
+    nombre: Cerro Negro
+    parent: 167
+    georef_id: 10105040000
+    georef_nombre: CERRO NEGRO
+- model: comunes.georef
+  pk: 172
+  fields:
+    nivel: 05
+    nombre: Copacabana
+    parent: 167
+    georef_id: 10105050001
+    georef_nombre: COPACABANA
+- model: comunes.georef
+  pk: 173
+  fields:
+    nivel: 05
+    nombre: Cordobita
+    parent: 167
+    georef_id: 10105060000
+    georef_nombre: CORDOBITA
+- model: comunes.georef
+  pk: 174
+  fields:
+    nivel: 05
+    nombre: Costa De Reyes
+    parent: 167
+    georef_id: 10105070000
+    georef_nombre: COSTA DE REYES
+- model: comunes.georef
+  pk: 175
+  fields:
+    nivel: 05
+    nombre: El Pueblito
+    parent: 167
+    georef_id: 10105080000
+    georef_nombre: EL PUEBLITO
+- model: comunes.georef
+  pk: 176
+  fields:
+    nivel: 05
+    nombre: El Puesto
+    parent: 167
+    georef_id: 10105090000
+    georef_nombre: EL PUESTO
+- model: comunes.georef
+  pk: 177
+  fields:
+    nivel: 05
+    nombre: El Salado
+    parent: 167
+    georef_id: 10105100000
+    georef_nombre: EL SALADO
+- model: comunes.georef
+  pk: 178
+  fields:
+    nivel: 05
+    nombre: Fiambala
+    parent: 167
+    georef_id: 10105110001
+    georef_nombre: FIAMBALA
+- model: comunes.georef
+  pk: 179
+  fields:
+    nivel: 05
+    nombre: La Puntilla
+    parent: 167
+    georef_id: 10105050002
+    georef_nombre: LA PUNTILLA
+- model: comunes.georef
+  pk: 180
+  fields:
+    nivel: 05
+    nombre: La Ramadita
+    parent: 167
+    georef_id: 10105110002
+    georef_nombre: LA RAMADITA
+- model: comunes.georef
+  pk: 181
+  fields:
+    nivel: 05
+    nombre: Los Balverdis
+    parent: 167
+    georef_id: 10105120000
+    georef_nombre: LOS BALVERDIS
+- model: comunes.georef
+  pk: 182
+  fields:
+    nivel: 05
+    nombre: Medanitos
+    parent: 167
+    georef_id: 10105130000
+    georef_nombre: MEDANITOS
+- model: comunes.georef
+  pk: 183
+  fields:
+    nivel: 05
+    nombre: Palo Blanco
+    parent: 167
+    georef_id: 10105140000
+    georef_nombre: PALO BLANCO
+- model: comunes.georef
+  pk: 184
+  fields:
+    nivel: 05
+    nombre: Pampa Blanca
+    parent: 167
+    georef_id: 10105110003
+    georef_nombre: PAMPA BLANCA
+- model: comunes.georef
+  pk: 185
+  fields:
+    nivel: 05
+    nombre: Punta Del Agua
+    parent: 167
+    georef_id: 10105150000
+    georef_nombre: PUNTA DEL AGUA
+- model: comunes.georef
+  pk: 186
+  fields:
+    nivel: 05
+    nombre: Saujil
+    parent: 167
+    georef_id: 10105160000
+    georef_nombre: SAUJIL
+- model: comunes.georef
+  pk: 187
+  fields:
+    nivel: 05
+    nombre: Taton
+    parent: 167
+    georef_id: 10105170000
+    georef_nombre: TATON
+- model: comunes.georef
+  pk: 188
+  fields:
+    nivel: 05
+    nombre: Tinogasta
+    parent: 167
+    georef_id: 10105180000
+    georef_nombre: TINOGASTA
+- model: comunes.georef
+  pk: 189
+  fields:
+    nivel: 03
+    nombre: Valle Viejo
+    parent: 2
+    georef_id: 10112
+    georef_nombre: Valle Viejo
+- model: comunes.georef
+  pk: 190
+  fields:
+    nivel: 05
+    nombre: El Bañado
+    parent: 189
+    georef_id: 10112040001
+    georef_nombre: EL BAÑADO
+- model: comunes.georef
+  pk: 191
+  fields:
+    nivel: 05
+    nombre: El Portezuelo
+    parent: 189
+    georef_id: 10112010000
+    georef_nombre: EL PORTEZUELO
+- model: comunes.georef
+  pk: 192
+  fields:
+    nivel: 05
+    nombre: Huaycama
+    parent: 189
+    georef_id: 10112020000
+    georef_nombre: HUAYCAMA
+- model: comunes.georef
+  pk: 193
+  fields:
+    nivel: 05
+    nombre: Las Tejas
+    parent: 189
+    georef_id: 10112030000
+    georef_nombre: LAS TEJAS
+- model: comunes.georef
+  pk: 194
+  fields:
+    nivel: 05
+    nombre: Polcos
+    parent: 189
+    georef_id: 10112040002
+    georef_nombre: POLCOS
+- model: comunes.georef
+  pk: 195
+  fields:
+    nivel: 05
+    nombre: Pozo Del Mistol
+    parent: 189
+    georef_id: 10112040003
+    georef_nombre: POZO DEL MISTOL
+- model: comunes.georef
+  pk: 196
+  fields:
+    nivel: 05
+    nombre: San Isidro
+    parent: 189
+    georef_id: 10112040004
+    georef_nombre: SAN ISIDRO
+- model: comunes.georef
+  pk: 197
+  fields:
+    nivel: 05
+    nombre: Santa Cruz
+    parent: 189
+    georef_id: 10112050000
+    georef_nombre: SANTA CRUZ
+- model: comunes.georef
+  pk: 198
+  fields:
+    nivel: 05
+    nombre: Santa Rosa
+    parent: 189
+    georef_id: 10112040005
+    georef_nombre: SANTA ROSA
+- model: comunes.georef
+  pk: 199
+  fields:
+    nivel: 05
+    nombre: Sumalao
+    parent: 189
+    georef_id: 10112040006
+    georef_nombre: SUMALAO
+- model: comunes.georef
+  pk: 200
+  fields:
+    nivel: 05
+    nombre: Villa Dolores
+    parent: 189
+    georef_id: 10112040007
+    georef_nombre: VILLA DOLORES
+- model: comunes.georef
+  pk: 201
+  fields:
     nivel: 04
-    nombre: San Javier 
-    parent_id: 19
+    nombre: Aconquija
+    parent: 2
+    georef_id: 100042
+    georef_nombre: Aconquija
+- model: comunes.georef
+  pk: 202
+  fields:
+    nivel: 04
+    nombre: Ancasti
+    parent: 2
+    georef_id: 100035
+    georef_nombre: Ancasti
+- model: comunes.georef
+  pk: 203
+  fields:
+    nivel: 04
+    nombre: Andalgalá
+    parent: 2
+    georef_id: 100049
+    georef_nombre: Andalgalá
+- model: comunes.georef
+  pk: 204
+  fields:
+    nivel: 04
+    nombre: Antofagasta De La Sierra
+    parent: 2
+    georef_id: 100056
+    georef_nombre: Antofagasta de la Sierra
+- model: comunes.georef
+  pk: 205
+  fields:
+    nivel: 04
+    nombre: Belén
+    parent: 2
+    georef_id: 100063
+    georef_nombre: Belén
+- model: comunes.georef
+  pk: 206
+  fields:
+    nivel: 04
+    nombre: Capayán
+    parent: 2
+    georef_id: 100126
+    georef_nombre: Capayán
+- model: comunes.georef
+  pk: 207
+  fields:
+    nivel: 04
+    nombre: Corral Quemado
+    parent: 2
+    georef_id: 100070
+    georef_nombre: Corral Quemado
+- model: comunes.georef
+  pk: 208
+  fields:
+    nivel: 04
+    nombre: El Alto
+    parent: 2
+    georef_id: 100147
+    georef_nombre: El Alto
+- model: comunes.georef
+  pk: 209
+  fields:
+    nivel: 04
+    nombre: El Rodeo
+    parent: 2
+    georef_id: 100007
+    georef_nombre: El Rodeo
+- model: comunes.georef
+  pk: 210
+  fields:
+    nivel: 04
+    nombre: Fiambalá
+    parent: 2
+    georef_id: 100224
+    georef_nombre: Fiambalá
+- model: comunes.georef
+  pk: 211
+  fields:
+    nivel: 04
+    nombre: Fray Mamerto Esquiú
+    parent: 2
+    georef_id: 100161
+    georef_nombre: Fray Mamerto Esquiú
+- model: comunes.georef
+  pk: 212
+  fields:
+    nivel: 04
+    nombre: Hualfín
+    parent: 2
+    georef_id: 100077
+    georef_nombre: Hualfín
+- model: comunes.georef
+  pk: 213
+  fields:
+    nivel: 04
+    nombre: Huillapima
+    parent: 2
+    georef_id: 100133
+    georef_nombre: Huillapima
+- model: comunes.georef
+  pk: 214
+  fields:
+    nivel: 04
+    nombre: Icaño
+    parent: 2
+    georef_id: 100168
+    georef_nombre: Icaño
+- model: comunes.georef
+  pk: 215
+  fields:
+    nivel: 04
+    nombre: La Puerta
+    parent: 2
+    georef_id: 100014
+    georef_nombre: La Puerta
+- model: comunes.georef
+  pk: 216
+  fields:
+    nivel: 04
+    nombre: Las Juntas
+    parent: 2
+    georef_id: 100021
+    georef_nombre: Las Juntas
+- model: comunes.georef
+  pk: 217
+  fields:
+    nivel: 04
+    nombre: Londres
+    parent: 2
+    georef_id: 100084
+    georef_nombre: Londres
+- model: comunes.georef
+  pk: 218
+  fields:
+    nivel: 04
+    nombre: Los Altos
+    parent: 2
+    georef_id: 100213
+    georef_nombre: Los Altos
+- model: comunes.georef
+  pk: 219
+  fields:
+    nivel: 04
+    nombre: Los Varela
+    parent: 2
+    georef_id: 100028
+    georef_nombre: Los Varela
+- model: comunes.georef
+  pk: 220
+  fields:
+    nivel: 04
+    nombre: Mutquín
+    parent: 2
+    georef_id: 100185
+    georef_nombre: Mutquín
+- model: comunes.georef
+  pk: 221
+  fields:
+    nivel: 04
+    nombre: Paclín
+    parent: 2
+    georef_id: 100182
+    georef_nombre: Paclín
+- model: comunes.georef
+  pk: 222
+  fields:
+    nivel: 04
+    nombre: Pomán
+    parent: 2
+    georef_id: 100189
+    georef_nombre: Pomán
+- model: comunes.georef
+  pk: 223
+  fields:
+    nivel: 04
+    nombre: Pozo De Piedra
+    parent: 2
+    georef_id: 100091
+    georef_nombre: Pozo de Piedra
+- model: comunes.georef
+  pk: 224
+  fields:
+    nivel: 04
+    nombre: Puerta De Corral Quemado
+    parent: 2
+    georef_id: 100098
+    georef_nombre: Puerta de Corral Quemado
+- model: comunes.georef
+  pk: 225
+  fields:
+    nivel: 04
+    nombre: Puerta De San José
+    parent: 2
+    georef_id: 100105
+    georef_nombre: Puerta de San José
+- model: comunes.georef
+  pk: 226
+  fields:
+    nivel: 04
+    nombre: Recreo
+    parent: 2
+    georef_id: 100175
+    georef_nombre: Recreo
+- model: comunes.georef
+  pk: 227
+  fields:
+    nivel: 04
+    nombre: San Fernando
+    parent: 2
+    georef_id: 100112
+    georef_nombre: San Fernando
+- model: comunes.georef
+  pk: 228
+  fields:
+    nivel: 04
+    nombre: San Fernando Del Valle De Catamarca
+    parent: 2
+    georef_id: 100140
+    georef_nombre: San Fernando del Valle de Catamarca
+- model: comunes.georef
+  pk: 229
+  fields:
+    nivel: 04
+    nombre: San José
+    parent: 2
+    georef_id: 100203
+    georef_nombre: San José
+- model: comunes.georef
+  pk: 230
+  fields:
+    nivel: 04
+    nombre: Santa María
+    parent: 2
+    georef_id: 100210
+    georef_nombre: Santa María
+- model: comunes.georef
+  pk: 231
+  fields:
+    nivel: 04
+    nombre: Santa Rosa
+    parent: 2
+    georef_id: 100217
+    georef_nombre: Santa Rosa
+- model: comunes.georef
+  pk: 232
+  fields:
+    nivel: 04
+    nombre: Saujil
+    parent: 2
+    georef_id: 100196
+    georef_nombre: Saujil
+- model: comunes.georef
+  pk: 233
+  fields:
+    nivel: 04
+    nombre: Tapso
+    parent: 2
+    georef_id: 100154
+    georef_nombre: Tapso
+- model: comunes.georef
+  pk: 234
+  fields:
+    nivel: 04
+    nombre: Tinogasta
+    parent: 2
+    georef_id: 100231
+    georef_nombre: Tinogasta
+- model: comunes.georef
+  pk: 235
+  fields:
+    nivel: 04
+    nombre: Valle Viejo
+    parent: 2
+    georef_id: 100238
+    georef_nombre: Valle Viejo
+- model: comunes.georef
+  pk: 236
+  fields:
+    nivel: 04
+    nombre: Villa Vil
+    parent: 2
+    georef_id: 100119
+    georef_nombre: Villa Vil
+- model: comunes.georef
+  pk: 237
+  fields:
+    nivel: 02
+    nombre: Salta
+    parent: 1
+    georef_id: 66
+    georef_nombre: Salta
+- model: comunes.georef
+  pk: 238
+  fields:
+    nivel: 03
+    nombre: Anta
+    parent: 237
+    georef_id: 66007
+    georef_nombre: Anta
+- model: comunes.georef
+  pk: 239
+  fields:
+    nivel: 05
+    nombre: Apolinario Saravia
+    parent: 238
+    georef_id: 66007010000
+    georef_nombre: APOLINARIO SARAVIA
+- model: comunes.georef
+  pk: 240
+  fields:
+    nivel: 05
+    nombre: Ceibalito
+    parent: 238
+    georef_id: 66007020000
+    georef_nombre: CEIBALITO
+- model: comunes.georef
+  pk: 241
+  fields:
+    nivel: 05
+    nombre: Centro 25 De Junio
+    parent: 238
+    georef_id: 66007030000
+    georef_nombre: CENTRO 25 DE JUNIO
+- model: comunes.georef
+  pk: 242
+  fields:
+    nivel: 05
+    nombre: Coronel Mollinedo
+    parent: 238
+    georef_id: 66007040000
+    georef_nombre: CORONEL MOLLINEDO
+- model: comunes.georef
+  pk: 243
+  fields:
+    nivel: 05
+    nombre: Coronel Olleros
+    parent: 238
+    georef_id: 66007050000
+    georef_nombre: CORONEL OLLEROS
+- model: comunes.georef
+  pk: 244
+  fields:
+    nivel: 05
+    nombre: El Quebrachal
+    parent: 238
+    georef_id: 66007060000
+    georef_nombre: EL QUEBRACHAL
+- model: comunes.georef
+  pk: 245
+  fields:
+    nivel: 05
+    nombre: Gaona
+    parent: 238
+    georef_id: 66007070000
+    georef_nombre: GAONA
+- model: comunes.georef
+  pk: 246
+  fields:
+    nivel: 05
+    nombre: General Pizarro
+    parent: 238
+    georef_id: 66007080000
+    georef_nombre: GENERAL PIZARRO
+- model: comunes.georef
+  pk: 247
+  fields:
+    nivel: 05
+    nombre: Joaquin V. Gonzalez
+    parent: 238
+    georef_id: 66007090000
+    georef_nombre: JOAQUIN V. GONZALEZ
+- model: comunes.georef
+  pk: 248
+  fields:
+    nivel: 05
+    nombre: Las Lajitas
+    parent: 238
+    georef_id: 66007100000
+    georef_nombre: LAS LAJITAS
+- model: comunes.georef
+  pk: 249
+  fields:
+    nivel: 05
+    nombre: Luis Burela
+    parent: 238
+    georef_id: 66007110000
+    georef_nombre: LUIS BURELA
+- model: comunes.georef
+  pk: 250
+  fields:
+    nivel: 05
+    nombre: Macapillo
+    parent: 238
+    georef_id: 66007120000
+    georef_nombre: MACAPILLO
+- model: comunes.georef
+  pk: 251
+  fields:
+    nivel: 05
+    nombre: Nuestra Señora De Talavera
+    parent: 238
+    georef_id: 66007130000
+    georef_nombre: NUESTRA SEÑORA DE TALAVERA
+- model: comunes.georef
+  pk: 252
+  fields:
+    nivel: 05
+    nombre: Piquete Cabado
+    parent: 238
+    georef_id: 66007140000
+    georef_nombre: PIQUETE CABADO
+- model: comunes.georef
+  pk: 253
+  fields:
+    nivel: 05
+    nombre: Rio Del Valle
+    parent: 238
+    georef_id: 66007150000
+    georef_nombre: RIO DEL VALLE
+- model: comunes.georef
+  pk: 254
+  fields:
+    nivel: 05
+    nombre: Tolloche
+    parent: 238
+    georef_id: 66007160000
+    georef_nombre: TOLLOCHE
+- model: comunes.georef
+  pk: 255
+  fields:
+    nivel: 03
+    nombre: Cachi
+    parent: 237
+    georef_id: 66014
+    georef_nombre: Cachi
+- model: comunes.georef
+  pk: 256
+  fields:
+    nivel: 05
+    nombre: Cachi
+    parent: 255
+    georef_id: 66014010000
+    georef_nombre: CACHI
+- model: comunes.georef
+  pk: 257
+  fields:
+    nivel: 05
+    nombre: Payogasta
+    parent: 255
+    georef_id: 66014020000
+    georef_nombre: PAYOGASTA
+- model: comunes.georef
+  pk: 258
+  fields:
+    nivel: 03
+    nombre: Cafayate
+    parent: 237
+    georef_id: 66021
+    georef_nombre: Cafayate
+- model: comunes.georef
+  pk: 259
+  fields:
+    nivel: 05
+    nombre: Cafayate
+    parent: 258
+    georef_id: 66021010000
+    georef_nombre: CAFAYATE
+- model: comunes.georef
+  pk: 260
+  fields:
+    nivel: 05
+    nombre: Tolombom
+    parent: 258
+    georef_id: 66021020000
+    georef_nombre: TOLOMBOM
+- model: comunes.georef
+  pk: 261
+  fields:
+    nivel: 03
+    nombre: Capital
+    parent: 237
+    georef_id: 66028
+    georef_nombre: Capital
+- model: comunes.georef
+  pk: 262
+  fields:
+    nivel: 05
+    nombre: Atocha
+    parent: 261
+    georef_id: 66028010000
+    georef_nombre: ATOCHA
+- model: comunes.georef
+  pk: 263
+  fields:
+    nivel: 05
+    nombre: Barrio San Rafael
+    parent: 261
+    georef_id: 66028030001
+    georef_nombre: BARRIO SAN RAFAEL
+- model: comunes.georef
+  pk: 264
+  fields:
+    nivel: 05
+    nombre: Cc El Tipal
+    parent: 261
+    georef_id: 66028050001
+    georef_nombre: CC EL TIPAL
+- model: comunes.georef
+  pk: 265
+  fields:
+    nivel: 05
+    nombre: Cc La Almudena
+    parent: 261
+    georef_id: 66028050002
+    georef_nombre: CC LA ALMUDENA
+- model: comunes.georef
+  pk: 266
+  fields:
+    nivel: 05
+    nombre: La Cienaga
+    parent: 261
+    georef_id: 66028030002
+    georef_nombre: LA CIENAGA
+- model: comunes.georef
+  pk: 267
+  fields:
+    nivel: 05
+    nombre: Las Costas
+    parent: 261
+    georef_id: 66028040000
+    georef_nombre: LAS COSTAS
+- model: comunes.georef
+  pk: 268
+  fields:
+    nivel: 05
+    nombre: Salta
+    parent: 261
+    georef_id: 66028050000
+    georef_nombre: SALTA
+- model: comunes.georef
+  pk: 269
+  fields:
+    nivel: 05
+    nombre: Salta
+    parent: 261
+    georef_id: 66028050003
+    georef_nombre: SALTA
+- model: comunes.georef
+  pk: 270
+  fields:
+    nivel: 05
+    nombre: Villa San Lorenzo
+    parent: 261
+    georef_id: 66028060000
+    georef_nombre: VILLA SAN LORENZO
+- model: comunes.georef
+  pk: 271
+  fields:
+    nivel: 03
+    nombre: Cerrillos
+    parent: 237
+    georef_id: 66035
+    georef_nombre: Cerrillos
+- model: comunes.georef
+  pk: 272
+  fields:
+    nivel: 05
+    nombre: Barrio El Congreso
+    parent: 271
+    georef_id: 66035040001
+    georef_nombre: BARRIO EL CONGRESO
+- model: comunes.georef
+  pk: 273
+  fields:
+    nivel: 05
+    nombre: Barrio Las Tunas
+    parent: 271
+    georef_id: 66035040002
+    georef_nombre: BARRIO LAS TUNAS
+- model: comunes.georef
+  pk: 274
+  fields:
+    nivel: 05
+    nombre: Barrio Los Olmos
+    parent: 271
+    georef_id: 66035040003
+    georef_nombre: BARRIO LOS OLMOS
+- model: comunes.georef
+  pk: 275
+  fields:
+    nivel: 05
+    nombre: Barrio Los Pinares
+    parent: 271
+    georef_id: 66035040004
+    georef_nombre: BARRIO LOS PINARES
+- model: comunes.georef
+  pk: 276
+  fields:
+    nivel: 05
+    nombre: Cerrillos
+    parent: 271
+    georef_id: 66035010000
+    georef_nombre: CERRILLOS
+- model: comunes.georef
+  pk: 277
+  fields:
+    nivel: 05
+    nombre: La Merced
+    parent: 271
+    georef_id: 66035020000
+    georef_nombre: LA MERCED
+- model: comunes.georef
+  pk: 278
+  fields:
+    nivel: 05
+    nombre: San Agustin
+    parent: 271
+    georef_id: 66035030000
+    georef_nombre: SAN AGUSTIN
+- model: comunes.georef
+  pk: 279
+  fields:
+    nivel: 05
+    nombre: Villa Los Alamos
+    parent: 271
+    georef_id: 66035040000
+    georef_nombre: VILLA LOS ALAMOS
+- model: comunes.georef
+  pk: 280
+  fields:
+    nivel: 05
+    nombre: Villa Los Alamos
+    parent: 271
+    georef_id: 66035040005
+    georef_nombre: VILLA LOS ALAMOS
+- model: comunes.georef
+  pk: 281
+  fields:
+    nivel: 03
+    nombre: Chicoana
+    parent: 237
+    georef_id: 66042
+    georef_nombre: Chicoana
+- model: comunes.georef
+  pk: 282
+  fields:
+    nivel: 05
+    nombre: Barrio La Rotonda
+    parent: 281
+    georef_id: 66042005000
+    georef_nombre: BARRIO LA ROTONDA
+- model: comunes.georef
+  pk: 283
+  fields:
+    nivel: 05
+    nombre: Barrio Santa Teresita
+    parent: 281
+    georef_id: 66042007000
+    georef_nombre: BARRIO SANTA TERESITA
+- model: comunes.georef
+  pk: 284
+  fields:
+    nivel: 05
+    nombre: Chicoana
+    parent: 281
+    georef_id: 66042010000
+    georef_nombre: CHICOANA
+- model: comunes.georef
+  pk: 285
+  fields:
+    nivel: 05
+    nombre: El Carril
+    parent: 281
+    georef_id: 66042020000
+    georef_nombre: EL CARRIL
+- model: comunes.georef
+  pk: 286
+  fields:
+    nivel: 05
+    nombre: La Maroma
+    parent: 281
+    georef_id: 66042003000
+    georef_nombre: LA MAROMA
+- model: comunes.georef
+  pk: 287
+  fields:
+    nivel: 03
+    nombre: General Güemes
+    parent: 237
+    georef_id: 66049
+    georef_nombre: General Güemes
+- model: comunes.georef
+  pk: 288
+  fields:
+    nivel: 05
+    nombre: Campo Santo
+    parent: 287
+    georef_id: 66049010000
+    georef_nombre: CAMPO SANTO
+- model: comunes.georef
+  pk: 289
+  fields:
+    nivel: 05
+    nombre: Cobos
+    parent: 287
+    georef_id: 66049020000
+    georef_nombre: COBOS
+- model: comunes.georef
+  pk: 290
+  fields:
+    nivel: 05
+    nombre: El Bordo
+    parent: 287
+    georef_id: 66049030000
+    georef_nombre: EL BORDO
+- model: comunes.georef
+  pk: 291
+  fields:
+    nivel: 05
+    nombre: General Guemes
+    parent: 287
+    georef_id: 66049040000
+    georef_nombre: GENERAL GUEMES
+- model: comunes.georef
+  pk: 292
+  fields:
+    nivel: 03
+    nombre: General José De San Martín
+    parent: 237
+    georef_id: 66056
+    georef_nombre: General José de San Martín
+- model: comunes.georef
+  pk: 293
+  fields:
+    nivel: 05
+    nombre: Aguaray
+    parent: 292
+    georef_id: 66056010000
+    georef_nombre: AGUARAY
+- model: comunes.georef
+  pk: 294
+  fields:
+    nivel: 05
+    nombre: Barrio El Jardin De San Martin
+    parent: 292
+    georef_id: 66056140002
+    georef_nombre: BARRIO EL JARDIN DE SAN MARTIN
+- model: comunes.georef
+  pk: 295
+  fields:
+    nivel: 05
+    nombre: Barrio El Milagro
+    parent: 292
+    georef_id: 66056140001
+    georef_nombre: BARRIO EL MILAGRO
+- model: comunes.georef
+  pk: 296
+  fields:
+    nivel: 05
+    nombre: Campamento Vespucio
+    parent: 292
+    georef_id: 66056020000
+    georef_nombre: CAMPAMENTO VESPUCIO
+- model: comunes.georef
+  pk: 297
+  fields:
+    nivel: 05
+    nombre: Campichuelo
+    parent: 292
+    georef_id: 66056030000
+    georef_nombre: CAMPICHUELO
+- model: comunes.georef
+  pk: 298
+  fields:
+    nivel: 05
+    nombre: Campo Duran
+    parent: 292
+    georef_id: 66056040000
+    georef_nombre: CAMPO DURAN
+- model: comunes.georef
+  pk: 299
+  fields:
+    nivel: 05
+    nombre: Capiazuti
+    parent: 292
+    georef_id: 66056050000
+    georef_nombre: CAPIAZUTI
+- model: comunes.georef
+  pk: 300
+  fields:
+    nivel: 05
+    nombre: Carboncito
+    parent: 292
+    georef_id: 66056060000
+    georef_nombre: CARBONCITO
+- model: comunes.georef
+  pk: 301
+  fields:
+    nivel: 05
+    nombre: Coronel Cornejo
+    parent: 292
+    georef_id: 66056070000
+    georef_nombre: CORONEL CORNEJO
+- model: comunes.georef
+  pk: 302
+  fields:
+    nivel: 05
+    nombre: Dragones
+    parent: 292
+    georef_id: 66056080000
+    georef_nombre: DRAGONES
+- model: comunes.georef
+  pk: 303
+  fields:
+    nivel: 05
+    nombre: Embarcacion
+    parent: 292
+    georef_id: 66056090000
+    georef_nombre: EMBARCACION
+- model: comunes.georef
+  pk: 304
+  fields:
+    nivel: 05
+    nombre: Embarcacion
+    parent: 292
+    georef_id: 66056090001
+    georef_nombre: EMBARCACION
+- model: comunes.georef
+  pk: 305
+  fields:
+    nivel: 05
+    nombre: General Ballivian
+    parent: 292
+    georef_id: 66056100000
+    georef_nombre: GENERAL BALLIVIAN
+- model: comunes.georef
+  pk: 306
+  fields:
+    nivel: 05
+    nombre: General Mosconi
+    parent: 292
+    georef_id: 66056110000
+    georef_nombre: GENERAL MOSCONI
+- model: comunes.georef
+  pk: 307
+  fields:
+    nivel: 05
+    nombre: General Mosconi
+    parent: 292
+    georef_id: 66056110001
+    georef_nombre: GENERAL MOSCONI
+- model: comunes.georef
+  pk: 308
+  fields:
+    nivel: 05
+    nombre: Hickman
+    parent: 292
+    georef_id: 66056120000
+    georef_nombre: HICKMAN
+- model: comunes.georef
+  pk: 309
+  fields:
+    nivel: 05
+    nombre: Mision Chaqueña
+    parent: 292
+    georef_id: 66056130000
+    georef_nombre: MISION CHAQUEÑA
+- model: comunes.georef
+  pk: 310
+  fields:
+    nivel: 05
+    nombre: Mision El Cruce
+    parent: 292
+    georef_id: 66056140003
+    georef_nombre: MISION EL CRUCE
+- model: comunes.georef
+  pk: 311
+  fields:
+    nivel: 05
+    nombre: Mision Kilometro 6
+    parent: 292
+    georef_id: 66056150000
+    georef_nombre: MISION KILOMETRO 6
+- model: comunes.georef
+  pk: 312
+  fields:
+    nivel: 05
+    nombre: Mision Tierras Fiscales
+    parent: 292
+    georef_id: 66056090002
+    georef_nombre: MISION TIERRAS FISCALES
+- model: comunes.georef
+  pk: 313
+  fields:
+    nivel: 05
+    nombre: Pacara
+    parent: 292
+    georef_id: 66056170000
+    georef_nombre: PACARA
+- model: comunes.georef
+  pk: 314
+  fields:
+    nivel: 05
+    nombre: Padre Lozano
+    parent: 292
+    georef_id: 66056180000
+    georef_nombre: PADRE LOZANO
+- model: comunes.georef
+  pk: 315
+  fields:
+    nivel: 05
+    nombre: Piquirenda
+    parent: 292
+    georef_id: 66056190000
+    georef_nombre: PIQUIRENDA
+- model: comunes.georef
+  pk: 316
+  fields:
+    nivel: 05
+    nombre: Profesor Salvador Mazza
+    parent: 292
+    georef_id: 66056200000
+    georef_nombre: PROFESOR SALVADOR MAZZA
+- model: comunes.georef
+  pk: 317
+  fields:
+    nivel: 05
+    nombre: Recaredo
+    parent: 292
+    georef_id: 66056110002
+    georef_nombre: RECAREDO
+- model: comunes.georef
+  pk: 318
+  fields:
+    nivel: 05
+    nombre: Tartagal
+    parent: 292
+    georef_id: 66056220000
+    georef_nombre: TARTAGAL
+- model: comunes.georef
+  pk: 319
+  fields:
+    nivel: 05
+    nombre: Tobantirenda
+    parent: 292
+    georef_id: 66056230000
+    georef_nombre: TOBANTIRENDA
+- model: comunes.georef
+  pk: 320
+  fields:
+    nivel: 05
+    nombre: Tranquitas
+    parent: 292
+    georef_id: 66056240000
+    georef_nombre: TRANQUITAS
+- model: comunes.georef
+  pk: 321
+  fields:
+    nivel: 05
+    nombre: Yacuy
+    parent: 292
+    georef_id: 66056250000
+    georef_nombre: YACUY
+- model: comunes.georef
+  pk: 322
+  fields:
+    nivel: 03
+    nombre: Guachipas
+    parent: 237
+    georef_id: 66063
+    georef_nombre: Guachipas
+- model: comunes.georef
+  pk: 323
+  fields:
+    nivel: 05
+    nombre: Guachipas
+    parent: 322
+    georef_id: 66063010000
+    georef_nombre: GUACHIPAS
+- model: comunes.georef
+  pk: 324
+  fields:
+    nivel: 03
+    nombre: Iruya
+    parent: 237
+    georef_id: 66070
+    georef_nombre: Iruya
+- model: comunes.georef
+  pk: 325
+  fields:
+    nivel: 05
+    nombre: Iruya
+    parent: 324
+    georef_id: 66070010000
+    georef_nombre: IRUYA
+- model: comunes.georef
+  pk: 326
+  fields:
+    nivel: 05
+    nombre: Isla De Cañas
+    parent: 324
+    georef_id: 66070020000
+    georef_nombre: ISLA DE CAÑAS
+- model: comunes.georef
+  pk: 327
+  fields:
+    nivel: 05
+    nombre: Pueblo Viejo
+    parent: 324
+    georef_id: 66070030000
+    georef_nombre: PUEBLO VIEJO
+- model: comunes.georef
+  pk: 328
+  fields:
+    nivel: 03
+    nombre: La Caldera
+    parent: 237
+    georef_id: 66077
+    georef_nombre: La Caldera
+- model: comunes.georef
+  pk: 329
+  fields:
+    nivel: 05
+    nombre: La Caldera
+    parent: 328
+    georef_id: 66077010000
+    georef_nombre: LA CALDERA
+- model: comunes.georef
+  pk: 330
+  fields:
+    nivel: 05
+    nombre: Vaqueros
+    parent: 328
+    georef_id: 66077020000
+    georef_nombre: VAQUEROS
+- model: comunes.georef
+  pk: 331
+  fields:
+    nivel: 03
+    nombre: La Candelaria
+    parent: 237
+    georef_id: 66084
+    georef_nombre: La Candelaria
+- model: comunes.georef
+  pk: 332
+  fields:
+    nivel: 05
+    nombre: El Jardin
+    parent: 331
+    georef_id: 66084010000
+    georef_nombre: EL JARDIN
+- model: comunes.georef
+  pk: 333
+  fields:
+    nivel: 05
+    nombre: El Tala
+    parent: 331
+    georef_id: 66084020000
+    georef_nombre: EL TALA
+- model: comunes.georef
+  pk: 334
+  fields:
+    nivel: 05
+    nombre: La Candelaria
+    parent: 331
+    georef_id: 66084030000
+    georef_nombre: LA CANDELARIA
+- model: comunes.georef
+  pk: 335
+  fields:
+    nivel: 03
+    nombre: La Poma
+    parent: 237
+    georef_id: 66091
+    georef_nombre: La Poma
+- model: comunes.georef
+  pk: 336
+  fields:
+    nivel: 05
+    nombre: Cobres
+    parent: 335
+    georef_id: 66091010000
+    georef_nombre: COBRES
+- model: comunes.georef
+  pk: 337
+  fields:
+    nivel: 05
+    nombre: La Poma
+    parent: 335
+    georef_id: 66091020000
+    georef_nombre: LA POMA
+- model: comunes.georef
+  pk: 338
+  fields:
+    nivel: 03
+    nombre: La Viña
+    parent: 237
+    georef_id: 66098
+    georef_nombre: La Viña
+- model: comunes.georef
+  pk: 339
+  fields:
+    nivel: 05
+    nombre: Ampascachi
+    parent: 338
+    georef_id: 66098010000
+    georef_nombre: AMPASCACHI
+- model: comunes.georef
+  pk: 340
+  fields:
+    nivel: 05
+    nombre: Cabra Corral
+    parent: 338
+    georef_id: 66098020000
+    georef_nombre: CABRA CORRAL
+- model: comunes.georef
+  pk: 341
+  fields:
+    nivel: 05
+    nombre: Coronel Moldes
+    parent: 338
+    georef_id: 66098030000
+    georef_nombre: CORONEL MOLDES
+- model: comunes.georef
+  pk: 342
+  fields:
+    nivel: 05
+    nombre: La Viña
+    parent: 338
+    georef_id: 66098040000
+    georef_nombre: LA VIÑA
+- model: comunes.georef
+  pk: 343
+  fields:
+    nivel: 05
+    nombre: Talapampa
+    parent: 338
+    georef_id: 66098050000
+    georef_nombre: TALAPAMPA
+- model: comunes.georef
+  pk: 344
+  fields:
+    nivel: 03
+    nombre: Los Andes
+    parent: 237
+    georef_id: 66105
+    georef_nombre: Los Andes
+- model: comunes.georef
+  pk: 345
+  fields:
+    nivel: 05
+    nombre: Olacapato
+    parent: 344
+    georef_id: 66105010000
+    georef_nombre: OLACAPATO
+- model: comunes.georef
+  pk: 346
+  fields:
+    nivel: 05
+    nombre: San Antonio De Los Cobres
+    parent: 344
+    georef_id: 66105020000
+    georef_nombre: SAN ANTONIO DE LOS COBRES
+- model: comunes.georef
+  pk: 347
+  fields:
+    nivel: 05
+    nombre: Santa Rosa De Los Pastos Grandes
+    parent: 344
+    georef_id: 66105030000
+    georef_nombre: SANTA ROSA DE LOS PASTOS GRANDES
+- model: comunes.georef
+  pk: 348
+  fields:
+    nivel: 05
+    nombre: Tolar Grande
+    parent: 344
+    georef_id: 66105040000
+    georef_nombre: TOLAR GRANDE
+- model: comunes.georef
+  pk: 349
+  fields:
+    nivel: 03
+    nombre: Metán
+    parent: 237
+    georef_id: 66112
+    georef_nombre: Metán
+- model: comunes.georef
+  pk: 350
+  fields:
+    nivel: 05
+    nombre: El Galpon
+    parent: 349
+    georef_id: 66112010000
+    georef_nombre: EL GALPON
+- model: comunes.georef
+  pk: 351
+  fields:
+    nivel: 05
+    nombre: El Tunal
+    parent: 349
+    georef_id: 66112020000
+    georef_nombre: EL TUNAL
+- model: comunes.georef
+  pk: 352
+  fields:
+    nivel: 05
+    nombre: Lumbreras
+    parent: 349
+    georef_id: 66112030000
+    georef_nombre: LUMBRERAS
+- model: comunes.georef
+  pk: 353
+  fields:
+    nivel: 05
+    nombre: Metan Viejo
+    parent: 349
+    georef_id: 66112050000
+    georef_nombre: METAN VIEJO
+- model: comunes.georef
+  pk: 354
+  fields:
+    nivel: 05
+    nombre: Rio Piedras
+    parent: 349
+    georef_id: 66112070000
+    georef_nombre: RIO PIEDRAS
+- model: comunes.georef
+  pk: 355
+  fields:
+    nivel: 05
+    nombre: San Jose De Metan
+    parent: 349
+    georef_id: 66112040000
+    georef_nombre: SAN JOSE DE METAN
+- model: comunes.georef
+  pk: 356
+  fields:
+    nivel: 05
+    nombre: San Jose De Orquera
+    parent: 349
+    georef_id: 66112080000
+    georef_nombre: SAN JOSE DE ORQUERA
+- model: comunes.georef
+  pk: 357
+  fields:
+    nivel: 03
+    nombre: Molinos
+    parent: 237
+    georef_id: 66119
+    georef_nombre: Molinos
+- model: comunes.georef
+  pk: 358
+  fields:
+    nivel: 05
+    nombre: La Puerta
+    parent: 357
+    georef_id: 66119010000
+    georef_nombre: LA PUERTA
+- model: comunes.georef
+  pk: 359
+  fields:
+    nivel: 05
+    nombre: Molinos
+    parent: 357
+    georef_id: 66119020000
+    georef_nombre: MOLINOS
+- model: comunes.georef
+  pk: 360
+  fields:
+    nivel: 05
+    nombre: Seclantas
+    parent: 357
+    georef_id: 66119030000
+    georef_nombre: SECLANTAS
+- model: comunes.georef
+  pk: 361
+  fields:
+    nivel: 03
+    nombre: Orán
+    parent: 237
+    georef_id: 66126
+    georef_nombre: Orán
+- model: comunes.georef
+  pk: 362
+  fields:
+    nivel: 05
+    nombre: Aguas Blancas
+    parent: 361
+    georef_id: 66126010000
+    georef_nombre: AGUAS BLANCAS
+- model: comunes.georef
+  pk: 363
+  fields:
+    nivel: 05
+    nombre: Colonia Santa Rosa
+    parent: 361
+    georef_id: 66126020000
+    georef_nombre: COLONIA SANTA ROSA
+- model: comunes.georef
+  pk: 364
+  fields:
+    nivel: 05
+    nombre: Colonia Santa Rosa
+    parent: 361
+    georef_id: 66126020001
+    georef_nombre: COLONIA SANTA ROSA
+- model: comunes.georef
+  pk: 365
+  fields:
+    nivel: 05
+    nombre: El Tabacal
+    parent: 361
+    georef_id: 66126030000
+    georef_nombre: EL TABACAL
+- model: comunes.georef
+  pk: 366
+  fields:
+    nivel: 05
+    nombre: Hipolito Yrigoyen
+    parent: 361
+    georef_id: 66126040000
+    georef_nombre: HIPOLITO YRIGOYEN
+- model: comunes.georef
+  pk: 367
+  fields:
+    nivel: 05
+    nombre: La Mision
+    parent: 361
+    georef_id: 66126020002
+    georef_nombre: LA MISION
+- model: comunes.georef
+  pk: 368
+  fields:
+    nivel: 05
+    nombre: Pichanal
+    parent: 361
+    georef_id: 66126060000
+    georef_nombre: PICHANAL
+- model: comunes.georef
+  pk: 369
+  fields:
+    nivel: 05
+    nombre: San Ramon De La Nueva Oran
+    parent: 361
+    georef_id: 66126070000
+    georef_nombre: SAN RAMON DE LA NUEVA ORAN
+- model: comunes.georef
+  pk: 370
+  fields:
+    nivel: 05
+    nombre: Urundel
+    parent: 361
+    georef_id: 66126080000
+    georef_nombre: URUNDEL
+- model: comunes.georef
+  pk: 371
+  fields:
+    nivel: 03
+    nombre: Rivadavia
+    parent: 237
+    georef_id: 66133
+    georef_nombre: Rivadavia
+- model: comunes.georef
+  pk: 372
+  fields:
+    nivel: 05
+    nombre: Alto De La Sierra
+    parent: 371
+    georef_id: 66133010000
+    georef_nombre: ALTO DE LA SIERRA
+- model: comunes.georef
+  pk: 373
+  fields:
+    nivel: 05
+    nombre: Capitan Juan Page
+    parent: 371
+    georef_id: 66133020000
+    georef_nombre: CAPITAN JUAN PAGE
+- model: comunes.georef
+  pk: 374
+  fields:
+    nivel: 05
+    nombre: Coronel Juan Sola
+    parent: 371
+    georef_id: 66133030000
+    georef_nombre: CORONEL JUAN SOLA
+- model: comunes.georef
+  pk: 375
+  fields:
+    nivel: 05
+    nombre: Hito 1
+    parent: 371
+    georef_id: 66133035000
+    georef_nombre: HITO 1
+- model: comunes.georef
+  pk: 376
+  fields:
+    nivel: 05
+    nombre: La Union
+    parent: 371
+    georef_id: 66133040000
+    georef_nombre: LA UNION
+- model: comunes.georef
+  pk: 377
+  fields:
+    nivel: 05
+    nombre: Los Blancos
+    parent: 371
+    georef_id: 66133050000
+    georef_nombre: LOS BLANCOS
+- model: comunes.georef
+  pk: 378
+  fields:
+    nivel: 05
+    nombre: Pluma De Pato
+    parent: 371
+    georef_id: 66133060000
+    georef_nombre: PLUMA DE PATO
+- model: comunes.georef
+  pk: 379
+  fields:
+    nivel: 05
+    nombre: Rivadavia
+    parent: 371
+    georef_id: 66133070000
+    georef_nombre: RIVADAVIA
+- model: comunes.georef
+  pk: 380
+  fields:
+    nivel: 05
+    nombre: Santa Maria
+    parent: 371
+    georef_id: 66133080000
+    georef_nombre: SANTA MARIA
+- model: comunes.georef
+  pk: 381
+  fields:
+    nivel: 05
+    nombre: Santa Rosa
+    parent: 371
+    georef_id: 66133090000
+    georef_nombre: SANTA ROSA
+- model: comunes.georef
+  pk: 382
+  fields:
+    nivel: 05
+    nombre: Santa Victoria Este
+    parent: 371
+    georef_id: 66133100000
+    georef_nombre: SANTA VICTORIA ESTE
+- model: comunes.georef
+  pk: 383
+  fields:
+    nivel: 03
+    nombre: Rosario De La Frontera
+    parent: 237
+    georef_id: 66140
+    georef_nombre: Rosario de la Frontera
+- model: comunes.georef
+  pk: 384
+  fields:
+    nivel: 05
+    nombre: Antilla
+    parent: 383
+    georef_id: 66140010000
+    georef_nombre: ANTILLA
+- model: comunes.georef
+  pk: 385
+  fields:
+    nivel: 05
+    nombre: Copo Quile
+    parent: 383
+    georef_id: 66140020000
+    georef_nombre: COPO QUILE
+- model: comunes.georef
+  pk: 386
+  fields:
+    nivel: 05
+    nombre: El Naranjo
+    parent: 383
+    georef_id: 66140030000
+    georef_nombre: EL NARANJO
+- model: comunes.georef
+  pk: 387
+  fields:
+    nivel: 05
+    nombre: El Potrero
+    parent: 383
+    georef_id: 66140040000
+    georef_nombre: EL POTRERO
+- model: comunes.georef
+  pk: 388
+  fields:
+    nivel: 05
+    nombre: Rosario De La Frontera
+    parent: 383
+    georef_id: 66140050000
+    georef_nombre: ROSARIO DE LA FRONTERA
+- model: comunes.georef
+  pk: 389
+  fields:
+    nivel: 05
+    nombre: San Felipe
+    parent: 383
+    georef_id: 66140060000
+    georef_nombre: SAN FELIPE
+- model: comunes.georef
+  pk: 390
+  fields:
+    nivel: 03
+    nombre: Rosario De Lerma
+    parent: 237
+    georef_id: 66147
+    georef_nombre: Rosario de Lerma
+- model: comunes.georef
+  pk: 391
+  fields:
+    nivel: 05
+    nombre: Campo Quijano
+    parent: 390
+    georef_id: 66147010000
+    georef_nombre: CAMPO QUIJANO
+- model: comunes.georef
+  pk: 392
+  fields:
+    nivel: 05
+    nombre: La Merced Del Encon
+    parent: 390
+    georef_id: 66147015000
+    georef_nombre: LA MERCED DEL ENCON
+- model: comunes.georef
+  pk: 393
+  fields:
+    nivel: 05
+    nombre: La Silleta
+    parent: 390
+    georef_id: 66147020000
+    georef_nombre: LA SILLETA
+- model: comunes.georef
+  pk: 394
+  fields:
+    nivel: 05
+    nombre: Rosario De Lerma
+    parent: 390
+    georef_id: 66147030000
+    georef_nombre: ROSARIO DE LERMA
+- model: comunes.georef
+  pk: 395
+  fields:
+    nivel: 03
+    nombre: San Carlos
+    parent: 237
+    georef_id: 66154
+    georef_nombre: San Carlos
+- model: comunes.georef
+  pk: 396
+  fields:
+    nivel: 05
+    nombre: Angastaco
+    parent: 395
+    georef_id: 66154010000
+    georef_nombre: ANGASTACO
+- model: comunes.georef
+  pk: 397
+  fields:
+    nivel: 05
+    nombre: Animana
+    parent: 395
+    georef_id: 66154020000
+    georef_nombre: ANIMANA
+- model: comunes.georef
+  pk: 398
+  fields:
+    nivel: 05
+    nombre: El Barrial
+    parent: 395
+    georef_id: 66154030000
+    georef_nombre: EL BARRIAL
+- model: comunes.georef
+  pk: 399
+  fields:
+    nivel: 05
+    nombre: San Carlos
+    parent: 395
+    georef_id: 66154040000
+    georef_nombre: SAN CARLOS
+- model: comunes.georef
+  pk: 400
+  fields:
+    nivel: 03
+    nombre: Santa Victoria
+    parent: 237
+    georef_id: 66161
+    georef_nombre: Santa Victoria
+- model: comunes.georef
+  pk: 401
+  fields:
+    nivel: 05
+    nombre: Acoyte
+    parent: 400
+    georef_id: 66161010000
+    georef_nombre: ACOYTE
+- model: comunes.georef
+  pk: 402
+  fields:
+    nivel: 05
+    nombre: Campo La Cruz
+    parent: 400
+    georef_id: 66161020000
+    georef_nombre: CAMPO LA CRUZ
+- model: comunes.georef
+  pk: 403
+  fields:
+    nivel: 05
+    nombre: Los Toldos
+    parent: 400
+    georef_id: 66161030000
+    georef_nombre: LOS TOLDOS
+- model: comunes.georef
+  pk: 404
+  fields:
+    nivel: 05
+    nombre: Nazareno
+    parent: 400
+    georef_id: 66161040000
+    georef_nombre: NAZARENO
+- model: comunes.georef
+  pk: 405
+  fields:
+    nivel: 05
+    nombre: Poscaya
+    parent: 400
+    georef_id: 66161050000
+    georef_nombre: POSCAYA
+- model: comunes.georef
+  pk: 406
+  fields:
+    nivel: 05
+    nombre: San Marcos
+    parent: 400
+    georef_id: 66161060000
+    georef_nombre: SAN MARCOS
+- model: comunes.georef
+  pk: 407
+  fields:
+    nivel: 05
+    nombre: Santa Victoria
+    parent: 400
+    georef_id: 66161070000
+    georef_nombre: SANTA VICTORIA
+- model: comunes.georef
+  pk: 408
+  fields:
+    nivel: 04
+    nombre: Aguaray
+    parent: 237
+    georef_id: 660126
+    georef_nombre: Aguaray
+- model: comunes.georef
+  pk: 409
+  fields:
+    nivel: 04
+    nombre: Angastaco
+    parent: 237
+    georef_id: 660378
+    georef_nombre: Angastaco
+- model: comunes.georef
+  pk: 410
+  fields:
+    nivel: 04
+    nombre: Animaná
+    parent: 237
+    georef_id: 660385
+    georef_nombre: Animaná
+- model: comunes.georef
+  pk: 411
+  fields:
+    nivel: 04
+    nombre: Apolinario Saravia
+    parent: 237
+    georef_id: 660007
+    georef_nombre: Apolinario Saravia
+- model: comunes.georef
+  pk: 412
+  fields:
+    nivel: 04
+    nombre: Cachi
+    parent: 237
+    georef_id: 660042
+    georef_nombre: Cachi
+- model: comunes.georef
+  pk: 413
+  fields:
+    nivel: 04
+    nombre: Cafayate
+    parent: 237
+    georef_id: 660056
+    georef_nombre: Cafayate
+- model: comunes.georef
+  pk: 414
+  fields:
+    nivel: 04
+    nombre: Campo Quijano
+    parent: 237
+    georef_id: 660364
+    georef_nombre: Campo Quijano
+- model: comunes.georef
+  pk: 415
+  fields:
+    nivel: 04
+    nombre: Campo Santo
+    parent: 237
+    georef_id: 660105
+    georef_nombre: Campo Santo
+- model: comunes.georef
+  pk: 416
+  fields:
+    nivel: 04
+    nombre: Cerrillos
+    parent: 237
+    georef_id: 660077
+    georef_nombre: Cerrillos
+- model: comunes.georef
+  pk: 417
+  fields:
+    nivel: 04
+    nombre: Chicoana
+    parent: 237
+    georef_id: 660091
+    georef_nombre: Chicoana
+- model: comunes.georef
+  pk: 418
+  fields:
+    nivel: 04
+    nombre: Colonia Santa Rosa
+    parent: 237
+    georef_id: 660294
+    georef_nombre: Colonia Santa Rosa
+- model: comunes.georef
+  pk: 419
+  fields:
+    nivel: 04
+    nombre: Coronel Moldes
+    parent: 237
+    georef_id: 660231
+    georef_nombre: Coronel Moldes
+- model: comunes.georef
+  pk: 420
+  fields:
+    nivel: 04
+    nombre: El Bordo
+    parent: 237
+    georef_id: 660112
+    georef_nombre: El Bordo
+- model: comunes.georef
+  pk: 421
+  fields:
+    nivel: 04
+    nombre: El Carril
+    parent: 237
+    georef_id: 660098
+    georef_nombre: El Carril
+- model: comunes.georef
+  pk: 422
+  fields:
+    nivel: 04
+    nombre: El Galpón
+    parent: 237
+    georef_id: 660259
+    georef_nombre: El Galpón
+- model: comunes.georef
+  pk: 423
+  fields:
+    nivel: 04
+    nombre: El Jardín
+    parent: 237
+    georef_id: 660203
+    georef_nombre: El Jardín
+- model: comunes.georef
+  pk: 424
+  fields:
+    nivel: 04
+    nombre: El Potrero
+    parent: 237
+    georef_id: 660350
+    georef_nombre: El Potrero
+- model: comunes.georef
+  pk: 425
+  fields:
+    nivel: 04
+    nombre: El Quebrachal
+    parent: 237
+    georef_id: 660014
+    georef_nombre: El Quebrachal
+- model: comunes.georef
+  pk: 426
+  fields:
+    nivel: 04
+    nombre: El Tala
+    parent: 237
+    georef_id: 660210
+    georef_nombre: El Tala
+- model: comunes.georef
+  pk: 427
+  fields:
+    nivel: 04
+    nombre: Embarcación
+    parent: 237
+    georef_id: 660133
+    georef_nombre: Embarcación
+- model: comunes.georef
+  pk: 428
+  fields:
+    nivel: 04
+    nombre: General Ballivián
+    parent: 237
+    georef_id: 660140
+    georef_nombre: General Ballivián
+- model: comunes.georef
+  pk: 429
+  fields:
+    nivel: 04
+    nombre: General Güemes
+    parent: 237
+    georef_id: 660119
+    georef_nombre: General Güemes
+- model: comunes.georef
+  pk: 430
+  fields:
+    nivel: 04
+    nombre: General Mosconi
+    parent: 237
+    georef_id: 660147
+    georef_nombre: General Mosconi
+- model: comunes.georef
+  pk: 431
+  fields:
+    nivel: 04
+    nombre: General Pizarro
+    parent: 237
+    georef_id: 660021
+    georef_nombre: General Pizarro
+- model: comunes.georef
+  pk: 432
+  fields:
+    nivel: 04
+    nombre: Guachipas
+    parent: 237
+    georef_id: 660168
+    georef_nombre: Guachipas
+- model: comunes.georef
+  pk: 433
+  fields:
+    nivel: 04
+    nombre: Hipólito Yrigoyen
+    parent: 237
+    georef_id: 660301
+    georef_nombre: Hipólito Yrigoyen
+- model: comunes.georef
+  pk: 434
+  fields:
+    nivel: 04
+    nombre: Iruya
+    parent: 237
+    georef_id: 660175
+    georef_nombre: Iruya
+- model: comunes.georef
+  pk: 435
+  fields:
+    nivel: 04
+    nombre: Isla De Cañas
+    parent: 237
+    georef_id: 660182
+    georef_nombre: Isla de Cañas
+- model: comunes.georef
+  pk: 436
+  fields:
+    nivel: 04
+    nombre: Joaquín V. González
+    parent: 237
+    georef_id: 660028
+    georef_nombre: Joaquín V. González
+- model: comunes.georef
+  pk: 437
+  fields:
+    nivel: 04
+    nombre: La Caldera
+    parent: 237
+    georef_id: 660189
+    georef_nombre: La Caldera
+- model: comunes.georef
+  pk: 438
+  fields:
+    nivel: 04
+    nombre: La Candelaria
+    parent: 237
+    georef_id: 660217
+    georef_nombre: La Candelaria
+- model: comunes.georef
+  pk: 439
+  fields:
+    nivel: 04
+    nombre: La Merced
+    parent: 237
+    georef_id: 660084
+    georef_nombre: La Merced
+- model: comunes.georef
+  pk: 440
+  fields:
+    nivel: 04
+    nombre: La Poma
+    parent: 237
+    georef_id: 660224
+    georef_nombre: La Poma
+- model: comunes.georef
+  pk: 441
+  fields:
+    nivel: 04
+    nombre: La Viña
+    parent: 237
+    georef_id: 660238
+    georef_nombre: La Viña
+- model: comunes.georef
+  pk: 442
+  fields:
+    nivel: 04
+    nombre: Las Lajitas
+    parent: 237
+    georef_id: 660035
+    georef_nombre: Las Lajitas
+- model: comunes.georef
+  pk: 443
+  fields:
+    nivel: 04
+    nombre: Los Toldos
+    parent: 237
+    georef_id: 660399
+    georef_nombre: Los Toldos
+- model: comunes.georef
+  pk: 444
+  fields:
+    nivel: 04
+    nombre: Metán
+    parent: 237
+    georef_id: 660266
+    georef_nombre: Metán
+- model: comunes.georef
+  pk: 445
+  fields:
+    nivel: 04
+    nombre: Molinos
+    parent: 237
+    georef_id: 660273
+    georef_nombre: Molinos
+- model: comunes.georef
+  pk: 446
+  fields:
+    nivel: 04
+    nombre: Nazareno
+    parent: 237
+    georef_id: 660406
+    georef_nombre: Nazareno
+- model: comunes.georef
+  pk: 447
+  fields:
+    nivel: 04
+    nombre: Payogasta
+    parent: 237
+    georef_id: 660049
+    georef_nombre: Payogasta
+- model: comunes.georef
+  pk: 448
+  fields:
+    nivel: 04
+    nombre: Pichanal
+    parent: 237
+    georef_id: 660308
+    georef_nombre: Pichanal
+- model: comunes.georef
+  pk: 449
+  fields:
+    nivel: 04
+    nombre: Profesor Salvador Mazza
+    parent: 237
+    georef_id: 660154
+    georef_nombre: Profesor Salvador Mazza
+- model: comunes.georef
+  pk: 450
+  fields:
+    nivel: 04
+    nombre: Río Piedras
+    parent: 237
+    georef_id: 660280
+    georef_nombre: Río Piedras
+- model: comunes.georef
+  pk: 451
+  fields:
+    nivel: 04
+    nombre: Rivadavia Banda Norte
+    parent: 237
+    georef_id: 660329
+    georef_nombre: Rivadavia Banda Norte
+- model: comunes.georef
+  pk: 452
+  fields:
+    nivel: 04
+    nombre: Rivadavia Banda Sur
+    parent: 237
+    georef_id: 660336
+    georef_nombre: Rivadavia Banda Sur
+- model: comunes.georef
+  pk: 453
+  fields:
+    nivel: 04
+    nombre: Rosario De La Frontera
+    parent: 237
+    georef_id: 660357
+    georef_nombre: Rosario de la Frontera
+- model: comunes.georef
+  pk: 454
+  fields:
+    nivel: 04
+    nombre: Rosario De Lerma
+    parent: 237
+    georef_id: 660371
+    georef_nombre: Rosario de Lerma
+- model: comunes.georef
+  pk: 455
+  fields:
+    nivel: 04
+    nombre: Salta
+    parent: 237
+    georef_id: 660063
+    georef_nombre: Salta
+- model: comunes.georef
+  pk: 456
+  fields:
+    nivel: 04
+    nombre: San Antonio De Los Cobres
+    parent: 237
+    georef_id: 660245
+    georef_nombre: San Antonio de los Cobres
+- model: comunes.georef
+  pk: 457
+  fields:
+    nivel: 04
+    nombre: San Carlos
+    parent: 237
+    georef_id: 660392
+    georef_nombre: San Carlos
+- model: comunes.georef
+  pk: 458
+  fields:
+    nivel: 04
+    nombre: San Lorenzo
+    parent: 237
+    georef_id: 660070
+    georef_nombre: San Lorenzo
+- model: comunes.georef
+  pk: 459
+  fields:
+    nivel: 04
+    nombre: San Ramón De La Nueva Orán
+    parent: 237
+    georef_id: 660315
+    georef_nombre: San Ramón de la Nueva Orán
+- model: comunes.georef
+  pk: 460
+  fields:
+    nivel: 04
+    nombre: Santa Victoria Este
+    parent: 237
+    georef_id: 660343
+    georef_nombre: Santa Victoria Este
+- model: comunes.georef
+  pk: 461
+  fields:
+    nivel: 04
+    nombre: Santa Victoria Oeste
+    parent: 237
+    georef_id: 660413
+    georef_nombre: Santa Victoria Oeste
+- model: comunes.georef
+  pk: 462
+  fields:
+    nivel: 04
+    nombre: Seclantás
+    parent: 237
+    georef_id: 660287
+    georef_nombre: Seclantás
+- model: comunes.georef
+  pk: 463
+  fields:
+    nivel: 04
+    nombre: Tartagal
+    parent: 237
+    georef_id: 660161
+    georef_nombre: Tartagal
+- model: comunes.georef
+  pk: 464
+  fields:
+    nivel: 04
+    nombre: Tolar Grande
+    parent: 237
+    georef_id: 660252
+    georef_nombre: Tolar Grande
+- model: comunes.georef
+  pk: 465
+  fields:
+    nivel: 04
+    nombre: Urundel
+    parent: 237
+    georef_id: 660322
+    georef_nombre: Urundel
+- model: comunes.georef
+  pk: 466
+  fields:
+    nivel: 04
+    nombre: Vaqueros
+    parent: 237
+    georef_id: 660196
+    georef_nombre: Vaqueros
+- model: comunes.georef
+  pk: 467
+  fields:
+    nivel: 02
+    nombre: Santiago Del Estero
+    parent: 1
+    georef_id: 86
+    georef_nombre: Santiago del Estero
+- model: comunes.georef
+  pk: 468
+  fields:
+    nivel: 03
+    nombre: Aguirre
+    parent: 467
+    georef_id: 86007
+    georef_nombre: Aguirre
+- model: comunes.georef
+  pk: 469
+  fields:
+    nivel: 05
+    nombre: Argentina
+    parent: 468
+    georef_id: 86007010000
+    georef_nombre: ARGENTINA
+- model: comunes.georef
+  pk: 470
+  fields:
+    nivel: 05
+    nombre: Casares
+    parent: 468
+    georef_id: 86007020000
+    georef_nombre: CASARES
+- model: comunes.georef
+  pk: 471
+  fields:
+    nivel: 05
+    nombre: Malbran
+    parent: 468
+    georef_id: 86007030000
+    georef_nombre: MALBRAN
+- model: comunes.georef
+  pk: 472
+  fields:
+    nivel: 05
+    nombre: Villa General Mitre
+    parent: 468
+    georef_id: 86007040000
+    georef_nombre: VILLA GENERAL MITRE
+- model: comunes.georef
+  pk: 473
+  fields:
+    nivel: 03
+    nombre: Alberdi
+    parent: 467
+    georef_id: 86014
+    georef_nombre: Alberdi
+- model: comunes.georef
+  pk: 474
+  fields:
+    nivel: 05
+    nombre: Campo Gallo
+    parent: 473
+    georef_id: 86014010000
+    georef_nombre: CAMPO GALLO
+- model: comunes.georef
+  pk: 475
+  fields:
+    nivel: 05
+    nombre: Coronel Manuel L. Rico
+    parent: 473
+    georef_id: 86014020000
+    georef_nombre: CORONEL MANUEL L. RICO
+- model: comunes.georef
+  pk: 476
+  fields:
+    nivel: 05
+    nombre: Donadeu
+    parent: 473
+    georef_id: 86014030000
+    georef_nombre: DONADEU
+- model: comunes.georef
+  pk: 477
+  fields:
+    nivel: 05
+    nombre: Sachayoj
+    parent: 473
+    georef_id: 86014040000
+    georef_nombre: SACHAYOJ
+- model: comunes.georef
+  pk: 478
+  fields:
+    nivel: 05
+    nombre: Santos Lugares
+    parent: 473
+    georef_id: 86014050000
+    georef_nombre: SANTOS LUGARES
+- model: comunes.georef
+  pk: 479
+  fields:
+    nivel: 03
+    nombre: Atamisqui
+    parent: 467
+    georef_id: 86021
+    georef_nombre: Atamisqui
+- model: comunes.georef
+  pk: 480
+  fields:
+    nivel: 05
+    nombre: Estacion Atamisqui
+    parent: 479
+    georef_id: 86021010000
+    georef_nombre: ESTACION ATAMISQUI
+- model: comunes.georef
+  pk: 481
+  fields:
+    nivel: 05
+    nombre: Medellin
+    parent: 479
+    georef_id: 86021020000
+    georef_nombre: MEDELLIN
+- model: comunes.georef
+  pk: 482
+  fields:
+    nivel: 05
+    nombre: Villa Atamisqui
+    parent: 479
+    georef_id: 86021030000
+    georef_nombre: VILLA ATAMISQUI
+- model: comunes.georef
+  pk: 483
+  fields:
+    nivel: 03
+    nombre: Avellaneda
+    parent: 467
+    georef_id: 86028
+    georef_nombre: Avellaneda
+- model: comunes.georef
+  pk: 484
+  fields:
+    nivel: 05
+    nombre: Colonia Dora
+    parent: 483
+    georef_id: 86028010000
+    georef_nombre: COLONIA DORA
+- model: comunes.georef
+  pk: 485
+  fields:
+    nivel: 05
+    nombre: Herrera
+    parent: 483
+    georef_id: 86028020000
+    georef_nombre: HERRERA
+- model: comunes.georef
+  pk: 486
+  fields:
+    nivel: 05
+    nombre: Icaño
+    parent: 483
+    georef_id: 86028030000
+    georef_nombre: ICAÑO
+- model: comunes.georef
+  pk: 487
+  fields:
+    nivel: 05
+    nombre: Lugones
+    parent: 483
+    georef_id: 86028040000
+    georef_nombre: LUGONES
+- model: comunes.georef
+  pk: 488
+  fields:
+    nivel: 05
+    nombre: Real Sayana
+    parent: 483
+    georef_id: 86028050000
+    georef_nombre: REAL SAYANA
+- model: comunes.georef
+  pk: 489
+  fields:
+    nivel: 05
+    nombre: Villa Mailin
+    parent: 483
+    georef_id: 86028060000
+    georef_nombre: VILLA MAILIN
+- model: comunes.georef
+  pk: 490
+  fields:
+    nivel: 03
+    nombre: Banda
+    parent: 467
+    georef_id: 86035
+    georef_nombre: Banda
+- model: comunes.georef
+  pk: 491
+  fields:
+    nivel: 05
+    nombre: Abra Grande
+    parent: 490
+    georef_id: 86035010000
+    georef_nombre: ABRA GRANDE
+- model: comunes.georef
+  pk: 492
+  fields:
+    nivel: 05
+    nombre: Antaje
+    parent: 490
+    georef_id: 86035020000
+    georef_nombre: ANTAJE
+- model: comunes.georef
+  pk: 493
+  fields:
+    nivel: 05
+    nombre: Ardiles
+    parent: 490
+    georef_id: 86035030000
+    georef_nombre: ARDILES
+- model: comunes.georef
+  pk: 494
+  fields:
+    nivel: 05
+    nombre: Cañada Escobar
+    parent: 490
+    georef_id: 86035040000
+    georef_nombre: CAÑADA ESCOBAR
+- model: comunes.georef
+  pk: 495
+  fields:
+    nivel: 05
+    nombre: Chaupi Pozo
+    parent: 490
+    georef_id: 86035050000
+    georef_nombre: CHAUPI POZO
+- model: comunes.georef
+  pk: 496
+  fields:
+    nivel: 05
+    nombre: Clodomira
+    parent: 490
+    georef_id: 86035060000
+    georef_nombre: CLODOMIRA
+- model: comunes.georef
+  pk: 497
+  fields:
+    nivel: 05
+    nombre: Huyamampa
+    parent: 490
+    georef_id: 86035070000
+    georef_nombre: HUYAMAMPA
+- model: comunes.georef
+  pk: 498
+  fields:
+    nivel: 05
+    nombre: La Aurora
+    parent: 490
+    georef_id: 86035080000
+    georef_nombre: LA AURORA
+- model: comunes.georef
+  pk: 499
+  fields:
+    nivel: 05
+    nombre: La Banda
+    parent: 490
+    georef_id: 86035090000
+    georef_nombre: LA BANDA
+- model: comunes.georef
+  pk: 500
+  fields:
+    nivel: 05
+    nombre: La Darsena
+    parent: 490
+    georef_id: 86035100000
+    georef_nombre: LA DARSENA
+- model: comunes.georef
+  pk: 501
+  fields:
+    nivel: 05
+    nombre: Los Quiroga
+    parent: 490
+    georef_id: 86035110000
+    georef_nombre: LOS QUIROGA
+- model: comunes.georef
+  pk: 502
+  fields:
+    nivel: 05
+    nombre: Los Soria
+    parent: 490
+    georef_id: 86035120000
+    georef_nombre: LOS SORIA
+- model: comunes.georef
+  pk: 503
+  fields:
+    nivel: 05
+    nombre: Simbolar
+    parent: 490
+    georef_id: 86035130000
+    georef_nombre: SIMBOLAR
+- model: comunes.georef
+  pk: 504
+  fields:
+    nivel: 05
+    nombre: Tramo 16
+    parent: 490
+    georef_id: 86035140000
+    georef_nombre: TRAMO 16
+- model: comunes.georef
+  pk: 505
+  fields:
+    nivel: 05
+    nombre: Tramo 20
+    parent: 490
+    georef_id: 86035150000
+    georef_nombre: TRAMO 20
+- model: comunes.georef
+  pk: 506
+  fields:
+    nivel: 03
+    nombre: Belgrano
+    parent: 467
+    georef_id: 86042
+    georef_nombre: Belgrano
+- model: comunes.georef
+  pk: 507
+  fields:
+    nivel: 05
+    nombre: Bandera
+    parent: 506
+    georef_id: 86042010000
+    georef_nombre: BANDERA
+- model: comunes.georef
+  pk: 508
+  fields:
+    nivel: 05
+    nombre: Cuatro Bocas
+    parent: 506
+    georef_id: 86042020000
+    georef_nombre: CUATRO BOCAS
+- model: comunes.georef
+  pk: 509
+  fields:
+    nivel: 05
+    nombre: Fortin Inca
+    parent: 506
+    georef_id: 86042030000
+    georef_nombre: FORTIN INCA
+- model: comunes.georef
+  pk: 510
+  fields:
+    nivel: 05
+    nombre: Guardia Escolta
+    parent: 506
+    georef_id: 86042040000
+    georef_nombre: GUARDIA ESCOLTA
+- model: comunes.georef
+  pk: 511
+  fields:
+    nivel: 03
+    nombre: Capital
+    parent: 467
+    georef_id: 86049
+    georef_nombre: Capital
+- model: comunes.georef
+  pk: 512
+  fields:
+    nivel: 05
+    nombre: El Dean
+    parent: 511
+    georef_id: 86049010000
+    georef_nombre: EL DEAN
+- model: comunes.georef
+  pk: 513
+  fields:
+    nivel: 05
+    nombre: El Mojon
+    parent: 511
+    georef_id: 86049020000
+    georef_nombre: EL MOJON
+- model: comunes.georef
+  pk: 514
+  fields:
+    nivel: 05
+    nombre: El Zanjon
+    parent: 511
+    georef_id: 86049030000
+    georef_nombre: EL ZANJON
+- model: comunes.georef
+  pk: 515
+  fields:
+    nivel: 05
+    nombre: Los Cardozos
+    parent: 511
+    georef_id: 86049040000
+    georef_nombre: LOS CARDOZOS
+- model: comunes.georef
+  pk: 516
+  fields:
+    nivel: 05
+    nombre: Maco
+    parent: 511
+    georef_id: 86049050000
+    georef_nombre: MACO
+- model: comunes.georef
+  pk: 517
+  fields:
+    nivel: 05
+    nombre: Maquito
+    parent: 511
+    georef_id: 86049060000
+    georef_nombre: MAQUITO
+- model: comunes.georef
+  pk: 518
+  fields:
+    nivel: 05
+    nombre: Morales
+    parent: 511
+    georef_id: 86049070000
+    georef_nombre: MORALES
+- model: comunes.georef
+  pk: 519
+  fields:
+    nivel: 05
+    nombre: Puesto De San Antonio
+    parent: 511
+    georef_id: 86049080000
+    georef_nombre: PUESTO DE SAN ANTONIO
+- model: comunes.georef
+  pk: 520
+  fields:
+    nivel: 05
+    nombre: San Pedro
+    parent: 511
+    georef_id: 86049090000
+    georef_nombre: SAN PEDRO
+- model: comunes.georef
+  pk: 521
+  fields:
+    nivel: 05
+    nombre: Santa Maria
+    parent: 511
+    georef_id: 86049100000
+    georef_nombre: SANTA MARIA
+- model: comunes.georef
+  pk: 522
+  fields:
+    nivel: 05
+    nombre: Santiago Del Estero
+    parent: 511
+    georef_id: 86049110000
+    georef_nombre: SANTIAGO DEL ESTERO
+- model: comunes.georef
+  pk: 523
+  fields:
+    nivel: 05
+    nombre: Vuelta De La Barranca
+    parent: 511
+    georef_id: 86049120000
+    georef_nombre: VUELTA DE LA BARRANCA
+- model: comunes.georef
+  pk: 524
+  fields:
+    nivel: 05
+    nombre: Yanda
+    parent: 511
+    georef_id: 86049130000
+    georef_nombre: YANDA
+- model: comunes.georef
+  pk: 525
+  fields:
+    nivel: 03
+    nombre: Choya
+    parent: 467
+    georef_id: 86063
+    georef_nombre: Choya
+- model: comunes.georef
+  pk: 526
+  fields:
+    nivel: 05
+    nombre: Ancajan
+    parent: 525
+    georef_id: 86063010000
+    georef_nombre: ANCAJAN
+- model: comunes.georef
+  pk: 527
+  fields:
+    nivel: 05
+    nombre: Choya
+    parent: 525
+    georef_id: 86063020000
+    georef_nombre: CHOYA
+- model: comunes.georef
+  pk: 528
+  fields:
+    nivel: 05
+    nombre: Estacion La Punta
+    parent: 525
+    georef_id: 86063030000
+    georef_nombre: ESTACION LA PUNTA
+- model: comunes.georef
+  pk: 529
+  fields:
+    nivel: 05
+    nombre: Frias
+    parent: 525
+    georef_id: 86063040000
+    georef_nombre: FRIAS
+- model: comunes.georef
+  pk: 530
+  fields:
+    nivel: 05
+    nombre: Laprida
+    parent: 525
+    georef_id: 86063050000
+    georef_nombre: LAPRIDA
+- model: comunes.georef
+  pk: 531
+  fields:
+    nivel: 05
+    nombre: San Pedro
+    parent: 525
+    georef_id: 86063070000
+    georef_nombre: SAN PEDRO
+- model: comunes.georef
+  pk: 532
+  fields:
+    nivel: 05
+    nombre: Tapso
+    parent: 525
+    georef_id: 86063080000
+    georef_nombre: TAPSO
+- model: comunes.georef
+  pk: 533
+  fields:
+    nivel: 05
+    nombre: Villa La Punta
+    parent: 525
+    georef_id: 86063090000
+    georef_nombre: VILLA LA PUNTA
+- model: comunes.georef
+  pk: 534
+  fields:
+    nivel: 03
+    nombre: Copo
+    parent: 467
+    georef_id: 86056
+    georef_nombre: Copo
+- model: comunes.georef
+  pk: 535
+  fields:
+    nivel: 05
+    nombre: El Cabure
+    parent: 534
+    georef_id: 86056010000
+    georef_nombre: EL CABURE
+- model: comunes.georef
+  pk: 536
+  fields:
+    nivel: 05
+    nombre: La Firmeza
+    parent: 534
+    georef_id: 86056020000
+    georef_nombre: LA FIRMEZA
+- model: comunes.georef
+  pk: 537
+  fields:
+    nivel: 05
+    nombre: Los Pirpintos
+    parent: 534
+    georef_id: 86056030000
+    georef_nombre: LOS PIRPINTOS
+- model: comunes.georef
+  pk: 538
+  fields:
+    nivel: 05
+    nombre: Los Tigres
+    parent: 534
+    georef_id: 86056040000
+    georef_nombre: LOS TIGRES
+- model: comunes.georef
+  pk: 539
+  fields:
+    nivel: 05
+    nombre: Monte Quemado
+    parent: 534
+    georef_id: 86056050000
+    georef_nombre: MONTE QUEMADO
+- model: comunes.georef
+  pk: 540
+  fields:
+    nivel: 05
+    nombre: Nueva Esperanza
+    parent: 534
+    georef_id: 86056060000
+    georef_nombre: NUEVA ESPERANZA
+- model: comunes.georef
+  pk: 541
+  fields:
+    nivel: 05
+    nombre: Pampa De Los Guanacos
+    parent: 534
+    georef_id: 86056070000
+    georef_nombre: PAMPA DE LOS GUANACOS
+- model: comunes.georef
+  pk: 542
+  fields:
+    nivel: 05
+    nombre: San Jose Del Boqueron
+    parent: 534
+    georef_id: 86056080000
+    georef_nombre: SAN JOSE DEL BOQUERON
+- model: comunes.georef
+  pk: 543
+  fields:
+    nivel: 05
+    nombre: Urutau
+    parent: 534
+    georef_id: 86056090000
+    georef_nombre: URUTAU
+- model: comunes.georef
+  pk: 544
+  fields:
+    nivel: 03
+    nombre: Figueroa
+    parent: 467
+    georef_id: 86070
+    georef_nombre: Figueroa
+- model: comunes.georef
+  pk: 545
+  fields:
+    nivel: 05
+    nombre: Bandera Bajada
+    parent: 544
+    georef_id: 86070010000
+    georef_nombre: BANDERA BAJADA
+- model: comunes.georef
+  pk: 546
+  fields:
+    nivel: 05
+    nombre: Caspi Corral
+    parent: 544
+    georef_id: 86070020000
+    georef_nombre: CASPI CORRAL
+- model: comunes.georef
+  pk: 547
+  fields:
+    nivel: 05
+    nombre: Colonia San Juan
+    parent: 544
+    georef_id: 86070030000
+    georef_nombre: COLONIA SAN JUAN
+- model: comunes.georef
+  pk: 548
+  fields:
+    nivel: 05
+    nombre: El Crucero
+    parent: 544
+    georef_id: 86070040000
+    georef_nombre: EL CRUCERO
+- model: comunes.georef
+  pk: 549
+  fields:
+    nivel: 05
+    nombre: Kilometro 30
+    parent: 544
+    georef_id: 86070050000
+    georef_nombre: KILOMETRO 30
+- model: comunes.georef
+  pk: 550
+  fields:
+    nivel: 05
+    nombre: La Cañada
+    parent: 544
+    georef_id: 86070060000
+    georef_nombre: LA CAÑADA
+- model: comunes.georef
+  pk: 551
+  fields:
+    nivel: 05
+    nombre: La Invernada
+    parent: 544
+    georef_id: 86070070000
+    georef_nombre: LA INVERNADA
+- model: comunes.georef
+  pk: 552
+  fields:
+    nivel: 05
+    nombre: Minerva
+    parent: 544
+    georef_id: 86070080000
+    georef_nombre: MINERVA
+- model: comunes.georef
+  pk: 553
+  fields:
+    nivel: 05
+    nombre: Vaca Huañuna
+    parent: 544
+    georef_id: 86070090000
+    georef_nombre: VACA HUAÑUNA
+- model: comunes.georef
+  pk: 554
+  fields:
+    nivel: 05
+    nombre: Villa Figueroa
+    parent: 544
+    georef_id: 86070100000
+    georef_nombre: VILLA FIGUEROA
+- model: comunes.georef
+  pk: 555
+  fields:
+    nivel: 03
+    nombre: General Taboada
+    parent: 467
+    georef_id: 86077
+    georef_nombre: General Taboada
+- model: comunes.georef
+  pk: 556
+  fields:
+    nivel: 05
+    nombre: Añatuya
+    parent: 555
+    georef_id: 86077010000
+    georef_nombre: AÑATUYA
+- model: comunes.georef
+  pk: 557
+  fields:
+    nivel: 05
+    nombre: Averias
+    parent: 555
+    georef_id: 86077020000
+    georef_nombre: AVERIAS
+- model: comunes.georef
+  pk: 558
+  fields:
+    nivel: 05
+    nombre: Estacion Tacañitas
+    parent: 555
+    georef_id: 86077030000
+    georef_nombre: ESTACION TACAÑITAS
+- model: comunes.georef
+  pk: 559
+  fields:
+    nivel: 05
+    nombre: La Nena
+    parent: 555
+    georef_id: 86077040000
+    georef_nombre: LA NENA
+- model: comunes.georef
+  pk: 560
+  fields:
+    nivel: 05
+    nombre: Los Juries
+    parent: 555
+    georef_id: 86077050000
+    georef_nombre: LOS JURIES
+- model: comunes.georef
+  pk: 561
+  fields:
+    nivel: 05
+    nombre: Tomas Young
+    parent: 555
+    georef_id: 86077060000
+    georef_nombre: TOMAS YOUNG
+- model: comunes.georef
+  pk: 562
+  fields:
+    nivel: 03
+    nombre: Guasayán
+    parent: 467
+    georef_id: 86084
+    georef_nombre: Guasayán
+- model: comunes.georef
+  pk: 563
+  fields:
+    nivel: 05
+    nombre: Lavalle
+    parent: 562
+    georef_id: 86084010000
+    georef_nombre: LAVALLE
+- model: comunes.georef
+  pk: 564
+  fields:
+    nivel: 05
+    nombre: San Pedro
+    parent: 562
+    georef_id: 86084020000
+    georef_nombre: SAN PEDRO
+- model: comunes.georef
+  pk: 565
+  fields:
+    nivel: 03
+    nombre: Jiménez
+    parent: 467
+    georef_id: 86091
+    georef_nombre: Jiménez
+- model: comunes.georef
+  pk: 566
+  fields:
+    nivel: 05
+    nombre: El Arenal
+    parent: 565
+    georef_id: 86091005000
+    georef_nombre: EL ARENAL
+- model: comunes.georef
+  pk: 567
+  fields:
+    nivel: 05
+    nombre: El Bobadal
+    parent: 565
+    georef_id: 86091010000
+    georef_nombre: EL BOBADAL
+- model: comunes.georef
+  pk: 568
+  fields:
+    nivel: 05
+    nombre: El Charco
+    parent: 565
+    georef_id: 86091020000
+    georef_nombre: EL CHARCO
+- model: comunes.georef
+  pk: 569
+  fields:
+    nivel: 05
+    nombre: El Rincon
+    parent: 565
+    georef_id: 86091030000
+    georef_nombre: EL RINCON
+- model: comunes.georef
+  pk: 570
+  fields:
+    nivel: 05
+    nombre: Gramilla
+    parent: 565
+    georef_id: 86091040000
+    georef_nombre: GRAMILLA
+- model: comunes.georef
+  pk: 571
+  fields:
+    nivel: 05
+    nombre: Isca Yacu
+    parent: 565
+    georef_id: 86091050000
+    georef_nombre: ISCA YACU
+- model: comunes.georef
+  pk: 572
+  fields:
+    nivel: 05
+    nombre: Isca Yacu Semaul
+    parent: 565
+    georef_id: 86091060000
+    georef_nombre: ISCA YACU SEMAUL
+- model: comunes.georef
+  pk: 573
+  fields:
+    nivel: 05
+    nombre: Pozo Hondo
+    parent: 565
+    georef_id: 86091070000
+    georef_nombre: POZO HONDO
+- model: comunes.georef
+  pk: 574
+  fields:
+    nivel: 05
+    nombre: San Pedro
+    parent: 565
+    georef_id: 86091080000
+    georef_nombre: SAN PEDRO
+- model: comunes.georef
+  pk: 575
+  fields:
+    nivel: 03
+    nombre: Juan F. Ibarra
+    parent: 467
+    georef_id: 86098
+    georef_nombre: Juan F. Ibarra
+- model: comunes.georef
+  pk: 576
+  fields:
+    nivel: 05
+    nombre: El Colorado
+    parent: 575
+    georef_id: 86098010000
+    georef_nombre: EL COLORADO
+- model: comunes.georef
+  pk: 577
+  fields:
+    nivel: 05
+    nombre: El Cuadrado
+    parent: 575
+    georef_id: 86098020000
+    georef_nombre: EL CUADRADO
+- model: comunes.georef
+  pk: 578
+  fields:
+    nivel: 05
+    nombre: Matara
+    parent: 575
+    georef_id: 86098030000
+    georef_nombre: MATARA
+- model: comunes.georef
+  pk: 579
+  fields:
+    nivel: 05
+    nombre: Suncho Corral
+    parent: 575
+    georef_id: 86098040000
+    georef_nombre: SUNCHO CORRAL
+- model: comunes.georef
+  pk: 580
+  fields:
+    nivel: 05
+    nombre: Vilelas
+    parent: 575
+    georef_id: 86098050000
+    georef_nombre: VILELAS
+- model: comunes.georef
+  pk: 581
+  fields:
+    nivel: 05
+    nombre: Yuchan
+    parent: 575
+    georef_id: 86098060000
+    georef_nombre: YUCHAN
+- model: comunes.georef
+  pk: 582
+  fields:
+    nivel: 03
+    nombre: Loreto
+    parent: 467
+    georef_id: 86105
+    georef_nombre: Loreto
+- model: comunes.georef
+  pk: 583
+  fields:
+    nivel: 05
+    nombre: Villa San Martin
+    parent: 582
+    georef_id: 86105010000
+    georef_nombre: VILLA SAN MARTIN
+- model: comunes.georef
+  pk: 584
+  fields:
+    nivel: 03
+    nombre: Mitre
+    parent: 467
+    georef_id: 86112
+    georef_nombre: Mitre
+- model: comunes.georef
+  pk: 585
+  fields:
+    nivel: 05
+    nombre: Villa Union
+    parent: 584
+    georef_id: 86112010000
+    georef_nombre: VILLA UNION
+- model: comunes.georef
+  pk: 586
+  fields:
+    nivel: 03
+    nombre: Moreno
+    parent: 467
+    georef_id: 86119
+    georef_nombre: Moreno
+- model: comunes.georef
+  pk: 587
+  fields:
+    nivel: 05
+    nombre: Aerolito
+    parent: 586
+    georef_id: 86119010000
+    georef_nombre: AEROLITO
+- model: comunes.georef
+  pk: 588
+  fields:
+    nivel: 05
+    nombre: Alhuampa
+    parent: 586
+    georef_id: 86119020000
+    georef_nombre: ALHUAMPA
+- model: comunes.georef
+  pk: 589
+  fields:
+    nivel: 05
+    nombre: Hasse
+    parent: 586
+    georef_id: 86119030000
+    georef_nombre: HASSE
+- model: comunes.georef
+  pk: 590
+  fields:
+    nivel: 05
+    nombre: Hernan Mejia Miraval
+    parent: 586
+    georef_id: 86119040000
+    georef_nombre: HERNAN MEJIA MIRAVAL
+- model: comunes.georef
+  pk: 591
+  fields:
+    nivel: 05
+    nombre: Las Tinajas
+    parent: 586
+    georef_id: 86119050000
+    georef_nombre: LAS TINAJAS
+- model: comunes.georef
+  pk: 592
+  fields:
+    nivel: 05
+    nombre: Libertad
+    parent: 586
+    georef_id: 86119060000
+    georef_nombre: LIBERTAD
+- model: comunes.georef
+  pk: 593
+  fields:
+    nivel: 05
+    nombre: Lilo Viejo
+    parent: 586
+    georef_id: 86119070000
+    georef_nombre: LILO VIEJO
+- model: comunes.georef
+  pk: 594
+  fields:
+    nivel: 05
+    nombre: Patay
+    parent: 586
+    georef_id: 86119080000
+    georef_nombre: PATAY
+- model: comunes.georef
+  pk: 595
+  fields:
+    nivel: 05
+    nombre: Pueblo Pablo Torelo
+    parent: 586
+    georef_id: 86119090000
+    georef_nombre: PUEBLO PABLO TORELO
+- model: comunes.georef
+  pk: 596
+  fields:
+    nivel: 05
+    nombre: Quimili
+    parent: 586
+    georef_id: 86119100000
+    georef_nombre: QUIMILI
+- model: comunes.georef
+  pk: 597
+  fields:
+    nivel: 05
+    nombre: Roversi
+    parent: 586
+    georef_id: 86119110000
+    georef_nombre: ROVERSI
+- model: comunes.georef
+  pk: 598
+  fields:
+    nivel: 05
+    nombre: Tintina
+    parent: 586
+    georef_id: 86119120000
+    georef_nombre: TINTINA
+- model: comunes.georef
+  pk: 599
+  fields:
+    nivel: 05
+    nombre: Weisburd
+    parent: 586
+    georef_id: 86119130000
+    georef_nombre: WEISBURD
+- model: comunes.georef
+  pk: 600
+  fields:
+    nivel: 03
+    nombre: Ojo De Agua
+    parent: 467
+    georef_id: 86126
+    georef_nombre: Ojo de Agua
+- model: comunes.georef
+  pk: 601
+  fields:
+    nivel: 05
+    nombre: El 49
+    parent: 600
+    georef_id: 86126010000
+    georef_nombre: EL 49
+- model: comunes.georef
+  pk: 602
+  fields:
+    nivel: 05
+    nombre: Sol De Julio
+    parent: 600
+    georef_id: 86126020000
+    georef_nombre: SOL DE JULIO
+- model: comunes.georef
+  pk: 603
+  fields:
+    nivel: 05
+    nombre: Villa Ojo De Agua
+    parent: 600
+    georef_id: 86126030000
+    georef_nombre: VILLA OJO DE AGUA
+- model: comunes.georef
+  pk: 604
+  fields:
+    nivel: 03
+    nombre: Pellegrini
+    parent: 467
+    georef_id: 86133
+    georef_nombre: Pellegrini
+- model: comunes.georef
+  pk: 605
+  fields:
+    nivel: 05
+    nombre: El Mojon
+    parent: 604
+    georef_id: 86133010000
+    georef_nombre: EL MOJON
+- model: comunes.georef
+  pk: 606
+  fields:
+    nivel: 05
+    nombre: Las Delicias
+    parent: 604
+    georef_id: 86133020000
+    georef_nombre: LAS DELICIAS
+- model: comunes.georef
+  pk: 607
+  fields:
+    nivel: 05
+    nombre: Nueva Esperanza
+    parent: 604
+    georef_id: 86133030000
+    georef_nombre: NUEVA ESPERANZA
+- model: comunes.georef
+  pk: 608
+  fields:
+    nivel: 05
+    nombre: Pozo Betbeder
+    parent: 604
+    georef_id: 86133040000
+    georef_nombre: POZO BETBEDER
+- model: comunes.georef
+  pk: 609
+  fields:
+    nivel: 05
+    nombre: Rapelli
+    parent: 604
+    georef_id: 86133050000
+    georef_nombre: RAPELLI
+- model: comunes.georef
+  pk: 610
+  fields:
+    nivel: 05
+    nombre: Santo Domingo
+    parent: 604
+    georef_id: 86133060000
+    georef_nombre: SANTO DOMINGO
+- model: comunes.georef
+  pk: 611
+  fields:
+    nivel: 03
+    nombre: Quebrachos
+    parent: 467
+    georef_id: 86140
+    georef_nombre: Quebrachos
+- model: comunes.georef
+  pk: 612
+  fields:
+    nivel: 05
+    nombre: Ramirez De Velazco
+    parent: 611
+    georef_id: 86140010000
+    georef_nombre: RAMIREZ DE VELAZCO
+- model: comunes.georef
+  pk: 613
+  fields:
+    nivel: 05
+    nombre: Sumampa
+    parent: 611
+    georef_id: 86140020000
+    georef_nombre: SUMAMPA
+- model: comunes.georef
+  pk: 614
+  fields:
+    nivel: 05
+    nombre: Sumampa Viejo
+    parent: 611
+    georef_id: 86140030000
+    georef_nombre: SUMAMPA VIEJO
+- model: comunes.georef
+  pk: 615
+  fields:
+    nivel: 03
+    nombre: Río Hondo
+    parent: 467
+    georef_id: 86147
+    georef_nombre: Río Hondo
+- model: comunes.georef
+  pk: 616
+  fields:
+    nivel: 05
+    nombre: Chañar Pozo De Abajo
+    parent: 615
+    georef_id: 86147010000
+    georef_nombre: CHAÑAR POZO DE ABAJO
+- model: comunes.georef
+  pk: 617
+  fields:
+    nivel: 05
+    nombre: Chauchillas
+    parent: 615
+    georef_id: 86147020000
+    georef_nombre: CHAUCHILLAS
+- model: comunes.georef
+  pk: 618
+  fields:
+    nivel: 05
+    nombre: Colonia Tinco
+    parent: 615
+    georef_id: 86147030000
+    georef_nombre: COLONIA TINCO
+- model: comunes.georef
+  pk: 619
+  fields:
+    nivel: 05
+    nombre: El Charco
+    parent: 615
+    georef_id: 86147040000
+    georef_nombre: EL CHARCO
+- model: comunes.georef
+  pk: 620
+  fields:
+    nivel: 05
+    nombre: Gramilla
+    parent: 615
+    georef_id: 86147050000
+    georef_nombre: GRAMILLA
+- model: comunes.georef
+  pk: 621
+  fields:
+    nivel: 05
+    nombre: La Nueva Donosa
+    parent: 615
+    georef_id: 86147060000
+    georef_nombre: LA NUEVA DONOSA
+- model: comunes.georef
+  pk: 622
+  fields:
+    nivel: 05
+    nombre: Los Miranda
+    parent: 615
+    georef_id: 86147070000
+    georef_nombre: LOS MIRANDA
+- model: comunes.georef
+  pk: 623
+  fields:
+    nivel: 05
+    nombre: Los Nuñez
+    parent: 615
+    georef_id: 86147080000
+    georef_nombre: LOS NUÑEZ
+- model: comunes.georef
+  pk: 624
+  fields:
+    nivel: 05
+    nombre: Mansupa
+    parent: 615
+    georef_id: 86147090000
+    georef_nombre: MANSUPA
+- model: comunes.georef
+  pk: 625
+  fields:
+    nivel: 05
+    nombre: Pozuelos
+    parent: 615
+    georef_id: 86147100000
+    georef_nombre: POZUELOS
+- model: comunes.georef
+  pk: 626
+  fields:
+    nivel: 05
+    nombre: Rodeo De Valdez
+    parent: 615
+    georef_id: 86147110000
+    georef_nombre: RODEO DE VALDEZ
+- model: comunes.georef
+  pk: 627
+  fields:
+    nivel: 05
+    nombre: Sauzal
+    parent: 615
+    georef_id: 86147120000
+    georef_nombre: SAUZAL
+- model: comunes.georef
+  pk: 628
+  fields:
+    nivel: 05
+    nombre: Termas De Rio Hondo
+    parent: 615
+    georef_id: 86147130000
+    georef_nombre: TERMAS DE RIO HONDO
+- model: comunes.georef
+  pk: 629
+  fields:
+    nivel: 05
+    nombre: Villa Gimenez
+    parent: 615
+    georef_id: 86147140000
+    georef_nombre: VILLA GIMENEZ
+- model: comunes.georef
+  pk: 630
+  fields:
+    nivel: 05
+    nombre: Villa Rio Hondo
+    parent: 615
+    georef_id: 86147150000
+    georef_nombre: VILLA RIO HONDO
+- model: comunes.georef
+  pk: 631
+  fields:
+    nivel: 05
+    nombre: Villa Turistica Del Embalse
+    parent: 615
+    georef_id: 86147160000
+    georef_nombre: VILLA TURISTICA DEL EMBALSE
+- model: comunes.georef
+  pk: 632
+  fields:
+    nivel: 05
+    nombre: Vinara
+    parent: 615
+    georef_id: 86147170000
+    georef_nombre: VINARA
+- model: comunes.georef
+  pk: 633
+  fields:
+    nivel: 03
+    nombre: Rivadavia
+    parent: 467
+    georef_id: 86154
+    georef_nombre: Rivadavia
+- model: comunes.georef
+  pk: 634
+  fields:
+    nivel: 05
+    nombre: Colonia Alpina
+    parent: 633
+    georef_id: 86154010000
+    georef_nombre: COLONIA ALPINA
+- model: comunes.georef
+  pk: 635
+  fields:
+    nivel: 05
+    nombre: Palo Negro
+    parent: 633
+    georef_id: 86154020000
+    georef_nombre: PALO NEGRO
+- model: comunes.georef
+  pk: 636
+  fields:
+    nivel: 05
+    nombre: Selva
+    parent: 633
+    georef_id: 86154030000
+    georef_nombre: SELVA
+- model: comunes.georef
+  pk: 637
+  fields:
+    nivel: 03
+    nombre: Robles
+    parent: 467
+    georef_id: 86161
+    georef_nombre: Robles
+- model: comunes.georef
+  pk: 638
+  fields:
+    nivel: 05
+    nombre: Beltran
+    parent: 637
+    georef_id: 86161010000
+    georef_nombre: BELTRAN
+- model: comunes.georef
+  pk: 639
+  fields:
+    nivel: 05
+    nombre: Colonia El Simbolar
+    parent: 637
+    georef_id: 86161020000
+    georef_nombre: COLONIA EL SIMBOLAR
+- model: comunes.georef
+  pk: 640
+  fields:
+    nivel: 05
+    nombre: Fernandez
+    parent: 637
+    georef_id: 86161030000
+    georef_nombre: FERNANDEZ
+- model: comunes.georef
+  pk: 641
+  fields:
+    nivel: 05
+    nombre: Ingeniero Forres
+    parent: 637
+    georef_id: 86161040000
+    georef_nombre: INGENIERO FORRES
+- model: comunes.georef
+  pk: 642
+  fields:
+    nivel: 05
+    nombre: Vilmer
+    parent: 637
+    georef_id: 86161050000
+    georef_nombre: VILMER
+- model: comunes.georef
+  pk: 643
+  fields:
+    nivel: 03
+    nombre: Salavina
+    parent: 467
+    georef_id: 86168
+    georef_nombre: Salavina
+- model: comunes.georef
+  pk: 644
+  fields:
+    nivel: 05
+    nombre: Chilca Juliana
+    parent: 643
+    georef_id: 86168010000
+    georef_nombre: CHILCA JULIANA
+- model: comunes.georef
+  pk: 645
+  fields:
+    nivel: 05
+    nombre: Los Telares
+    parent: 643
+    georef_id: 86168020000
+    georef_nombre: LOS TELARES
+- model: comunes.georef
+  pk: 646
+  fields:
+    nivel: 05
+    nombre: Villa Salavina
+    parent: 643
+    georef_id: 86168030000
+    georef_nombre: VILLA SALAVINA
+- model: comunes.georef
+  pk: 647
+  fields:
+    nivel: 03
+    nombre: San Martín
+    parent: 467
+    georef_id: 86175
+    georef_nombre: San Martín
+- model: comunes.georef
+  pk: 648
+  fields:
+    nivel: 05
+    nombre: Brea Pozo
+    parent: 647
+    georef_id: 86175010000
+    georef_nombre: BREA POZO
+- model: comunes.georef
+  pk: 649
+  fields:
+    nivel: 05
+    nombre: Estacion Robles
+    parent: 647
+    georef_id: 86175020000
+    georef_nombre: ESTACION ROBLES
+- model: comunes.georef
+  pk: 650
+  fields:
+    nivel: 05
+    nombre: Estacion Taboada
+    parent: 647
+    georef_id: 86175030000
+    georef_nombre: ESTACION TABOADA
+- model: comunes.georef
+  pk: 651
+  fields:
+    nivel: 05
+    nombre: Villa Nueva
+    parent: 647
+    georef_id: 86175040000
+    georef_nombre: VILLA NUEVA
+- model: comunes.georef
+  pk: 652
+  fields:
+    nivel: 03
+    nombre: Sarmiento
+    parent: 467
+    georef_id: 86182
+    georef_nombre: Sarmiento
+- model: comunes.georef
+  pk: 653
+  fields:
+    nivel: 05
+    nombre: Garza
+    parent: 652
+    georef_id: 86182010000
+    georef_nombre: GARZA
+- model: comunes.georef
+  pk: 654
+  fields:
+    nivel: 03
+    nombre: Silípica
+    parent: 467
+    georef_id: 86189
+    georef_nombre: Silípica
+- model: comunes.georef
+  pk: 655
+  fields:
+    nivel: 05
+    nombre: Arraga
+    parent: 654
+    georef_id: 86189010000
+    georef_nombre: ARRAGA
+- model: comunes.georef
+  pk: 656
+  fields:
+    nivel: 05
+    nombre: Nueva Francia
+    parent: 654
+    georef_id: 86189020000
+    georef_nombre: NUEVA FRANCIA
+- model: comunes.georef
+  pk: 657
+  fields:
+    nivel: 05
+    nombre: Simbol
+    parent: 654
+    georef_id: 86189030000
+    georef_nombre: SIMBOL
+- model: comunes.georef
+  pk: 658
+  fields:
+    nivel: 05
+    nombre: Sumamao
+    parent: 654
+    georef_id: 86189040000
+    georef_nombre: SUMAMAO
+- model: comunes.georef
+  pk: 659
+  fields:
+    nivel: 05
+    nombre: Villa Silipica
+    parent: 654
+    georef_id: 86189050000
+    georef_nombre: VILLA SILIPICA
+- model: comunes.georef
+  pk: 660
+  fields:
+    nivel: 02
+    nombre: Tucumán
+    parent: 1
+    georef_id: 90
+    georef_nombre: Tucumán
+- model: comunes.georef
+  pk: 661
+  fields:
+    nivel: 03
+    nombre: Burruyacú
+    parent: 660
+    georef_id: 90007
+    georef_nombre: Burruyacú
+- model: comunes.georef
+  pk: 662
+  fields:
+    nivel: 05
+    nombre: 7 De Abril
+    parent: 661
+    georef_id: 90007080000
+    georef_nombre: 7 DE ABRIL
+- model: comunes.georef
+  pk: 663
+  fields:
+    nivel: 05
+    nombre: Barrio San Jorge
+    parent: 661
+    georef_id: 90007010000
+    georef_nombre: BARRIO SAN JORGE
+- model: comunes.georef
+  pk: 664
+  fields:
+    nivel: 05
+    nombre: El Chañar
+    parent: 661
+    georef_id: 90007020000
+    georef_nombre: EL CHAÑAR
+- model: comunes.georef
+  pk: 665
+  fields:
+    nivel: 05
+    nombre: El Naranjo
+    parent: 661
+    georef_id: 90007030000
+    georef_nombre: EL NARANJO
+- model: comunes.georef
+  pk: 666
+  fields:
+    nivel: 05
+    nombre: Garmendia
+    parent: 661
+    georef_id: 90007040000
+    georef_nombre: GARMENDIA
+- model: comunes.georef
+  pk: 667
+  fields:
+    nivel: 05
+    nombre: La Ramada
+    parent: 661
+    georef_id: 90007050000
+    georef_nombre: LA RAMADA
+- model: comunes.georef
+  pk: 668
+  fields:
+    nivel: 05
+    nombre: Macomitas
+    parent: 661
+    georef_id: 90007060000
+    georef_nombre: MACOMITAS
+- model: comunes.georef
+  pk: 669
+  fields:
+    nivel: 05
+    nombre: Piedrabuena
+    parent: 661
+    georef_id: 90007070000
+    georef_nombre: PIEDRABUENA
+- model: comunes.georef
+  pk: 670
+  fields:
+    nivel: 05
+    nombre: Villa Benjamin Araoz
+    parent: 661
+    georef_id: 90007090000
+    georef_nombre: VILLA BENJAMIN ARAOZ
+- model: comunes.georef
+  pk: 671
+  fields:
+    nivel: 05
+    nombre: Villa Burruyacu
+    parent: 661
+    georef_id: 90007100000
+    georef_nombre: VILLA BURRUYACU
+- model: comunes.georef
+  pk: 672
+  fields:
+    nivel: 05
+    nombre: Villa Padre Monti
+    parent: 661
+    georef_id: 90007110000
+    georef_nombre: VILLA PADRE MONTI
+- model: comunes.georef
+  pk: 673
+  fields:
+    nivel: 03
+    nombre: Capital
+    parent: 660
+    georef_id: 90084
+    georef_nombre: Capital
+- model: comunes.georef
+  pk: 674
+  fields:
+    nivel: 05
+    nombre: San Miguel De Tucuman
+    parent: 673
+    georef_id: 90084010000
+    georef_nombre: SAN MIGUEL DE TUCUMAN
+- model: comunes.georef
+  pk: 675
+  fields:
+    nivel: 03
+    nombre: Chicligasta
+    parent: 660
+    georef_id: 90021
+    georef_nombre: Chicligasta
+- model: comunes.georef
+  pk: 676
+  fields:
+    nivel: 05
+    nombre: Alpachiri
+    parent: 675
+    georef_id: 90021010000
+    georef_nombre: ALPACHIRI
+- model: comunes.georef
+  pk: 677
+  fields:
+    nivel: 05
+    nombre: Alto Verde
+    parent: 675
+    georef_id: 90021020000
+    georef_nombre: ALTO VERDE
+- model: comunes.georef
+  pk: 678
+  fields:
+    nivel: 05
+    nombre: Arcadia
+    parent: 675
+    georef_id: 90021030000
+    georef_nombre: ARCADIA
+- model: comunes.georef
+  pk: 679
+  fields:
+    nivel: 05
+    nombre: Concepcion
+    parent: 675
+    georef_id: 90021050000
+    georef_nombre: CONCEPCION
+- model: comunes.georef
+  pk: 680
+  fields:
+    nivel: 05
+    nombre: Iltico
+    parent: 675
+    georef_id: 90021060000
+    georef_nombre: ILTICO
+- model: comunes.georef
+  pk: 681
+  fields:
+    nivel: 05
+    nombre: La Trinidad
+    parent: 675
+    georef_id: 90021070000
+    georef_nombre: LA TRINIDAD
+- model: comunes.georef
+  pk: 682
+  fields:
+    nivel: 05
+    nombre: Medina
+    parent: 675
+    georef_id: 90021080000
+    georef_nombre: MEDINA
+- model: comunes.georef
+  pk: 683
+  fields:
+    nivel: 05
+    nombre: San Roque
+    parent: 675
+    georef_id: 90021040000
+    georef_nombre: SAN ROQUE
+- model: comunes.georef
+  pk: 684
+  fields:
+    nivel: 03
+    nombre: Cruz Alta
+    parent: 660
+    georef_id: 90014
+    georef_nombre: Cruz Alta
+- model: comunes.georef
+  pk: 685
+  fields:
+    nivel: 05
+    nombre: Alderetes
+    parent: 684
+    georef_id: 90014010001
+    georef_nombre: ALDERETES
+- model: comunes.georef
+  pk: 686
+  fields:
+    nivel: 05
+    nombre: Banda Del Rio Sali
+    parent: 684
+    georef_id: 90014020001
+    georef_nombre: BANDA DEL RIO SALI
+- model: comunes.georef
+  pk: 687
+  fields:
+    nivel: 05
+    nombre: Barrio Aeropuerto
+    parent: 684
+    georef_id: 90014020002
+    georef_nombre: BARRIO AEROPUERTO
+- model: comunes.georef
+  pk: 688
+  fields:
+    nivel: 05
+    nombre: Colombres
+    parent: 684
+    georef_id: 90014040000
+    georef_nombre: COLOMBRES
+- model: comunes.georef
+  pk: 689
+  fields:
+    nivel: 05
+    nombre: Colonia Mayo - Barrio La Milagrosa
+    parent: 684
+    georef_id: 90014050000
+    georef_nombre: COLONIA MAYO - BARRIO LA MILAGROSA
+- model: comunes.georef
+  pk: 690
+  fields:
+    nivel: 05
+    nombre: El Bracho
+    parent: 684
+    georef_id: 90014070000
+    georef_nombre: EL BRACHO
+- model: comunes.georef
+  pk: 691
+  fields:
+    nivel: 05
+    nombre: El Corte
+    parent: 684
+    georef_id: 90014010002
+    georef_nombre: EL CORTE
+- model: comunes.georef
+  pk: 692
+  fields:
+    nivel: 05
+    nombre: El Paraiso
+    parent: 684
+    georef_id: 90014060001
+    georef_nombre: EL PARAISO
+- model: comunes.georef
+  pk: 693
+  fields:
+    nivel: 05
+    nombre: Ex Ingenio Esperanza
+    parent: 684
+    georef_id: 90014060002
+    georef_nombre: EX INGENIO ESPERANZA
+- model: comunes.georef
+  pk: 694
+  fields:
+    nivel: 05
+    nombre: Ex Ingenio Los Ralos
+    parent: 684
+    georef_id: 90014100001
+    georef_nombre: EX INGENIO LOS RALOS
+- model: comunes.georef
+  pk: 695
+  fields:
+    nivel: 05
+    nombre: Ex Ingenio Lujan
+    parent: 684
+    georef_id: 90014060003
+    georef_nombre: EX INGENIO LUJAN
+- model: comunes.georef
+  pk: 696
+  fields:
+    nivel: 05
+    nombre: Ingenio La Florida
+    parent: 684
+    georef_id: 90014080001
+    georef_nombre: INGENIO LA FLORIDA
+- model: comunes.georef
+  pk: 697
+  fields:
+    nivel: 05
+    nombre: La Florida
+    parent: 684
+    georef_id: 90014080002
+    georef_nombre: LA FLORIDA
+- model: comunes.georef
+  pk: 698
+  fields:
+    nivel: 05
+    nombre: Las Cejas
+    parent: 684
+    georef_id: 90014090000
+    georef_nombre: LAS CEJAS
+- model: comunes.georef
+  pk: 699
+  fields:
+    nivel: 05
+    nombre: Lastenia
+    parent: 684
+    georef_id: 90014020003
+    georef_nombre: LASTENIA
+- model: comunes.georef
+  pk: 700
+  fields:
+    nivel: 05
+    nombre: Los Gutierrez
+    parent: 684
+    georef_id: 90014010003
+    georef_nombre: LOS GUTIERREZ
+- model: comunes.georef
+  pk: 701
+  fields:
+    nivel: 05
+    nombre: Pacara
+    parent: 684
+    georef_id: 90014110000
+    georef_nombre: PACARA
+- model: comunes.georef
+  pk: 702
+  fields:
+    nivel: 05
+    nombre: Ranchillos
+    parent: 684
+    georef_id: 90014120000
+    georef_nombre: RANCHILLOS
+- model: comunes.georef
+  pk: 703
+  fields:
+    nivel: 05
+    nombre: San Andres
+    parent: 684
+    georef_id: 90014130000
+    georef_nombre: SAN ANDRES
+- model: comunes.georef
+  pk: 704
+  fields:
+    nivel: 05
+    nombre: Villa Recaste
+    parent: 684
+    georef_id: 90014100002
+    georef_nombre: VILLA RECASTE
+- model: comunes.georef
+  pk: 705
+  fields:
+    nivel: 05
+    nombre: Villa Tercera
+    parent: 684
+    georef_id: 90014100003
+    georef_nombre: VILLA TERCERA
+- model: comunes.georef
+  pk: 706
+  fields:
+    nivel: 03
+    nombre: Famaillá
+    parent: 660
+    georef_id: 90028
+    georef_nombre: Famaillá
+- model: comunes.georef
+  pk: 707
+  fields:
+    nivel: 05
+    nombre: Barrio Casa Rosada
+    parent: 706
+    georef_id: 90028010000
+    georef_nombre: BARRIO CASA ROSADA
+- model: comunes.georef
+  pk: 708
+  fields:
+    nivel: 05
+    nombre: Campo De Herrera
+    parent: 706
+    georef_id: 90028020000
+    georef_nombre: CAMPO DE HERRERA
+- model: comunes.georef
+  pk: 709
+  fields:
+    nivel: 05
+    nombre: Ex Ingenio Nueva Baviera
+    parent: 706
+    georef_id: 90028030001
+    georef_nombre: EX INGENIO NUEVA BAVIERA
+- model: comunes.georef
+  pk: 710
+  fields:
+    nivel: 05
+    nombre: Famailla
+    parent: 706
+    georef_id: 90028030002
+    georef_nombre: FAMAILLA
+- model: comunes.georef
+  pk: 711
+  fields:
+    nivel: 05
+    nombre: Ingenio Fronterita
+    parent: 706
+    georef_id: 90028040000
+    georef_nombre: INGENIO FRONTERITA
+- model: comunes.georef
+  pk: 712
+  fields:
+    nivel: 03
+    nombre: Graneros
+    parent: 660
+    georef_id: 90035
+    georef_nombre: Graneros
+- model: comunes.georef
+  pk: 713
+  fields:
+    nivel: 05
+    nombre: Graneros
+    parent: 712
+    georef_id: 90035010000
+    georef_nombre: GRANEROS
+- model: comunes.georef
+  pk: 714
+  fields:
+    nivel: 05
+    nombre: Lamadrid
+    parent: 712
+    georef_id: 90035020000
+    georef_nombre: LAMADRID
+- model: comunes.georef
+  pk: 715
+  fields:
+    nivel: 05
+    nombre: Taco Ralo
+    parent: 712
+    georef_id: 90035030000
+    georef_nombre: TACO RALO
+- model: comunes.georef
+  pk: 716
+  fields:
+    nivel: 03
+    nombre: Juan Bautista Alberdi
+    parent: 660
+    georef_id: 90042
+    georef_nombre: Juan Bautista Alberdi
+- model: comunes.georef
+  pk: 717
+  fields:
+    nivel: 05
+    nombre: Juan Bautista Alberdi
+    parent: 716
+    georef_id: 90042010000
+    georef_nombre: JUAN BAUTISTA ALBERDI
+- model: comunes.georef
+  pk: 718
+  fields:
+    nivel: 05
+    nombre: Villa Belgrano
+    parent: 716
+    georef_id: 90042020000
+    georef_nombre: VILLA BELGRANO
+- model: comunes.georef
+  pk: 719
+  fields:
+    nivel: 03
+    nombre: La Cocha
+    parent: 660
+    georef_id: 90049
+    georef_nombre: La Cocha
+- model: comunes.georef
+  pk: 720
+  fields:
+    nivel: 05
+    nombre: La Cocha
+    parent: 719
+    georef_id: 90049010000
+    georef_nombre: LA COCHA
+- model: comunes.georef
+  pk: 721
+  fields:
+    nivel: 05
+    nombre: San Jose De La Cocha
+    parent: 719
+    georef_id: 90049020000
+    georef_nombre: SAN JOSE DE LA COCHA
+- model: comunes.georef
+  pk: 722
+  fields:
+    nivel: 03
+    nombre: Leales
+    parent: 660
+    georef_id: 90056
+    georef_nombre: Leales
+- model: comunes.georef
+  pk: 723
+  fields:
+    nivel: 05
+    nombre: Bella Vista
+    parent: 722
+    georef_id: 90056010000
+    georef_nombre: BELLA VISTA
+- model: comunes.georef
+  pk: 724
+  fields:
+    nivel: 05
+    nombre: Estacion Araoz
+    parent: 722
+    georef_id: 90056020000
+    georef_nombre: ESTACION ARAOZ
+- model: comunes.georef
+  pk: 725
+  fields:
+    nivel: 05
+    nombre: Los Puestos
+    parent: 722
+    georef_id: 90056030000
+    georef_nombre: LOS PUESTOS
+- model: comunes.georef
+  pk: 726
+  fields:
+    nivel: 05
+    nombre: Manuel Garcia Fernandez
+    parent: 722
+    georef_id: 90056040000
+    georef_nombre: MANUEL GARCIA FERNANDEZ
+- model: comunes.georef
+  pk: 727
+  fields:
+    nivel: 05
+    nombre: Pala Pala
+    parent: 722
+    georef_id: 90056050000
+    georef_nombre: PALA PALA
+- model: comunes.georef
+  pk: 728
+  fields:
+    nivel: 05
+    nombre: Rio Colorado
+    parent: 722
+    georef_id: 90056060000
+    georef_nombre: RIO COLORADO
+- model: comunes.georef
+  pk: 729
+  fields:
+    nivel: 05
+    nombre: Santa Rosa De Leales
+    parent: 722
+    georef_id: 90056070000
+    georef_nombre: SANTA ROSA DE LEALES
+- model: comunes.georef
+  pk: 730
+  fields:
+    nivel: 05
+    nombre: Villa De Leales
+    parent: 722
+    georef_id: 90056090000
+    georef_nombre: VILLA DE LEALES
+- model: comunes.georef
+  pk: 731
+  fields:
+    nivel: 05
+    nombre: Villa Fiad - Ingenio Leales
+    parent: 722
+    georef_id: 90056080000
+    georef_nombre: VILLA FIAD - INGENIO LEALES
+- model: comunes.georef
+  pk: 732
+  fields:
+    nivel: 03
+    nombre: Lules
+    parent: 660
+    georef_id: 90063
+    georef_nombre: Lules
+- model: comunes.georef
+  pk: 733
+  fields:
+    nivel: 05
+    nombre: Barrio Araujo
+    parent: 732
+    georef_id: 90063020001
+    georef_nombre: BARRIO ARAUJO
+- model: comunes.georef
+  pk: 734
+  fields:
+    nivel: 05
+    nombre: Barrio San Felipe
+    parent: 732
+    georef_id: 90063010000
+    georef_nombre: BARRIO SAN FELIPE
+- model: comunes.georef
+  pk: 735
+  fields:
+    nivel: 05
+    nombre: El Manantial
+    parent: 732
+    georef_id: 90063020002
+    georef_nombre: EL MANANTIAL
+- model: comunes.georef
+  pk: 736
+  fields:
+    nivel: 05
+    nombre: Ingenio San Pablo
+    parent: 732
+    georef_id: 90063030000
+    georef_nombre: INGENIO SAN PABLO
+- model: comunes.georef
+  pk: 737
+  fields:
+    nivel: 05
+    nombre: La Reduccion
+    parent: 732
+    georef_id: 90063040000
+    georef_nombre: LA REDUCCION
+- model: comunes.georef
+  pk: 738
+  fields:
+    nivel: 05
+    nombre: Lules
+    parent: 732
+    georef_id: 90063050000
+    georef_nombre: LULES
+- model: comunes.georef
+  pk: 739
+  fields:
+    nivel: 03
+    nombre: Monteros
+    parent: 660
+    georef_id: 90070
+    georef_nombre: Monteros
+- model: comunes.georef
+  pk: 740
+  fields:
+    nivel: 05
+    nombre: Acheral
+    parent: 739
+    georef_id: 90070010000
+    georef_nombre: ACHERAL
+- model: comunes.georef
+  pk: 741
+  fields:
+    nivel: 05
+    nombre: Capitan Caceres
+    parent: 739
+    georef_id: 90070020000
+    georef_nombre: CAPITAN CACERES
+- model: comunes.georef
+  pk: 742
+  fields:
+    nivel: 05
+    nombre: Monteros
+    parent: 739
+    georef_id: 90070030000
+    georef_nombre: MONTEROS
+- model: comunes.georef
+  pk: 743
+  fields:
+    nivel: 05
+    nombre: Pueblo Independencia
+    parent: 739
+    georef_id: 90070040000
+    georef_nombre: PUEBLO INDEPENDENCIA
+- model: comunes.georef
+  pk: 744
+  fields:
+    nivel: 05
+    nombre: Rio Seco
+    parent: 739
+    georef_id: 90070050000
+    georef_nombre: RIO SECO
+- model: comunes.georef
+  pk: 745
+  fields:
+    nivel: 05
+    nombre: Santa Lucia
+    parent: 739
+    georef_id: 90070060000
+    georef_nombre: SANTA LUCIA
+- model: comunes.georef
+  pk: 746
+  fields:
+    nivel: 05
+    nombre: Sargento Moya
+    parent: 739
+    georef_id: 90070070000
+    georef_nombre: SARGENTO MOYA
+- model: comunes.georef
+  pk: 747
+  fields:
+    nivel: 05
+    nombre: Soldado Maldonado
+    parent: 739
+    georef_id: 90070080000
+    georef_nombre: SOLDADO MALDONADO
+- model: comunes.georef
+  pk: 748
+  fields:
+    nivel: 05
+    nombre: Teniente Berdina
+    parent: 739
+    georef_id: 90070090000
+    georef_nombre: TENIENTE BERDINA
+- model: comunes.georef
+  pk: 749
+  fields:
+    nivel: 05
+    nombre: Villa Quinteros
+    parent: 739
+    georef_id: 90070100000
+    georef_nombre: VILLA QUINTEROS
+- model: comunes.georef
+  pk: 750
+  fields:
+    nivel: 03
+    nombre: Río Chico
+    parent: 660
+    georef_id: 90077
+    georef_nombre: Río Chico
+- model: comunes.georef
+  pk: 751
+  fields:
+    nivel: 05
+    nombre: Aguilares
+    parent: 750
+    georef_id: 90077010001
+    georef_nombre: AGUILARES
+- model: comunes.georef
+  pk: 752
+  fields:
+    nivel: 05
+    nombre: Ingenio Santa Barbara
+    parent: 750
+    georef_id: 90077010002
+    georef_nombre: INGENIO SANTA BARBARA
+- model: comunes.georef
+  pk: 753
+  fields:
+    nivel: 05
+    nombre: Los Sarmientos
+    parent: 750
+    georef_id: 90077020000
+    georef_nombre: LOS SARMIENTOS
+- model: comunes.georef
+  pk: 754
+  fields:
+    nivel: 05
+    nombre: Rio Chico
+    parent: 750
+    georef_id: 90077030000
+    georef_nombre: RIO CHICO
+- model: comunes.georef
+  pk: 755
+  fields:
+    nivel: 05
+    nombre: Santa Ana
+    parent: 750
+    georef_id: 90077040000
+    georef_nombre: SANTA ANA
+- model: comunes.georef
+  pk: 756
+  fields:
+    nivel: 05
+    nombre: Villa Clodomiro Hileret
+    parent: 750
+    georef_id: 90077050000
+    georef_nombre: VILLA CLODOMIRO HILERET
+- model: comunes.georef
+  pk: 757
+  fields:
+    nivel: 03
+    nombre: Simoca
+    parent: 660
+    georef_id: 90091
+    georef_nombre: Simoca
+- model: comunes.georef
+  pk: 758
+  fields:
+    nivel: 05
+    nombre: Atahona
+    parent: 757
+    georef_id: 90091010000
+    georef_nombre: ATAHONA
+- model: comunes.georef
+  pk: 759
+  fields:
+    nivel: 05
+    nombre: Monteagudo
+    parent: 757
+    georef_id: 90091020000
+    georef_nombre: MONTEAGUDO
+- model: comunes.georef
+  pk: 760
+  fields:
+    nivel: 05
+    nombre: Nueva Trinidad
+    parent: 757
+    georef_id: 90091030000
+    georef_nombre: NUEVA TRINIDAD
+- model: comunes.georef
+  pk: 761
+  fields:
+    nivel: 05
+    nombre: Santa Cruz
+    parent: 757
+    georef_id: 90091040000
+    georef_nombre: SANTA CRUZ
+- model: comunes.georef
+  pk: 762
+  fields:
+    nivel: 05
+    nombre: Simoca
+    parent: 757
+    georef_id: 90091050000
+    georef_nombre: SIMOCA
+- model: comunes.georef
+  pk: 763
+  fields:
+    nivel: 05
+    nombre: Villa Chicligasta
+    parent: 757
+    georef_id: 90091060000
+    georef_nombre: VILLA CHICLIGASTA
+- model: comunes.georef
+  pk: 764
+  fields:
+    nivel: 03
+    nombre: Tafí Del Valle
+    parent: 660
+    georef_id: 90098
+    georef_nombre: Tafí del Valle
+- model: comunes.georef
+  pk: 765
+  fields:
+    nivel: 05
+    nombre: Amaicha Del Valle
+    parent: 764
+    georef_id: 90098010000
+    georef_nombre: AMAICHA DEL VALLE
+- model: comunes.georef
+  pk: 766
+  fields:
+    nivel: 05
+    nombre: Colalao Del Valle
+    parent: 764
+    georef_id: 90098020000
+    georef_nombre: COLALAO DEL VALLE
+- model: comunes.georef
+  pk: 767
+  fields:
+    nivel: 05
+    nombre: El Mollar
+    parent: 764
+    georef_id: 90098030000
+    georef_nombre: EL MOLLAR
+- model: comunes.georef
+  pk: 768
+  fields:
+    nivel: 05
+    nombre: Tafi Del Valle
+    parent: 764
+    georef_id: 90098040000
+    georef_nombre: TAFI DEL VALLE
+- model: comunes.georef
+  pk: 769
+  fields:
+    nivel: 03
+    nombre: Tafí Viejo
+    parent: 660
+    georef_id: 90105
+    georef_nombre: Tafí Viejo
+- model: comunes.georef
+  pk: 770
+  fields:
+    nivel: 05
+    nombre: Barrio El Cruce
+    parent: 769
+    georef_id: 90105010000
+    georef_nombre: BARRIO EL CRUCE
+- model: comunes.georef
+  pk: 771
+  fields:
+    nivel: 05
+    nombre: Barrio Lomas De Tafi
+    parent: 769
+    georef_id: 90105020000
+    georef_nombre: BARRIO LOMAS DE TAFI
+- model: comunes.georef
+  pk: 772
+  fields:
+    nivel: 05
+    nombre: Barrio Mutual San Martin
+    parent: 769
+    georef_id: 90105030000
+    georef_nombre: BARRIO MUTUAL SAN MARTIN
+- model: comunes.georef
+  pk: 773
+  fields:
+    nivel: 05
+    nombre: Barrio Parada 14
+    parent: 769
+    georef_id: 90105040000
+    georef_nombre: BARRIO PARADA 14
+- model: comunes.georef
+  pk: 774
+  fields:
+    nivel: 05
+    nombre: Barrio U.T.A. Ii
+    parent: 769
+    georef_id: 90105050000
+    georef_nombre: BARRIO U.T.A. II
+- model: comunes.georef
+  pk: 775
+  fields:
+    nivel: 05
+    nombre: Diag. Norte - Luz Y Fuerza - Los Pocitos
+    parent: 769
+    georef_id: 90105060000
+    georef_nombre: DIAG. NORTE - LUZ Y FUERZA - LOS POCITOS
+- model: comunes.georef
+  pk: 776
+  fields:
+    nivel: 05
+    nombre: El Cadillal
+    parent: 769
+    georef_id: 90105070000
+    georef_nombre: EL CADILLAL
+- model: comunes.georef
+  pk: 777
+  fields:
+    nivel: 05
+    nombre: Tafi Viejo
+    parent: 769
+    georef_id: 90105080000
+    georef_nombre: TAFI VIEJO
+- model: comunes.georef
+  pk: 778
+  fields:
+    nivel: 05
+    nombre: Villa Las Flores
+    parent: 769
+    georef_id: 90105090000
+    georef_nombre: VILLA LAS FLORES
+- model: comunes.georef
+  pk: 779
+  fields:
+    nivel: 05
+    nombre: Villa Mariano Moreno - El Colmenar
+    parent: 769
+    georef_id: 90105100000
+    georef_nombre: VILLA MARIANO MORENO - EL COLMENAR
+- model: comunes.georef
+  pk: 780
+  fields:
+    nivel: 03
+    nombre: Trancas
+    parent: 660
+    georef_id: 90112
+    georef_nombre: Trancas
+- model: comunes.georef
+  pk: 781
+  fields:
+    nivel: 05
+    nombre: Choromoro
+    parent: 780
+    georef_id: 90112010000
+    georef_nombre: CHOROMORO
+- model: comunes.georef
+  pk: 782
+  fields:
+    nivel: 05
+    nombre: San Pedro De Colalao
+    parent: 780
+    georef_id: 90112020000
+    georef_nombre: SAN PEDRO DE COLALAO
+- model: comunes.georef
+  pk: 783
+  fields:
+    nivel: 05
+    nombre: Villa De Trancas
+    parent: 780
+    georef_id: 90112030000
+    georef_nombre: VILLA DE TRANCAS
+- model: comunes.georef
+  pk: 784
+  fields:
+    nivel: 03
+    nombre: Yerba Buena
+    parent: 660
+    georef_id: 90119
+    georef_nombre: Yerba Buena
+- model: comunes.georef
+  pk: 785
+  fields:
+    nivel: 05
+    nombre: Barrio San Jose Iii
+    parent: 784
+    georef_id: 90119010000
+    georef_nombre: BARRIO SAN JOSE III
+- model: comunes.georef
+  pk: 786
+  fields:
+    nivel: 05
+    nombre: Barrio San Jose Iii
+    parent: 784
+    georef_id: 90119010001
+    georef_nombre: BARRIO SAN JOSE III
+- model: comunes.georef
+  pk: 787
+  fields:
+    nivel: 05
+    nombre: Country Jockey Club
+    parent: 784
+    georef_id: 90119010002
+    georef_nombre: COUNTRY JOCKEY CLUB
+- model: comunes.georef
+  pk: 788
+  fields:
+    nivel: 05
+    nombre: Ex Ingenio San Jose
+    parent: 784
+    georef_id: 90119030001
+    georef_nombre: EX INGENIO SAN JOSE
+- model: comunes.georef
+  pk: 789
+  fields:
+    nivel: 05
+    nombre: Villa Carmela
+    parent: 784
+    georef_id: 90119020000
+    georef_nombre: VILLA CARMELA
+- model: comunes.georef
+  pk: 790
+  fields:
+    nivel: 05
+    nombre: Yerba Buena - Marcos Paz
+    parent: 784
+    georef_id: 90119030002
+    georef_nombre: YERBA BUENA - MARCOS PAZ
+- model: comunes.georef
+  pk: 791
+  fields:
+    nivel: 04
+    nombre: 7 De Abril
+    parent: 660
+    georef_id: 908007
+    georef_nombre: 7 de Abril
+- model: comunes.georef
+  pk: 792
+  fields:
+    nivel: 04
+    nombre: Acheral
+    parent: 660
+    georef_id: 908378
+    georef_nombre: Acheral
+- model: comunes.georef
+  pk: 793
+  fields:
+    nivel: 04
+    nombre: Agua Dulce Y La Soledad
+    parent: 660
+    georef_id: 908273
+    georef_nombre: Agua Dulce y la Soledad
+- model: comunes.georef
+  pk: 794
+  fields:
+    nivel: 04
+    nombre: Alpachiri Y El Molino
+    parent: 660
+    georef_id: 908161
+    georef_nombre: Alpachiri y el Molino
+- model: comunes.georef
+  pk: 795
+  fields:
+    nivel: 04
+    nombre: Alto Verde Y Los Guchea
+    parent: 660
+    georef_id: 908168
+    georef_nombre: Alto Verde y los Guchea
+- model: comunes.georef
+  pk: 796
+  fields:
+    nivel: 04
+    nombre: Amaicha Del Valle
+    parent: 660
+    georef_id: 908567
+    georef_nombre: Amaicha del Valle
+- model: comunes.georef
+  pk: 797
+  fields:
+    nivel: 04
+    nombre: Amberes
+    parent: 660
+    georef_id: 908385
+    georef_nombre: Amberes
+- model: comunes.georef
+  pk: 798
+  fields:
+    nivel: 04
+    nombre: Ancajuli
+    parent: 660
+    georef_id: 908595
+    georef_nombre: Ancajuli
+- model: comunes.georef
+  pk: 799
+  fields:
+    nivel: 04
+    nombre: Arcadia
+    parent: 660
+    georef_id: 908175
+    georef_nombre: Arcadia
+- model: comunes.georef
+  pk: 800
+  fields:
+    nivel: 04
+    nombre: Atahona
+    parent: 660
+    georef_id: 908490
+    georef_nombre: Atahona
+- model: comunes.georef
+  pk: 801
+  fields:
+    nivel: 04
+    nombre: Benjamin Araoz Y El Tajamar
+    parent: 660
+    georef_id: 908063
+    georef_nombre: Benjamin Araoz y el Tajamar
+- model: comunes.georef
+  pk: 802
+  fields:
+    nivel: 04
+    nombre: Buena Vista
+    parent: 660
+    georef_id: 908497
+    georef_nombre: Buena Vista
+- model: comunes.georef
+  pk: 803
+  fields:
+    nivel: 04
+    nombre: Capitan Caceres
+    parent: 660
+    georef_id: 908392
+    georef_nombre: Capitan Caceres
+- model: comunes.georef
+  pk: 804
+  fields:
+    nivel: 04
+    nombre: Cevil Redondo
+    parent: 660
+    georef_id: 908644
+    georef_nombre: Cevil Redondo
+- model: comunes.georef
+  pk: 805
+  fields:
+    nivel: 04
+    nombre: Choromoro
+    parent: 660
+    georef_id: 908623
+    georef_nombre: Choromoro
+- model: comunes.georef
+  pk: 806
+  fields:
+    nivel: 04
+    nombre: Ciudacita
+    parent: 660
+    georef_id: 908504
+    georef_nombre: Ciudacita
+- model: comunes.georef
+  pk: 807
+  fields:
+    nivel: 04
+    nombre: Colalao Del Valle
+    parent: 660
+    georef_id: 908574
+    georef_nombre: Colalao del Valle
+- model: comunes.georef
+  pk: 808
+  fields:
+    nivel: 04
+    nombre: Colombres
+    parent: 660
+    georef_id: 908077
+    georef_nombre: Colombres
+- model: comunes.georef
+  pk: 809
+  fields:
+    nivel: 04
+    nombre: Comuna Villa Belgrano
+    parent: 660
+    georef_id: 908224
+    georef_nombre: Comuna Villa Belgrano
+- model: comunes.georef
+  pk: 810
+  fields:
+    nivel: 04
+    nombre: Delfin Gallo
+    parent: 660
+    georef_id: 908084
+    georef_nombre: Delfin Gallo
+- model: comunes.georef
+  pk: 811
+  fields:
+    nivel: 04
+    nombre: El Bracho Y El Cevilar
+    parent: 660
+    georef_id: 908091
+    georef_nombre: El Bracho y el Cevilar
+- model: comunes.georef
+  pk: 812
+  fields:
+    nivel: 04
+    nombre: El Cadillal
+    parent: 660
+    georef_id: 908602
+    georef_nombre: El Cadillal
+- model: comunes.georef
+  pk: 813
+  fields:
+    nivel: 04
+    nombre: El Cercado
+    parent: 660
+    georef_id: 908399
+    georef_nombre: El Cercado
+- model: comunes.georef
+  pk: 814
+  fields:
+    nivel: 04
+    nombre: El Chañar
+    parent: 660
+    georef_id: 908014
+    georef_nombre: El Chañar
+- model: comunes.georef
+  pk: 815
+  fields:
+    nivel: 04
+    nombre: El Manantial
+    parent: 660
+    georef_id: 908357
+    georef_nombre: El Manantial
+- model: comunes.georef
+  pk: 816
+  fields:
+    nivel: 04
+    nombre: El Mojon
+    parent: 660
+    georef_id: 908280
+    georef_nombre: El Mojon
+- model: comunes.georef
+  pk: 817
+  fields:
+    nivel: 04
+    nombre: El Mollar
+    parent: 660
+    georef_id: 908581
+    georef_nombre: El Mollar
+- model: comunes.georef
+  pk: 818
+  fields:
+    nivel: 04
+    nombre: El Naranjito
+    parent: 660
+    georef_id: 908098
+    georef_nombre: El Naranjito
+- model: comunes.georef
+  pk: 819
+  fields:
+    nivel: 04
+    nombre: El Naranjo Y El Sunchal
+    parent: 660
+    georef_id: 908021
+    georef_nombre: El Naranjo y el Sunchal
+- model: comunes.georef
+  pk: 820
+  fields:
+    nivel: 04
+    nombre: El Polear
+    parent: 660
+    georef_id: 908462
+    georef_nombre: El Polear
+- model: comunes.georef
+  pk: 821
+  fields:
+    nivel: 04
+    nombre: El Puestito
+    parent: 660
+    georef_id: 908028
+    georef_nombre: El Puestito
+- model: comunes.georef
+  pk: 822
+  fields:
+    nivel: 04
+    nombre: El Sacrificio
+    parent: 660
+    georef_id: 908231
+    georef_nombre: El Sacrificio
+- model: comunes.georef
+  pk: 823
+  fields:
+    nivel: 04
+    nombre: El Timbo
+    parent: 660
+    georef_id: 908035
+    georef_nombre: El Timbo
+- model: comunes.georef
+  pk: 824
+  fields:
+    nivel: 04
+    nombre: Escaba
+    parent: 660
+    georef_id: 908217
+    georef_nombre: Escaba
+- model: comunes.georef
+  pk: 825
+  fields:
+    nivel: 04
+    nombre: Esquina Y Mancopa
+    parent: 660
+    georef_id: 908287
+    georef_nombre: Esquina y Mancopa
+- model: comunes.georef
+  pk: 826
+  fields:
+    nivel: 04
+    nombre: Estacion Araoz Y Tacanas
+    parent: 660
+    georef_id: 908294
+    georef_nombre: Estacion Araoz y Tacanas
+- model: comunes.georef
+  pk: 827
+  fields:
+    nivel: 04
+    nombre: Garmendia
+    parent: 660
+    georef_id: 908042
+    georef_nombre: Garmendia
+- model: comunes.georef
+  pk: 828
+  fields:
+    nivel: 04
+    nombre: Gastona Y Belicha
+    parent: 660
+    georef_id: 908182
+    georef_nombre: Gastona y Belicha
+- model: comunes.georef
+  pk: 829
+  fields:
+    nivel: 04
+    nombre: Gdor. Piedrabuena
+    parent: 660
+    georef_id: 908049
+    georef_nombre: Gdor. Piedrabuena
+- model: comunes.georef
+  pk: 830
+  fields:
+    nivel: 04
+    nombre: Huasa Pampa
+    parent: 660
+    georef_id: 908238
+    georef_nombre: Huasa Pampa
+- model: comunes.georef
+  pk: 831
+  fields:
+    nivel: 04
+    nombre: La Esperanza
+    parent: 660
+    georef_id: 908609
+    georef_nombre: La Esperanza
+- model: comunes.georef
+  pk: 832
+  fields:
+    nivel: 04
+    nombre: La Florida Y Luisiana
+    parent: 660
+    georef_id: 908105
+    georef_nombre: La Florida y Luisiana
+- model: comunes.georef
+  pk: 833
+  fields:
+    nivel: 04
+    nombre: La Ramada Y La Cruz
+    parent: 660
+    georef_id: 908056
+    georef_nombre: La Ramada y la Cruz
+- model: comunes.georef
+  pk: 834
+  fields:
+    nivel: 04
+    nombre: Lamadrid
+    parent: 660
+    georef_id: 908203
+    georef_nombre: Lamadrid
+- model: comunes.georef
+  pk: 835
+  fields:
+    nivel: 04
+    nombre: Las Cejas
+    parent: 660
+    georef_id: 908112
+    georef_nombre: Las Cejas
+- model: comunes.georef
+  pk: 836
+  fields:
+    nivel: 04
+    nombre: Las Talas
+    parent: 660
+    georef_id: 908301
+    georef_nombre: Las Talas
+- model: comunes.georef
+  pk: 837
+  fields:
+    nivel: 04
+    nombre: Leon Rouges Y Santa Rosa
+    parent: 660
+    georef_id: 908406
+    georef_nombre: Leon Rouges y Santa Rosa
+- model: comunes.georef
+  pk: 838
+  fields:
+    nivel: 04
+    nombre: Los Bulacios Y Los Villagras
+    parent: 660
+    georef_id: 908119
+    georef_nombre: Los Bulacios y los Villagras
+- model: comunes.georef
+  pk: 839
+  fields:
+    nivel: 04
+    nombre: Los Gomez
+    parent: 660
+    georef_id: 908308
+    georef_nombre: Los Gomez
+- model: comunes.georef
+  pk: 840
+  fields:
+    nivel: 04
+    nombre: Los Nogales
+    parent: 660
+    georef_id: 908616
+    georef_nombre: Los Nogales
+- model: comunes.georef
+  pk: 841
+  fields:
+    nivel: 04
+    nombre: Los Pereyras
+    parent: 660
+    georef_id: 908126
+    georef_nombre: Los Pereyras
+- model: comunes.georef
+  pk: 842
+  fields:
+    nivel: 04
+    nombre: Los Perez
+    parent: 660
+    georef_id: 908133
+    georef_nombre: Los Perez
+- model: comunes.georef
+  pk: 843
+  fields:
+    nivel: 04
+    nombre: Los Puestos
+    parent: 660
+    georef_id: 908315
+    georef_nombre: Los Puestos
+- model: comunes.georef
+  pk: 844
+  fields:
+    nivel: 04
+    nombre: Los Ralos
+    parent: 660
+    georef_id: 908140
+    georef_nombre: Los Ralos
+- model: comunes.georef
+  pk: 845
+  fields:
+    nivel: 04
+    nombre: Los Sarmiento Y La Tipa
+    parent: 660
+    georef_id: 908469
+    georef_nombre: Los Sarmiento y la Tipa
+- model: comunes.georef
+  pk: 846
+  fields:
+    nivel: 04
+    nombre: Los Sosa
+    parent: 660
+    georef_id: 908413
+    georef_nombre: Los Sosa
+- model: comunes.georef
+  pk: 847
+  fields:
+    nivel: 04
+    nombre: Manuel Garcia Fernandez
+    parent: 660
+    georef_id: 908322
+    georef_nombre: Manuel Garcia Fernandez
+- model: comunes.georef
+  pk: 848
+  fields:
+    nivel: 04
+    nombre: Manuela Pedraza
+    parent: 660
+    georef_id: 908511
+    georef_nombre: Manuela Pedraza
+- model: comunes.georef
+  pk: 849
+  fields:
+    nivel: 04
+    nombre: Medina
+    parent: 660
+    georef_id: 908196
+    georef_nombre: Medina
+- model: comunes.georef
+  pk: 850
+  fields:
+    nivel: 04
+    nombre: Monte Bello
+    parent: 660
+    georef_id: 908476
+    georef_nombre: Monte Bello
+- model: comunes.georef
+  pk: 851
+  fields:
+    nivel: 04
+    nombre: Monteagudo
+    parent: 660
+    georef_id: 908518
+    georef_nombre: Monteagudo
+- model: comunes.georef
+  pk: 852
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Aguilares
+    parent: 660
+    georef_id: 900091
+    georef_nombre: Municipalidad de Aguilares
+- model: comunes.georef
+  pk: 853
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Alderetes
+    parent: 660
+    georef_id: 900021
+    georef_nombre: Municipalidad de Alderetes
+- model: comunes.georef
+  pk: 854
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Banda Del Rio Sali
+    parent: 660
+    georef_id: 900028
+    georef_nombre: Municipalidad de Banda del Rio Sali
+- model: comunes.georef
+  pk: 855
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Bella Vista
+    parent: 660
+    georef_id: 900070
+    georef_nombre: Municipalidad de Bella Vista
+- model: comunes.georef
+  pk: 856
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Burruyacu
+    parent: 660
+    georef_id: 900007
+    georef_nombre: Municipalidad de Burruyacu
+- model: comunes.georef
+  pk: 857
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Concepcion
+    parent: 660
+    georef_id: 900035
+    georef_nombre: Municipalidad de Concepcion
+- model: comunes.georef
+  pk: 858
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Famailla
+    parent: 660
+    georef_id: 900042
+    georef_nombre: Municipalidad de Famailla
+- model: comunes.georef
+  pk: 859
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Graneros
+    parent: 660
+    georef_id: 900049
+    georef_nombre: Municipalidad de Graneros
+- model: comunes.georef
+  pk: 860
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Juan Bautista Alberdi
+    parent: 660
+    georef_id: 900056
+    georef_nombre: Municipalidad de Juan Bautista Alberdi
+- model: comunes.georef
+  pk: 861
+  fields:
+    nivel: 04
+    nombre: Municipalidad De La Cocha
+    parent: 660
+    georef_id: 900063
+    georef_nombre: Municipalidad de la Cocha
+- model: comunes.georef
+  pk: 862
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Las Talitas
+    parent: 660
+    georef_id: 900112
+    georef_nombre: Municipalidad de las Talitas
+- model: comunes.georef
+  pk: 863
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Lules
+    parent: 660
+    georef_id: 900077
+    georef_nombre: Municipalidad de Lules
+- model: comunes.georef
+  pk: 864
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Monteros
+    parent: 660
+    georef_id: 900084
+    georef_nombre: Municipalidad de Monteros
+- model: comunes.georef
+  pk: 865
+  fields:
+    nivel: 04
+    nombre: Municipalidad De San Miguel De Tucuman
+    parent: 660
+    georef_id: 900014
+    georef_nombre: Municipalidad de San Miguel De Tucuman
+- model: comunes.georef
+  pk: 866
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Simoca
+    parent: 660
+    georef_id: 900098
+    georef_nombre: Municipalidad de Simoca
+- model: comunes.georef
+  pk: 867
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Tafi Del Valle
+    parent: 660
+    georef_id: 900105
+    georef_nombre: Municipalidad de Tafi del Valle
+- model: comunes.georef
+  pk: 868
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Tafi Viejo
+    parent: 660
+    georef_id: 900119
+    georef_nombre: Municipalidad de Tafi Viejo
+- model: comunes.georef
+  pk: 869
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Trancas
+    parent: 660
+    georef_id: 900126
+    georef_nombre: Municipalidad de Trancas
+- model: comunes.georef
+  pk: 870
+  fields:
+    nivel: 04
+    nombre: Municipalidad De Yerba Buena
+    parent: 660
+    georef_id: 908560
+    georef_nombre: Municipalidad de Yerba Buena
+- model: comunes.georef
+  pk: 871
+  fields:
+    nivel: 04
+    nombre: Pampa Mayo
+    parent: 660
+    georef_id: 908525
+    georef_nombre: Pampa Mayo
+- model: comunes.georef
+  pk: 872
+  fields:
+    nivel: 04
+    nombre: Quilmes Y Los Sueldos
+    parent: 660
+    georef_id: 908329
+    georef_nombre: Quilmes y los Sueldos
+- model: comunes.georef
+  pk: 873
+  fields:
+    nivel: 04
+    nombre: Raco
+    parent: 660
+    georef_id: 908588
+    georef_nombre: Raco
+- model: comunes.georef
+  pk: 874
+  fields:
+    nivel: 04
+    nombre: Ranchillos Y San Miguel
+    parent: 660
+    georef_id: 908147
+    georef_nombre: Ranchillos y San Miguel
+- model: comunes.georef
+  pk: 875
+  fields:
+    nivel: 04
+    nombre: Rio Chico Y Nueva Trinidad
+    parent: 660
+    georef_id: 908532
+    georef_nombre: Rio Chico y Nueva Trinidad
+- model: comunes.georef
+  pk: 876
+  fields:
+    nivel: 04
+    nombre: Rio Colorado
+    parent: 660
+    georef_id: 908336
+    georef_nombre: Rio Colorado
+- model: comunes.georef
+  pk: 877
+  fields:
+    nivel: 04
+    nombre: Rio Seco
+    parent: 660
+    georef_id: 908420
+    georef_nombre: Rio Seco
+- model: comunes.georef
+  pk: 878
+  fields:
+    nivel: 04
+    nombre: Rumipunco
+    parent: 660
+    georef_id: 908245
+    georef_nombre: Rumipunco
+- model: comunes.georef
+  pk: 879
+  fields:
+    nivel: 04
+    nombre: San Andres
+    parent: 660
+    georef_id: 908154
+    georef_nombre: San Andres
+- model: comunes.georef
+  pk: 880
+  fields:
+    nivel: 04
+    nombre: San Felipe Y Santa Barbara
+    parent: 660
+    georef_id: 908364
+    georef_nombre: San Felipe y Santa Barbara
+- model: comunes.georef
+  pk: 881
+  fields:
+    nivel: 04
+    nombre: San Ignacio
+    parent: 660
+    georef_id: 908252
+    georef_nombre: San Ignacio
+- model: comunes.georef
+  pk: 882
+  fields:
+    nivel: 04
+    nombre: San Javier
+    parent: 660
+    georef_id: 908651
+    georef_nombre: San Javier
+- model: comunes.georef
+  pk: 883
+  fields:
+    nivel: 04
+    nombre: San Jose De La Cocha
+    parent: 660
+    georef_id: 908259
+    georef_nombre: San Jose de la Cocha
+- model: comunes.georef
+  pk: 884
+  fields:
+    nivel: 04
+    nombre: San Pablo Y Villa Nougues
+    parent: 660
+    georef_id: 908371
+    georef_nombre: San Pablo y Villa Nougues
+- model: comunes.georef
+  pk: 885
+  fields:
+    nivel: 04
+    nombre: San Pedro De Colalao
+    parent: 660
+    georef_id: 908630
+    georef_nombre: San Pedro de Colalao
+- model: comunes.georef
+  pk: 886
+  fields:
+    nivel: 04
+    nombre: San Pedro Y San Antonio
+    parent: 660
+    georef_id: 908539
+    georef_nombre: San Pedro y San Antonio
+- model: comunes.georef
+  pk: 887
+  fields:
+    nivel: 04
+    nombre: Santa Ana
+    parent: 660
+    georef_id: 908483
+    georef_nombre: Santa Ana
+- model: comunes.georef
+  pk: 888
+  fields:
+    nivel: 04
+    nombre: Santa Cruz Y La Tuna
+    parent: 660
+    georef_id: 908546
+    georef_nombre: Santa Cruz y la Tuna
+- model: comunes.georef
+  pk: 889
+  fields:
+    nivel: 04
+    nombre: Santa Lucia
+    parent: 660
+    georef_id: 908427
+    georef_nombre: Santa Lucia
+- model: comunes.georef
+  pk: 890
+  fields:
+    nivel: 04
+    nombre: Santa Rosa De Leales Y L. Blanca
+    parent: 660
+    georef_id: 908343
+    georef_nombre: Santa Rosa de Leales y L. Blanca
+- model: comunes.georef
+  pk: 891
+  fields:
+    nivel: 04
+    nombre: Sargento Moya
+    parent: 660
+    georef_id: 908434
+    georef_nombre: Sargento Moya
+- model: comunes.georef
+  pk: 892
+  fields:
+    nivel: 04
+    nombre: Soldado Maldonado
+    parent: 660
+    georef_id: 908441
+    georef_nombre: Soldado Maldonado
+- model: comunes.georef
+  pk: 893
+  fields:
+    nivel: 04
+    nombre: Taco Ralo
+    parent: 660
+    georef_id: 908210
+    georef_nombre: Taco Ralo
+- model: comunes.georef
+  pk: 894
+  fields:
+    nivel: 04
+    nombre: Tapia
+    parent: 660
+    georef_id: 908637
+    georef_nombre: Tapia
+- model: comunes.georef
+  pk: 895
+  fields:
+    nivel: 04
+    nombre: Teniente Berdina
+    parent: 660
+    georef_id: 908448
+    georef_nombre: Teniente Berdina
+- model: comunes.georef
+  pk: 896
+  fields:
+    nivel: 04
+    nombre: Trinidad
+    parent: 660
+    georef_id: 908189
+    georef_nombre: Trinidad
+- model: comunes.georef
+  pk: 897
+  fields:
+    nivel: 04
+    nombre: Villa De Chicligasta
+    parent: 660
+    georef_id: 908553
+    georef_nombre: Villa de Chicligasta
+- model: comunes.georef
+  pk: 898
+  fields:
+    nivel: 04
+    nombre: Villa De Leales
+    parent: 660
+    georef_id: 908350
+    georef_nombre: Villa de Leales
+- model: comunes.georef
+  pk: 899
+  fields:
+    nivel: 04
+    nombre: Villa Padre Monti
+    parent: 660
+    georef_id: 908070
+    georef_nombre: Villa Padre Monti
+- model: comunes.georef
+  pk: 900
+  fields:
+    nivel: 04
+    nombre: Villa Quinteros
+    parent: 660
+    georef_id: 908455
+    georef_nombre: Villa Quinteros
+- model: comunes.georef
+  pk: 901
+  fields:
+    nivel: 04
+    nombre: Yanima
+    parent: 660
+    georef_id: 908266
+    georef_nombre: Yanima
+- model: comunes.georef
+  pk: 902
+  fields:
+    nivel: 04
+    nombre: Yerba Buena
+    parent: 660
+    georef_id: 900133
+    georef_nombre: Yerba Buena

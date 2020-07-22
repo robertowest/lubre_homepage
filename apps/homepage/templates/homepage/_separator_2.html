@@ -10,13 +10,13 @@
                         <h2>Sesión activa</h2>
                         <p>{{ user|greeting_to_time }}</p>
                         {% if user.is_staff %}
-                            <a href="{% url 'cartera' %}" class="read-more">Gestión</a>
+                            <a href="{% url 'redirect' %}" class="read-more">Gestión</a>
                         {% endif %}
-                        <a href="{% url 'logout' %}" class="read-more">Cerrar sesión</a>
+                        <a href="{% url 'accounts:logout' %}" class="read-more">Cerrar sesión</a>
                     {% else %}
                         <h2>Inicia Sesión</h2>
                         <p>Ingresa al sistema para poder acceder a las aplicaciones que necesitas para gestionar tu negocio y obtener información actualizada.</p>
-                        <a href="{% url 'login' %}" class="read-more">Iniciar</a>
+                        <a href="{% url 'accounts:login' %}" class="read-more">Iniciar</a>
                     {% endif %}
                 </div>
             </div>
