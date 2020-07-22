@@ -10,4 +10,9 @@ urlpatterns = [
     path('<int:pk>/', views.DomicilioDetailView.as_view(), name='detail'),
     path('<int:pk>/modificar/', views.DomicilioUpdateView.as_view(), name='update'),
     path('<int:pk>/eliminar/', views.DomicilioDeleteView.as_view(), name='delete'),
+
+    # chained dropdown
+    path('ajax/carga-departamentos/', views.carga_departamentos, name='ajax_carga_departamentos'),
+    path('ajax/carga-municipios/', views.carga_municipios, name='ajax_carga_municipios'),
+    path('ajax/carga-localidades/', views.carga_localidades, name='ajax_carga_localidades'),
 ]

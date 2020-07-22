@@ -31,7 +31,7 @@
             </button>
         </div>
         <div class="hint-text small">
-            <a href="{% url 'password_reset' %}" class="pull-right text-success">¿Olvidó su contraseña?</a>
+            <a href="{% url 'accounts:password_reset' %}" class="pull-right text-success">¿Olvidó su contraseña?</a>
         </div>    
     </form>
 
@@ -39,6 +39,6 @@
 
     <br>
     <div class="hint-text small">
-        ¿No tiene una cuenta? <a href="{% url 'signup' %}" class="text-success">Regístrese</a>
+        ¿No tiene una cuenta? <a href="{% url 'accounts:signup' %}" class="text-success">Regístrese</a>
     </div>
 {% endblock %}

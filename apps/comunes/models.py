@@ -69,28 +69,6 @@ class CommonStruct(models.Model):
         return self._meta.module_name
 
 
-class georef(CommonStruct):
-    NIVEL = (
-        ('01', 'País'), 
-        ('02', 'Provincia'),
-        ('03', 'Departamento'),
-        ('04', 'Municipio'),
-        ('05', 'Localidad'),
-    )
-
-    nivel = models.CharField(max_length=2, choices=NIVEL, default='03')
-    nombre = models.CharField(max_length=60)
-    parent = models.ForeignKey('self', on_delete=models.CASCADE, 
-                               null=True, blank=True, verbose_name='Padre')
-
-    class Meta:
-        verbose_name = 'GeoReferencia'
-        verbose_name_plural = 'GeoReferencias'
-
-    def __str__(self):
-        return self.nombre
-
-
 class Pais(CommonStruct):
     nombre = models.CharField(max_length=40)
     cod_area_tel = models.CharField('Cód. Area Telef.', max_length=4, null=True, blank=True)
@@ -153,6 +131,36 @@ class Localidad(CommonStruct):
         return self.nombre
 
 
+# class georef(CommonStruct):
+#     NIVEL = (
+#         ('01', 'País'), 
+#         ('02', 'Provincia'),
+#         ('03', 'Departamento'),
+#         ('04', 'Municipio'),
+#         ('05', 'Localidad'),
+#     )
+
+#     nivel = models.CharField(max_length=2, choices=NIVEL, default='05')
+#     nombre = models.CharField(max_length=60)
+#     parent = models.ForeignKey('self', on_delete=models.CASCADE, 
+#                                null=True, blank=True, verbose_name='Padre')
+#     georef_id = models.CharField(max_length=15, null=True, blank=True)
+#     georef_nombre = models.CharField(max_length=100, null=True, blank=True)
+
+#     # configuración para admin
+#     list_display = ['parent', 'nivel', 'nombre', 'active']
+#     list_display_links = ['nombre']
+#     search_fields = ['nombre']
+#     list_filter = ['parent']
+
+#     class Meta:
+#         verbose_name = 'GeoReferencia'
+#         verbose_name_plural = 'GeoReferencias'
+
+#     def __str__(self):
+#         return self.nombre
+
+
 class Diccionario(CommonStruct):
     TABLA = (
         ('comunicacion', 'Comunicaciones'), 
@@ -188,10 +196,18 @@ class Domicilio(CommonStruct):
     puerta = models.CharField(max_length=2, null=True, blank=True)
     barrio = models.CharField(max_length=40, null=True, blank=True)
     # pais = models.ForeignKey(Pais, on_delete=models.CASCADE)
-    # provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE)
-    # departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
-    # municipio = models.ForeignKey(Municipio, on_delete=models.CASCADE)
-    # localidad = models.ForeignKey(Localidad, on_delete=models.CASCADE)
+    provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE,
+                                  null=True, blank=True,
+                                  limit_choices_to = {'active': True})
+    departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE,
+                                     null=True, blank=True,
+                                     limit_choices_to = {'active': True})
+    municipio = models.ForeignKey(Municipio, on_delete=models.CASCADE,
+                                  null=True, blank=True,
+                                  limit_choices_to = {'active': True})
+    localidad = models.ForeignKey(Localidad, on_delete=models.CASCADE,
+                                  null=True, blank=True,
+                                  limit_choices_to = {'active': True})
     provincia_texto = models.CharField(max_length=50, null=True, blank=True)
     departamento_texto = models.CharField(max_length=50, null=True, blank=True)
     localidad_texto = models.CharField(max_length=50, null=True, blank=True)

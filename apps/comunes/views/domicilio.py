@@ -67,3 +67,19 @@ class DomicilioUpdateView(UpdateView):
  
 class DomicilioDeleteView(DeleteView):
     pass
+
+
+
+# chained dropdown
+from apps.comunes.models import Provincia, Departamento, Municipio, Localidad
+
+def carga_departamentos(request):
+    parent = request.GET['fk']
+    departamentos = Departamento.objects.filter(provincia_id=parent).order_by('nombre')
+    return render(request, 'domicilio/cargar_dropdown.html', {'object_list': departamentos})
+
+def carga_municipios(request):
+    pass
+
+def carga_localidades(request):
+    pass

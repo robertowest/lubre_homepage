@@ -4,6 +4,18 @@ from django.db.models.query import QuerySet
 register = template.Library()
 
 
+# @register.filter
+# def appname(obj):
+#     # 'app_label': model._meta.app_label,
+#     # 'model_name': model._meta.object_name.lower()
+#     try:
+#         # if isinstance(obj, Model):
+#         #     return obj.get_app_label
+#         return model._meta.app_label
+#     except:
+#         return 'unknow_app'
+
+
 @register.filter
 def verbose_name(obj):
     if isinstance(obj, QuerySet):
@@ -56,3 +68,12 @@ def url_action_pk(url, pk):
 def var_dump(var):
     # forma de uso en html: {% var_dump VARIABLE %}
     return vars(var)
+
+
+@register.filter
+def file_exists(value):
+    try:
+        template.loader.get_template(value)
+        return True
+    except template.TemplateDoesNotExist:
+        return False
