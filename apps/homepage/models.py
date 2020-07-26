@@ -21,7 +21,8 @@ def upload_product_path_handler(instance, filename):
 
 class Entries(models.Model):
     # SECTION = (('home', 'Inicio'), ('about', 'Acerca de'), ('service', 'Servicio'), ('team', 'Equipo'),
-    #            ('work', 'Trabajo'), ('opinion', 'Testimonial'), ('pricing', 'Precios'),
+    #      # comunes
+    # ./manage.py loaddata diccionario      ('work', 'Trabajo'), ('opinion', 'Testimonial'), ('pricing', 'Precios'),
     #            ('blog', 'Anuncios (blog)'), ('contact', 'Contacto'))
 
     SECTION = (('home', 'Inicio'),

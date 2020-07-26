@@ -230,6 +230,17 @@ class CreateContactView(generic.CreateView):
         context['form_title'] = self.form_title
         return context
 
+    # def post(self, request, *args, **kwargs):
+    #     form = self.get_form()
+    #     existe = ContactoModel.objects.get(documento=form.data['documento'])
+    #     if existe:
+    #         # contacto existente, deberia asociarlo
+    #
+    #     if form.is_valid():
+    #         return self.form_valid(form)
+    #     else:
+    #         return self.form_invalid(form)
+
     def form_valid(self, form):
         response = super().form_valid(form)
 

@@ -2,7 +2,6 @@ from django.db import models
 from django.urls import reverse
 from datetime import datetime
 
-
 class CommonStruct(models.Model):
     active = models.BooleanField('Activo', default=True)
     created = models.DateTimeField('Creado', auto_now_add=True, editable=False, null=True, blank=True)
@@ -17,6 +16,7 @@ class CommonStruct(models.Model):
 
     def save(self, *args, **kwargs):
         self.modified = datetime.now()
+        # self.modified_by = request.user.username
         super(CommonStruct, self).save(*args, **kwargs)
 
     def delete(self):
@@ -119,7 +119,7 @@ class Municipio(CommonStruct):
 
 class Localidad(CommonStruct):
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
-    nombre = models.CharField(max_length=40)
+    nombre = models.CharField(max_length=60)
     cod_postal = models.CharField('Cód. Postal', max_length=12, null=True, blank=True)
     cod_area_tel = models.CharField('Cód. Area Telef.', max_length=4, null=True, blank=True)
 

@@ -1,29 +1,10 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
 
-from apps.accounts.models import User
+from . import models
 
-
-# UserAdmin.list_display = ('email', 'first_name', 'last_name', 'is_active', 'is_staff', 'date_joined', 'cuit')
-# admin.site.register(User, UserAdmin)
-
-
-#
-# class CustomUserAdmin(UserAdmin):
-#     fieldsets = (
-#         # original form fieldsets, expanded
-#         # new fieldset added on to the bottom
-#         # group heading of your choice; set to None for a blank space instead of a header
-#         *UserAdmin.fieldsets,
-#         (
-#             'Custom Field Heading',
-#             {
-#                 'fields': (
-#                     'cuit',
-#                 ),
-#             },
-#         ),
-#     )
-#     list_display = ('email', 'first_name', 'last_name', 'is_active', 'is_staff', 'date_joined', 'cuit')
-#
-# admin.site.register(User, CustomUserAdmin)
+@admin.register(models.Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    model = models.Profile
+    list_display = model.list_display
+    list_display_links = model.list_display_links
+    search_fields = model.search_fields

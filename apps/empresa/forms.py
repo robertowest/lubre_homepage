@@ -52,6 +52,8 @@ class EmpresaForm(forms.ModelForm):
         # valores iniciales para campos especiales
         self.fields['comercial'].queryset = Comercial.objects.all().order_by('persona__nombre')
         self.fields['actividad'].queryset = Actividad.objects.filter(parent__isnull=True).order_by('nombre')
+        self.fields['actividades'].widget.attrs['size'] = 13
+        self.fields['actividades'].help_text = "Pulse Ctrl para seleccionar varios"
 
         # creamos helper
         self.helper = helper.FormHelper()
@@ -68,11 +70,11 @@ class EmpresaForm(forms.ModelForm):
                 layout.Column('comercial'),
                 layout.Column('referencia_id', css_class='col-lg-3 col-md-3 col-sm-3 mb-0'),
             ),
+            'actividad',
             layout.Row(
-                layout.Column('actividad', css_class='col-lg-6 col-md-12 mb-0'),
-                layout.Column('actividades'),
+                layout.Column('actividades', css_class='col-lg-5 col-md-6 mb-0'),
+                layout.Column('observacion', css_class='col-lg-7 col-md-6 mb-0'),
             ),
-            'observacion',
         )
 
         # agregamos los botones de acción

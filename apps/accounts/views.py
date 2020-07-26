@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 # from django.contrib.auth.forms import UserCreationForm
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
@@ -16,13 +16,20 @@ def LoginRedirect(request):
             return HttpResponseRedirect("/admin/")
         elif request.user.is_staff:
             # si el empleado es un comercial, enviamos hacia otro destino
+            # comercial = get_object_or_404(Comercial, usuario=request.user)
             comercial = Comercial.objects.get(usuario=request.user)
+
             if comercial:
                 # return HttpResponseRedirect("/comercial/")
                 # return HttpResponseRedirect("/empresa/recorrer/")
                 return HttpResponseRedirect("/empresa/filtro_comercial/" + str(comercial.id))
             else:
                 return HttpResponseRedirect("/empleado/")
+
+            # try:
+            # except Comercial.DoesNotExist:
+            #     comercial = Comercial(id=0)
+
         else:
             return HttpResponseRedirect("/")
 
@@ -56,7 +63,7 @@ def signup(request):
                 pass
             username = form.cleaned_data.get('username')
             messages.success(request, f'Su cuenta fue creada correctamente.')
-            return redirect('login')
+            return redirect('accounts:login')
         else:
             return render(request, 'accounts/signup.html', {'form': form})
     else:

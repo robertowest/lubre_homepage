@@ -76,11 +76,21 @@ else:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'desarrollo_dj',
-        'HOST': '192.168.1.2',
+        'NAME': 'lubresrl_dj',
+        'HOST': '172.17.0.2',
         'PORT': '3306',
-        'USER': 'roberto',
+        'USER': 'root',
         'PASSWORD': 'roberto',
+    },
+    'firebird': {
+        # lubresrl.dyndns.org:4310
+        'ENGINE': 'django.db.backends.firebird',
+        'NAME': 'P:\\PRUEBA\\DATOS\\GESTION.FDB',
+        'USER': 'SYSDBA',
+        'PASSWORD': 'masterkey',
+        'HOST': 'lubresrl.dyndns.org',
+        'PORT': '3050',
+        'OPTIONS': {'charset': 'ISO8859_1'}
     },
 }
 
