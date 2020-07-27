@@ -82,7 +82,7 @@ class Pais(CommonStruct):
 
 
 class Provincia(CommonStruct):
-    pais = models.ForeignKey(Pais, on_delete=models.CASCADE)  # , null=True, blank=True
+    pais = models.ForeignKey(Pais, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=40)
 
     class Meta:
@@ -105,21 +105,9 @@ class Departamento(CommonStruct):
         return self.nombre
 
 
-class Municipio(CommonStruct):
-    departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
-    nombre = models.CharField(max_length=40)
-
-    class Meta:
-        verbose_name = 'Municipio'
-        verbose_name_plural = 'Municipios'
-
-    def __str__(self):
-        return self.nombre
-
-
 class Localidad(CommonStruct):
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
-    nombre = models.CharField(max_length=60)
+    nombre = models.CharField(max_length=150)
     cod_postal = models.CharField('Cód. Postal', max_length=12, null=True, blank=True)
     cod_area_tel = models.CharField('Cód. Area Telef.', max_length=4, null=True, blank=True)
 
@@ -202,9 +190,6 @@ class Domicilio(CommonStruct):
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE,
                                      null=True, blank=True,
                                      limit_choices_to = {'active': True})
-    municipio = models.ForeignKey(Municipio, on_delete=models.CASCADE,
-                                  null=True, blank=True,
-                                  limit_choices_to = {'active': True})
     localidad = models.ForeignKey(Localidad, on_delete=models.CASCADE,
                                   null=True, blank=True,
                                   limit_choices_to = {'active': True})

@@ -10,7 +10,7 @@ class DomicilioForm(forms.ModelForm):
         fields = ['tipo', 
                   'tipo_calle', 'nombre', 'numero', 
                   'piso', 'puerta', 'barrio', 
-                  'provincia', 'departamento', 'municipio', 'localidad', 
+                  'provincia', 'departamento', 'localidad', 
                   'provincia_texto', 'departamento_texto', 'localidad_texto', 
                   'observacion_texto',
                   'active']
@@ -18,10 +18,13 @@ class DomicilioForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        # dejamos los valores vacíos para los select relacionados
-        self.fields['departamento'].queryset = models.Departamento.objects.none()
-        self.fields['municipio'].queryset = models.Municipio.objects.none()
-        self.fields['localidad'].queryset = models.Localidad.objects.none()
+        # dropdown
+        if self.instance:
+            self.fields['departamento'].queryset = (models.Departamento.objects.filter(provincia_id=self.initial['provincia']))
+            self.fields['localidad'].queryset = (models.Localidad.objects.filter(departamento_id=self.initial['departamento']))
+        else:
+            self.fields['departamento'].queryset = models.Departamento.objects.none()
+            self.fields['localidad'].queryset = models.Localidad.objects.none()
 
         # creamos helper
         self.helper = helper.FormHelper()
@@ -49,10 +52,11 @@ class DomicilioForm(forms.ModelForm):
                 layout.Column('puerta', css_class='col-lg-4 col-md-4 col-sm-6 mb-0'),
                 layout.Column('barrio', css_class='col-lg-4 col-md-4 col-sm-12 mb-0'),
             ),
-            'provincia',
-            'departamento',
-            'municipio',
-            'localidad',
+            layout.Row(                
+                layout.Column('provincia',    css_class='col-lg-4 col-md-6  col-sm-12 mb-0'),
+                layout.Column('departamento', css_class='col-lg-4 col-md-6  col-sm-12 mb-0'),
+                layout.Column('localidad',    css_class='col-lg-4 col-md-12 col-sm-12 mb-0'),
+            ),
             layout.Row(                
                 layout.Column(layout.Field('provincia_texto',    readonly=True), css_class='col-lg-4 col-md-12 col-sm-12 mb-0'),
                 layout.Column(layout.Field('departamento_texto', readonly=True), css_class='col-lg-4 col-md-12 col-sm-12 mb-0'),

@@ -16,7 +16,7 @@
     created_by: null
     modified: null
     modified_by: null
-    texto: Domicilio de Entrega
+    texto: Domicilio Entrega
     tabla: domicilio
 - model: comunes.diccionario
   pk: 3
@@ -88,3 +88,13 @@
     modified_by: null
     texto: LinkedIn
     tabla: comunicacion
+- model: comunes.diccionario
+  pk: 10
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    texto: "Domicilio Explotaci\xF3n"
+    tabla: domicilio

@@ -13,6 +13,5 @@ urlpatterns = [
 
     # chained dropdown
     path('ajax/carga-departamentos/', views.carga_departamentos, name='ajax_carga_departamentos'),
-    path('ajax/carga-municipios/', views.carga_municipios, name='ajax_carga_municipios'),
     path('ajax/carga-localidades/', views.carga_localidades, name='ajax_carga_localidades'),
 ]

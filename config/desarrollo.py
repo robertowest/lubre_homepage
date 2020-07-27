@@ -76,10 +76,10 @@ else:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lubresrl_dj',
-        'HOST': '172.17.0.2',
+        'NAME': 'desarrollo_dj',
+        'HOST': '192.168.1.2',
         'PORT': '3306',
-        'USER': 'root',
+        'USER': 'roberto',
         'PASSWORD': 'roberto',
     },
     'firebird': {

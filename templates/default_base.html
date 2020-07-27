@@ -30,6 +30,21 @@
                     {% include 'includes/_navbar.html' %}
 
                     <div class="container-fluid">
+                        <!-- sección de mensajes -->
+                        {% if messages %}
+                        <div class="panel-style">
+                            {% for message in messages %}
+                            <div class="alert alert-{{message.level_tag}} alert-dismissible text-center" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                {% comment %}
+                                <strong>{% if message.level_tag == DEFAULT_MESSAGE_LEVELS.ERROR %}Error{% else %}{{ message.level_tag|title }}{% endif %}!</strong>
+                                {% endcomment %}
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                                    
                         {% block content %}
                         <h1 class="h3 mb-4 text-gray-800">Pantalla Principal</h1>
                         {% endblock %}

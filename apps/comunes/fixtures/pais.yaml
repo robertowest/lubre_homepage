@@ -1,5 +1,0 @@
-- model: comunes.pais
-  pk: 1
-  fields:
-    nombre: Argentina
-    cod_area_tel: '54'

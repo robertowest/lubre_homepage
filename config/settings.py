@@ -71,6 +71,8 @@ TEMPLATES = [
                 # social-auth-app-django
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
+                # propio
+                'apps.homepage.contexts.appname',
             ],
         },
     },

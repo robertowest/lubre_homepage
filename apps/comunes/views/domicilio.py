@@ -1,3 +1,5 @@
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -41,13 +43,13 @@ class DomicilioCreateView(CreateView):
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
         return response
- 
- 
+
+
 class DomicilioDetailView(DetailView):
     model = DomicilioModel
     template_name = 'comunes/detalle.html'
- 
- 
+
+
 class DomicilioUpdateView(UpdateView):
     model = DomicilioModel
     form_class = DomicilioForm
@@ -59,6 +61,8 @@ class DomicilioUpdateView(UpdateView):
         return context
 
     def form_valid(self, form):
+        messages.success(self.request, 'Domicilio grabado correctamente')
+        response = super().form_valid(form)
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
@@ -71,15 +75,20 @@ class DomicilioDeleteView(DeleteView):
 
 
 # chained dropdown
-from apps.comunes.models import Provincia, Departamento, Municipio, Localidad
+from apps.comunes.models import Provincia, Departamento, Localidad
 
 def carga_departamentos(request):
     parent = request.GET['fk']
-    departamentos = Departamento.objects.filter(provincia_id=parent).order_by('nombre')
-    return render(request, 'domicilio/cargar_dropdown.html', {'object_list': departamentos})
-
-def carga_municipios(request):
-    pass
+    if parent:
+        objetos = Departamento.objects.filter(provincia_id=parent).order_by('nombre')
+    else:
+        objetos = Departamento
+    return render(request, 'domicilio/cargar_dropdown.html', {'object_list': objetos})
 
 def carga_localidades(request):
-    pass
+    parent = request.GET['fk']
+    if parent:
+        objetos = Localidad.objects.filter(departamento_id=parent).order_by('nombre')
+    else:
+        objetos = Localidad
+    return render(request, 'domicilio/cargar_dropdown.html', {'object_list': objetos})
