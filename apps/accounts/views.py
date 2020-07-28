@@ -17,18 +17,18 @@ def LoginRedirect(request):
         elif request.user.is_staff:
             # si el empleado es un comercial, enviamos hacia otro destino
             # comercial = get_object_or_404(Comercial, usuario=request.user)
-            comercial = Comercial.objects.get(usuario=request.user)
+            try:
+                comercial = Comercial.objects.get(usuario=request.user)
 
-            if comercial:
-                # return HttpResponseRedirect("/comercial/")
-                # return HttpResponseRedirect("/empresa/recorrer/")
-                return HttpResponseRedirect("/empresa/filtro_comercial/" + str(comercial.id))
-            else:
+                if comercial:
+                    # return HttpResponseRedirect("/comercial/")
+                    # return HttpResponseRedirect("/empresa/recorrer/")
+                    return HttpResponseRedirect("/empresa/filtro_comercial/" + str(comercial.id))
+                else:
+                    return HttpResponseRedirect("/empleado/")
+
+            except Comercial.DoesNotExist:
                 return HttpResponseRedirect("/empleado/")
-
-            # try:
-            # except Comercial.DoesNotExist:
-            #     comercial = Comercial(id=0)
 
         else:
             return HttpResponseRedirect("/")

@@ -1,0 +1,150 @@
+- model: empresa.actividad
+  pk: 1
+  fields:
+    active: true
+    nombre: Lubricentro
+- model: empresa.actividad
+  pk: 2
+  fields:
+    active: true
+    nombre: Industria
+- model: empresa.actividad
+  pk: 3
+  fields:
+    active: true
+    nombre: Agro
+- model: empresa.actividad
+  pk: 4
+  fields:
+    active: true
+    nombre: Transporte
+- model: empresa.actividad
+  pk: 5
+  fields:
+    active: true
+    nombre: Otros
+- model: empresa.actividad
+  pk: 6
+  fields:
+    active: true
+    nombre: Estado
+- model: empresa.actividad
+  pk: 7
+  fields:
+    active: true
+    nombre: Lubricentro
+    parent: 1
+- model: empresa.actividad
+  pk: 8
+  fields:
+    active: true
+    nombre: Talleres y Reventa
+    parent: 1
+- model: empresa.actividad
+  pk: 9
+  fields:
+    active: true
+    nombre: Concesionarios
+    parent: 1
+- model: empresa.actividad
+  pk: 10
+  fields:
+    active: true
+    nombre: "Estaci\xF3n de Servicios"
+    parent: 1
+- model: empresa.actividad
+  pk: 11
+  fields:
+    active: true
+    nombre: Ingenios Azucareros
+    parent: 2
+- model: empresa.actividad
+  pk: 12
+  fields:
+    active: true
+    nombre: Empresas Constructoras
+    parent: 2
+- model: empresa.actividad
+  pk: 13
+  fields:
+    active: true
+    nombre: Empresas Viales
+    parent: 2
+- model: empresa.actividad
+  pk: 14
+  fields:
+    active: true
+    nombre: Obras Industriales
+    parent: 2
+- model: empresa.actividad
+  pk: 15
+  fields:
+    active: true
+    nombre: "Explotaciones Agr\xEDcolas"
+    parent: 3
+- model: empresa.actividad
+  pk: 16
+  fields:
+    active: true
+    nombre: Servicios para Agro
+    parent: 3
+- model: empresa.actividad
+  pk: 17
+  fields:
+    active: true
+    nombre: Transporte de Carga
+    parent: 4
+- model: empresa.actividad
+  pk: 18
+  fields:
+    active: true
+    nombre: Transporte de Pasajeros
+    parent: 4
+- model: empresa.actividad
+  pk: 19
+  fields:
+    active: true
+    nombre: Servicios a Terceros
+    parent: 5
+- model: empresa.actividad
+  pk: 20
+  fields:
+    active: true
+    nombre: "Distribuci\xF3n Gas Granel"
+    parent: 5
+- model: empresa.actividad
+  pk: 21
+  fields:
+    active: true
+    nombre: Parafinas
+    parent: 5
+- model: empresa.actividad
+  pk: 22
+  fields:
+    active: true
+    nombre: "Ca\xF1a"
+    parent: 3
+- model: empresa.actividad
+  pk: 23
+  fields:
+    active: true
+    nombre: Citrus
+    parent: 3
+- model: empresa.actividad
+  pk: 24
+  fields:
+    active: true
+    nombre: Granos
+    parent: 3
+- model: empresa.actividad
+  pk: 25
+  fields:
+    active: true
+    nombre: Otros
+    parent: 3
+- model: empresa.actividad
+  pk: 26
+  fields:
+    active: true
+    nombre: Servicios al Estado
+    parent: 6

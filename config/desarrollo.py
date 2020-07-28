@@ -34,9 +34,17 @@ ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS', default='*', cast=Csv())
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 # -------------------------------------------------------------------
 DATABASES = {
-    'development': {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'development': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'desarrollo_dj',
+        'HOST': '190.228.29.62',  # El Server
+        'PORT': '3306',
+        'USER': 'robertowest',
+        'PASSWORD': 'Roberto68',
     },
     'test': {
         'ENGINE': 'django.db.backends.mysql',
@@ -65,6 +73,7 @@ DATABASES = {
         'OPTIONS': {'charset': 'ISO8859_1'}
     },
 }
+# esta definición funciona bien pero no funciona con migrate o makemigrations
 if ENV == 'PROD':
     DATABASES['default'] = DATABASES['production']
 elif ENV == 'TEST':
@@ -72,25 +81,14 @@ elif ENV == 'TEST':
 else:
     DATABASES['default'] = DATABASES['development']
 
-# para realizar la migration conviene configurar directamente 'default'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'desarrollo_dj',
-        'HOST': '192.168.1.2',
+        'HOST': '190.228.29.62',    # El Server
         'PORT': '3306',
-        'USER': 'roberto',
-        'PASSWORD': 'roberto',
-    },
-    'firebird': {
-        # lubresrl.dyndns.org:4310
-        'ENGINE': 'django.db.backends.firebird',
-        'NAME': 'P:\\PRUEBA\\DATOS\\GESTION.FDB',
-        'USER': 'SYSDBA',
-        'PASSWORD': 'masterkey',
-        'HOST': 'lubresrl.dyndns.org',
-        'PORT': '3050',
-        'OPTIONS': {'charset': 'ISO8859_1'}
+        'USER': 'robertowest',
+        'PASSWORD': 'Roberto68',
     },
 }
 

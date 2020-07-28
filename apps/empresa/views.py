@@ -1,4 +1,6 @@
 # from django.contrib.auth.mixins import LoginRequiredMixin
+import os
+
 from django.db.models import Count
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import resolve
@@ -131,8 +133,15 @@ class EmpresaDeleteView(generic.DeleteView):
 class FilterListView(generic.ListView):
     model = models.Empresa
     # template_name = '{app}/list.html'.format(app=model._meta.verbose_name.lower())
-    # template_name = 'comunes/tabla.html'
-    template_name = 'empresa/tabla.html'
+    # comprobamos si existe un template personalizado, sino utilizamos el comun
+    template = '{path}/{app}/templates/{app}/tabla.html'.format(
+        path=os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        app=model._meta.app_label,
+    )
+    if os.path.exists(template):
+        template_name = '{app}/tabla.html'.format(app=model._meta.app_label)
+    else:
+        template_name = 'comunes/tabla.html'
 
     def url_name(self):
         attrib = resolve(self.request.path)
