@@ -19,12 +19,13 @@ class DomicilioForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
 
         # dropdown
+        self.fields['departamento'].queryset = models.Departamento.objects.none()
+        self.fields['localidad'].queryset = models.Localidad.objects.none()
         if self.instance:
-            self.fields['departamento'].queryset = (models.Departamento.objects.filter(provincia_id=self.initial['provincia']))
-            self.fields['localidad'].queryset = (models.Localidad.objects.filter(departamento_id=self.initial['departamento']))
-        else:
-            self.fields['departamento'].queryset = models.Departamento.objects.none()
-            self.fields['localidad'].queryset = models.Localidad.objects.none()
+            if self.instance.provincia_id:
+                self.fields['departamento'].queryset = (models.Departamento.objects.filter(provincia_id=self.instance.provincia_id))
+            if self.instance.departamento_id:
+                self.fields['localidad'].queryset = (models.Localidad.objects.filter(departamento_id=self.instance.departamento_id))
 
         # creamos helper
         self.helper = helper.FormHelper()

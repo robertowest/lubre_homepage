@@ -39,6 +39,7 @@ class DomicilioCreateView(CreateView):
         return context
         
     def form_valid(self, form):
+        response = super().form_valid(form)
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
