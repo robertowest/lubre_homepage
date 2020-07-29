@@ -46,7 +46,7 @@ def login_view(request):
 
         if user is not None:
             auth.login(request, user)
-            messages.success(request, 'Inicio de seción exitoso')
+            # messages.success(request, 'Inicio de seción exitoso')
             return redirect('redirect')
         else:
             messages.error(request, 'Datos incorrectos, por favor verifique usuario/correo o contraseña.')
@@ -62,7 +62,7 @@ def signup(request):
             except:
                 pass
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Su cuenta fue creada correctamente.')
+            # messages.success(request, f'Su cuenta fue creada correctamente.')
             return redirect('accounts:login')
         else:
             return render(request, 'accounts/signup.html', {'form': form})

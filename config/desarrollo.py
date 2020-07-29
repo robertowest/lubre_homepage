@@ -40,11 +40,11 @@ DATABASES = {
     },
     'development': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'desarrollo_dj',
-        'HOST': '190.228.29.62',  # El Server
+        'NAME': 'admin_desarrollo',
+        'HOST': '190.105.227.83',  # LatinCloud
         'PORT': '3306',
-        'USER': 'robertowest',
-        'PASSWORD': 'Roberto68',
+        'USER': 'admin_roberto',
+        'PASSWORD': 'roberto',
     },
     'test': {
         'ENGINE': 'django.db.backends.mysql',
@@ -84,10 +84,10 @@ else:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'desarrollo_dj',
-        'HOST': '192.168.1.2',
+        'NAME': 'admin_desarrollo',
+        'HOST': '190.105.227.83',  # LatinCloud
         'PORT': '3306',
-        'USER': 'roberto',
+        'USER': 'admin_roberto',
         'PASSWORD': 'roberto',
     },
     'firebird': {
