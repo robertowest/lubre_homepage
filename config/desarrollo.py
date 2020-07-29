@@ -82,6 +82,14 @@ else:
     DATABASES['default'] = DATABASES['development']
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'desarrollo_dj',
+    #     'HOST': '192.168.1.2',  # lubre local
+    #     'PORT': '3306',
+    #     'USER': 'roberto',
+    #     'PASSWORD': 'roberto',
+    # },
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'admin_desarrollo',

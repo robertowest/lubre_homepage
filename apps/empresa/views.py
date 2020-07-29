@@ -455,3 +455,9 @@ class EmpresaBrowseView(generic.DetailView):
         # for reg in context['contactos']:
         #     reg.comunicaciones = reg.comunicaciones.filter(tipo='movil').filter(active=True)
         return context
+
+
+class EmpresaBrowseAsociarContactoView(generic.UpdateView):
+    model = ComunicacionModel
+    form_class = ComunicacionForm
+    template_name = 'empresa/includes/_modal1.html'

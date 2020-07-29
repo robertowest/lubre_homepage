@@ -33,4 +33,6 @@ urlpatterns += [
     # path('recorrer/<int:comercial>/<int:empresa>/', 
     path('recorrer/<int:pk>/', 
          login_required(views.EmpresaBrowseView.as_view()), name="browse"),
+    path('<int:pk>/comunicacion/', 
+        views.EmpresaBrowseAsociarContactoView.as_view(), name='comunication_exist'),         
 ]

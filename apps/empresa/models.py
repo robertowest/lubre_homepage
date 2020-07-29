@@ -125,6 +125,9 @@ class Empresa(CommonStruct):
     def get_related_url_with_comunication(self):
         return reverse('%s:associate_with_comunication' % self._meta.model_name, args=(self.pk,))
 
+    def get_comunication_exist(self):
+        return reverse('%s:comunication_exist' % self._meta.model_name, args=(self.pk,))
+
     def get_related_url_with_address(self):
         return reverse('%s:associate_with_address' % self._meta.model_name, args=(self.pk,))
 

@@ -1,4 +1,4 @@
-{% extends 'comunes/detalle_simple.html' %}
+{% extends 'empresa/detalle_simple.html' %}
 
 {% load static %}
 {% load mis_tags %}
@@ -86,6 +86,12 @@
                         </span>
                         <span class="text">Nuevo</span>
                     </a>
+                    <a href="{{object.get_comunication_exist}}" class="btn btn-secondary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="text">Asociar</span>
+                    </a>                    
                 </div>
             </div>
         </div>

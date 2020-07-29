@@ -3,65 +3,70 @@
   fields:
     active: true
     persona: 1
+    usuario: 2
 - model: empresa.comercial
   pk: 2
   fields:
     active: true
     persona: 2
+    usuario: 5
 - model: empresa.comercial
   pk: 3
   fields:
     active: true
     persona: 3
+    usuario: 7
 - model: empresa.comercial
   pk: 4
   fields:
     active: true
     persona: 4
+    usuario: 8
 - model: empresa.comercial
   pk: 5
   fields:
-    active: true
+    active: false
     persona: 5
 - model: empresa.comercial
   pk: 6
   fields:
-    active: true
+    active: false
     persona: 6
 - model: empresa.comercial
   pk: 7
   fields:
-    active: true
+    active: false
     persona: 7
 - model: empresa.comercial
   pk: 8
   fields:
-    active: true
+    active: false
     persona: 8
 - model: empresa.comercial
   pk: 10
   fields:
     active: true
     persona: 10
+    usuario: 3
 - model: empresa.comercial
   pk: 11
   fields:
-    active: true
+    active: false
     persona: 11
 - model: empresa.comercial
   pk: 12
   fields:
-    active: true
+    active: false
     persona: 12
 - model: empresa.comercial
   pk: 13
   fields:
-    active: true
+    active: false
     persona: 13
 - model: empresa.comercial
   pk: 14
   fields:
-    active: true
+    active: false
     persona: 14
 - model: empresa.comercial
   pk: 15
@@ -71,30 +76,32 @@
 - model: empresa.comercial
   pk: 16
   fields:
-    active: true
+    active: false
     persona: 16
 - model: empresa.comercial
   pk: 17
   fields:
-    active: true
+    active: false
     persona: 17
 - model: empresa.comercial
   pk: 18
   fields:
     active: true
     persona: 18
+    usuario: 4
 - model: empresa.comercial
   pk: 19
   fields:
-    active: true
+    active: false
     persona: 19
 - model: empresa.comercial
   pk: 20
   fields:
-    active: true
+    active: false
     persona: 20
 - model: empresa.comercial
   pk: 21
   fields:
     active: true
     persona: 21
+    usuario: 6

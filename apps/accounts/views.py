@@ -22,8 +22,8 @@ def LoginRedirect(request):
 
                 if comercial:
                     # return HttpResponseRedirect("/comercial/")
-                    # return HttpResponseRedirect("/empresa/recorrer/")
-                    return HttpResponseRedirect("/empresa/filtro_comercial/" + str(comercial.id))
+                    # return HttpResponseRedirect("/empresa/filtro_comercial/" + str(comercial.id))
+                    return HttpResponseRedirect("/empresa/recorrer/")
                 else:
                     return HttpResponseRedirect("/empleado/")
 
