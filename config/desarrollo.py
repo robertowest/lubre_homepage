@@ -90,12 +90,20 @@ DATABASES = {
     #     'USER': 'roberto',
     #     'PASSWORD': 'roberto',
     # },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'admin_desarrollo',
+    #     'HOST': '190.105.227.83',  # LatinCloud
+    #     'PORT': '3306',
+    #     'USER': 'admin_roberto',
+    #     'PASSWORD': 'roberto',
+    # },
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'admin_desarrollo',
-        'HOST': '190.105.227.83',  # LatinCloud
+        'NAME': 'lubresrl_dj',
+        'HOST': '172.17.0.2',
         'PORT': '3306',
-        'USER': 'admin_roberto',
+        'USER': 'root',
         'PASSWORD': 'roberto',
     },
     'firebird': {
@@ -226,3 +234,10 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+
+
+
+INSTALLED_APPS += [
+    # prueba -------------------------------
+    'apps.prueba',
+]
