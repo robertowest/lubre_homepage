@@ -6,6 +6,8 @@ app_name = __package__.split('.')[1]
 
 urlpatterns = [
     path('<int:pk>/', views.PruebaDetailView.as_view(), name='detail'),
+    path('buscar_comercial/', views.buscarComercial, name='buscarComercial'),
+
     path('search/', views.SearchDataView.as_view(), name='search_data'),
     path('comercial1/', views.comercial1, name='comercial1'),
     path('comercial2/', views.comercial2.as_view(), name='comercial2'),

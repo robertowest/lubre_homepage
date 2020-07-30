@@ -5,29 +5,30 @@
 
 
 {% block content %}
-    <p>{{object}}</p>
+    <p>Objeto: {{object}}</p>
     <button type="button" class="btn btn-success openBtn"
-            href="{% url 'prueba:search_data' %}"
-            data-toggle="modal" data-target="#modal">Abrir Modal</button>
-
-    <!--
-    <p>Pulsar <a data-toggle="modal" data-target="#modal" href="{% url 'prueba:search_data' %}">aquí</a>
-        para mostrar la ventana modal</p>
-    -->
+            href="{% url 'prueba:buscarComercial' %}"
+            data-toggle="modal" data-target="#modal">Buscar Comercial</button>
 {% endblock %}
 
 
 {% block modal %}
-    <div class="modal fade" id="modal"></div>
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+        <!-- dinámico -->
+    </div>
 {% endblock %}
 
 
 {% block js %}
+    <!-- 
+    https://www.abidibo.net/blog/2015/11/18/modal-django-forms-bootstrap-4/ 
+    https://programacion.net/articulo/como_cargar_contenido_dinamico_en_un_modal_de_bootstrap_1867
+    -->
     <script>
     $('#modal').on('show.bs.modal', function (event) {
         var modal = $(this)
         $.ajax({
-            url: "{% url 'prueba:search_data' %}",
+            url: "{% url 'prueba:buscarComercial' %}",
             context: document.body
         }).done(function(response) {
             modal.html(response);

@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.views.generic import DetailView, ListView
 
 from apps.empresa.models import Comercial, Empresa
@@ -14,6 +15,22 @@ class PruebaDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+
+
+def buscarComercial(request):
+    # f = ComercialFilter(request.GET, queryset=Comercial.objects.filter(active=True).order_by('persona'))
+    # return render(request, 'prueba/filtro3.html', {'filter': f, 'pk':1511})
+
+    # form = RegisterForm()
+    if request.method == "POST":
+        form = RegisterForm(request.POST) #if no files
+        if form.is_valid():
+            #do something if form is valid
+    context = {
+        'form': form, 'filter': f, 'pk': 1511
+    }
+    return render(request, 'prueba/index2.html', context)        
+
 
 
 # class SearchDataView(ListView):
@@ -50,7 +67,7 @@ class SearchDataView(SingleTableView):
 
 
 
-from django.shortcuts import render
+
 
 def comercial1(request):
     table = ComercialTable(Comercial.objects.filter(active=True).order_by('persona'))
@@ -81,3 +98,8 @@ def comercial3(request):
     # return render(request, 'prueba/tabla_filtro.html', {'table': table})
     f = ComercialFilter(request.GET, queryset=Comercial.objects.filter(active=True).order_by('persona'))
     return render(request, 'prueba/filtro3.html', {'filter': f, 'pk':1511})
+
+
+
+
+

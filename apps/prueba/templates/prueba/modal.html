@@ -1,0 +1,38 @@
+{% load static %}
+
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="tituloModal">Búsqueda</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            
+            <form method="get" action="{% url 'prueba:detail' pk %}">
+                <div>
+                    {{ filter.form.as_p }}
+                    <input type="submit" />
+                </div>
+                <hr>
+                <div>
+                    <select name="selector" size="13">
+                        {% for obj in filter.qs %}
+                        <option value="{{obj.id}}">{{obj}}</option> 
+                        {% endfor %}
+                    </select>
+                </div>
+                <hr>
+                <div>
+                    <button type="submit">Ok</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-primary" href="#">Aceptar</a>
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+        </div>
+    </div>
+</div>
