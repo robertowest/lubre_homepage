@@ -4,7 +4,7 @@
 {% load mis_tags %}
 
 
-{% block contenido %}
+{% block contenido2 %}
 
     <!-- izquierda -->
     <div class="col-lg-6">
@@ -50,9 +50,7 @@
             </a>
             <div class="collapse show" id="comunicacionCard">
                 <div class="card-body">
-
                     {% if comunicaciones  %}
-
                     <table class="table" id="dataTable" width="100%" cellspacing="0">
                         <!--
                         <thead>
@@ -75,7 +73,6 @@
                             {% endfor %}
                         </tbody>
                     </table>
-
                     {% endif  %}
                 </div>
                 <div class="card-footer">
@@ -86,12 +83,15 @@
                         </span>
                         <span class="text">Nuevo</span>
                     </a>
-                    <a href="{{object.get_comunication_exist}}" class="btn btn-secondary btn-icon-split">
+                    <!-- href="{{object.get_comunication_exist}}" -->
+                    <a class="btn btn-secondary btn-icon-split"
+                       href="{{object.get_comunication_exist}}" data-toggle="modal" data-target="#formularioModal">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
                         <span class="text">Asociar</span>
-                    </a>                    
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -246,4 +246,30 @@
 
     </div>
 
+{% endblock %}
+
+
+{% block contenido %}
+
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-success openBtn"
+            data-toggle="modal" data-target="#{{ object.pk }}" data-id="{{ object.pk }}">Abrir Modal</button>
+
+{% endblock %}
+
+
+{% block modal %}
+    <!-- ventana modal -->
+    {% include 'empresa/includes/_modal.html' %}
+{% endblock %}
+
+
+{% block js %}
+    <script>
+        $('.openBtn').on('click',function(){
+            $('.modal-body').load('content.html',function(){
+                $('#busquedaModal').modal({show:true});
+            });
+        });
+    </script>
 {% endblock %}

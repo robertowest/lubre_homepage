@@ -430,6 +430,7 @@ def Recorrer(request):
 
 class EmpresaBrowseView(generic.DetailView):
     model = models.Empresa
+    form_class = forms.EmpresaForm
     # model = models.Empresa.objects.filter(comercial=context['comercial']).get(id=context['empresa'])
     template_name = 'empresa/one_by_one.html'
 
@@ -457,7 +458,7 @@ class EmpresaBrowseView(generic.DetailView):
         return context
 
 
-class EmpresaBrowseAsociarContactoView(generic.UpdateView):
+class EmpresaAsociarContactoView(generic.UpdateView):
     model = ComunicacionModel
     form_class = ComunicacionForm
     template_name = 'empresa/includes/_modal1.html'

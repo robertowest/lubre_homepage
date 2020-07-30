@@ -1,0 +1,37 @@
+{% extends 'default_movil.html' %}
+
+{% load static %}
+{% load mis_tags %}
+
+
+{% block content %}
+    <p>{{object}}</p>
+    <button type="button" class="btn btn-success openBtn"
+            href="{% url 'prueba:search_data' %}"
+            data-toggle="modal" data-target="#modal">Abrir Modal</button>
+
+    <!--
+    <p>Pulsar <a data-toggle="modal" data-target="#modal" href="{% url 'prueba:search_data' %}">aquí</a>
+        para mostrar la ventana modal</p>
+    -->
+{% endblock %}
+
+
+{% block modal %}
+    <div class="modal fade" id="modal"></div>
+{% endblock %}
+
+
+{% block js %}
+    <script>
+    $('#modal').on('show.bs.modal', function (event) {
+        var modal = $(this)
+        $.ajax({
+            url: "{% url 'prueba:search_data' %}",
+            context: document.body
+        }).done(function(response) {
+            modal.html(response);
+        });
+    })
+    </script>
+{% endblock %}

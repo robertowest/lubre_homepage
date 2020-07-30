@@ -10,14 +10,20 @@ urlpatterns = [
     path('<int:pk>/', views.EmpresaDetailView.as_view(), name='detail'),
     path('<int:pk>/modificar/', views.EmpresaUpdateView.as_view(), name='update'),
     path('<int:pk>/eliminar/', views.EmpresaDeleteView.as_view(), name='delete'),
+
     # listado de empresas con filtro
     path('filtro_actividad/<int:filtro>', views.FilterListView.as_view(), name='filtro_actividad'),
     path('filtro_comercial/<int:filtro>', views.FilterListView.as_view(), name='filtro_comercial'),
+
     # alta de registros vinculados a la empresa
     path('<int:fk>/comunicacion/', views.CreateComunicationView.as_view(), name='associate_with_comunication'),
     path('<int:fk>/domicilio/', views.CreateAddressView.as_view(), name='associate_with_address'),
     path('<int:fk>/contacto/', views.CreateContactView.as_view(), name='associate_with_contact'),
     path('<int:fk>/actividad/', views.ActividadMultiListView.as_view(), name='associate_with_actividad'),
+
+    # asociar con registro existente
+    path('<int:pk>/comunicacion/asociar/',
+         views.EmpresaAsociarContactoView.as_view(), name='comunication_exist'),
 ]
 
 # controlar login a nivel de path
@@ -33,6 +39,4 @@ urlpatterns += [
     # path('recorrer/<int:comercial>/<int:empresa>/', 
     path('recorrer/<int:pk>/', 
          login_required(views.EmpresaBrowseView.as_view()), name="browse"),
-    path('<int:pk>/comunicacion/', 
-        views.EmpresaBrowseAsociarContactoView.as_view(), name='comunication_exist'),         
 ]

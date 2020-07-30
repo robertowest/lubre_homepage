@@ -336,10 +336,6 @@ fabric.properties
 
 apps/*/migrations/
 datos/
-config/settings.ini
-config/custom.py
-config/desarrollo.py
-config/produccion.py
 dbtest.py
 push.sh
 

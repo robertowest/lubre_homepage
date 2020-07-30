@@ -106,6 +106,7 @@ INSTALLED_APPS += [
     'ckeditor',
     'mathfilters',
     'social_django',
+    'widget_tweaks',
 
     # homepage -----------------------------
     'apps.homepage',
