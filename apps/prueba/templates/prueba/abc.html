@@ -1,0 +1,60 @@
+{% extends 'default_movil.html' %}
+
+
+{% block content %}
+
+    <button type="button" class="btn btn-primary btn-lg"
+            data-toggle="modal" data-target="#myModal" data-whatever="variable1">
+        Launch demo modal
+    </button>
+
+{% endblock %}
+
+
+{% block modal %}
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Búsqueda ...</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalContent">
+                    Cargando datos ...
+                </div>
+                <div class="modal-footer">
+                    <!--
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block js %}
+    <!-- mis funciones -->
+    <script type="text/javascript">
+
+    $('#myModal').on('shown.bs.modal', function () {
+        let urlPath = '{% url 'prueba:busqueda_modal' %}';
+
+        $.ajax({
+            url: urlPath,
+            success: function(response) {
+                $('#modalContent').html(response);
+            },
+            error: function(xhr, status, error) {
+                console.log(xhr.responseText);
+            },
+        });
+    })
+
+    </script>
+{% endblock %}

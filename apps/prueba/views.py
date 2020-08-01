@@ -1,105 +1,62 @@
 from django.shortcuts import render
-from django.views.generic import DetailView, ListView
-
-from apps.empresa.models import Comercial, Empresa
-
-
-# from apps.comunes.utils import get_template_path
-# template_name = get_template_path(__package__.split('.')[1], "detalle.html")
-
-
-class PruebaDetailView(DetailView):
-    model = Empresa   # .objects.get(id=1511)
-    template_name = 'prueba/index.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
-
-
-def buscarComercial(request):
-    # f = ComercialFilter(request.GET, queryset=Comercial.objects.filter(active=True).order_by('persona'))
-    # return render(request, 'prueba/filtro3.html', {'filter': f, 'pk':1511})
-
-    # form = RegisterForm()
-    if request.method == "POST":
-        form = RegisterForm(request.POST) #if no files
-        if form.is_valid():
-            #do something if form is valid
-    context = {
-        'form': form, 'filter': f, 'pk': 1511
-    }
-    return render(request, 'prueba/index2.html', context)        
-
-
-
-# class SearchDataView(ListView):
-#     # app = __package__.split('.')[1]         --> lo obtiene de urls.py
-#     # app = model._meta.verbose_name.lower()  --> lo obtiene de models.py
-#     # template_name = '{app}/index.html'.format(app=__package__.split('.')[1])
-#     model = Comercial
-#     # template_name = 'prueba/modal_form.html'
-#     template_name = 'prueba/tabla_filtro.html'
-
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['app_name'] = __package__.split('.')[1]
-#         # context['object_list'] = Comercial.objects.filter(active=True)
-#         return context
-
-#     def get_queryset(self):
-#         qs = super().get_queryset()
-#         search = self.request.GET.get('search1') 
-#         if search:
-#             return qs.filter(nombre__icontains=search).filter(active=True)
-#         else: 
-#             return qs.filter(id=0)
-
-
-from django_tables2 import SingleTableView
-from .tables import ComercialTable
-
-
-class SearchDataView(SingleTableView):
-    model = Comercial   # .objects.filter(active=True)   # .order_by('persona')
-    table_class = ComercialTable
-    template_name = 'prueba/tabla.html'
-
-
-
-
-
-def comercial1(request):
-    table = ComercialTable(Comercial.objects.filter(active=True).order_by('persona'))
-    return render(request, 'prueba/tabla.html', {'table': table})
-    # filter = ProductFilter(request.GET, queryset=Product.objects.all())
-    # return render(request, 'my_app/template.html', {'filter': filter})
-
-
 
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
+
+from apps.empresa.models import Comercial
 from .filters import ComercialFilter
+from .tables import ComercialTable
+
+def index(request):
+    # return render(request, 'prueba/index.html')
+    return render(request, 'prueba/abc.html')
 
 
-class comercial2(SingleTableMixin, FilterView):
-    model = Comercial   # .objects.filter(active=True).order_by('persona')
+def busqueda_modal(request):
+    obj_list = Comercial.objects.filter(active=True).order_by('persona')
+    return render(request, 'prueba/busqueda_modal.html', {'object_list': obj_list})
+
+
+def comercial_search(request):
+    obj_list = Comercial.objects.filter(active=True).order_by('persona')
+    obj_filter = ComercialFilter(request.GET, queryset=obj_list)
+    return render(request, 'prueba/comercial_search.html', {'filter': obj_filter})
+
+
+class comercial_search_2(SingleTableMixin, FilterView):
+    model = Comercial
     table_class = ComercialTable
-    template_name = 'prueba/tabla_filtro.html'
     filterset_class = ComercialFilter
+    template_name = 'prueba/comercial_search_2.html'
 
 
-def comercial3(request):
-    # model = Comercial
-    # table = ComercialTable(Comercial.objects.filter(active=True).order_by('persona'))
-    # filter = ComercialFilter(request.GET, queryset=table)
-    # return render(request, 'prueba/tabla_filtro.html', {'filter': filter})
-    # table = ComercialTable(Comercial.objects.filter(active=True).order_by('persona'))
-    # return render(request, 'prueba/tabla_filtro.html', {'table': table})
-    f = ComercialFilter(request.GET, queryset=Comercial.objects.filter(active=True).order_by('persona'))
-    return render(request, 'prueba/filtro3.html', {'filter': f, 'pk':1511})
+def comercial_search_3(request):
+    obj_list = Comercial.objects.filter(active=True).order_by('persona')
+    obj_filter = ComercialFilter(request.GET, queryset=obj_list)
+    context = {
+        'filter': obj_filter,
+        'table': obj_list
+    }
+    return render(request, 'prueba/comercial_search_3.html', context)
+
+
+# from django.views.generic import TemplateView
+#
+# class resultado(TemplateView):
+#     # return render(request, 'prueba/resultado.html')
+#     template_name = 'prueba/resultado.html'
+def resultado(request, pk):
+    return render(request, 'prueba/resultado.html', {'seleccion':pk})
 
 
 
 
-
+def companyListView(request):
+    context = {}
+    object_list = Comercial.objects.filter(active=True).order_by('persona')
+    if request.method == 'POST' and request.is_ajax():
+        ID = request.POST.objects.get('id')
+        object_list = Comercial.get(id=ID)  # So we send the company instance
+        context['object_list'] = object_list
+    context['object_list'] = object_list
+    return render(request, 'prueba/prueba1.html', context)
