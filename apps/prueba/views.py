@@ -17,6 +17,11 @@ def busqueda_modal(request):
     return render(request, 'prueba/busqueda_modal.html', {'object_list': obj_list})
 
 
+def busqueda_table_modal(request):
+    return render(request, 'prueba/busqueda_table_modal.html')
+
+
+
 def comercial_search(request):
     obj_list = Comercial.objects.filter(active=True).order_by('persona')
     obj_filter = ComercialFilter(request.GET, queryset=obj_list)

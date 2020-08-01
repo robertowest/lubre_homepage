@@ -5,7 +5,12 @@
 
     <button type="button" class="btn btn-primary btn-lg"
             data-toggle="modal" data-target="#myModal" data-whatever="variable1">
-        Launch demo modal
+        modal
+    </button>
+
+    <button type="button" class="btn btn-primary btn-lg"
+            data-toggle="modal" data-target="#myModal" data-whatever="variable2">
+        modal table
     </button>
 
 {% endblock %}
@@ -24,6 +29,10 @@
                 </div>
                 <div class="modal-body" id="modalContent">
                     Cargando datos ...
+
+                    <h4>Do you want to delete this subject?</h4>
+                    <input type="text" id="subjid" name="subjid">
+
                 </div>
                 <div class="modal-footer">
                     <!--
@@ -42,7 +51,27 @@
     <!-- mis funciones -->
     <script type="text/javascript">
 
-    $('#myModal').on('shown.bs.modal', function () {
+    $('#myModal').on('shown.bs.modal', function (event) {
+        var button = $(event.relatedTarget)
+        var subjId = button.data('whatever')
+
+        var modal = $(this)
+        modal.find('.modal-body input').val(subjId)
+
+        switch (subjId) {
+            case 'variable1':
+                open_modal();
+                break;
+            case 'variable2':
+                open_table_modal();
+                break;
+            default:
+                console.log('no hay opciones para la ventana modal');
+        }
+
+    })
+
+    function open_modal() {
         let urlPath = '{% url 'prueba:busqueda_modal' %}';
 
         $.ajax({
@@ -54,7 +83,21 @@
                 console.log(xhr.responseText);
             },
         });
-    })
+    }
+
+    function open_table_modal() {
+        let urlPath = '{% url 'prueba:busqueda_table_modal' %}';
+
+        $.ajax({
+            url: urlPath,
+            success: function(response) {
+                $('#modalContent').html(response);
+            },
+            error: function(xhr, status, error) {
+                console.log(xhr.responseText);
+            },
+        });
+    }
 
     </script>
 {% endblock %}

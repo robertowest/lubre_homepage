@@ -6,6 +6,10 @@ app_name = __package__.split('.')[1]
 urlpatterns = [
     path('', views.index, name='index'),
     path('busqueda/', views.busqueda_modal, name='busqueda_modal'),
+    path('busqueda2/', views.busqueda_table_modal, name='busqueda_table_modal'),
+
+    # index y busqueda_modal son las requeridas
+
 
     path('ejemplo1/', views.comercial_search, name='comercial_search'),
     path('ejemplo2/', views.comercial_search_2.as_view(), name='comercial_search_2'),

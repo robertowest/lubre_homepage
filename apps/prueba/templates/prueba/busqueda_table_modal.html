@@ -1,0 +1,97 @@
+{# https://stackoverflow.com/questions/49967863/select-value-in-table-inside-of-modal-and-populate-the-form-outside-of-the-modal #}
+{# https://jsfiddle.net/p9cLkh1d/ #}
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+
+<div class="container-fluid">
+    <div class="table-responsive">
+        <table class="table" id="example">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Bday</th>
+                <th>Age</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Name1</td>
+                <td>10-1-1997</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Name2</td>
+                <td>9-1-1997</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Name3</td>
+                <td>8-1-1997</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Name4</td>
+                <td>7-1-1997</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Name5</td>
+                <td>6-1-1997</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Name6</td>
+                <td>10-1-1997</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Name7</td>
+                <td>9-1-1997</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Name8</td>
+                <td>8-1-1997</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Name9</td>
+                <td>7-1-1997</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Name10</td>
+                <td>6-1-1997</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Name11</td>
+                <td>6-1-1997</td>
+                <td>20</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% comment %}
+<script type="text/javascript">
+  // $(document).ready(function() {
+    // $('#example').DataTable();
+    var table= $('#example').DataTable();
+
+
+    $(tableBody).on('click', 'tr', function () {
+var cursor = table.row($(this).parents('tr'));//get the clicked row
+var data=cursor.data();// this will give you the data in the current row.
+var tableBody = '#example tbody';
+
+});
+    $('form').find("input[name='Name'][type='text']").val(data.name);
+$('form').find("input[name='Bday'][type='text']").val(data.name);
+$('form').find("input[name='Age'][type='text']").val(data.name);
+// } );
+
+</script>
+{% endcomment %}
