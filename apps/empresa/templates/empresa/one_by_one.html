@@ -92,7 +92,7 @@
                         <span class="text">Nuevo</span>
                     </a>
 
-                    <a class="btn btn-warning btn-icon-split" id="buscaContacto"
+                    <a class="btn btn-warning btn-icon-split"
                        data-toggle="modal" data-target="#myModal"
                        data-url="{% url 'empresa:buscar_comunicacion' object.pk %}"
                        data-pk="{{object.pk}}">
@@ -101,7 +101,6 @@
                         </span>
                         <span class="text">Asociar</span>
                     </a>
-
                 </div>
             </div>
         </div>
@@ -203,6 +202,16 @@
                             <i class="fas fa-plus"></i>
                         </span>
                         <span class="text">Nuevo</span>
+                    </a>
+
+                    <a class="btn btn-warning btn-icon-split"
+                        data-toggle="modal" data-target="#myModal"
+                        data-url="{% url 'empresa:buscar_contacto' object.pk %}"
+                        data-pk="{{object.pk}}">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-link"></i>
+                        </span>
+                        <span class="text">Asociar</span>
                     </a>
                 </div>
             </div>

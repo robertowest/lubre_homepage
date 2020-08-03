@@ -460,7 +460,7 @@ class EmpresaBrowseView(generic.DetailView):
 
 
 def buscar_comunicacion(request, pk):
-    obj_list = ComunicacionModel.objects.filter(active=True)[:50]
+    obj_list = ComunicacionModel.objects.filter(active=True)
     context = {
         'tableID': 'dataTableModal',
         'object_list': obj_list,
@@ -473,5 +473,23 @@ def asociar_comunicacion(request, empId, comId):
     empresa = models.Empresa.objects.get(id=empId)
     comunicacion = ComunicacionModel.objects.get(id=comId)
     empresa.comunicaciones.add(comunicacion)
+    empresa.save()
+    return HttpResponseRedirect(reverse('empresa:browse', args=[empId]))
+
+
+def buscar_contacto(request, pk):
+    obj_list = ContactoModel.objects.filter(active=True)
+    context = {
+        'tableID': 'dataTableModal',
+        'object_list': obj_list,
+        'empresaId': pk,
+    }
+    return render(request, 'empresa/includes/_modal_contacto.html', context)
+
+
+def asociar_contacto(request, empId, comId):
+    empresa = models.Empresa.objects.get(id=empId)
+    contacto = ContactoModel.objects.get(id=comId)
+    empresa.contactoes.add(contacto)
     empresa.save()
     return HttpResponseRedirect(reverse('empresa:browse', args=[empId]))

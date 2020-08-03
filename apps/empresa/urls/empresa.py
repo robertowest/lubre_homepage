@@ -24,6 +24,9 @@ urlpatterns = [
     # asociar con registro existente
     path('<int:pk>/comunicacion/buscar/', views.buscar_comunicacion, name='buscar_comunicacion'),
     path('<int:empId>/comunicacion/<int:comId>/', views.asociar_comunicacion, name='asociar_comunicacion'),
+
+    path('<int:pk>/contacto/buscar/', views.buscar_contacto, name='buscar_contacto'),
+    path('<int:empId>/contacto/<int:comId>/', views.asociar_contacto, name='asociar_contacto'),
 ]
 
 # controlar login a nivel de path
