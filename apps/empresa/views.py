@@ -2,8 +2,9 @@
 import os
 
 from django.db.models import Count
-from django.http import HttpResponse, HttpResponseRedirect
-from django.urls import resolve
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.urls import resolve, reverse
 from django.views import generic
 
 from . import forms, models
@@ -458,7 +459,19 @@ class EmpresaBrowseView(generic.DetailView):
         return context
 
 
-class EmpresaAsociarContactoView(generic.UpdateView):
-    model = ComunicacionModel
-    form_class = ComunicacionForm
-    template_name = 'empresa/includes/_modal1.html'
+def buscar_comunicacion(request, pk):
+    obj_list = ComunicacionModel.objects.filter(active=True)[:50]
+    context = {
+        'tableID': 'dataTableModal',
+        'object_list': obj_list,
+        'empresaId': pk,
+    }
+    return render(request, 'empresa/includes/_modal_comunicacion.html', context)
+
+
+def asociar_comunicacion(request, empId, comId):
+    empresa = models.Empresa.objects.get(id=empId)
+    comunicacion = ComunicacionModel.objects.get(id=comId)
+    empresa.comunicaciones.add(comunicacion)
+    empresa.save()
+    return HttpResponseRedirect(reverse('empresa:browse', args=[empId]))

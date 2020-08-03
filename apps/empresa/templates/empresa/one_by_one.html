@@ -4,7 +4,15 @@
 {% load mis_tags %}
 
 
-{% block contenido2 %}
+{% block style %}
+    <!-- dataTables.bootstrap4.min.css -->
+    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/datatables/jquery.dataTables.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/datatable.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+
+{% block contenido %}
 
     <!-- izquierda -->
     <div class="col-lg-6">
@@ -51,7 +59,7 @@
             <div class="collapse show" id="comunicacionCard">
                 <div class="card-body">
                     {% if comunicaciones  %}
-                    <table class="table" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table" id="dtComunicacion" width="100%" cellspacing="0">
                         <!--
                         <thead>
                             <tr>
@@ -83,11 +91,13 @@
                         </span>
                         <span class="text">Nuevo</span>
                     </a>
-                    <!-- href="{{object.get_comunication_exist}}" -->
-                    <a class="btn btn-secondary btn-icon-split"
-                       href="{{object.get_comunication_exist}}" data-toggle="modal" data-target="#formularioModal">
+
+                    <a class="btn btn-warning btn-icon-split" id="buscaContacto"
+                       data-toggle="modal" data-target="#myModal"
+                       data-url="{% url 'empresa:buscar_comunicacion' object.pk %}"
+                       data-pk="{{object.pk}}">
                         <span class="icon text-white-50">
-                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-link"></i>
                         </span>
                         <span class="text">Asociar</span>
                     </a>
@@ -106,7 +116,7 @@
             <div class="collapse show" id="domicilioCard">
                 <div class="card-body">
                     {% if domicilios  %}
-                    <table class="table" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table" id="dtDomicilio" width="100%" cellspacing="0">
                         <!--
                         <thead>
                             <tr>
@@ -158,7 +168,7 @@
             <div class="collapse show" id="contactoCard">
                 <div class="card-body">
                     {% if contactos  %}
-                    <table class="table" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table" id="dtContacto" width="100%" cellspacing="0">
                         <!--
                         <thead>
                             <tr>
@@ -208,7 +218,7 @@
             <div class="collapse show" id="actividadCard">
                 <div class="card-body">
                     {% if actividades  %}
-                    <table class="table" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table" id="dtActividad" width="100%" cellspacing="0">
                         <tbody>
 
                             {% for registro in actividades %}
@@ -249,15 +259,6 @@
 {% endblock %}
 
 
-{% block contenido %}
-
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-success openBtn"
-            data-toggle="modal" data-target="#{{ object.pk }}" data-id="{{ object.pk }}">Abrir Modal</button>
-
-{% endblock %}
-
-
 {% block modal %}
     <!-- ventana modal -->
     {% include 'empresa/includes/_modal.html' %}
@@ -265,11 +266,30 @@
 
 
 {% block js %}
-    <script>
-        $('.openBtn').on('click',function(){
-            $('.modal-body').load('content.html',function(){
-                $('#busquedaModal').modal({show:true});
+    <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
+    <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+
+    <!-- mis funciones -->
+    <script type="text/javascript">
+        $('#myModal').on('shown.bs.modal', function (event) {
+            var button = $(event.relatedTarget)
+            var dataUrl = button.data('url')
+            var dataPk = button.data('pk')
+
+            $.ajax({
+                url: dataUrl,
+                data: {pk: dataPk},
+                success: function(response) {
+                    $('#modalContent').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.log(xhr.responseText);
+                },
             });
-        });
+        })
+
+        $('#myModal').on('hidden.bs.modal', function (event) {
+            $('#modalContent').html("Cargando datos ...");
+        })
     </script>
 {% endblock %}

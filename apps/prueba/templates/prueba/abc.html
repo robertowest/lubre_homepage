@@ -1,15 +1,28 @@
 {% extends 'default_movil.html' %}
+{% load static %}
+
+{% block style %}
+    <!-- dataTables.bootstrap4.min.css -->
+    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/datatables/jquery.dataTables.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/datatable.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
 
 {% block content %}
 
     <button type="button" class="btn btn-primary btn-lg"
-            data-toggle="modal" data-target="#myModal" data-whatever="variable1">
+            data-toggle="modal" data-target="#myModal" data-whatever="modal">
         modal
     </button>
 
     <button type="button" class="btn btn-primary btn-lg"
-            data-toggle="modal" data-target="#myModal" data-whatever="variable2">
+            data-toggle="modal" data-target="#myModal" data-whatever="modalSelect">
+        modal select
+    </button>
+
+    <button type="button" class="btn btn-primary btn-lg"
+            data-toggle="modal" data-target="#myModal" data-whatever="modalTable">
         modal table
     </button>
 
@@ -17,7 +30,7 @@
 
 
 {% block modal %}
-
+    <!-- style="padding-left: 800px;" -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -28,17 +41,16 @@
                     </button>
                 </div>
                 <div class="modal-body" id="modalContent">
-                    Cargando datos ...
 
-                    <h4>Do you want to delete this subject?</h4>
-                    <input type="text" id="subjid" name="subjid">
+
+
 
                 </div>
                 <div class="modal-footer">
                     <!--
                     <button type="button" class="btn btn-primary">Save changes</button>
                     -->
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -48,56 +60,60 @@
 
 
 {% block js %}
+    <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
+    <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+
     <!-- mis funciones -->
     <script type="text/javascript">
+        $('#myModal').on('shown.bs.modal', function (event) {
+            var button = $(event.relatedTarget)
+            var subjId = button.data('whatever')
 
-    $('#myModal').on('shown.bs.modal', function (event) {
-        var button = $(event.relatedTarget)
-        var subjId = button.data('whatever')
+            switch (subjId) {
+                case 'modal':
+                    break;
+                case 'modalSelect':
+                    open_modal();
+                    break;
+                case 'modalTable':
+                    open_table_modal();
+                    break;
+                default:
+                    console.log('no hay opciones para la ventana modal');
+            }
 
-        var modal = $(this)
-        modal.find('.modal-body input').val(subjId)
+        })
 
-        switch (subjId) {
-            case 'variable1':
-                open_modal();
-                break;
-            case 'variable2':
-                open_table_modal();
-                break;
-            default:
-                console.log('no hay opciones para la ventana modal');
+        $('#myModal').on('hidden.bs.modal', function (event) {
+            $('#modalContent').html("Cargando datos ...");
+        })
+
+        function open_modal() {
+            let urlPath = '{% url 'prueba:busqueda_modal' %}';
+
+            $.ajax({
+                url: urlPath,
+                success: function(response) {
+                    $('#modalContent').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.log(xhr.responseText);
+                },
+            });
         }
 
-    })
+        function open_table_modal() {
+            let urlPath = '{% url 'prueba:busqueda_table_modal' %}';
 
-    function open_modal() {
-        let urlPath = '{% url 'prueba:busqueda_modal' %}';
-
-        $.ajax({
-            url: urlPath,
-            success: function(response) {
-                $('#modalContent').html(response);
-            },
-            error: function(xhr, status, error) {
-                console.log(xhr.responseText);
-            },
-        });
-    }
-
-    function open_table_modal() {
-        let urlPath = '{% url 'prueba:busqueda_table_modal' %}';
-
-        $.ajax({
-            url: urlPath,
-            success: function(response) {
-                $('#modalContent').html(response);
-            },
-            error: function(xhr, status, error) {
-                console.log(xhr.responseText);
-            },
-        });
-    }
-
+            $.ajax({
+                url: urlPath,
+                success: function(response) {
+                    $('#modalContent').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.log(xhr.responseText);
+                },
+            });
+        }
     </script>
 {% endblock %}

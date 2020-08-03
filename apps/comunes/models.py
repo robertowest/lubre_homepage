@@ -237,7 +237,7 @@ class Comunicacion(CommonStruct):
         verbose_name_plural = 'Comunicaciones'
 
     def __str__(self):
-        return "%s: %s" % (self.get_tipo_display(), self.texto)
+        return "%s: %s" % (self.tipo, self.texto)
 
     def get_comunicacion(self):
         return "{}: {}".format(self.get_tipo_display(), self.texto)

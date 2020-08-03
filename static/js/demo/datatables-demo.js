@@ -70,6 +70,30 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function() {
+  $('#dataTableModal').DataTable({
+    "info":     false,
+    "language": {
+      "decimal":        "",
+      "emptyTable":     "No hay datos disponibles en la tabla",
+      "loadingRecords": "Cargando ...",
+      "processing":     "Procesando ...",
+      "search":         "Buscar:",
+      "paginate": {
+          "first":      "<<",
+          "last":       ">>",
+          "next":       ">",
+          "previous":   "<"
+      },
+    },
+    "lengthChange": false,
+    "searching": true,
+    "ordering": false,
+    "paging":   true,
+  });
+});
+
+
 /*
 $(document).ready(function() {
   $('#dataTable').DataTable( {

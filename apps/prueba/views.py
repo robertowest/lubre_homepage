@@ -3,12 +3,12 @@ from django.shortcuts import render
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
 
+from apps.persona.models import Persona
 from apps.empresa.models import Comercial
 from .filters import ComercialFilter
 from .tables import ComercialTable
 
 def index(request):
-    # return render(request, 'prueba/index.html')
     return render(request, 'prueba/abc.html')
 
 
@@ -18,8 +18,12 @@ def busqueda_modal(request):
 
 
 def busqueda_table_modal(request):
-    return render(request, 'prueba/busqueda_table_modal.html')
-
+    obj_list = Comercial.objects.filter(active=True).order_by('persona')
+    context = {
+        'tableID': 'dataTableModal',
+        'object_list': obj_list,
+    }
+    return render(request, 'prueba/busqueda_table_modal.html', context)
 
 
 def comercial_search(request):
@@ -51,7 +55,7 @@ def comercial_search_3(request):
 #     # return render(request, 'prueba/resultado.html')
 #     template_name = 'prueba/resultado.html'
 def resultado(request, pk):
-    return render(request, 'prueba/resultado.html', {'seleccion':pk})
+    return render(request, 'prueba/resultado.html', {'seleccion': pk})
 
 
 

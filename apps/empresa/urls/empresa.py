@@ -22,8 +22,8 @@ urlpatterns = [
     path('<int:fk>/actividad/', views.ActividadMultiListView.as_view(), name='associate_with_actividad'),
 
     # asociar con registro existente
-    path('<int:pk>/comunicacion/asociar/',
-         views.EmpresaAsociarContactoView.as_view(), name='comunication_exist'),
+    path('<int:pk>/comunicacion/buscar/', views.buscar_comunicacion, name='buscar_comunicacion'),
+    path('<int:empId>/comunicacion/<int:comId>/', views.asociar_comunicacion, name='asociar_comunicacion'),
 ]
 
 # controlar login a nivel de path
