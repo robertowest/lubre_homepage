@@ -3,7 +3,7 @@ import os
 
 from django.db.models import Count
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404, get_object_or_404
 from django.urls import resolve, reverse
 from django.views import generic
 
@@ -19,7 +19,7 @@ from apps.persona.forms import PersonaForm as ContactoForm
 
 
 # -----------------------------------------------------------------------------
-# Empresas
+# Empresa
 # -----------------------------------------------------------------------------
 
 
@@ -126,6 +126,15 @@ class EmpresaDeleteView(generic.DeleteView):
     pass
 
 
+def empresa_actividad(request, empId, actId):
+    ea = models.EmpresaActividades.objects.filter(empresa=empId).filter(actividad=actId)
+    # http://localhost:8000/empresa/6027/actividad/7/
+    # return EmpActDetailView.as_view()(request, pk=ea[0].id)
+    # http://localhost:8000/empresa_actividad/2859/
+    url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': ea[0].id})
+    return HttpResponseRedirect(url)
+
+
 # -----------------------------------------------------------------------------
 # Empresas filtradas por Actividades y Comerciales
 # -----------------------------------------------------------------------------
@@ -171,7 +180,7 @@ class FilterListView(generic.ListView):
 
 
 # -----------------------------------------------------------------------------
-# Tablas relacionadas a la Empreda
+# Tablas relacionadas a la empresa
 # -----------------------------------------------------------------------------
 
 
@@ -196,71 +205,6 @@ class CreateComunicationView(generic.CreateView):
         # creamos la asociación
         empresa.comunicaciones.add(self.object)
         
-        # terminamos, ¿hacia dónde vamos?
-        if 'previous_url' in self.request._post:
-            return HttpResponseRedirect(self.request._post['previous_url'])
-        return response
-
-
-class CreateAddressView(generic.CreateView):
-    model = DomicilioModel
-    form_class = DomicilioForm
-    template_name = 'comunes/formulario.html'
-    form_title = 'Nuevo Domicilio'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['form_title'] = self.form_title
-        return context
-
-    def form_valid(self, form):
-        response = super().form_valid(form)
-
-        # grabamos el objeto para obtener identificador
-        self.object = form.save()
-        # obtenemos el objeto primario
-        empresa = models.Empresa.objects.get(id=self.kwargs['fk'])
-        # creamos la asociación
-        empresa.domicilios.add(self.object)
-
-        # terminamos, ¿hacia dónde vamos?
-        if 'previous_url' in self.request._post:
-            return HttpResponseRedirect(self.request._post['previous_url'])
-        return response
-
-
-class CreateContactView(generic.CreateView):
-    model = ContactoModel
-    form_class = ContactoForm
-    template_name = 'comunes/formulario.html'
-    form_title = 'Nuevo Contacto'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['form_title'] = self.form_title
-        return context
-
-    # def post(self, request, *args, **kwargs):
-    #     form = self.get_form()
-    #     existe = ContactoModel.objects.get(documento=form.data['documento'])
-    #     if existe:
-    #         # contacto existente, deberia asociarlo
-    #
-    #     if form.is_valid():
-    #         return self.form_valid(form)
-    #     else:
-    #         return self.form_invalid(form)
-
-    def form_valid(self, form):
-        response = super().form_valid(form)
-
-        # grabamos el objeto para obtener identificador
-        self.object = form.save()
-        # obtenemos el objeto primario
-        empresa = models.Empresa.objects.get(id=self.kwargs['fk'])
-        # creamos la asociación
-        empresa.contactos.add(self.object)
-
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
@@ -411,6 +355,100 @@ class ActividadDeleteView(generic.DeleteView):
     pass
 
 
+# -----------------------------------------------------------------------------
+# Empresa Actividad
+# -----------------------------------------------------------------------------
+class EmpActDetailView(generic.DetailView):
+    # EmpresaActividades.objects.filter(empresa=6027).filter(actividad=7)
+    model = models.EmpresaActividades
+    template_name = 'empresa_actividad/detalle.html'
+
+    # def get_object(self):
+    #     ea = models.EmpresaActividades.objects.filter(empresa=6027).filter(actividad=7)
+    #     return get_object_or_404(models.EmpresaActividades, pk=ea[0].id)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['domicilios'] = None  # context['empresa'].domicilios.filter(active=True)
+        context['contactos'] = None   # context['empresa'].contactos.filter(active=True)
+        return context
+
+
+class CreateAddressView(generic.CreateView):
+    model = DomicilioModel
+    form_class = DomicilioForm
+    template_name = 'comunes/formulario.html'
+    form_title = 'Nuevo Domicilio'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form_title'] = self.form_title
+        return context
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+
+        # grabamos el objeto para obtener identificador
+        self.object = form.save()
+        # obtenemos el objeto primario
+        empresa = models.EmpresaActividades.objects.get(id=self.kwargs['pk'])
+        # creamos la asociación
+        empresa.domicilios.add(self.object)
+
+        # terminamos, ¿hacia dónde vamos?
+        if 'previous_url' in self.request._post:
+            return HttpResponseRedirect(self.request._post['previous_url'])
+        return response
+
+
+class CreateContactView(generic.CreateView):
+    model = ContactoModel
+    form_class = ContactoForm
+    template_name = 'comunes/formulario.html'
+    form_title = 'Nuevo Contacto'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form_title'] = self.form_title
+        return context
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+
+        # grabamos el objeto para obtener identificador
+        self.object = form.save()
+        # obtenemos el objeto primario
+        empresa = models.EmpresaActividades.objects.get(id=self.kwargs['pk'])
+        # creamos la asociación
+        empresa.contactos.add(self.object)
+
+        # terminamos, ¿hacia dónde vamos?
+        if 'previous_url' in self.request._post:
+            return HttpResponseRedirect(self.request._post['previous_url'])
+        return response
+
+
+def buscar_contacto(request, pk):
+    obj_list = ContactoModel.objects.filter(active=True)
+    context = {
+        'tableID': 'dataTableModal',
+        'object_list': obj_list,
+        'empresaId': pk,
+    }
+    return render(request, 'empresa_actividad/includes/_modal_contacto.html', context)
+
+
+def asociar_contacto(request, empId, comId):
+    empresa = models.EmpresaActividades.objects.get(id=empId)
+    contacto = ContactoModel.objects.get(id=comId)
+    empresa.contactos.add(contacto)
+    empresa.save()
+    # url = reverse('empresa:browse', args=(), kwargs={'pk': empresa.empresa.id})
+    url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': empresa.id})
+    return HttpResponseRedirect(url)
+
+
+
 
 
 # ----------------------------------------------------------------------------------
@@ -473,23 +511,5 @@ def asociar_comunicacion(request, empId, comId):
     empresa = models.Empresa.objects.get(id=empId)
     comunicacion = ComunicacionModel.objects.get(id=comId)
     empresa.comunicaciones.add(comunicacion)
-    empresa.save()
-    return HttpResponseRedirect(reverse('empresa:browse', args=[empId]))
-
-
-def buscar_contacto(request, pk):
-    obj_list = ContactoModel.objects.filter(active=True)
-    context = {
-        'tableID': 'dataTableModal',
-        'object_list': obj_list,
-        'empresaId': pk,
-    }
-    return render(request, 'empresa/includes/_modal_contacto.html', context)
-
-
-def asociar_contacto(request, empId, comId):
-    empresa = models.Empresa.objects.get(id=empId)
-    contacto = ContactoModel.objects.get(id=comId)
-    empresa.contactoes.add(contacto)
     empresa.save()
     return HttpResponseRedirect(reverse('empresa:browse', args=[empId]))

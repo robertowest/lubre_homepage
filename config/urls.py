@@ -40,8 +40,9 @@ urlpatterns = [
     path('diccionario/', include('apps.comunes.urls.diccionario')),
     path('domicilio/', include('apps.comunes.urls.domicilio')),
 
+    path('actividad/', include('apps.empresa.urls.actividad')),
     path('empresa/', include('apps.empresa.urls.empresa')),
-    path('empresa/actividad/', include('apps.empresa.urls.actividad')),
+    path('empresa_actividad/', include('apps.empresa.urls.empresa_actividad')),
 
     path('persona/', include('apps.persona.urls')),
 

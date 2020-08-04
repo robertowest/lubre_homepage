@@ -1,0 +1,151 @@
+{% extends 'comunes/detalle.html' %}
+
+{% load static %}
+{% load mis_tags %}
+
+
+{% block contenido %}
+
+    <!-- izquierda -->
+    <div class="col-lg-6">
+        <!-- actividad -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Datos de la Empresa/Actividad</h6>
+            </div>
+            <div class="card-body">
+                <dl>
+                    <dt>Empresa</dt>
+                    <dd>{{object.empresa}}</dd>
+                </dl>
+                <dl>
+                    <dt>Actividad</dt>
+                    <dd>{{object.actividad}}</dd>
+                </dl>
+            </div>
+            <div class="card-footer">
+                <a href="{{request.META.HTTP_REFERER}}" class="btn btn-warning btn-icon-split">                   
+                   <span class="icon text-white-50"><i class="fas fa-undo"></i></span>
+                   <span class="text">Regresar</span>
+                </a>
+            </div>            
+        </div>
+    </div>
+
+    <!-- derecha -->
+    <div class="col-lg-6">
+        <!-- domicilios -->
+        <div class="card shadow mb-4">
+            <a href="#domicilioCard" class="d-block card-header py-3" 
+               data-toggle="collapse" role="button" aria-expanded="true" 
+               aria-controls="domicilioCard">
+                <h6 class="m-0 font-weight-bold text-primary">Domicilios</h6>
+            </a>
+            <div class="collapse show" id="domicilioCard">
+                <div class="card-body">
+                    {% if domicilios  %}
+                    <table class="table" id="dtDomicilio" width="100%" cellspacing="0">
+                        <!--
+                        <thead>
+                            <tr>
+                                <th>Domicilio</th>
+                                <th>Localidad</th>
+                                <th>Ciudad</th>
+                            </tr>
+                        </thead>
+                        -->
+                        <tbody>
+                            {% for registro in domicilios %}
+                            <tr>
+                                <td>
+                                    {{registro.tipo}}&nbsp; 
+                                    <a href="{{registro.get_update_url}}">{{registro}}</a>&nbsp; 
+                                    {{registro.localidad_texto}}
+                                </td>
+                                {% comment %}
+                                <td>{{registro.tipo}}</td>
+                                <td><a href="{{registro.get_update_url}}">{{registro}}</a></td>
+                                <td>{{registro.provincia_texto}}</td>
+                                <td>{{registro.localidad_texto}}</td>
+                                {% endcomment %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif  %}
+                </div>
+                <div class="card-footer">
+                    <!-- agregar nuevo domicilio y asociarlo a la empresa -->
+                    <a href="{% url 'empresa_actividad:emp_act_domicilio' object.empresa.id %}" class="btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="text">Nuevo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- contactos -->
+        <div class="card shadow mb-4">
+            <a href="#contactoCard" class="d-block card-header py-3" 
+               data-toggle="collapse" role="button" aria-expanded="true" 
+               aria-controls="contactoCard">
+                <h6 class="m-0 font-weight-bold text-primary">Contactos</h6>
+            </a>
+            <div class="collapse show" id="contactoCard">
+                <div class="card-body">
+                    {% if contactos  %}
+                    <table class="table" id="dtContacto" width="100%" cellspacing="0">
+                        <!--
+                        <thead>
+                            <tr>
+                                <th>Persona</th>
+                                <th>Celular</th>
+                            </tr>
+                        </thead>
+                        -->
+                        <tbody>
+                            {% for registro in contactos %}
+                            <tr>
+                                <td>
+                                    <a href="{{registro.get_detail_url}}" target="_blank">{{registro}}</a>
+                                </td>
+                                <td>
+                                    {% for movil in registro.comunicaciones.all %}
+                                        {% if movil.tipo == 'movil' %}
+                                            {{movil.texto}}<br>
+                                        {%endif%}
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif  %}
+                </div>
+                <div class="card-footer">
+                    <!-- agregar nuevo contacto y asociarlo a la empresa -->
+                    <a href="{% url 'empresa_actividad:emp_act_contacto' object.empresa.id %}" class="btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="text">Nuevo</span>
+                    </a>
+
+                    <a class="btn btn-warning btn-icon-split"
+                        data-toggle="modal" data-target="#myModal"
+                        data-url="{% url 'empresa:buscar_contacto' object.pk %}"
+                        data-pk="{{object.pk}}">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-link"></i>
+                        </span>
+                        <span class="text">Asociar</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

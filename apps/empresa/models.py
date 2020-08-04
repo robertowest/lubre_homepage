@@ -156,7 +156,7 @@ class EmpresaComunicaciones(models.Model):
 
 
 class EmpresaContactos(models.Model):
-    empresa = models.ForeignKey(Empresa, models.DO_NOTHING)
+    empresa = models.ForeignKey(EmpresaActividades, models.DO_NOTHING)
     persona = models.ForeignKey(Persona, models.DO_NOTHING)
 
     class Meta:
@@ -166,7 +166,7 @@ class EmpresaContactos(models.Model):
 
 
 class EmpresaDomicilios(models.Model):
-    empresa = models.ForeignKey(Empresa, models.DO_NOTHING)
+    empresa = models.ForeignKey(EmpresaActividades, models.DO_NOTHING)
     domicilio = models.ForeignKey(Domicilio, models.DO_NOTHING)
 
     class Meta:

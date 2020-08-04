@@ -27,6 +27,9 @@ urlpatterns = [
 
     path('<int:pk>/contacto/buscar/', views.buscar_contacto, name='buscar_contacto'),
     path('<int:empId>/contacto/<int:comId>/', views.asociar_contacto, name='asociar_contacto'),
+
+    # redireccionamiento a empresa_actividad
+    path('<int:empId>/actividad/<int:actId>/', views.empresa_actividad, name='empresa_actividad'),
 ]
 
 # controlar login a nivel de path
