@@ -3,7 +3,7 @@ import os
 
 from django.db.models import Count
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_list_or_404, get_object_or_404
+from django.shortcuts import redirect, render, get_list_or_404, get_object_or_404
 from django.urls import resolve, reverse
 from django.views import generic
 
