@@ -8,7 +8,6 @@ def Equivalencia(request):
     ypf = {}
 
     if request.method == 'POST':
-        # import pdb; pdb.set_trace()
         # marcaId = request.POST['marca']
         # tipoId = request.POST['tipo']
         prodId = request.POST['producto']

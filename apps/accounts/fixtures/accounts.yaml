@@ -58,47 +58,47 @@
   pk: 1
   fields:
     user: 1
-    imagen: ''
+    imagen: 'img/user_none.jpg'
     cuit: null
 - model: accounts.profile
   pk: 2
   fields:
     user: 2
-    imagen: ''
+    imagen: 'img/user_none.jpg'
     cuit: null
 - model: accounts.profile
   pk: 3
   fields:
     user: 3
-    imagen: ''
+    imagen: 'img/user_none.jpg'
     cuit: null
 - model: accounts.profile
   pk: 4
   fields:
     user: 4
-    imagen: ''
+    imagen: 'img/user_none.jpg'
     cuit: null
 - model: accounts.profile
   pk: 5
   fields:
     user: 5
-    imagen: ''
+    imagen: 'img/user_none.jpg'
     cuit: null
 - model: accounts.profile
   pk: 6
   fields:
     user: 6
-    imagen: ''
+    imagen: 'img/user_none.jpg'
     cuit: null
 - model: accounts.profile
   pk: 7
   fields:
     user: 7
-    imagen: ''
+    imagen: 'img/user_none.jpg'
     cuit: null
 - model: accounts.profile
   pk: 8
   fields:
     user: 8
-    imagen: ''
+    imagen: 'img/user_none.jpg'
     cuit: null

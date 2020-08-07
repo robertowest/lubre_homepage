@@ -114,12 +114,12 @@ INSTALLED_APPS += [
     'apps.accounts',
     'apps.tienda',
 
-    # cartera ------------------------------
-    'apps.comunes',
-    'apps.empresa',
-    'apps.persona',
-
     # gestion ------------------------------
+    'apps.comunes',
+    'apps.persona',
+    'apps.empresa',
+
+    # sistema ------------------------------
     'apps.firebird',
 ]
 

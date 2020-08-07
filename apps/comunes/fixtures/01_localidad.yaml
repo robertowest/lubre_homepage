@@ -2,10 +2,6 @@
   pk: 1
   fields:
     active: true
-    created: null
-    created_by: null
-    modified: 2020-07-24 14:07:25.174502+00:00
-    modified_by: null
     nombre: Argentina
     cod_area_tel: '54'
 - model: comunes.provincia

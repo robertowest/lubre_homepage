@@ -8,18 +8,21 @@ from apps.persona.models import Persona
 
 class Comercial(CommonStruct):
     persona = models.ForeignKey(Persona, on_delete=models.CASCADE)
-    domicilios = models.ManyToManyField(Domicilio, related_name='comercial_domicilios',
-                                        blank=True, limit_choices_to = {'active': True})
-    comunicaciones = models.ManyToManyField(Comunicacion, related_name='comercial_comunicaciones',
-                                            blank=True, limit_choices_to = {'active': True})
+    domicilios = models.ManyToManyField(Domicilio, blank=True,
+                                        related_name='comercial_domicilios',
+                                        limit_choices_to={'active': True})
+    comunicaciones = models.ManyToManyField(Comunicacion, blank=True,
+                                            related_name='comercial_comunicaciones',
+                                            limit_choices_to={'active': True})
     usuario = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True,
-                                   limit_choices_to = {'active': True})
+                                   limit_choices_to={'is_active': True})
 
-    list_display = ['persona_id', 'persona', 'usuario']
+    list_display = ['persona_id', 'persona', 'usuario', 'active']
     list_display_links = ['persona']
     search_fields = ['persona__apellido']
 
     class Meta:
+        db_table = 'comercial'
         verbose_name = 'Comercial'
         verbose_name_plural = 'Comerciales'
 
@@ -46,7 +49,7 @@ class ComercialComunicaciones(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'empresa_comercial_comunicaciones'
+        db_table = 'comercial_comunicaciones'
         unique_together = (('comercial', 'comunicacion'),)
 
 
@@ -56,7 +59,7 @@ class ComercialDomicilios(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'empresa_comercial_domicilios'
+        db_table = 'comercial_domicilios'
         unique_together = (('comercial', 'domicilio'),)
 
 
@@ -70,6 +73,7 @@ class Actividad(CommonStruct):
     list_display_links = ['nombre']
 
     class Meta:
+        db_table = 'actividad'
         verbose_name = 'Actividad'
         verbose_name_plural = 'Actividades'
 
@@ -79,29 +83,25 @@ class Actividad(CommonStruct):
         return self.nombre
 
 
-# class Subactividad(Actividad):
-#     actividad = models.OneToOneField(Actividad, on_delete=models.CASCADE, parent_link=True)
-
-
 class Empresa(CommonStruct):
     nombre = models.CharField('Nombre de Fantasía', max_length=60)
     razon_social = models.CharField('Razón Social', max_length=60, unique=True)
     cuit = models.CharField('CUIT/CUIL', max_length=13, unique=True, null=True, blank=True)
     comercial = models.ForeignKey(Comercial, on_delete=models.CASCADE, null=True, blank=True,
-                                  limit_choices_to = {'active': True})
-    # actividad = models.ForeignKey(Diccionario, on_delete=models.CASCADE, null=True, blank=True,
-    #                               limit_choices_to = {'tabla': 'actividad', 'active': True})
+                                  limit_choices_to={'active': True})
     actividad = models.ForeignKey(Actividad, on_delete=models.CASCADE, null=True, blank=True,
-                                 limit_choices_to = {'active': True},
-                                 verbose_name='Actividad principal')
-    actividades = models.ManyToManyField(Actividad, related_name='empresa_actividades', blank=True,
-                                          limit_choices_to = {'parent__isnull': False, 'active': True})
-    domicilios = models.ManyToManyField(Domicilio, related_name='empresa_domicilios',
-                                        blank=True, limit_choices_to = {'active': True})
-    comunicaciones = models.ManyToManyField(Comunicacion, related_name='empresa_comunicaciones',
-                                            blank=True, limit_choices_to = {'active': True})
-    contactos = models.ManyToManyField(Persona, related_name='empresa_contactos',
-                                       blank=True, limit_choices_to = {'active': True})
+                                  limit_choices_to={'active': True},
+                                  verbose_name='Actividad principal')
+    actividades = models.ManyToManyField(Actividad, blank=True,
+                                         related_name='empresa_actividades',
+                                         limit_choices_to={'parent__isnull': False, 'active': True})
+    comunicaciones = models.ManyToManyField(Comunicacion, blank=True,
+                                            related_name='empresa_comunicaciones',
+                                            limit_choices_to={'active': True})
+    # domicilios = models.ManyToManyField(Domicilio, related_name='empresa_domicilios',
+    #                                     blank=True, limit_choices_to={'active': True})
+    # contactos = models.ManyToManyField(Persona, related_name='empresa_contactos',
+    #                                    blank=True, limit_choices_to={'active': True})
     observacion = models.TextField(null=True, blank=True)
     referencia_id = models.IntegerField('Referencia Externa', null=True, blank=True, unique=True)
     origen = models.IntegerField(null=True, blank=True)
@@ -116,6 +116,7 @@ class Empresa(CommonStruct):
     date_hierarchy = ''
 
     class Meta:
+        db_table = 'empresa'
         verbose_name = 'Empresa'
         verbose_name_plural = 'Empresas'
 
@@ -135,43 +136,39 @@ class Empresa(CommonStruct):
         return reverse('%s:associate_with_actividad' % self._meta.model_name, args=(self.pk,))
 
 
-class EmpresaComunicaciones(models.Model):
-    empresa = models.ForeignKey(Empresa, models.DO_NOTHING)
-    comunicacion = models.ForeignKey(Comunicacion, models.DO_NOTHING)
-
-    class Meta:
-        managed = False
-        db_table = 'empresa_empresa_comunicaciones'
-        unique_together = (('empresa', 'comunicacion'),)
-
-
 class EmpresaActividades(models.Model):
     empresa = models.ForeignKey(Empresa, models.DO_NOTHING)
     actividad = models.ForeignKey(Actividad, models.DO_NOTHING)
 
     class Meta:
         managed = False
-        db_table = 'empresa_empresa_actividades'
+        db_table = 'empresa_actividades'
         unique_together = (('empresa', 'actividad'),)
 
 
+class EmpresaComunicaciones(models.Model):
+    empresa = models.ForeignKey(Empresa, models.DO_NOTHING)
+    comunicacion = models.ForeignKey(Comunicacion, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'empresa_comunicaciones'
+        unique_together = (('empresa', 'comunicacion'),)
+
+
 class EmpresaActividadContactos(models.Model):
-    '''
-    Empresa-Contacto ahora depende de Empresa-Actividad-Contacto
-    '''
+    # Empresa-Contacto ahora depende de Empresa-Actividad-Contacto
     empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING)
     persona = models.ForeignKey(Persona, models.DO_NOTHING)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'empresa_actividad_contactos'
         unique_together = (('empresa_actividad', 'persona'),)
 
 
 class EmpresaActividadDomicilios(models.Model):
-    '''
-    Empresa-Domicilio ahora depende de Empresa-Actividad-Domicilio
-    '''
+    # Empresa-Domicilio ahora depende de Empresa-Actividad-Domicilio
     empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING)
     domicilio = models.ForeignKey(Domicilio, models.DO_NOTHING)
 
@@ -185,11 +182,15 @@ class Seguimiento(CommonStruct):
     TIPO = ((1, 'Visita'), (2, 'Llamada'), (3, 'Mensaje'))
 
     empresa = models.ForeignKey(Empresa, on_delete=models.CASCADE,
-                null=True, blank=True, limit_choices_to = {'active': True})
+                                null=True, blank=True, limit_choices_to={'active': True})
     comercial = models.ForeignKey(Comercial, on_delete=models.CASCADE,
-                    null=True, blank=True, limit_choices_to = {'active': True})
+                                  null=True, blank=True, limit_choices_to={'active': True})
     fecha = models.DateField()
     tipo_calle = models.SmallIntegerField(choices=TIPO, default=1)
     mensaje = models.TextField(null=True, blank=True)
     respuesta = models.TextField(null=True, blank=True)
 
+    class Meta:
+        db_table = 'seguimiento'
+        verbose_name = 'Seguimiento'
+        verbose_name_plural = 'Seguimientos'

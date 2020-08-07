@@ -12,5 +12,5 @@ urlpatterns = [
 
     # asociar registro en tablas asociadas
     path('<int:pk>/contacto/buscar/', views.buscar_contacto, name='emp_act_contacto_buscar'),
-    path('<int:empId>/contacto/<int:comId>/', views.asociar_contacto, name='emp_act_contacto_asociar'),
+    path('<int:relaId>/contacto/<int:conId>/', views.asociar_contacto, name='emp_act_contacto_asociar'),
 ]

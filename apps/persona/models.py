@@ -13,9 +13,9 @@ class Persona(CommonStruct):
     documento = models.CharField('DNI', max_length=12, null=True, blank=True, unique=True)
     fecha_nacimiento = models.DateField('Fecha de Nacimiento', blank=True, null=True)
     domicilio = models.ForeignKey(Domicilio, on_delete=models.CASCADE, null=True, blank=True,
-                                  limit_choices_to = {'active': True})
+                                  limit_choices_to={'active': True})
     comunicaciones = models.ManyToManyField(Comunicacion, related_name='persona_comunicaciones', 
-                                            blank=True, limit_choices_to = {'active': True})
+                                            blank=True, limit_choices_to={'active': True})
     persona_similar = models.IntegerField('Persona Similar', null=True, blank=True)
     # referencia_id = firebird.vendedir.idvendedor
     referencia_id = models.IntegerField('Referencia Externa', null=True, blank=True, unique=True)
@@ -27,9 +27,10 @@ class Persona(CommonStruct):
     list_filter = ['ciudad', 'localidad']
 
     class Meta:
+        db_table = 'persona'
         verbose_name = 'Persona'
         verbose_name_plural = 'Personas'
-        ordering = ['apellido', 'nombre']
+        # ordering = ['apellido', 'nombre']
 
     def __str__(self):
         return "%s, %s" % (self.apellido, self.nombre)

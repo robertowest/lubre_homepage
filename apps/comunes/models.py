@@ -2,8 +2,9 @@ from django.db import models
 from django.urls import reverse
 from datetime import datetime
 
+
 class CommonStruct(models.Model):
-    active = models.BooleanField('Activo', default=True)
+    active = models.BooleanField('Activo', default=True, null=False, blank=False)
     created = models.DateTimeField('Creado', auto_now_add=True, editable=False, null=True, blank=True)
     created_by = models.CharField('Creado por', max_length=15, editable=False, null=True, blank=True)
     modified = models.DateTimeField('Modificado', auto_now_add=True, editable=False, null=True, blank=True)
@@ -74,6 +75,7 @@ class Pais(CommonStruct):
     cod_area_tel = models.CharField('Cód. Area Telef.', max_length=4, null=True, blank=True)
 
     class Meta:
+        db_table = 'pais'
         verbose_name = 'Pais'
         verbose_name_plural = 'Paises'
 
@@ -86,6 +88,7 @@ class Provincia(CommonStruct):
     nombre = models.CharField(max_length=40)
 
     class Meta:
+        db_table = 'provincia'
         verbose_name = 'Provincia'
         verbose_name_plural = 'Provincias'
 
@@ -98,6 +101,7 @@ class Departamento(CommonStruct):
     nombre = models.CharField(max_length=40)
 
     class Meta:
+        db_table = 'departamento'
         verbose_name = 'Departamento'
         verbose_name_plural = 'Departamentos'
 
@@ -112,6 +116,7 @@ class Localidad(CommonStruct):
     cod_area_tel = models.CharField('Cód. Area Telef.', max_length=4, null=True, blank=True)
 
     class Meta:
+        db_table = 'localidad'
         verbose_name = 'Localidad'
         verbose_name_plural = 'Localidades'
 
@@ -159,6 +164,7 @@ class Diccionario(CommonStruct):
     tabla = models.CharField(max_length=45, choices=TABLA, default='comunicacion')
 
     class Meta:
+        db_table = 'diccionario'
         verbose_name = 'Diccionario'
         verbose_name_plural = 'Diccionarios'
 
@@ -176,7 +182,7 @@ class Domicilio(CommonStruct):
     
     tipo = models.ForeignKey(Diccionario, on_delete=models.CASCADE, 
                              null=True, blank=True, default=1,
-                             limit_choices_to = {'tabla': 'domicilio', 'active': True})
+                             limit_choices_to={'tabla': 'domicilio', 'active': True})
     tipo_calle = models.CharField(max_length=5, choices=TIPO, default='calle')
     nombre = models.CharField(max_length=80, null=True, blank=True)
     numero = models.IntegerField('Número', null=True, blank=True)
@@ -186,13 +192,13 @@ class Domicilio(CommonStruct):
     # pais = models.ForeignKey(Pais, on_delete=models.CASCADE)
     provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE,
                                   null=True, blank=True,
-                                  limit_choices_to = {'active': True})
+                                  limit_choices_to={'active': True})
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE,
                                      null=True, blank=True,
-                                     limit_choices_to = {'active': True})
+                                     limit_choices_to={'active': True})
     localidad = models.ForeignKey(Localidad, on_delete=models.CASCADE,
                                   null=True, blank=True,
-                                  limit_choices_to = {'active': True})
+                                  limit_choices_to={'active': True})
     provincia_texto = models.CharField(max_length=50, null=True, blank=True)
     departamento_texto = models.CharField(max_length=50, null=True, blank=True)
     localidad_texto = models.CharField(max_length=50, null=True, blank=True)
@@ -206,6 +212,7 @@ class Domicilio(CommonStruct):
     date_hierarchy = ''
 
     class Meta:
+        db_table = 'domicilio'
         verbose_name = 'Domicilio'
         verbose_name_plural = 'Domicilios'
 
@@ -221,7 +228,7 @@ class Domicilio(CommonStruct):
 class Comunicacion(CommonStruct):
     tipo = models.ForeignKey(Diccionario, on_delete=models.CASCADE, 
                              null=True, blank=True, default=3,
-                             limit_choices_to = {'tabla': 'comunicacion', 'active': True})
+                             limit_choices_to={'tabla': 'comunicacion', 'active': True})
     texto = models.CharField(max_length=150)
 
     # configuración para admin
@@ -233,7 +240,8 @@ class Comunicacion(CommonStruct):
     date_hierarchy = ''
 
     class Meta:
-        verbose_name = 'Comunicacion'
+        db_table = 'comunicacion'
+        verbose_name = 'Comunicación'
         verbose_name_plural = 'Comunicaciones'
 
     def __str__(self):

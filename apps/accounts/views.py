@@ -5,9 +5,10 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
+from apps.empresa.models import Comercial
+
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from .models import Profile
-from apps.empresa.models import Comercial
 
 
 def LoginRedirect(request):

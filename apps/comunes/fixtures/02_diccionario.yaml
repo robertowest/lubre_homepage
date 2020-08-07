@@ -2,99 +2,59 @@
   pk: 1
   fields:
     active: true
-    created: null
-    created_by: null
-    modified: null
-    modified_by: null
     texto: Domicilio Fiscal
     tabla: domicilio
 - model: comunes.diccionario
   pk: 2
   fields:
     active: true
-    created: null
-    created_by: null
-    modified: null
-    modified_by: null
     texto: Domicilio Entrega
     tabla: domicilio
 - model: comunes.diccionario
   pk: 3
   fields:
     active: true
-    created: null
-    created_by: null
-    modified: null
-    modified_by: null
     texto: "Tel\xE9fono"
     tabla: comunicacion
 - model: comunes.diccionario
   pk: 4
   fields:
     active: true
-    created: null
-    created_by: null
-    modified: null
-    modified_by: null
     texto: Celular
     tabla: comunicacion
 - model: comunes.diccionario
   pk: 5
   fields:
     active: true
-    created: null
-    created_by: null
-    modified: null
-    modified_by: null
     texto: WhatsApp
     tabla: comunicacion
 - model: comunes.diccionario
   pk: 6
   fields:
     active: true
-    created: null
-    created_by: null
-    modified: null
-    modified_by: null
     texto: "Correo Electr\xF3nico"
     tabla: comunicacion
 - model: comunes.diccionario
   pk: 7
   fields:
     active: true
-    created: null
-    created_by: null
-    modified: null
-    modified_by: null
     texto: Facebook
     tabla: comunicacion
 - model: comunes.diccionario
   pk: 8
   fields:
     active: true
-    created: null
-    created_by: null
-    modified: null
-    modified_by: null
     texto: Twitter
     tabla: comunicacion
 - model: comunes.diccionario
   pk: 9
   fields:
     active: true
-    created: null
-    created_by: null
-    modified: null
-    modified_by: null
     texto: LinkedIn
     tabla: comunicacion
 - model: comunes.diccionario
   pk: 10
   fields:
     active: true
-    created: null
-    created_by: null
-    modified: null
-    modified_by: null
     texto: "Domicilio Explotaci\xF3n"
     tabla: domicilio

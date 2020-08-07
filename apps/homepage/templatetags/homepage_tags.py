@@ -27,9 +27,6 @@ def product_path(value):
     path = settings.MEDIA_ROOT + 'product/'
     file = str(value).zfill(5) + '.jpg'
 
-    import pdb;
-    pdb.set_trace()
-
     # if os.path.isfile(path + file):
     if os.path.exists(path + file):
         return path + file

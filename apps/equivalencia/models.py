@@ -39,6 +39,9 @@ class Equivalencia(models.Model):
     parent = models.ForeignKey('Equivalencia', on_delete=models.CASCADE, blank=True, null=True)
 
     class Meta:
+        db_table = 'equivalencia'
+        verbose_name = 'Equivalencia de Producto'
+        verbose_name_plural = 'Equivalencias de Productos'
         ordering = ['producto']
 
     def __str__(self):

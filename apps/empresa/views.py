@@ -87,10 +87,10 @@ class EmpresaDetailView(generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['domicilios'] = context['empresa'].domicilios.filter(active=True)
         context['comunicaciones'] = context['empresa'].comunicaciones.filter(active=True)
-        context['contactos'] = context['empresa'].contactos.filter(active=True)
         context['actividades'] = context['empresa'].actividades.filter(active=True)
+        # context['domicilios'] = context['empresa'].domicilios.filter(active=True)
+        # context['contactos'] = context['empresa'].contactos.filter(active=True)
         # context['empresa'].contactos.filter(tipo='movil').filter(active=True)
         # cargamos los celulares de los contactos
         # for reg in context['contactos']:
@@ -278,6 +278,7 @@ class ActividadMultiListView(generic.ListView):
 # Actividad
 # -----------------------------------------------------------------------------
 
+
 class ActividadTemplateView(generic.TemplateView):
     def get(self, request, *args, **kwargs):
         return ActividadListView.as_view()(request)
@@ -358,6 +359,8 @@ class ActividadDeleteView(generic.DeleteView):
 # -----------------------------------------------------------------------------
 # Empresa Actividad
 # -----------------------------------------------------------------------------
+
+
 class EmpActDetailView(generic.DetailView):
     # EmpresaActividades.objects.filter(empresa=6027).filter(actividad=7)
     model = models.EmpresaActividades
@@ -429,23 +432,25 @@ class CreateContactView(generic.CreateView):
 
 
 def buscar_contacto(request, pk):
-    obj_list = ContactoModel.objects.filter(active=True)
+    obj_list = ContactoModel.objects.filter(active=True).order_by('apellido', 'nombre')
     context = {
         'tableID': 'dataTableModal',
         'object_list': obj_list,
-        'empresaId': pk,
+        'empresa_actividad_id': pk,
     }
     return render(request, 'empresa_actividad/includes/_modal_contacto.html', context)
 
 
-def asociar_contacto(request, empId, comId):
-    empresa = models.EmpresaActividades.objects.get(id=empId)
-    contacto = ContactoModel.objects.get(id=comId)
-    empresa.contactos.add(contacto)
-    empresa.save()
-    # url = reverse('empresa:browse', args=(), kwargs={'pk': empresa.empresa.id})
-    url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': empresa.id})
+def asociar_contacto(request, relaId, conId):
+    # empresa_actividad_id = relaId
+    # contacto_id = conId
+    relacion = models.EmpresaActividadContactos()
+    relacion.empresa_actividad_id = relaId
+    relacion.persona_id = conId
+    relacion.save()
+    url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': relaId})
     return HttpResponseRedirect(url)
+
 
 
 

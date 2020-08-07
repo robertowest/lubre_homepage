@@ -5,12 +5,14 @@
     <thead>
         <tr>
             <th>Descripción</th>
+            <th>DNI</th>
         </tr>
     </thead>
     <tbody>
         {% for object in object_list %}
         <tr>
-            <td><a href="{% url 'empresa:asociar_contacto' empresaId object.pk %}">{{object}}</a></td>
+            <td><a href="{% url 'empresa_actividad:emp_act_contacto_asociar' empresa_actividad_id object.pk %}">{{object}}</a></td>
+            <td>{{object.dni}}</td>
         </tr>
         {% endfor %}
     </tbody>

@@ -143,9 +143,6 @@ class TemplateView(generic.TemplateView):
         password = request.POST['password']
         password2 = request.POST['password2']
 
-        import pdb; pdb.set_trace()
-
-
         if password == password2:
             user = User.objects.create_user(username, email, password)
             user.save()

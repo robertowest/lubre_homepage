@@ -10,7 +10,7 @@ class Profile(models.Model):
     # CASCADE means if the user is deleted the profile is deleted
     # However, If the profile is deleted, the user is not deleted.
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    imagen = models.ImageField(default='img/user_none.jpg', upload_to='media/accounts/profile_pics')
+    imagen = models.ImageField(default='img/user_none.jpg', upload_to='media/accounts/profile')
     cuit = models.CharField(max_length=15, blank=True, null=True)
 
     # configuración para admin

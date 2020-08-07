@@ -1,7 +1,8 @@
 from django.urls import path
 from apps.empresa import views
 
-app_name = __package__.split('.')[1]
+# app_name = __package__.split('.')[1]
+app_name = 'empresa'
 
 urlpatterns = [
     path('', views.EmpresaTemplateView.as_view(), name='index'),

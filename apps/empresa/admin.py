@@ -1,7 +1,7 @@
 from django.contrib import admin
 from . import models
 
-# admin.site.register(models.Comercial)
+
 @admin.register(models.Comercial)
 class ComercialAdmin(admin.ModelAdmin):
     model = models.Comercial
@@ -30,6 +30,6 @@ class EmpresaAdmin(admin.ModelAdmin):
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         from apps.comunes.models import Diccionario
-        if db_field.name == "actividad":
-            kwargs["queryset"] = Diccionario.objects.filter(tabla='actividad').order_by('texto')
+        if db_field.name == 'actividad':
+            kwargs['queryset'] = Diccionario.objects.filter(tabla='actividad').order_by('texto')
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
