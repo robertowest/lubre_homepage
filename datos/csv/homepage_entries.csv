@@ -1,0 +1,53 @@
+id,label,text_short,text_large,image,ordered,active,section
+1,Inicio,#home,homepage/_header.html,,1,1,home
+2,Nosotros,#about,homepage/_about.html,,2,1,home
+3,Servicio,#service,homepage/_service.html,,3,1,home
+4,Equipo,#team,homepage/_team.html,,4,1,home
+5,separador,,homepage/_separator_1.html,,5,1,home
+6,¿Por qué elegirnos?,,homepage/_why_choose_us.html,,6,0,home
+7,video,,homepage/_video.html,,7,1,home
+8,Catálogo,#catalog,homepage/_catalog.html,,8,1,home
+9,Proyectos,,homepage/_project.html,,9,1,home
+10,Testimonio,#testimonial,homepage/_testimonial.html,,10,1,home
+11,Precios,,homepage/_pricing.html,,11,0,home
+12,separador2,,homepage/_separator_2.html,,12,1,home
+13,Blog,#blog,homepage/_blog.html,,13,1,home
+14,Contacto,#contact,homepage/_contact.html,,14,1,home
+15,pie de página superior,,homepage/_footer_top.html,,15,1,home
+16,pie de página inferior,,homepage/_footer_bottom.html,,16,1,home
+17,Agro,,"Combustibles, Lubricantes, Fertilizantes, Agroquímicos, Bolsas para silo, Semillas, Análisis de suelo y diagnóstico nutricional, Mezclas específicas. Aplicación de fertilizantes. Aerocombustibles.",lubre/tractor.png,1,1,service
+18,EESS,,"Estaciones de Servicio YPF, Estación de GNC, YPF Boxes, Tarjeta YPF en Ruta, Tarjeta YPF Serviclub, venta minorista de YPF Elaion, YPF Elaion Moto, YPF Elaion Náutito, Cuidado del Automotor.",lubre/surtidor.png,2,1,service
+19,Teinda FULL YPF,,"YPF FULL es un espacio de encuentro y permanencia placentera, que ofrece la posibilidad de tomar un café o comer algo rico. Sanitarios, Wi-Fi, estacionamiento.",lubre/cafeteria.png,3,1,service
+20,Transporte,,"Realizamos el transporte carretero y logística de Cargas Peligrosas, Cereales, Materiales para la construcción y cargas generales en Argentina y Mercosur.
+Contamos con una moderna flota compuesta por más de 170 unidades. ",lubre/camion.png,4,1,service
+21,Hormigón,,"Hormigón elaborado y servicio de bombeo. Cementos, cales, arena, piedras, ladrillos, productos de hormigón armado, ladrillos refractarios, sistemas de tubos sanitarios, pegamentos, membranas atérmicas.",lubre/hormigon.png,5,1,service
+22,Aviación,"Somos distribuidores YPF de Aerocombustibles y Aerolubricantes.
+Aeroplanta propia y camiones con cisternas para reparto capilar de AVGAS 100LL y JET A1. Llevamos el combustible hasta tu hangar.","Somos distribuidores YPF de Aerocombustibles y Aerolubricantes.
+Aeroplanta propia y camiones con cisternas para reparto capilar de AVGAS 100LL y JET A1. Llevamos el combustible hasta tu hangar.",lubre/avion.png,6,1,service
+23,Acerca de nosotros ...,Bienvenido a <span>Lubre SRL</span>,"Para alcanzar una posición más competitiva dentro de nuestra actividad buscamos la transformación de nuestra estructura organizacional adaptándola a las exigencias del mercado. Para ello identificamos que nuestro propósito es:<br><br>
+
+<b>Ser una empresa sustentable a partir de entregar una propuesta de valor a nuestros clientes, desarrollar las capacidades de nuestros colaboradores y obtener el reconocimiento de nuestra comunidad.</b><br><br>
+
+Para llevar adelante, hemos definido las bases que identifican y orientan nuestro actuar. A partir de la incorporación de nuevas unidades de negocio hemos planteado nuestra MISION y VISION para toda la organización.",,1,1,about
+24,Misión de la Organización,,"Somos una empresa que a través de la distribución de productos YPF, busca satisfacer a la clientela brindando un servicio de excelencia a partir del desarrollo de nuestros recursos humanos, de una estructura adecuada y alineada a la estrategia de nuestro principal proveedor, buscamos a partir de resultados, maximizar nuestro desempeño organizacional.",,1,1,whyus
+25,Visón de la Organización,,"Ser una empresa solida, que a partir de conformar una alianza estratégica con nuestro principal proveedor, de su accionar con elevados estándares éticos y profesionales, y de su desempeño eficiente, y de la entrega de un servicio diferenciado sea reconocida y elegida por el mercado tucumano.",,2,1,whyus
+26,Nuestros Valores,,"<b>Compromiso</b>: Con los objetivos y valores de la organización.<br>
+<b>Responsabilidad</b>: Para utilizar todas las capacidades para cumplir con la tarea asignada.<br>
+<b>Profesionalismo</b>: Que implica desempeñarse con idoneidad en sus tareas para lo cual se fomenta la capacitación permanente.<br>
+<b>Solidaridad</b>: Para desarrollar un ambiente laboral que promueva el bienestar de todos los integrantes y propicie la relación con la comunidad.<br>
+<b>Sentido de pertenencia</b>: Entendido como identificación con la cultura de la organización.<br>
+<b>Transparencia</b>: Para difundir información adecuada, fiel y veraz de la gestión. Comunicación clara tanto interna como externa.<br>
+<b>Trabajo en equipo</b>: Como una manera de afrontar el desafío laboral.",,3,1,whyus
+27,RRHH,,"El perfil de nuestros colaboradores se define por su iniciativa, capacidad de trabajo en equipo, resolución de problemas, toma de decisiones, predisposición al aprendizaje y confiabilidad.",,4,1,whyus
+28,Recursos Materiales,,"Para desarrollar una gestión eficiente, nuestra organización considera de fundamental importancia contar con los recursos materiales y la tecnología necesaria para garantizar el cumplimiento de sus objetivos. Para ello disponemos de: Instalaciones: un local de ventas y oficinas administrativas ubicadas en el microcentro de San Miguel de Tucumán y un predio de casi 2 Has donde se ubica además de 600 metros cuadrados de oficinas administrativas, la planta de gas oil y el depósito de 650 metros cuadrados destinado al almacenamiento de lubricantes, fertilizantes y agroquímicos; este predio esta ubicado a 4 km de las cuidad sobre Ruta Nacional N° 9 - autopista.",,5,1,whyus
+29,Equipos,,Para la distribución de nuestros productos contamos con camionetas y camiones especialmente adaptados para estas tareas.,,6,1,whyus
+30,Tecnología,,Contamos con tecnología de punta en nuestro sistema informático para poder mantener la fluidez de nuestra comunicaciones y brindar un servicio diferenciado a nuestros clientes .,,7,1,whyus
+31,Eurodiesel,Combustibles,combustible diesel,work/1.jpg,1,1,catalog
+32,Ultradiesel,Combustibles,combustible diesel,work/2.jpg,2,1,catalog
+33,ELAION,Lubricantes,lubricante,work/3.jpg,3,1,catalog
+34,Best Air,Aromatizador,lubricante,work/4.jpg,4,1,catalog
+35,Bolsas,Bolsas para silos,agro,work/5.jpg,5,1,catalog
+36,Cipermetrina,Agroquímicos,agro,work/6.jpg,6,1,catalog
+37,Plus Soliar,Agroquímicos,agro,work/7.jpg,7,1,catalog
+38,Cloruro de Potasio,Fertilizantes,agro,work/8.jpg,8,1,catalog
+39,Nitrato de Plata,Fertilizantes,agro,work/9.jpg,9,1,catalog

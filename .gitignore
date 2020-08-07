@@ -335,7 +335,10 @@ fabric.properties
 *.zip
 
 apps/*/migrations/
-datos/
 dbtest.py
 push.sh
 
+config/settings.ini
+config/custom.py
+config/desarrollo.py
+config/produccion.py

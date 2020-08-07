@@ -1,0 +1,4814 @@
+- model: equivalencia.equivalencia
+  pk: 1
+  fields:
+    producto: AT Turbo
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 2
+  fields:
+    producto: Diesel BC
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 3
+  fields:
+    producto: Elaion Competicion 5W-50
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 4
+  fields:
+    producto: Elaion F10 (15W 40)
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 5
+  fields:
+    producto: Elaion F10 (20W 50)
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 6
+  fields:
+    producto: Elaion F30
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 7
+  fields:
+    producto: Elaion F50
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 8
+  fields:
+    producto: Elaion F50 d1 0W20
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 9
+  fields:
+    producto: Elaion F50 d1 5W30
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 10
+  fields:
+    producto: Elaion F50 d2 5W30
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 11
+  fields:
+    producto: Elaion F50 DPF
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 12
+  fields:
+    producto: Elaion F50 E
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 13
+  fields:
+    producto: Elaion F50 F 5W30
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 14
+  fields:
+    producto: Elaion F50 F 5W40
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 15
+  fields:
+    producto: Elaion F50 J
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 16
+  fields:
+    producto: Elaion F50 Plus 5W40
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 17
+  fields:
+    producto: EXTRAVIDA XV 100 (15W-40)
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 18
+  fields:
+    producto: EXTRAVIDA XV 300 (15W-40)
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 19
+  fields:
+    producto: EXTRAVIDA XV 400 (15W-40)
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 20
+  fields:
+    producto: EXTRAVIDA XV 500 (10W-40)
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 21
+  fields:
+    producto: EXTRAVIDA XV 500 (5W-30)
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 22
+  fields:
+    producto: EXTRAVIDA XV 600 (10W-40)
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 23
+  fields:
+    producto: Multiturbo
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 24
+  fields:
+    producto: Normal
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 25
+  fields:
+    producto: Super 20W-50
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 26
+  fields:
+    producto: HD Suplemento 1
+    marca: 1
+    tipo: 1
+- model: equivalencia.equivalencia
+  pk: 27
+  fields:
+    producto: "Hipoidal S\xFAper"
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 28
+  fields:
+    producto: ATF D-III
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 29
+  fields:
+    producto: ATF D-VI
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 30
+  fields:
+    producto: ATF Sintetico ALL
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 31
+  fields:
+    producto: "FT S\xFAper D 50"
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 32
+  fields:
+    producto: Helicoidal 75W-90
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 33
+  fields:
+    producto: Helicoidal M
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 34
+  fields:
+    producto: Helicoidal STL
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 35
+  fields:
+    producto: Hidro 19
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 36
+  fields:
+    producto: Hidro ATF
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 37
+  fields:
+    producto: Hipoidal
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 38
+  fields:
+    producto: "Hipoidal S\xFAper S"
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 39
+  fields:
+    producto: "Transmisi\xF3n"
+    marca: 1
+    tipo: 2
+- model: equivalencia.equivalencia
+  pk: 40
+  fields:
+    producto: Ferrodiesel 397
+    marca: 1
+    tipo: 3
+- model: equivalencia.equivalencia
+  pk: 41
+  fields:
+    producto: Ferrodiesel 597 LL
+    marca: 1
+    tipo: 3
+- model: equivalencia.equivalencia
+  pk: 42
+  fields:
+    producto: Grasa 102
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 43
+  fields:
+    producto: Grasa 107 EP
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 44
+  fields:
+    producto: Grasa 3
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 45
+  fields:
+    producto: Grasa 30 C
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 46
+  fields:
+    producto: Grasa 60 EP
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 47
+  fields:
+    producto: Grasa 62 EP
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 48
+  fields:
+    producto: Grasa 63 EP
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 49
+  fields:
+    producto: Grasa 63 FC
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 50
+  fields:
+    producto: Grasa 8
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 51
+  fields:
+    producto: Grasa Fluida 650
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 52
+  fields:
+    producto: Grasa PEX-G-PSP
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 53
+  fields:
+    producto: Grasalgon
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 54
+  fields:
+    producto: Limit
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 55
+  fields:
+    producto: Limit MO-2
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 56
+  fields:
+    producto: Nerea CL AW2
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 57
+  fields:
+    producto: Nerea CL EP2
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 58
+  fields:
+    producto: Nerea CS MO1
+    marca: 1
+    tipo: 10
+- model: equivalencia.equivalencia
+  pk: 59
+  fields:
+    producto: Butia DW 50
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 60
+  fields:
+    producto: "Cauqu\xE9n 1"
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 61
+  fields:
+    producto: "Cauqu\xE9n 521"
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 62
+  fields:
+    producto: "Cauqu\xE9n 9"
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 63
+  fields:
+    producto: Cilindro
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 64
+  fields:
+    producto: Cilindro C
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 65
+  fields:
+    producto: Cojinete MO
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 66
+  fields:
+    producto: Forestal 3040
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 67
+  fields:
+    producto: "Frigor\xEDfico"
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 68
+  fields:
+    producto: "FT S\xFAper"
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 69
+  fields:
+    producto: Gluma
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 70
+  fields:
+    producto: "Hidr\xE1ulico BP"
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 71
+  fields:
+    producto: "Hidr\xE1ulico D"
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 72
+  fields:
+    producto: "Hidr\xE1ulico HSVI"
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 73
+  fields:
+    producto: Lissos
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 74
+  fields:
+    producto: Lissos N
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 75
+  fields:
+    producto: "M\xE1quina"
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 76
+  fields:
+    producto: Merak
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 77
+  fields:
+    producto: Merak S (ISO 32)
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 78
+  fields:
+    producto: Molino TP
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 79
+  fields:
+    producto: Motogas
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 80
+  fields:
+    producto: Polar
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 81
+  fields:
+    producto: Textil 22
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 82
+  fields:
+    producto: Transformador 64
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 83
+  fields:
+    producto: "Transmisi\xF3n EP"
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 84
+  fields:
+    producto: Turbina EP
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 85
+  fields:
+    producto: Turbina R
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 86
+  fields:
+    producto: Vectis AS
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 87
+  fields:
+    producto: Vectis G40 LA
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 88
+  fields:
+    producto: Vectis LA
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 89
+  fields:
+    producto: Vectis MA
+    marca: 1
+    tipo: 4
+- model: equivalencia.equivalencia
+  pk: 90
+  fields:
+    producto: Boreal BL
+    marca: 1
+    tipo: 5
+- model: equivalencia.equivalencia
+  pk: 91
+  fields:
+    producto: Celtis TR
+    marca: 1
+    tipo: 5
+- model: equivalencia.equivalencia
+  pk: 92
+  fields:
+    producto: Kratos IP-01
+    marca: 1
+    tipo: 5
+- model: equivalencia.equivalencia
+  pk: 93
+  fields:
+    producto: Kratos IP-04
+    marca: 1
+    tipo: 5
+- model: equivalencia.equivalencia
+  pk: 94
+  fields:
+    producto: Kratos MF
+    marca: 1
+    tipo: 5
+- model: equivalencia.equivalencia
+  pk: 95
+  fields:
+    producto: Kratos S-21
+    marca: 1
+    tipo: 5
+- model: equivalencia.equivalencia
+  pk: 96
+  fields:
+    producto: Kratos S-38
+    marca: 1
+    tipo: 5
+- model: equivalencia.equivalencia
+  pk: 97
+  fields:
+    producto: Ealion Moto 2T
+    marca: 1
+    tipo: 6
+- model: equivalencia.equivalencia
+  pk: 98
+  fields:
+    producto: Ealion Moto Transmision 80W
+    marca: 1
+    tipo: 6
+- model: equivalencia.equivalencia
+  pk: 99
+  fields:
+    producto: Elaion Moto 4T 10W 40
+    marca: 1
+    tipo: 6
+- model: equivalencia.equivalencia
+  pk: 100
+  fields:
+    producto: Elaion Moto 4T 10W50
+    marca: 1
+    tipo: 6
+- model: equivalencia.equivalencia
+  pk: 101
+  fields:
+    producto: Elaion Moto 4T 20W50
+    marca: 1
+    tipo: 6
+- model: equivalencia.equivalencia
+  pk: 102
+  fields:
+    producto: Elaion Moto Cadenas
+    marca: 1
+    tipo: 6
+- model: equivalencia.equivalencia
+  pk: 103
+  fields:
+    producto: Elaion Moto Horquillas
+    marca: 1
+    tipo: 6
+- model: equivalencia.equivalencia
+  pk: 104
+  fields:
+    producto: "Elaion N\xE1utico 2T"
+    marca: 1
+    tipo: 7
+- model: equivalencia.equivalencia
+  pk: 105
+  fields:
+    producto: "Elaion Nautico 2T (Semisint\xE9tico)"
+    marca: 1
+    tipo: 7
+- model: equivalencia.equivalencia
+  pk: 106
+  fields:
+    producto: Elaion Nautico 4T
+    marca: 1
+    tipo: 7
+- model: equivalencia.equivalencia
+  pk: 107
+  fields:
+    producto: Atlanta Marine
+    marca: 1
+    tipo: 8
+- model: equivalencia.equivalencia
+  pk: 108
+  fields:
+    producto: Aurelia TI
+    marca: 1
+    tipo: 8
+- model: equivalencia.equivalencia
+  pk: 109
+  fields:
+    producto: DISOLA (3010 y 4010)
+    marca: 1
+    tipo: 8
+- model: equivalencia.equivalencia
+  pk: 110
+  fields:
+    producto: Disola (3015 y 4015)
+    marca: 1
+    tipo: 8
+- model: equivalencia.equivalencia
+  pk: 111
+  fields:
+    producto: Talusia HR
+    marca: 1
+    tipo: 8
+- model: equivalencia.equivalencia
+  pk: 112
+  fields:
+    producto: Talusia HR 70
+    marca: 1
+    tipo: 8
+- model: equivalencia.equivalencia
+  pk: 113
+  fields:
+    producto: Talusia Universal 100
+    marca: 1
+    tipo: 8
+- model: equivalencia.equivalencia
+  pk: 114
+  fields:
+    producto: Talusia Universal
+    marca: 1
+    tipo: 8
+- model: equivalencia.equivalencia
+  pk: 115
+  fields:
+    producto: KRIOX ATI
+    marca: 1
+    tipo: 9
+- model: equivalencia.equivalencia
+  pk: 116
+  fields:
+    producto: KRIOX INORGANICO
+    marca: 1
+    tipo: 9
+- model: equivalencia.equivalencia
+  pk: 117
+  fields:
+    producto: KRIOX M EC1
+    marca: 1
+    tipo: 9
+- model: equivalencia.equivalencia
+  pk: 118
+  fields:
+    producto: KRIOX ORGANICO
+    marca: 1
+    tipo: 9
+- model: equivalencia.equivalencia
+  pk: 119
+  fields:
+    producto: Rimula R2 / Rimula X/Rotella X
+    marca: 2
+    tipo: 1
+    parent: 1
+- model: equivalencia.equivalencia
+  pk: 120
+  fields:
+    producto: Delvac 1630 / 1640
+    marca: 3
+    tipo: 1
+    parent: 1
+- model: equivalencia.equivalencia
+  pk: 121
+  fields:
+    producto: "Performance S\xFAper D"
+    marca: 4
+    tipo: 1
+    parent: 1
+- model: equivalencia.equivalencia
+  pk: 122
+  fields:
+    producto: Rubia K
+    marca: 5
+    tipo: 1
+    parent: 1
+- model: equivalencia.equivalencia
+  pk: 123
+  fields:
+    producto: Lubrax Turbo
+    marca: 6
+    tipo: 1
+    parent: 1
+- model: equivalencia.equivalencia
+  pk: 124
+  fields:
+    producto: CDR Turbo / Diesel Oil 40 / Diesel Oil 50
+    marca: 7
+    tipo: 1
+    parent: 1
+- model: equivalencia.equivalencia
+  pk: 125
+  fields:
+    producto: Urania Turbo Gas / Urania Plus
+    marca: 8
+    tipo: 1
+    parent: 1
+- model: equivalencia.equivalencia
+  pk: 126
+  fields:
+    producto: Diesel Sigma S / HD
+    marca: 12
+    tipo: 1
+    parent: 1
+- model: equivalencia.equivalencia
+  pk: 127
+  fields:
+    producto: Serie 3 / Premium SAE 40 /Extra Premium SAE 40
+    marca: 16
+    tipo: 1
+    parent: 1
+- model: equivalencia.equivalencia
+  pk: 128
+  fields:
+    producto: Mobil XD-3+
+    marca: 3
+    tipo: 1
+    parent: 2
+- model: equivalencia.equivalencia
+  pk: 129
+  fields:
+    producto: Perf. 3D (monog)
+    marca: 4
+    tipo: 1
+    parent: 2
+- model: equivalencia.equivalencia
+  pk: 130
+  fields:
+    producto: Lubrax Turbo DD
+    marca: 6
+    tipo: 1
+    parent: 2
+- model: equivalencia.equivalencia
+  pk: 131
+  fields:
+    producto: Tection DD Monograde 40 / CRD Turbo 40 / Marine DD Series
+    marca: 7
+    tipo: 1
+    parent: 2
+- model: equivalencia.equivalencia
+  pk: 132
+  fields:
+    producto: Plus 50
+    marca: 15
+    tipo: 1
+    parent: 2
+- model: equivalencia.equivalencia
+  pk: 133
+  fields:
+    producto: GULF SUPER DIESEL PLUS 15W40 / GULF SUPERFLEET SPECIAL SAE 15W-40
+    marca: 14
+    tipo: 1
+    parent: 2
+- model: equivalencia.equivalencia
+  pk: 134
+  fields:
+    producto: Helix Alto Kilometraje
+    marca: 2
+    tipo: 1
+    parent: 3
+- model: equivalencia.equivalencia
+  pk: 135
+  fields:
+    producto: Mobil 1 - 5W-50
+    marca: 3
+    tipo: 1
+    parent: 3
+- model: equivalencia.equivalencia
+  pk: 136
+  fields:
+    producto: Excellium 10W-50
+    marca: 4
+    tipo: 1
+    parent: 3
+- model: equivalencia.equivalencia
+  pk: 137
+  fields:
+    producto: LMH Plus
+    marca: 5
+    tipo: 1
+    parent: 3
+- model: equivalencia.equivalencia
+  pk: 138
+  fields:
+    producto: Edge Sport
+    marca: 7
+    tipo: 1
+    parent: 3
+- model: equivalencia.equivalencia
+  pk: 139
+  fields:
+    producto: SYNTIUM RACER X1
+    marca: 8
+    tipo: 1
+    parent: 3
+- model: equivalencia.equivalencia
+  pk: 140
+  fields:
+    producto: SMO
+    marca: 12
+    tipo: 1
+    parent: 3
+- model: equivalencia.equivalencia
+  pk: 141
+  fields:
+    producto: Helix HX5 / HX5 G / HX5 Diesel
+    marca: 2
+    tipo: 1
+    parent: 4
+- model: equivalencia.equivalencia
+  pk: 142
+  fields:
+    producto: "Mobil S\xFAper 1000"
+    marca: 3
+    tipo: 1
+    parent: 4
+- model: equivalencia.equivalencia
+  pk: 143
+  fields:
+    producto: EVOLUTION 300 / PRESTIGRADE TS
+    marca: 4
+    tipo: 1
+    parent: 4
+- model: equivalencia.equivalencia
+  pk: 144
+  fields:
+    producto: Quartz 5000 / Quartz 5000 Diesel / TOTAL MULTI 3800 15W-40
+    marca: 5
+    tipo: 1
+    parent: 4
+- model: equivalencia.equivalencia
+  pk: 145
+  fields:
+    producto: Lubrax Essencial SL / Essencial GNC 15W40
+    marca: 6
+    tipo: 1
+    parent: 4
+- model: equivalencia.equivalencia
+  pk: 146
+  fields:
+    producto: GTX 15W40 A3/B3
+    marca: 7
+    tipo: 1
+    parent: 4
+- model: equivalencia.equivalencia
+  pk: 147
+  fields:
+    producto: VS Max / MACH 5 SL / MACH 5 SL
+    marca: 8
+    tipo: 1
+    parent: 4
+- model: equivalencia.equivalencia
+  pk: 148
+  fields:
+    producto: HAVOLINE PREMIUM 15w40
+    marca: 10
+    tipo: 1
+    parent: 4
+- model: equivalencia.equivalencia
+  pk: 149
+  fields:
+    producto: F1 Plus
+    marca: 12
+    tipo: 1
+    parent: 4
+- model: equivalencia.equivalencia
+  pk: 150
+  fields:
+    producto: Elite Inyeccion 15W40 / Elite TDI 15W40
+    marca: 16
+    tipo: 1
+    parent: 4
+- model: equivalencia.equivalencia
+  pk: 151
+  fields:
+    producto: helix
+    marca: 2
+    tipo: 1
+    parent: 5
+- model: equivalencia.equivalencia
+  pk: 152
+  fields:
+    producto: GTX 20W-50
+    marca: 7
+    tipo: 1
+    parent: 5
+- model: equivalencia.equivalencia
+  pk: 153
+  fields:
+    producto: MACH 5 SJ / VS Plus
+    marca: 8
+    tipo: 1
+    parent: 5
+- model: equivalencia.equivalencia
+  pk: 154
+  fields:
+    producto: Elite Super 20W50 / Multi G Gasolina 20W50
+    marca: 16
+    tipo: 1
+    parent: 5
+- model: equivalencia.equivalencia
+  pk: 155
+  fields:
+    producto: Helix HX7 / HX7 Diesel 10W-40
+    marca: 2
+    tipo: 1
+    parent: 6
+- model: equivalencia.equivalencia
+  pk: 156
+  fields:
+    producto: Mobil Super 2000 X2 10W-40
+    marca: 3
+    tipo: 1
+    parent: 6
+- model: equivalencia.equivalencia
+  pk: 157
+  fields:
+    producto: EVOLUTION 700 / ELF COMPETITION
+    marca: 4
+    tipo: 1
+    parent: 6
+- model: equivalencia.equivalencia
+  pk: 158
+  fields:
+    producto: Quartz 7000 / 7000 Diesel
+    marca: 5
+    tipo: 1
+    parent: 6
+- model: equivalencia.equivalencia
+  pk: 159
+  fields:
+    producto: Lubrax Tecno
+    marca: 6
+    tipo: 1
+    parent: 6
+- model: equivalencia.equivalencia
+  pk: 160
+  fields:
+    producto: Magnatec 10W-40 A3/B4
+    marca: 7
+    tipo: 1
+    parent: 6
+- model: equivalencia.equivalencia
+  pk: 161
+  fields:
+    producto: Alfa Romeo / Selenia K / SYNTIUM 800/ SYNTIUM 1000
+    marca: 8
+    tipo: 1
+    parent: 6
+- model: equivalencia.equivalencia
+  pk: 162
+  fields:
+    producto: HAVOLINE EXTRA 10W-40
+    marca: 10
+    tipo: 1
+    parent: 6
+- model: equivalencia.equivalencia
+  pk: 163
+  fields:
+    producto: Sint 2000 GPX
+    marca: 12
+    tipo: 1
+    parent: 6
+- model: equivalencia.equivalencia
+  pk: 164
+  fields:
+    producto: Elite Inyeccion 10W40 / mixfleet 10W40
+    marca: 16
+    tipo: 1
+    parent: 6
+- model: equivalencia.equivalencia
+  pk: 165
+  fields:
+    producto: Helix Ultra / HX7 10W40/ Helix HX8
+    marca: 2
+    tipo: 1
+    parent: 7
+- model: equivalencia.equivalencia
+  pk: 166
+  fields:
+    producto: Mobil 1 0W-40/5W-40
+    marca: 3
+    tipo: 1
+    parent: 7
+- model: equivalencia.equivalencia
+  pk: 167
+  fields:
+    producto: EVOLUTION 900 5W-40 / EXCELLIUM NF 5W-40
+    marca: 4
+    tipo: 1
+    parent: 7
+- model: equivalencia.equivalencia
+  pk: 168
+  fields:
+    producto: QUARTZ 9000 5W-40
+    marca: 5
+    tipo: 1
+    parent: 7
+- model: equivalencia.equivalencia
+  pk: 169
+  fields:
+    producto: Lubrax Supera
+    marca: 6
+    tipo: 1
+    parent: 7
+- model: equivalencia.equivalencia
+  pk: 170
+  fields:
+    producto: Magnatec 5W-40 C3 // EDGE TURBO DIESEL 5W-40
+    marca: 7
+    tipo: 1
+    parent: 7
+- model: equivalencia.equivalencia
+  pk: 171
+  fields:
+    producto: "SEL\xC8NIA PERFORM V / SYNTIUM 3000 / SYNTIUM 3000 AV"
+    marca: 8
+    tipo: 1
+    parent: 7
+- model: equivalencia.equivalencia
+  pk: 172
+  fields:
+    producto: HAVOLINE SYNTHETIC
+    marca: 10
+    tipo: 1
+    parent: 7
+- model: equivalencia.equivalencia
+  pk: 173
+  fields:
+    producto: Tecsin SL
+    marca: 12
+    tipo: 1
+    parent: 7
+- model: equivalencia.equivalencia
+  pk: 174
+  fields:
+    producto: "Elite Cosmos / \xC9lite Evolution 5W40 / \xC9lite Competici\xF3n 5W40"
+    marca: 16
+    tipo: 1
+    parent: 7
+- model: equivalencia.equivalencia
+  pk: 175
+  fields:
+    producto: Helix Ultra ECT
+    marca: 2
+    tipo: 1
+    parent: 9
+- model: equivalencia.equivalencia
+  pk: 176
+  fields:
+    producto: EVOLUTION 900 FTX 5W-30
+    marca: 4
+    tipo: 1
+    parent: 9
+- model: equivalencia.equivalencia
+  pk: 177
+  fields:
+    producto: Magnatec 10W-30
+    marca: 7
+    tipo: 1
+    parent: 9
+- model: equivalencia.equivalencia
+  pk: 178
+  fields:
+    producto: SYNTIUM 5000 GM
+    marca: 8
+    tipo: 1
+    parent: 9
+- model: equivalencia.equivalencia
+  pk: 179
+  fields:
+    producto: Helix Ultra ECT
+    marca: 2
+    tipo: 1
+    parent: 10
+- model: equivalencia.equivalencia
+  pk: 180
+  fields:
+    producto: EVOLUTION FULL-TECH LSX
+    marca: 4
+    tipo: 1
+    parent: 10
+- model: equivalencia.equivalencia
+  pk: 181
+  fields:
+    producto: QUARTZ INEO MC3
+    marca: 5
+    tipo: 1
+    parent: 10
+- model: equivalencia.equivalencia
+  pk: 182
+  fields:
+    producto: Lubrax Valora
+    marca: 6
+    tipo: 1
+    parent: 10
+- model: equivalencia.equivalencia
+  pk: 183
+  fields:
+    producto: Magnatec 5W-30 A3/B4 // Magnatec 5W-30 C3
+    marca: 7
+    tipo: 1
+    parent: 10
+- model: equivalencia.equivalencia
+  pk: 184
+  fields:
+    producto: Elite Common Rail 5W30
+    marca: 16
+    tipo: 1
+    parent: 10
+- model: equivalencia.equivalencia
+  pk: 185
+  fields:
+    producto: Helix Ultra ETC 5W30/ Helix ultra pro AM-L
+    marca: 2
+    tipo: 1
+    parent: 11
+- model: equivalencia.equivalencia
+  pk: 186
+  fields:
+    producto: Mobil 1 ESP Formula 5W30
+    marca: 3
+    tipo: 1
+    parent: 11
+- model: equivalencia.equivalencia
+  pk: 187
+  fields:
+    producto: EVOLUTION FULL-TECH LLX 5W-30
+    marca: 4
+    tipo: 1
+    parent: 11
+- model: equivalencia.equivalencia
+  pk: 188
+  fields:
+    producto: EVOLUTION FULL-TECH LLX 5W-30
+    marca: 5
+    tipo: 1
+    parent: 11
+- model: equivalencia.equivalencia
+  pk: 189
+  fields:
+    producto: EDGE 5W-30
+    marca: 7
+    tipo: 1
+    parent: 11
+- model: equivalencia.equivalencia
+  pk: 190
+  fields:
+    producto: SYNTIUM 5000 AV 5W-30
+    marca: 8
+    tipo: 1
+    parent: 11
+- model: equivalencia.equivalencia
+  pk: 191
+  fields:
+    producto: Havoline Ultra V 5W30
+    marca: 10
+    tipo: 1
+    parent: 11
+- model: equivalencia.equivalencia
+  pk: 192
+  fields:
+    producto: Elite Long Life 507/504 5W30
+    marca: 16
+    tipo: 1
+    parent: 11
+- model: equivalencia.equivalencia
+  pk: 193
+  fields:
+    producto: Helix Ultra ECT
+    marca: 2
+    tipo: 1
+    parent: 12
+- model: equivalencia.equivalencia
+  pk: 194
+  fields:
+    producto: EVOLUTION 900 SXR 5W-30
+    marca: 4
+    tipo: 1
+    parent: 12
+- model: equivalencia.equivalencia
+  pk: 195
+  fields:
+    producto: Quartz INEO 5W-30
+    marca: 5
+    tipo: 1
+    parent: 12
+- model: equivalencia.equivalencia
+  pk: 196
+  fields:
+    producto: Lubrax Valora
+    marca: 6
+    tipo: 1
+    parent: 12
+- model: equivalencia.equivalencia
+  pk: 197
+  fields:
+    producto: Formula SLX / Magnatec 5W-30 A5
+    marca: 7
+    tipo: 1
+    parent: 12
+- model: equivalencia.equivalencia
+  pk: 198
+  fields:
+    producto: "Performer Multipower / SEL\xC8NIA PERFORM F / SEL\xC8NIA K POWER /\
+      \ SYNTIUM 5000 AV / SYNTIUM 5000 FR"
+    marca: 8
+    tipo: 1
+    parent: 12
+- model: equivalencia.equivalencia
+  pk: 199
+  fields:
+    producto: HAVOLINE ENERGY 5W30
+    marca: 10
+    tipo: 1
+    parent: 12
+- model: equivalencia.equivalencia
+  pk: 200
+  fields:
+    producto: Elite Evolution Fuel Economy 5W30
+    marca: 16
+    tipo: 1
+    parent: 12
+- model: equivalencia.equivalencia
+  pk: 201
+  fields:
+    producto: Helix Ultra Profesional AP-L 5W-30/ Helix HX8
+    marca: 2
+    tipo: 1
+    parent: 13
+- model: equivalencia.equivalencia
+  pk: 202
+  fields:
+    producto: Mobil 1 ESP Formula 5W30
+    marca: 3
+    tipo: 1
+    parent: 13
+- model: equivalencia.equivalencia
+  pk: 203
+  fields:
+    producto: Quartz INEO ECS 5W30
+    marca: 5
+    tipo: 1
+    parent: 13
+- model: equivalencia.equivalencia
+  pk: 204
+  fields:
+    producto: EDGE 5W30 C3/Magnatec 5W30 C2
+    marca: 7
+    tipo: 1
+    parent: 13
+- model: equivalencia.equivalencia
+  pk: 205
+  fields:
+    producto: Syntium 5000 CP 5W30
+    marca: 8
+    tipo: 1
+    parent: 13
+- model: equivalencia.equivalencia
+  pk: 206
+  fields:
+    producto: Helix Ultra/ Helix HX8
+    marca: 2
+    tipo: 1
+    parent: 14
+- model: equivalencia.equivalencia
+  pk: 207
+  fields:
+    producto: Super 3000 X1
+    marca: 3
+    tipo: 1
+    parent: 14
+- model: equivalencia.equivalencia
+  pk: 208
+  fields:
+    producto: Quartz 9000 5W40
+    marca: 5
+    tipo: 1
+    parent: 14
+- model: equivalencia.equivalencia
+  pk: 209
+  fields:
+    producto: EDGE 5W40/MAGNATEC STOP-START
+    marca: 7
+    tipo: 1
+    parent: 14
+- model: equivalencia.equivalencia
+  pk: 210
+  fields:
+    producto: Helix Ultra 0W20 SN
+    marca: 2
+    tipo: 1
+    parent: 15
+- model: equivalencia.equivalencia
+  pk: 211
+  fields:
+    producto: Mobil 1 0W20
+    marca: 3
+    tipo: 1
+    parent: 15
+- model: equivalencia.equivalencia
+  pk: 212
+  fields:
+    producto: Evolution 900 FTX 0W20
+    marca: 4
+    tipo: 1
+    parent: 15
+- model: equivalencia.equivalencia
+  pk: 213
+  fields:
+    producto: Quartz 9000 Future GF5 0W20
+    marca: 5
+    tipo: 1
+    parent: 15
+- model: equivalencia.equivalencia
+  pk: 214
+  fields:
+    producto: EDGE 0W20/ EDGE Extended Performance
+    marca: 7
+    tipo: 1
+    parent: 15
+- model: equivalencia.equivalencia
+  pk: 215
+  fields:
+    producto: Syntium 7000 0W20
+    marca: 8
+    tipo: 1
+    parent: 15
+- model: equivalencia.equivalencia
+  pk: 216
+  fields:
+    producto: Helix Ultra
+    marca: 2
+    tipo: 1
+    parent: 16
+- model: equivalencia.equivalencia
+  pk: 217
+  fields:
+    producto: Super 3000 X3
+    marca: 3
+    tipo: 1
+    parent: 16
+- model: equivalencia.equivalencia
+  pk: 218
+  fields:
+    producto: Quartz 9000 ENERGY RQ
+    marca: 5
+    tipo: 1
+    parent: 16
+- model: equivalencia.equivalencia
+  pk: 219
+  fields:
+    producto: Supera Flex
+    marca: 6
+    tipo: 1
+    parent: 16
+- model: equivalencia.equivalencia
+  pk: 220
+  fields:
+    producto: Magnatec Professional 508,88
+    marca: 7
+    tipo: 1
+    parent: 16
+- model: equivalencia.equivalencia
+  pk: 221
+  fields:
+    producto: Syntiun 3000 BV
+    marca: 8
+    tipo: 1
+    parent: 16
+- model: equivalencia.equivalencia
+  pk: 222
+  fields:
+    producto: Rimula R2 Extra 15W-40 / Rimula R3 X
+    marca: 2
+    tipo: 1
+    parent: 17
+- model: equivalencia.equivalencia
+  pk: 223
+  fields:
+    producto: Delvac Super 1400 15W-40
+    marca: 3
+    tipo: 1
+    parent: 17
+- model: equivalencia.equivalencia
+  pk: 224
+  fields:
+    producto: Performance Trophy DX 15W-40 / Performance Super D 15W-40
+    marca: 4
+    tipo: 1
+    parent: 17
+- model: equivalencia.equivalencia
+  pk: 225
+  fields:
+    producto: Rubia 6400
+    marca: 5
+    tipo: 1
+    parent: 17
+- model: equivalencia.equivalencia
+  pk: 226
+  fields:
+    producto: Lubrax Extra Turbo (CG-4, 10)
+    marca: 6
+    tipo: 1
+    parent: 17
+- model: equivalencia.equivalencia
+  pk: 227
+  fields:
+    producto: Tection 15W40 / CRB VISCUS 15W-40
+    marca: 7
+    tipo: 1
+    parent: 17
+- model: equivalencia.equivalencia
+  pk: 228
+  fields:
+    producto: URANIA TURBO CG-4 / Urania TURBO LD / Urania Turbo CF4 / AMBRA PREMIUM
+      / AMBRA SUPER GOLD / Urania Multiviscoso
+    marca: 8
+    tipo: 1
+    parent: 17
+- model: equivalencia.equivalencia
+  pk: 229
+  fields:
+    producto: Ursa Super TD 15W40 / Ursa LA3
+    marca: 10
+    tipo: 1
+    parent: 17
+- model: equivalencia.equivalencia
+  pk: 230
+  fields:
+    producto: Diesel Super Turbo SHPD 15W40 / Multi G Diesel 15W40
+    marca: 16
+    tipo: 1
+    parent: 17
+- model: equivalencia.equivalencia
+  pk: 231
+  fields:
+    producto: Rimula R4 X / R3 MV
+    marca: 2
+    tipo: 1
+    parent: 18
+- model: equivalencia.equivalencia
+  pk: 232
+  fields:
+    producto: Delvac MX 15w40
+    marca: 3
+    tipo: 1
+    parent: 18
+- model: equivalencia.equivalencia
+  pk: 233
+  fields:
+    producto: Performance Victory 15W-40
+    marca: 4
+    tipo: 1
+    parent: 18
+- model: equivalencia.equivalencia
+  pk: 234
+  fields:
+    producto: Rubia 7400 / 7800
+    marca: 5
+    tipo: 1
+    parent: 18
+- model: equivalencia.equivalencia
+  pk: 235
+  fields:
+    producto: Lubrax Top Turbo (CI-4, 10)
+    marca: 6
+    tipo: 1
+    parent: 18
+- model: equivalencia.equivalencia
+  pk: 236
+  fields:
+    producto: Tection Global 15W40 / CRB TURBO G3 15W-40
+    marca: 7
+    tipo: 1
+    parent: 18
+- model: equivalencia.equivalencia
+  pk: 237
+  fields:
+    producto: URANIA LD7 / Urania Supremo CI-4 / URANIA TURBO LD / VS MAX DIESEL /
+      AMBRA MASTERGOLD HSP
+    marca: 8
+    tipo: 1
+    parent: 18
+- model: equivalencia.equivalencia
+  pk: 238
+  fields:
+    producto: Delo 400 Multigrade / LE 15W40 / URSA Premium TDX 15W40
+    marca: 9
+    tipo: 1
+    parent: 18
+- model: equivalencia.equivalencia
+  pk: 239
+  fields:
+    producto: Ursa Premuim TDX 15w40
+    marca: 10
+    tipo: 1
+    parent: 18
+- model: equivalencia.equivalencia
+  pk: 240
+  fields:
+    producto: i-Sigma Special 4AM 15W40 / i-Sigma 4AM 15W-40
+    marca: 12
+    tipo: 1
+    parent: 18
+- model: equivalencia.equivalencia
+  pk: 241
+  fields:
+    producto: Diesel Turbo THPD 15W40
+    marca: 16
+    tipo: 1
+    parent: 18
+- model: equivalencia.equivalencia
+  pk: 242
+  fields:
+    producto: Rimula R4 L
+    marca: 2
+    tipo: 1
+    parent: 19
+- model: equivalencia.equivalencia
+  pk: 243
+  fields:
+    producto: Delvac ESP 15W40/ Delvac super 1300
+    marca: 3
+    tipo: 1
+    parent: 19
+- model: equivalencia.equivalencia
+  pk: 244
+  fields:
+    producto: Performance Harmony 15W40
+    marca: 4
+    tipo: 1
+    parent: 19
+- model: equivalencia.equivalencia
+  pk: 245
+  fields:
+    producto: Rubia TIR 7900
+    marca: 5
+    tipo: 1
+    parent: 19
+- model: equivalencia.equivalencia
+  pk: 246
+  fields:
+    producto: Rimula R6 M / Rimula Ultra (solo 10W40) / Rimula R5 E
+    marca: 2
+    tipo: 1
+    parent: 20
+- model: equivalencia.equivalencia
+  pk: 247
+  fields:
+    producto: Delvac XHP Extra 10W-40
+    marca: 3
+    tipo: 1
+    parent: 20
+- model: equivalencia.equivalencia
+  pk: 248
+  fields:
+    producto: Performance Experty 10w40 / Performance Polytraffic 10W-40
+    marca: 4
+    tipo: 1
+    parent: 20
+- model: equivalencia.equivalencia
+  pk: 249
+  fields:
+    producto: Rubia TIR 8600
+    marca: 5
+    tipo: 1
+    parent: 20
+- model: equivalencia.equivalencia
+  pk: 250
+  fields:
+    producto: Vecton long drain
+    marca: 7
+    tipo: 1
+    parent: 20
+- model: equivalencia.equivalencia
+  pk: 251
+  fields:
+    producto: Urania Optimo
+    marca: 8
+    tipo: 1
+    parent: 20
+- model: equivalencia.equivalencia
+  pk: 252
+  fields:
+    producto: Diesel Turbo UHPD 10W40
+    marca: 16
+    tipo: 1
+    parent: 20
+- model: equivalencia.equivalencia
+  pk: 253
+  fields:
+    producto: Rimula Ultra 5W-30
+    marca: 2
+    tipo: 1
+    parent: 21
+- model: equivalencia.equivalencia
+  pk: 254
+  fields:
+    producto: URANIA MAXIMO 5W30
+    marca: 8
+    tipo: 1
+    parent: 21
+- model: equivalencia.equivalencia
+  pk: 255
+  fields:
+    producto: Diesel Turbo VHPD 5W30
+    marca: 16
+    tipo: 1
+    parent: 21
+- model: equivalencia.equivalencia
+  pk: 256
+  fields:
+    producto: Rimula R6 LM
+    marca: 2
+    tipo: 1
+    parent: 22
+- model: equivalencia.equivalencia
+  pk: 257
+  fields:
+    producto: Delvac XHP ESP 10W40
+    marca: 3
+    tipo: 1
+    parent: 22
+- model: equivalencia.equivalencia
+  pk: 258
+  fields:
+    producto: Diesel Turbo UHPD 10W40 Mid Saps
+    marca: 16
+    tipo: 1
+    parent: 22
+- model: equivalencia.equivalencia
+  pk: 259
+  fields:
+    producto: Rimula R2 Multigrado / Rimula D
+    marca: 2
+    tipo: 1
+    parent: 23
+- model: equivalencia.equivalencia
+  pk: 260
+  fields:
+    producto: Delvac Turbo 25W50
+    marca: 3
+    tipo: 1
+    parent: 23
+- model: equivalencia.equivalencia
+  pk: 261
+  fields:
+    producto: Molygraf 25W-50
+    marca: 4
+    tipo: 1
+    parent: 23
+- model: equivalencia.equivalencia
+  pk: 262
+  fields:
+    producto: Rubia H 25W-50
+    marca: 5
+    tipo: 1
+    parent: 23
+- model: equivalencia.equivalencia
+  pk: 263
+  fields:
+    producto: Essencial Alto Rodaje
+    marca: 6
+    tipo: 1
+    parent: 23
+- model: equivalencia.equivalencia
+  pk: 264
+  fields:
+    producto: Ultramax Viscus / Turbomax guardian 3
+    marca: 7
+    tipo: 1
+    parent: 23
+- model: equivalencia.equivalencia
+  pk: 265
+  fields:
+    producto: Ursa LA-3 25W-50
+    marca: 10
+    tipo: 1
+    parent: 23
+- model: equivalencia.equivalencia
+  pk: 266
+  fields:
+    producto: Sigma Turbo / SMO (25W-50)
+    marca: 12
+    tipo: 1
+    parent: 23
+- model: equivalencia.equivalencia
+  pk: 267
+  fields:
+    producto: Mixfleet 15W40 y 20W50 / Multiturbo Extra 15W40
+    marca: 16
+    tipo: 1
+    parent: 23
+- model: equivalencia.equivalencia
+  pk: 268
+  fields:
+    producto: HX3 40
+    marca: 2
+    tipo: 1
+    parent: 24
+- model: equivalencia.equivalencia
+  pk: 269
+  fields:
+    producto: MOTORELF 30 / 40 / 50
+    marca: 4
+    tipo: 1
+    parent: 24
+- model: equivalencia.equivalencia
+  pk: 270
+  fields:
+    producto: MOTORELF 30 / 40 / 50
+    marca: 5
+    tipo: 1
+    parent: 24
+- model: equivalencia.equivalencia
+  pk: 271
+  fields:
+    producto: Motex / Texol
+    marca: 10
+    tipo: 1
+    parent: 24
+- model: equivalencia.equivalencia
+  pk: 272
+  fields:
+    producto: Refill
+    marca: 12
+    tipo: 1
+    parent: 24
+- model: equivalencia.equivalencia
+  pk: 273
+  fields:
+    producto: HX3 G
+    marca: 2
+    tipo: 1
+    parent: 25
+- model: equivalencia.equivalencia
+  pk: 274
+  fields:
+    producto: Taxigas / Molygraf / Geneself
+    marca: 4
+    tipo: 1
+    parent: 25
+- model: equivalencia.equivalencia
+  pk: 275
+  fields:
+    producto: Quartz 5000 GNC
+    marca: 5
+    tipo: 1
+    parent: 25
+- model: equivalencia.equivalencia
+  pk: 276
+  fields:
+    producto: Lubrax Essencial Alto Rodaje
+    marca: 6
+    tipo: 1
+    parent: 25
+- model: equivalencia.equivalencia
+  pk: 277
+  fields:
+    producto: VS MAX / SYNTIUM 800 HM
+    marca: 8
+    tipo: 1
+    parent: 25
+- model: equivalencia.equivalencia
+  pk: 278
+  fields:
+    producto: HAVOLINE PREMIUM 20w50
+    marca: 10
+    tipo: 1
+    parent: 25
+- model: equivalencia.equivalencia
+  pk: 279
+  fields:
+    producto: GEMA
+    marca: 12
+    tipo: 1
+    parent: 25
+- model: equivalencia.equivalencia
+  pk: 280
+  fields:
+    producto: Elite Super 20W50
+    marca: 16
+    tipo: 1
+    parent: 25
+- model: equivalencia.equivalencia
+  pk: 281
+  fields:
+    producto: HX3 40/ Rimula R2
+    marca: 2
+    tipo: 1
+    parent: 26
+- model: equivalencia.equivalencia
+  pk: 282
+  fields:
+    producto: HD 40 / HD 50
+    marca: 3
+    tipo: 1
+    parent: 26
+- model: equivalencia.equivalencia
+  pk: 283
+  fields:
+    producto: Disal HD Max / Perfo HDX 200
+    marca: 4
+    tipo: 1
+    parent: 26
+- model: equivalencia.equivalencia
+  pk: 284
+  fields:
+    producto: Disal HD Max / Classic SAE 40
+    marca: 5
+    tipo: 1
+    parent: 26
+- model: equivalencia.equivalencia
+  pk: 285
+  fields:
+    producto: Lubrax Essencial SF / Lubrax Essencial GNC
+    marca: 6
+    tipo: 1
+    parent: 26
+- model: equivalencia.equivalencia
+  pk: 286
+  fields:
+    producto: "Havoline HD / Havoline S\xFAper / TEXAGAS"
+    marca: 10
+    tipo: 1
+    parent: 26
+- model: equivalencia.equivalencia
+  pk: 287
+  fields:
+    producto: Super HD / SHD
+    marca: 12
+    tipo: 1
+    parent: 26
+- model: equivalencia.equivalencia
+  pk: 288
+  fields:
+    producto: Spirax S3 ALS / S2 ALS
+    marca: 2
+    tipo: 2
+    parent: 27
+- model: equivalencia.equivalencia
+  pk: 289
+  fields:
+    producto: "Transmisi\xF3n Autob. 90"
+    marca: 4
+    tipo: 2
+    parent: 27
+- model: equivalencia.equivalencia
+  pk: 290
+  fields:
+    producto: Transmission DA
+    marca: 5
+    tipo: 2
+    parent: 27
+- model: equivalencia.equivalencia
+  pk: 291
+  fields:
+    producto: Transmax Z
+    marca: 7
+    tipo: 2
+    parent: 27
+- model: equivalencia.equivalencia
+  pk: 292
+  fields:
+    producto: Tutela Car ZS 75W-80
+    marca: 8
+    tipo: 2
+    parent: 27
+- model: equivalencia.equivalencia
+  pk: 293
+  fields:
+    producto: Crater 2 Fluid
+    marca: 10
+    tipo: 2
+    parent: 27
+- model: equivalencia.equivalencia
+  pk: 294
+  fields:
+    producto: Rotra FE/AR 75W-80
+    marca: 12
+    tipo: 2
+    parent: 27
+- model: equivalencia.equivalencia
+  pk: 295
+  fields:
+    producto: Spirax S2 ATF / ATF UM / ATF X / ATF HDX / ATF MD3/ SPIRAX S5 ATF X
+      /ZM
+    marca: 2
+    tipo: 2
+    parent: 28
+- model: equivalencia.equivalencia
+  pk: 296
+  fields:
+    producto: Synthetic ATF / Multiprupose ATF/ATF 550/ATF D/M
+    marca: 3
+    tipo: 2
+    parent: 28
+- model: equivalencia.equivalencia
+  pk: 297
+  fields:
+    producto: Elfmatic G3
+    marca: 4
+    tipo: 2
+    parent: 28
+- model: equivalencia.equivalencia
+  pk: 298
+  fields:
+    producto: FLUIDE G3 C / Fluide AT 42
+    marca: 5
+    tipo: 2
+    parent: 28
+- model: equivalencia.equivalencia
+  pk: 299
+  fields:
+    producto: Lubrax ATF TDX
+    marca: 6
+    tipo: 2
+    parent: 28
+- model: equivalencia.equivalencia
+  pk: 300
+  fields:
+    producto: TRANSMAX DEX/MERC
+    marca: 7
+    tipo: 2
+    parent: 28
+- model: equivalencia.equivalencia
+  pk: 301
+  fields:
+    producto: Tutela GI/E
+    marca: 8
+    tipo: 2
+    parent: 28
+- model: equivalencia.equivalencia
+  pk: 302
+  fields:
+    producto: Texamatic 7045E
+    marca: 10
+    tipo: 2
+    parent: 28
+- model: equivalencia.equivalencia
+  pk: 303
+  fields:
+    producto: Spirax S6 ATF D6
+    marca: 2
+    tipo: 2
+    parent: 29
+- model: equivalencia.equivalencia
+  pk: 304
+  fields:
+    producto: Mobil Dexron VI ATF
+    marca: 3
+    tipo: 2
+    parent: 29
+- model: equivalencia.equivalencia
+  pk: 305
+  fields:
+    producto: Fluidmatic VI
+    marca: 5
+    tipo: 2
+    parent: 29
+- model: equivalencia.equivalencia
+  pk: 306
+  fields:
+    producto: Castrol Dexron VI ATF / Transmax Dex VI
+    marca: 7
+    tipo: 2
+    parent: 29
+- model: equivalencia.equivalencia
+  pk: 307
+  fields:
+    producto: Tutela Transmision Dexron VI
+    marca: 8
+    tipo: 2
+    parent: 29
+- model: equivalencia.equivalencia
+  pk: 308
+  fields:
+    producto: "Havoline Synthetic ATF Multi-Vehicle DEXRON\xAEVI"
+    marca: 9
+    tipo: 2
+    parent: 29
+- model: equivalencia.equivalencia
+  pk: 309
+  fields:
+    producto: Spirax S6 ATF A295/Spirax S4 ATF HDX
+    marca: 2
+    tipo: 2
+    parent: 30
+- model: equivalencia.equivalencia
+  pk: 310
+  fields:
+    producto: Delvac Synthetic ATF
+    marca: 3
+    tipo: 2
+    parent: 30
+- model: equivalencia.equivalencia
+  pk: 311
+  fields:
+    producto: TranSynd
+    marca: 7
+    tipo: 2
+    parent: 30
+- model: equivalencia.equivalencia
+  pk: 312
+  fields:
+    producto: Mobiltrans AST
+    marca: 3
+    tipo: 2
+    parent: 31
+- model: equivalencia.equivalencia
+  pk: 313
+  fields:
+    producto: Spirax S2 G
+    marca: 2
+    tipo: 2
+    parent: 32
+- model: equivalencia.equivalencia
+  pk: 314
+  fields:
+    producto: Tranself TRJ
+    marca: 4
+    tipo: 2
+    parent: 32
+- model: equivalencia.equivalencia
+  pk: 315
+  fields:
+    producto: Lubrax TRM-3
+    marca: 6
+    tipo: 2
+    parent: 32
+- model: equivalencia.equivalencia
+  pk: 316
+  fields:
+    producto: Tutela CAR EPYX
+    marca: 8
+    tipo: 2
+    parent: 32
+- model: equivalencia.equivalencia
+  pk: 317
+  fields:
+    producto: TGF
+    marca: 10
+    tipo: 2
+    parent: 32
+- model: equivalencia.equivalencia
+  pk: 318
+  fields:
+    producto: Rotra FE / AR
+    marca: 12
+    tipo: 2
+    parent: 32
+- model: equivalencia.equivalencia
+  pk: 319
+  fields:
+    producto: Spirax S3 G
+    marca: 2
+    tipo: 2
+    parent: 33
+- model: equivalencia.equivalencia
+  pk: 320
+  fields:
+    producto: Mobilube GX 80W A
+    marca: 3
+    tipo: 2
+    parent: 33
+- model: equivalencia.equivalencia
+  pk: 321
+  fields:
+    producto: Tranself EP 80W
+    marca: 4
+    tipo: 2
+    parent: 33
+- model: equivalencia.equivalencia
+  pk: 322
+  fields:
+    producto: EP 80W
+    marca: 5
+    tipo: 2
+    parent: 33
+- model: equivalencia.equivalencia
+  pk: 323
+  fields:
+    producto: Lubrax TRM-4
+    marca: 6
+    tipo: 2
+    parent: 33
+- model: equivalencia.equivalencia
+  pk: 324
+  fields:
+    producto: Hypoy light
+    marca: 7
+    tipo: 2
+    parent: 33
+- model: equivalencia.equivalencia
+  pk: 325
+  fields:
+    producto: Tutela ZC/Y
+    marca: 8
+    tipo: 2
+    parent: 33
+- model: equivalencia.equivalencia
+  pk: 326
+  fields:
+    producto: UNIVERSAL GEAR EP
+    marca: 10
+    tipo: 2
+    parent: 33
+- model: equivalencia.equivalencia
+  pk: 327
+  fields:
+    producto: MTF Hy 80W / Rotra Hy
+    marca: 12
+    tipo: 2
+    parent: 33
+- model: equivalencia.equivalencia
+  pk: 328
+  fields:
+    producto: Spirax S6 GXME / S5 GXE
+    marca: 2
+    tipo: 2
+    parent: 34
+- model: equivalencia.equivalencia
+  pk: 329
+  fields:
+    producto: Mobillube 1 SHC 75W90/M-DELVAC 1 GO 75W90
+    marca: 3
+    tipo: 2
+    parent: 34
+- model: equivalencia.equivalencia
+  pk: 330
+  fields:
+    producto: TRANSELF SYN FE 75W-90
+    marca: 4
+    tipo: 2
+    parent: 34
+- model: equivalencia.equivalencia
+  pk: 331
+  fields:
+    producto: Lubrax Gold
+    marca: 6
+    tipo: 2
+    parent: 34
+- model: equivalencia.equivalencia
+  pk: 332
+  fields:
+    producto: Donax TD /Spirax S4 TXM
+    marca: 2
+    tipo: 2
+    parent: 35
+- model: equivalencia.equivalencia
+  pk: 333
+  fields:
+    producto: Mobilfluid 424 / 499
+    marca: 3
+    tipo: 2
+    parent: 35
+- model: equivalencia.equivalencia
+  pk: 334
+  fields:
+    producto: Tractelf
+    marca: 4
+    tipo: 2
+    parent: 35
+- model: equivalencia.equivalencia
+  pk: 335
+  fields:
+    producto: Transmission MP
+    marca: 5
+    tipo: 2
+    parent: 35
+- model: equivalencia.equivalencia
+  pk: 336
+  fields:
+    producto: Lubrax Unitractor / Lubrax Grans THF
+    marca: 6
+    tipo: 2
+    parent: 35
+- model: equivalencia.equivalencia
+  pk: 337
+  fields:
+    producto: CASTROL UTF Allison C-4
+    marca: 7
+    tipo: 2
+    parent: 35
+- model: equivalencia.equivalencia
+  pk: 338
+  fields:
+    producto: AMBRA MULTI F / AMBRA TRX / AMBRA MULTI G
+    marca: 8
+    tipo: 2
+    parent: 35
+- model: equivalencia.equivalencia
+  pk: 339
+  fields:
+    producto: Chevron 1000 THF
+    marca: 9
+    tipo: 2
+    parent: 35
+- model: equivalencia.equivalencia
+  pk: 340
+  fields:
+    producto: TDH Oil
+    marca: 10
+    tipo: 2
+    parent: 35
+- model: equivalencia.equivalencia
+  pk: 341
+  fields:
+    producto: Rotra THT
+    marca: 12
+    tipo: 2
+    parent: 35
+- model: equivalencia.equivalencia
+  pk: 342
+  fields:
+    producto: HY-GARD
+    marca: 15
+    tipo: 2
+    parent: 35
+- model: equivalencia.equivalencia
+  pk: 343
+  fields:
+    producto: Spirax S2 ATF D2 / Donax TM/Spirax S1 ATF TASA
+    marca: 2
+    tipo: 2
+    parent: 36
+- model: equivalencia.equivalencia
+  pk: 344
+  fields:
+    producto: ATF 220
+    marca: 3
+    tipo: 2
+    parent: 36
+- model: equivalencia.equivalencia
+  pk: 345
+  fields:
+    producto: Elfmatic / Transomatic
+    marca: 4
+    tipo: 2
+    parent: 36
+- model: equivalencia.equivalencia
+  pk: 346
+  fields:
+    producto: Fluide ATF / ATX
+    marca: 5
+    tipo: 2
+    parent: 36
+- model: equivalencia.equivalencia
+  pk: 347
+  fields:
+    producto: Lubrax ATF / TA
+    marca: 6
+    tipo: 2
+    parent: 36
+- model: equivalencia.equivalencia
+  pk: 348
+  fields:
+    producto: TQ-95 / TQ D
+    marca: 7
+    tipo: 2
+    parent: 36
+- model: equivalencia.equivalencia
+  pk: 349
+  fields:
+    producto: Tutela GI/A - GI/M - GI/C3
+    marca: 8
+    tipo: 2
+    parent: 36
+- model: equivalencia.equivalencia
+  pk: 350
+  fields:
+    producto: Texamatic Fluid
+    marca: 10
+    tipo: 2
+    parent: 36
+- model: equivalencia.equivalencia
+  pk: 351
+  fields:
+    producto: Rotra ATF D-II
+    marca: 12
+    tipo: 2
+    parent: 36
+- model: equivalencia.equivalencia
+  pk: 352
+  fields:
+    producto: Spirax S2 A
+    marca: 2
+    tipo: 2
+    parent: 37
+- model: equivalencia.equivalencia
+  pk: 353
+  fields:
+    producto: Mobilube HD / HD-A / Gear Oil GX / GXD
+    marca: 3
+    tipo: 2
+    parent: 37
+- model: equivalencia.equivalencia
+  pk: 354
+  fields:
+    producto: Tranself Universal / Tranself Tipo B
+    marca: 4
+    tipo: 2
+    parent: 37
+- model: equivalencia.equivalencia
+  pk: 355
+  fields:
+    producto: Transmission EP-B
+    marca: 5
+    tipo: 2
+    parent: 37
+- model: equivalencia.equivalencia
+  pk: 356
+  fields:
+    producto: Lubrax GL-5 / TRM-5
+    marca: 6
+    tipo: 2
+    parent: 37
+- model: equivalencia.equivalencia
+  pk: 357
+  fields:
+    producto: Hypoy C
+    marca: 7
+    tipo: 2
+    parent: 37
+- model: equivalencia.equivalencia
+  pk: 358
+  fields:
+    producto: Tutela TRD / Tutela W 140 MDA / AMBRA HYPOIDE 90 y 140 / AMBRA AXF
+    marca: 8
+    tipo: 2
+    parent: 37
+- model: equivalencia.equivalencia
+  pk: 359
+  fields:
+    producto: Multigear EP
+    marca: 10
+    tipo: 2
+    parent: 37
+- model: equivalencia.equivalencia
+  pk: 360
+  fields:
+    producto: Rotra MPA
+    marca: 12
+    tipo: 2
+    parent: 37
+- model: equivalencia.equivalencia
+  pk: 361
+  fields:
+    producto: Spirax S6 GXME / S6 AXME / S5 ATE
+    marca: 2
+    tipo: 2
+    parent: 38
+- model: equivalencia.equivalencia
+  pk: 362
+  fields:
+    producto: Mobilube SHC / Delvac Synthetic Gear Oil 75W90
+    marca: 3
+    tipo: 2
+    parent: 38
+- model: equivalencia.equivalencia
+  pk: 363
+  fields:
+    producto: Tranself Synthese / Tranself Universal TRANSELF SYN FE 75W-140
+    marca: 4
+    tipo: 2
+    parent: 38
+- model: equivalencia.equivalencia
+  pk: 364
+  fields:
+    producto: TRANSMISSION SYN FE 75W90
+    marca: 5
+    tipo: 2
+    parent: 38
+- model: equivalencia.equivalencia
+  pk: 365
+  fields:
+    producto: Lubrax Gold
+    marca: 6
+    tipo: 2
+    parent: 38
+- model: equivalencia.equivalencia
+  pk: 366
+  fields:
+    producto: Castrol SAX-FO, Syntrax
+    marca: 7
+    tipo: 2
+    parent: 38
+- model: equivalencia.equivalencia
+  pk: 367
+  fields:
+    producto: Tutela Car ZS 75W-90
+    marca: 8
+    tipo: 2
+    parent: 38
+- model: equivalencia.equivalencia
+  pk: 368
+  fields:
+    producto: Rotra LSX / Gear Synth
+    marca: 12
+    tipo: 2
+    parent: 38
+- model: equivalencia.equivalencia
+  pk: 369
+  fields:
+    producto: Dentax / Spirax S1
+    marca: 2
+    tipo: 2
+    parent: 39
+- model: equivalencia.equivalencia
+  pk: 370
+  fields:
+    producto: Mobillube C
+    marca: 3
+    tipo: 2
+    parent: 39
+- model: equivalencia.equivalencia
+  pk: 371
+  fields:
+    producto: Girelf
+    marca: 4
+    tipo: 2
+    parent: 39
+- model: equivalencia.equivalencia
+  pk: 372
+  fields:
+    producto: Transmission
+    marca: 5
+    tipo: 2
+    parent: 39
+- model: equivalencia.equivalencia
+  pk: 373
+  fields:
+    producto: Lubrax GL-1
+    marca: 6
+    tipo: 2
+    parent: 39
+- model: equivalencia.equivalencia
+  pk: 374
+  fields:
+    producto: Alpha
+    marca: 7
+    tipo: 2
+    parent: 39
+- model: equivalencia.equivalencia
+  pk: 375
+  fields:
+    producto: THUBAN
+    marca: 10
+    tipo: 2
+    parent: 39
+- model: equivalencia.equivalencia
+  pk: 376
+  fields:
+    producto: MTF
+    marca: 12
+    tipo: 2
+    parent: 39
+- model: equivalencia.equivalencia
+  pk: 377
+  fields:
+    producto: Caprinus HD
+    marca: 2
+    tipo: 3
+    parent: 40
+- model: equivalencia.equivalencia
+  pk: 378
+  fields:
+    producto: DIOL RD 13 RD 40 and 17 RD 40
+    marca: 3
+    tipo: 3
+    parent: 40
+- model: equivalencia.equivalencia
+  pk: 379
+  fields:
+    producto: Caprinus HPD
+    marca: 2
+    tipo: 3
+    parent: 41
+- model: equivalencia.equivalencia
+  pk: 380
+  fields:
+    producto: DIOL RD 13 RD 40 and 17 RD 40
+    marca: 3
+    tipo: 3
+    parent: 41
+- model: equivalencia.equivalencia
+  pk: 381
+  fields:
+    producto: Rubia G 1300
+    marca: 5
+    tipo: 3
+    parent: 41
+- model: equivalencia.equivalencia
+  pk: 382
+  fields:
+    producto: Lubrax Rail 17
+    marca: 6
+    tipo: 3
+    parent: 41
+- model: equivalencia.equivalencia
+  pk: 383
+  fields:
+    producto: DIESEL ENGINE OIL 13 SG 2000
+    marca: 10
+    tipo: 3
+    parent: 41
+- model: equivalencia.equivalencia
+  pk: 384
+  fields:
+    producto: Palissa G
+    marca: 4
+    tipo: 10
+    parent: 42
+- model: equivalencia.equivalencia
+  pk: 385
+  fields:
+    producto: Lubrax Calcium GR 2
+    marca: 6
+    tipo: 10
+    parent: 42
+- model: equivalencia.equivalencia
+  pk: 386
+  fields:
+    producto: Gadus S2 U460L
+    marca: 2
+    tipo: 10
+    parent: 43
+- model: equivalencia.equivalencia
+  pk: 387
+  fields:
+    producto: Staterma
+    marca: 4
+    tipo: 10
+    parent: 43
+- model: equivalencia.equivalencia
+  pk: 388
+  fields:
+    producto: Caloris 2
+    marca: 5
+    tipo: 10
+    parent: 43
+- model: equivalencia.equivalencia
+  pk: 389
+  fields:
+    producto: Lubrax Clay / Lubrax Ind GAT 2
+    marca: 6
+    tipo: 10
+    parent: 43
+- model: equivalencia.equivalencia
+  pk: 390
+  fields:
+    producto: Thermatex EP
+    marca: 10
+    tipo: 10
+    parent: 43
+- model: equivalencia.equivalencia
+  pk: 391
+  fields:
+    producto: Gadus S2 A320 / S1 A150
+    marca: 2
+    tipo: 10
+    parent: 45
+- model: equivalencia.equivalencia
+  pk: 392
+  fields:
+    producto: Mobilplex 44
+    marca: 3
+    tipo: 10
+    parent: 45
+- model: equivalencia.equivalencia
+  pk: 393
+  fields:
+    producto: Movexa / Palissa 2
+    marca: 4
+    tipo: 10
+    parent: 45
+- model: equivalencia.equivalencia
+  pk: 394
+  fields:
+    producto: STC 2
+    marca: 5
+    tipo: 10
+    parent: 45
+- model: equivalencia.equivalencia
+  pk: 395
+  fields:
+    producto: Lubrax Chassis 2
+    marca: 6
+    tipo: 10
+    parent: 45
+- model: equivalencia.equivalencia
+  pk: 396
+  fields:
+    producto: Tutela Beta 2
+    marca: 8
+    tipo: 10
+    parent: 45
+- model: equivalencia.equivalencia
+  pk: 397
+  fields:
+    producto: Chassi CA-2
+    marca: 10
+    tipo: 10
+    parent: 45
+- model: equivalencia.equivalencia
+  pk: 398
+  fields:
+    producto: GR CC 2A
+    marca: 12
+    tipo: 10
+    parent: 45
+- model: equivalencia.equivalencia
+  pk: 399
+  fields:
+    producto: Gadus S2 V220 0
+    marca: 2
+    tipo: 10
+    parent: 46
+- model: equivalencia.equivalencia
+  pk: 400
+  fields:
+    producto: Spheerol EPL 0
+    marca: 7
+    tipo: 10
+    parent: 46
+- model: equivalencia.equivalencia
+  pk: 401
+  fields:
+    producto: Gadus S2 V220 2 / S2 V100 2
+    marca: 2
+    tipo: 10
+    parent: 47
+- model: equivalencia.equivalencia
+  pk: 402
+  fields:
+    producto: Mobilux EP 2 / Mobilgrease Special
+    marca: 3
+    tipo: 10
+    parent: 47
+- model: equivalencia.equivalencia
+  pk: 403
+  fields:
+    producto: Rolexa
+    marca: 4
+    tipo: 10
+    parent: 47
+- model: equivalencia.equivalencia
+  pk: 404
+  fields:
+    producto: Lubrax Lith EP2 / GMA-2 EPR
+    marca: 6
+    tipo: 10
+    parent: 47
+- model: equivalencia.equivalencia
+  pk: 405
+  fields:
+    producto: Spheerol EPL 2
+    marca: 7
+    tipo: 10
+    parent: 47
+- model: equivalencia.equivalencia
+  pk: 406
+  fields:
+    producto: Tutela Alfa 2K / AMBRA GR-9
+    marca: 8
+    tipo: 10
+    parent: 47
+- model: equivalencia.equivalencia
+  pk: 407
+  fields:
+    producto: Kluberplex BE 31-222
+    marca: 11
+    tipo: 10
+    parent: 47
+- model: equivalencia.equivalencia
+  pk: 408
+  fields:
+    producto: GR MU EP 2A
+    marca: 12
+    tipo: 10
+    parent: 47
+- model: equivalencia.equivalencia
+  pk: 409
+  fields:
+    producto: Gadus S2 V220 3 / S2 V100 3 / Cyprina RA
+    marca: 2
+    tipo: 10
+    parent: 48
+- model: equivalencia.equivalencia
+  pk: 410
+  fields:
+    producto: Mobillux 3
+    marca: 3
+    tipo: 10
+    parent: 48
+- model: equivalencia.equivalencia
+  pk: 411
+  fields:
+    producto: Spheerol EPL 3
+    marca: 7
+    tipo: 10
+    parent: 48
+- model: equivalencia.equivalencia
+  pk: 412
+  fields:
+    producto: Tribol GR 1350-2,5 PD
+    marca: 7
+    tipo: 10
+    parent: 49
+- model: equivalencia.equivalencia
+  pk: 413
+  fields:
+    producto: CROWN EP
+    marca: 14
+    tipo: 10
+    parent: 49
+- model: equivalencia.equivalencia
+  pk: 414
+  fields:
+    producto: Gadus S1 OG 1600
+    marca: 2
+    tipo: 10
+    parent: 51
+- model: equivalencia.equivalencia
+  pk: 415
+  fields:
+    producto: Lubrax Betumen FLD
+    marca: 6
+    tipo: 10
+    parent: 51
+- model: equivalencia.equivalencia
+  pk: 416
+  fields:
+    producto: Crater 2X Fluid
+    marca: 10
+    tipo: 10
+    parent: 51
+- model: equivalencia.equivalencia
+  pk: 417
+  fields:
+    producto: MOLY EP
+    marca: 14
+    tipo: 10
+    parent: 52
+- model: equivalencia.equivalencia
+  pk: 418
+  fields:
+    producto: Cotexxa
+    marca: 4
+    tipo: 10
+    parent: 53
+- model: equivalencia.equivalencia
+  pk: 419
+  fields:
+    producto: Grasa Jota CA
+    marca: 8
+    tipo: 10
+    parent: 53
+- model: equivalencia.equivalencia
+  pk: 420
+  fields:
+    producto: Gadus S2 V220
+    marca: 2
+    tipo: 10
+    parent: 54
+- model: equivalencia.equivalencia
+  pk: 421
+  fields:
+    producto: Mobilgrease FM 101 and FM 222
+    marca: 3
+    tipo: 10
+    parent: 54
+- model: equivalencia.equivalencia
+  pk: 422
+  fields:
+    producto: Epexa 2
+    marca: 4
+    tipo: 10
+    parent: 54
+- model: equivalencia.equivalencia
+  pk: 423
+  fields:
+    producto: Multis EP
+    marca: 5
+    tipo: 10
+    parent: 54
+- model: equivalencia.equivalencia
+  pk: 424
+  fields:
+    producto: Lubrax Lith EP 3
+    marca: 6
+    tipo: 10
+    parent: 54
+- model: equivalencia.equivalencia
+  pk: 425
+  fields:
+    producto: Molub-Alloy 777 / Tribol 3020
+    marca: 7
+    tipo: 10
+    parent: 54
+- model: equivalencia.equivalencia
+  pk: 426
+  fields:
+    producto: Tutela MR/EP
+    marca: 8
+    tipo: 10
+    parent: 54
+- model: equivalencia.equivalencia
+  pk: 427
+  fields:
+    producto: Multifak EP2
+    marca: 10
+    tipo: 10
+    parent: 54
+- model: equivalencia.equivalencia
+  pk: 428
+  fields:
+    producto: Gadus S3 V460D
+    marca: 2
+    tipo: 10
+    parent: 55
+- model: equivalencia.equivalencia
+  pk: 429
+  fields:
+    producto: Epexa MO
+    marca: 4
+    tipo: 10
+    parent: 55
+- model: equivalencia.equivalencia
+  pk: 430
+  fields:
+    producto: Multis EP MS
+    marca: 5
+    tipo: 10
+    parent: 55
+- model: equivalencia.equivalencia
+  pk: 431
+  fields:
+    producto: de vis
+    marca: 6
+    tipo: 10
+    parent: 55
+- model: equivalencia.equivalencia
+  pk: 432
+  fields:
+    producto: Spheerol LMM
+    marca: 7
+    tipo: 10
+    parent: 55
+- model: equivalencia.equivalencia
+  pk: 433
+  fields:
+    producto: Tutela MRM-2 / AMBRA GR 75 MD
+    marca: 8
+    tipo: 10
+    parent: 55
+- model: equivalencia.equivalencia
+  pk: 434
+  fields:
+    producto: Molytex EP 2
+    marca: 10
+    tipo: 10
+    parent: 55
+- model: equivalencia.equivalencia
+  pk: 435
+  fields:
+    producto: "Unimoly GL-82 / Kl\xFCberlectric BE 44-152"
+    marca: 11
+    tipo: 10
+    parent: 55
+- model: equivalencia.equivalencia
+  pk: 436
+  fields:
+    producto: GR SM EP 2A
+    marca: 12
+    tipo: 10
+    parent: 55
+- model: equivalencia.equivalencia
+  pk: 437
+  fields:
+    producto: Gadus S3 V220C / S5 V100
+    marca: 2
+    tipo: 10
+    parent: 56
+- model: equivalencia.equivalencia
+  pk: 438
+  fields:
+    producto: Mobilith AW / Mobil SHC 220/Polyrex EM/unirex N2
+    marca: 3
+    tipo: 10
+    parent: 56
+- model: equivalencia.equivalencia
+  pk: 439
+  fields:
+    producto: Molub-Alloy 860/460 / Tribol 4020 / Pyroplex Blue
+    marca: 7
+    tipo: 10
+    parent: 56
+- model: equivalencia.equivalencia
+  pk: 440
+  fields:
+    producto: "Kl\xFCberplex BEM 41-141"
+    marca: 11
+    tipo: 10
+    parent: 56
+- model: equivalencia.equivalencia
+  pk: 441
+  fields:
+    producto: Gadus S3 V220C / S5 V100
+    marca: 2
+    tipo: 10
+    parent: 57
+- model: equivalencia.equivalencia
+  pk: 442
+  fields:
+    producto: Mobilgrease XHP 222 -322/ Unirex EP/MOBILITH SHC 100/Mobilgrease CM-P
+    marca: 3
+    tipo: 10
+    parent: 57
+- model: equivalencia.equivalencia
+  pk: 443
+  fields:
+    producto: Lubrax Lith Plus EP2 / Lubrax Industrial GCL-2-EP
+    marca: 6
+    tipo: 10
+    parent: 57
+- model: equivalencia.equivalencia
+  pk: 444
+  fields:
+    producto: Tribol 4020 / Pyroplex Blue/ WB
+    marca: 7
+    tipo: 10
+    parent: 57
+- model: equivalencia.equivalencia
+  pk: 445
+  fields:
+    producto: MOBILGREASE XHP 321 MINE
+    marca: 3
+    tipo: 10
+    parent: 58
+- model: equivalencia.equivalencia
+  pk: 446
+  fields:
+    producto: Ceran WR 2 / Ceran AD Plus/Ceran XM 100
+    marca: 5
+    tipo: 10
+    parent: 58
+- model: equivalencia.equivalencia
+  pk: 447
+  fields:
+    producto: Molub-Alloy 6040/460
+    marca: 7
+    tipo: 10
+    parent: 58
+- model: equivalencia.equivalencia
+  pk: 448
+  fields:
+    producto: Mobilarma 247/
+    marca: 3
+    tipo: 4
+    parent: 59
+- model: equivalencia.equivalencia
+  pk: 449
+  fields:
+    producto: "Heat transfer oil S2 / Thermia Oil B / T\xE9rmica"
+    marca: 2
+    tipo: 4
+    parent: 60
+- model: equivalencia.equivalencia
+  pk: 450
+  fields:
+    producto: Mobiltherm 605
+    marca: 3
+    tipo: 4
+    parent: 60
+- model: equivalencia.equivalencia
+  pk: 451
+  fields:
+    producto: Seriola
+    marca: 4
+    tipo: 4
+    parent: 60
+- model: equivalencia.equivalencia
+  pk: 452
+  fields:
+    producto: Seriola ETA
+    marca: 5
+    tipo: 4
+    parent: 60
+- model: equivalencia.equivalencia
+  pk: 453
+  fields:
+    producto: Lubrax Utile OT
+    marca: 6
+    tipo: 4
+    parent: 60
+- model: equivalencia.equivalencia
+  pk: 454
+  fields:
+    producto: Perfecto T
+    marca: 7
+    tipo: 4
+    parent: 60
+- model: equivalencia.equivalencia
+  pk: 455
+  fields:
+    producto: AMBRA MASTERGOLD HSP 15W-40
+    marca: 8
+    tipo: 4
+    parent: 60
+- model: equivalencia.equivalencia
+  pk: 456
+  fields:
+    producto: TEXATHERM 46 / QUENCHTEX A y MS
+    marca: 10
+    tipo: 4
+    parent: 60
+- model: equivalencia.equivalencia
+  pk: 457
+  fields:
+    producto: Super EX 46HN
+    marca: 15
+    tipo: 4
+    parent: 60
+- model: equivalencia.equivalencia
+  pk: 458
+  fields:
+    producto: Iloquench 32
+    marca: 7
+    tipo: 4
+    parent: 61
+- model: equivalencia.equivalencia
+  pk: 459
+  fields:
+    producto: EP Lubricant HD
+    marca: 14
+    tipo: 4
+    parent: 62
+- model: equivalencia.equivalencia
+  pk: 460
+  fields:
+    producto: Corena S2 P 150/ Valvata Oil J
+    marca: 2
+    tipo: 4
+    parent: 63
+- model: equivalencia.equivalencia
+  pk: 461
+  fields:
+    producto: Mobiltac
+    marca: 3
+    tipo: 4
+    parent: 63
+- model: equivalencia.equivalencia
+  pk: 462
+  fields:
+    producto: Lubrax Utile CIV y CIV GD
+    marca: 6
+    tipo: 4
+    parent: 63
+- model: equivalencia.equivalencia
+  pk: 463
+  fields:
+    producto: Cresta
+    marca: 7
+    tipo: 4
+    parent: 63
+- model: equivalencia.equivalencia
+  pk: 464
+  fields:
+    producto: Omala S1W/Valvata Oil J
+    marca: 2
+    tipo: 4
+    parent: 64
+- model: equivalencia.equivalencia
+  pk: 465
+  fields:
+    producto: 600W Cilinder Oil
+    marca: 3
+    tipo: 4
+    parent: 64
+- model: equivalencia.equivalencia
+  pk: 466
+  fields:
+    producto: Cyl C
+    marca: 4
+    tipo: 4
+    parent: 64
+- model: equivalencia.equivalencia
+  pk: 467
+  fields:
+    producto: Lubrax Utile CIV GD
+    marca: 6
+    tipo: 4
+    parent: 64
+- model: equivalencia.equivalencia
+  pk: 468
+  fields:
+    producto: Cresta VA (400) / Cresta SHS (1000)
+    marca: 7
+    tipo: 4
+    parent: 64
+- model: equivalencia.equivalencia
+  pk: 469
+  fields:
+    producto: Cylinder Oil
+    marca: 10
+    tipo: 4
+    parent: 64
+- model: equivalencia.equivalencia
+  pk: 470
+  fields:
+    producto: Morlina S2BA / S3BA / S2B y S1B
+    marca: 2
+    tipo: 4
+    parent: 65
+- model: equivalencia.equivalencia
+  pk: 471
+  fields:
+    producto: Mobil Cylinder Oils 460
+    marca: 3
+    tipo: 4
+    parent: 65
+- model: equivalencia.equivalencia
+  pk: 472
+  fields:
+    producto: Lubrax Utile DM 460
+    marca: 6
+    tipo: 4
+    parent: 65
+- model: equivalencia.equivalencia
+  pk: 473
+  fields:
+    producto: Forestelf
+    marca: 4
+    tipo: 4
+    parent: 66
+- model: equivalencia.equivalencia
+  pk: 474
+  fields:
+    producto: Talador
+    marca: 5
+    tipo: 4
+    parent: 66
+- model: equivalencia.equivalencia
+  pk: 475
+  fields:
+    producto: Refrigetation Oil S2 FRA 68 (ex Clavus 68)
+    marca: 2
+    tipo: 4
+    parent: 67
+- model: equivalencia.equivalencia
+  pk: 476
+  fields:
+    producto: Gargoyle Arctic SHC NH 68
+    marca: 3
+    tipo: 4
+    parent: 67
+- model: equivalencia.equivalencia
+  pk: 477
+  fields:
+    producto: Lunaria LH
+    marca: 4
+    tipo: 4
+    parent: 67
+- model: equivalencia.equivalencia
+  pk: 478
+  fields:
+    producto: Lubrax Compsor RF
+    marca: 6
+    tipo: 4
+    parent: 67
+- model: equivalencia.equivalencia
+  pk: 479
+  fields:
+    producto: Capella P
+    marca: 10
+    tipo: 4
+    parent: 67
+- model: equivalencia.equivalencia
+  pk: 480
+  fields:
+    producto: "Kl\xFCber Summit RHT 68"
+    marca: 11
+    tipo: 4
+    parent: 67
+- model: equivalencia.equivalencia
+  pk: 481
+  fields:
+    producto: Donax TC / Spirax S4 CX
+    marca: 2
+    tipo: 4
+    parent: 68
+- model: equivalencia.equivalencia
+  pk: 482
+  fields:
+    producto: Mobiltrans HD/DELVAC HYDRAULIC 10W
+    marca: 3
+    tipo: 4
+    parent: 68
+- model: equivalencia.equivalencia
+  pk: 483
+  fields:
+    producto: Tranself KTR4
+    marca: 4
+    tipo: 4
+    parent: 68
+- model: equivalencia.equivalencia
+  pk: 484
+  fields:
+    producto: Transmission AC
+    marca: 5
+    tipo: 4
+    parent: 68
+- model: equivalencia.equivalencia
+  pk: 485
+  fields:
+    producto: LUBRAX GRANS TAC-4
+    marca: 6
+    tipo: 4
+    parent: 68
+- model: equivalencia.equivalencia
+  pk: 486
+  fields:
+    producto: Tection Monograde
+    marca: 7
+    tipo: 4
+    parent: 68
+- model: equivalencia.equivalencia
+  pk: 487
+  fields:
+    producto: Urania / AMBRA HYDROPOWER / AMBRA MASTERTAN
+    marca: 8
+    tipo: 4
+    parent: 68
+- model: equivalencia.equivalencia
+  pk: 488
+  fields:
+    producto: Transmission & Drive train / Textran HD
+    marca: 10
+    tipo: 4
+    parent: 68
+- model: equivalencia.equivalencia
+  pk: 489
+  fields:
+    producto: KOPR-KOTE
+    marca: 14
+    tipo: 4
+    parent: 68
+- model: equivalencia.equivalencia
+  pk: 490
+  fields:
+    producto: Sugartex
+    marca: 10
+    tipo: 4
+    parent: 69
+- model: equivalencia.equivalencia
+  pk: 491
+  fields:
+    producto: Tellus S2M / Hydraulic S1M
+    marca: 2
+    tipo: 4
+    parent: 70
+- model: equivalencia.equivalencia
+  pk: 492
+  fields:
+    producto: NUTO H / Hydraulic AW / DTE Serie 20/DTE 150
+    marca: 3
+    tipo: 4
+    parent: 70
+- model: equivalencia.equivalencia
+  pk: 493
+  fields:
+    producto: Elfolna / Cortis
+    marca: 4
+    tipo: 4
+    parent: 70
+- model: equivalencia.equivalencia
+  pk: 494
+  fields:
+    producto: Azolla ZS / DROSERA MS
+    marca: 5
+    tipo: 4
+    parent: 70
+- model: equivalencia.equivalencia
+  pk: 495
+  fields:
+    producto: Lubrax Hydra XP Lubrax Ind HR EP
+    marca: 6
+    tipo: 4
+    parent: 70
+- model: equivalencia.equivalencia
+  pk: 496
+  fields:
+    producto: Hyspin AWS
+    marca: 7
+    tipo: 4
+    parent: 70
+- model: equivalencia.equivalencia
+  pk: 497
+  fields:
+    producto: AMBRA HYDROSYSTEM
+    marca: 8
+    tipo: 4
+    parent: 70
+- model: equivalencia.equivalencia
+  pk: 498
+  fields:
+    producto: Hidraulic Oil AW
+    marca: 9
+    tipo: 4
+    parent: 70
+- model: equivalencia.equivalencia
+  pk: 499
+  fields:
+    producto: Rando HD
+    marca: 10
+    tipo: 4
+    parent: 70
+- model: equivalencia.equivalencia
+  pk: 500
+  fields:
+    producto: OSO
+    marca: 12
+    tipo: 4
+    parent: 70
+- model: equivalencia.equivalencia
+  pk: 501
+  fields:
+    producto: Tellus S3M
+    marca: 2
+    tipo: 4
+    parent: 71
+- model: equivalencia.equivalencia
+  pk: 502
+  fields:
+    producto: Tellus S2V / S3V
+    marca: 2
+    tipo: 4
+    parent: 72
+- model: equivalencia.equivalencia
+  pk: 503
+  fields:
+    producto: DTE serie 10M / DTE 10 Excel
+    marca: 3
+    tipo: 4
+    parent: 72
+- model: equivalencia.equivalencia
+  pk: 504
+  fields:
+    producto: Poclain / Visga
+    marca: 4
+    tipo: 4
+    parent: 72
+- model: equivalencia.equivalencia
+  pk: 505
+  fields:
+    producto: Equivis ZS
+    marca: 5
+    tipo: 4
+    parent: 72
+- model: equivalencia.equivalencia
+  pk: 506
+  fields:
+    producto: Lubrax Hydra HV
+    marca: 6
+    tipo: 4
+    parent: 72
+- model: equivalencia.equivalencia
+  pk: 507
+  fields:
+    producto: Hyspin AWH-M
+    marca: 7
+    tipo: 4
+    parent: 72
+- model: equivalencia.equivalencia
+  pk: 508
+  fields:
+    producto: AMBRA HYDROSYSTEM 68 HV
+    marca: 8
+    tipo: 4
+    parent: 72
+- model: equivalencia.equivalencia
+  pk: 509
+  fields:
+    producto: Rando HDZ
+    marca: 10
+    tipo: 4
+    parent: 72
+- model: equivalencia.equivalencia
+  pk: 510
+  fields:
+    producto: Tonna S2M / Tonna S3M
+    marca: 2
+    tipo: 4
+    parent: 73
+- model: equivalencia.equivalencia
+  pk: 511
+  fields:
+    producto: Vactra
+    marca: 3
+    tipo: 4
+    parent: 73
+- model: equivalencia.equivalencia
+  pk: 512
+  fields:
+    producto: Drossera MS
+    marca: 4
+    tipo: 4
+    parent: 73
+- model: equivalencia.equivalencia
+  pk: 513
+  fields:
+    producto: Lubrax Utile FP
+    marca: 6
+    tipo: 4
+    parent: 73
+- model: equivalencia.equivalencia
+  pk: 514
+  fields:
+    producto: Magna (SW, SW D, GLIDE D)
+    marca: 7
+    tipo: 4
+    parent: 73
+- model: equivalencia.equivalencia
+  pk: 515
+  fields:
+    producto: Way Lubricant
+    marca: 10
+    tipo: 4
+    parent: 73
+- model: equivalencia.equivalencia
+  pk: 516
+  fields:
+    producto: Renolin CGLP
+    marca: 13
+    tipo: 4
+    parent: 73
+- model: equivalencia.equivalencia
+  pk: 517
+  fields:
+    producto: Air Tool Oil S2 A / TORCULA
+    marca: 2
+    tipo: 4
+    parent: 74
+- model: equivalencia.equivalencia
+  pk: 518
+  fields:
+    producto: Almo Serie 500
+    marca: 3
+    tipo: 4
+    parent: 74
+- model: equivalencia.equivalencia
+  pk: 519
+  fields:
+    producto: Pneuma
+    marca: 4
+    tipo: 4
+    parent: 74
+- model: equivalencia.equivalencia
+  pk: 520
+  fields:
+    producto: Lubrax Utile PR 100
+    marca: 6
+    tipo: 4
+    parent: 74
+- model: equivalencia.equivalencia
+  pk: 521
+  fields:
+    producto: Hydrosistem 68
+    marca: 8
+    tipo: 4
+    parent: 74
+- model: equivalencia.equivalencia
+  pk: 522
+  fields:
+    producto: Aries
+    marca: 9
+    tipo: 4
+    parent: 74
+- model: equivalencia.equivalencia
+  pk: 523
+  fields:
+    producto: ROCK DRILL
+    marca: 10
+    tipo: 4
+    parent: 74
+- model: equivalencia.equivalencia
+  pk: 524
+  fields:
+    producto: Sintol R 04
+    marca: 14
+    tipo: 4
+    parent: 74
+- model: equivalencia.equivalencia
+  pk: 525
+  fields:
+    producto: Morlina S2 BL
+    marca: 2
+    tipo: 4
+    parent: 75
+- model: equivalencia.equivalencia
+  pk: 526
+  fields:
+    producto: Proceso 10
+    marca: 4
+    tipo: 4
+    parent: 75
+- model: equivalencia.equivalencia
+  pk: 527
+  fields:
+    producto: Eskimo 68 AR
+    marca: 14
+    tipo: 4
+    parent: 75
+- model: equivalencia.equivalencia
+  pk: 528
+  fields:
+    producto: Corena S2 P (100 y 150)
+    marca: 2
+    tipo: 4
+    parent: 76
+- model: equivalencia.equivalencia
+  pk: 529
+  fields:
+    producto: Rarus serie 400 / 800/DTE Heavy
+    marca: 3
+    tipo: 4
+    parent: 76
+- model: equivalencia.equivalencia
+  pk: 530
+  fields:
+    producto: Dacnis P 100 /
+    marca: 4
+    tipo: 4
+    parent: 76
+- model: equivalencia.equivalencia
+  pk: 531
+  fields:
+    producto: BARELF CH 100
+    marca: 5
+    tipo: 4
+    parent: 76
+- model: equivalencia.equivalencia
+  pk: 532
+  fields:
+    producto: Lubrax Compsor AC / Lubrax Compsor GNC
+    marca: 6
+    tipo: 4
+    parent: 76
+- model: equivalencia.equivalencia
+  pk: 533
+  fields:
+    producto: Aircol PD
+    marca: 7
+    tipo: 4
+    parent: 76
+- model: equivalencia.equivalencia
+  pk: 534
+  fields:
+    producto: CHEVRON HDAX NG SCREW COMPRESSOR
+    marca: 10
+    tipo: 4
+    parent: 76
+- model: equivalencia.equivalencia
+  pk: 535
+  fields:
+    producto: "Kl\xFCber Summit TM 15"
+    marca: 11
+    tipo: 4
+    parent: 76
+- model: equivalencia.equivalencia
+  pk: 536
+  fields:
+    producto: Dicrea RA
+    marca: 12
+    tipo: 4
+    parent: 76
+- model: equivalencia.equivalencia
+  pk: 537
+  fields:
+    producto: Corena S4 R (ISO 32)
+    marca: 2
+    tipo: 4
+    parent: 77
+- model: equivalencia.equivalencia
+  pk: 538
+  fields:
+    producto: Rarus SHC 1024 (ISO 32)
+    marca: 3
+    tipo: 4
+    parent: 77
+- model: equivalencia.equivalencia
+  pk: 539
+  fields:
+    producto: Aircol SW 32
+    marca: 7
+    tipo: 4
+    parent: 77
+- model: equivalencia.equivalencia
+  pk: 540
+  fields:
+    producto: Cardium Compound D / Compound LN
+    marca: 2
+    tipo: 4
+    parent: 78
+- model: equivalencia.equivalencia
+  pk: 541
+  fields:
+    producto: Lubrax Gear MO
+    marca: 6
+    tipo: 4
+    parent: 78
+- model: equivalencia.equivalencia
+  pk: 542
+  fields:
+    producto: CHEVRON MILL LUBRICANT
+    marca: 10
+    tipo: 4
+    parent: 78
+- model: equivalencia.equivalencia
+  pk: 543
+  fields:
+    producto: Mysella S3 N
+    marca: 2
+    tipo: 4
+    parent: 79
+- model: equivalencia.equivalencia
+  pk: 544
+  fields:
+    producto: Duratec L
+    marca: 7
+    tipo: 4
+    parent: 79
+- model: equivalencia.equivalencia
+  pk: 545
+  fields:
+    producto: Compresor Oil 68
+    marca: 14
+    tipo: 4
+    parent: 79
+- model: equivalencia.equivalencia
+  pk: 546
+  fields:
+    producto: Clavus G
+    marca: 2
+    tipo: 4
+    parent: 80
+- model: equivalencia.equivalencia
+  pk: 547
+  fields:
+    producto: Gargoyle Arctic Oil 300
+    marca: 3
+    tipo: 4
+    parent: 80
+- model: equivalencia.equivalencia
+  pk: 548
+  fields:
+    producto: Lunaria
+    marca: 4
+    tipo: 4
+    parent: 80
+- model: equivalencia.equivalencia
+  pk: 549
+  fields:
+    producto: Friga 2/ lunaria fr
+    marca: 5
+    tipo: 4
+    parent: 80
+- model: equivalencia.equivalencia
+  pk: 550
+  fields:
+    producto: Lubrax Industrial CP RF
+    marca: 6
+    tipo: 4
+    parent: 80
+- model: equivalencia.equivalencia
+  pk: 551
+  fields:
+    producto: Capella WF
+    marca: 10
+    tipo: 4
+    parent: 80
+- model: equivalencia.equivalencia
+  pk: 552
+  fields:
+    producto: Velocite 10
+    marca: 3
+    tipo: 4
+    parent: 81
+- model: equivalencia.equivalencia
+  pk: 553
+  fields:
+    producto: Metelia 22
+    marca: 4
+    tipo: 4
+    parent: 81
+- model: equivalencia.equivalencia
+  pk: 554
+  fields:
+    producto: Diala S2 y S3
+    marca: 2
+    tipo: 4
+    parent: 82
+- model: equivalencia.equivalencia
+  pk: 555
+  fields:
+    producto: Lubrax AV 60 IN/AV58
+    marca: 6
+    tipo: 4
+    parent: 82
+- model: equivalencia.equivalencia
+  pk: 556
+  fields:
+    producto: Transformer Oil
+    marca: 7
+    tipo: 4
+    parent: 82
+- model: equivalencia.equivalencia
+  pk: 557
+  fields:
+    producto: TRANSFORMER OIL INHIBITED
+    marca: 10
+    tipo: 4
+    parent: 82
+- model: equivalencia.equivalencia
+  pk: 558
+  fields:
+    producto: Omala S2 G
+    marca: 2
+    tipo: 4
+    parent: 83
+- model: equivalencia.equivalencia
+  pk: 559
+  fields:
+    producto: Spartan EP / Mobilgear 600 XP/ SHC600
+    marca: 3
+    tipo: 4
+    parent: 83
+- model: equivalencia.equivalencia
+  pk: 560
+  fields:
+    producto: Reductelf SP / Cortis ZS
+    marca: 4
+    tipo: 4
+    parent: 83
+- model: equivalencia.equivalencia
+  pk: 561
+  fields:
+    producto: Carter EP / EPONA Z
+    marca: 5
+    tipo: 4
+    parent: 83
+- model: equivalencia.equivalencia
+  pk: 562
+  fields:
+    producto: Lubrax Gear
+    marca: 6
+    tipo: 4
+    parent: 83
+- model: equivalencia.equivalencia
+  pk: 563
+  fields:
+    producto: Alpha SP
+    marca: 7
+    tipo: 4
+    parent: 83
+- model: equivalencia.equivalencia
+  pk: 564
+  fields:
+    producto: Meropa / CHEVRON ULTRA GEAR LUBRICANTS
+    marca: 10
+    tipo: 4
+    parent: 83
+- model: equivalencia.equivalencia
+  pk: 565
+  fields:
+    producto: Kluberoil GEM 1
+    marca: 11
+    tipo: 4
+    parent: 83
+- model: equivalencia.equivalencia
+  pk: 566
+  fields:
+    producto: Blasia I
+    marca: 12
+    tipo: 4
+    parent: 83
+- model: equivalencia.equivalencia
+  pk: 567
+  fields:
+    producto: Turbo CC
+    marca: 2
+    tipo: 4
+    parent: 84
+- model: equivalencia.equivalencia
+  pk: 568
+  fields:
+    producto: Teresstic EP
+    marca: 3
+    tipo: 4
+    parent: 84
+- model: equivalencia.equivalencia
+  pk: 569
+  fields:
+    producto: Preslia GT
+    marca: 5
+    tipo: 4
+    parent: 84
+- model: equivalencia.equivalencia
+  pk: 570
+  fields:
+    producto: Lubrax Turbina EP
+    marca: 6
+    tipo: 4
+    parent: 84
+- model: equivalencia.equivalencia
+  pk: 571
+  fields:
+    producto: Perfecto XEP
+    marca: 7
+    tipo: 4
+    parent: 84
+- model: equivalencia.equivalencia
+  pk: 572
+  fields:
+    producto: REGAL EP
+    marca: 10
+    tipo: 4
+    parent: 84
+- model: equivalencia.equivalencia
+  pk: 573
+  fields:
+    producto: Turbo T Oil
+    marca: 2
+    tipo: 4
+    parent: 85
+- model: equivalencia.equivalencia
+  pk: 574
+  fields:
+    producto: Teresstic Series / DTE 700 / DTE OIL HEAVY LIGHT / MEDIUM
+    marca: 3
+    tipo: 4
+    parent: 85
+- model: equivalencia.equivalencia
+  pk: 575
+  fields:
+    producto: Preslia
+    marca: 5
+    tipo: 4
+    parent: 85
+- model: equivalencia.equivalencia
+  pk: 576
+  fields:
+    producto: Lubrax Turbina / Plus
+    marca: 6
+    tipo: 4
+    parent: 85
+- model: equivalencia.equivalencia
+  pk: 577
+  fields:
+    producto: Perfecto T
+    marca: 7
+    tipo: 4
+    parent: 85
+- model: equivalencia.equivalencia
+  pk: 578
+  fields:
+    producto: REGAL R&O 68
+    marca: 10
+    tipo: 4
+    parent: 85
+- model: equivalencia.equivalencia
+  pk: 579
+  fields:
+    producto: Mysella S3 Z y S2 Z
+    marca: 2
+    tipo: 4
+    parent: 86
+- model: equivalencia.equivalencia
+  pk: 580
+  fields:
+    producto: Pegasus 701
+    marca: 3
+    tipo: 4
+    parent: 86
+- model: equivalencia.equivalencia
+  pk: 581
+  fields:
+    producto: Nateria V
+    marca: 4
+    tipo: 4
+    parent: 86
+- model: equivalencia.equivalencia
+  pk: 582
+  fields:
+    producto: Lubrax GAS AX
+    marca: 6
+    tipo: 4
+    parent: 86
+- model: equivalencia.equivalencia
+  pk: 583
+  fields:
+    producto: Geotex HA
+    marca: 10
+    tipo: 4
+    parent: 86
+- model: equivalencia.equivalencia
+  pk: 584
+  fields:
+    producto: Mysella S5 N y S5 S
+    marca: 2
+    tipo: 4
+    parent: 87
+- model: equivalencia.equivalencia
+  pk: 585
+  fields:
+    producto: Pegasus 1005
+    marca: 3
+    tipo: 4
+    parent: 87
+- model: equivalencia.equivalencia
+  pk: 586
+  fields:
+    producto: Lubrax GAS 40 LA Magnus
+    marca: 6
+    tipo: 4
+    parent: 87
+- model: equivalencia.equivalencia
+  pk: 587
+  fields:
+    producto: Duratec HPL
+    marca: 7
+    tipo: 4
+    parent: 87
+- model: equivalencia.equivalencia
+  pk: 588
+  fields:
+    producto: Emulsil NT
+    marca: 14
+    tipo: 4
+    parent: 87
+- model: equivalencia.equivalencia
+  pk: 589
+  fields:
+    producto: Mysella S3 N 40
+    marca: 2
+    tipo: 4
+    parent: 88
+- model: equivalencia.equivalencia
+  pk: 590
+  fields:
+    producto: Pegasus 505 / 805
+    marca: 3
+    tipo: 4
+    parent: 88
+- model: equivalencia.equivalencia
+  pk: 591
+  fields:
+    producto: Nateria P / A
+    marca: 4
+    tipo: 4
+    parent: 88
+- model: equivalencia.equivalencia
+  pk: 592
+  fields:
+    producto: Lubrax GAS LA / LA Premium / LA Magnus
+    marca: 6
+    tipo: 4
+    parent: 88
+- model: equivalencia.equivalencia
+  pk: 593
+  fields:
+    producto: Geotex LA
+    marca: 10
+    tipo: 4
+    parent: 88
+- model: equivalencia.equivalencia
+  pk: 594
+  fields:
+    producto: Mysella S3 S
+    marca: 2
+    tipo: 4
+    parent: 89
+- model: equivalencia.equivalencia
+  pk: 595
+  fields:
+    producto: Pegasus 610
+    marca: 3
+    tipo: 4
+    parent: 89
+- model: equivalencia.equivalencia
+  pk: 596
+  fields:
+    producto: Lubrax GAS MA
+    marca: 6
+    tipo: 4
+    parent: 89
+- model: equivalencia.equivalencia
+  pk: 597
+  fields:
+    producto: Duratec L / Duratec M
+    marca: 7
+    tipo: 4
+    parent: 89
+- model: equivalencia.equivalencia
+  pk: 598
+  fields:
+    producto: Geotex LF
+    marca: 10
+    tipo: 4
+    parent: 89
+- model: equivalencia.equivalencia
+  pk: 599
+  fields:
+    producto: Geum CA
+    marca: 12
+    tipo: 4
+    parent: 89
+- model: equivalencia.equivalencia
+  pk: 600
+  fields:
+    producto: Dromus BL
+    marca: 2
+    tipo: 5
+    parent: 90
+- model: equivalencia.equivalencia
+  pk: 601
+  fields:
+    producto: Lactuca MS 5000
+    marca: 4
+    tipo: 5
+    parent: 90
+- model: equivalencia.equivalencia
+  pk: 602
+  fields:
+    producto: Lubrax Utile PE
+    marca: 6
+    tipo: 5
+    parent: 90
+- model: equivalencia.equivalencia
+  pk: 603
+  fields:
+    producto: Cooledge BI
+    marca: 7
+    tipo: 5
+    parent: 90
+- model: equivalencia.equivalencia
+  pk: 604
+  fields:
+    producto: Soluble Oil D
+    marca: 10
+    tipo: 5
+    parent: 90
+- model: equivalencia.equivalencia
+  pk: 605
+  fields:
+    producto: Ulex 84
+    marca: 12
+    tipo: 5
+    parent: 90
+- model: equivalencia.equivalencia
+  pk: 606
+  fields:
+    producto: Adrana D 208
+    marca: 2
+    tipo: 5
+    parent: 91
+- model: equivalencia.equivalencia
+  pk: 607
+  fields:
+    producto: Spirit MS
+    marca: 4
+    tipo: 5
+    parent: 91
+- model: equivalencia.equivalencia
+  pk: 608
+  fields:
+    producto: Alusol XT / Clearedge 6515 / Hysol 6545 / Superedge 6552
+    marca: 7
+    tipo: 5
+    parent: 91
+- model: equivalencia.equivalencia
+  pk: 609
+  fields:
+    producto: CUT 44 A / 16
+    marca: 14
+    tipo: 5
+    parent: 91
+- model: equivalencia.equivalencia
+  pk: 610
+  fields:
+    producto: Honilo 480
+    marca: 7
+    tipo: 5
+    parent: 92
+- model: equivalencia.equivalencia
+  pk: 611
+  fields:
+    producto: Macron 2830
+    marca: 2
+    tipo: 5
+    parent: 93
+- model: equivalencia.equivalencia
+  pk: 612
+  fields:
+    producto: Valona MS 3026
+    marca: 4
+    tipo: 5
+    parent: 93
+- model: equivalencia.equivalencia
+  pk: 613
+  fields:
+    producto: Ilobroach 11
+    marca: 7
+    tipo: 5
+    parent: 93
+- model: equivalencia.equivalencia
+  pk: 614
+  fields:
+    producto: Macron B 32 / Macron 2830
+    marca: 2
+    tipo: 5
+    parent: 94
+- model: equivalencia.equivalencia
+  pk: 615
+  fields:
+    producto: CUT BP / CUT 44 A / 35
+    marca: 14
+    tipo: 5
+    parent: 94
+- model: equivalencia.equivalencia
+  pk: 616
+  fields:
+    producto: Garia C
+    marca: 2
+    tipo: 5
+    parent: 95
+- model: equivalencia.equivalencia
+  pk: 617
+  fields:
+    producto: Valona ST 7020
+    marca: 4
+    tipo: 5
+    parent: 95
+- model: equivalencia.equivalencia
+  pk: 618
+  fields:
+    producto: Ilocut 334
+    marca: 7
+    tipo: 5
+    parent: 95
+- model: equivalencia.equivalencia
+  pk: 619
+  fields:
+    producto: Garia 601 M-22
+    marca: 2
+    tipo: 5
+    parent: 96
+- model: equivalencia.equivalencia
+  pk: 620
+  fields:
+    producto: Valona ST 7037
+    marca: 4
+    tipo: 5
+    parent: 96
+- model: equivalencia.equivalencia
+  pk: 621
+  fields:
+    producto: Sultex D
+    marca: 10
+    tipo: 5
+    parent: 96
+- model: equivalencia.equivalencia
+  pk: 622
+  fields:
+    producto: CUT C3
+    marca: 14
+    tipo: 5
+    parent: 96
+- model: equivalencia.equivalencia
+  pk: 623
+  fields:
+    producto: Advance VSX-2/Advance Ultra 2 /Advance SX 2
+    marca: 2
+    tipo: 6
+    parent: 97
+- model: equivalencia.equivalencia
+  pk: 624
+  fields:
+    producto: Super 2T
+    marca: 3
+    tipo: 6
+    parent: 97
+- model: equivalencia.equivalencia
+  pk: 625
+  fields:
+    producto: Agro 2T / Moto 2 DX ratio
+    marca: 4
+    tipo: 6
+    parent: 97
+- model: equivalencia.equivalencia
+  pk: 626
+  fields:
+    producto: Sport 2T
+    marca: 5
+    tipo: 6
+    parent: 97
+- model: equivalencia.equivalencia
+  pk: 627
+  fields:
+    producto: Lubrax Essencial 2T
+    marca: 6
+    tipo: 6
+    parent: 97
+- model: equivalencia.equivalencia
+  pk: 628
+  fields:
+    producto: ACTEVO X-TRA 2T
+    marca: 7
+    tipo: 6
+    parent: 97
+- model: equivalencia.equivalencia
+  pk: 629
+  fields:
+    producto: Power drive 2T / ARBOR POWER MIX 2T
+    marca: 8
+    tipo: 6
+    parent: 97
+- model: equivalencia.equivalencia
+  pk: 630
+  fields:
+    producto: HAVOLINE SUPER MOTOR CYCLE OIL 2T / HAVOLINE MOTOR CYCLE 2T
+    marca: 10
+    tipo: 6
+    parent: 97
+- model: equivalencia.equivalencia
+  pk: 631
+  fields:
+    producto: City 2T
+    marca: 12
+    tipo: 6
+    parent: 97
+- model: equivalencia.equivalencia
+  pk: 632
+  fields:
+    producto: Moto 2T
+    marca: 16
+    tipo: 6
+    parent: 97
+- model: equivalencia.equivalencia
+  pk: 633
+  fields:
+    producto: Castrol MTX
+    marca: 7
+    tipo: 6
+    parent: 98
+- model: equivalencia.equivalencia
+  pk: 634
+  fields:
+    producto: Advance AX7 10W-40/Advance AX5
+    marca: 2
+    tipo: 6
+    parent: 99
+- model: equivalencia.equivalencia
+  pk: 635
+  fields:
+    producto: Racing 2T
+    marca: 5
+    tipo: 6
+    parent: 99
+- model: equivalencia.equivalencia
+  pk: 636
+  fields:
+    producto: ACTEVO X-TRA 4T 10W-40
+    marca: 7
+    tipo: 6
+    parent: 99
+- model: equivalencia.equivalencia
+  pk: 637
+  fields:
+    producto: SYNTIUM MOTO 4SX
+    marca: 8
+    tipo: 6
+    parent: 99
+- model: equivalencia.equivalencia
+  pk: 638
+  fields:
+    producto: Repsol Moto 4T 10W40
+    marca: 16
+    tipo: 6
+    parent: 99
+- model: equivalencia.equivalencia
+  pk: 639
+  fields:
+    producto: Advance 4T AX7 15W-50
+    marca: 2
+    tipo: 6
+    parent: 100
+- model: equivalencia.equivalencia
+  pk: 640
+  fields:
+    producto: POWER RS RACING 4T 10W-50
+    marca: 7
+    tipo: 6
+    parent: 100
+- model: equivalencia.equivalencia
+  pk: 641
+  fields:
+    producto: SELENIA PRO-ACTION 4T / SYNTIUM MOTO 4SP
+    marca: 8
+    tipo: 6
+    parent: 100
+- model: equivalencia.equivalencia
+  pk: 642
+  fields:
+    producto: Racing 4T
+    marca: 12
+    tipo: 6
+    parent: 100
+- model: equivalencia.equivalencia
+  pk: 643
+  fields:
+    producto: Advance AX3/ Advance AX5
+    marca: 2
+    tipo: 6
+    parent: 101
+- model: equivalencia.equivalencia
+  pk: 644
+  fields:
+    producto: Lubrax Essencial 4T
+    marca: 6
+    tipo: 6
+    parent: 101
+- model: equivalencia.equivalencia
+  pk: 645
+  fields:
+    producto: ACTEVO 4T 20W-50
+    marca: 7
+    tipo: 6
+    parent: 101
+- model: equivalencia.equivalencia
+  pk: 646
+  fields:
+    producto: Expert 4T
+    marca: 8
+    tipo: 6
+    parent: 101
+- model: equivalencia.equivalencia
+  pk: 647
+  fields:
+    producto: Repsol Moto 20W50
+    marca: 16
+    tipo: 6
+    parent: 101
+- model: equivalencia.equivalencia
+  pk: 648
+  fields:
+    producto: Advance Chain Ultra
+    marca: 2
+    tipo: 6
+    parent: 102
+- model: equivalencia.equivalencia
+  pk: 649
+  fields:
+    producto: Castrol CHAIN SPRAY O-R
+    marca: 7
+    tipo: 6
+    parent: 102
+- model: equivalencia.equivalencia
+  pk: 650
+  fields:
+    producto: Repsol Moto Cadenas
+    marca: 16
+    tipo: 6
+    parent: 102
+- model: equivalencia.equivalencia
+  pk: 651
+  fields:
+    producto: Nautilus Outboard
+    marca: 2
+    tipo: 7
+    parent: 104
+- model: equivalencia.equivalencia
+  pk: 652
+  fields:
+    producto: 2T Outboard
+    marca: 3
+    tipo: 7
+    parent: 104
+- model: equivalencia.equivalencia
+  pk: 653
+  fields:
+    producto: Power Nautic
+    marca: 4
+    tipo: 7
+    parent: 104
+- model: equivalencia.equivalencia
+  pk: 654
+  fields:
+    producto: "Lubrax N\xE1utica Gasolina 2T"
+    marca: 6
+    tipo: 7
+    parent: 104
+- model: equivalencia.equivalencia
+  pk: 655
+  fields:
+    producto: Outboard 2T
+    marca: 7
+    tipo: 7
+    parent: 104
+- model: equivalencia.equivalencia
+  pk: 656
+  fields:
+    producto: Nautimar
+    marca: 8
+    tipo: 7
+    parent: 104
+- model: equivalencia.equivalencia
+  pk: 657
+  fields:
+    producto: HAVOLINE 2 CYCLE TCW 3
+    marca: 10
+    tipo: 7
+    parent: 104
+- model: equivalencia.equivalencia
+  pk: 658
+  fields:
+    producto: Marinemix SM
+    marca: 12
+    tipo: 7
+    parent: 104
+- model: equivalencia.equivalencia
+  pk: 659
+  fields:
+    producto: '[Biolube 2T]'
+    marca: 7
+    tipo: 7
+    parent: 105
+- model: equivalencia.equivalencia
+  pk: 660
+  fields:
+    producto: Melina S
+    marca: 2
+    tipo: 8
+    parent: 107
+- model: equivalencia.equivalencia
+  pk: 661
+  fields:
+    producto: Marbrax CAD-308
+    marca: 6
+    tipo: 8
+    parent: 107
+- model: equivalencia.equivalencia
+  pk: 662
+  fields:
+    producto: Argina T / X/ S
+    marca: 2
+    tipo: 8
+    parent: 108
+- model: equivalencia.equivalencia
+  pk: 663
+  fields:
+    producto: Mobilgard M330/M430/M440
+    marca: 3
+    tipo: 8
+    parent: 108
+- model: equivalencia.equivalencia
+  pk: 664
+  fields:
+    producto: Marbrax CCD
+    marca: 6
+    tipo: 8
+    parent: 108
+- model: equivalencia.equivalencia
+  pk: 665
+  fields:
+    producto: TLX Plus
+    marca: 7
+    tipo: 8
+    parent: 108
+- model: equivalencia.equivalencia
+  pk: 666
+  fields:
+    producto: Gadinia ( SAE 30 / 40)
+    marca: 2
+    tipo: 8
+    parent: 109
+- model: equivalencia.equivalencia
+  pk: 667
+  fields:
+    producto: HLX
+    marca: 7
+    tipo: 8
+    parent: 109
+- model: equivalencia.equivalencia
+  pk: 668
+  fields:
+    producto: Sirius X
+    marca: 2
+    tipo: 8
+    parent: 110
+- model: equivalencia.equivalencia
+  pk: 669
+  fields:
+    producto: MOBILGARD 312 /412/450NC
+    marca: 3
+    tipo: 8
+    parent: 110
+- model: equivalencia.equivalencia
+  pk: 670
+  fields:
+    producto: Marbrax CCD
+    marca: 6
+    tipo: 8
+    parent: 110
+- model: equivalencia.equivalencia
+  pk: 671
+  fields:
+    producto: MHP Range
+    marca: 7
+    tipo: 8
+    parent: 110
+- model: equivalencia.equivalencia
+  pk: 672
+  fields:
+    producto: Delo1000 Marine
+    marca: 9
+    tipo: 8
+    parent: 110
+- model: equivalencia.equivalencia
+  pk: 673
+  fields:
+    producto: Taro XD
+    marca: 10
+    tipo: 8
+    parent: 110
+- model: equivalencia.equivalencia
+  pk: 674
+  fields:
+    producto: Alexia SAE 50
+    marca: 2
+    tipo: 8
+    parent: 111
+- model: equivalencia.equivalencia
+  pk: 675
+  fields:
+    producto: Marbrax CID
+    marca: 6
+    tipo: 8
+    parent: 111
+- model: equivalencia.equivalencia
+  pk: 676
+  fields:
+    producto: CYLTECH 40 SX
+    marca: 7
+    tipo: 8
+    parent: 111
+- model: equivalencia.equivalencia
+  pk: 677
+  fields:
+    producto: TARO SPECIAL HT LS
+    marca: 10
+    tipo: 8
+    parent: 111
+- model: equivalencia.equivalencia
+  pk: 678
+  fields:
+    producto: Cyltech 70
+    marca: 7
+    tipo: 8
+    parent: 112
+- model: equivalencia.equivalencia
+  pk: 679
+  fields:
+    producto: TARO SPECIAL HT 100
+    marca: 9
+    tipo: 8
+    parent: 113
+- model: equivalencia.equivalencia
+  pk: 680
+  fields:
+    producto: TARO SPECIAL HT 100
+    marca: 10
+    tipo: 8
+    parent: 113
+- model: equivalencia.equivalencia
+  pk: 681
+  fields:
+    producto: Alexia S6
+    marca: 2
+    tipo: 8
+    parent: 114
+- model: equivalencia.equivalencia
+  pk: 682
+  fields:
+    producto: Mobilgard 5100
+    marca: 3
+    tipo: 8
+    parent: 114
+- model: equivalencia.equivalencia
+  pk: 683
+  fields:
+    producto: Cyltech 80 AW
+    marca: 7
+    tipo: 8
+    parent: 114
+- model: equivalencia.equivalencia
+  pk: 684
+  fields:
+    producto: Mobil Heavy Duty
+    marca: 3
+    tipo: 9
+    parent: 115
+- model: equivalencia.equivalencia
+  pk: 685
+  fields:
+    producto: Radicool NF Premix (100%)
+    marca: 7
+    tipo: 9
+    parent: 115
+- model: equivalencia.equivalencia
+  pk: 686
+  fields:
+    producto: Shellzone / Anticongelante
+    marca: 2
+    tipo: 9
+    parent: 116
+- model: equivalencia.equivalencia
+  pk: 687
+  fields:
+    producto: Mobil Heavy Duty
+    marca: 3
+    tipo: 9
+    parent: 116
+- model: equivalencia.equivalencia
+  pk: 688
+  fields:
+    producto: Glacelf
+    marca: 4
+    tipo: 9
+    parent: 116
+- model: equivalencia.equivalencia
+  pk: 689
+  fields:
+    producto: Antigel
+    marca: 5
+    tipo: 9
+    parent: 116
+- model: equivalencia.equivalencia
+  pk: 690
+  fields:
+    producto: "Lubrax L\xEDquido Refrigerante"
+    marca: 6
+    tipo: 9
+    parent: 116
+- model: equivalencia.equivalencia
+  pk: 691
+  fields:
+    producto: Radicool NF
+    marca: 7
+    tipo: 9
+    parent: 116
+- model: equivalencia.equivalencia
+  pk: 692
+  fields:
+    producto: Paraflu / AMBRA AGRIFLU / COOLANT 11
+    marca: 8
+    tipo: 9
+    parent: 116
+- model: equivalencia.equivalencia
+  pk: 693
+  fields:
+    producto: Permanent Fluid
+    marca: 12
+    tipo: 9
+    parent: 116
+- model: equivalencia.equivalencia
+  pk: 694
+  fields:
+    producto: Rotella ELC / HD Ultra ELC N
+    marca: 2
+    tipo: 9
+    parent: 117
+- model: equivalencia.equivalencia
+  pk: 695
+  fields:
+    producto: Mobil Delvac Extended Life Coolant/Antifreeze
+    marca: 3
+    tipo: 9
+    parent: 117
+- model: equivalencia.equivalencia
+  pk: 696
+  fields:
+    producto: "COOLELF AUTO SUPRA -37\xBAC"
+    marca: 4
+    tipo: 9
+    parent: 117
+- model: equivalencia.equivalencia
+  pk: 697
+  fields:
+    producto: "COOLELF AUTO SUPRA -37\xBAC"
+    marca: 5
+    tipo: 9
+    parent: 117
+- model: equivalencia.equivalencia
+  pk: 698
+  fields:
+    producto: Radicool SI-OAT (100%)
+    marca: 7
+    tipo: 9
+    parent: 117
+- model: equivalencia.equivalencia
+  pk: 699
+  fields:
+    producto: Mobil Delvac refrigerante anticongelante / Mobil GS 333 Extra
+    marca: 3
+    tipo: 9
+    parent: 118
+- model: equivalencia.equivalencia
+  pk: 700
+  fields:
+    producto: "GLACELF SUPRA TIPO D\_"
+    marca: 4
+    tipo: 9
+    parent: 118
+- model: equivalencia.equivalencia
+  pk: 701
+  fields:
+    producto: Radicool SF
+    marca: 7
+    tipo: 9
+    parent: 118
+- model: equivalencia.equivalencia
+  pk: 702
+  fields:
+    producto: AMBRA AGRIFLU OT / COOLANT UP / Paraflu UP
+    marca: 8
+    tipo: 9
+    parent: 118
+- model: equivalencia.equivalencia
+  pk: 703
+  fields:
+    producto: HAVOLINE EXTENDED LIFE ANTIFREEZE / Havoline XLC
+    marca: 10
+    tipo: 9
+    parent: 118
+- model: equivalencia.equivalencia
+  pk: 704
+  fields:
+    producto: Cool Gard
+    marca: 15
+    tipo: 9
+    parent: 118

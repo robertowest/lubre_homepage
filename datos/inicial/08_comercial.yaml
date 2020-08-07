@@ -1,0 +1,157 @@
+- model: persona.persona
+  pk: 1
+  fields:
+    active: true
+    nombre: Emiliano
+    apellido: Fernandez
+    comunicaciones:
+    - 4375
+- model: persona.persona
+  pk: 2
+  fields:
+    active: true
+    nombre: Armando
+    apellido: Quinteros
+    comunicaciones:
+    - 4376
+- model: persona.persona
+  pk: 3
+  fields:
+    active: true
+    nombre: Sergio
+    apellido: Andjel
+    comunicaciones:
+    - 4377
+- model: persona.persona
+  pk: 4
+  fields:
+    active: true
+    nombre: Corina
+    apellido: Mariona
+    comunicaciones:
+    - 4378
+- model: persona.persona
+  pk: 5
+  fields:
+    active: false
+    nombre: Augusto
+    apellido: De Chazal
+    comunicaciones:
+    - 4379
+- model: persona.persona
+  pk: 6
+  fields:
+    active: false
+    nombre: "Juli\xE1n"
+    apellido: Durand
+    comunicaciones:
+    - 4380
+- model: persona.persona
+  pk: 7
+  fields:
+    active: true
+    nombre: Leandro
+    apellido: Bustos
+    comunicaciones:
+    - 4381
+- model: persona.persona
+  pk: 8
+  fields:
+    active: false
+    nombre: Ricardo
+    apellido: Franco
+    comunicaciones:
+    - 4382
+- model: persona.persona
+  pk: 10
+  fields:
+    active: true
+    nombre: Vicente
+    apellido: D Angelo
+    comunicaciones:
+    - 4383
+- model: persona.persona
+  pk: 11
+  fields:
+    active: false
+    nombre: Pablo
+    apellido: Gonzalez
+    comunicaciones:
+    - 4384
+- model: persona.persona
+  pk: 12
+  fields:
+    active: false
+    nombre: Miguel
+    apellido: Valeros
+    comunicaciones:
+    - 4385
+- model: persona.persona
+  pk: 13
+  fields:
+    active: false
+    nombre: Gustavo
+    apellido: "L\xF3pez Gonzalez"
+    comunicaciones:
+    - 4386
+- model: persona.persona
+  pk: 14
+  fields:
+    active: false
+    nombre: Mauro
+    apellido: Bandeo
+    comunicaciones:
+    - 4387
+- model: persona.persona
+  pk: 15
+  fields:
+    active: true
+    nombre: Oficina
+    apellido: ''
+    comunicaciones:
+    - 4388
+- model: persona.persona
+  pk: 16
+  fields:
+    active: true
+    nombre: Mario Alejandro
+    apellido: Divizia
+    comunicaciones:
+    - 4389
+- model: persona.persona
+  pk: 17
+  fields:
+    active: false
+    nombre: Diego
+    apellido: Liuzi
+    comunicaciones:
+    - 4390
+- model: persona.persona
+  pk: 18
+  fields:
+    active: true
+    nombre: "Sebasti\xE1n"
+    apellido: "Ter\xE1n"
+    comunicaciones: []
+- model: persona.persona
+  pk: 19
+  fields:
+    active: true
+    nombre: "Agust\xEDn"
+    apellido: Barbaglia
+    comunicaciones: []
+- model: persona.persona
+  pk: 20
+  fields:
+    active: true
+    nombre: Sergio
+    apellido: Atanor
+    comunicaciones: []
+- model: persona.persona
+  pk: 21
+  fields:
+    active: true
+    nombre: Rodolfo
+    apellido: Dehesa
+    comunicaciones: []
+

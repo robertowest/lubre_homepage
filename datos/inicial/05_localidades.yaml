@@ -1,0 +1,3177 @@
+- model: comunes.pais
+  pk: 1
+  fields:
+    active: true
+    modified: 2020-07-24 14:07:25.174502+00:00
+    nombre: Argentina
+    cod_area_tel: '54'
+- model: comunes.provincia
+  pk: 1
+  fields:
+    nombre: Tucumán
+    pais: 1
+- model: comunes.provincia
+  pk: 2
+  fields:
+    nombre: Santiago del Estero
+    pais: 1
+- model: comunes.provincia
+  pk: 3
+  fields:
+    nombre: Salta
+    pais: 1
+- model: comunes.provincia
+  pk: 4
+  fields:
+    nombre: Catamarca
+    pais: 1
+- model: comunes.departamento
+  pk: 1
+  fields:
+    nombre: Burruyacú
+    provincia: 1
+- model: comunes.departamento
+  pk: 2
+  fields:
+    nombre: Capital
+    provincia: 1
+- model: comunes.departamento
+  pk: 3
+  fields:
+    nombre: Chicligasta
+    provincia: 1
+- model: comunes.departamento
+  pk: 4
+  fields:
+    nombre: Cruz Alta
+    provincia: 1
+- model: comunes.departamento
+  pk: 5
+  fields:
+    nombre: Famaillá
+    provincia: 1
+- model: comunes.departamento
+  pk: 6
+  fields:
+    nombre: Graneros
+    provincia: 1
+- model: comunes.departamento
+  pk: 7
+  fields:
+    nombre: Juan Bautista Alberdi
+    provincia: 1
+- model: comunes.departamento
+  pk: 8
+  fields:
+    nombre: La Cocha
+    provincia: 1
+- model: comunes.departamento
+  pk: 9
+  fields:
+    nombre: Leales
+    provincia: 1
+- model: comunes.departamento
+  pk: 10
+  fields:
+    nombre: Lules
+    provincia: 1
+- model: comunes.departamento
+  pk: 11
+  fields:
+    nombre: Monteros
+    provincia: 1
+- model: comunes.departamento
+  pk: 12
+  fields:
+    nombre: Río Chico
+    provincia: 1
+- model: comunes.departamento
+  pk: 13
+  fields:
+    nombre: Simoca
+    provincia: 1
+- model: comunes.departamento
+  pk: 14
+  fields:
+    nombre: Tafí del Valle
+    provincia: 1
+- model: comunes.departamento
+  pk: 15
+  fields:
+    nombre: Tafí Viejo
+    provincia: 1
+- model: comunes.departamento
+  pk: 16
+  fields:
+    nombre: Trancas
+    provincia: 1
+- model: comunes.departamento
+  pk: 17
+  fields:
+    nombre: Yerba Buena
+    provincia: 1
+- model: comunes.departamento
+  pk: 18
+  fields:
+    nombre: Aguirre
+    provincia: 2
+- model: comunes.departamento
+  pk: 19
+  fields:
+    nombre: Alberdi
+    provincia: 2
+- model: comunes.departamento
+  pk: 20
+  fields:
+    nombre: Atamisqui
+    provincia: 2
+- model: comunes.departamento
+  pk: 21
+  fields:
+    nombre: Avellaneda
+    provincia: 2
+- model: comunes.departamento
+  pk: 22
+  fields:
+    nombre: Banda
+    provincia: 2
+- model: comunes.departamento
+  pk: 23
+  fields:
+    nombre: Belgrano
+    provincia: 2
+- model: comunes.departamento
+  pk: 24
+  fields:
+    nombre: Capital
+    provincia: 2
+- model: comunes.departamento
+  pk: 25
+  fields:
+    nombre: Choya
+    provincia: 2
+- model: comunes.departamento
+  pk: 26
+  fields:
+    nombre: Copo
+    provincia: 2
+- model: comunes.departamento
+  pk: 27
+  fields:
+    nombre: Figueroa
+    provincia: 2
+- model: comunes.departamento
+  pk: 28
+  fields:
+    nombre: General Taboada
+    provincia: 2
+- model: comunes.departamento
+  pk: 29
+  fields:
+    nombre: Guasayán
+    provincia: 2
+- model: comunes.departamento
+  pk: 30
+  fields:
+    nombre: Jiménez
+    provincia: 2
+- model: comunes.departamento
+  pk: 31
+  fields:
+    nombre: Juan F. Ibarra
+    provincia: 2
+- model: comunes.departamento
+  pk: 32
+  fields:
+    nombre: Loreto
+    provincia: 2
+- model: comunes.departamento
+  pk: 33
+  fields:
+    nombre: Mitre
+    provincia: 2
+- model: comunes.departamento
+  pk: 34
+  fields:
+    nombre: Moreno
+    provincia: 2
+- model: comunes.departamento
+  pk: 35
+  fields:
+    nombre: Ojo de Agua
+    provincia: 2
+- model: comunes.departamento
+  pk: 36
+  fields:
+    nombre: Pellegrini
+    provincia: 2
+- model: comunes.departamento
+  pk: 37
+  fields:
+    nombre: Quebrachos
+    provincia: 2
+- model: comunes.departamento
+  pk: 38
+  fields:
+    nombre: Río Hondo
+    provincia: 2
+- model: comunes.departamento
+  pk: 39
+  fields:
+    nombre: Rivadavia
+    provincia: 2
+- model: comunes.departamento
+  pk: 40
+  fields:
+    nombre: Robles
+    provincia: 2
+- model: comunes.departamento
+  pk: 41
+  fields:
+    nombre: Salavina
+    provincia: 2
+- model: comunes.departamento
+  pk: 42
+  fields:
+    nombre: San Martín
+    provincia: 2
+- model: comunes.departamento
+  pk: 43
+  fields:
+    nombre: Sarmiento
+    provincia: 2
+- model: comunes.departamento
+  pk: 44
+  fields:
+    nombre: Silípica
+    provincia: 2
+- model: comunes.departamento
+  pk: 45
+  fields:
+    nombre: Anta
+    provincia: 3
+- model: comunes.departamento
+  pk: 46
+  fields:
+    nombre: Cachi
+    provincia: 3
+- model: comunes.departamento
+  pk: 47
+  fields:
+    nombre: Cafayate
+    provincia: 3
+- model: comunes.departamento
+  pk: 48
+  fields:
+    nombre: Capital
+    provincia: 3
+- model: comunes.departamento
+  pk: 49
+  fields:
+    nombre: Cerrillos
+    provincia: 3
+- model: comunes.departamento
+  pk: 50
+  fields:
+    nombre: Chicoana
+    provincia: 3
+- model: comunes.departamento
+  pk: 51
+  fields:
+    nombre: General Güemes
+    provincia: 3
+- model: comunes.departamento
+  pk: 52
+  fields:
+    nombre: General José de San Martín
+    provincia: 3
+- model: comunes.departamento
+  pk: 53
+  fields:
+    nombre: Guachipas
+    provincia: 3
+- model: comunes.departamento
+  pk: 54
+  fields:
+    nombre: Iruya
+    provincia: 3
+- model: comunes.departamento
+  pk: 55
+  fields:
+    nombre: La Caldera
+    provincia: 3
+- model: comunes.departamento
+  pk: 56
+  fields:
+    nombre: La Candelaria
+    provincia: 3
+- model: comunes.departamento
+  pk: 57
+  fields:
+    nombre: La Poma
+    provincia: 3
+- model: comunes.departamento
+  pk: 58
+  fields:
+    nombre: La Viña
+    provincia: 3
+- model: comunes.departamento
+  pk: 59
+  fields:
+    nombre: Los Andes
+    provincia: 3
+- model: comunes.departamento
+  pk: 60
+  fields:
+    nombre: Metán
+    provincia: 3
+- model: comunes.departamento
+  pk: 61
+  fields:
+    nombre: Molinos
+    provincia: 3
+- model: comunes.departamento
+  pk: 62
+  fields:
+    nombre: Orán
+    provincia: 3
+- model: comunes.departamento
+  pk: 63
+  fields:
+    nombre: Rivadavia
+    provincia: 3
+- model: comunes.departamento
+  pk: 64
+  fields:
+    nombre: Rosario de la Frontera
+    provincia: 3
+- model: comunes.departamento
+  pk: 65
+  fields:
+    nombre: Rosario de Lerma
+    provincia: 3
+- model: comunes.departamento
+  pk: 66
+  fields:
+    nombre: San Carlos
+    provincia: 3
+- model: comunes.departamento
+  pk: 67
+  fields:
+    nombre: Santa Victoria
+    provincia: 3
+- model: comunes.departamento
+  pk: 68
+  fields:
+    nombre: Ambato
+    provincia: 4
+- model: comunes.departamento
+  pk: 69
+  fields:
+    nombre: Ancasti
+    provincia: 4
+- model: comunes.departamento
+  pk: 70
+  fields:
+    nombre: Andalgalá
+    provincia: 4
+- model: comunes.departamento
+  pk: 71
+  fields:
+    nombre: Antofagasta de la Sierra
+    provincia: 4
+- model: comunes.departamento
+  pk: 72
+  fields:
+    nombre: Belén
+    provincia: 4
+- model: comunes.departamento
+  pk: 73
+  fields:
+    nombre: Capayán
+    provincia: 4
+- model: comunes.departamento
+  pk: 74
+  fields:
+    nombre: Capital
+    provincia: 4
+- model: comunes.departamento
+  pk: 75
+  fields:
+    nombre: El Alto
+    provincia: 4
+- model: comunes.departamento
+  pk: 76
+  fields:
+    nombre: Fray Mamerto Esquiú
+    provincia: 4
+- model: comunes.departamento
+  pk: 77
+  fields:
+    nombre: La Paz
+    provincia: 4
+- model: comunes.departamento
+  pk: 78
+  fields:
+    nombre: Paclín
+    provincia: 4
+- model: comunes.departamento
+  pk: 79
+  fields:
+    nombre: Pomán
+    provincia: 4
+- model: comunes.departamento
+  pk: 80
+  fields:
+    nombre: Santa María
+    provincia: 4
+- model: comunes.departamento
+  pk: 81
+  fields:
+    nombre: Santa Rosa
+    provincia: 4
+- model: comunes.departamento
+  pk: 82
+  fields:
+    nombre: Tinogasta
+    provincia: 4
+- model: comunes.departamento
+  pk: 83
+  fields:
+    nombre: Valle Viejo
+    provincia: 4
+- model: comunes.localidad
+  pk: 1
+  fields:
+    nombre: 7 de Abril (Siete de Abril)
+    departamento: 1
+- model: comunes.localidad
+  pk: 2
+  fields:
+    nombre: Barrio San Jorge
+    departamento: 1
+- model: comunes.localidad
+  pk: 3
+  fields:
+    nombre: El Chañar
+    departamento: 1
+- model: comunes.localidad
+  pk: 4
+  fields:
+    nombre: El Naranjo
+    departamento: 1
+- model: comunes.localidad
+  pk: 5
+  fields:
+    nombre: Garmendia
+    departamento: 1
+- model: comunes.localidad
+  pk: 6
+  fields:
+    nombre: La Ramada
+    departamento: 1
+- model: comunes.localidad
+  pk: 7
+  fields:
+    nombre: Macomitas
+    departamento: 1
+- model: comunes.localidad
+  pk: 8
+  fields:
+    nombre: Piedrabuena
+    departamento: 1
+- model: comunes.localidad
+  pk: 9
+  fields:
+    nombre: Villa Benjamín Aráoz
+    departamento: 1
+- model: comunes.localidad
+  pk: 10
+  fields:
+    nombre: Villa Burruyacú
+    departamento: 1
+- model: comunes.localidad
+  pk: 11
+  fields:
+    nombre: Villa Padre Monti
+    departamento: 1
+- model: comunes.localidad
+  pk: 12
+  fields:
+    nombre: San Miguel de Tucumán (Est. Tucumán)
+    departamento: 2
+- model: comunes.localidad
+  pk: 13
+  fields:
+    nombre: Alpachiri
+    departamento: 3
+- model: comunes.localidad
+  pk: 14
+  fields:
+    nombre: Alto Verde
+    departamento: 3
+- model: comunes.localidad
+  pk: 15
+  fields:
+    nombre: Arcadia
+    departamento: 3
+- model: comunes.localidad
+  pk: 16
+  fields:
+    nombre: Barrio San Roque
+    departamento: 3
+- model: comunes.localidad
+  pk: 17
+  fields:
+    nombre: Concepción
+    departamento: 3
+- model: comunes.localidad
+  pk: 18
+  fields:
+    nombre: Iltico
+    departamento: 3
+- model: comunes.localidad
+  pk: 19
+  fields:
+    nombre: La Trinidad
+    departamento: 3
+- model: comunes.localidad
+  pk: 20
+  fields:
+    nombre: Medinas
+    departamento: 3
+- model: comunes.localidad
+  pk: 21
+  fields:
+    nombre: Alderetes
+    departamento: 4
+- model: comunes.localidad
+  pk: 22
+  fields:
+    nombre: Banda del Río Salí
+    departamento: 4
+- model: comunes.localidad
+  pk: 23
+  fields:
+    nombre: Colombres
+    departamento: 4
+- model: comunes.localidad
+  pk: 24
+  fields:
+    nombre: Colonia Mayo - Barrio La Milagrosa
+    departamento: 4
+- model: comunes.localidad
+  pk: 25
+  fields:
+    nombre: Delfín Gallo
+    departamento: 4
+- model: comunes.localidad
+  pk: 26
+  fields:
+    nombre: El Bracho
+    departamento: 4
+- model: comunes.localidad
+  pk: 27
+  fields:
+    nombre: La Florida
+    departamento: 4
+- model: comunes.localidad
+  pk: 28
+  fields:
+    nombre: Las Cejas
+    departamento: 4
+- model: comunes.localidad
+  pk: 29
+  fields:
+    nombre: Los Ralos
+    departamento: 4
+- model: comunes.localidad
+  pk: 30
+  fields:
+    nombre: Pacará
+    departamento: 4
+- model: comunes.localidad
+  pk: 31
+  fields:
+    nombre: Ranchillos
+    departamento: 4
+- model: comunes.localidad
+  pk: 32
+  fields:
+    nombre: San Andrés
+    departamento: 4
+- model: comunes.localidad
+  pk: 33
+  fields:
+    nombre: Barrio Casa Rosada
+    departamento: 5
+- model: comunes.localidad
+  pk: 34
+  fields:
+    nombre: Campo de Herrera
+    departamento: 5
+- model: comunes.localidad
+  pk: 35
+  fields:
+    nombre: Famaillá
+    departamento: 5
+- model: comunes.localidad
+  pk: 36
+  fields:
+    nombre: Ingenio Fronterita
+    departamento: 5
+- model: comunes.localidad
+  pk: 37
+  fields:
+    nombre: Graneros
+    departamento: 6
+- model: comunes.localidad
+  pk: 38
+  fields:
+    nombre: Lamadrid
+    departamento: 6
+- model: comunes.localidad
+  pk: 39
+  fields:
+    nombre: Taco Ralo
+    departamento: 6
+- model: comunes.localidad
+  pk: 40
+  fields:
+    nombre: Juan Bautista Alberdi
+    departamento: 7
+- model: comunes.localidad
+  pk: 41
+  fields:
+    nombre: Villa Belgrano
+    departamento: 7
+- model: comunes.localidad
+  pk: 42
+  fields:
+    nombre: La Cocha
+    departamento: 8
+- model: comunes.localidad
+  pk: 43
+  fields:
+    nombre: San José de La Cocha
+    departamento: 8
+- model: comunes.localidad
+  pk: 44
+  fields:
+    nombre: Bella Vista
+    departamento: 9
+- model: comunes.localidad
+  pk: 45
+  fields:
+    nombre: Estación Aráoz
+    departamento: 9
+- model: comunes.localidad
+  pk: 46
+  fields:
+    nombre: Los Puestos
+    departamento: 9
+- model: comunes.localidad
+  pk: 47
+  fields:
+    nombre: Manuel García Fernández
+    departamento: 9
+- model: comunes.localidad
+  pk: 48
+  fields:
+    nombre: Pala Pala
+    departamento: 9
+- model: comunes.localidad
+  pk: 49
+  fields:
+    nombre: Río Colorado
+    departamento: 9
+- model: comunes.localidad
+  pk: 50
+  fields:
+    nombre: Santa Rosa de Leales
+    departamento: 9
+- model: comunes.localidad
+  pk: 51
+  fields:
+    nombre: Villa de Leales
+    departamento: 9
+- model: comunes.localidad
+  pk: 52
+  fields:
+    nombre: Villa Fiad (- Ingenio Leales)
+    departamento: 9
+- model: comunes.localidad
+  pk: 53
+  fields:
+    nombre: Barrio San Felipe
+    departamento: 10
+- model: comunes.localidad
+  pk: 54
+  fields:
+    nombre: El Manantial
+    departamento: 10
+- model: comunes.localidad
+  pk: 55
+  fields:
+    nombre: Ingenio San Pablo
+    departamento: 10
+- model: comunes.localidad
+  pk: 56
+  fields:
+    nombre: La Reducción
+    departamento: 10
+- model: comunes.localidad
+  pk: 57
+  fields:
+    nombre: Lules
+    departamento: 10
+- model: comunes.localidad
+  pk: 58
+  fields:
+    nombre: Acheral
+    departamento: 11
+- model: comunes.localidad
+  pk: 59
+  fields:
+    nombre: Capitán Cáceres
+    departamento: 11
+- model: comunes.localidad
+  pk: 60
+  fields:
+    nombre: Monteros
+    departamento: 11
+- model: comunes.localidad
+  pk: 61
+  fields:
+    nombre: Pueblo Independencia (Santa Rosa y Los Rojo)
+    departamento: 11
+- model: comunes.localidad
+  pk: 62
+  fields:
+    nombre: Río Seco
+    departamento: 11
+- model: comunes.localidad
+  pk: 63
+  fields:
+    nombre: Santa Lucía
+    departamento: 11
+- model: comunes.localidad
+  pk: 64
+  fields:
+    nombre: Sargento Moya
+    departamento: 11
+- model: comunes.localidad
+  pk: 65
+  fields:
+    nombre: Soldado Maldonado
+    departamento: 11
+- model: comunes.localidad
+  pk: 66
+  fields:
+    nombre: Teniente Berdina
+    departamento: 11
+- model: comunes.localidad
+  pk: 67
+  fields:
+    nombre: Villa Quinteros
+    departamento: 11
+- model: comunes.localidad
+  pk: 68
+  fields:
+    nombre: Aguilares
+    departamento: 12
+- model: comunes.localidad
+  pk: 69
+  fields:
+    nombre: Los Sarmientos
+    departamento: 12
+- model: comunes.localidad
+  pk: 70
+  fields:
+    nombre: Río Chico
+    departamento: 12
+- model: comunes.localidad
+  pk: 71
+  fields:
+    nombre: Santa Ana
+    departamento: 12
+- model: comunes.localidad
+  pk: 72
+  fields:
+    nombre: Villa Clodomiro Hileret
+    departamento: 12
+- model: comunes.localidad
+  pk: 73
+  fields:
+    nombre: Atahona
+    departamento: 13
+- model: comunes.localidad
+  pk: 74
+  fields:
+    nombre: Monteagudo
+    departamento: 13
+- model: comunes.localidad
+  pk: 75
+  fields:
+    nombre: Nueva Trinidad
+    departamento: 13
+- model: comunes.localidad
+  pk: 76
+  fields:
+    nombre: Santa Cruz
+    departamento: 13
+- model: comunes.localidad
+  pk: 77
+  fields:
+    nombre: Simoca
+    departamento: 13
+- model: comunes.localidad
+  pk: 78
+  fields:
+    nombre: Villa Chicligasta
+    departamento: 13
+- model: comunes.localidad
+  pk: 79
+  fields:
+    nombre: Amaicha del Valle
+    departamento: 14
+- model: comunes.localidad
+  pk: 80
+  fields:
+    nombre: Colalao del Valle
+    departamento: 14
+- model: comunes.localidad
+  pk: 81
+  fields:
+    nombre: El Mollar
+    departamento: 14
+- model: comunes.localidad
+  pk: 82
+  fields:
+    nombre: Tafí del Valle
+    departamento: 14
+- model: comunes.localidad
+  pk: 83
+  fields:
+    nombre: Barrio El Cruce
+    departamento: 15
+- model: comunes.localidad
+  pk: 84
+  fields:
+    nombre: Barrio Lomas de Tafí
+    departamento: 15
+- model: comunes.localidad
+  pk: 85
+  fields:
+    nombre: Barrio Mutual San Martín
+    departamento: 15
+- model: comunes.localidad
+  pk: 86
+  fields:
+    nombre: Barrio Parada 14
+    departamento: 15
+- model: comunes.localidad
+  pk: 87
+  fields:
+    nombre: Barrio U.T.A. II
+    departamento: 15
+- model: comunes.localidad
+  pk: 88
+  fields:
+    nombre: Diagonal Norte (- Luz y Fuerza - Los Pocitos - Villa Nueva Italia)
+    departamento: 15
+- model: comunes.localidad
+  pk: 89
+  fields:
+    nombre: El Cadillal
+    departamento: 15
+- model: comunes.localidad
+  pk: 90
+  fields:
+    nombre: Tafí Viejo
+    departamento: 15
+- model: comunes.localidad
+  pk: 91
+  fields:
+    nombre: Villa Las Flores
+    departamento: 15
+- model: comunes.localidad
+  pk: 92
+  fields:
+    nombre: Villa Mariano Moreno (- El Colmenar)
+    departamento: 15
+- model: comunes.localidad
+  pk: 93
+  fields:
+    nombre: Choromoro
+    departamento: 16
+- model: comunes.localidad
+  pk: 94
+  fields:
+    nombre: San Pedro de Colalao
+    departamento: 16
+- model: comunes.localidad
+  pk: 95
+  fields:
+    nombre: Villa de Trancas
+    departamento: 16
+- model: comunes.localidad
+  pk: 96
+  fields:
+    nombre: Barrio San José III
+    departamento: 17
+- model: comunes.localidad
+  pk: 97
+  fields:
+    nombre: Villa Carmela (Cebil Redondo)
+    departamento: 17
+- model: comunes.localidad
+  pk: 98
+  fields:
+    nombre: Yerba Buena (- Marcos Paz)
+    departamento: 17
+- model: comunes.localidad
+  pk: 99
+  fields:
+    nombre: Argentina
+    departamento: 18
+- model: comunes.localidad
+  pk: 100
+  fields:
+    nombre: Casares
+    departamento: 18
+- model: comunes.localidad
+  pk: 101
+  fields:
+    nombre: Malbrán
+    departamento: 18
+- model: comunes.localidad
+  pk: 102
+  fields:
+    nombre: Villa General Mitre (Est. Pinto)
+    departamento: 18
+- model: comunes.localidad
+  pk: 103
+  fields:
+    nombre: Campo Gallo
+    departamento: 19
+- model: comunes.localidad
+  pk: 104
+  fields:
+    nombre: Coronel Manuel L. Rico
+    departamento: 19
+- model: comunes.localidad
+  pk: 105
+  fields:
+    nombre: Donadeu
+    departamento: 19
+- model: comunes.localidad
+  pk: 106
+  fields:
+    nombre: Sacháyoj
+    departamento: 19
+- model: comunes.localidad
+  pk: 107
+  fields:
+    nombre: Santos Lugares
+    departamento: 19
+- model: comunes.localidad
+  pk: 108
+  fields:
+    nombre: Estación Atamisqui
+    departamento: 20
+- model: comunes.localidad
+  pk: 109
+  fields:
+    nombre: Medellín
+    departamento: 20
+- model: comunes.localidad
+  pk: 110
+  fields:
+    nombre: Villa Atamisqui
+    departamento: 20
+- model: comunes.localidad
+  pk: 111
+  fields:
+    nombre: Colonia Dora
+    departamento: 21
+- model: comunes.localidad
+  pk: 112
+  fields:
+    nombre: Herrera
+    departamento: 21
+- model: comunes.localidad
+  pk: 113
+  fields:
+    nombre: Icaño
+    departamento: 21
+- model: comunes.localidad
+  pk: 114
+  fields:
+    nombre: Lugones
+    departamento: 21
+- model: comunes.localidad
+  pk: 115
+  fields:
+    nombre: Real Sayana
+    departamento: 21
+- model: comunes.localidad
+  pk: 116
+  fields:
+    nombre: Villa Mailín
+    departamento: 21
+- model: comunes.localidad
+  pk: 117
+  fields:
+    nombre: Abra Grande
+    departamento: 22
+- model: comunes.localidad
+  pk: 118
+  fields:
+    nombre: Antajé
+    departamento: 22
+- model: comunes.localidad
+  pk: 119
+  fields:
+    nombre: Ardiles
+    departamento: 22
+- model: comunes.localidad
+  pk: 120
+  fields:
+    nombre: Cañada Escobar
+    departamento: 22
+- model: comunes.localidad
+  pk: 121
+  fields:
+    nombre: Chaupi Pozo
+    departamento: 22
+- model: comunes.localidad
+  pk: 122
+  fields:
+    nombre: Clodomira
+    departamento: 22
+- model: comunes.localidad
+  pk: 123
+  fields:
+    nombre: Huyamampa
+    departamento: 22
+- model: comunes.localidad
+  pk: 124
+  fields:
+    nombre: La Aurora
+    departamento: 22
+- model: comunes.localidad
+  pk: 125
+  fields:
+    nombre: La Banda
+    departamento: 22
+- model: comunes.localidad
+  pk: 126
+  fields:
+    nombre: La Dársena
+    departamento: 22
+- model: comunes.localidad
+  pk: 127
+  fields:
+    nombre: Los Quiroga
+    departamento: 22
+- model: comunes.localidad
+  pk: 128
+  fields:
+    nombre: Los Soria
+    departamento: 22
+- model: comunes.localidad
+  pk: 129
+  fields:
+    nombre: Simbolar
+    departamento: 22
+- model: comunes.localidad
+  pk: 130
+  fields:
+    nombre: Tramo 16
+    departamento: 22
+- model: comunes.localidad
+  pk: 131
+  fields:
+    nombre: Tramo 20
+    departamento: 22
+- model: comunes.localidad
+  pk: 132
+  fields:
+    nombre: Bandera
+    departamento: 23
+- model: comunes.localidad
+  pk: 133
+  fields:
+    nombre: Cuatro Bocas
+    departamento: 23
+- model: comunes.localidad
+  pk: 134
+  fields:
+    nombre: Fortín Inca
+    departamento: 23
+- model: comunes.localidad
+  pk: 135
+  fields:
+    nombre: Guardia Escolta
+    departamento: 23
+- model: comunes.localidad
+  pk: 136
+  fields:
+    nombre: El Deán
+    departamento: 24
+- model: comunes.localidad
+  pk: 137
+  fields:
+    nombre: El Mojón
+    departamento: 24
+- model: comunes.localidad
+  pk: 138
+  fields:
+    nombre: El Zanjón
+    departamento: 24
+- model: comunes.localidad
+  pk: 139
+  fields:
+    nombre: Los Cardozos
+    departamento: 24
+- model: comunes.localidad
+  pk: 140
+  fields:
+    nombre: Maco
+    departamento: 24
+- model: comunes.localidad
+  pk: 141
+  fields:
+    nombre: Maquito
+    departamento: 24
+- model: comunes.localidad
+  pk: 142
+  fields:
+    nombre: Morales
+    departamento: 24
+- model: comunes.localidad
+  pk: 143
+  fields:
+    nombre: Puesto de San Antonio
+    departamento: 24
+- model: comunes.localidad
+  pk: 144
+  fields:
+    nombre: San Pedro
+    departamento: 24
+- model: comunes.localidad
+  pk: 145
+  fields:
+    nombre: Santa María
+    departamento: 24
+- model: comunes.localidad
+  pk: 146
+  fields:
+    nombre: Santiago del Estero
+    departamento: 24
+- model: comunes.localidad
+  pk: 147
+  fields:
+    nombre: Vuelta de la Barranca
+    departamento: 24
+- model: comunes.localidad
+  pk: 148
+  fields:
+    nombre: Yanda
+    departamento: 24
+- model: comunes.localidad
+  pk: 149
+  fields:
+    nombre: Ancaján
+    departamento: 25
+- model: comunes.localidad
+  pk: 150
+  fields:
+    nombre: Choya
+    departamento: 25
+- model: comunes.localidad
+  pk: 151
+  fields:
+    nombre: Estación La Punta
+    departamento: 25
+- model: comunes.localidad
+  pk: 152
+  fields:
+    nombre: Frías
+    departamento: 25
+- model: comunes.localidad
+  pk: 153
+  fields:
+    nombre: Laprida
+    departamento: 25
+- model: comunes.localidad
+  pk: 154
+  fields:
+    nombre: San Pedro
+    departamento: 25
+- model: comunes.localidad
+  pk: 155
+  fields:
+    nombre: Tapso
+    departamento: 25
+- model: comunes.localidad
+  pk: 156
+  fields:
+    nombre: Villa La Punta
+    departamento: 25
+- model: comunes.localidad
+  pk: 157
+  fields:
+    nombre: El Caburé
+    departamento: 26
+- model: comunes.localidad
+  pk: 158
+  fields:
+    nombre: La Firmeza
+    departamento: 26
+- model: comunes.localidad
+  pk: 159
+  fields:
+    nombre: Los Pirpintos
+    departamento: 26
+- model: comunes.localidad
+  pk: 160
+  fields:
+    nombre: Los Tigres
+    departamento: 26
+- model: comunes.localidad
+  pk: 161
+  fields:
+    nombre: Monte Quemado
+    departamento: 26
+- model: comunes.localidad
+  pk: 162
+  fields:
+    nombre: Nueva Esperanza
+    departamento: 26
+- model: comunes.localidad
+  pk: 163
+  fields:
+    nombre: Pampa de los Guanacos
+    departamento: 26
+- model: comunes.localidad
+  pk: 164
+  fields:
+    nombre: San José del Boquerón
+    departamento: 26
+- model: comunes.localidad
+  pk: 165
+  fields:
+    nombre: Urutaú
+    departamento: 26
+- model: comunes.localidad
+  pk: 166
+  fields:
+    nombre: Bandera Bajada
+    departamento: 27
+- model: comunes.localidad
+  pk: 167
+  fields:
+    nombre: Caspi Corral
+    departamento: 27
+- model: comunes.localidad
+  pk: 168
+  fields:
+    nombre: Colonia San Juan
+    departamento: 27
+- model: comunes.localidad
+  pk: 169
+  fields:
+    nombre: El Crucero
+    departamento: 27
+- model: comunes.localidad
+  pk: 170
+  fields:
+    nombre: Kilómetro 30
+    departamento: 27
+- model: comunes.localidad
+  pk: 171
+  fields:
+    nombre: La Cañada
+    departamento: 27
+- model: comunes.localidad
+  pk: 172
+  fields:
+    nombre: La Invernada
+    departamento: 27
+- model: comunes.localidad
+  pk: 173
+  fields:
+    nombre: Minerva
+    departamento: 27
+- model: comunes.localidad
+  pk: 174
+  fields:
+    nombre: Vaca Huañuna
+    departamento: 27
+- model: comunes.localidad
+  pk: 175
+  fields:
+    nombre: Villa Figueroa
+    departamento: 27
+- model: comunes.localidad
+  pk: 176
+  fields:
+    nombre: Añatuya
+    departamento: 28
+- model: comunes.localidad
+  pk: 177
+  fields:
+    nombre: Averías
+    departamento: 28
+- model: comunes.localidad
+  pk: 178
+  fields:
+    nombre: Estación Tacañitas
+    departamento: 28
+- model: comunes.localidad
+  pk: 179
+  fields:
+    nombre: La Nena
+    departamento: 28
+- model: comunes.localidad
+  pk: 180
+  fields:
+    nombre: Los Juríes
+    departamento: 28
+- model: comunes.localidad
+  pk: 181
+  fields:
+    nombre: Tomás Young
+    departamento: 28
+- model: comunes.localidad
+  pk: 182
+  fields:
+    nombre: Lavalle
+    departamento: 29
+- model: comunes.localidad
+  pk: 183
+  fields:
+    nombre: San Pedro
+    departamento: 29
+- model: comunes.localidad
+  pk: 184
+  fields:
+    nombre: El Arenal
+    departamento: 30
+- model: comunes.localidad
+  pk: 185
+  fields:
+    nombre: El Bobadal
+    departamento: 30
+- model: comunes.localidad
+  pk: 186
+  fields:
+    nombre: El Charco
+    departamento: 30
+- model: comunes.localidad
+  pk: 187
+  fields:
+    nombre: El Rincón
+    departamento: 30
+- model: comunes.localidad
+  pk: 188
+  fields:
+    nombre: Gramilla
+    departamento: 30
+- model: comunes.localidad
+  pk: 189
+  fields:
+    nombre: Isca Yacu
+    departamento: 30
+- model: comunes.localidad
+  pk: 190
+  fields:
+    nombre: Isca Yacu Semaul
+    departamento: 30
+- model: comunes.localidad
+  pk: 191
+  fields:
+    nombre: Pozo Hondo
+    departamento: 30
+- model: comunes.localidad
+  pk: 192
+  fields:
+    nombre: San Pedro
+    departamento: 30
+- model: comunes.localidad
+  pk: 193
+  fields:
+    nombre: El Colorado
+    departamento: 31
+- model: comunes.localidad
+  pk: 194
+  fields:
+    nombre: El Cuadrado
+    departamento: 31
+- model: comunes.localidad
+  pk: 195
+  fields:
+    nombre: Matará
+    departamento: 31
+- model: comunes.localidad
+  pk: 196
+  fields:
+    nombre: Suncho Corral
+    departamento: 31
+- model: comunes.localidad
+  pk: 197
+  fields:
+    nombre: Vilelas
+    departamento: 31
+- model: comunes.localidad
+  pk: 198
+  fields:
+    nombre: Yuchán
+    departamento: 31
+- model: comunes.localidad
+  pk: 199
+  fields:
+    nombre: Villa San Martín (Est. Loreto)
+    departamento: 32
+- model: comunes.localidad
+  pk: 200
+  fields:
+    nombre: Villa Unión
+    departamento: 33
+- model: comunes.localidad
+  pk: 201
+  fields:
+    nombre: Aerolito
+    departamento: 34
+- model: comunes.localidad
+  pk: 202
+  fields:
+    nombre: Alhuampa
+    departamento: 34
+- model: comunes.localidad
+  pk: 203
+  fields:
+    nombre: Hasse
+    departamento: 34
+- model: comunes.localidad
+  pk: 204
+  fields:
+    nombre: Hernán Mejía Miraval
+    departamento: 34
+- model: comunes.localidad
+  pk: 205
+  fields:
+    nombre: Las Tinajas
+    departamento: 34
+- model: comunes.localidad
+  pk: 206
+  fields:
+    nombre: Libertad
+    departamento: 34
+- model: comunes.localidad
+  pk: 207
+  fields:
+    nombre: Lilo Viejo
+    departamento: 34
+- model: comunes.localidad
+  pk: 208
+  fields:
+    nombre: Patay
+    departamento: 34
+- model: comunes.localidad
+  pk: 209
+  fields:
+    nombre: Pueblo Pablo Torelo (Est. Otumpa)
+    departamento: 34
+- model: comunes.localidad
+  pk: 210
+  fields:
+    nombre: Quimilí
+    departamento: 34
+- model: comunes.localidad
+  pk: 211
+  fields:
+    nombre: Roversi
+    departamento: 34
+- model: comunes.localidad
+  pk: 212
+  fields:
+    nombre: Tintina
+    departamento: 34
+- model: comunes.localidad
+  pk: 213
+  fields:
+    nombre: Weisburd
+    departamento: 34
+- model: comunes.localidad
+  pk: 214
+  fields:
+    nombre: El 49
+    departamento: 35
+- model: comunes.localidad
+  pk: 215
+  fields:
+    nombre: Sol de Julio
+    departamento: 35
+- model: comunes.localidad
+  pk: 216
+  fields:
+    nombre: Villa Ojo de Agua
+    departamento: 35
+- model: comunes.localidad
+  pk: 217
+  fields:
+    nombre: El Mojón
+    departamento: 36
+- model: comunes.localidad
+  pk: 218
+  fields:
+    nombre: Las Delicias
+    departamento: 36
+- model: comunes.localidad
+  pk: 219
+  fields:
+    nombre: Nueva Esperanza
+    departamento: 36
+- model: comunes.localidad
+  pk: 220
+  fields:
+    nombre: Pozo Betbeder
+    departamento: 36
+- model: comunes.localidad
+  pk: 221
+  fields:
+    nombre: Rapelli
+    departamento: 36
+- model: comunes.localidad
+  pk: 222
+  fields:
+    nombre: Santo Domingo
+    departamento: 36
+- model: comunes.localidad
+  pk: 223
+  fields:
+    nombre: Ramírez de Velazco
+    departamento: 37
+- model: comunes.localidad
+  pk: 224
+  fields:
+    nombre: Sumampa
+    departamento: 37
+- model: comunes.localidad
+  pk: 225
+  fields:
+    nombre: Sumampa Viejo
+    departamento: 37
+- model: comunes.localidad
+  pk: 226
+  fields:
+    nombre: Chañar Pozo de Abajo
+    departamento: 38
+- model: comunes.localidad
+  pk: 227
+  fields:
+    nombre: Chauchillas
+    departamento: 38
+- model: comunes.localidad
+  pk: 228
+  fields:
+    nombre: Colonia Tinco
+    departamento: 38
+- model: comunes.localidad
+  pk: 229
+  fields:
+    nombre: El Charco
+    departamento: 38
+- model: comunes.localidad
+  pk: 230
+  fields:
+    nombre: El Sauzal
+    departamento: 38
+- model: comunes.localidad
+  pk: 231
+  fields:
+    nombre: Gramilla
+    departamento: 38
+- model: comunes.localidad
+  pk: 232
+  fields:
+    nombre: La Nueva Donosa
+    departamento: 38
+- model: comunes.localidad
+  pk: 233
+  fields:
+    nombre: Los Miranda
+    departamento: 38
+- model: comunes.localidad
+  pk: 234
+  fields:
+    nombre: Los Núñez
+    departamento: 38
+- model: comunes.localidad
+  pk: 235
+  fields:
+    nombre: Mansupa
+    departamento: 38
+- model: comunes.localidad
+  pk: 236
+  fields:
+    nombre: Pozuelos
+    departamento: 38
+- model: comunes.localidad
+  pk: 237
+  fields:
+    nombre: Rodeo de Valdez
+    departamento: 38
+- model: comunes.localidad
+  pk: 238
+  fields:
+    nombre: Termas de Río Hondo
+    departamento: 38
+- model: comunes.localidad
+  pk: 239
+  fields:
+    nombre: Villa Giménez
+    departamento: 38
+- model: comunes.localidad
+  pk: 240
+  fields:
+    nombre: Villa Río Hondo
+    departamento: 38
+- model: comunes.localidad
+  pk: 241
+  fields:
+    nombre: Villa Turística del Embalse
+    departamento: 38
+- model: comunes.localidad
+  pk: 242
+  fields:
+    nombre: Vinará
+    departamento: 38
+- model: comunes.localidad
+  pk: 243
+  fields:
+    nombre: Colonia Alpina
+    departamento: 39
+- model: comunes.localidad
+  pk: 244
+  fields:
+    nombre: Palo Negro
+    departamento: 39
+- model: comunes.localidad
+  pk: 245
+  fields:
+    nombre: Selva
+    departamento: 39
+- model: comunes.localidad
+  pk: 246
+  fields:
+    nombre: Beltrán
+    departamento: 40
+- model: comunes.localidad
+  pk: 247
+  fields:
+    nombre: Colonia El Simbolar
+    departamento: 40
+- model: comunes.localidad
+  pk: 248
+  fields:
+    nombre: Fernández
+    departamento: 40
+- model: comunes.localidad
+  pk: 249
+  fields:
+    nombre: Ingeniero Forres (Est. Chaguar Punco)
+    departamento: 40
+- model: comunes.localidad
+  pk: 250
+  fields:
+    nombre: Vilmer
+    departamento: 40
+- model: comunes.localidad
+  pk: 251
+  fields:
+    nombre: Chilca Juliana
+    departamento: 41
+- model: comunes.localidad
+  pk: 252
+  fields:
+    nombre: Los Telares
+    departamento: 41
+- model: comunes.localidad
+  pk: 253
+  fields:
+    nombre: Villa Salavina
+    departamento: 41
+- model: comunes.localidad
+  pk: 254
+  fields:
+    nombre: Brea Pozo
+    departamento: 42
+- model: comunes.localidad
+  pk: 255
+  fields:
+    nombre: Estación Robles
+    departamento: 42
+- model: comunes.localidad
+  pk: 256
+  fields:
+    nombre: Estación Taboada
+    departamento: 42
+- model: comunes.localidad
+  pk: 257
+  fields:
+    nombre: Villa Nueva
+    departamento: 42
+- model: comunes.localidad
+  pk: 258
+  fields:
+    nombre: Garza
+    departamento: 43
+- model: comunes.localidad
+  pk: 259
+  fields:
+    nombre: Árraga
+    departamento: 44
+- model: comunes.localidad
+  pk: 260
+  fields:
+    nombre: Nueva Francia
+    departamento: 44
+- model: comunes.localidad
+  pk: 261
+  fields:
+    nombre: Simbol
+    departamento: 44
+- model: comunes.localidad
+  pk: 262
+  fields:
+    nombre: Sumamao
+    departamento: 44
+- model: comunes.localidad
+  pk: 263
+  fields:
+    nombre: Villa Silípica
+    departamento: 44
+- model: comunes.localidad
+  pk: 264
+  fields:
+    nombre: Apolinario Saravia
+    departamento: 45
+- model: comunes.localidad
+  pk: 265
+  fields:
+    nombre: Ceibalito
+    departamento: 45
+- model: comunes.localidad
+  pk: 266
+  fields:
+    nombre: Centro 25 de Junio
+    departamento: 45
+- model: comunes.localidad
+  pk: 267
+  fields:
+    nombre: Coronel Mollinedo
+    departamento: 45
+- model: comunes.localidad
+  pk: 268
+  fields:
+    nombre: Coronel Olleros
+    departamento: 45
+- model: comunes.localidad
+  pk: 269
+  fields:
+    nombre: El Quebrachal
+    departamento: 45
+- model: comunes.localidad
+  pk: 270
+  fields:
+    nombre: Gaona
+    departamento: 45
+- model: comunes.localidad
+  pk: 271
+  fields:
+    nombre: General Pizarro
+    departamento: 45
+- model: comunes.localidad
+  pk: 272
+  fields:
+    nombre: Joaquín V. González
+    departamento: 45
+- model: comunes.localidad
+  pk: 273
+  fields:
+    nombre: Las Lajitas
+    departamento: 45
+- model: comunes.localidad
+  pk: 274
+  fields:
+    nombre: Luis Burela
+    departamento: 45
+- model: comunes.localidad
+  pk: 275
+  fields:
+    nombre: Macapillo
+    departamento: 45
+- model: comunes.localidad
+  pk: 276
+  fields:
+    nombre: Nuestra Señora de Talavera
+    departamento: 45
+- model: comunes.localidad
+  pk: 277
+  fields:
+    nombre: Piquete Cabado
+    departamento: 45
+- model: comunes.localidad
+  pk: 278
+  fields:
+    nombre: Río del Valle
+    departamento: 45
+- model: comunes.localidad
+  pk: 279
+  fields:
+    nombre: Tolloche
+    departamento: 45
+- model: comunes.localidad
+  pk: 280
+  fields:
+    nombre: Cachi
+    departamento: 46
+- model: comunes.localidad
+  pk: 281
+  fields:
+    nombre: Payogasta
+    departamento: 46
+- model: comunes.localidad
+  pk: 282
+  fields:
+    nombre: Cafayate
+    departamento: 47
+- model: comunes.localidad
+  pk: 283
+  fields:
+    nombre: Tolombóm
+    departamento: 47
+- model: comunes.localidad
+  pk: 284
+  fields:
+    nombre: Atocha
+    departamento: 48
+- model: comunes.localidad
+  pk: 285
+  fields:
+    nombre: La Ciénaga y Barrio San Rafael
+    departamento: 48
+- model: comunes.localidad
+  pk: 286
+  fields:
+    nombre: Las Costas
+    departamento: 48
+- model: comunes.localidad
+  pk: 287
+  fields:
+    nombre: Salta
+    departamento: 48
+- model: comunes.localidad
+  pk: 288
+  fields:
+    nombre: Villa San Lorenzo
+    departamento: 48
+- model: comunes.localidad
+  pk: 289
+  fields:
+    nombre: Cerrillos
+    departamento: 49
+- model: comunes.localidad
+  pk: 290
+  fields:
+    nombre: La Merced
+    departamento: 49
+- model: comunes.localidad
+  pk: 291
+  fields:
+    nombre: San Agustín
+    departamento: 49
+- model: comunes.localidad
+  pk: 292
+  fields:
+    nombre: Villa Los Álamos (- El Congreso - Las Tunas)
+    departamento: 49
+- model: comunes.localidad
+  pk: 293
+  fields:
+    nombre: Barrio Finca la Maroma
+    departamento: 50
+- model: comunes.localidad
+  pk: 294
+  fields:
+    nombre: Barrio la Rotonda
+    departamento: 50
+- model: comunes.localidad
+  pk: 295
+  fields:
+    nombre: Barrio Santa Teresita
+    departamento: 50
+- model: comunes.localidad
+  pk: 296
+  fields:
+    nombre: Chicoana
+    departamento: 50
+- model: comunes.localidad
+  pk: 297
+  fields:
+    nombre: El Carril
+    departamento: 50
+- model: comunes.localidad
+  pk: 298
+  fields:
+    nombre: Campo Santo
+    departamento: 51
+- model: comunes.localidad
+  pk: 299
+  fields:
+    nombre: Cobos
+    departamento: 51
+- model: comunes.localidad
+  pk: 300
+  fields:
+    nombre: El Bordo
+    departamento: 51
+- model: comunes.localidad
+  pk: 301
+  fields:
+    nombre: General Güemes
+    departamento: 51
+- model: comunes.localidad
+  pk: 302
+  fields:
+    nombre: Aguaray
+    departamento: 52
+- model: comunes.localidad
+  pk: 303
+  fields:
+    nombre: Campamento Vespucio
+    departamento: 52
+- model: comunes.localidad
+  pk: 304
+  fields:
+    nombre: Campichuelo
+    departamento: 52
+- model: comunes.localidad
+  pk: 305
+  fields:
+    nombre: Campo Durán
+    departamento: 52
+- model: comunes.localidad
+  pk: 306
+  fields:
+    nombre: Capiazuti
+    departamento: 52
+- model: comunes.localidad
+  pk: 307
+  fields:
+    nombre: Carboncito
+    departamento: 52
+- model: comunes.localidad
+  pk: 308
+  fields:
+    nombre: Coronel Cornejo
+    departamento: 52
+- model: comunes.localidad
+  pk: 309
+  fields:
+    nombre: Dragones
+    departamento: 52
+- model: comunes.localidad
+  pk: 310
+  fields:
+    nombre: Embarcación
+    departamento: 52
+- model: comunes.localidad
+  pk: 311
+  fields:
+    nombre: General Ballivián
+    departamento: 52
+- model: comunes.localidad
+  pk: 312
+  fields:
+    nombre: General Mosconi
+    departamento: 52
+- model: comunes.localidad
+  pk: 313
+  fields:
+    nombre: Hickman
+    departamento: 52
+- model: comunes.localidad
+  pk: 314
+  fields:
+    nombre: Misión Chaqueña
+    departamento: 52
+- model: comunes.localidad
+  pk: 315
+  fields:
+    nombre: Misión El Cruce (- El Milagro - El Jardín de San Martín)
+    departamento: 52
+- model: comunes.localidad
+  pk: 316
+  fields:
+    nombre: Misión Kilómetro 6
+    departamento: 52
+- model: comunes.localidad
+  pk: 317
+  fields:
+    nombre: Pacará
+    departamento: 52
+- model: comunes.localidad
+  pk: 318
+  fields:
+    nombre: Padre Lozano
+    departamento: 52
+- model: comunes.localidad
+  pk: 319
+  fields:
+    nombre: Piquirenda
+    departamento: 52
+- model: comunes.localidad
+  pk: 320
+  fields:
+    nombre: Profesor Salvador Mazza
+    departamento: 52
+- model: comunes.localidad
+  pk: 321
+  fields:
+    nombre: Tartagal
+    departamento: 52
+- model: comunes.localidad
+  pk: 322
+  fields:
+    nombre: Tobantirenda
+    departamento: 52
+- model: comunes.localidad
+  pk: 323
+  fields:
+    nombre: Tranquitas
+    departamento: 52
+- model: comunes.localidad
+  pk: 324
+  fields:
+    nombre: Yacuy
+    departamento: 52
+- model: comunes.localidad
+  pk: 325
+  fields:
+    nombre: Guachipas
+    departamento: 53
+- model: comunes.localidad
+  pk: 326
+  fields:
+    nombre: Iruya
+    departamento: 54
+- model: comunes.localidad
+  pk: 327
+  fields:
+    nombre: Isla de Cañas
+    departamento: 54
+- model: comunes.localidad
+  pk: 328
+  fields:
+    nombre: Pueblo Viejo
+    departamento: 54
+- model: comunes.localidad
+  pk: 329
+  fields:
+    nombre: La Caldera
+    departamento: 55
+- model: comunes.localidad
+  pk: 330
+  fields:
+    nombre: Vaqueros
+    departamento: 55
+- model: comunes.localidad
+  pk: 331
+  fields:
+    nombre: El Jardín
+    departamento: 56
+- model: comunes.localidad
+  pk: 332
+  fields:
+    nombre: El Tala
+    departamento: 56
+- model: comunes.localidad
+  pk: 333
+  fields:
+    nombre: La Candelaria
+    departamento: 56
+- model: comunes.localidad
+  pk: 334
+  fields:
+    nombre: Cobres
+    departamento: 57
+- model: comunes.localidad
+  pk: 335
+  fields:
+    nombre: La Poma
+    departamento: 57
+- model: comunes.localidad
+  pk: 336
+  fields:
+    nombre: Ampascachi
+    departamento: 58
+- model: comunes.localidad
+  pk: 337
+  fields:
+    nombre: Cabra Corral
+    departamento: 58
+- model: comunes.localidad
+  pk: 338
+  fields:
+    nombre: Coronel Moldes
+    departamento: 58
+- model: comunes.localidad
+  pk: 339
+  fields:
+    nombre: La Viña
+    departamento: 58
+- model: comunes.localidad
+  pk: 340
+  fields:
+    nombre: Talapampa
+    departamento: 58
+- model: comunes.localidad
+  pk: 341
+  fields:
+    nombre: Olacapato
+    departamento: 59
+- model: comunes.localidad
+  pk: 342
+  fields:
+    nombre: San Antonio de los Cobres
+    departamento: 59
+- model: comunes.localidad
+  pk: 343
+  fields:
+    nombre: Santa Rosa de los Pastos Grandes
+    departamento: 59
+- model: comunes.localidad
+  pk: 344
+  fields:
+    nombre: Tolar Grande
+    departamento: 59
+- model: comunes.localidad
+  pk: 345
+  fields:
+    nombre: El Galpón
+    departamento: 60
+- model: comunes.localidad
+  pk: 346
+  fields:
+    nombre: El Tunal
+    departamento: 60
+- model: comunes.localidad
+  pk: 347
+  fields:
+    nombre: Lumbreras
+    departamento: 60
+- model: comunes.localidad
+  pk: 348
+  fields:
+    nombre: Metán Viejo
+    departamento: 60
+- model: comunes.localidad
+  pk: 349
+  fields:
+    nombre: Río Piedras
+    departamento: 60
+- model: comunes.localidad
+  pk: 350
+  fields:
+    nombre: San José de Metán
+    departamento: 60
+- model: comunes.localidad
+  pk: 351
+  fields:
+    nombre: San José de Orquera
+    departamento: 60
+- model: comunes.localidad
+  pk: 352
+  fields:
+    nombre: La Puerta
+    departamento: 61
+- model: comunes.localidad
+  pk: 353
+  fields:
+    nombre: Molinos
+    departamento: 61
+- model: comunes.localidad
+  pk: 354
+  fields:
+    nombre: Seclantás
+    departamento: 61
+- model: comunes.localidad
+  pk: 355
+  fields:
+    nombre: Aguas Blancas
+    departamento: 62
+- model: comunes.localidad
+  pk: 356
+  fields:
+    nombre: Colonia Santa Rosa
+    departamento: 62
+- model: comunes.localidad
+  pk: 357
+  fields:
+    nombre: El Tabacal
+    departamento: 62
+- model: comunes.localidad
+  pk: 358
+  fields:
+    nombre: Hipólito Yrigoyen
+    departamento: 62
+- model: comunes.localidad
+  pk: 359
+  fields:
+    nombre: Pichanal
+    departamento: 62
+- model: comunes.localidad
+  pk: 360
+  fields:
+    nombre: San Ramón de la Nueva Orán
+    departamento: 62
+- model: comunes.localidad
+  pk: 361
+  fields:
+    nombre: Urundel
+    departamento: 62
+- model: comunes.localidad
+  pk: 362
+  fields:
+    nombre: Alto de la Sierra
+    departamento: 63
+- model: comunes.localidad
+  pk: 363
+  fields:
+    nombre: Capitán Juan Pagé
+    departamento: 63
+- model: comunes.localidad
+  pk: 364
+  fields:
+    nombre: Coronel Juan Solá
+    departamento: 63
+- model: comunes.localidad
+  pk: 365
+  fields:
+    nombre: Hito 1
+    departamento: 63
+- model: comunes.localidad
+  pk: 366
+  fields:
+    nombre: La Unión
+    departamento: 63
+- model: comunes.localidad
+  pk: 367
+  fields:
+    nombre: Los Blancos
+    departamento: 63
+- model: comunes.localidad
+  pk: 368
+  fields:
+    nombre: Pluma de Pato
+    departamento: 63
+- model: comunes.localidad
+  pk: 369
+  fields:
+    nombre: Rivadavia
+    departamento: 63
+- model: comunes.localidad
+  pk: 370
+  fields:
+    nombre: Santa María
+    departamento: 63
+- model: comunes.localidad
+  pk: 371
+  fields:
+    nombre: Santa Rosa
+    departamento: 63
+- model: comunes.localidad
+  pk: 372
+  fields:
+    nombre: Santa Victoria Este
+    departamento: 63
+- model: comunes.localidad
+  pk: 373
+  fields:
+    nombre: Antilla
+    departamento: 64
+- model: comunes.localidad
+  pk: 374
+  fields:
+    nombre: Copo Quile
+    departamento: 64
+- model: comunes.localidad
+  pk: 375
+  fields:
+    nombre: El Naranjo
+    departamento: 64
+- model: comunes.localidad
+  pk: 376
+  fields:
+    nombre: El Potrero (Apeadero Cochabamba)
+    departamento: 64
+- model: comunes.localidad
+  pk: 377
+  fields:
+    nombre: Rosario de la Frontera
+    departamento: 64
+- model: comunes.localidad
+  pk: 378
+  fields:
+    nombre: San Felipe
+    departamento: 64
+- model: comunes.localidad
+  pk: 379
+  fields:
+    nombre: Campo Quijano
+    departamento: 65
+- model: comunes.localidad
+  pk: 380
+  fields:
+    nombre: La Merced del Encón
+    departamento: 65
+- model: comunes.localidad
+  pk: 381
+  fields:
+    nombre: La Silleta
+    departamento: 65
+- model: comunes.localidad
+  pk: 382
+  fields:
+    nombre: Rosario de Lerma
+    departamento: 65
+- model: comunes.localidad
+  pk: 383
+  fields:
+    nombre: Angastaco
+    departamento: 66
+- model: comunes.localidad
+  pk: 384
+  fields:
+    nombre: Animaná
+    departamento: 66
+- model: comunes.localidad
+  pk: 385
+  fields:
+    nombre: El Barrial
+    departamento: 66
+- model: comunes.localidad
+  pk: 386
+  fields:
+    nombre: San Carlos
+    departamento: 66
+- model: comunes.localidad
+  pk: 387
+  fields:
+    nombre: Acoyte
+    departamento: 67
+- model: comunes.localidad
+  pk: 388
+  fields:
+    nombre: Campo La Cruz
+    departamento: 67
+- model: comunes.localidad
+  pk: 389
+  fields:
+    nombre: Los Toldos
+    departamento: 67
+- model: comunes.localidad
+  pk: 390
+  fields:
+    nombre: Nazareno
+    departamento: 67
+- model: comunes.localidad
+  pk: 391
+  fields:
+    nombre: Poscaya
+    departamento: 67
+- model: comunes.localidad
+  pk: 392
+  fields:
+    nombre: San Marcos
+    departamento: 67
+- model: comunes.localidad
+  pk: 393
+  fields:
+    nombre: Santa Victoria
+    departamento: 67
+- model: comunes.localidad
+  pk: 394
+  fields:
+    nombre: Chuchucaruana
+    departamento: 68
+- model: comunes.localidad
+  pk: 395
+  fields:
+    nombre: Colpes
+    departamento: 68
+- model: comunes.localidad
+  pk: 396
+  fields:
+    nombre: El Bolsón
+    departamento: 68
+- model: comunes.localidad
+  pk: 397
+  fields:
+    nombre: El Rodeo
+    departamento: 68
+- model: comunes.localidad
+  pk: 398
+  fields:
+    nombre: Huaycama
+    departamento: 68
+- model: comunes.localidad
+  pk: 399
+  fields:
+    nombre: La Puerta
+    departamento: 68
+- model: comunes.localidad
+  pk: 400
+  fields:
+    nombre: Las Chacritas
+    departamento: 68
+- model: comunes.localidad
+  pk: 401
+  fields:
+    nombre: Las Juntas
+    departamento: 68
+- model: comunes.localidad
+  pk: 402
+  fields:
+    nombre: Los Castillos
+    departamento: 68
+- model: comunes.localidad
+  pk: 403
+  fields:
+    nombre: Los Talas
+    departamento: 68
+- model: comunes.localidad
+  pk: 404
+  fields:
+    nombre: Los Varela
+    departamento: 68
+- model: comunes.localidad
+  pk: 405
+  fields:
+    nombre: Singuil
+    departamento: 68
+- model: comunes.localidad
+  pk: 406
+  fields:
+    nombre: Ancasti
+    departamento: 69
+- model: comunes.localidad
+  pk: 407
+  fields:
+    nombre: Anquincila
+    departamento: 69
+- model: comunes.localidad
+  pk: 408
+  fields:
+    nombre: La Candelaria
+    departamento: 69
+- model: comunes.localidad
+  pk: 409
+  fields:
+    nombre: La Majada
+    departamento: 69
+- model: comunes.localidad
+  pk: 410
+  fields:
+    nombre: Amanao
+    departamento: 70
+- model: comunes.localidad
+  pk: 411
+  fields:
+    nombre: Andalgalá
+    departamento: 70
+- model: comunes.localidad
+  pk: 412
+  fields:
+    nombre: Chaquiago
+    departamento: 70
+- model: comunes.localidad
+  pk: 413
+  fields:
+    nombre: Choya
+    departamento: 70
+- model: comunes.localidad
+  pk: 414
+  fields:
+    nombre: El Alamito
+    departamento: 70
+- model: comunes.localidad
+  pk: 415
+  fields:
+    nombre: El Lindero
+    departamento: 70
+- model: comunes.localidad
+  pk: 416
+  fields:
+    nombre: El Potrero
+    departamento: 70
+- model: comunes.localidad
+  pk: 417
+  fields:
+    nombre: La Aguada
+    departamento: 70
+- model: comunes.localidad
+  pk: 418
+  fields:
+    nombre: Antofagasta de la Sierra
+    departamento: 71
+- model: comunes.localidad
+  pk: 419
+  fields:
+    nombre: Antofalla
+    departamento: 71
+- model: comunes.localidad
+  pk: 420
+  fields:
+    nombre: El Peñón
+    departamento: 71
+- model: comunes.localidad
+  pk: 421
+  fields:
+    nombre: Los Nacimientos
+    departamento: 71
+- model: comunes.localidad
+  pk: 422
+  fields:
+    nombre: Barranca Larga
+    departamento: 72
+- model: comunes.localidad
+  pk: 423
+  fields:
+    nombre: Belén
+    departamento: 72
+- model: comunes.localidad
+  pk: 424
+  fields:
+    nombre: Cóndor Huasi
+    departamento: 72
+- model: comunes.localidad
+  pk: 425
+  fields:
+    nombre: Corral Quemado
+    departamento: 72
+- model: comunes.localidad
+  pk: 426
+  fields:
+    nombre: El Durazno
+    departamento: 72
+- model: comunes.localidad
+  pk: 427
+  fields:
+    nombre: Farallón Negro
+    departamento: 72
+- model: comunes.localidad
+  pk: 428
+  fields:
+    nombre: Hualfín
+    departamento: 72
+- model: comunes.localidad
+  pk: 429
+  fields:
+    nombre: Jacipunco
+    departamento: 72
+- model: comunes.localidad
+  pk: 430
+  fields:
+    nombre: La Puntilla
+    departamento: 72
+- model: comunes.localidad
+  pk: 431
+  fields:
+    nombre: Las Juntas
+    departamento: 72
+- model: comunes.localidad
+  pk: 432
+  fields:
+    nombre: Londres
+    departamento: 72
+- model: comunes.localidad
+  pk: 433
+  fields:
+    nombre: Los Nacimientos
+    departamento: 72
+- model: comunes.localidad
+  pk: 434
+  fields:
+    nombre: Puerta de Corral Quemado
+    departamento: 72
+- model: comunes.localidad
+  pk: 435
+  fields:
+    nombre: Puerta de San José
+    departamento: 72
+- model: comunes.localidad
+  pk: 436
+  fields:
+    nombre: Villa Vil
+    departamento: 72
+- model: comunes.localidad
+  pk: 437
+  fields:
+    nombre: Adolfo E. Carranza
+    departamento: 73
+- model: comunes.localidad
+  pk: 438
+  fields:
+    nombre: Balde de la Punta
+    departamento: 73
+- model: comunes.localidad
+  pk: 439
+  fields:
+    nombre: Capayán
+    departamento: 73
+- model: comunes.localidad
+  pk: 440
+  fields:
+    nombre: Chumbicha
+    departamento: 73
+- model: comunes.localidad
+  pk: 441
+  fields:
+    nombre: Colonia del Valle
+    departamento: 73
+- model: comunes.localidad
+  pk: 442
+  fields:
+    nombre: Colonia Nueva Coneta
+    departamento: 73
+- model: comunes.localidad
+  pk: 443
+  fields:
+    nombre: Concepción
+    departamento: 73
+- model: comunes.localidad
+  pk: 444
+  fields:
+    nombre: Coneta
+    departamento: 73
+- model: comunes.localidad
+  pk: 445
+  fields:
+    nombre: El Bañado
+    departamento: 73
+- model: comunes.localidad
+  pk: 446
+  fields:
+    nombre: Huillapima
+    departamento: 73
+- model: comunes.localidad
+  pk: 447
+  fields:
+    nombre: Los Ángeles
+    departamento: 73
+- model: comunes.localidad
+  pk: 448
+  fields:
+    nombre: Miraflores
+    departamento: 73
+- model: comunes.localidad
+  pk: 449
+  fields:
+    nombre: San Martín
+    departamento: 73
+- model: comunes.localidad
+  pk: 450
+  fields:
+    nombre: San Pablo
+    departamento: 73
+- model: comunes.localidad
+  pk: 451
+  fields:
+    nombre: San Pedro
+    departamento: 73
+- model: comunes.localidad
+  pk: 452
+  fields:
+    nombre: Catamarca (San Fernando del Valle de Catamarca)
+    departamento: 74
+- model: comunes.localidad
+  pk: 453
+  fields:
+    nombre: El Pantanillo
+    departamento: 74
+- model: comunes.localidad
+  pk: 454
+  fields:
+    nombre: El Alto
+    departamento: 75
+- model: comunes.localidad
+  pk: 455
+  fields:
+    nombre: Guayamba
+    departamento: 75
+- model: comunes.localidad
+  pk: 456
+  fields:
+    nombre: Infanzón
+    departamento: 75
+- model: comunes.localidad
+  pk: 457
+  fields:
+    nombre: Los Corrales
+    departamento: 75
+- model: comunes.localidad
+  pk: 458
+  fields:
+    nombre: Tapso
+    departamento: 75
+- model: comunes.localidad
+  pk: 459
+  fields:
+    nombre: Vilismán
+    departamento: 75
+- model: comunes.localidad
+  pk: 460
+  fields:
+    nombre: Collagasta
+    departamento: 76
+- model: comunes.localidad
+  pk: 461
+  fields:
+    nombre: Pomancillo Este
+    departamento: 76
+- model: comunes.localidad
+  pk: 462
+  fields:
+    nombre: Pomancillo Oeste
+    departamento: 76
+- model: comunes.localidad
+  pk: 463
+  fields:
+    nombre: San José
+    departamento: 76
+- model: comunes.localidad
+  pk: 464
+  fields:
+    nombre: Villa Las Pirquitas
+    departamento: 76
+- model: comunes.localidad
+  pk: 465
+  fields:
+    nombre: Casa de Piedra
+    departamento: 77
+- model: comunes.localidad
+  pk: 466
+  fields:
+    nombre: El Aybal
+    departamento: 77
+- model: comunes.localidad
+  pk: 467
+  fields:
+    nombre: El Bañado
+    departamento: 77
+- model: comunes.localidad
+  pk: 468
+  fields:
+    nombre: El Divisadero
+    departamento: 77
+- model: comunes.localidad
+  pk: 469
+  fields:
+    nombre: El Quimilo
+    departamento: 77
+- model: comunes.localidad
+  pk: 470
+  fields:
+    nombre: Esquiú
+    departamento: 77
+- model: comunes.localidad
+  pk: 471
+  fields:
+    nombre: Icaño
+    departamento: 77
+- model: comunes.localidad
+  pk: 472
+  fields:
+    nombre: La Dorada
+    departamento: 77
+- model: comunes.localidad
+  pk: 473
+  fields:
+    nombre: La Guardia
+    departamento: 77
+- model: comunes.localidad
+  pk: 474
+  fields:
+    nombre: Las Esquinas
+    departamento: 77
+- model: comunes.localidad
+  pk: 475
+  fields:
+    nombre: Las Palmitas
+    departamento: 77
+- model: comunes.localidad
+  pk: 476
+  fields:
+    nombre: Quirós
+    departamento: 77
+- model: comunes.localidad
+  pk: 477
+  fields:
+    nombre: Ramblones
+    departamento: 77
+- model: comunes.localidad
+  pk: 478
+  fields:
+    nombre: Recreo
+    departamento: 77
+- model: comunes.localidad
+  pk: 479
+  fields:
+    nombre: San Antonio
+    departamento: 77
+- model: comunes.localidad
+  pk: 480
+  fields:
+    nombre: Amadores
+    departamento: 78
+- model: comunes.localidad
+  pk: 481
+  fields:
+    nombre: El Rosario
+    departamento: 78
+- model: comunes.localidad
+  pk: 482
+  fields:
+    nombre: La Bajada
+    departamento: 78
+- model: comunes.localidad
+  pk: 483
+  fields:
+    nombre: La Higuera
+    departamento: 78
+- model: comunes.localidad
+  pk: 484
+  fields:
+    nombre: La Merced
+    departamento: 78
+- model: comunes.localidad
+  pk: 485
+  fields:
+    nombre: La Viña
+    departamento: 78
+- model: comunes.localidad
+  pk: 486
+  fields:
+    nombre: Las Lajas
+    departamento: 78
+- model: comunes.localidad
+  pk: 487
+  fields:
+    nombre: Monte Potrero
+    departamento: 78
+- model: comunes.localidad
+  pk: 488
+  fields:
+    nombre: Palo Labrado
+    departamento: 78
+- model: comunes.localidad
+  pk: 489
+  fields:
+    nombre: San Antonio
+    departamento: 78
+- model: comunes.localidad
+  pk: 490
+  fields:
+    nombre: Villa de Balcozna
+    departamento: 78
+- model: comunes.localidad
+  pk: 491
+  fields:
+    nombre: Apoyaco
+    departamento: 79
+- model: comunes.localidad
+  pk: 492
+  fields:
+    nombre: Colana
+    departamento: 79
+- model: comunes.localidad
+  pk: 493
+  fields:
+    nombre: Colpes
+    departamento: 79
+- model: comunes.localidad
+  pk: 494
+  fields:
+    nombre: El Pajonal (Est. Pomán)
+    departamento: 79
+- model: comunes.localidad
+  pk: 495
+  fields:
+    nombre: Joyango
+    departamento: 79
+- model: comunes.localidad
+  pk: 496
+  fields:
+    nombre: Mutquín
+    departamento: 79
+- model: comunes.localidad
+  pk: 497
+  fields:
+    nombre: Pomán
+    departamento: 79
+- model: comunes.localidad
+  pk: 498
+  fields:
+    nombre: Rincón
+    departamento: 79
+- model: comunes.localidad
+  pk: 499
+  fields:
+    nombre: San Miguel
+    departamento: 79
+- model: comunes.localidad
+  pk: 500
+  fields:
+    nombre: Saujil
+    departamento: 79
+- model: comunes.localidad
+  pk: 501
+  fields:
+    nombre: Siján
+    departamento: 79
+- model: comunes.localidad
+  pk: 502
+  fields:
+    nombre: Andalhualá
+    departamento: 80
+- model: comunes.localidad
+  pk: 503
+  fields:
+    nombre: Caspichango
+    departamento: 80
+- model: comunes.localidad
+  pk: 504
+  fields:
+    nombre: Chañar Punco
+    departamento: 80
+- model: comunes.localidad
+  pk: 505
+  fields:
+    nombre: El Cajón
+    departamento: 80
+- model: comunes.localidad
+  pk: 506
+  fields:
+    nombre: El Desmonte
+    departamento: 80
+- model: comunes.localidad
+  pk: 507
+  fields:
+    nombre: El Puesto
+    departamento: 80
+- model: comunes.localidad
+  pk: 508
+  fields:
+    nombre: Famatanca
+    departamento: 80
+- model: comunes.localidad
+  pk: 509
+  fields:
+    nombre: Fuerte Quemado
+    departamento: 80
+- model: comunes.localidad
+  pk: 510
+  fields:
+    nombre: La Hoyada
+    departamento: 80
+- model: comunes.localidad
+  pk: 511
+  fields:
+    nombre: La Loma
+    departamento: 80
+- model: comunes.localidad
+  pk: 512
+  fields:
+    nombre: Las Mojarras
+    departamento: 80
+- model: comunes.localidad
+  pk: 513
+  fields:
+    nombre: Loro Huasi
+    departamento: 80
+- model: comunes.localidad
+  pk: 514
+  fields:
+    nombre: Punta de Balasto
+    departamento: 80
+- model: comunes.localidad
+  pk: 515
+  fields:
+    nombre: San José
+    departamento: 80
+- model: comunes.localidad
+  pk: 516
+  fields:
+    nombre: Santa María
+    departamento: 80
+- model: comunes.localidad
+  pk: 517
+  fields:
+    nombre: Yapes
+    departamento: 80
+- model: comunes.localidad
+  pk: 518
+  fields:
+    nombre: Alijilán
+    departamento: 81
+- model: comunes.localidad
+  pk: 519
+  fields:
+    nombre: Bañado de Ovanta
+    departamento: 81
+- model: comunes.localidad
+  pk: 520
+  fields:
+    nombre: Las Cañas
+    departamento: 81
+- model: comunes.localidad
+  pk: 521
+  fields:
+    nombre: Lavalle
+    departamento: 81
+- model: comunes.localidad
+  pk: 522
+  fields:
+    nombre: Los Altos
+    departamento: 81
+- model: comunes.localidad
+  pk: 523
+  fields:
+    nombre: Manantiales
+    departamento: 81
+- model: comunes.localidad
+  pk: 524
+  fields:
+    nombre: San Pedro (San Pedro de Guasayán)
+    departamento: 81
+- model: comunes.localidad
+  pk: 525
+  fields:
+    nombre: Anillaco
+    departamento: 82
+- model: comunes.localidad
+  pk: 526
+  fields:
+    nombre: Antinaco
+    departamento: 82
+- model: comunes.localidad
+  pk: 527
+  fields:
+    nombre: Banda de Lucero
+    departamento: 82
+- model: comunes.localidad
+  pk: 528
+  fields:
+    nombre: Cerro Negro
+    departamento: 82
+- model: comunes.localidad
+  pk: 529
+  fields:
+    nombre: Copacabana
+    departamento: 82
+- model: comunes.localidad
+  pk: 530
+  fields:
+    nombre: Cordobita
+    departamento: 82
+- model: comunes.localidad
+  pk: 531
+  fields:
+    nombre: Costa de Reyes
+    departamento: 82
+- model: comunes.localidad
+  pk: 532
+  fields:
+    nombre: El Pueblito
+    departamento: 82
+- model: comunes.localidad
+  pk: 533
+  fields:
+    nombre: El Puesto
+    departamento: 82
+- model: comunes.localidad
+  pk: 534
+  fields:
+    nombre: El Salado
+    departamento: 82
+- model: comunes.localidad
+  pk: 535
+  fields:
+    nombre: Fiambalá
+    departamento: 82
+- model: comunes.localidad
+  pk: 536
+  fields:
+    nombre: Los Balverdis
+    departamento: 82
+- model: comunes.localidad
+  pk: 537
+  fields:
+    nombre: Medanitos
+    departamento: 82
+- model: comunes.localidad
+  pk: 538
+  fields:
+    nombre: Palo Blanco
+    departamento: 82
+- model: comunes.localidad
+  pk: 539
+  fields:
+    nombre: Punta del Agua
+    departamento: 82
+- model: comunes.localidad
+  pk: 540
+  fields:
+    nombre: Saujil
+    departamento: 82
+- model: comunes.localidad
+  pk: 541
+  fields:
+    nombre: Tatón
+    departamento: 82
+- model: comunes.localidad
+  pk: 542
+  fields:
+    nombre: Tinogasta
+    departamento: 82
+- model: comunes.localidad
+  pk: 543
+  fields:
+    nombre: El Portezuelo
+    departamento: 83
+- model: comunes.localidad
+  pk: 544
+  fields:
+    nombre: Huaycama
+    departamento: 83
+- model: comunes.localidad
+  pk: 545
+  fields:
+    nombre: Las Tejas
+    departamento: 83
+- model: comunes.localidad
+  pk: 546
+  fields:
+    nombre: San Isidro
+    departamento: 83
+- model: comunes.localidad
+  pk: 547
+  fields:
+    nombre: Santa Cruz
+    departamento: 83
