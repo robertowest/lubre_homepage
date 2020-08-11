@@ -13,7 +13,6 @@
 
 
 {% block contenido %}
-
     <!-- izquierda -->
     <div class="col-lg-6">
         <!-- actividad -->
@@ -24,19 +23,22 @@
             <div class="card-body">
                 <dl>
                     <dt>Empresa</dt>
-                    <dd>{{object.empresa}}</dd>
+                    <dd><a href="{{object.empresa.get_detail_url}}">{{object.empresa}}</a></dd>
                 </dl>
                 <dl>
                     <dt>Actividad</dt>
                     <dd>{{object.actividad}}</dd>
                 </dl>
             </div>
+{% comment %}
             <div class="card-footer">
-                <a href="{{request.META.HTTP_REFERER}}" class="btn btn-warning btn-icon-split">                   
+                <!-- request.META.HTTP_REFERER -->
+                <a href="{{object.empresa.get_detail_url}}" class="btn btn-warning btn-icon-split">                   
                    <span class="icon text-white-50"><i class="fas fa-undo"></i></span>
                    <span class="text">Regresar</span>
                 </a>
-            </div>            
+            </div>
+{% endcomment %}
         </div>
     </div>
 
@@ -117,15 +119,17 @@
                             {% for registro in contactos %}
                             <tr>
                                 <td>
-                                    <a href="{{registro.get_detail_url}}" target="_blank">{{registro}}</a>
+                                    <a href="{{registro.persona.get_detail_url}}" target="_blank">{{registro.persona}}</a>
                                 </td>
+{% comment %}
                                 <td>
-                                    {% for movil in registro.comunicaciones.all %}
-                                        {% if movil.tipo == 'movil' %}
+                                    {% for movil in registro.persona.comunicaciones %}
+                                        {% if movil.tipo == 'Celular' %}
                                             {{movil.texto}}<br>
                                         {%endif%}
                                     {% endfor %}
                                 </td>
+{% endcomment %}
                             </tr>
                             {% endfor %}
                         </tbody>

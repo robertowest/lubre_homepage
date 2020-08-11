@@ -371,9 +371,12 @@ class EmpActDetailView(generic.DetailView):
     #     return get_object_or_404(models.EmpresaActividades, pk=ea[0].id)
 
     def get_context_data(self, **kwargs):
+        pk = self.kwargs['pk']
         context = super().get_context_data(**kwargs)
-        context['domicilios'] = None  # context['empresa'].domicilios.filter(active=True)
-        context['contactos'] = None   # context['empresa'].contactos.filter(active=True)
+        context['contactos'] = models.EmpresaActividadContactos.objects.filter(empresa_actividad_id=pk)
+        context['domicilios'] = models.EmpresaActividadDomicilios.objects.filter(empresa_actividad_id=pk)
+        # context['contactos'] = context['empresaactividades'].ea_contactos.instance
+        # context['domicilios'] = context['empresaactividades'].ea_domicilios.instance
         return context
 
 

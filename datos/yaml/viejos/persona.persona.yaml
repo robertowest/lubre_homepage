@@ -1,0 +1,119 @@
+- model: persona.persona
+  pk: 1
+  fields:
+    nombre: Emiliano
+    apellido: Fernandez
+    active: 1
+- model: persona.persona
+  pk: 2
+  fields:
+    nombre: Armando
+    apellido: Quinteros
+    active: 1
+- model: persona.persona
+  pk: 3
+  fields:
+    nombre: Sergio
+    apellido: Andjel
+    active: 1
+- model: persona.persona
+  pk: 4
+  fields:
+    nombre: Corina
+    apellido: Mariona
+    active: 1
+- model: persona.persona
+  pk: 5
+  fields:
+    nombre: Augusto
+    apellido: De Chazal
+    active: 0
+- model: persona.persona
+  pk: 6
+  fields:
+    nombre: Julián
+    apellido: Durand
+    active: 0
+- model: persona.persona
+  pk: 7
+  fields:
+    nombre: Leandro
+    apellido: Bustos
+    active: 1
+- model: persona.persona
+  pk: 8
+  fields:
+    nombre: Ricardo
+    apellido: Franco
+    active: 0
+- model: persona.persona
+  pk: 10
+  fields:
+    nombre: Vicente
+    apellido: D Angelo
+    active: 1
+- model: persona.persona
+  pk: 11
+  fields:
+    nombre: Pablo
+    apellido: Gonzalez
+    active: 0
+- model: persona.persona
+  pk: 12
+  fields:
+    nombre: Miguel
+    apellido: Valeros
+    active: 0
+- model: persona.persona
+  pk: 13
+  fields:
+    nombre: Gustavo
+    apellido: López Gonzalez
+    active: 0
+- model: persona.persona
+  pk: 14
+  fields:
+    nombre: Mauro
+    apellido: Bandeo
+    active: 0
+- model: persona.persona
+  pk: 15
+  fields:
+    nombre: Oficina
+    active: 1
+- model: persona.persona
+  pk: 16
+  fields:
+    nombre: Mario Alejandro
+    apellido: Divizia
+    active: 1
+- model: persona.persona
+  pk: 17
+  fields:
+    nombre: Diego
+    apellido: Liuzi
+    active: 0
+- model: persona.persona
+  pk: 18
+  fields:
+    nombre: Sebastián
+    apellido: Terán
+    active: 1
+- model: persona.persona
+  pk: 19
+  fields:
+    nombre: Agustín
+    apellido: Barbaglia
+    active: 1
+- model: persona.persona
+  pk: 20
+  fields:
+    nombre: Sergio
+    apellido: Atanor
+    active: 1
+- model: persona.persona
+  pk: 21
+  fields:
+    nombre: Rodolfo
+    apellido: Dehesa
+    active: 1

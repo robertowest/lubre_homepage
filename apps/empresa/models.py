@@ -159,7 +159,7 @@ class EmpresaComunicaciones(models.Model):
 class EmpresaActividadContactos(models.Model):
     # Empresa-Contacto ahora depende de Empresa-Actividad-Contacto
     empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING)
-    persona = models.ForeignKey(Persona, models.DO_NOTHING)
+    persona = models.ForeignKey(Persona, models.DO_NOTHING, related_name='ea_contactos')
 
     class Meta:
         managed = True
@@ -169,11 +169,11 @@ class EmpresaActividadContactos(models.Model):
 
 class EmpresaActividadDomicilios(models.Model):
     # Empresa-Domicilio ahora depende de Empresa-Actividad-Domicilio
-    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING)
+    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING, related_name='ea_domicilios')
     domicilio = models.ForeignKey(Domicilio, models.DO_NOTHING)
 
     class Meta:
-        managed = False
+        managed = True  # False
         db_table = 'empresa_actividad_domicilios'
         unique_together = (('empresa_actividad', 'domicilio'),)
 
