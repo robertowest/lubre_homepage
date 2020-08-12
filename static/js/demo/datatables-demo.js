@@ -26,7 +26,7 @@ $(document).ready(function() {
           "sortDescending": ": activar para ordenar la columna descendente"
       }
     },
-    "lengthMenu": [ 10, 15, 20, 25 ],
+    "lengthMenu": [ 10, 15, 20, 50, 100 ],
     "ordering": false,
     "pageLength": 15,
     "recordsTotal": 100,

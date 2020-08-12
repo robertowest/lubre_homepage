@@ -169,8 +169,8 @@ class EmpresaActividadContactos(models.Model):
 
 class EmpresaActividadDomicilios(models.Model):
     # Empresa-Domicilio ahora depende de Empresa-Actividad-Domicilio
-    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING, related_name='ea_domicilios')
-    domicilio = models.ForeignKey(Domicilio, models.DO_NOTHING)
+    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING)
+    domicilio = models.ForeignKey(Domicilio, models.DO_NOTHING, related_name='ea_domicilios')
 
     class Meta:
         managed = True  # False

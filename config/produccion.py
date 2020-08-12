@@ -36,11 +36,11 @@ ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS', default='*', cast=Csv())
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'homepage_dj',
+        'NAME': 'admin_produccion',   # LatinCloud
         'HOST': '190.105.227.83',
         'PORT': '3306',
-        'USER': 'django',
-        'PASSWORD': 'django',
+        'USER': 'admin_roberto',
+        'PASSWORD': 'roberto',
     },
     'firebird': {
         # lubresrl.dyndns.org:4310

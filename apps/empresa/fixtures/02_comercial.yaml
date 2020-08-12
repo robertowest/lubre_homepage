@@ -19,7 +19,7 @@
 - model: empresa.comercial
   pk: 4
   fields:
-    active: true
+    active: false
     persona: 4
     usuario: 8
 - model: empresa.comercial

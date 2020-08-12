@@ -1,6 +1,7 @@
-# from django.contrib.auth.mixins import LoginRequiredMixin
 import os
 
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Count
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render, get_list_or_404, get_object_or_404
@@ -23,7 +24,7 @@ from apps.persona.forms import PersonaForm as ContactoForm
 # -----------------------------------------------------------------------------
 
 
-class EmpresaTemplateView(generic.TemplateView):
+class EmpresaTemplateView(LoginRequiredMixin, generic.TemplateView):
     # app=__package__.split('.')[1]     --> lo obtiene de urls.py
     # model._meta.verbose_name.lower()  --> lo obtiene de models.py
     model = models.Empresa
@@ -37,7 +38,7 @@ class EmpresaTemplateView(generic.TemplateView):
         return context
 
 
-class EmpresaListView(generic.ListView):
+class EmpresaListView(LoginRequiredMixin, generic.ListView):
     model = models.Empresa
     # template_name = 'comunes/tabla.html'    # .format(app=__package__.split('.')[1])
     template_name = 'empresa/tabla_filtro.html'
@@ -57,7 +58,7 @@ class EmpresaListView(generic.ListView):
             return qs.filter(id=0)
 
 
-class EmpresaCreateView(generic.CreateView):    # LoginRequiredMixin
+class EmpresaCreateView(LoginRequiredMixin, generic.CreateView):    # LoginRequiredMixin
     model = models.Empresa
     form_class = forms.EmpresaForm
     template_name = 'comunes/formulario.html'
@@ -81,7 +82,7 @@ class EmpresaCreateView(generic.CreateView):    # LoginRequiredMixin
         return response
 
 
-class EmpresaDetailView(generic.DetailView):
+class EmpresaDetailView(LoginRequiredMixin, generic.DetailView):
     model = models.Empresa
     template_name = 'empresa/detalle.html'
 
@@ -98,7 +99,7 @@ class EmpresaDetailView(generic.DetailView):
         return context
 
 
-class EmpresaUpdateView(generic.UpdateView):
+class EmpresaUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = models.Empresa
     form_class = forms.EmpresaForm
     template_name = 'comunes/formulario.html'
@@ -122,7 +123,7 @@ class EmpresaUpdateView(generic.UpdateView):
         return response
 
 
-class EmpresaDeleteView(generic.DeleteView):
+class EmpresaDeleteView(LoginRequiredMixin, generic.DeleteView):
     pass
 
 
@@ -140,7 +141,7 @@ def empresa_actividad(request, empId, actId):
 # -----------------------------------------------------------------------------
 
 
-class FilterListView(generic.ListView):
+class FilterListView(LoginRequiredMixin, generic.ListView):
     model = models.Empresa
     # template_name = '{app}/list.html'.format(app=model._meta.verbose_name.lower())
     # comprobamos si existe un template personalizado, sino utilizamos el comun
@@ -184,7 +185,7 @@ class FilterListView(generic.ListView):
 # -----------------------------------------------------------------------------
 
 
-class CreateComunicationView(generic.CreateView):
+class CreateComunicationView(LoginRequiredMixin, generic.CreateView):
     model = ComunicacionModel
     form_class = ComunicacionForm
     template_name = 'comunes/formulario.html'
@@ -211,7 +212,7 @@ class CreateComunicationView(generic.CreateView):
         return response
 
 
-class CreateActividadView(generic.CreateView):
+class CreateActividadView(LoginRequiredMixin, generic.CreateView):
     # model = models.Actividad
     # form_class = forms.ActividadForm
     # template_name = 'comunes/formulario.html'
@@ -239,7 +240,7 @@ class CreateActividadView(generic.CreateView):
     pass
 
 
-class ActividadMultiListView(generic.ListView):
+class ActividadMultiListView(LoginRequiredMixin, generic.ListView):
     # , generic.edit.ModelFormMixin
     model = models.Actividad
     form_title = 'Asociar Subactividad'
@@ -279,12 +280,12 @@ class ActividadMultiListView(generic.ListView):
 # -----------------------------------------------------------------------------
 
 
-class ActividadTemplateView(generic.TemplateView):
+class ActividadTemplateView(LoginRequiredMixin, generic.TemplateView):
     def get(self, request, *args, **kwargs):
         return ActividadListView.as_view()(request)
 
 
-class ActividadListView(generic.ListView):
+class ActividadListView(LoginRequiredMixin, generic.ListView):
     model = models.Actividad
     template_name = 'comunes/tabla.html'
 
@@ -309,7 +310,7 @@ class ActividadListView(generic.ListView):
         return qs
 
 
-class ActividadCreateView(generic.CreateView):
+class ActividadCreateView(LoginRequiredMixin, generic.CreateView):
     model = models.Actividad
     form_class = forms.ActividadForm
     template_name = 'comunes/formulario.html'
@@ -328,12 +329,12 @@ class ActividadCreateView(generic.CreateView):
         return response
 
 
-class ActividadDetailView(generic.DetailView):
+class ActividadDetailView(LoginRequiredMixin, generic.DetailView):
     model = models.Actividad
     template_name = 'comunes/detalle.html'
 
 
-class ActividadUpdateView(generic.UpdateView):
+class ActividadUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = models.Actividad
     form_class = forms.ActividadForm
     template_name = 'comunes/formulario.html'
@@ -352,7 +353,7 @@ class ActividadUpdateView(generic.UpdateView):
         return response
 
 
-class ActividadDeleteView(generic.DeleteView):
+class ActividadDeleteView(LoginRequiredMixin, generic.DeleteView):
     pass
 
 
@@ -361,7 +362,7 @@ class ActividadDeleteView(generic.DeleteView):
 # -----------------------------------------------------------------------------
 
 
-class EmpActDetailView(generic.DetailView):
+class EmpActDetailView(LoginRequiredMixin, generic.DetailView):
     # EmpresaActividades.objects.filter(empresa=6027).filter(actividad=7)
     model = models.EmpresaActividades
     template_name = 'empresa_actividad/detalle.html'
@@ -380,7 +381,7 @@ class EmpActDetailView(generic.DetailView):
         return context
 
 
-class CreateAddressView(generic.CreateView):
+class CreateAddressView(LoginRequiredMixin, generic.CreateView):
     model = DomicilioModel
     form_class = DomicilioForm
     template_name = 'comunes/formulario.html'
@@ -407,7 +408,7 @@ class CreateAddressView(generic.CreateView):
         return response
 
 
-class CreateContactView(generic.CreateView):
+class CreateContactView(LoginRequiredMixin, generic.CreateView):
     model = ContactoModel
     form_class = ContactoForm
     template_name = 'comunes/formulario.html'
@@ -434,6 +435,7 @@ class CreateContactView(generic.CreateView):
         return response
 
 
+@login_required(login_url='/accounts/login/')
 def buscar_contacto(request, pk):
     obj_list = ContactoModel.objects.filter(active=True).order_by('apellido', 'nombre')
     context = {
@@ -444,6 +446,7 @@ def buscar_contacto(request, pk):
     return render(request, 'empresa_actividad/includes/_modal_contacto.html', context)
 
 
+@login_required(login_url='/accounts/login/')
 def asociar_contacto(request, relaId, conId):
     # empresa_actividad_id = relaId
     # contacto_id = conId
@@ -462,7 +465,6 @@ def asociar_contacto(request, relaId, conId):
 # ----------------------------------------------------------------------------------
 # quitar despues de haber controlado todos los clientes por parte de los comerciales
 # ----------------------------------------------------------------------------------
-from django.contrib.auth.decorators import login_required
 from next_prev import next_in_order, prev_in_order
 
 @login_required(login_url='/accounts/login/')

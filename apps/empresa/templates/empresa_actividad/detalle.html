@@ -30,15 +30,12 @@
                     <dd>{{object.actividad}}</dd>
                 </dl>
             </div>
-{% comment %}
             <div class="card-footer">
-                <!-- request.META.HTTP_REFERER -->
-                <a href="{{object.empresa.get_detail_url}}" class="btn btn-warning btn-icon-split">                   
+                <a href="{{request.META.HTTP_REFERER}}" class="btn btn-warning btn-icon-split">                   
                    <span class="icon text-white-50"><i class="fas fa-undo"></i></span>
                    <span class="text">Regresar</span>
                 </a>
             </div>
-{% endcomment %}
         </div>
     </div>
 
@@ -68,16 +65,10 @@
                             {% for registro in domicilios %}
                             <tr>
                                 <td>
-                                    {{registro.tipo}}&nbsp; 
-                                    <a href="{{registro.get_update_url}}">{{registro}}</a>&nbsp; 
-                                    {{registro.localidad_texto}}
+                                    {{registro.domicilio.tipo}}&nbsp; 
+                                    <a href="{{registro.domicilio.get_update_url}}">{{registro.domicilio}}</a>&nbsp; 
+                                    {{registro.domicilio.localidad_texto}}
                                 </td>
-                                {% comment %}
-                                <td>{{registro.tipo}}</td>
-                                <td><a href="{{registro.get_update_url}}">{{registro}}</a></td>
-                                <td>{{registro.provincia_texto}}</td>
-                                <td>{{registro.localidad_texto}}</td>
-                                {% endcomment %}
                             </tr>
                             {% endfor %}
                         </tbody>

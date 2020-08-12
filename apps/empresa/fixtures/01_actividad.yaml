@@ -148,3 +148,14 @@
     active: true
     nombre: Servicios al Estado
     parent: 6
+- model: empresa.actividad
+  pk: 27
+  fields:
+    active: true
+    nombre: No definida
+- model: empresa.actividad
+  pk: 28
+  fields:
+    active: true
+    nombre: No definida
+    parent: 27

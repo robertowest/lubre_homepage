@@ -1,8 +1,14 @@
 from django.urls import path
+
 from apps.empresa import views
 
 # app_name = __package__.split('.')[1]
 app_name = 'empresa'
+
+# controlar login a nivel de path
+# from django.contrib.auth.decorators import login_required
+# path('', login_required(views.EmpresaTemplateView.as_view()), name='index'),
+
 
 urlpatterns = [
     path('', views.EmpresaTemplateView.as_view(), name='index'),
@@ -33,14 +39,10 @@ urlpatterns = [
     path('<int:empId>/actividad/<int:actId>/', views.empresa_actividad, name='empresa_actividad'),
 ]
 
-# controlar login a nivel de path
-# path('<int:pk>/recorrer/', login_required(views.EmpresaBrowseView.as_view()), name='browse'),
-
 # ----------------------------------------------------------------------------------
 # quitar despues de haber controlado todos los clientes por parte de los comerciales
 # ----------------------------------------------------------------------------------
 from django.contrib.auth.decorators import login_required
-
 urlpatterns += [
     path('recorrer/', views.Recorrer, name="recorrer"),
     # path('recorrer/<int:comercial>/<int:empresa>/', 
