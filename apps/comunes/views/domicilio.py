@@ -56,12 +56,16 @@ class DomicilioUpdateView(UpdateView):
     form_class = DomicilioForm
     template_name = 'comunes/formulario.html'
 
-    def get_context_data(self, *, object_list=None, **kwargs):
+    def get_context_data(self, **kwargs):
+        """Agregamos información al contexto"""
         context = super().get_context_data(**kwargs)
         context['titulo'] = 'Modificación de Domicilio'
         return context
 
+
     def form_valid(self, form):
+        # form.data['nombre']
+        # form['nombre'].value()
         messages.success(self.request, 'Domicilio grabado correctamente')
         response = super().form_valid(form)
         # terminamos, ¿hacia dónde vamos?
@@ -69,10 +73,9 @@ class DomicilioUpdateView(UpdateView):
             return HttpResponseRedirect(self.request._post['previous_url'])
         return response
 
- 
+
 class DomicilioDeleteView(DeleteView):
     pass
-
 
 
 # chained dropdown
@@ -83,7 +86,7 @@ def carga_departamentos(request):
     if parent:
         objetos = Departamento.objects.filter(provincia_id=parent).order_by('nombre')
     else:
-        objetos = Departamento
+        objetos = Departamento.objects.filter(provincia_id=0)
     return render(request, 'domicilio/cargar_dropdown.html', {'object_list': objetos})
 
 def carga_localidades(request):
@@ -91,5 +94,5 @@ def carga_localidades(request):
     if parent:
         objetos = Localidad.objects.filter(departamento_id=parent).order_by('nombre')
     else:
-        objetos = Localidad
+        objetos = Localidad.objects.filter(departamento_id=0)
     return render(request, 'domicilio/cargar_dropdown.html', {'object_list': objetos})

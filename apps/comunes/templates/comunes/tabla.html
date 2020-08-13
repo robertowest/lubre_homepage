@@ -34,7 +34,6 @@
 
             <!-- tabla de contenido -->
             <div class="card-body">
-                
                 <div class="table-responsive">
                     <table id="{{ tableID|default:'dataTable' }}" class="display compact" style="width:100%">
                         {% include object_list|verbose_name|lower|add:'/includes/_tabla.html' %}

@@ -219,7 +219,7 @@ class Domicilio(CommonStruct):
     def __str__(self):
         texto = self.nombre
         if self.numero:
-            texto += ' ' + str(self.numero)
+            texto += " " + str(self.numero)
         if self.piso:
             texto += " - %s piso, puerta %s" % (self.piso, self.puerta)
         return texto

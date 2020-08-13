@@ -2,31 +2,19 @@
     <tr>
         <th>#</th>
         <th>Domicilio</th>
-        <th>Ciudad</th>
+        <th>Provincia</th>
+        <th>Departamento</th>
         <th>Localidad</th>
-        <th>País</th>
     </tr>
 </thead>
 <tbody>
     {% for object in object_list %}
     <tr>
-        <td><a href="{{object.get_detail_url}}">{{object.pk}}</a></td>
-        <td>{{object}}</td>
-        <td>{{object.ciudad}}</td>
+        <td>{{object.pk}}</td>
+        <td><a href="{{object.get_update_url}}">{{object.nombre}}</a></td>
+        <td>{{object.provincia}}</td>
+        <td>{{object.departamento}}</td>
         <td>{{object.localidad}}</td>
-        <td>{{object.pais}}</td>
     </tr>
     {% endfor %}
 </tbody>
-
-
-{% comment %}
-    {% for object in object_list %}
-    <tr>
-        <td><a href="{{object.get_detail_url}}">{{object.pk}}</a></td>
-        <td>{{object.razon_social}}</td>
-        <td>{{object.actividad}}</td>
-        <td>{{object.cuit}}</td>
-    </tr>
-    {% endfor %}
-{% endcomment %}

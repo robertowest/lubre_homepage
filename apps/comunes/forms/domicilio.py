@@ -1,12 +1,13 @@
 from crispy_forms import helper, layout
 from django import forms
 
-from apps.comunes import models
+
+from apps.comunes.models import Departamento, Domicilio, Localidad, Provincia
 
 
 class DomicilioForm(forms.ModelForm):
     class Meta:
-        model = models.Domicilio
+        model = Domicilio
         fields = ['tipo', 
                   'tipo_calle', 'nombre', 'numero', 
                   'piso', 'puerta', 'barrio', 
@@ -18,14 +19,12 @@ class DomicilioForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        # dropdown
-        self.fields['departamento'].queryset = models.Departamento.objects.none()
-        self.fields['localidad'].queryset = models.Localidad.objects.none()
-        if self.instance:
-            if self.instance.provincia_id:
-                self.fields['departamento'].queryset = (models.Departamento.objects.filter(provincia_id=self.instance.provincia_id))
-            if self.instance.departamento_id:
-                self.fields['localidad'].queryset = (models.Localidad.objects.filter(departamento_id=self.instance.departamento_id))
+        # # dropdown
+        # if self.instance:
+        #     if self.instance.provincia_id:
+        #         self.fields['departamento'].queryset = (Departamento.objects.filter(provincia_id=self.instance.provincia_id))
+        #     if self.instance.departamento_id:
+        #         self.fields['localidad'].queryset = (Localidad.objects.filter(departamento_id=self.instance.departamento_id))
 
         # creamos helper
         self.helper = helper.FormHelper()
@@ -42,6 +41,7 @@ class DomicilioForm(forms.ModelForm):
         self.helper.layout = layout.Layout(
             layout.Row(
                 layout.Column('tipo', css_class='col-lg-4 col-md-6 mb-0'),
+                # layout.Column('active', css_class='col-lg-2 col-md-2 mt-5'),
             ),
             layout.Row(
                 layout.Column('tipo_calle', css_class='col-lg-3 col-md-6 mb-0'),
@@ -64,6 +64,7 @@ class DomicilioForm(forms.ModelForm):
                 layout.Column(layout.Field('localidad_texto',    readonly=True), css_class='col-lg-4 col-md-12 col-sm-12 mb-0'),
             ),
             'observacion_texto',
+            'active',
         )
 
         # agregamos los botones de acción
