@@ -87,6 +87,12 @@ class Provincia(CommonStruct):
     pais = models.ForeignKey(Pais, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=40)
 
+    # configuración para admin
+    list_display = ['pais', 'nombre']
+    list_display_links = ['nombre']
+    list_filter = ['pais__nombre']
+    search_fields = ['nombre']
+
     class Meta:
         db_table = 'provincia'
         verbose_name = 'Provincia'
@@ -99,6 +105,12 @@ class Provincia(CommonStruct):
 class Departamento(CommonStruct):
     provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=40)
+
+    # configuración para admin
+    list_display = ['provincia', 'nombre']
+    list_display_links = ['nombre']
+    list_filter = ['provincia__nombre']
+    search_fields = ['nombre']
 
     class Meta:
         db_table = 'departamento'
@@ -114,6 +126,13 @@ class Localidad(CommonStruct):
     nombre = models.CharField(max_length=150)
     cod_postal = models.CharField('Cód. Postal', max_length=12, null=True, blank=True)
     cod_area_tel = models.CharField('Cód. Area Telef.', max_length=4, null=True, blank=True)
+
+    # configuración para admin
+    list_display = ['id', 'nombre', 'cod_postal', 'cod_area_tel']
+    list_display_links = ['nombre']
+    exclude = []
+    search_fields = ['nombre']
+    list_filter = ['departamento']
 
     class Meta:
         db_table = 'localidad'
@@ -205,11 +224,13 @@ class Domicilio(CommonStruct):
     observacion_texto = models.TextField('Nota', null=True, blank=True)
 
     # configuración para admin
-    list_display = ['id', 'tipo', 'nombre', 'numero', 'piso', 'puerta']
-    list_display_links = ['id']
-    exclude = []
-    search_fields = ['nombre']
     date_hierarchy = ''
+    exclude = []
+    list_display = ['id', 'tipo', 'nombre', 'numero', 'piso', 'puerta', 'active']
+    list_display_links = ['id']
+    list_filter = ['provincia']
+    ordering = ['tipo', 'nombre', 'numero']
+    search_fields = ['nombre']
 
     class Meta:
         db_table = 'domicilio'

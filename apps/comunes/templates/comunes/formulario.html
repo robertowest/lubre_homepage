@@ -27,6 +27,7 @@
     $('#myform').append('<input type="hidden" name="previous_url" value="'+document.referrer+'" />');
     </script>
 
+    {# cargamos el template del directorio local de la aplicación #}
     {% with appname|add:"/comunes_formulario.html" as template_name %}
         {% if template_name|file_exists %}
             <!-- agregamos funciones personalizadas -->

@@ -497,7 +497,7 @@
 - model: comunes.localidad
   pk: 12
   fields:
-    nombre: San Miguel de Tucumán (Est. Tucumán)
+    nombre: San Miguel de Tucumán
     departamento: 2
 - model: comunes.localidad
   pk: 13

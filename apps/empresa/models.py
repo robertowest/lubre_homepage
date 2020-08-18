@@ -20,6 +20,7 @@ class Comercial(CommonStruct):
     list_display = ['persona_id', 'persona', 'usuario', 'active']
     list_display_links = ['persona']
     search_fields = ['persona__apellido']
+    ordering = ['persona__apellido', 'persona__nombre']
 
     class Meta:
         db_table = 'comercial'
@@ -69,8 +70,10 @@ class Actividad(CommonStruct):
                                null=True, blank=True, verbose_name='Padre')
 
     # configuración para admin
-    list_display = ['parent', 'nombre']
+    list_display = ['nombre']
     list_display_links = ['nombre']
+    search_fields = ['nombre']
+    ordering = ['nombre']
 
     class Meta:
         db_table = 'actividad'
@@ -158,8 +161,8 @@ class EmpresaComunicaciones(models.Model):
 
 class EmpresaActividadContactos(models.Model):
     # Empresa-Contacto ahora depende de Empresa-Actividad-Contacto
-    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING)
-    persona = models.ForeignKey(Persona, models.DO_NOTHING, related_name='ea_contactos')
+    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING, related_name='ea_contactos')
+    persona = models.ForeignKey(Persona, models.DO_NOTHING)
 
     class Meta:
         managed = True
@@ -169,8 +172,8 @@ class EmpresaActividadContactos(models.Model):
 
 class EmpresaActividadDomicilios(models.Model):
     # Empresa-Domicilio ahora depende de Empresa-Actividad-Domicilio
-    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING)
-    domicilio = models.ForeignKey(Domicilio, models.DO_NOTHING, related_name='ea_domicilios')
+    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING, related_name='ea_domicilios')
+    domicilio = models.ForeignKey(Domicilio, models.DO_NOTHING)
 
     class Meta:
         managed = True  # False

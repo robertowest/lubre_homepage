@@ -397,10 +397,14 @@ class CreateAddressView(LoginRequiredMixin, generic.CreateView):
 
         # grabamos el objeto para obtener identificador
         self.object = form.save()
-        # obtenemos el objeto primario
-        empresa = models.EmpresaActividades.objects.get(id=self.kwargs['pk'])
-        # creamos la asociación
-        empresa.domicilios.add(self.object)
+        # obtenemos el objeto primario 
+        ea = models.EmpresaActividades.objects.get(id=self.kwargs['pk'])
+        # creamos la asociación con empresa-actividad
+        ea.domicilios.add(self.object)
+        # ea_domicilios = models.EmpresaActividadDomicilios
+        # ea_domicilios.empresa_actividad = ea
+        # ea_domicilios.domicilio = self.object
+        # ea_domicilios.save()
 
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
@@ -425,9 +429,9 @@ class CreateContactView(LoginRequiredMixin, generic.CreateView):
         # grabamos el objeto para obtener identificador
         self.object = form.save()
         # obtenemos el objeto primario
-        empresa = models.EmpresaActividades.objects.get(id=self.kwargs['pk'])
-        # creamos la asociación
-        empresa.contactos.add(self.object)
+        ea = models.EmpresaActividades.objects.get(id=self.kwargs['pk'])
+        # creamos la asociación con empresa-actividad
+        ea.contactos.add(self.object)
 
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:

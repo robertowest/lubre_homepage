@@ -1,0 +1,32 @@
+<script>
+  $("#id_provincia").change(function () {
+    var url = "{% url 'domicilio:ajax_carga_departamentos' %}";
+    var provinciaId = $(this).val();
+    $.ajax({
+      url: url,
+      data: {fk: provinciaId},      
+      success: function (data) {
+        $("#id_departamento").html(data);
+        $('#id_localidad').empty();
+      },
+      error: function(xhr, status, error) {
+        alert(xhr.responseText);
+      }      
+    });
+  });
+
+  $("#id_departamento").change(function () {
+    var url = "{% url 'domicilio:ajax_carga_localidades' %}";
+    var departamentoId = $(this).val();
+    $.ajax({
+      url: url,
+      data: {fk: departamentoId},      
+      success: function (data) {
+        $("#id_localidad").html(data);
+      },
+      error: function(xhr, status, error) {
+        alert(xhr.responseText);
+      }      
+    });
+  });
+</script>

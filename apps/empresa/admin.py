@@ -8,14 +8,17 @@ class ComercialAdmin(admin.ModelAdmin):
     list_display = model.list_display
     list_display_links = model.list_display_links
     search_fields = model.search_fields
+    ordering = model.ordering
 
 
-admin.site.register(models.Actividad)
-# @admin.register(models.Actividad)
-# class ActividadAdmin(admin.ModelAdmin):
-#     model = models.Actividad
-#     list_display = model.list_display
-#     list_display_links = model.list_display_links
+# admin.site.register(models.Actividad)
+@admin.register(models.Actividad)
+class ActividadAdmin(admin.ModelAdmin):
+    model = models.Actividad
+    list_display = model.list_display
+    list_display_links = model.list_display_links
+    search_fields = model.search_fields
+    ordering = model.ordering
 
 
 @admin.register(models.Empresa)

@@ -3,9 +3,34 @@ from django.contrib import admin
 from . import models
 
 admin.site.register(models.Pais)
-admin.site.register(models.Provincia)
-admin.site.register(models.Departamento)
-admin.site.register(models.Localidad)
+
+@admin.register(models.Provincia)
+class ProvinciaAdmin(admin.ModelAdmin):
+    model = models.Provincia
+    list_display = model.list_display
+    list_display_links = model.list_display_links
+    list_filter = model.list_filter
+    search_fields = model.search_fields
+    ordering = ['nombre']
+
+@admin.register(models.Departamento)
+class DepartamentoAdmin(admin.ModelAdmin):
+    model = models.Departamento
+    list_display = model.list_display
+    list_display_links = model.list_display_links
+    list_filter = model.list_filter
+    search_fields = model.search_fields
+    ordering = ['nombre']
+
+@admin.register(models.Localidad)
+class LocalidadAdmin(admin.ModelAdmin):
+    model = models.Localidad
+    list_display = model.list_display
+    list_display_links = model.list_display_links
+    search_fields = model.search_fields
+    list_filter = model.list_filter
+    ordering = ['nombre']
+
 
 # class ProvinciaFilter(admin.SimpleListFilter):
 #     title = 'Provincia'
@@ -56,7 +81,15 @@ admin.site.register(models.Localidad)
 #     list_filter = [ProvinciaFilter, NivelFilter]
 
 
-admin.site.register(models.Domicilio)
+@admin.register(models.Domicilio)
+class DomicilioAdmin(admin.ModelAdmin):
+    model = models.Domicilio
+    list_display = model.list_display
+    list_display_links = model.list_display_links
+    search_fields = model.search_fields
+    list_filter = model.list_filter
+    ordering = model.ordering
+
 admin.site.register(models.Diccionario)
 admin.site.register(models.Comunicacion)
 
