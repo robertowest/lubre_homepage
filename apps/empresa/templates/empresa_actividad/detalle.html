@@ -69,6 +69,18 @@
                                     <a href="{{registro.domicilio.get_update_url}}">{{registro.domicilio}}</a>&nbsp; 
                                     {{registro.domicilio.localidad_texto}}
                                 </td>
+                                <td align="right" style="white-space:nowrap;">
+                                    <a href="#" style="color: gray;"
+                                    data-toggle="modal" data-target="#myModal"
+                                    data-url="{% url 'empresa_actividad:reasignar_domicilio' object.pk registro.pk %}"
+                                    data-pk="{{object.pk}}">
+                                        <i class="fa fa-exchange-alt"></i>
+                                    </a>
+                                    <a href="#" style="color: rgb(252, 40, 40)"
+                                    onclick="return confirm('¿Está seguro de borrar?')">
+                                    <i class="fa fa-trash-alt"></i>
+                                    </a>
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -83,6 +95,14 @@
                         </span>
                         <span class="text">Nuevo</span>
                     </a>
+                    <!-- cambiar asignación del domicilio entre actividades
+                    <a href="#" class="btn btn-secondary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-exchange-alt"></i>
+                        </span>
+                        <span class="text">Re-asignar</span>
+                    </a>
+                    -->
                 </div>
             </div>
         </div>
@@ -121,6 +141,12 @@
                                     {% endfor %}
                                 </td>
 {% endcomment %}
+                                <td align="right" style="white-space:nowrap;">
+                                    <a href="#" style="color: rgb(252, 40, 40);"
+                                       onclick="return confirm('¿Está seguro de borrar?')">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </a>
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -136,7 +162,7 @@
                         <span class="text">Nuevo</span>
                     </a>
                     <!-- asociar contacto existente a la empresa -->
-                    <a class="btn btn-warning btn-icon-split"
+                    <a href="#" class="btn btn-secondary btn-icon-split"
                         data-toggle="modal" data-target="#myModal"
                         data-url="{% url 'empresa:buscar_contacto' object.pk %}"
                         data-pk="{{object.pk}}">

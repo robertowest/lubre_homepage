@@ -400,11 +400,11 @@ class CreateAddressView(LoginRequiredMixin, generic.CreateView):
         # obtenemos el objeto primario 
         ea = models.EmpresaActividades.objects.get(id=self.kwargs['pk'])
         # creamos la asociación con empresa-actividad
-        ea.domicilios.add(self.object)
-        # ea_domicilios = models.EmpresaActividadDomicilios
-        # ea_domicilios.empresa_actividad = ea
-        # ea_domicilios.domicilio = self.object
-        # ea_domicilios.save()
+        # ea.ea_domicilios.add(self.object)
+        models.EmpresaActividadDomicilios(
+            empresa_actividad = ea, 
+            domicilio = self.object
+        ).save()
 
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
@@ -431,7 +431,11 @@ class CreateContactView(LoginRequiredMixin, generic.CreateView):
         # obtenemos el objeto primario
         ea = models.EmpresaActividades.objects.get(id=self.kwargs['pk'])
         # creamos la asociación con empresa-actividad
-        ea.contactos.add(self.object)
+        # ea.contactos.add(self.object)
+        models.EmpresaActividadContactos(
+            empresa_actividad = ea,
+            persona = self.object
+        ).save()
 
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
@@ -462,8 +466,83 @@ def asociar_contacto(request, relaId, conId):
     return HttpResponseRedirect(url)
 
 
+@login_required(login_url='/accounts/login/')
+def reasignar_domicilio(request, eaID, domID):
+    obj_list = None
+    context = {
+        'object_list': obj_list,
+        'empresa_actividad_id': eaID,
+        'domicilio': domID,
+    }
+    return render(request, 'empresa_actividad/includes/_modal_reasigna.html', context)
 
 
+# -----------------------------------------------------------------------------
+# Comercial
+# -----------------------------------------------------------------------------
+
+
+class ComercialTemplateView(LoginRequiredMixin, generic.TemplateView):
+    def get(self, request, *args, **kwargs):
+        return ComercialListView.as_view()(request)
+
+
+class ComercialListView(LoginRequiredMixin, generic.ListView):
+    model = models.Comercial
+    template_name = 'comunes/tabla.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tableID'] = 'dtComerciales'
+        context['tableCLASS'] = 'display compact order-column'        
+        return context
+
+
+class ComercialCreateView(LoginRequiredMixin, generic.CreateView):
+    model = models.Comercial
+    form_class = forms.ComercialForm
+    template_name = 'comunes/formulario.html'
+    form_title = 'Nuevo Comercial'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form_title'] = self.form_title
+        return context
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        # terminamos, ¿hacia dónde vamos?
+        if 'previous_url' in self.request._post:
+            return HttpResponseRedirect(self.request._post['previous_url'])
+        return response
+
+
+class ComercialDetailView(LoginRequiredMixin, generic.DetailView):
+    model = models.Comercial
+    template_name = 'comunes/detalle.html'
+
+
+class ComercialUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = models.Comercial
+    form_class = forms.ComercialForm
+    template_name = 'comunes/formulario.html'
+    form_title = 'Modificación del Comercial'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form_title'] = self.form_title
+        return context
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        # terminamos, ¿hacia dónde vamos?
+        if 'previous_url' in self.request._post:
+            return HttpResponseRedirect(self.request._post['previous_url'])
+        return response
+
+
+class ComercialDeleteView(LoginRequiredMixin, generic.DeleteView):
+    pass
 
 
 # ----------------------------------------------------------------------------------

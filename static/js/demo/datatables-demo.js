@@ -94,15 +94,17 @@ $(document).ready(function() {
 });
 
 
-/*
 $(document).ready(function() {
-  $('#dataTable').DataTable( {
-    "language": {},
+  $('#dtComerciales').DataTable({
+    "info": false,
+    "language": {
+      "decimal": "",
+      "emptyTable": "No hay datos disponibles en la tabla",
+      "loadingRecords": "Cargando ...",
+    },
     "lengthChange": false,
-    "responsive": true,
-    "scrollX": true,
-    "searching": true,
+    "searching": false,
     "order": [[ 1, "asc" ]],
+    "paging": false,
   });
 });
-*/

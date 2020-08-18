@@ -1,0 +1,22 @@
+<thead>
+    <tr>
+        <th>#</th>
+        <th>Persona</th>
+        <th>Usuario</th>
+        <th>Activo</th>
+    </tr>
+</thead>
+<tbody>
+    {% for object in object_list %}
+    <tr>
+        <td>{{object.pk}}</td>
+        <td>
+            <a href="{{object.get_update_url}}">
+                {{object}}
+            </a>
+        </td>
+        <td>{{object.usuario}}</td>
+        <td>{{object.active}}</td>
+    </tr>
+    {% endfor %}
+</tbody>

@@ -1,5 +1,10 @@
 {% load static %}
 
+{% url 'empresa:index'   as empresa_url %}
+{% url 'actividad:index' as actividad_url %}
+{% url 'comercial:index' as comercial_url %}
+{% url 'persona:index'   as persona_url %}
+
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -13,24 +18,29 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
-
-    <li class="nav-item active">
+    <li class="nav-item {% if request.path == empresa_url %} active {%endif%}">
         <a class="nav-link" href="{% url 'empresa:index' %}">
             <i class="fas fa-fw fa-building"></i>
             <span>Empresas</span>
         </a>
     </li>
-    <li class="nav-item active">
+    <li class="nav-item {% if request.path == actividad_url %} active {%endif%}">
         <a class="nav-link" href="{% url 'actividad:index' %}">
             <i class="fas fa-fw fa-layer-group"></i>
             <span>Actividades</span>
+        </a>
+    </li>
+    <li class="nav-item {% if request.path == comercial_url %} active {%endif%}">
+        <a class="nav-link" href="{% url 'comercial:index' %}">
+            <i class="fas fa-fw fa-user-tie"></i>
+            <span>Comerciales</span>
         </a>
     </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">
 
-    <li class="nav-item active">
+    <li class="nav-item {% if request.path == persona_url %} active {%endif%}">
         <a class="nav-link" href="{% url 'persona:index' %}">
             <i class="fas fa-fw fa-users"></i>
             <span>Personas</span>

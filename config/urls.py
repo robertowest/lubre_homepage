@@ -41,13 +41,14 @@ urlpatterns = [
     path('domicilio/', include('apps.comunes.urls.domicilio')),
 
     path('actividad/', include('apps.empresa.urls.actividad')),
+    path('comercial/', include('apps.empresa.urls.comercial')),
     path('empresa/', include('apps.empresa.urls.empresa')),
     path('empresa_actividad/', include('apps.empresa.urls.empresa_actividad')),
 
     path('persona/', include('apps.persona.urls')),
 
     path('empleado/', TemplateView.as_view(template_name='default_base.html'), name='empleado'),
-    path('comercial/', include('apps.firebird.urls')),
+    path('gestion/', include('apps.firebird.urls')),
 
 
     path('prueba/', include('apps.prueba.urls')),
