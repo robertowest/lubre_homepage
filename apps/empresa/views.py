@@ -468,7 +468,7 @@ def asociar_contacto(request, relaId, conId):
 
 @login_required(login_url='/accounts/login/')
 def reasignar_domicilio(request, eaID, domID):
-    obj_list = None
+    obj_list = models.EmpresaActividades.objects.order_by('nombre')
     context = {
         'object_list': obj_list,
         'empresa_actividad_id': eaID,

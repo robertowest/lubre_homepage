@@ -1,10 +1,44 @@
 {% load static %}
 
-<h1>reasignación de domicilio</h1>
+<table id="dataTableModal" class="display compact" style="width:100%">
+  <thead>
+      <tr>
+          <th>Actividad</th>
+      </tr>
+  </thead>
+  <tbody>
+      {% for object in object_list %}
+      <tr>
+          <td><a href="#">{{object}}</a></td>
+      </tr>
+      {% endfor %}
+  </tbody>
+</table>
 
 
-<script type="text/javascript">
+<script type="text/javascript" class="init">
 $(document).ready(function() {
   $('#myModalLabel').html("Re-asignar domicilio")
+  $('#dataTableModal').DataTable({
+    "info":     false,
+    "language": {
+      "decimal":        "",
+      "emptyTable":     "No hay datos disponibles en la tabla",
+      "loadingRecords": "Cargando ...",
+      "processing":     "Procesando ...",
+      "search":         "Buscar:",
+      "paginate": {
+          "first":      "<<",
+          "last":       ">>",
+          "next":       ">",
+          "previous":   "<"
+      },
+    },
+    "lengthChange": false,
+    "searching": true,
+    "ordering": false,
+    "paging": true,
+    "pagingType": "simple",
+  });
 });
 </script>
