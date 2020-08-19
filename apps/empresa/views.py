@@ -466,15 +466,49 @@ def asociar_contacto(request, relaId, conId):
     return HttpResponseRedirect(url)
 
 
+# -----------------------------------------------------------------------------
+# Empresa Actividad Contacto
+# -----------------------------------------------------------------------------
+
 @login_required(login_url='/accounts/login/')
-def reasignar_domicilio(request, eaID, domID):
-    obj_list = models.EmpresaActividades.objects.order_by('nombre')
+def eac_delete(request, eacId):
+    obj = models.EmpresaActividadContactos.objects.get(pk=eacId)
+    pk = obj.empresa_actividad_id
+    obj.delete()
+    url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': pk})
+    return HttpResponseRedirect(url)
+
+
+# -----------------------------------------------------------------------------
+# Empresa Actividad Domicilio
+# -----------------------------------------------------------------------------
+
+@login_required(login_url='/accounts/login/')
+def reasignar_domicilio(request, eaId, eadId):
+    empresa = models.EmpresaActividades.objects.get(id=eaId).empresa_id
+    obj_list = models.EmpresaActividades.objects.filter(empresa_id=empresa)
     context = {
         'object_list': obj_list,
-        'empresa_actividad_id': eaID,
-        'domicilio': domID,
+        'empresa_actividad_id': eaId,
+        'empresa_actividad_domicilio_id': eadId,
     }
     return render(request, 'empresa_actividad/includes/_modal_reasigna.html', context)
+
+@login_required(login_url='/accounts/login/')
+def reasignar_domicilio_ex(request, eaId, eadId):
+    relacion = models.EmpresaActividadDomicilios.objects.get(id=eadId)
+    relacion.empresa_actividad_id = eaId
+    relacion.save()
+    url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': eaId})
+    return HttpResponseRedirect(url)
+
+@login_required(login_url='/accounts/login/')
+def ead_delete(request, eadId):
+    obj = models.EmpresaActividadDomicilios.objects.get(pk=eadId)
+    pk = obj.empresa_actividad_id
+    obj.delete()
+    url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': pk})
+    return HttpResponseRedirect(url)
 
 
 # -----------------------------------------------------------------------------

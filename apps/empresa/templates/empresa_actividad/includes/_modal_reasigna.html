@@ -9,7 +9,11 @@
   <tbody>
       {% for object in object_list %}
       <tr>
-          <td><a href="#">{{object}}</a></td>
+          <td>
+            <a href="{% url 'empresa_actividad:reasignar_ead' object.pk empresa_actividad_domicilio_id %}">
+              {{object.actividad}}
+            </a>
+          </td>
       </tr>
       {% endfor %}
   </tbody>
