@@ -82,28 +82,12 @@ else:
     DATABASES['default'] = DATABASES['development']
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'desarrollo_dj',
-    #     'HOST': '192.168.1.2',  # lubre local
-    #     'PORT': '3306',
-    #     'USER': 'roberto',
-    #     'PASSWORD': 'roberto',
-    # },
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'admin_desarrollo',
-    #     'HOST': '190.105.227.83',  # LatinCloud
-    #     'PORT': '3306',
-    #     'USER': 'admin_roberto',
-    #     'PASSWORD': 'roberto',
-    # },
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lubresrl_dj',
-        'HOST': '172.17.0.2',
+        'NAME': 'desarrollo_dj',
+        'HOST': '192.168.1.2',  # lubre local
         'PORT': '3306',
-        'USER': 'root',
+        'USER': 'roberto',
         'PASSWORD': 'roberto',
     },
     'firebird': {

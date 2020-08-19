@@ -3,15 +3,15 @@
     <tr>
         <th>#</th>
         <th>Razon Social</th>
-        <th>Actividad</th>
         <th>CUIT</th>
+        <th>Act. Principal</th>
     </tr>
 </thead>
 <tbody>
     {% for object in object_list %}
     <tr>
         <td>{{object.pk}}</td>
-        <td><a href="{{object.get_detail_url}}">{{object.razon_social}}</a></td>
+        <td><a href="{{object.get_detail_url}}" target="_blank">{{object.razon_social}}</a></td>
         <td>{{object.cuit}}</td>
         <td>{{object.actividad}}</td>
     </tr>

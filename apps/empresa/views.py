@@ -165,9 +165,16 @@ class FilterListView(LoginRequiredMixin, generic.ListView):
         if self.kwargs['filtro'] == 0:
             self.kwargs['filtro'] = None
         if name == 'filtro_actividad':
-            return self.model.objects.filter(actividad=self.kwargs['filtro']).order_by('razon_social')
+            return self.model.objects \
+                   .filter(actividad=self.kwargs['filtro']) \
+                   .filter(active=True) \
+                   .order_by('razon_social')
         if name == 'filtro_comercial':
-            return self.model.objects.filter(comercial=self.kwargs['filtro']).order_by('razon_social')
+            return self.model.objects \
+                   .filter(comercial=self.kwargs['filtro']) \
+                   .filter(modified__isnull=True) \
+                   .filter(active=True) \
+                   .order_by('razon_social')
         return self.model.objects.all().order_by('razon_social')
 
     def get_context_data(self, **kwargs):
