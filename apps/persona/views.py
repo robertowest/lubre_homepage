@@ -1,7 +1,8 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from django.urls import reverse_lazy
+from django.urls import reverse, reverse_lazy
 from django.views import generic
 
 from . import forms, models
@@ -153,3 +154,11 @@ class CreateAddressView(generic.CreateView):
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
         return response
+
+
+@login_required(login_url='/accounts/login/')
+def persona_contacto_eliminar(request, pk, fk):
+    p = models.Persona.objects.get(id=pk)
+    p.comunicaciones.remove(fk)
+    url = reverse('persona:detail', args=(), kwargs={'pk': pk})
+    return HttpResponseRedirect(url)

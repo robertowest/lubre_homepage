@@ -56,6 +56,15 @@
                                 <td>
                                     <a href="{{registro.get_update_url}}">{{registro.texto}}</a>                                    
                                 </td>
+                                <td align="right" style="white-space:nowrap;">
+                                    <a href="#" style="color: rgb(252, 40, 40)"
+                                       data-toggle="modal" data-target="#confirmDelete"
+                                       data-title="Eliminar asociación"
+                                       data-message="¿Está seguro de eliminar esta asociación?"
+                                       data-url="{% url 'persona:persona_contacto_eliminar' object.pk registro.pk %}">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </a>
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -83,7 +92,7 @@
             <div class="collapse" id="domicilioCard">
                 <div class="card-body">
                     {% with object.domicilio as object %}
-                    {% include 'includes/_detail_snippet.html' %}
+                        {% include 'includes/_detail_snippet.html' %}
                     {% endwith %}
                 </div>    
                 <div class="card-footer">
@@ -107,4 +116,38 @@
         </div>
     </div>
 
+{% endblock %}
+
+
+
+{% block modal %}
+    {% include 'includes/_modal_delete.html' %}
+{% endblock %}
+
+
+{% block js %}
+    <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
+    <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+
+    <!-- mis funciones -->
+    <script type="text/javascript">
+        // delete modal
+        $('#confirmDelete').on('show.bs.modal', function (e) {
+            // título y mensaje personalizado
+            $title = $(e.relatedTarget).attr('data-title');
+            $(this).find('.modal-title').text($title);
+            $message = $(e.relatedTarget).attr('data-message');
+            $(this).find('.modal-body p').text($message);
+
+            // url del boton Ok
+            var dataURL = $(e.relatedTarget).data('url');
+            var link = $(this).find('#btnOkModal')[0];
+            link.href = dataURL;
+        });
+
+        $('#confirmDelete').find('btnOkModal').on('click', function (e) {
+            console.log( JSON.stringify(e, null, 2) );
+        });
+
+    </script>
 {% endblock %}

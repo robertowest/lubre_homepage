@@ -14,4 +14,6 @@ urlpatterns = [
 
     path('<int:fk>/comunicacion/', views.CreateContactView.as_view(), name='associate_with_contact'),
     path('<int:fk>/domicilio/', views.CreateAddressView.as_view(), name='associate_with_address'),
+
+    path('<int:pk>/contacto/<int:fk>/eliminar/', views.persona_contacto_eliminar, name='persona_contacto_eliminar'),
 ]
