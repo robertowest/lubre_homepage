@@ -27,6 +27,9 @@ urlpatterns = [
     path('<int:fk>/domicilio/', views.CreateAddressView.as_view(), name='associate_with_address'),
     path('<int:fk>/contacto/', views.CreateContactView.as_view(), name='associate_with_contact'),
     path('<int:fk>/actividad/', views.ActividadMultiListView.as_view(), name='associate_with_actividad'),
+    
+    # baja de registros vinculados a la empresa-contacto
+    path('<int:empID>/comunicacion/<int:conID>/eliminar', views.comunication_delete, name='comunication_delete'),
 
     # asociar con registro existente
     path('<int:pk>/comunicacion/buscar/', views.buscar_comunicacion, name='buscar_comunicacion'),

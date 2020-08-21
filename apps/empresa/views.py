@@ -5,7 +5,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Count
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render, get_list_or_404, get_object_or_404
-from django.urls import resolve, reverse
+from django.urls import resolve, reverse, reverse_lazy
 from django.views import generic
 
 from . import forms, models
@@ -90,12 +90,6 @@ class EmpresaDetailView(LoginRequiredMixin, generic.DetailView):
         context = super().get_context_data(**kwargs)
         context['comunicaciones'] = context['empresa'].comunicaciones.filter(active=True)
         context['actividades'] = context['empresa'].actividades.filter(active=True)
-        # context['domicilios'] = context['empresa'].domicilios.filter(active=True)
-        # context['contactos'] = context['empresa'].contactos.filter(active=True)
-        # context['empresa'].contactos.filter(tipo='movil').filter(active=True)
-        # cargamos los celulares de los contactos
-        # for reg in context['contactos']:
-        #     reg.comunicaciones = reg.comunicaciones.filter(tipo='movil').filter(active=True)
         return context
 
 
@@ -124,7 +118,8 @@ class EmpresaUpdateView(LoginRequiredMixin, generic.UpdateView):
 
 
 class EmpresaDeleteView(LoginRequiredMixin, generic.DeleteView):
-    pass
+    model = models.Empresa
+    success_url = reverse_lazy('empresa:detail')
 
 
 def empresa_actividad(request, empId, actId):
@@ -217,6 +212,14 @@ class CreateComunicationView(LoginRequiredMixin, generic.CreateView):
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
         return response
+
+
+@login_required(login_url='/accounts/login/')
+def comunication_delete(request, empID, conID):
+    obj = models.EmpresaComunicaciones.objects.filter(empresa_id=empID, comunicacion_id=conID)
+    obj.delete()
+    url = reverse('empresa:detail', args=(), kwargs={'pk': empID})
+    return HttpResponseRedirect(url)
 
 
 class CreateActividadView(LoginRequiredMixin, generic.CreateView):

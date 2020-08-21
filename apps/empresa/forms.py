@@ -75,6 +75,7 @@ class EmpresaForm(forms.ModelForm):
                 layout.Column('actividades', css_class='col-lg-5 col-md-6 mb-0'),
                 layout.Column('observacion', css_class='col-lg-7 col-md-6 mb-0'),
             ),
+            'active',
         )
 
         # agregamos los botones de acción

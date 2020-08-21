@@ -48,7 +48,7 @@ DATABASES = {
     },
     'test': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'carteralubre',
+        'NAME': 'lubresrl_dj',
         'HOST': '172.17.0.2',
         'PORT': '3306',
         'USER': 'root',
@@ -82,13 +82,21 @@ else:
     DATABASES['default'] = DATABASES['development']
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'desarrollo_dj',
+    #     'HOST': '192.168.1.2',  # lubre local
+    #     'PORT': '3306',
+    #     'USER': 'roberto',
+    #     'PASSWORD': 'roberto',
+    # },
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'desarrollo_dj',
-        'HOST': '192.168.1.2',  # lubre local
+        'NAME': 'lubresrl_dj',
+        'HOST': '172.17.0.2',
         'PORT': '3306',
-        'USER': 'roberto',
-        'PASSWORD': 'roberto',
+        'USER': 'root',
+        'PASSWORD': 'roberto',    
     },
     'firebird': {
         # lubresrl.dyndns.org:4310
