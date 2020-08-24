@@ -1,5 +1,25 @@
 <script>
-  $(document).ready(function() {
+  $(document).ready2(function() {
+    var mydataString = "{{json_data|escapejs}}";
+    var proID = depID = locID = null;
+
+    if(mydataString != '') {
+      proID = JSON.parse(mydataString)['provincia'];
+      depID = JSON.parse(mydataString)['departamento'];
+      locID = JSON.parse(mydataString)['localidad'];
+    }    
+
+    if (proID != null) {
+      $("#id_provincia").trigger("change");
+      if (depID != null) {
+        $("#id_departamento").val = depID
+        $("#id_departamento").trigger("change");
+        if (locID != null) {
+          $("#id_localidad").val = locID
+        }
+      }
+    }
+
     alert('ok');
   });
 

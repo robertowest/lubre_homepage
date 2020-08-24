@@ -25,6 +25,10 @@ class DomicilioForm(forms.ModelForm):
         #         self.fields['departamento'].queryset = (Departamento.objects.filter(provincia_id=self.instance.provincia_id))
         #     if self.instance.departamento_id:
         #         self.fields['localidad'].queryset = (Localidad.objects.filter(departamento_id=self.instance.departamento_id))
+        if self.instance.provincia_id:
+            self.fields['departamento'].queryset = (Departamento.objects.filter(provincia_id=self.instance.provincia_id))
+        if self.instance.departamento_id:
+            self.fields['localidad'].queryset = (Localidad.objects.filter(departamento_id=self.instance.departamento_id))
 
         # creamos helper
         self.helper = helper.FormHelper()
