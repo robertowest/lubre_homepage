@@ -9,4 +9,4 @@ class ComercialTable(tables.Table):
     class Meta:
         model = Comercial
         template_name = "django_tables2/bootstrap.html"
-        fields = ('persona',)
+        fields = ('persona', 'active')

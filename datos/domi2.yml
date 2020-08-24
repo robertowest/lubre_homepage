@@ -1,0 +1,5999 @@
+- model: app_name.Model_name
+  pk: 3766
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Prov 303 Km 47
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Del Viso
+    localidad_texto: Galvez
+- model: app_name.Model_name
+  pk: 3767
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 375 Km 7,5 Las Tusquitas
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Venado Tuerto
+- model: app_name.Model_name
+  pk: 3768
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 573.2º Piso Of. 14
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3769
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: De Acuerdo Al Lugar Donde Construyen
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3770
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1283
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: General Taboada
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 3771
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Rio De Janeiro 55
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3772
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Laprida 463
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3773
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Italia Y Lisandro Borda. Obrador De Ingema
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3774
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 24 De Setiembre 717. 7º Piso
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3775
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Crisostomo Alvarez 2136- Tucumán
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3776
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Muñecas 47
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3777
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Santa Teresita
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3778
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Fortunata Garcia 1238
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Teniente Berdina
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3779
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Ayacucho 54 1°a
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3780
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Balcarce 627. Dto. 7
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3781
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Depósito Al Lado Del Ingenio Concepción
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: Monteros
+- model: app_name.Model_name
+  pk: 3782
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: La Marta. La Cruz
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: General Deheza
+- model: app_name.Model_name
+  pk: 3783
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 392
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 3784
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 395
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 3785
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Las Piedras 2895
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3786
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Italia 1404
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 3787
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: Garcia 834
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Teniente Berdina
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3788
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Independencia 2365
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3789
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 650- 4º Piso. Tucumán
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3790
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Castro Barros 667
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3791
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: Pellegrini S/nro. La Encantada
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: San Fernando
+- model: app_name.Model_name
+  pk: 3792
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Autopista Y Ruta 38-ex. Estac.servicio Sema
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 3793
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 304, Km. 42 .la Cruz
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3794
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Pellegrini 471
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3795
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Alsina 3090 - Taller
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3796
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Hipolito Irigoyen Y San Martín- El Tala
+    provincia: 3
+    provincia_texto: Salta
+    localidad_texto: Carlos Casares
+- model: app_name.Model_name
+  pk: 3797
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: La Rioja 79
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: Monteros
+- model: app_name.Model_name
+  pk: 3798
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Bartolome Mitre Y Esquina French
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Cruz Alta
+    localidad_texto: Tafí Viejo
+- model: app_name.Model_name
+  pk: 3799
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Autopista Acceso Norte
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Tusca Pozo
+- model: app_name.Model_name
+  pk: 3800
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Los Perea- Bajo Grande
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3801
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Finca En Capitan Caceres-
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: San Miguel
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 3802
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Congreso 430- 7º Piso A (oficina)
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3803
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Estac De Serv. Blanca
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: Monteros
+- model: app_name.Model_name
+  pk: 3804
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Chiclana 630
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3805
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Jorge Solari 011-1526979794
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: Monteros
+- model: app_name.Model_name
+  pk: 3806
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Los Nogales Camino A Las Cañitas
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Florentino Ameghino
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 3807
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Nac. 9 Y Prov. 306
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Lastenia
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 3808
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 307, Km.16- El Chañar
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3809
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Chañar Pozo Sin Nro.
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Venado Tuerto
+- model: app_name.Model_name
+  pk: 3810
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 130 Km 50
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: San Andres
+- model: app_name.Model_name
+  pk: 3811
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 25 De Mayo 950
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 3812
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Alternativa A Los Gutierrez
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Candelaria
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 3813
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Nac. 9, Km. 1351
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Almafuerte
+- model: app_name.Model_name
+  pk: 3814
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Sarmiento 280
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3815
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Campo En La Cocha
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: Monteros
+- model: app_name.Model_name
+  pk: 3816
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Salazar Luis Angel ( 154-388478)
+    provincia_texto: Buenos Aires
+    departamento_texto: Gral. Pedernera
+    localidad_texto: La Florida
+- model: app_name.Model_name
+  pk: 3817
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Soto Sergio Fernando (154-175640
+    provincia_texto: Chaco
+    localidad_texto: Esquina
+- model: app_name.Model_name
+  pk: 3818
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Sra. Gachy Navarro 153-357899
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 3819
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Laprida 2262
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3820
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 3821
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Balcarce 806
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3822
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Mecanica Morales. Florida 2318
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3823
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Autopista Tuc.famaillá, Km. 797,javier De La Rosa
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: Lastenia
+- model: app_name.Model_name
+  pk: 3824
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín Y Avda. Mitre
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3825
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Roca 0 Manantial De Ovanta
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Bella Vista
+- model: app_name.Model_name
+  pk: 3826
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Garmendia
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Simoca
+- model: app_name.Model_name
+  pk: 3827
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Lorenzo 496
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3828
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: 1º De Mayo 40 (alt. Juan B. Justo 1.100)
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3829
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lola Mora 8.
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 3830
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Nuevo Nombre De La Cta. Carrocerias Oscarcito Srl
+    provincia_texto: Buenos Aires
+    localidad_texto: La Florida
+- model: app_name.Model_name
+  pk: 3831
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1308 .tucumán
+    provincia_texto: Jujuy
+- model: app_name.Model_name
+  pk: 3832
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Mitre 215
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3833
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Curva De Los >nogales
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Lozada
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 3834
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Azcuenaga 2351
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3835
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: En 24 De Setiembre 1347 Estac.serv.gnc "la 24"
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: Monteros
+- model: app_name.Model_name
+  pk: 3836
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tiene Depósitos En La Cocha
+    provincia_texto: Chaco
+    localidad_texto: Esquina
+- model: app_name.Model_name
+  pk: 3837
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: Caseros Y Azcuenaga
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 3838
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Inca Garcilazo 1581 - Alt Av Alem 1700
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3839
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Santiago 2658
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3840
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1300
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: San Martín
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 3841
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lamadrid 548
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3842
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Democracia Y Circumvalacion
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3843
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Williams Cross 2.000
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3844
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Rondeau 1.194 Y Bernabé Aráoz
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3845
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: William Cross 3300
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Lozada
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 3846
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Francisco De Aguirre 2112.
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3847
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Dean Funes 469
+    provincia: 3
+    provincia_texto: Salta
+    departamento_texto: La Ramada
+    localidad_texto: Villa Trinidad
+- model: app_name.Model_name
+  pk: 3848
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 1 Nro. 471. Las Talitas
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Río Chico
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 3849
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 301 Km 12
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Trancas
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 3850
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Bolivar 926-2º A- Tucumán
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: Lastenia
+- model: app_name.Model_name
+  pk: 3851
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Roca 54 -lubricentro San Jorge
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Río Chico
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 3852
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Republica De Libano 2632
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3853
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 38 Km 693
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: San Miguel de Tucumán
+- model: app_name.Model_name
+  pk: 3854
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Irigoyen - Ingeno Florida
+    barrio: La Florida
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Coronel Du Graty
+- model: app_name.Model_name
+  pk: 3855
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Oscar Heredia(155-452545) Y Roque Diaz Contratac.
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: Lastenia
+- model: app_name.Model_name
+  pk: 3856
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 304 Km 21
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Gral. José De San Martín
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3857
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Domiilio De Ofic. En San Martín 920.3ª A .tuc.
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Araoz
+    localidad_texto: Chabás
+- model: app_name.Model_name
+  pk: 3858
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Miguel 1200
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: Monteros
+- model: app_name.Model_name
+  pk: 3859
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Ayacucho Y Lavalle
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3860
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Gral Paz 961
+    provincia_texto: Chubut
+- model: app_name.Model_name
+  pk: 3861
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 34 Km 840
+    provincia: 2
+    provincia_texto: Santiago del Estero
+    localidad_texto: Tucumán
+- model: app_name.Model_name
+  pk: 3862
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Campaña Del Desierto 300.los Pocitos
+    provincia_texto: Jujuy
+- model: app_name.Model_name
+  pk: 3863
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Aconquija 255
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3864
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: Boulonge Sur Mer 3115.
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3865
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Democracia 290 (entre Las Heras Y Entre Rios)
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3866
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1308
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Tacural
+    localidad_texto: El Naranjo
+- model: app_name.Model_name
+  pk: 3867
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Lorenzo 496.2º Piso
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3868
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Zavalia 101 (esquina Pringles)
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Viclos
+- model: app_name.Model_name
+  pk: 3869
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 394
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Tusca Pozo
+- model: app_name.Model_name
+  pk: 3870
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 1.203. Villa Mariano Moreno
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Recreo
+    localidad_texto: Gastona
+- model: app_name.Model_name
+  pk: 3871
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Venezuela 836 (deposito)
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3872
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1308
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Florentino Ameghino
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 3873
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Trabaja Para Coca Cola
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 3874
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Arturo Illia 66
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Juan B. Alberdi
+- model: app_name.Model_name
+  pk: 3875
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Benjamin Matienzo 351
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 3876
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 9 De Julio 1.100
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3877
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 24 De Setiembre 1180
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3878
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Constitución 1400
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Río Chico
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 3879
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 395
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 3880
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Juan B Justo 1111
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3881
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Diaz Pablo /barrios Ezequiel155-076939
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: Lastenia
+- model: app_name.Model_name
+  pk: 3882
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Rivadavia Y San Juan
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3883
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Rio Urueña
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3884
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Sta. Fe 3 Era. Cuadra. Alderetes. Cruz Alta
+    provincia_texto: Buenos Aires
+    departamento_texto: Gral. Pedernera
+    localidad_texto: La Florida
+- model: app_name.Model_name
+  pk: 3885
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: El Puesto
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: San Pablo
+    localidad_texto: Bañado De Ovanta
+- model: app_name.Model_name
+  pk: 3886
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Bolivia 1820
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 3887
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Estacion De Servicio Blanca Lules Y Ruta 38
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Bella Vista
+- model: app_name.Model_name
+  pk: 3888
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Lorenzo 496 2° Piso
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3889
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 305, Km.35. El Sunchal
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3890
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Gral Paz 1414
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3891
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Bobadal
+    provincia: 2
+    provincia_texto: Santiago del Estero
+    departamento_texto: San Andres
+    localidad_texto: San Agustín
+- model: app_name.Model_name
+  pk: 3892
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Choromoro
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Banda del Río Salí
+- model: app_name.Model_name
+  pk: 3893
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lavalle 2460
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3894
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Gral Paz 374. Planta Baja Dto. C
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3895
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Juan B. Justo 1980
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3896
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 302, Km. 10,4. Cevil Pozo
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Coronel Du Graty
+- model: app_name.Model_name
+  pk: 3897
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Diagonal A Tafi Viejo, Km. 6 Y Medio(empaque Cota)
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 3898
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 305 Km 12
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 3899
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Grtegorio De Jesus Diaz 1052
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3900
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Juan B. Justo Antes Av.las Bases
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 3901
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Nac. 9, Km. 1225
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Cruz Alta
+- model: app_name.Model_name
+  pk: 3902
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lavalle 3500
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3903
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Dom Bosco 1492
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3904
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Negocio Mercedes Del Parque
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3905
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Mitre 172
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: San Miguel de Tucumán
+- model: app_name.Model_name
+  pk: 3906
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Cooperativa Union Y Progreso . Burruyacu
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3907
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Diego De Villaroel 850
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 3908
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: General Paz 2059
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 3909
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: General Paz 2059
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 3910
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 1058
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 3911
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Libertad 230
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Bella Vista
+- model: app_name.Model_name
+  pk: 3912
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1304-los Nogales
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3913
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Juan 736. Piso Planta Baja
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3914
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 384/392
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 3915
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: Lote 8,
+    barrio: Las Flores
+    provincia: 2
+    provincia_texto: Santiago del Estero
+    departamento_texto: Las Colonias
+    localidad_texto: Rumi Punco
+- model: app_name.Model_name
+  pk: 3916
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: José Hernandez 935-
+    barrio: Obispo Piedrabuena
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 3917
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: Las Montañitas
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 3918
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Maipu 41 2 B°
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3919
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 332 Y 38
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Tafí Viejo
+- model: app_name.Model_name
+  pk: 3920
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Mz1.cam.sirga 5000.bºs.martin
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 3921
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Jujuy 2800. San Miguel De Tucumán
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 3922
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Garmendia Y Charcas
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Los Porceles
+    localidad_texto: Almafuerte
+- model: app_name.Model_name
+  pk: 3923
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Sarmiento 3era.cuadra
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Simoca
+- model: app_name.Model_name
+  pk: 3924
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Junin 1.140 Y En Ruta Nac.9, Km.1278(bajo Grande)
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Coronel Du Graty
+- model: app_name.Model_name
+  pk: 3925
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Ayacucho 1404
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 3926
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1283
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: General Taboada
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 3927
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1283
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: General Taboada
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 3928
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 320, Km.8, Agua Dulce
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Arequito
+- model: app_name.Model_name
+  pk: 3929
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Chabuco 349
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Graneros
+    localidad_texto: Anca Juli
+- model: app_name.Model_name
+  pk: 3930
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Est.terminal.brigido Terán 250,doto.74
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 3931
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Caracas 2415
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 3932
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: El Empalme
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Cafayate
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 3933
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9 Km 1308
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Florentino Ameghino
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 3934
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Belgrano 130
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: San Miguel de Tucumán
+- model: app_name.Model_name
+  pk: 3935
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Corrientes 1528
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Las Rosas
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 3936
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Bañado De Ovanta
+    provincia: 4
+    provincia_texto: Catamarca
+    departamento_texto: Ranchillos
+    localidad_texto: San Javier
+- model: app_name.Model_name
+  pk: 3937
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tucuman 422
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 3938
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Atahona
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Florida
+    localidad_texto: Juan B. Alberdi
+- model: app_name.Model_name
+  pk: 3939
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: Las Talitas,mz. A. Lote 3
+    barrio: Loma Alta
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 3940
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 38
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Bella Vista
+- model: app_name.Model_name
+  pk: 3941
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: Tuyuti 1639. Dto. L
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3942
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín Y Guatemala
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Teniente Berdina
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3943
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km.1308
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Florentino Ameghino
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 3944
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1285
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Trancas
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 3945
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 317, Km.1 El Mastil
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Balcarce
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3946
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Saenz Peña 0
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Amaicha Del Valle
+- model: app_name.Model_name
+  pk: 3947
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: El Obrador.intersec Ruta 38.con Ruta Pcial 331
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Cruz Alta
+    localidad_texto: Tafí Viejo
+- model: app_name.Model_name
+  pk: 3948
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: mz. "a". Casa 4-
+    barrio: Milagro
+    provincia: 3
+    provincia_texto: Salta
+    localidad_texto: Carlos Casares
+- model: app_name.Model_name
+  pk: 3949
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: B Teran 345
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3950
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Iscayacú
+    provincia: 2
+    provincia_texto: Santiago del Estero
+    departamento_texto: San Andres
+    localidad_texto: San Agustín
+- model: app_name.Model_name
+  pk: 3951
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9,km.1308
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Florentino Ameghino
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 3952
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 305, Km 6,5
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 3953
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Benjamin Aráoz 1143 8
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3954
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Country Las Jungas
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3955
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: La Virgina
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3956
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lubricentro San Martín (nombre De Fantasia)
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3957
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Marcos Paz 1808/ Tercero Atanor. Cosecha 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3958
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Salta 848
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3959
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Ing. Antonio Vicari(obras Públicas-154-387838)
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3960
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Alem 146 Piso.9 Dpto.f
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3961
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Camino Del Peru 650
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 3962
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Obrador En Ruta 9 Y Ruta 306
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Araoz
+    localidad_texto: Chabás
+- model: app_name.Model_name
+  pk: 3963
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 38 Km 699
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Cañas
+    localidad_texto: Colombres
+- model: app_name.Model_name
+  pk: 3964
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 318, Km. 23
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Florida
+    localidad_texto: Colonia Caroya
+- model: app_name.Model_name
+  pk: 3965
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1263. El Cortaderal
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Venado Tuerto
+- model: app_name.Model_name
+  pk: 3966
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Jose Haymes 1.621
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 3967
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Roca 1802
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3968
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Avda, Juan B. Justo 2864
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3969
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Villa De Leales S/n
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Venado Tuerto
+- model: app_name.Model_name
+  pk: 3970
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 3971
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 157, Km.1216
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Cevilar
+- model: app_name.Model_name
+  pk: 3972
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 302 Km 14 Cruz Alta
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3973
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Azcuenga 234
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Coronel Du Graty
+- model: app_name.Model_name
+  pk: 3974
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 9 De Julio 404
+    provincia: 3
+    provincia_texto: Salta
+    localidad_texto: San Isidro
+- model: app_name.Model_name
+  pk: 3975
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Gral. Paz 969. Planta Baja. Dto. 5
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3976
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: Las Montañitas Sin Nro
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 3977
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: La Invernada Hacia El Oeste 2 Km. De Entrada
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Araoz
+    localidad_texto: Chabás
+- model: app_name.Model_name
+  pk: 3978
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Corrientes 1568
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3979
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 321 Km.7,5.las Corzuelas. Burruyacú
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Los Nogales
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 3980
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Mate De Luna 1985
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3981
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 301, Km. 24,5
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 3982
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Consumidor Final
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Araoz
+    localidad_texto: Chabás
+- model: app_name.Model_name
+  pk: 3983
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Puesto Los Pérez
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: San Miguel de Tucumán
+- model: app_name.Model_name
+  pk: 3984
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Rio Chico
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Cruz Alta
+    localidad_texto: Tafí Viejo
+- model: app_name.Model_name
+  pk: 3985
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 395
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 3986
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km.1306. Camino A Granja Modelo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3987
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: La Razón Social Es Cumbre Del Potrerillo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Araoz
+    localidad_texto: Chabás
+- model: app_name.Model_name
+  pk: 3988
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Estac. De Servicio Shell De Ruta 9 Y Constitución
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Tusca Pozo
+- model: app_name.Model_name
+  pk: 3989
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Juan 551
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Araoz
+    localidad_texto: Chabás
+- model: app_name.Model_name
+  pk: 3990
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Nac. 38,km. 702. La Invernada
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Araoz
+    localidad_texto: Chabás
+- model: app_name.Model_name
+  pk: 3991
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Camino De Sirga, Km. 2,5. Cementerio De La Paz
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 3992
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Gobernador Del Campo 1100
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3993
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Coronel Pringles 645. Aguilares
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Lomas Del Mirador
+    localidad_texto: La Banda
+- model: app_name.Model_name
+  pk: 3994
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 564.
+    provincia: 4
+    provincia_texto: Catamarca
+    departamento_texto: Perico
+    localidad_texto: Joaquín V. Gonzalez
+- model: app_name.Model_name
+  pk: 3995
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 315,km 7y Medio
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Chicligasta
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 3996
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Bolivia 871
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3997
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Lorenzo 2413
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 3998
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9,km. 1263- El Cortaderal
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Lomas De Tafi
+    localidad_texto: Libertador Gral. San Martín
+- model: app_name.Model_name
+  pk: 3999
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1286
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4000
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Lomas Del Mirador
+    localidad_texto: La Banda
+- model: app_name.Model_name
+  pk: 4001
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 25 De Mayo Y Gomez Llueca
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Juan B. Alberdi
+- model: app_name.Model_name
+  pk: 4002
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Maipu Al Final - Los Nogales
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 4003
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Finca El Carmen- Betania
+    provincia: 3
+    provincia_texto: Salta
+    departamento_texto: La Reducción
+    localidad_texto: Timbó Nuevo
+- model: app_name.Model_name
+  pk: 4004
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Roca 541
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4005
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Santiago Y Ejercito Del Norte
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4006
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lamadrid 371
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4007
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Roca 4.500
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4008
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 38. Agua Blanca
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4009
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Peru Sur 391
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 4010
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Belgrano 8 Rio 1
+    provincia_texto: Córdoba
+    departamento_texto: Benjamin Paz
+    localidad_texto: San Pedro de Colalao
+- model: app_name.Model_name
+  pk: 4011
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 325, Km. 10- El Galpon
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 4012
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Maipu 562. 6º Dta. A
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4013
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: José Alvarez 1834
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4014
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Honduras 50
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4015
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 777- San Salvador De Jujuy
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4016
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Siria 2067
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4017
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Las Palmeras 2763.
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Copo
+    localidad_texto: Balcarce
+- model: app_name.Model_name
+  pk: 4018
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Nicaragua 66- San Miguel De Tucumán
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4019
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1230. Tucumán
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4020
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Masrtin 112. Banda Del Rio Salí
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4021
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Alberdi 150
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4022
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 301, Km. 0210
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Villa Quinteros
+- model: app_name.Model_name
+  pk: 4023
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 9 De Julio 379. 1er. Piso. Oficina 6
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4024
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Alem 217
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Marcos Paz
+    localidad_texto: Coronel Moldes
+- model: app_name.Model_name
+  pk: 4025
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Hotel Sheraton
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4026
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Francisco De Aguirre 36
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4027
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Curva De Los Gutierrez
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4028
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Atanor
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Juarez Celman
+- model: app_name.Model_name
+  pk: 4029
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: El Naranjo
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Santa María
+- model: app_name.Model_name
+  pk: 4030
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Miguel Lillo 251
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4031
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Gral. Paz 576. Piso 15 Y 16º
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4032
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Octubresofia@hotmail.com
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4033
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Está En Estación De Servicio De Amaicha Del Valle
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4034
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Libertad 167 (4322004 /155-048202)
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4035
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Belgrano Altura 200
+    provincia: 1
+    provincia_texto: Tucumán
+- model: app_name.Model_name
+  pk: 4036
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4037
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 24 De Setiembre 987. 3º Piso
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4038
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Peru Sur 1019
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 4039
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: mza. C, Casa 5-
+    barrio: 500 Viviendas
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4040
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Gobernador Del Campo 816 (sucursal)
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4041
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Santa Rosa De Leales
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Venado Tuerto
+- model: app_name.Model_name
+  pk: 4042
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 25 De Mayo 6ta Cuadra
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Monte Bello
+- model: app_name.Model_name
+  pk: 4043
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Frias Silva 825
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4044
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Frias Silva 610
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4045
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 324 - Camino Ing. Fronterita
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4046
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 302, Km.6
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4047
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Amador Lucero Y Lamadrid
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4048
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Sarmiento 170
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4049
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Jujuy 3.500
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4050
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Gobernador Del Campo 816
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4051
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Zona Franca Oficina Nro. 8. Tucuman
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4052
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 920. 6º Piso "b"
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4053
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Zuviria 255. Local 4
+    provincia: 3
+    provincia_texto: Salta
+    departamento_texto: Santa María
+    localidad_texto: Santa Ana
+- model: app_name.Model_name
+  pk: 4054
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 315, Km.14 Y 1/2.
+    barrio: Islas Malvinas
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 4055
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Colon 1041
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4056
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Amadeo Jacques 1216
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4057
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Corrientes 1568
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4058
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 304,km.15
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Santa Rosa
+- model: app_name.Model_name
+  pk: 4059
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Mendoza 1617
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4060
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 317,km. 9,5 La Ramada De Abajo. Burruyacú
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Balcarce
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4061
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Gobernador Del Campo 1.100
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4062
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Cambio De Razon Social Por Romano Leal Javier
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4063
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Toma Obras Sanitarias,km.3 .estación Vipos
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4064
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Aconquija 775
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4065
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Kilometro Cero - Av. Belgrano 1824
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4066
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Guillermo Rawson 1126
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4067
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Sauce Huacho
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4068
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: San Martín 80
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Teniente Berdina
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4069
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Maipu 2500
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 4070
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 341 Km 24,5
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Rio Chico
+    localidad_texto: Pilar
+- model: app_name.Model_name
+  pk: 4071
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 317, Km. 7,5 La Ramada De Abajo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4072
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 317,km.7,5 La Ramada De Abajo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4073
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 395
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 4074
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Roca 600
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4075
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Juan 252
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4076
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 317, Km. 7,5. La Ramada De Abajo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4077
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 301 Y Alfredo Guzman
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Bella Vista
+- model: app_name.Model_name
+  pk: 4078
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Piedrabuena
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4079
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Juan 738
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4080
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Pedro Miguel Aráoz 564. Tafi Viejo
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4081
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: La Ramada De Abajo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4082
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: 9 de Julio 1357
+    barrio: San Cayetano
+    provincia_texto: Jujuy
+    departamento_texto: San Andres
+    localidad_texto: Jesús María
+- model: app_name.Model_name
+  pk: 4083
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: mitre 172
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: San Miguel de Tucumán
+- model: app_name.Model_name
+  pk: 4084
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Santiago 3362
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4085
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Virgen Del Valle 1.800
+    provincia: 4
+    provincia_texto: Catamarca
+    localidad_texto: San Guillermo
+- model: app_name.Model_name
+  pk: 4086
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Liniers 0
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4087
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Crisostomo Alvarez 96
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4088
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lamadrid 3379
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4089
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 24 De Setiembre 2362-concepción
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Las Rosas
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4090
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Los Aguirre, Km. 10
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4091
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Los Pizarros
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: San Miguel de Tucumán
+- model: app_name.Model_name
+  pk: 4092
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: Lote 27
+    barrio: Islas Malvinas
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Chabás
+- model: app_name.Model_name
+  pk: 4093
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Monseñor Diaz 773.planta Baja
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4094
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Villa Benjamin Aráoz
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4095
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Autopista Sur, Km. 804.
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 4096
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Francisco De Aguirre 1.900
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4097
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 306, Km. 7
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Estación Araoz
+- model: app_name.Model_name
+  pk: 4098
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Congreso431
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Río Chico
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 4099
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 317, Km. 7,5. La Ramada De Abajo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4100
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tecero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4101
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Cooperativa Agrop. Unión Y Progreso
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: General Deheza
+- model: app_name.Model_name
+  pk: 4102
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Cooperativa Agrop. De Unión Y Progreso
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: General Deheza
+- model: app_name.Model_name
+  pk: 4103
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Sarmiento 63
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Las Rosas
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4104
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Aberdi 482
+    provincia_texto: Córdoba
+    localidad_texto: Buenos Aires
+- model: app_name.Model_name
+  pk: 4105
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Cooperativa Unión Y Progreso La Ramada
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: General Deheza
+- model: app_name.Model_name
+  pk: 4106
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Cooperativa Unión Y Progreso
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: General Deheza
+- model: app_name.Model_name
+  pk: 4107
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1349
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Almafuerte
+- model: app_name.Model_name
+  pk: 4108
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Suipacha 228
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4109
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Nac. 9, Km. 1306
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Tacural
+    localidad_texto: El Naranjo
+- model: app_name.Model_name
+  pk: 4110
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Delfin Gallo 2675
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4111
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Jujuy 4445
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4112
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 301, Km.31
+    barrio: El Empalme
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: San Pablo
+    localidad_texto: Bañado De Ovanta
+- model: app_name.Model_name
+  pk: 4113
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Compra A Traves De Fgf. Trapani
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 4114
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Virgen De La Merced
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4115
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Guatemala 273
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4116
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 375, Km. 7,5. Las Tuquitas
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Venado Tuerto
+- model: app_name.Model_name
+  pk: 4117
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Los Perea. Bajo Grande
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4118
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lamadrid 548/ 550
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4119
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: Caseros Esquina Lavalle
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4120
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 157, Km. 1216
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Florida
+    localidad_texto: Juan B. Alberdi
+- model: app_name.Model_name
+  pk: 4121
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Mitre 342.
+    provincia: 3
+    provincia_texto: Salta
+    departamento_texto: Guemes
+    localidad_texto: Taco Ralos
+- model: app_name.Model_name
+  pk: 4122
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1305. Los Nogales
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 4123
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: El Negocio Es Mercedes Del Norte
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4124
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Es Del Grupo De Servicios Y Negocios
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4125
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Honduras 80
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4126
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 24 De Setiembre 2362
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Graneros
+    localidad_texto: Anca Juli
+- model: app_name.Model_name
+  pk: 4127
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Pcil.301, Km. 31,5
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4128
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Libertador Esquina Soldado Argentino Sin Nro.
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4129
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Empaque El Naranjo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Los Nogales
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4130
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 302, Km. 30 Ranchillos
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Coronel Du Graty
+- model: app_name.Model_name
+  pk: 4131
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Honduras 53
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 4132
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Federico Rossi 4ta.cuadra
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 4133
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Santa Rosa De Leales
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Venado Tuerto
+- model: app_name.Model_name
+  pk: 4134
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Las Piedras 707
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4135
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Chile 1771
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 4136
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Alem 945
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Simoca
+- model: app_name.Model_name
+  pk: 4137
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Congreso 274
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4138
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Azcuenaga 30
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4139
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lamadrid 494
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Las Rosas
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4140
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Gobernador Del Campo 400
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4141
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Monteagudo 615
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4142
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 732. Ba La Horqueta
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 4143
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 302, Km.7
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Lomas De Tafi
+    localidad_texto: Libertador Gral. San Martín
+- model: app_name.Model_name
+  pk: 4144
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Sarmiento 45
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4145
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Diagonal I Esquina 3. Villa Mariano Moreno
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4146
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Laprida 642. 5f
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4147
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 6 Y 19 . Las Talitas
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: S.m.de Tucumán
+- model: app_name.Model_name
+  pk: 4148
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Gral.heredia 905
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Las Rosas
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4149
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Monte Potrero. La Merced
+    provincia: 4
+    provincia_texto: Catamarca
+    departamento_texto: Perico
+    localidad_texto: Joaquín V. Gonzalez
+- model: app_name.Model_name
+  pk: 4150
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Aconquija 2065
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4151
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Peron 253
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4152
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lavalle Al 2000
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 4153
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Peru Sud 581
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 4154
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Brigido Teran 201
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Teniente Berdina
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4155
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Guemes Y Ruta Nac. Nro. 34.
+    provincia: 3
+    provincia_texto: Salta
+    localidad_texto: San Isidro
+- model: app_name.Model_name
+  pk: 4156
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lavalle Al 200
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 4157
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Eva Peron
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4158
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Campo Cusillos Y Otros
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4159
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Titular De Negocio Coco Moto Repuesto
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4160
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: La Banda Frente Autopista Famailla
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4161
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Sin Nombre 0 . La Tipa
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Lomas Del Mirador
+    localidad_texto: La Banda
+- model: app_name.Model_name
+  pk: 4162
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Ba.san Ramon. Avda. Pte Peron Ultima Cuadra
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Frias
+    localidad_texto: Apolinario Saravia
+- model: app_name.Model_name
+  pk: 4163
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Marcos Paz 563. 1º A
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4164
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Emilio Castelar 1595
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4165
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 742
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4166
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Alem Y Americo Vespucio
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4167
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Fray Mamerto Esqiu 29
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: General Deheza
+- model: app_name.Model_name
+  pk: 4168
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Santa Maria
+    provincia: 4
+    provincia_texto: Catamarca
+    departamento_texto: Los Gutierrez
+    localidad_texto: Ciudad De Salta
+- model: app_name.Model_name
+  pk: 4169
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Alem 462
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4170
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Independencia 3.100
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4171
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Camino Del Peru Y Avda Peron
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 4172
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 311, Km. 25
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Monte Bello
+- model: app_name.Model_name
+  pk: 4173
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Coordina Con Vendedor
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4174
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Francisco De Aguirre 806
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4175
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Circunvalacion Km. 800
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Los Porceles
+- model: app_name.Model_name
+  pk: 4176
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Coutry Las Yungas
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 4177
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Mitre 339
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4178
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Entrega En Finca Lujan
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Rivas
+    localidad_texto: Cañada De Gómez
+- model: app_name.Model_name
+  pk: 4179
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Luis 164
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4180
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Central Termica El Bracho
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Granadero Baigorria
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 4181
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Roca Y Buenos Aires( Norte Chevrolet)
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4182
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 38, Obrador En Sector 1
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Trebol
+- model: app_name.Model_name
+  pk: 4183
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 305, Km. 23. El Sunchal
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4184
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Francisco De Aguirre 120
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Villa María
+- model: app_name.Model_name
+  pk: 4185
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Anta Muerta 2120
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 4186
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Alem 1486
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4187
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 301
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4188
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Belgrano 4009
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4189
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Republica Arabe Siria 619
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4190
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lavalle 3.005
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4191
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Los Robles 183.
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 4192
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Provincial 303, Km. 33. Cañete
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Choromoro
+- model: app_name.Model_name
+  pk: 4193
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Gobernador Del Campo 816
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4194
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Italia 3257
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4195
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 317, Km. 16 Y 1
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: General Deheza
+- model: app_name.Model_name
+  pk: 4196
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Bolivia 1547
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4197
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 147
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4198
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 147
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4199
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 147
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4200
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lamadrid 1714
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4201
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 228
+    provincia_texto: Santa Fe
+    departamento_texto: Sinsacate
+    localidad_texto: Rio Colorado
+- model: app_name.Model_name
+  pk: 4202
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Silvio Arcas 359- Galvez
+    provincia_texto: Santa Fe
+    departamento_texto: Sinsacate
+    localidad_texto: Rio Colorado
+- model: app_name.Model_name
+  pk: 4203
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 317, Km.7,5. La Ramada De Abajo
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4204
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Nac. 157. Frias
+    provincia: 2
+    provincia_texto: Santiago del Estero
+    departamento_texto: Las Colonias
+    localidad_texto: Rumi Punco
+- model: app_name.Model_name
+  pk: 4205
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9. Benjamin Paz
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Almafuerte
+- model: app_name.Model_name
+  pk: 4206
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Gastona " La Casona "
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Benjamin Araoz
+    localidad_texto: Balcarce
+- model: app_name.Model_name
+  pk: 4207
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Camino Del Peru 606
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 4208
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: La Cocha ( Oficina De Vetagro)
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: San Miguel de Tucumán
+- model: app_name.Model_name
+  pk: 4209
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Sin Calle 0. Cañada De Alzogaray
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4210
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Nac. 34, Km. 872
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4211
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 395
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 4212
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Inmaculda Concepcion 230
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Jovita
+- model: app_name.Model_name
+  pk: 4213
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Alijilan
+    provincia: 4
+    provincia_texto: Catamarca
+    departamento_texto: Resistencai
+    localidad_texto: Monteros
+- model: app_name.Model_name
+  pk: 4214
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Honuras 70
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4215
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Pedro Miguel Aráoz 286
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4216
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: Manzana 4, Lote 13
+    barrio: 2 de Septiembre
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4217
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Mitre Y Marcos Paz
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4218
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Balcarce 662
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Río Chico
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 4219
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 301, Km. 18. Parque Industrial
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Bella Vista
+- model: app_name.Model_name
+  pk: 4220
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Rivadavia 343
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Chabás
+- model: app_name.Model_name
+  pk: 4221
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Pcial 314, Km.2,5 Obrador Lomas
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 4222
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Las Piedras 2347
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4223
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Brigido Teran 764
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4224
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 302, Km. 42. Estacion Aráoz
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: General Pico
+- model: app_name.Model_name
+  pk: 4225
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Marañon Y 9 De Julio
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Trebol
+- model: app_name.Model_name
+  pk: 4226
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tiene 90 Has De Caña En Los Gutierrez
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4227
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Alabarce Victor Manuel
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4228
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Pedro Leon Gallo 379
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4229
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1267
+    provincia: 1
+    provincia_texto: Tucumán
+- model: app_name.Model_name
+  pk: 4230
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 304, Km. 10,5
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Tusca Pozo
+- model: app_name.Model_name
+  pk: 4231
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Aconquija Km.12,0
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Arcadia
+- model: app_name.Model_name
+  pk: 4232
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Sarmiento 0
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4233
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: 4 Nro. 70 .
+    barrio: Villa Mariano Moreno
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Recreo
+    localidad_texto: Gastona
+- model: app_name.Model_name
+  pk: 4234
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Coronel Du Graty
+- model: app_name.Model_name
+  pk: 4235
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Agua Blanca, Km. 99,a La Izq.plazoleta 600 Mts
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4236
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 12 De Octubre Y Bolivia
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4237
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km.1335
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Banda del Río Salí
+- model: app_name.Model_name
+  pk: 4238
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1335
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Banda del Río Salí
+- model: app_name.Model_name
+  pk: 4239
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 302, Km. 31. El Empalme
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Coronel Du Graty
+- model: app_name.Model_name
+  pk: 4240
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 302, Km. 29 El Puesto 0
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Coronel Du Graty
+- model: app_name.Model_name
+  pk: 4241
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Honduras 70
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4242
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Loteo Quiros Sin Nro.
+    provincia: 4
+    provincia_texto: Catamarca
+    departamento_texto: Los Gutierrez
+    localidad_texto: Ciudad De Salta
+- model: app_name.Model_name
+  pk: 4243
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4244
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4245
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4246
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4247
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4248
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor . Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4249
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 395
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 4250
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Maipu 70. 5º Piso.
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4251
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Jujuy Y Autopista
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4252
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4253
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Nacional Nro. 34 Een Pampa Pozo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Acheral
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4254
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4255
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 395
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 4256
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4257
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 338. Pie De Villa Nougues. San Pablo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Tapia
+    localidad_texto: Pavón Arriba
+- model: app_name.Model_name
+  pk: 4258
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Simona De Lopez 165
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Orán
+    localidad_texto: Banda del Río Salí
+- model: app_name.Model_name
+  pk: 4259
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 305, Km. 5 Y Medio.
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Recreo
+    localidad_texto: Gastona
+- model: app_name.Model_name
+  pk: 4260
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Buenos Aires 370
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Pilar
+    localidad_texto: Pacará Pintado
+- model: app_name.Model_name
+  pk: 4261
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 25 De Mayo 958
+    provincia: 3
+    provincia_texto: Salta
+    departamento_texto: Guemes
+    localidad_texto: Taco Ralos
+- model: app_name.Model_name
+  pk: 4262
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 24 De Setiembre 2362
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4263
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Buenos Aires 387
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pacará Pintado
+- model: app_name.Model_name
+  pk: 4264
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lerma 541
+    provincia: 3
+    provincia_texto: Salta
+    departamento_texto: Santa María
+    localidad_texto: Santa Ana
+- model: app_name.Model_name
+  pk: 4265
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tucuman 845
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Río Chico
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 4266
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 157. Tapso
+    provincia: 2
+    provincia_texto: Santiago del Estero
+    departamento_texto: Pavon Arriba
+    localidad_texto: San Agustín
+- model: app_name.Model_name
+  pk: 4267
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4268
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Colinia 5. Casa Sr. Erbetta
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4269
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4270
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Jujuy 4445
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4271
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4272
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4273
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Burruyacu
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4274
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4275
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Catamarca 2665
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4276
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Zona Rural 0.
+    provincia: 2
+    provincia_texto: Santiago del Estero
+    localidad_texto: La Invernada
+- model: app_name.Model_name
+  pk: 4277
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: Acevedo 2575(altura Avda. Colon 1550)
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4278
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Zona Ruarl Villa De Escaba
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Trebol
+- model: app_name.Model_name
+  pk: 4279
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4280
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4281
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Sin Calle 0.
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4282
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: M. Z. Casa 30
+    barrio: Alto de América
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4283
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4284
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4285
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lavalle 3524
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4286
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 25 De Mayo Sin Nro. Rio Colorado
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Juan B. Alberdi
+- model: app_name.Model_name
+  pk: 4287
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 148
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4288
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4289
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 392
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 4290
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Eva Peron Esquina Alberdi
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Choromoro
+- model: app_name.Model_name
+  pk: 4291
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Nac. 38, Km. 734,4
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4292
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Islas Malvinas, Ruta 301m Km.12,5
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Cortaderal
+- model: app_name.Model_name
+  pk: 4293
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lincoln 712
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4294
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4295
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4296
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Sarmiento 280
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4297
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lamadrid 494
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4298
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lamadrid 494
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4299
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lamadrid 494
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4300
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lmadrid 494
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4301
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lamadrid 494
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Añatuya
+- model: app_name.Model_name
+  pk: 4302
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4303
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Larrea Sin Nro.
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4304
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 323 Y Rio Sali
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Lozada
+- model: app_name.Model_name
+  pk: 4305
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4306
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 304, Km. 18. Chañar Viejo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4307
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Lidoro Quinteros 222
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Trebol
+- model: app_name.Model_name
+  pk: 4308
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Taco Ralo. Finca Nynagro
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Rosario De La Frontera
+    localidad_texto: Concepción
+- model: app_name.Model_name
+  pk: 4309
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Taco Ralo . Finca Nynagro
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Rosario De La Frontera
+    localidad_texto: Concepción
+- model: app_name.Model_name
+  pk: 4310
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Ejercito Del Norte 998
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4311
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 303, Km. 36. San Agustin
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Del Viso
+    localidad_texto: Galvez
+- model: app_name.Model_name
+  pk: 4312
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: Pcial.303, Km. 33. Cañete
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Coronel Du Graty
+- model: app_name.Model_name
+  pk: 4313
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor. Zafra 2015
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 4314
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Zona Termoelectrica El Bracho
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Coronel Du Graty
+- model: app_name.Model_name
+  pk: 4315
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Peru Sur 767
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Río Chico
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 4316
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: El Palomar
+    provincia: 2
+    provincia_texto: Santiago del Estero
+    localidad_texto: Tucumán
+- model: app_name.Model_name
+  pk: 4317
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Fernandez Ariel Adolfo
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4318
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: Camino Del Peru , Km. 7,5
+    barrio: San Juan Bautista
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4319
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Benjamin Aráoz 1286
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4320
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Camino Del Peru, Km. 7,5. Villa Carmela
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Don Torcuato
+- model: app_name.Model_name
+  pk: 4321
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Siria 1365
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4322
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Circunvalación, Km. 1294. Parque Industrial
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Tafí del Valle
+    localidad_texto: Aguilares
+- model: app_name.Model_name
+  pk: 4323
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Illiams Cross 3.300
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4324
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 9, Km. 1304..
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Florentino Ameghino
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 4325
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Las Piedras 930 3º Piso O Avda. Roca 1976
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4326
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Marapa
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Trebol
+- model: app_name.Model_name
+  pk: 4327
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: La Virginia
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: General Deheza
+- model: app_name.Model_name
+  pk: 4328
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Estac.servicio 9 De Julio Y Ruta 301
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Bella Vista
+- model: app_name.Model_name
+  pk: 4329
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Estancia El Brete.el Tala
+    provincia: 3
+    provincia_texto: Salta
+    departamento_texto: Banda Rio Salí
+    localidad_texto: Los Gutierrez
+- model: app_name.Model_name
+  pk: 4330
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 9 De Julio Esquina Marañon
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Simoca
+- model: app_name.Model_name
+  pk: 4331
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Lorenzo 492
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4332
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Maipu 562. 6º Piso Dpto. A
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4333
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Jose Farias,mz. B,casa 16.ba. 20 De Junio
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Juan B. Alberdi
+- model: app_name.Model_name
+  pk: 4334
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 157, Km. 1216. Rio Colorado
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Cruz Alta
+- model: app_name.Model_name
+  pk: 4335
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Sarmiento 280
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4336
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 384
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 4337
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 9 De Jlio 752
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Amaicha del Valle
+- model: app_name.Model_name
+  pk: 4338
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Moreno 232
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 4339
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Corrientes 1561
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Cocha
+    localidad_texto: Acheral
+- model: app_name.Model_name
+  pk: 4340
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Tercero Atanor
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Pampa Pozo
+- model: app_name.Model_name
+  pk: 4341
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Mejico 1.200
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4342
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Lorenzo 496. 2º Piso
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4343
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Santa Fe 128
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4344
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Juan 955. " Tienda De Arte "
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4345
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: 1 De Noviembre 1326
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4346
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Solano Vera 179
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Viclos
+- model: app_name.Model_name
+  pk: 4347
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Guatemala 273
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: El Tala
+- model: app_name.Model_name
+  pk: 4348
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 24 De Setiembre 70
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4349
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Lorenzo 1060 Entre4piso E
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4350
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Las Piedras 884
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4351
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Mate De Luna 1448.
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4352
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Castro Barros 865. Pb. Dpto G
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4353
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Jujuy 3.400
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4354
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: En Planta Asfaltica De Bella Vista
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Marcos Paz
+    localidad_texto: Coronel Moldes
+- model: app_name.Model_name
+  pk: 4355
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Independencia 2820
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4356
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Independencia 2601
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4357
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: De Circunvalacion. Predio Industrial
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4358
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 384
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 4359
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Federico Helguera 2459
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Bajo Grande
+- model: app_name.Model_name
+  pk: 4360
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 839- 2º Piso Dto. D
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4361
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Alberdi 458
+    provincia: 3
+    provincia_texto: Salta
+    departamento_texto: Manantial De Ovanta
+    localidad_texto: Rosario De La Frontera
+- model: app_name.Model_name
+  pk: 4362
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Rivadavia 1270, Esquina Godoy Cruz
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Chabás
+- model: app_name.Model_name
+  pk: 4363
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Cementerio San Agustin
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Viclos
+- model: app_name.Model_name
+  pk: 4364
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Martín 417
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Ancasti
+    localidad_texto: Burruyacú
+- model: app_name.Model_name
+  pk: 4365
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Crisostomo Alvarez 1163
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4366
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 326
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: La Florida
+    localidad_texto: Juan B. Alberdi
+- model: app_name.Model_name
+  pk: 4367
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Ejercito Del Norte 443
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4368
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Loprenzo 3212
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4369
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Chile 631
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4370
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Castro Barros 653
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4371
+  fields:
+    tipo: 2
+    tipo_calle: avda
+    nombre: Rivadavia 343
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Chabás
+- model: app_name.Model_name
+  pk: 4372
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 1 Nro 88
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Ranchillos
+- model: app_name.Model_name
+  pk: 4373
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: La Rioja 784.
+    barrio: Próspero Mena
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: Juan B. Alberdi
+- model: app_name.Model_name
+  pk: 4374
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: Nicolás Avellaneda 75
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Juan B. Alberdi
+- model: app_name.Model_name
+  pk: 4375
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: 6 Nro. 245- Villa Mariano Moreno
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: S.m.de Tucumán
+- model: app_name.Model_name
+  pk: 4376
+  fields:
+    tipo: 2
+    tipo_calle: pje
+    nombre: Almirante Brown 1411
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4377
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 321, Km. 5,5- El Naranjo
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Monteros
+    localidad_texto: Tafí Del Valle
+- model: app_name.Model_name
+  pk: 4378
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Rivadavia 1994
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4379
+  fields:
+    tipo: 2
+    tipo_calle: ruta
+    nombre: 38, Km. 1508
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Dr. Manuel Belgrano
+- model: app_name.Model_name
+  pk: 4380
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Corrientes 3769
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4381
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Miguel Lillo 84
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Capital
+    localidad_texto: Bella Vista
+- model: app_name.Model_name
+  pk: 4382
+  fields:
+    tipo: 2
+    tipo_calle: barrio
+    nombre: 16-nro. 63
+    barrio: Almirante Brown
+    provincia: 2
+    provincia_texto: Santiago del Estero
+    departamento_texto: Las Colonias
+    localidad_texto: Rumi Punco
+- model: app_name.Model_name
+  pk: 4383
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Crisostomo Alvarez 1161
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4384
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Crisoistomo Alvarez 1161
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4385
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Muñecas 1.162
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4386
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: San Juan 955
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz
+- model: app_name.Model_name
+  pk: 4387
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Yamina- Departamento La Cocha
+    provincia: 1
+    provincia_texto: Tucumán
+    localidad_texto: San Miguel de Tucumán
+- model: app_name.Model_name
+  pk: 4388
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: La Tipa A 12 Km. De Aguilares
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Lomas Del Mirador
+    localidad_texto: La Banda
+- model: app_name.Model_name
+  pk: 4389
+  fields:
+    tipo: 2
+    tipo_calle: calle
+    nombre: Alsina 911
+    provincia: 1
+    provincia_texto: Tucumán
+    departamento_texto: Villa Mariano Moreno
+    localidad_texto: Benjamín Araoz

@@ -12,7 +12,7 @@ class CommonStruct(models.Model):
 
     class Meta:
         # self._meta.app_label
-        # self._meta.model_name        
+        # self._meta.model_name
         abstract = True
 
     def save(self, *args, **kwargs):
@@ -65,7 +65,7 @@ class CommonStruct(models.Model):
 
     def get_app_label(self):
         return self._meta.model_name
-    
+
     def get_module_name(self):
         return self._meta.module_name
 
@@ -145,7 +145,7 @@ class Localidad(CommonStruct):
 
 # class georef(CommonStruct):
 #     NIVEL = (
-#         ('01', 'País'), 
+#         ('01', 'País'),
 #         ('02', 'Provincia'),
 #         ('03', 'Departamento'),
 #         ('04', 'Municipio'),
@@ -154,7 +154,7 @@ class Localidad(CommonStruct):
 
 #     nivel = models.CharField(max_length=2, choices=NIVEL, default='05')
 #     nombre = models.CharField(max_length=60)
-#     parent = models.ForeignKey('self', on_delete=models.CASCADE, 
+#     parent = models.ForeignKey('self', on_delete=models.CASCADE,
 #                                null=True, blank=True, verbose_name='Padre')
 #     georef_id = models.CharField(max_length=15, null=True, blank=True)
 #     georef_nombre = models.CharField(max_length=100, null=True, blank=True)
@@ -175,7 +175,7 @@ class Localidad(CommonStruct):
 
 class Diccionario(CommonStruct):
     TABLA = (
-        ('comunicacion', 'Comunicaciones'), 
+        ('comunicacion', 'Comunicaciones'),
         ('domicilio', 'Domicilios'),
     )
 
@@ -196,13 +196,13 @@ class Diccionario(CommonStruct):
 
 
 class Domicilio(CommonStruct):
-    TIPO = (('avda', 'Avenida'), ('calle', 'Calle'), 
+    TIPO = (('avda', 'Avenida'), ('barrio', 'Barrio'), ('calle', 'Calle'),
             ('pje', 'Pasaje'), ('ruta', 'Ruta'))
-    
-    tipo = models.ForeignKey(Diccionario, on_delete=models.CASCADE, 
+
+    tipo = models.ForeignKey(Diccionario, on_delete=models.CASCADE,
                              null=True, blank=True, default=1,
                              limit_choices_to={'tabla': 'domicilio', 'active': True})
-    tipo_calle = models.CharField(max_length=5, choices=TIPO, default='calle')
+    tipo_calle = models.CharField(max_length=6, choices=TIPO, default='calle')
     nombre = models.CharField(max_length=80, null=True, blank=True)
     numero = models.IntegerField('Número', null=True, blank=True)
     piso = models.CharField(max_length=2, null=True, blank=True)
@@ -247,7 +247,7 @@ class Domicilio(CommonStruct):
 
 
 class Comunicacion(CommonStruct):
-    tipo = models.ForeignKey(Diccionario, on_delete=models.CASCADE, 
+    tipo = models.ForeignKey(Diccionario, on_delete=models.CASCADE,
                              null=True, blank=True, default=3,
                              limit_choices_to={'tabla': 'comunicacion', 'active': True})
     texto = models.CharField(max_length=150)

@@ -1,11 +1,18 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 from django.views import generic
 
-from . import forms, models
+from django_filters.views import FilterView
+from django_tables2 import RequestConfig
+from django_tables2.views import SingleTableMixin
+from django_tables2.paginators import LazyPaginator
+
+from . import filters, forms, models, tables
+
 from apps.comunes.models import Comunicacion as ComunicacionModel
 from apps.comunes.models import Domicilio as DomicilioModel
 from apps.comunes.forms.comunicacion import ComunicacionForm
@@ -24,29 +31,59 @@ class PersonaTemplateView(generic.TemplateView):
         return PersonasListView.as_view()(request)
 
 
-class PersonasListView(generic.ListView):
-    model = models.Persona
+class PersonasListView(LoginRequiredMixin, SingleTableMixin, FilterView):
+    model = models.Persona  # .objects.all().order_by('nombre', 'apellido')
+    table_class = tables.PersonaTable
+    filterset_class = filters.PersonaFilter
     template_name = 'persona/tabla_filtro.html'
+    ordering = ['nombre', 'apellido', 'id']
+    paginator_class = LazyPaginator
 
-    # def get_context_data(self, *, object_list=None, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['app_name'] = __package__.split('.')[1]
-    #     context['model_name'] = models.Persona._meta.verbose_name_plural.title()
-    #     context['object_list'] = models.Persona.objects.filter(active=True)
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['app_name'] = __package__.split('.')[1]
+        # context['filter'] = False
+        return context
+
+
+class PersonasListView_old(LoginRequiredMixin, SingleTableMixin, FilterView):
+    model = models.Persona  # .objects.all().order_by('nombre', 'apellido')
+    table_class = tables.PersonaTable
+    filterset_class = filters.PersonaFilter
+    template_name = 'persona/tabla_filtro.html'
+    ordering = ['nombre', 'apellido', 'id']
+    paginator_class = LazyPaginator
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['app_name'] = __package__.split('.')[1]
         return context
 
-    def get_queryset(self):
-        qs = super().get_queryset()
-        search = self.request.GET.get('search1') 
-        if search:
-            return qs.filter(nombre__icontains=search).filter(active=True)
-        else: 
-            return qs.filter(id=0)
+# class PersonasListView(generic.ListView):
+#     model = models.Persona
+#     template_name = 'persona/tabla_filtro.html'
+
+#     # def get_context_data(self, *, object_list=None, **kwargs):
+#     #     context = super().get_context_data(**kwargs)
+#     #     context['app_name'] = __package__.split('.')[1]
+#     #     context['model_name'] = models.Persona._meta.verbose_name_plural.title()
+#     #     context['object_list'] = models.Persona.objects.filter(active=True)
+#     #     return context
+
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['app_name'] = __package__.split('.')[1]
+#         return context
+
+#     def get_queryset(self):
+#         qs = super().get_queryset()
+#         search = self.request.GET.get('search1') 
+#         if search:
+#             filter = Q(nombre__icontains=search) | Q(apellido__icontains=search)
+#             return qs.filter(filter).order_by('nombre', 'apellido', 'id')
+#         else: 
+#             return qs.filter(active=True).order_by('nombre', 'apellido', 'id')
+#             # return qs.filter(id=0)
 
 
 class PersonaCreateView(generic.CreateView):  # LoginRequiredMixin

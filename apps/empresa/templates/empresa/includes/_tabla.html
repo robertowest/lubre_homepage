@@ -5,6 +5,7 @@
         <th>Razon Social</th>
         <th>CUIT</th>
         <th>Act. Principal</th>
+        <th>Modificado</th>
     </tr>
 </thead>
 <tbody>
@@ -14,6 +15,7 @@
         <td><a href="{{object.get_detail_url}}" target="_blank">{{object.razon_social}}</a></td>
         <td>{{object.cuit}}</td>
         <td>{{object.actividad}}</td>
+        <td>{{object.modified|date:"d/m/Y"}}</td>
     </tr>
     {% endfor %}
 </tbody>

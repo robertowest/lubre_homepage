@@ -28,7 +28,7 @@ def csvToYaml2(csvFile, output):
         else:
             for cell_index, cell in enumerate(row):
                 cell_heading = data_headings[cell_index].lower().replace(" ", "_").replace("-", "")
-                
+
                 if cell_heading == 'id':
                     f.write('- model: app_name.Model_name\n')
                     f.write('  pk: {}\n'.format(cell))
@@ -37,7 +37,7 @@ def csvToYaml2(csvFile, output):
                     if cell:
                         cell_text = "    " + cell_heading + ": " + cell.replace("\n", ", ") + "\n"
                         f.write(cell_text)
-                
+
 
         # csv_content = ' '.join(row)
         # csv_content = csv_content.split(',')
@@ -48,7 +48,7 @@ def csvToYaml2(csvFile, output):
         # f.write('    field_2: %s\n' % csv_content[1])
         # f.write('    field_3: %s\n' % csv_content[2])
     f.close()
-        
+
 # takes a csvFile name and output file name/path
 def csvToYaml(csvFile, output):
     stream = open(output, 'w',encoding="utf-8")

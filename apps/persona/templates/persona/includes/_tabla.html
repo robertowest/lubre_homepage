@@ -5,6 +5,8 @@
         <th>Documento</th>
         <th>Nacimiento</th>
         <th>Edad</th>
+        <th>Similar</th>
+        <th>Activo</th>
     </tr>
 </thead>
 <tbody>
@@ -12,9 +14,11 @@
     <tr>
         <td><a href="{{object.get_detail_url}}">{{object.pk}}</a></td>
         <td>{{object.nombre_apellido}}</td>
-        <td>{{object.documento}}</td>
-        <td>{{object.fecha_nacimiento}}</td>
-        <td>{{object.edad}}</td>
+        <td>{{object.documento|default_if_none:""}}</td>
+        <td>{{object.fecha_nacimiento|default_if_none:""}}</td>
+        <td>{{object.edad|default_if_none:""}}</td>
+        <td>{{object.persona_similar|default_if_none:""}}</td>
+        <td>{{object.active|yesno:"Sí,No"}}</td>
     </tr>
     {% endfor %}
 </tbody>

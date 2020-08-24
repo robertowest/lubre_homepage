@@ -1,3 +1,5 @@
+import json
+
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse, HttpResponseRedirect
@@ -60,6 +62,11 @@ class DomicilioUpdateView(UpdateView):
         """Agregamos información al contexto"""
         context = super().get_context_data(**kwargs)
         context['titulo'] = 'Modificación de Domicilio'
+        context['json_data'] = json.dumps({
+            'provincia': self.object.provincia_id,
+            'departamento': self.object.departamento_id,
+            'localidad': self.object.localidad_id,
+        })
         return context
 
 

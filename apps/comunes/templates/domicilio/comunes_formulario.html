@@ -1,4 +1,8 @@
 <script>
+  $(document).ready(function() {
+    alert('ok');
+  });
+
   $("#id_provincia").change(function () {
     var url = "{% url 'domicilio:ajax_carga_departamentos' %}";
     var provinciaId = $(this).val();

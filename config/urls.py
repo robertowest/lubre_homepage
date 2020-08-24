@@ -49,15 +49,19 @@ urlpatterns = [
 
     path('empleado/', TemplateView.as_view(template_name='default_base.html'), name='empleado'),
     path('gestion/', include('apps.firebird.urls')),
-
-
-    path('prueba/', include('apps.prueba.urls')),
 ]
+
 
 # -----------------------------------------------------------------------------
 # DEBUG
 # -----------------------------------------------------------------------------
 from django.conf import settings
+
+if settings.ENV == 'DEV':
+    urlpatterns += [
+        path('prueba/', include('apps.prueba.urls')),
+    ]
+
 
 if settings.DEBUG:
     import debug_toolbar

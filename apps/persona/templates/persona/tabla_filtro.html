@@ -2,15 +2,13 @@
 
 {% load static %}
 {% load mis_tags %}
+{% load widget_tweaks %}
+{% load django_tables2 %}   {# load render_table from django_tables2 #}
+{% load bootstrap3 %}
 
 
 {% block style %}
-    <!-- dataTables.bootstrap4.min.css -->
-    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
-    <link href="{% static 'vendor/datatables/jquery.dataTables.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/floating-button-action.css' %}" rel="stylesheet">
-
-    <link href="{% static 'css/datatable.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 
@@ -30,38 +28,33 @@
             </div>
         </div>
         <div class="card-body">
-            <div class="card-body">
-                <form method="GET" action="" id="searchform">
-                    <!-- input class="searchfield" id="searchbox" name="q" type="text" value="{{ request.GET.q }}" placeholder="Search..."/ -->
-
-                    <div id="div_search1" class="form-group">
-                        <label for="search1">
-                            Nombre
-                        </label>
-                        <div class="">
-                            <input type="text" id="search1" name="search1" value="{{ request.GET.search1 }}" maxlength="40" class="textinput textInput form-control">
-                        </div>
+            {% if filter %}
+            <div class="card-body" style="background-color: lightblue;">
+                <form id="searchform" action="" method="get" class="form form-inline">
+                    <div class="form-group col-sm-4 col-md-3">
+                        {{ filter.form.nombre.label_tag }}
+                        {% render_field filter.form.nombre class="form-control" %}
                     </div>
-                    <button type="submit" class="btn btn-primary btn-icon-split">
-                        <span class="icon text-white-50"><i class="fas fa-search"></i></span>
-                        <span class="text">Filtrar</span>
+                    <div class="form-group col-sm-4 col-md-3">
+                        {{ filter.form.apellido.label_tag }}
+                        {% render_field filter.form.apellido class="form-control" %}
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-search"></span> Filtrar
                     </button>
                 </form>
             </div>
+            {% endif %}
 
             <!-- tabla de contenido -->
             <div class="card-body">
                 <div class="table-responsive">
-                    {# https://datatables.net #}
-                    <table id="dataTable" class="display compact" style="width:100%">
-                        {% include object_list|verbose_name|lower|add:'/includes/_tabla.html' %}
-                    </table>
+                    {% render_table table %}
                 </div>
             </div>
 
         </div>
     </div>
-
 {% endblock %}
 
 
@@ -73,52 +66,4 @@
     </a>
     {% endwith %}
 </button>
-{% endblock %}
-
-{# boton de accion flotante y ventana modal #}
-{% comment %}
-    {% block boton-accion %}
-        <!-- botón de acción -->
-        <button class="fixed-button-add wobble" type="button">
-            <!--
-            <a href="{% url 'persona:create' %}"><i class="fas fa-plus"></i></a>
-            -->
-            <a href="{% url 'persona:create' %}" data-toggle="modal" data-target="#createModal">
-                <i class="fas fa-plus"></i>
-            </a>
-        </button>
-    {% endblock %}
-
-
-    {% block emergente %}
-        <!-- modal -->
-        <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel">Nueva {{object_list|verbose_name}}</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        {% include 'persona/form.html' %}
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" type="submit" form="SubmitForm">Grabar</button>
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    {% endblock %}
-{% endcomment %}
-
-
-{% block js %}
-    <!-- Page level custom scripts -->
-    <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
-
-    <!-- Page level plugins -->
-    <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
 {% endblock %}
