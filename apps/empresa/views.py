@@ -1,5 +1,6 @@
 import os
 
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Count
@@ -650,3 +651,10 @@ def asociar_comunicacion(request, empId, comId):
     empresa.comunicaciones.add(comunicacion)
     empresa.save()
     return HttpResponseRedirect(reverse('empresa:browse', args=[empId]))
+
+
+def confirmar_empresa(request, pk):
+    object = models.Empresa.objects.get(id=pk)
+    object.save()
+    messages.success(request, f'Empresa confirmada.')
+    return HttpResponseRedirect(reverse('empresa:detail', args=[pk]))

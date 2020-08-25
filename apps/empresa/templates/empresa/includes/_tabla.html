@@ -6,6 +6,7 @@
         <th>CUIT</th>
         <th>Act. Principal</th>
         <th>Modificado</th>
+        <th>Activo</th>
     </tr>
 </thead>
 <tbody>
@@ -16,6 +17,7 @@
         <td>{{object.cuit}}</td>
         <td>{{object.actividad}}</td>
         <td>{{object.modified|date:"d/m/Y"}}</td>
+        <td>{{object.active}}</td>
     </tr>
     {% endfor %}
 </tbody>
