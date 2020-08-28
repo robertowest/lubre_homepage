@@ -1,4 +1,4 @@
-from crispy_forms import helper, layout
+from crispy_forms import bootstrap, helper, layout
 from django import forms
 
 from apps.comunes.models import Comunicacion as ComunicacionModel
@@ -29,3 +29,30 @@ class ComunicacionForm(forms.ModelForm):
         self.helper.layout.append(layout.HTML("<hr>"))
         self.helper.layout.append(layout.HTML(bSave))
         self.helper.layout.append(layout.HTML(bCancel))
+
+
+class ComunicacionFilterFormHelper(helper.FormHelper):
+    form_class = "form form-inline"
+    form_id = "comunicacion-search-form"
+    form_method = "GET"
+    form_tag = True
+    html5_required = True
+    layout = layout.Layout(
+        layout.Div(
+            layout.Fieldset(
+                "<span class='fa fa-search'></span> Búsqueda de Comunicaciones",
+                layout.Div(
+                    bootstrap.InlineField("id", wrapper_class="col-4"),
+                    bootstrap.InlineField("tipo", wrapper_class="col-4"),
+                    bootstrap.InlineField("texto", wrapper_class="col-4"),
+                    css_class="row",
+                ),
+                css_class="col-11 border p-3",
+            ),
+            bootstrap.FormActions(
+                layout.Submit("submit", "Filtrar"),
+                css_class="col-1 text-right align-self-center",
+            ),
+            css_class="row",
+        )
+    )
