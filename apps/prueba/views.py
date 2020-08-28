@@ -69,3 +69,24 @@ def companyListView(request):
         context['object_list'] = object_list
     context['object_list'] = object_list
     return render(request, 'prueba/prueba1.html', context)
+
+
+
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django_filters.views import FilterView
+from django_tables2.views import SingleTableMixin
+from django_tables2.paginators import LazyPaginator
+from apps.persona.filters import PersonaFilter
+from apps.persona.tables import PersonaTable
+
+class tablaListView(LoginRequiredMixin, SingleTableMixin, FilterView):
+    table_class = PersonaTable
+    filterset_class = PersonaFilter
+    template_name = 'persona/tabla.html'
+    # ordering = ['nombre', 'apellido', 'id']
+    # paginator_class = LazyPaginator
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['app_name'] = __package__.split('.')[1]
+        return context

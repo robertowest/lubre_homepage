@@ -27,7 +27,7 @@ def verbose_name(obj):
 @register.filter
 def verbose_name_plural(obj):
     # return obj._meta.verbose_name_plural
-    # return obj.__class__.__name__
+    # return obj.__class__.__name__         obj.query.base_table
     if isinstance(obj, QuerySet):
         return obj.model._meta.verbose_name_plural
     else:

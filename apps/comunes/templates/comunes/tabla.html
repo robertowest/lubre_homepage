@@ -23,9 +23,7 @@
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                     </a>
                 <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                    {% with object_list|verbose_name|lower|add:':create' as button_add %}
-                    <a class="dropdown-item" href="{% url button_add %}">Nuevo</a>
-                    {% endwith %}
+                    <a class="dropdown-item" href="{% url request.resolver_match.app_name|add:':create' %}">Nuevo</a>
                 </div>
             </div>
         </div>
@@ -37,7 +35,7 @@
                 <div class="table-responsive">
                     <table id="{{ tableID|default:'dataTable' }}" 
                            class="{{ tableCLASS|default:'display compact' }}" style="width:100%">
-                        {% include object_list|verbose_name|lower|add:'/includes/_tabla.html' %}
+                        {% include request.resolver_match.app_name|add:'/includes/_tabla.html' %}
                     </table>
                 </div>
             </div>
@@ -50,13 +48,12 @@
 
 {% block floating-button-action %}
 <button class="fixed-button-add wobble" type="button">
-    {% with object_list|verbose_name|lower|add:':create' as button_add %}
-    <a href="{% url button_add %}">
+    <a href="{% url request.resolver_match.app_name|add:':create' %}">
         <i class="fas fa-plus"></i>
     </a>
-    {% endwith %}
 </button>
 {% endblock %}
+
 
 {# boton de accion flotante y ventana modal #}
 {% comment %}
@@ -99,9 +96,6 @@
 
 
 {% block js %}
-    <!-- Page level custom scripts -->
     <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
-
-    <!-- Page level plugins -->
     <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
 {% endblock %}

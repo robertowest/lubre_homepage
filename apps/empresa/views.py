@@ -166,9 +166,9 @@ class FilterListView(LoginRequiredMixin, generic.ListView):
                    .filter(active=True) \
                    .order_by('razon_social')
         if name == 'filtro_comercial':
+                   # .filter(modified__isnull=True) \
             return self.model.objects \
                    .filter(comercial=self.kwargs['filtro']) \
-                   .filter(modified__isnull=True) \
                    .filter(active=True) \
                    .order_by('razon_social')
         return self.model.objects.all().order_by('razon_social')

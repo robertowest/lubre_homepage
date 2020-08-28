@@ -5,6 +5,7 @@
 {% load widget_tweaks %}
 {% load django_tables2 %}   {# load render_table from django_tables2 #}
 {% load bootstrap3 %}
+{% load crispy_forms_tags %}
 
 
 {% block style %}
@@ -21,16 +22,14 @@
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                     </a>
                 <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                    {% with object_list|verbose_name|lower|add:':create' as button_add %}
-                    <a class="dropdown-item" href="{% url button_add %}">Nuevo</a>
-                    {% endwith %}
+                    <a class="dropdown-item" href="{% url request.resolver_match.app_name|add:':create' %}">Nuevo</a>
                 </div>
             </div>
         </div>
         <div class="card-body">
             {% if filter %}
             <div class="card-body" style="background-color: lightblue;">
-                <form id="searchform" action="" method="get" class="form form-inline">
+                <form action="" method="get" id="searchform" class="form form-inline">
                     <div class="form-group">
                         {{ filter.form.nombre.label_tag }}
                         {% render_field filter.form.nombre class="form-control" %}
@@ -60,10 +59,8 @@
 
 {% block floating-button-action %}
 <button class="fixed-button-add wobble" type="button">
-    {% with object_list|verbose_name|lower|add:':create' as button_add %}
-    <a href="{% url button_add %}">
+    <a href="{% url request.resolver_match.app_name|add:':create' %}">
         <i class="fas fa-plus"></i>
     </a>
-    {% endwith %}
 </button>
 {% endblock %}

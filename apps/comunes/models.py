@@ -76,7 +76,7 @@ class Pais(CommonStruct):
 
     class Meta:
         db_table = 'pais'
-        verbose_name = 'Pais'
+        verbose_name = 'País'
         verbose_name_plural = 'Paises'
 
     def __str__(self):

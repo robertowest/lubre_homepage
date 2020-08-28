@@ -2,15 +2,14 @@
 
 {% load static %}
 {% load mis_tags %}
+{% load widget_tweaks %}
+{% load django_tables2 %}
+{% load bootstrap3 %}
+{% load crispy_forms_tags %}
 
 
 {% block style %}
-    <!-- dataTables.bootstrap4.min.css -->
-    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
-    <link href="{% static 'vendor/datatables/jquery.dataTables.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/floating-button-action.css' %}" rel="stylesheet">
-
-    <link href="{% static 'css/datatable.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 
@@ -24,43 +23,44 @@
                     </a>
                 <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="{% url request.resolver_match.app_name|add:':create' %}">Nuevo</a>
-                    <a class="dropdown-item" href="{% url 'empresa:recorrer' %}">Recorrer</a>
                 </div>
             </div>
         </div>
         <div class="card-body">
-            {# https://datatables.net #}
+            {% if filter %}
+            <div class="card-body" style="background-color: lightblue;">
+                <form action="" method="get" id="searchform" class="form form-inline">
+                    <div class="form-group">
+                        {{ filter.form.nombre.label_tag }}
+                        {% render_field filter.form.nombre class="form-control" %}
+                    </div>
+                    <div class="form-group">
+                        {{ filter.form.apellido.label_tag }}
+                        {% render_field filter.form.apellido class="form-control" %}
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-search"></span> Filtrar
+                    </button>
+                </form>
+            </div>
+            {% endif %}
 
             <!-- tabla de contenido -->
             <div class="card-body">
-                
                 <div class="table-responsive">
-                    <table id="{{ tableID|default:'dataTable' }}" class="table table-bordered" width="100%" cellspacing="0">
-                    <!-- table id="{{ tableID|default:'dataTable' }}" class="display compact" style="width:100%" -->
-                        {% include request.resolver_match.app_name|add:'/includes/_tabla.html' %}
-                    </table>
+                    {% render_table table %}
                 </div>
             </div>
 
         </div>
     </div>
-
 {% endblock %}
 
 
 {% block floating-button-action %}
-<button class="fixed-button-add wobble" type="button">
-    <a href="{% url request.resolver_match.app_name|add:':create' %}">
-        <i class="fas fa-plus"></i>
-    </a>
-</button>
-{% endblock %}
-
-
-{% block js %}
-    <!-- Page level custom scripts -->
-    <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
-
-    <!-- Page level plugins -->
-    <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+    <button class="fixed-button-add wobble" type="button">
+        <a href="{% url request.resolver_match.app_name|add:':create' %}">
+            <i class="fas fa-plus"></i>
+        </a>
+    </button>
 {% endblock %}

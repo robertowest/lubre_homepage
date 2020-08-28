@@ -21,4 +21,6 @@ urlpatterns = [
 
     path('prueba1/', views.companyListView, name="companyListView"),
 
+    path('tabla/', views.tablaListView.as_view(), name="tablaListView"),
+
 ]

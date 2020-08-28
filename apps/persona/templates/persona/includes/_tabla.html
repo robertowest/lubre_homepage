@@ -18,7 +18,7 @@
         <td>{{object.fecha_nacimiento|default_if_none:""}}</td>
         <td>{{object.edad|default_if_none:""}}</td>
         <td>{{object.persona_similar|default_if_none:""}}</td>
-        <td>{{object.active|yesno:"Sí,No"}}</td>
+        <td>{% if object.active %}✔{% else %}✘{% endif %}</td>
     </tr>
     {% endfor %}
 </tbody>

@@ -22,7 +22,7 @@ class ComunicacionListView(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['object_list'] = ComunicacionModel.objects.filter(active=True)
+        context['object_list'] = ComunicacionModel.objects.filter(active=True)[:50]
         return context
  
  

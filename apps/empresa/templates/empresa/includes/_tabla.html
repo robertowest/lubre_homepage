@@ -14,10 +14,10 @@
     <tr>
         <td>{{object.pk}}</td>
         <td><a href="{{object.get_detail_url}}" target="_blank">{{object.razon_social}}</a></td>
-        <td>{{object.cuit}}</td>
-        <td>{{object.actividad}}</td>
+        <td>{{object.cuit|default_if_none:""}}</td>
+        <td>{{object.actividad|default_if_none:""}}</td>
         <td>{{object.modified|date:"d/m/Y"}}</td>
-        <td>{{object.active}}</td>
+        <td>{% if object.active %}✔{% else %}✘{% endif %}</td>
     </tr>
     {% endfor %}
 </tbody>

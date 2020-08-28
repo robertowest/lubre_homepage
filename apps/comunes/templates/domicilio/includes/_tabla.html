@@ -12,9 +12,9 @@
     <tr>
         <td>{{object.pk}}</td>
         <td><a href="{{object.get_update_url}}">{{object.nombre}}</a></td>
-        <td>{{object.provincia}}</td>
-        <td>{{object.departamento}}</td>
-        <td>{{object.localidad}}</td>
+        <td>{{object.provincia|default_if_none:""}}</td>
+        <td>{{object.departamento|default_if_none:""}}</td>
+        <td>{{object.localidad|default_if_none:""}}</td>
     </tr>
     {% endfor %}
 </tbody>
