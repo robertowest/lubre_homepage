@@ -1,7 +1,7 @@
 from django.urls import path
 from apps.empresa import views
 
-app_name = 'comercial'
+app_name = 'comercial'  # en template: request.resolver_match.app_name
 
 urlpatterns = [
     path('', views.ComercialTemplateView.as_view(), name='index'),

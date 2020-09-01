@@ -63,16 +63,17 @@
                                 <td align="right" style="white-space:nowrap;">
                                     <a href="#" style="color: gray;"
                                        data-toggle="modal" data-target="#myModal"
+                                       data-title="Modificar asociación"
                                        data-url="{% url 'empresa_actividad:reasignar_domicilio' object.pk registro.pk %}"
-                                       data-pk="{{object.pk}}">
+                                       data-pk="{{object.pk}}" data-type="table">
                                         <i class="fa fa-exchange-alt"></i>
                                     </a>
                                     <a href="#" style="color: rgb(252, 40, 40)"
-                                        data-toggle="modal" data-target="#confirmDelete"
+                                        data-toggle="modal" data-target="#myModal"
                                         data-title="Eliminar asociación"
                                         data-message="¿Está seguro de eliminar esta asociación?"
-                                        data-url="{% url 'empresa_actividad:ead_delete' registro.pk %}"
-                                        data-pk="{{registro.pk}}">
+                                        data-success="{% url 'empresa_actividad:ead_delete' registro.pk %}"
+                                        data-type="delete">
                                         <i class="fa fa-trash-alt"></i>
                                     </a>
                                 </td>
@@ -111,6 +112,16 @@
                                 <td>
                                     <a href="{{registro.persona.get_detail_url}}" target="_blank">{{registro.persona}}</a>
                                 </td>
+                                <td>
+                                    <a href="#"
+                                       data-toggle="modal" data-target="#myModal"
+                                       data-title="Asignar Puesto Laboral"
+                                       data-url="{% url 'empresa_actividad:eac_asignar_cargo' object.pk registro.pk %}"
+                                       data-success="{% url 'empresa_actividad:eac_asignar_cargo_ex' object.pk registro.pk %}"
+                                       data-pk="{{object.pk}}" data-type="form">
+                                        {{registro.cargo}}
+                                    </a>
+                                </td>
 {% comment %}
                                 <td>
                                     {% for movil in registro.persona.comunicaciones %}
@@ -122,11 +133,11 @@
 {% endcomment %}
                                 <td align="right" style="white-space:nowrap;">
                                     <a href="#" style="color: rgb(252, 40, 40)"
-                                       data-toggle="modal" data-target="#confirmDelete"
-                                       data-title="Eliminar asociación"
-                                       data-message="¿Está seguro de eliminar esta asociación?"
-                                       data-url="{% url 'empresa_actividad:eac_delete' registro.pk %}"
-                                       data-pk="{{registro.pk}}">
+                                        data-toggle="modal" data-target="#myModal"
+                                        data-title="Eliminar asociación"
+                                        data-message="¿Está seguro de eliminar esta asociación?"
+                                        data-success="{% url 'empresa_actividad:eac_delete' registro.pk %}"
+                                        data-type="delete">
                                         <i class="fa fa-trash-alt"></i>
                                     </a>
                                 </td>
@@ -163,7 +174,8 @@
 
 
 {% block modal %}
-    {% include 'empresa_actividad/includes/_modal.html' %}
+    {# include 'empresa_actividad/includes/_modal.html' #}
+    {% include 'includes/_modal.html' %}
     {% include 'includes/_modal_delete.html' %}
 {% endblock %}
 
@@ -174,44 +186,55 @@
 
     <!-- mis funciones -->
     <script type="text/javascript">
-        $('#myModal').on('shown.bs.modal', function (event) {
-            var button = $(event.relatedTarget)
-            var dataUrl = button.data('url')
-            var dataPk = button.data('pk')
+        $('#myModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var $dataURL = button.data('url');
+            var $success = button.data('success');
+            var $message = button.data('message');
+            var $title = button.data('title');
+            var $type = button.data('type');
+            var dataPK = button.data('pk');
 
-            $.ajax({
-                url: dataUrl,
-                data: {pk: dataPk},
-                success: function(response) {
-                    $('#modalContent').html(response);
-                },
-                error: function(xhr, status, error) {
-                    console.log(xhr.responseText);
-                },
-            });
+            // título de la ventana
+            $(this).find('#myModalLabel').text($title);
+
+            if ($type == 'delete') {
+                $(this).find('#myModalBody').text($message);
+                // determinamos la acción del boton Ok
+                $('#myModalFooter').show();
+                var link = $(this).find('#myModalOk')[0];
+                link.href = $success;
+            }
+            else {
+                if ($type == 'table') {
+                    $('#myModalFooter').hide();
+                }
+                else if ($type == 'form') {
+                    $('#myModalFooter').show();
+                    var link = $(this).find('#myModalOk')[0];
+                    link.href = $success;
+                }
+
+                $.ajax({
+                    url: $dataURL,
+                    data: {pk: dataPK},
+                    success: function(response) {
+                        $('#myModalBody').html(response);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(xhr.responseText);
+                    },
+                });
+            }
         })
 
-        $('#myModal').on('hidden.bs.modal', function (event) {
-            $('#modalContent').html("Cargando datos ...");
-        })
-
-        // delete modal
-        $('#confirmDelete').on('show.bs.modal', function (e) {
-            // título y mensaje personalizado
-            $title = $(e.relatedTarget).attr('data-title');
-            $(this).find('.modal-title').text($title);
-            $message = $(e.relatedTarget).attr('data-message');
-            $(this).find('.modal-body p').text($message);
-
-            // url del boton Ok
-            var dataURL = $(e.relatedTarget).data('url');
-            var link = $(this).find('#btnOkModal')[0];
-            link.href = dataURL;
-        });
-
-        $('#confirmDelete').find('btnOkModal').on('click', function (e) {
+        $('#myModal').find('myModalOk').on('click', function (e) {
             console.log( JSON.stringify(e, null, 2) );
         });
 
+        $('#myModal').on('hidden.bs.modal', function (event) {
+            $('#modalContent').html("Cargando datos ...");
+            $('#myModalFooter').show();
+        })
     </script>
 {% endblock %}

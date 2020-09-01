@@ -1,7 +1,7 @@
 from django.urls import path
 from apps.comunes.views import domicilio as views
 
-app_name = 'domicilio'
+app_name = 'domicilio'  # en template: request.resolver_match.app_name
 
 urlpatterns = [
     path('', views.DomicilioTemplateView.as_view(), name='index'),

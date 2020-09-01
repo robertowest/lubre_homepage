@@ -163,6 +163,7 @@ class EmpresaActividadContactos(models.Model):
     # Empresa-Contacto ahora depende de Empresa-Actividad-Contacto
     empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING, related_name='ea_contactos')
     persona = models.ForeignKey(Persona, models.DO_NOTHING)
+    cargo = models.CharField('Puesto', max_length=50, null=True, blank=True, default='¿puesto?')
 
     class Meta:
         managed = True

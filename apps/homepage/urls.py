@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-app_name = 'homepage'
+app_name = 'homepage'   # en template: request.resolver_match.app_name
 
 urlpatterns = [
     # path('', views.index, name='homepage'),

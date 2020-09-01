@@ -2,8 +2,7 @@ from django.urls import path
 
 from apps.empresa import views
 
-# app_name = __package__.split('.')[1]
-app_name = 'empresa'
+app_name = __package__.split('.')[1]    # en template: request.resolver_match.app_name
 
 # controlar login a nivel de path
 # from django.contrib.auth.decorators import login_required

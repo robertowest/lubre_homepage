@@ -9,12 +9,13 @@ from django.shortcuts import redirect, render, get_list_or_404, get_object_or_40
 from django.urls import resolve, reverse, reverse_lazy
 from django.views import generic
 
-from . import forms, models
+from . import filters, forms, models, tables
 
 from apps.comunes.models import Comunicacion as ComunicacionModel
 from apps.comunes.models import Domicilio as DomicilioModel
 from apps.comunes.forms.comunicacion import ComunicacionForm
 from apps.comunes.forms.domicilio import DomicilioForm
+from apps.comunes.utils import PagedFilteredTableView
 
 from apps.persona.models import Persona as ContactoModel
 from apps.persona.forms import PersonaForm as ContactoForm
@@ -39,24 +40,28 @@ class EmpresaTemplateView(LoginRequiredMixin, generic.TemplateView):
         return context
 
 
-class EmpresaListView(LoginRequiredMixin, generic.ListView):
-    model = models.Empresa
-    # template_name = 'comunes/tabla.html'    # .format(app=__package__.split('.')[1])
-    template_name = 'empresa/tabla_filtro.html'
+# class EmpresaListView(LoginRequiredMixin, generic.ListView):
+#     model = models.Empresa
+#     # template_name = 'comunes/tabla.html'    # .format(app=__package__.split('.')[1])
+#     template_name = 'empresa/tabla_filtro.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['app_name'] = __package__.split('.')[1]
-        # context['object_list'] = models.Empresa.objects.filter(active=True)
-        return context
+#     def get_queryset(self):
+#         qs = super().get_queryset()
+#         search = self.request.GET.get('search1') 
+#         if search:
+#             return qs.filter(nombre__icontains=search).filter(active=True)
+#         else: 
+#             return qs.filter(id=0)
+
+class EmpresaListView(LoginRequiredMixin, PagedFilteredTableView):
+    model = models.Empresa
+    filter_class = filters.EmpresaFilter
+    table_class = tables.EmpresaTable
+    formhelper_class = forms.EmpresaFilterForm  # .EmpresaFilterFormHelper
+    template_name = 'comunes/tabla2.html'
 
     def get_queryset(self):
-        qs = super().get_queryset()
-        search = self.request.GET.get('search1') 
-        if search:
-            return qs.filter(nombre__icontains=search).filter(active=True)
-        else: 
-            return qs.filter(id=0)
+        return models.Empresa.objects.filter(active=True)
 
 
 class EmpresaCreateView(LoginRequiredMixin, generic.CreateView):    # LoginRequiredMixin
@@ -67,7 +72,6 @@ class EmpresaCreateView(LoginRequiredMixin, generic.CreateView):    # LoginRequi
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # context['app_name'] = __package__.split('.')[1]
         context['form_title'] = self.form_title
         return context
 
@@ -119,8 +123,17 @@ class EmpresaUpdateView(LoginRequiredMixin, generic.UpdateView):
 
 
 class EmpresaDeleteView(LoginRequiredMixin, generic.DeleteView):
-    model = models.Empresa
-    success_url = reverse_lazy('empresa:detail')
+    # model = models.Empresa
+    # success_url = reverse_lazy('empresa:list')
+
+    # def get_object(self, queryset=None):
+    #     obj = super().get_object()
+    #     if not obj.created_by == self.request.user.id:
+    #         raise Http404
+    #     return obj
+    # def get_success_url(self):
+    #     return reverse_lazy('empresa:detail', args=(self.object.pk,))
+    pass
 
 
 def empresa_actividad(request, empId, actId):
@@ -456,7 +469,12 @@ class CreateContactView(LoginRequiredMixin, generic.CreateView):
 
 @login_required(login_url='/accounts/login/')
 def buscar_contacto(request, pk):
-    obj_list = ContactoModel.objects.filter(active=True).order_by('apellido', 'nombre')
+    # SELECT * FROM `persona` WHERE id NOT IN (SELECT persona_id FROM comercial) 
+    # obj_list = ContactoModel.objects.filter(active=True).order_by('apellido', 'nombre')
+    # eliminamos las personas que son comerciales de la empresa
+    inner_qs = models.Comercial.objects.all()
+    obj_list = ContactoModel.objects.exclude(id__in=inner_qs) \
+                    .filter(active=True).order_by('apellido', 'nombre')
     context = {
         'tableID': 'dataTableModal',
         'object_list': obj_list,
@@ -487,6 +505,23 @@ def eac_delete(request, eacId):
     pk = obj.empresa_actividad_id
     obj.delete()
     url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': pk})
+    return HttpResponseRedirect(url)
+
+@login_required(login_url='/accounts/login/')
+def eac_asignar_cargo(request, eaId, eacId):
+    context = {
+        'object': models.EmpresaActividadContactos.objects.get(id=eacId),
+        'empresa_actividad_id': eaId,
+        'empresa_actividad_contacto_id': eacId,
+    }
+    return render(request, 'empresa_actividad/includes/_modal_asignar_cargo.html', context)
+
+@login_required(login_url='/accounts/login/')
+def eac_asignar_cargo_ex(request, eaId, eacId):
+    relacion = models.EmpresaActividadContactos.objects.get(id=eacId)
+    relacion.cargo = "nuevo cargo"
+    relacion.save()
+    url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': eaId})
     return HttpResponseRedirect(url)
 
 

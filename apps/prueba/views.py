@@ -85,8 +85,3 @@ class tablaListView(LoginRequiredMixin, SingleTableMixin, FilterView):
     template_name = 'persona/tabla.html'
     # ordering = ['nombre', 'apellido', 'id']
     # paginator_class = LazyPaginator
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['app_name'] = __package__.split('.')[1]
-        return context

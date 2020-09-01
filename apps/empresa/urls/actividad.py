@@ -1,7 +1,7 @@
 from django.urls import path
 from apps.empresa import views
 
-app_name = 'actividad'
+app_name = 'actividad'  # en template: request.resolver_match.app_name
 
 urlpatterns = [
     path('', views.ActividadTemplateView.as_view(), name='index'),

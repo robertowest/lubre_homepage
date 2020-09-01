@@ -39,12 +39,6 @@ class PersonasListView(LoginRequiredMixin, SingleTableMixin, FilterView):
     ordering = ['nombre', 'apellido', 'id']
     paginator_class = LazyPaginator
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['app_name'] = __package__.split('.')[1]
-        # context['filter'] = False
-        return context
-
 
 class PersonasListView_old(LoginRequiredMixin, SingleTableMixin, FilterView):
     model = models.Persona  # .objects.all().order_by('nombre', 'apellido')
@@ -54,10 +48,6 @@ class PersonasListView_old(LoginRequiredMixin, SingleTableMixin, FilterView):
     ordering = ['nombre', 'apellido', 'id']
     paginator_class = LazyPaginator
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['app_name'] = __package__.split('.')[1]
-        return context
 
 # class PersonasListView(generic.ListView):
 #     model = models.Persona
@@ -65,15 +55,9 @@ class PersonasListView_old(LoginRequiredMixin, SingleTableMixin, FilterView):
 
 #     # def get_context_data(self, *, object_list=None, **kwargs):
 #     #     context = super().get_context_data(**kwargs)
-#     #     context['app_name'] = __package__.split('.')[1]
 #     #     context['model_name'] = models.Persona._meta.verbose_name_plural.title()
 #     #     context['object_list'] = models.Persona.objects.filter(active=True)
 #     #     return context
-
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['app_name'] = __package__.split('.')[1]
-#         return context
 
 #     def get_queryset(self):
 #         qs = super().get_queryset()

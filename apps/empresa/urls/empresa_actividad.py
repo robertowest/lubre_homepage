@@ -1,7 +1,7 @@
 from django.urls import path
 from apps.empresa import views
 
-app_name = 'empresa_actividad'
+app_name = 'empresa_actividad'  # en template: request.resolver_match.app_name
 
 urlpatterns = [
     path('<int:pk>/', views.EmpActDetailView.as_view(), name='detail'),
@@ -21,4 +21,8 @@ urlpatterns = [
     # Empresa-Actividad-Domicilio
     path('eac/<int:eacId>/eliminar/', views.eac_delete, name='eac_delete'),
     path('ead/<int:eadId>/eliminar/', views.ead_delete, name='ead_delete'),
+
+    # Empresa-Actividad-Contacto
+    path('<int:eaId>/eac/<int:eacId>/cargo/', views.eac_asignar_cargo, name='eac_asignar_cargo'),
+    path('<int:eaId>/eac/<int:eacId>/asignar_cargo', views.eac_asignar_cargo_ex, name='eac_asignar_cargo_ex'),
 ]

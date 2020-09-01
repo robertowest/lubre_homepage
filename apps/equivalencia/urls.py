@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-app_name = 'equivalencia'
+app_name = 'equivalencia'   # en template: request.resolver_match.app_name
 
 urlpatterns = [
     # path('', views.EquivalenciaForm.as_view(), name='form'),
