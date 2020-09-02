@@ -72,7 +72,7 @@
                                         data-toggle="modal" data-target="#myModal"
                                         data-title="Eliminar asociación"
                                         data-message="¿Está seguro de eliminar esta asociación?"
-                                        data-success="{% url 'empresa_actividad:ead_delete' registro.pk %}"
+                                        data-url="{% url 'empresa_actividad:ead_delete' registro.pk %}"
                                         data-type="delete">
                                         <i class="fa fa-trash-alt"></i>
                                     </a>
@@ -117,7 +117,6 @@
                                        data-toggle="modal" data-target="#myModal"
                                        data-title="Asignar Puesto Laboral"
                                        data-url="{% url 'empresa_actividad:eac_asignar_cargo' object.pk registro.pk %}"
-                                       data-success="{% url 'empresa_actividad:eac_asignar_cargo_ex' object.pk registro.pk %}"
                                        data-pk="{{object.pk}}" data-type="form">
                                         {{registro.cargo}}
                                     </a>
@@ -136,7 +135,7 @@
                                         data-toggle="modal" data-target="#myModal"
                                         data-title="Eliminar asociación"
                                         data-message="¿Está seguro de eliminar esta asociación?"
-                                        data-success="{% url 'empresa_actividad:eac_delete' registro.pk %}"
+                                        data-url="{% url 'empresa_actividad:eac_delete' registro.pk %}"
                                         data-type="delete">
                                         <i class="fa fa-trash-alt"></i>
                                     </a>
@@ -174,9 +173,8 @@
 
 
 {% block modal %}
-    {# include 'empresa_actividad/includes/_modal.html' #}
+    {# https://pypi.org/project/django-bootstrap-modal-forms/ #}
     {% include 'includes/_modal.html' %}
-    {% include 'includes/_modal_delete.html' %}
 {% endblock %}
 
 
@@ -189,7 +187,6 @@
         $('#myModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget);
             var $dataURL = button.data('url');
-            var $success = button.data('success');
             var $message = button.data('message');
             var $title = button.data('title');
             var $type = button.data('type');
@@ -203,7 +200,7 @@
                 // determinamos la acción del boton Ok
                 $('#myModalFooter').show();
                 var link = $(this).find('#myModalOk')[0];
-                link.href = $success;
+                link.href = $dataURL;
             }
             else {
                 if ($type == 'table') {
@@ -212,10 +209,11 @@
                 else if ($type == 'form') {
                     $('#myModalFooter').show();
                     var link = $(this).find('#myModalOk')[0];
-                    link.href = $success;
+                    link.href = $dataURL;
                 }
 
                 $.ajax({
+                    type: 'GET',
                     url: $dataURL,
                     data: {pk: dataPK},
                     success: function(response) {
@@ -228,8 +226,16 @@
             }
         })
 
-        $('#myModal').find('myModalOk').on('click', function (e) {
-            console.log( JSON.stringify(e, null, 2) );
+        $('#myModal').find('#myModalOk').on('click', function (event) {
+            console.log( JSON.stringify(event, null, 2) );
+
+            var $dataURL = $(event.target)[0].href;
+            var dataFORM = $("#formInModal");
+
+            console.log( JSON.stringify(dataFORM, null, 2) );
+            console.log( JSON.stringify(dataFORM.serialize(), null, 2) );
+            alert('pausa');
+
         });
 
         $('#myModal').on('hidden.bs.modal', function (event) {

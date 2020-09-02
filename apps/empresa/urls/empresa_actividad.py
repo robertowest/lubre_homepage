@@ -24,5 +24,5 @@ urlpatterns = [
 
     # Empresa-Actividad-Contacto
     path('<int:eaId>/eac/<int:eacId>/cargo/', views.eac_asignar_cargo, name='eac_asignar_cargo'),
-    path('<int:eaId>/eac/<int:eacId>/asignar_cargo', views.eac_asignar_cargo_ex, name='eac_asignar_cargo_ex'),
+    # path('<int:eaId>/eac/<int:eacId>/asignar_cargo', views.eac_asignar_cargo_ex, name='eac_asignar_cargo_ex'),
 ]

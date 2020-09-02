@@ -509,12 +509,19 @@ def eac_delete(request, eacId):
 
 @login_required(login_url='/accounts/login/')
 def eac_asignar_cargo(request, eaId, eacId):
-    context = {
-        'object': models.EmpresaActividadContactos.objects.get(id=eacId),
-        'empresa_actividad_id': eaId,
-        'empresa_actividad_contacto_id': eacId,
-    }
-    return render(request, 'empresa_actividad/includes/_modal_asignar_cargo.html', context)
+    if request.method == "POST":
+        relacion = models.EmpresaActividadContactos.objects.get(id=eacId)
+        relacion.cargo = request.POST['cargo']
+        relacion.save()
+        return reverse_lazy('empresa_actividad:detail', args={'pk': eaId})
+
+    else:
+        context = {
+            'object': models.EmpresaActividadContactos.objects.get(id=eacId),
+            'empresa_actividad_id': eaId,
+            'empresa_actividad_contacto_id': eacId,
+        }
+        return render(request, 'empresa_actividad/includes/_modal_asignar_cargo.html', context)
 
 @login_required(login_url='/accounts/login/')
 def eac_asignar_cargo_ex(request, eaId, eacId):
