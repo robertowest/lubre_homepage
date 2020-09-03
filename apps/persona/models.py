@@ -33,7 +33,12 @@ class Persona(CommonStruct):
         # ordering = ['apellido', 'nombre']
 
     def __str__(self):
-        return "%s, %s" % (self.apellido, self.nombre)
+        if (self.nombre != '-' and self.apellido != '-'):
+            return "%s, %s" % (self.apellido, self.nombre)
+        elif (self.nombre != '-'):
+            return self.nombre
+        else:
+            return self.apellido
 
     @property
     def edad(self):

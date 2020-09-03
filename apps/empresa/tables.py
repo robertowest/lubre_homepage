@@ -5,10 +5,10 @@ from django.utils.translation import gettext_lazy as _
 from .models import Empresa
 
 ACTIONS = '''
-<a href="{% url 'empresa:detail' record.pk %}" class="text-info" title="" data-toggle="tooltip" data-original-title="View"><i class="fa fa-eye">&nbsp;</i></a>
-<a href="{% url 'empresa:update' record.pk %}" class="text-primary" title="" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit">&nbsp;</i></a>
+<a href="{% url 'empresa:detail' record.pk %}" class="text-info" data-toggle="tooltip" data-original-title="Ver"><i class="fa fa-eye">&nbsp;</i></a>
+<a href="{% url 'empresa:update' record.pk %}" class="text-primary" data-toggle="tooltip" data-original-title="Editar"><i class="fa fa-edit">&nbsp;</i></a>
+<a href="{% url 'empresa:delete' record.pk %}?next={{request.get_full_path|urlencode}}" class="text-danger" data-toggle="tooltip" data-original-title="Eliminar"><i class="fa fa-trash">&nbsp;</i></a>
 '''
-# <a href="{% url 'empresa:delete' record.pk %}" class="text-danger" title="" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash">&nbsp;</i></a>
 
 
 class EmpresaTable(tables.Table):

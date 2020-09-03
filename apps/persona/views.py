@@ -12,11 +12,13 @@ from django_tables2.views import SingleTableMixin
 from django_tables2.paginators import LazyPaginator
 
 from . import filters, forms, models, tables
+from apps.empresa.models import Comercial
 
 from apps.comunes.models import Comunicacion as ComunicacionModel
 from apps.comunes.models import Domicilio as DomicilioModel
 from apps.comunes.forms.comunicacion import ComunicacionForm
 from apps.comunes.forms.domicilio import DomicilioForm
+from apps.comunes.utils import PagedFilteredTableView
 
 
 # Create your views here.
@@ -31,13 +33,20 @@ class PersonaTemplateView(generic.TemplateView):
         return PersonasListView.as_view()(request)
 
 
-class PersonasListView(LoginRequiredMixin, SingleTableMixin, FilterView):
-    model = models.Persona  # .objects.all().order_by('nombre', 'apellido')
+class PersonasListView(LoginRequiredMixin, PagedFilteredTableView):
+    model = models.Persona
     table_class = tables.PersonaTable
-    filterset_class = filters.PersonaFilter
-    template_name = 'persona/tabla_filtro.html'
-    ordering = ['nombre', 'apellido', 'id']
-    paginator_class = LazyPaginator
+    filter_class = filters.PersonaFilter
+    formhelper_class = forms.PersonaFilterForm
+    template_name = 'comunes/tabla2.html'
+
+    def get_queryset(self):
+        # return models.Persona.objects.filter(active=True)
+        # eliminamos las personas que son comerciales de la empresa
+        inner_qs = Comercial.objects.all()
+        obj_list = models.Persona.objects.exclude(id__in=inner_qs) \
+                        .filter(active=True).order_by('nombre', 'apellido')
+        return obj_list
 
 
 class PersonasListView_old(LoginRequiredMixin, SingleTableMixin, FilterView):
@@ -47,27 +56,6 @@ class PersonasListView_old(LoginRequiredMixin, SingleTableMixin, FilterView):
     template_name = 'persona/tabla_filtro.html'
     ordering = ['nombre', 'apellido', 'id']
     paginator_class = LazyPaginator
-
-
-# class PersonasListView(generic.ListView):
-#     model = models.Persona
-#     template_name = 'persona/tabla_filtro.html'
-
-#     # def get_context_data(self, *, object_list=None, **kwargs):
-#     #     context = super().get_context_data(**kwargs)
-#     #     context['model_name'] = models.Persona._meta.verbose_name_plural.title()
-#     #     context['object_list'] = models.Persona.objects.filter(active=True)
-#     #     return context
-
-#     def get_queryset(self):
-#         qs = super().get_queryset()
-#         search = self.request.GET.get('search1') 
-#         if search:
-#             filter = Q(nombre__icontains=search) | Q(apellido__icontains=search)
-#             return qs.filter(filter).order_by('nombre', 'apellido', 'id')
-#         else: 
-#             return qs.filter(active=True).order_by('nombre', 'apellido', 'id')
-#             # return qs.filter(id=0)
 
 
 class PersonaCreateView(generic.CreateView):  # LoginRequiredMixin

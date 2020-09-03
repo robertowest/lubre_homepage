@@ -123,17 +123,18 @@ class EmpresaUpdateView(LoginRequiredMixin, generic.UpdateView):
 
 
 class EmpresaDeleteView(LoginRequiredMixin, generic.DeleteView):
-    # model = models.Empresa
-    # success_url = reverse_lazy('empresa:list')
+    model = models.Empresa
+    success_message = "Registro eliminado correctamente"
 
-    # def get_object(self, queryset=None):
-    #     obj = super().get_object()
-    #     if not obj.created_by == self.request.user.id:
-    #         raise Http404
-    #     return obj
-    # def get_success_url(self):
-    #     return reverse_lazy('empresa:detail', args=(self.object.pk,))
-    pass
+    def get(self, request, *args, **kwargs):
+        return self.post(request, *args, **kwargs)
+
+    def get_success_url(self):
+        redirect = self.request.GET.get('next')
+        if redirect:
+            return redirect
+        #reverse_lazy('empresa:detail', args=(self.object.pk,))
+        return reverse_lazy('empresa:list')
 
 
 def empresa_actividad(request, empId, actId):

@@ -76,4 +76,14 @@ class ComunicacionUpdateView(UpdateView):
 
  
 class ComunicacionDeleteView(DeleteView):
-    pass
+    model = ComunicacionModel
+    success_message = "Registro eliminado correctamente"
+
+    def get(self, request, *args, **kwargs):
+        return self.post(request, *args, **kwargs)
+
+    def get_success_url(self):
+        redirect = self.request.GET.get('next')
+        if redirect:
+            return redirect
+        return reverse_lazy('comunicacion:list')

@@ -38,6 +38,7 @@ class ActividadForm(forms.ModelForm):
         self.helper.layout.append(layout.HTML(bSave))
         self.helper.layout.append(layout.HTML(bCancel))
 
+# -----------------------------------------------------------------------------
 
 class EmpresaForm(forms.ModelForm):
     class Meta:
@@ -84,46 +85,6 @@ class EmpresaForm(forms.ModelForm):
         self.helper.layout.append(layout.HTML("<hr>"))
         self.helper.layout.append(layout.HTML(bSave))
         self.helper.layout.append(layout.HTML(bCancel))
-
-
-class ComercialForm(forms.ModelForm):
-    class Meta:
-        model = Comercial
-        fields = ['persona', 'usuario', 'active']  # 'comunicaciones', 'domicilios', 
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        # # valores iniciales para campos especiales
-        # self.fields['comunicaciones'].widget.attrs['size'] = 13
-        # self.fields['comunicaciones'].help_text = "Pulse Ctrl para seleccionar varios"
-
-        # self.fields['domicilios'].widget.attrs['size'] = 13
-        # self.fields['domicilios'].help_text = "Pulse Ctrl para seleccionar varios"
-
-        # creamos helper
-        self.helper = helper.FormHelper()
-        self.helper.form_id = "myform"
-
-        # creamos layouts
-        self.helper.layout = layout.Layout()        
-
-        # agregamos todos los campos
-        for fld in self.Meta.fields:
-            self.helper.layout.append(fld)
-
-        # agregamos los botones de acción
-        bSave = '<button type="submit" class="btn btn-primary btn-icon-split"><span class="icon text-white-50"><i class="fas fa-save"></i></span><span class="text">Grabar</span></button>'
-        bCancel = '<a class="btn btn-warning btn-icon-split" style="margin-left: 5px" href="{{request.META.HTTP_REFERER}}"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Cancela</span></a>'
-        self.helper.layout.append(layout.HTML("<hr>"))
-        self.helper.layout.append(layout.HTML(bSave))
-        self.helper.layout.append(layout.HTML(bCancel))
-
-
-
-
-
-
 
 
 class EmpresaFilterFormHelper(helper.FormHelper):
@@ -187,3 +148,38 @@ class EmpresaFilterForm(helper.FormHelper):
                 css_class="col-12 text-right align-self-center",
             )
         )
+
+# -----------------------------------------------------------------------------
+
+class ComercialForm(forms.ModelForm):
+    class Meta:
+        model = Comercial
+        fields = ['persona', 'usuario', 'active']  # 'comunicaciones', 'domicilios', 
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # # valores iniciales para campos especiales
+        # self.fields['comunicaciones'].widget.attrs['size'] = 13
+        # self.fields['comunicaciones'].help_text = "Pulse Ctrl para seleccionar varios"
+
+        # self.fields['domicilios'].widget.attrs['size'] = 13
+        # self.fields['domicilios'].help_text = "Pulse Ctrl para seleccionar varios"
+
+        # creamos helper
+        self.helper = helper.FormHelper()
+        self.helper.form_id = "myform"
+
+        # creamos layouts
+        self.helper.layout = layout.Layout()        
+
+        # agregamos todos los campos
+        for fld in self.Meta.fields:
+            self.helper.layout.append(fld)
+
+        # agregamos los botones de acción
+        bSave = '<button type="submit" class="btn btn-primary btn-icon-split"><span class="icon text-white-50"><i class="fas fa-save"></i></span><span class="text">Grabar</span></button>'
+        bCancel = '<a class="btn btn-warning btn-icon-split" style="margin-left: 5px" href="{{request.META.HTTP_REFERER}}"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Cancela</span></a>'
+        self.helper.layout.append(layout.HTML("<hr>"))
+        self.helper.layout.append(layout.HTML(bSave))
+        self.helper.layout.append(layout.HTML(bCancel))
