@@ -208,8 +208,8 @@
                 }
                 else if ($type == 'form') {
                     $('#myModalFooter').show();
-                    var link = $(this).find('#myModalOk')[0];
-                    link.href = $dataURL;
+                    // var link = $(this).find('#myModalOk')[0];
+                    // link.href = $dataURL;
                 }
 
                 $.ajax({
@@ -228,14 +228,6 @@
 
         $('#myModal').find('#myModalOk').on('click', function (event) {
             console.log( JSON.stringify(event, null, 2) );
-
-            var $dataURL = $(event.target)[0].href;
-            var dataFORM = $("#formInModal");
-
-            console.log( JSON.stringify(dataFORM, null, 2) );
-            console.log( JSON.stringify(dataFORM.serialize(), null, 2) );
-            alert('pausa');
-
         });
 
         $('#myModal').on('hidden.bs.modal', function (event) {
