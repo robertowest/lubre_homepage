@@ -90,21 +90,15 @@ class Empresa(CommonStruct):
     nombre = models.CharField('Nombre de Fantasía', max_length=60)
     razon_social = models.CharField('Razón Social', max_length=60, unique=True)
     cuit = models.CharField('CUIT/CUIL', max_length=13, unique=True, null=True, blank=True)
-    comercial = models.ForeignKey(Comercial, on_delete=models.CASCADE, null=True, blank=True,
-                                  limit_choices_to={'active': True})
+    # limit_choices_to={'active': True}
+    comercial = models.ForeignKey(Comercial, on_delete=models.CASCADE, null=True, blank=True)
     actividad = models.ForeignKey(Actividad, on_delete=models.CASCADE, null=True, blank=True,
-                                  limit_choices_to={'active': True},
                                   verbose_name='Actividad principal')
     actividades = models.ManyToManyField(Actividad, blank=True,
                                          related_name='empresa_actividades',
                                          limit_choices_to={'parent__isnull': False, 'active': True})
     comunicaciones = models.ManyToManyField(Comunicacion, blank=True,
-                                            related_name='empresa_comunicaciones',
-                                            limit_choices_to={'active': True})
-    # domicilios = models.ManyToManyField(Domicilio, related_name='empresa_domicilios',
-    #                                     blank=True, limit_choices_to={'active': True})
-    # contactos = models.ManyToManyField(Persona, related_name='empresa_contactos',
-    #                                    blank=True, limit_choices_to={'active': True})
+                                            related_name='empresa_comunicaciones')
     observacion = models.TextField(null=True, blank=True)
     referencia_id = models.IntegerField('Referencia Externa', null=True, blank=True, unique=True)
     origen = models.IntegerField(null=True, blank=True)
