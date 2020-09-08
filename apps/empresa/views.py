@@ -7,6 +7,7 @@ from django.db.models import Count
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render, get_list_or_404, get_object_or_404
 from django.urls import resolve, reverse, reverse_lazy
+from django.utils.http import urlencode
 from django.views import generic
 from django_tables2 import SingleTableView
 
@@ -31,7 +32,21 @@ class EmpresaTemplateView(LoginRequiredMixin, generic.TemplateView):
     # app=__package__.split('.')[1]     --> lo obtiene de urls.py
     # model._meta.verbose_name.lower()  --> lo obtiene de models.py
     model = models.Empresa
-    template_name = '{app}/index.html'.format(app=__package__.split('.')[1])
+    # template_name = '{app}/index.html'.format(app=__package__.split('.')[1])
+
+    def dispatch(self, request, *args, **kwargs):
+        if self.request.user is not None and self.request.user.is_staff:
+            try:
+                comercial = models.Comercial.objects.get(usuario=self.request.user)
+                if comercial:
+                    get_args_str = urlencode({'comercial': comercial.id, 'active': True})
+                    return HttpResponseRedirect("/empresa/listado/?%s" % get_args_str)
+                else:
+                    return HttpResponseRedirect("/empleado/")
+            except models.Comercial.DoesNotExist:
+                # return HttpResponseRedirect("/empleado/")
+                pass
+        return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         model = self.model
@@ -39,6 +54,9 @@ class EmpresaTemplateView(LoginRequiredMixin, generic.TemplateView):
         context['actividades'] = model.objects.values('actividad', 'actividad__nombre').annotate(contador=Count('id'))
         context['comerciales'] = model.objects.values('comercial', 'comercial__persona__apellido').annotate(contador=Count('id'))
         return context
+
+    def get_template_names(self):
+        return 'empresa/index.html'
 
 
 class EmpresaListView(LoginRequiredMixin, PagedFilteredTableView):
@@ -133,93 +151,6 @@ def empresa_actividad(request, empId, actId):
     url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': ea[0].id})
     return HttpResponseRedirect(url)
 
-
-# -----------------------------------------------------------------------------
-# Empresas filtradas por Actividades y Comerciales
-# -----------------------------------------------------------------------------
-
-
-class FilterListView_old(LoginRequiredMixin, generic.ListView):
-    model = models.Empresa
-    # template_name = '{app}/list.html'.format(app=model._meta.verbose_name.lower())
-    # comprobamos si existe un template personalizado, sino utilizamos el comun
-    template = '{path}/{app}/templates/{app}/tabla.html'.format(
-        path=os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-        app=model._meta.app_label,
-    )
-    if os.path.exists(template):
-        template_name = '{app}/tabla.html'.format(app=model._meta.app_label)
-    else:
-        template_name = 'comunes/tabla.html'
-
-    def url_name(self):
-        attrib = resolve(self.request.path)
-        return getattr(attrib, 'url_name', 'all')
-
-    def get_queryset(self):
-        # attrib = resolve(self.request.path)
-        # name = getattr(attrib, 'url_name', 'all')
-        name = self.url_name()
-        if self.kwargs['filtro'] == 0:
-            self.kwargs['filtro'] = None
-        if name == 'filtro_actividad':
-            return self.model.objects \
-                   .filter(actividad=self.kwargs['filtro']) \
-                   .filter(active=True) \
-                   .order_by('razon_social')
-        if name == 'filtro_comercial':
-                   # .filter(modified__isnull=True) \
-            return self.model.objects \
-                   .filter(comercial=self.kwargs['filtro']) \
-                   .filter(active=True) \
-                   .order_by('razon_social')
-        return self.model.objects.all().order_by('razon_social')
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        name = self.url_name()
-        if name == 'filtro_actividad':
-            context['filtro'] = 'filtrado por Actividad'
-        if name == 'filtro_comercial':
-            context['filtro'] = 'filtrado por Comercial'
-        return context
-
-class FilterListView(LoginRequiredMixin, PagedFilteredTableView):
-    model = models.Empresa
-    filter_class = filters.EmpresaFilter
-    table_class = tables.EmpresaTable
-    formhelper_class = forms.EmpresaFilterForm  # params={'tipo': 'filtrado'}
-    template_name = 'comunes/tabla2.html'
-
-    def url_name(self):
-        attrib = resolve(self.request.path)
-        return getattr(attrib, 'url_name', 'all')
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        name = self.url_name()
-        if name == 'filtro_actividad':
-            context['filtro'] = 'filtrado por Actividad'
-        if name == 'filtro_comercial':
-            context['filtro'] = 'filtrado por Comercial'
-        return context
-
-    def get_queryset(self):
-        if ('actividad' in self.request.GET and self.request.GET['actividad'] != ''):
-            data = self.model.objects \
-                   .filter(actividad=self.request.GET['actividad']) \
-                   .order_by('razon_social')
-        elif ('comercial' in self.request.GET and self.request.GET['comercial'] != ''):
-            # .filter(modified__isnull=True) \
-            data = self.model.objects \
-                   .filter(comercial=self.request.GET['comercial']) \
-                   .order_by('razon_social')
-        else:
-            return self.model.objects.all().order_by('razon_social')
-
-        # if ('active' in self.request.GET):
-        #     return data.filter(active=self.request.GET['active'])
-        return data
 
 # -----------------------------------------------------------------------------
 # Tablas relacionadas a la empresa

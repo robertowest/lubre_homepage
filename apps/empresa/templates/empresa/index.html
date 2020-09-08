@@ -11,8 +11,6 @@
 
 {% block content %}
 
-{{ "prueba"|addstr:'?actividad='|addstr:None }}
-
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Panel de Control</h1>
         <a href="{% url 'empresa:list' %}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
@@ -34,7 +32,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{obj.contador}}</div>
                         </div>
                         <div class="col-auto">
-                            {% url 'empresa:filtro_comercial' as url_link %}
+                            {% url 'empresa:list' as url_link %}
                             <a href="{{ url_link|addstr:'?comercial='|addstr:obj.comercial }}">
                                 <i class="fas fa-angle-right fa-2x text-gray-500"></i>
                             </a>
@@ -60,7 +58,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{obj.contador}}</div>
                         </div>
                         <div class="col-auto">
-                            {% url 'empresa:filtro_actividad' as url_link %}
+                            {% url 'empresa:list' as url_link %}
                             <a href="{{ url_link|addstr:'?actividad='|addstr:obj.actividad }}">
                                 <i class="fas fa-angle-right fa-2x text-gray-500"></i>
                             </a>
