@@ -8,6 +8,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render, get_list_or_404, get_object_or_404
 from django.urls import resolve, reverse, reverse_lazy
 from django.views import generic
+from django_tables2 import SingleTableView
 
 from . import filters, forms, models, tables
 
@@ -40,24 +41,11 @@ class EmpresaTemplateView(LoginRequiredMixin, generic.TemplateView):
         return context
 
 
-# class EmpresaListView(LoginRequiredMixin, generic.ListView):
-#     model = models.Empresa
-#     # template_name = 'comunes/tabla.html'    # .format(app=__package__.split('.')[1])
-#     template_name = 'empresa/tabla_filtro.html'
-
-#     def get_queryset(self):
-#         qs = super().get_queryset()
-#         search = self.request.GET.get('search1') 
-#         if search:
-#             return qs.filter(nombre__icontains=search).filter(active=True)
-#         else: 
-#             return qs.filter(id=0)
-
 class EmpresaListView(LoginRequiredMixin, PagedFilteredTableView):
     model = models.Empresa
     filter_class = filters.EmpresaFilter
     table_class = tables.EmpresaTable
-    formhelper_class = forms.EmpresaFilterForm  # .EmpresaFilterFormHelper
+    formhelper_class = forms.EmpresaFilterForm
     template_name = 'comunes/tabla2.html'
 
     def get_queryset(self):
@@ -151,7 +139,7 @@ def empresa_actividad(request, empId, actId):
 # -----------------------------------------------------------------------------
 
 
-class FilterListView(LoginRequiredMixin, generic.ListView):
+class FilterListView_old(LoginRequiredMixin, generic.ListView):
     model = models.Empresa
     # template_name = '{app}/list.html'.format(app=model._meta.verbose_name.lower())
     # comprobamos si existe un template personalizado, sino utilizamos el comun
@@ -196,6 +184,42 @@ class FilterListView(LoginRequiredMixin, generic.ListView):
             context['filtro'] = 'filtrado por Comercial'
         return context
 
+class FilterListView(LoginRequiredMixin, PagedFilteredTableView):
+    model = models.Empresa
+    filter_class = filters.EmpresaFilter
+    table_class = tables.EmpresaTable
+    formhelper_class = forms.EmpresaFilterForm  # params={'tipo': 'filtrado'}
+    template_name = 'comunes/tabla2.html'
+
+    def url_name(self):
+        attrib = resolve(self.request.path)
+        return getattr(attrib, 'url_name', 'all')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        name = self.url_name()
+        if name == 'filtro_actividad':
+            context['filtro'] = 'filtrado por Actividad'
+        if name == 'filtro_comercial':
+            context['filtro'] = 'filtrado por Comercial'
+        return context
+
+    def get_queryset(self):
+        if ('actividad' in self.request.GET and self.request.GET['actividad'] != ''):
+            data = self.model.objects \
+                   .filter(actividad=self.request.GET['actividad']) \
+                   .order_by('razon_social')
+        elif ('comercial' in self.request.GET and self.request.GET['comercial'] != ''):
+            # .filter(modified__isnull=True) \
+            data = self.model.objects \
+                   .filter(comercial=self.request.GET['comercial']) \
+                   .order_by('razon_social')
+        else:
+            return self.model.objects.all().order_by('razon_social')
+
+        # if ('active' in self.request.GET):
+        #     return data.filter(active=self.request.GET['active'])
+        return data
 
 # -----------------------------------------------------------------------------
 # Tablas relacionadas a la empresa
@@ -310,28 +334,16 @@ class ActividadTemplateView(LoginRequiredMixin, generic.TemplateView):
         return ActividadListView.as_view()(request)
 
 
-class ActividadListView(LoginRequiredMixin, generic.ListView):
+class ActividadListView(LoginRequiredMixin, SingleTableView):  # PagedFilteredTableView
     model = models.Actividad
-    template_name = 'comunes/tabla.html'
-
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['tableID'] = 'dataTableOrder'
-    #     return context
+    # filter_class = filters.ActividadFilter  # (initial={'active': True})
+    table_class = tables.ActividadTable
+    # formhelper_class = forms.ActividadFilterForm    # (initial = {'active': True})
+    template_name = 'comunes/tabla2_not_filter.html'
 
     def get_queryset(self):
-        # queryset = super().get_queryset()
-        # sql = "SELECT id, nombre, parent_id FROM empresa_actividad ORDER BY case when parent_id is null then id else parent_id end * 1000 + id ASC"
-        # queryset = models.Actividad.objects.raw(sql).all()
-        # return queryset
-
-        # ordering = 'CASE WHEN parent_id IS Null THEN id ELSE parent_id END * 1000 + id'
-        # qs = models.Actividad.objects.all().extra(select={'criterio': ordering}, order_by=('criterio',))
-
         ordering = 'IFNULL(parent_id, id)'
-        # qs = models.Actividad.objects.all().values('nombre', 'parent_id', 'id').filter(active=True).extra(select={'grupo': ordering}, order_by=('grupo','parent_id','nombre'))
         qs = models.Actividad.objects.all().filter(active=True).extra(select={'grupo': ordering}, order_by=('grupo','parent_id','nombre'))
-
         return qs
 
 
@@ -566,15 +578,15 @@ class ComercialTemplateView(LoginRequiredMixin, generic.TemplateView):
         return ComercialListView.as_view()(request)
 
 
-class ComercialListView(LoginRequiredMixin, generic.ListView):
+class ComercialListView(LoginRequiredMixin, PagedFilteredTableView):
     model = models.Comercial
-    template_name = 'comunes/tabla.html'
+    filter_class = filters.ComercialFilter  # (initial={'active': True})
+    table_class = tables.ComercialTable
+    formhelper_class = forms.ComercialFilterForm    # (initial = {'active': True})
+    template_name = 'comunes/tabla2.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['tableID'] = 'dtComerciales'
-        context['tableCLASS'] = 'display compact order-column'        
-        return context
+    # def get_queryset(self):
+    #     return models.Comercial.objects.filter(active=True)
 
 
 class ComercialCreateView(LoginRequiredMixin, generic.CreateView):

@@ -5,6 +5,8 @@ from .models import Persona
 
 
 class PersonaForm(forms.ModelForm):
+    # active = forms.BooleanField(initial=True)
+
     class Meta:
         model = Persona
         fields = ['nombre', 'apellido', 'documento', 'fecha_nacimiento', 'active']

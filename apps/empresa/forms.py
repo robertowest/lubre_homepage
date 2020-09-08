@@ -87,40 +87,9 @@ class EmpresaForm(forms.ModelForm):
         self.helper.layout.append(layout.HTML(bCancel))
 
 
-class EmpresaFilterFormHelper(helper.FormHelper):
-    form_class = "form form-inline"
-    form_id = "empresa-search-form"
-    form_method = "GET"
-    form_tag = True
-    html5_required = True
-    layout = layout.Layout(
-        layout.Div(
-            layout.Fieldset(
-                "<span class='fa fa-search'></span> Buscar Empresa",
-                layout.Div(
-                    bootstrap.InlineField("nombre", wrapper_class="col-4"),
-                    bootstrap.InlineField("razon_social", wrapper_class="col-4"),
-                    bootstrap.InlineField("cuit", wrapper_class="col-4"),
-                    css_class="row",
-                ),
-                layout.Div(
-                    bootstrap.InlineField("comercial", wrapper_class="col-4"),
-                    bootstrap.InlineField("referencia_id", wrapper_class="col-4"),
-                    bootstrap.InlineField("active", wrapper_class="col-4"),
-                    css_class="row",
-                ),
-                css_class="col-10 border p-3",
-            ),
-            bootstrap.FormActions(
-                layout.Submit("submit", "Filtrar"),
-                css_class="col-2 text-right align-self-center",
-            ),
-            css_class="row",
-        )
-    )
-
-
 class EmpresaFilterForm(helper.FormHelper):
+    comercial = forms.CheckboxInput(attrs={'disabled': True})
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.form_method = 'get'
@@ -136,9 +105,10 @@ class EmpresaFilterForm(helper.FormHelper):
                     layout.Column('cuit',         css_class='col-lg-2 col-md-4 col-sm-6 mb-0'),
                 ),
                 layout.Row(
-                    layout.Column('comercial',     css_class='col-lg-5 col-md-4 col-sm-12 mb-0'),
-                    layout.Column('referencia_id', css_class='col-lg-2 col-md-4 col-sm-6 mb-0'),
-                    layout.Column('active',        css_class='col-lg-2 col-md-4 col-sm-6 mb-0'),
+                    layout.Column('comercial',     css_class='col-lg-4 col-md-4 col-sm-12 mb-0'),
+                    layout.Column('actividad',     css_class='col-lg-4 col-md-4 col-sm-12 mb-0'),
+                    layout.Column('referencia_id', css_class='col-lg-2 col-md-2 col-sm-6 mb-0'),
+                    layout.Column('active',        css_class='col-lg-2 col-md-2 col-sm-6 mb-0'),
                 ),
                 css_class="col-12",
             ),
@@ -183,3 +153,28 @@ class ComercialForm(forms.ModelForm):
         self.helper.layout.append(layout.HTML("<hr>"))
         self.helper.layout.append(layout.HTML(bSave))
         self.helper.layout.append(layout.HTML(bCancel))
+
+
+class ComercialFilterForm(helper.FormHelper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.form_method = 'get'
+
+        bFilter = '<button type="submit" class="btn btn-primary btn-icon-split"><span class="icon text-white-50"><i class="fas fa-filter"></i></span><span class="text">Filtrar</span></button>'
+        bLimpiar = '<a class="btn btn-secondary btn-icon-split" style="margin-left: 5px" href="/comercial/listado/"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Limpiar</span></a>'
+
+        self.layout = layout.Layout(
+            layout.Div(
+                layout.Row(
+                    layout.Column('persona__nombre',   css_class='col-lg-5 col-md-4 col-sm-12 mb-0'),
+                    layout.Column('persona__apellido', css_class='col-lg-5 col-md-4 col-sm-12 mb-0'),
+                    layout.Column('active',            css_class='col-lg-2 col-md-4 col-sm-6 mb-0'),
+                ),
+                css_class="col-12",
+            ),
+            layout.Div(
+                layout.HTML(bFilter),
+                layout.HTML(bLimpiar),
+                css_class="col-12 text-right align-self-center",
+            )
+        )

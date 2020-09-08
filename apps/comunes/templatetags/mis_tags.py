@@ -77,3 +77,18 @@ def file_exists(value):
         return True
     except template.TemplateDoesNotExist:
         return False
+
+
+@register.filter
+def build_url(value, args):
+    if args is None:
+        return value
+    arg_list = [arg.strip() for arg in args.split(',')]
+    return value + "?" + arg_list[0] + "=" + arg_list[1]
+
+
+@register.filter
+def addstr(value, arg):
+    if arg is None:
+        arg = 0
+    return str(value) + str(arg)

@@ -1,9 +1,10 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, redirect, render
 # from django.contrib.auth.forms import UserCreationForm
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect
+from django.utils.http import urlencode
+from django.shortcuts import get_object_or_404, redirect, render
 
 from apps.empresa.models import Comercial
 
@@ -24,15 +25,16 @@ def LoginRedirect(request):
                 if comercial:
                     # return HttpResponseRedirect("/comercial/")
                     # return HttpResponseRedirect("/empresa/recorrer/")
-                    return HttpResponseRedirect("/empresa/filtro_comercial/" + str(comercial.id))
+                    # return HttpResponseRedirect("/empresa/filtro_comercial/" + str(comercial.id))
+                    get_args_str = urlencode({'comercial': comercial.id, 'active': True})
+                    return HttpResponseRedirect("/empresa/filtro_comercial/?%s" % get_args_str)
                 else:
                     return HttpResponseRedirect("/empleado/")
 
             except Comercial.DoesNotExist:
                 return HttpResponseRedirect("/empleado/")
-
-        else:
-            return HttpResponseRedirect("/")
+    else:
+        return HttpResponseRedirect("/")
 
 
 def login_view(request):

@@ -17,9 +17,9 @@ urlpatterns = [
     path('<int:pk>/modificar/', views.EmpresaUpdateView.as_view(), name='update'),
     path('<int:pk>/eliminar/', views.EmpresaDeleteView.as_view(), name='delete'),
 
-    # listado de empresas con filtro
-    path('filtro_actividad/<int:filtro>', views.FilterListView.as_view(), name='filtro_actividad'),
-    path('filtro_comercial/<int:filtro>', views.FilterListView.as_view(), name='filtro_comercial'),
+    # listado de empresas con filtro  <int:filtro>
+    path('filtro_actividad/', views.FilterListView.as_view(), name='filtro_actividad'),
+    path('filtro_comercial/', views.FilterListView.as_view(), name='filtro_comercial'),
 
     # alta de registros vinculados a la empresa
     path('<int:fk>/comunicacion/', views.CreateComunicationView.as_view(), name='associate_with_comunication'),

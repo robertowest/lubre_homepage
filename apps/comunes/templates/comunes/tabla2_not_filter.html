@@ -1,0 +1,45 @@
+{% extends 'default_base.html' %}
+
+{% load static %}
+{% load mis_tags %}
+{% load crispy_forms_tags i18n %}
+{% load render_table from django_tables2 %}
+
+
+{% block style %}
+    <link href="{% static 'css/floating-button-action.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Listado de {{object_list|verbose_name_plural}}</h6>
+            <div class="dropdown no-arrow">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="{% url request.resolver_match.app_name|add:':create' %}">Nuevo</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <!-- tabla de contenido -->
+            <div class="card-body">
+                <div class="table-responsive">
+                    {% render_table table %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block floating-button-action %}
+    <button class="fixed-button-add wobble" type="button">
+        <a href="{% url request.resolver_match.app_name|add:':create' %}">
+            <i class="fas fa-plus"></i>
+        </a>
+    </button>
+{% endblock %}
