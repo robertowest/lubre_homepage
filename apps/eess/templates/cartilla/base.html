@@ -1,0 +1,63 @@
+<!doctype html>
+{% load static %}
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+        <title>{% block title %}Cartilla FULL{% endblock %}</title>
+
+        <link rel="shortcut icon" href="https://mobirise.com/bootstrap-template/assets/images/logo2.png" type="image/x-icon">
+        <link href="{% static 'bootstrap4/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/cartilla.css' %}" rel="stylesheet">
+
+        {% block style %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <div class="collapse bg-dark" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <!-- h4 class="text-white">LUBRE SRL</h4 -->
+                            <p class="text-muted">
+                                Cartilla de productos comercializados en nuestro FULL.<br>
+                                Los productos comprenden los artículos de cafetería y sandwichería fría y caliente.<br>
+                                Consulte por los combos existentes.
+                            </p>
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <a href="{% url 'eess:index' %}" class="text-white"><h4>Menú</h4></a>
+                            <ul class="list-unstyled">
+                                <li><a href="{% url 'eess:cafeteria' %}" class="text-white">Cafetería</a></li>
+                                <li><a href="{% url 'eess:combos' %}" class="text-white">Combos</a></li>
+                                <li><a href="{% url 'eess:kiosko' %}" class="text-white">Kiosko</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" -->
+            <div class="navbar navbar-dark bg-dark shadow-sm">
+                <div class="container d-flex justify-content-between">
+                    <a href="{% url 'eess:index' %}" class="navbar-brand d-flex align-items-center">
+                        <strong>Lubre SRL</strong>&nbsp;- Estación de Servicio Famaillá
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main role="main">
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include 'includes/_java_script.html' %}
+        {% block js %}{% endblock %}
+    </body>
+</html>

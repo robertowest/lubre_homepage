@@ -1,0 +1,533 @@
+- model: eess.cartilla
+  pk: 1
+  fields:
+    active: true
+    created: 2020-09-10 18:38:39.324881+00:00
+    created_by: null
+    modified: 2020-09-10 18:38:39.324936+00:00
+    modified_by: null
+    grupo: cafe
+    nombre: "Caf\xE9 con Leche"
+    precio: '190.00'
+    descripcion: Para llevar 355 CC + 2 Facturas
+    imagen: eess/cartilla/00001.png
+- model: eess.cartilla
+  pk: 2
+  fields:
+    active: true
+    created: 2020-09-10 18:40:52.826866+00:00
+    created_by: null
+    modified: 2020-09-10 18:40:52.827070+00:00
+    modified_by: null
+    grupo: cafe
+    nombre: "Caf\xE9 con Leche"
+    precio: '220.00'
+    descripcion: Para llevar 355 CC + 3 Facturas
+    imagen: eess/cartilla/00002.png
+- model: eess.cartilla
+  pk: 3
+  fields:
+    active: true
+    created: 2020-09-10 18:44:43.336041+00:00
+    created_by: null
+    modified: 2020-09-10 18:44:43.336212+00:00
+    modified_by: null
+    grupo: cafe
+    nombre: "Caf\xE9 con Leche"
+    precio: '170.00'
+    descripcion: Para llevar 475 CC + 2 Facturas
+    imagen: eess/cartilla/00003.png
+- model: eess.cartilla
+  pk: 4
+  fields:
+    active: true
+    created: 2020-09-10 18:53:31.219184+00:00
+    created_by: null
+    modified: 2020-09-10 18:53:31.219305+00:00
+    modified_by: null
+    grupo: cafe
+    nombre: "Caf\xE9 con Leche"
+    precio: '143.00'
+    descripcion: Para llevar 355 CC
+    imagen: eess/cartilla/00004.png
+- model: eess.cartilla
+  pk: 5
+  fields:
+    active: true
+    created: 2020-09-10 18:54:08.361152+00:00
+    created_by: null
+    modified: 2020-09-10 18:54:08.361236+00:00
+    modified_by: null
+    grupo: cafe
+    nombre: "Caf\xE9 con Leche"
+    precio: '119.00'
+    descripcion: Para llevar 475 CC
+    imagen: eess/cartilla/00005.png
+- model: eess.cartilla
+  pk: 6
+  fields:
+    active: true
+    created: 2020-09-10 18:54:51.263411+00:00
+    created_by: null
+    modified: 2020-09-10 18:54:51.263469+00:00
+    modified_by: null
+    grupo: cafe
+    nombre: "Promoci\xF3n"
+    precio: '136.00'
+    descripcion: Facturas varias 6x4
+    imagen: eess/cartilla/00006.png
+- model: eess.cartilla
+  pk: 7
+  fields:
+    active: true
+    created: 2020-09-10 18:55:26.901812+00:00
+    created_by: null
+    modified: 2020-09-10 18:55:26.901997+00:00
+    modified_by: null
+    grupo: cafe
+    nombre: "Promoci\xF3n Donuts"
+    precio: '164.00'
+    descripcion: Rellenas 3x2
+    imagen: eess/cartilla/00007.png
+- model: eess.cartilla
+  pk: 8
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: 2020-09-11 15:05:39.987948+00:00
+    modified_by: null
+    grupo: basico
+    nombre: Empanadas
+    precio: '150.00'
+    descripcion: 3 Empanas + Bebida
+    imagen: eess/cartilla/00008.png
+- model: eess.cartilla
+  pk: 9
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: 2020-09-11 15:10:48.513784+00:00
+    modified_by: null
+    grupo: basico
+    nombre: Roll J&Q, Veggie, Peceto, Pollo, Calzone
+    precio: '295.00'
+    descripcion: Roll + Bebida
+    imagen: eess/cartilla/00009.png
+- model: eess.cartilla
+  pk: 10
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: 2020-09-11 15:06:09.505512+00:00
+    modified_by: null
+    grupo: basico
+    nombre: Pechuga Grillada
+    precio: '280.00'
+    descripcion: Sandwich + Bebida
+    imagen: eess/cartilla/00010.png
+- model: eess.cartilla
+  pk: 11
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: 2020-09-11 15:06:23.667704+00:00
+    modified_by: null
+    grupo: basico
+    nombre: Sandwich de Milanesa
+    precio: '285.00'
+    descripcion: Sandwich + Bebida
+    imagen: eess/cartilla/00011.png
+- model: eess.cartilla
+  pk: 12
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: 2020-09-11 15:06:35.529640+00:00
+    modified_by: null
+    grupo: basico
+    nombre: Pechuga Crispy
+    precio: '375.00'
+    descripcion: Sandwich + Bebida
+    imagen: eess/cartilla/00012.png
+- model: eess.cartilla
+  pk: 13
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: 2020-09-11 15:06:45.986493+00:00
+    modified_by: null
+    grupo: basico
+    nombre: Hamburguesa con Queso
+    precio: '350.00'
+    descripcion: Hamburguesa + Bebida
+    imagen: eess/cartilla/00013.png
+- model: eess.cartilla
+  pk: 14
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: 2020-09-11 15:09:29.930216+00:00
+    modified_by: null
+    grupo: basico
+    nombre: "Triple de Jam\xF3n y Queso"
+    precio: '250.00'
+    descripcion: Triple (plan blanco o negro) + Bebida
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 15
+  fields:
+    active: true
+    created: 2020-09-11 15:12:42.513450+00:00
+    created_by: null
+    modified: 2020-09-11 15:12:42.513583+00:00
+    modified_by: null
+    grupo: avanzado
+    nombre: Hamburguesa de Campo
+    precio: '440.00'
+    descripcion: "Hamburguesa + Papas R\xFAsticas + Bebida"
+    imagen: eess/cartilla/00015.png
+- model: eess.cartilla
+  pk: 16
+  fields:
+    active: true
+    created: 2020-09-11 15:13:20.373183+00:00
+    created_by: null
+    modified: 2020-09-11 15:13:20.373422+00:00
+    modified_by: null
+    grupo: avanzado
+    nombre: Gran Hamburguesa
+    precio: '440.00'
+    descripcion: Hamburguesa + Papas + Bebida
+    imagen: eess/cartilla/00016.png
+- model: eess.cartilla
+  pk: 17
+  fields:
+    active: true
+    created: 2020-09-11 15:13:54.077663+00:00
+    created_by: null
+    modified: 2020-09-11 15:13:54.077803+00:00
+    modified_by: null
+    grupo: avanzado
+    nombre: Hamburguesa Azteca
+    precio: '440.00'
+    descripcion: "Hamburguesa + Papas R\xFAsticas + Bebida"
+    imagen: eess/cartilla/00017.png
+- model: eess.cartilla
+  pk: 18
+  fields:
+    active: true
+    created: 2020-09-11 15:14:23.258247+00:00
+    created_by: null
+    modified: 2020-09-11 15:14:23.258303+00:00
+    modified_by: null
+    grupo: avanzado
+    nombre: Hamburguesa Doble
+    precio: '420.00'
+    descripcion: Hamburguesa + Papas + Bebida
+    imagen: eess/cartilla/00018.png
+- model: eess.cartilla
+  pk: 19
+  fields:
+    active: true
+    created: 2020-09-11 15:14:58.661158+00:00
+    created_by: null
+    modified: 2020-09-11 15:14:58.661226+00:00
+    modified_by: null
+    grupo: avanzado
+    nombre: Hamburguesa con Huevo y Queso
+    precio: '375.00'
+    descripcion: Hamburguesa + Papas + Bebida
+    imagen: eess/cartilla/00019.png
+- model: eess.cartilla
+  pk: 20
+  fields:
+    active: true
+    created: 2020-09-11 15:15:31.667788+00:00
+    created_by: null
+    modified: 2020-09-11 15:15:31.667870+00:00
+    modified_by: null
+    grupo: avanzado
+    nombre: Hamburguesa con Queso
+    precio: '350.00'
+    descripcion: Hamburguesa + Papas + Bebida
+    imagen: eess/cartilla/00020.png
+- model: eess.cartilla
+  pk: 21
+  fields:
+    active: true
+    created: 2020-09-11 19:04:50.101226+00:00
+    created_by: null
+    modified: 2020-09-11 19:04:50.101302+00:00
+    modified_by: null
+    grupo: bebida
+    nombre: Agua Eco de los Andes
+    precio: '92.00'
+    descripcion: Agua Eco de los Andes S/Gas 1.50 Lt
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 22
+  fields:
+    active: true
+    created: 2020-09-11 19:05:22.530022+00:00
+    created_by: null
+    modified: 2020-09-11 19:05:22.530118+00:00
+    modified_by: null
+    grupo: bebida
+    nombre: Gaseosa Coca Cola
+    precio: '130.00'
+    descripcion: Gaseosa Coca Cola 1.50 Lt | 1.75 Lt
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 23
+  fields:
+    active: true
+    created: 2020-09-11 19:05:49.800369+00:00
+    created_by: null
+    modified: 2020-09-11 19:05:49.800424+00:00
+    modified_by: null
+    grupo: bebida
+    nombre: Speed Lata
+    precio: '85.00'
+    descripcion: Energizante Speed Lata 250 Ml
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 24
+  fields:
+    active: true
+    created: 2020-09-11 19:06:06.507189+00:00
+    created_by: null
+    modified: 2020-09-11 19:32:41.819169+00:00
+    modified_by: null
+    grupo: bebida
+    nombre: Agua Eco de los Andes
+    precio: '65.00'
+    descripcion: Agua Eco de los Andes S/Gas 500 Ml
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 25
+  fields:
+    active: true
+    created: 2020-09-11 19:06:41.298417+00:00
+    created_by: null
+    modified: 2020-09-11 19:06:41.298473+00:00
+    modified_by: null
+    grupo: bebida
+    nombre: Coca Cola
+    precio: '67.00'
+    descripcion: Gaseosa Coca Cola 500 Ml | 600 Ml
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 26
+  fields:
+    active: true
+    created: 2020-09-11 19:07:03.675071+00:00
+    created_by: null
+    modified: 2020-09-11 19:07:03.675192+00:00
+    modified_by: null
+    grupo: bebida
+    nombre: Levite Pomelo
+    precio: '79.00'
+    descripcion: Agua Saborizada Levite Pomelo 500 Ml
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 35
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: kiosco
+    nombre: Alfajor FULL
+    precio: '63.00'
+    descripcion: Alfajor Full 60 Gr Negro | Blanco
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 36
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: kiosco
+    nombre: Huevo Kinder
+    precio: '123.00'
+    descripcion: Huevo Kinder 20 Gr Nena | Nene
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 37
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: kiosco
+    nombre: "Turr\xF3n Arcor"
+    precio: '18.00'
+    descripcion: "Turr\xF3n Arcor 27 Gr"
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 38
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: kiosco
+    nombre: Chocolate Cofler
+    precio: '154.00'
+    descripcion: Chocolate Cofler Block 110 Gr
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 39
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: kiosco
+    nombre: Bocadito Marroc
+    precio: '35.00'
+    descripcion: Bocadito Marroc 14 Gr
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 40
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: kiosco
+    nombre: Ferrero Rocher
+    precio: '139.00'
+    descripcion: "Bomb\xF3n Ferrero Rocher 3 Un"
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 41
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: kiosco
+    nombre: Chicle Beldent
+    precio: '41.00'
+    descripcion: Chicles Beldent Menta Fuerte 10 Gr
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 42
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: kiosco
+    nombre: Rhodesia
+    precio: '37.00'
+    descripcion: Oblea Rhodesia 22 Gr
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 43
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: snak
+    nombre: Rex Original
+    precio: '103.00'
+    descripcion: Galletitas Rex Original Caja 125 Gr | Kesitas 125 Gr
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 44
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: snak
+    nombre: Surtido Bagley
+    precio: '126.00'
+    descripcion: Galletitas Surtido Bagley 400 Gr
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 45
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: snak
+    nombre: Papas Lays
+    precio: '143.00'
+    descripcion: Papas Lays 95 Gr
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 46
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: snak
+    nombre: Galletitas Twistos
+    precio: '140.00'
+    descripcion: "Galletitas Twistos 112 Gr Jam\xF3n | Queso"
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 47
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: snak
+    nombre: "Cerealitas Cl\xE1sicas"
+    precio: '108.00'
+    descripcion: "Galletitas Cerealitas Cl\xE1sicas 200 Gr"
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 48
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: snak
+    nombre: Galletitas Opera
+    precio: '69.00'
+    descripcion: Galletitas Opera 92 Gr
+    imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 49
+  fields:
+    active: true
+    created: null
+    created_by: null
+    modified: null
+    modified_by: null
+    grupo: snak
+    nombre: Bizcochos 9 De Oro
+    precio: '57.00'
+    descripcion: Bizcochos 9 De Oro Grasa 200 Gr
+    imagen: eess/cartilla/00014.png

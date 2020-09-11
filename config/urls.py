@@ -49,6 +49,9 @@ urlpatterns = [
 
     path('empleado/', TemplateView.as_view(template_name='default_base.html'), name='empleado'),
     path('gestion/', include('apps.firebird.urls')),
+
+    # estación de servicios -----------------------------------------------------------
+    path('eess/', include('apps.eess.urls')),
 ]
 
 

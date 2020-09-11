@@ -1,0 +1,29 @@
+{% extends 'cartilla/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="col-sm-12 text-center" style="margin-bottom: 20px;">
+        <a href="{% url 'eess:cafeteria' %}">
+            <img src="/media/eess/cartilla/cafeteria.png" alt="Cafetería" class="img-fluid" />
+        </a>
+    </div>
+
+    <div class="col-sm-12 text-center" style="margin-bottom: 20px;">
+        <a href="{% url 'eess:combos' %}">
+            <img src="/media/eess/cartilla/combos.png" alt="Combos" class="img-fluid" />
+        </a>
+    </div>
+
+    <div class="col-sm-12 text-center" style="margin-bottom: 20px;">
+        <a href="{% url 'eess:kiosko' %}">
+            <img src="/media/eess/cartilla/menu.png" alt="Kiosko" class="img-fluid" />
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}

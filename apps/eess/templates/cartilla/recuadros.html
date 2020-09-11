@@ -1,0 +1,21 @@
+{% extends 'cartilla/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+        {% for grupo in object_list %}
+        <div class="card-deck">
+            <div class="card-banner row">
+                <h1 class="text-center">{{grupo.0.get_grupo_display}}</h1>
+            </div>
+
+            {% for object in grupo %}
+                {% include 'cartilla/_recuadro.html' %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

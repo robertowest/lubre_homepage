@@ -121,6 +121,9 @@ INSTALLED_APPS += [
 
     # sistema ------------------------------
     'apps.firebird',
+
+    # eess ------------------------------
+    'apps.eess',
 ]
 
 # modelo de datos de user
