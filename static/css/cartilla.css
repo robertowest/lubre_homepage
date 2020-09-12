@@ -6,6 +6,7 @@
 
 body {
     background-color: #232323;
+    color: #fff;
 }
 
 main > .container {
@@ -185,4 +186,26 @@ footer p {
 .display-7 {
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
+}
+
+/* -------------------------------------------------- */
+
+.promo {
+    margin-top: 20px;
+    font-weight: 700;
+}
+.texto-promo {
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.grupo-listado {
+    font-weight: 700;
+    color: #232323;
+}
+.texto-grupo-listado {
+    font-variant: small-caps;
+}
+.precio-grupo-listado {
+    font-weight: bold;
 }

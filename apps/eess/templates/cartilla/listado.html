@@ -1,0 +1,35 @@
+{% extends 'cartilla/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row" style="margin: 10px auto 10px auto;">
+            <div class="col-lg-4 col-md-4 col-sm-4" style="background-color: gray;">
+                <h1 class="promo mbr-fonts-style display-1">Promociones</h1>
+                {% for obj in promos %}
+                    <p class="texto-promo">{{obj.descripcion}}</p>
+                {% endfor %}
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8" style="background-color: white; color: black">
+                {% for grupo in object_list %}
+                    <br>
+                    <h1 class="grupo-listado mbr-fonts-style display-1">{{grupo.0.get_grupo_display}}</h1>
+                    <hr>
+                    {% for obj in grupo %}
+                        <table width="100%">
+                            <tr>
+                                <td class="texto-grupo-listado" width="80%">{{obj.descripcion}}</td>
+                                <td class="precio-grupo-listado" width="20px" style="text-align: center;">$</td>
+                                <td class="precio-grupo-listado" style="text-align: right;">{{obj.precio|floatformat:"0"}}</td>
+                            </tr>
+                        </table>
+                    {% endfor %}
+                    <br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

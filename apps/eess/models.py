@@ -26,16 +26,17 @@ def upload_product_path_handler(instance, filename):
 
 class Cartilla(CommonStruct):
     GRUPO = (
-        ('avanzado', 'Combos Avanzado'),      # 28
-        ('basico', 'Combos Básicos'),         # 26
-        ('bebida', 'Bebidas'),                # 29
-        ('cafe', 'Cafetería'),                # 25
-        ('intermedio', 'Combos Intermedio'),  # 27
-        ('kiosco', 'Kiosco'),                 # 30
-        ('snak', 'Snaks'),                    # 31
+        ('avanzado', 'Combos Avanzado'),
+        ('basico', 'Combos Básicos'),
+        ('bebida', 'Bebidas'),
+        ('cafe', 'Cafetería'),
+        ('intermedio', 'Combos Intermedio'),
+        ('kiosco', 'Kiosco'),
+        ('promo', 'Promociones'),
+        ('snak', 'Snaks'),
     )
 
-    grupo = models.CharField(max_length=12, choices=GRUPO, default='kiosco')
+    grupo = models.CharField(max_length=12, choices=GRUPO)
     nombre = models.CharField(max_length=50)
     precio = models.DecimalField(max_digits=6, decimal_places=2)
     descripcion = models.CharField(max_length=150)
@@ -43,7 +44,7 @@ class Cartilla(CommonStruct):
 
     # configuración para admin
     list_display = ['id', 'grupo', 'nombre', 'descripcion', 'precio', 'active']
-    list_display_links = ['nombre']
+    list_display_links = ['id']
     search_fields = ['nombre', 'descripcion']
     list_filter = ['grupo']
 

@@ -531,3 +531,133 @@
     precio: '57.00'
     descripcion: Bizcochos 9 De Oro Grasa 200 Gr
     imagen: eess/cartilla/00014.png
+- model: eess.cartilla
+  pk: 57
+  fields:
+    active: true
+    created: 2020-09-12 14:07:57.151797+00:00
+    created_by: null
+    modified: 2020-09-12 14:24:21.428362+00:00
+    modified_by: null
+    grupo: promo
+    nombre: '-'
+    precio: '0.00'
+    descripcion: "50% en la 2\xAA unidad Cereal Mix"
+    imagen: ''
+- model: eess.cartilla
+  pk: 58
+  fields:
+    active: true
+    created: 2020-09-12 14:08:16.101085+00:00
+    created_by: null
+    modified: 2020-09-12 14:24:30.817466+00:00
+    modified_by: null
+    grupo: promo
+    nombre: '-'
+    precio: '0.00'
+    descripcion: "3x2 Turr\xF3n"
+    imagen: ''
+- model: eess.cartilla
+  pk: 59
+  fields:
+    active: true
+    created: 2020-09-12 14:08:59.796318+00:00
+    created_by: null
+    modified: 2020-09-12 14:08:59.796372+00:00
+    modified_by: null
+    grupo: promo
+    nombre: '-'
+    precio: '0.00'
+    descripcion: "50% en la 2\xAA unidad Chichles Beldent 10 GR"
+    imagen: ''
+- model: eess.cartilla
+  pk: 60
+  fields:
+    active: true
+    created: 2020-09-12 14:09:39.668678+00:00
+    created_by: null
+    modified: 2020-09-12 14:24:53.264796+00:00
+    modified_by: null
+    grupo: promo
+    nombre: '-'
+    precio: '0.00'
+    descripcion: 2 x $180 Pringles
+    imagen: ''
+- model: eess.cartilla
+  pk: 61
+  fields:
+    active: true
+    created: 2020-09-12 14:10:30.562460+00:00
+    created_by: null
+    modified: 2020-09-12 14:25:04.561209+00:00
+    modified_by: null
+    grupo: promo
+    nombre: '-'
+    precio: '0.00'
+    descripcion: 2 x $99 Aguas ECO 500 ml
+    imagen: ''
+- model: eess.cartilla
+  pk: 62
+  fields:
+    active: true
+    created: 2020-09-12 14:10:48.454209+00:00
+    created_by: null
+    modified: 2020-09-12 14:25:39.367734+00:00
+    modified_by: null
+    grupo: promo
+    nombre: '-'
+    precio: '0.00'
+    descripcion: 2 x $130 Gatorade 500 ml (Manz | Naranja)
+    imagen: ''
+- model: eess.cartilla
+  pk: 63
+  fields:
+    active: true
+    created: 2020-09-12 14:10:59.974908+00:00
+    created_by: null
+    modified: 2020-09-12 14:25:52.891289+00:00
+    modified_by: null
+    grupo: promo
+    nombre: '-'
+    precio: '0.00'
+    descripcion: 6x4 Facturas
+    imagen: ''
+- model: eess.cartilla
+  pk: 64
+  fields:
+    active: true
+    created: 2020-09-12 14:11:09.766406+00:00
+    created_by: null
+    modified: 2020-09-12 14:26:03.675992+00:00
+    modified_by: null
+    grupo: promo
+    nombre: '-'
+    precio: '0.00'
+    descripcion: 3x2 Donuts Rellenas
+    imagen: ''
+- model: eess.cartilla
+  pk: 65
+  fields:
+    active: true
+    created: 2020-09-12 14:11:19.021442+00:00
+    created_by: null
+    modified: 2020-09-12 14:26:36.255464+00:00
+    modified_by: null
+    grupo: promo
+    nombre: '-'
+    precio: '0.00'
+    descripcion: "50% en la 2\xAA und Coca Cola 500/600 ml"
+    imagen: ''
+- model: eess.cartilla
+  pk: 66
+  fields:
+    active: true
+    created: 2020-09-12 14:11:29.575129+00:00
+    created_by: null
+    modified: 2020-09-12 14:27:13.563621+00:00
+    modified_by: null
+    grupo: promo
+    nombre: '-'
+    precio: '0.00'
+    descripcion: "25% Helados Arcor (cono bon o bon | c\xF3fler d\xFAo)"
+    imagen: ''
