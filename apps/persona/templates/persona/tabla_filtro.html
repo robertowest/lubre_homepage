@@ -58,9 +58,13 @@
 
 
 {% block floating-button-action %}
-<button class="fixed-button-add wobble" type="button">
-    <a href="{% url request.resolver_match.app_name|add:':create' %}">
-        <i class="fas fa-plus"></i>
-    </a>
-</button>
+    {% with "perms."|add:appname|add:".add_"|add:appname as permiso %}
+        {% if permiso %}
+        <button class="fixed-button-add wobble" type="button">
+            <a href="{% url request.resolver_match.app_name|add:':create' %}">
+                <i class="fas fa-plus"></i>
+            </a>
+        </button>
+        {% endif %}
+    {% endwith %}
 {% endblock %}

@@ -5,17 +5,31 @@ from django.utils.translation import gettext_lazy as _
 from .models import Actividad, Comercial, Empresa
 
 
-class ActividadTable(tables.Table):
+def actions_allowed_person():
+    # href="{% url ...%}?next={{request.get_full_path|urlencode}}"
+    # request.GET.next
+
     ACTIONS = '''
+    {% if perms.empresa.view_actividad %} 
     <a href="{% url 'actividad:detail' record.pk %}" class="text-info" data-toggle="tooltip" data-original-title="Ver"><i class="fa fa-eye">&nbsp;</i></a>
+    {% endif %}
+
+    {% if perms.empresa.change_actividad %} 
     <a href="{% url 'actividad:update' record.pk %}" class="text-primary" data-toggle="tooltip" data-original-title="Editar"><i class="fa fa-edit">&nbsp;</i></a>
+    {% endif %}
+
+    {% if perms.empresa.delete_actividad %} 
     <a href="{% url 'actividad:delete' record.pk %}?next={{request.get_full_path|urlencode}}" class="text-danger" data-toggle="tooltip" data-original-title="Eliminar"><i class="fa fa-trash">&nbsp;</i></a>
+    {% endif %}
     '''
+    return ACTIONS
+
+class ActividadTable(tables.Table):
     nombre = tables.Column()
     parent = tables.Column(orderable=False)
     active = tables.BooleanColumn(orderable=False)
-    actions = tables.TemplateColumn(template_code=ACTIONS, verbose_name='Acciones', orderable=False)
-
+    actions = tables.TemplateColumn(template_code=actions_allowed_person(), \
+                                    verbose_name='Acciones', orderable=False)
     class Meta:
         model = Actividad
         attrs = {"class": "table table-hover"}
@@ -25,19 +39,31 @@ class ActividadTable(tables.Table):
         per_page = 100
 
 
-class ComercialTable(tables.Table):
+def actions_allowed_comercial():
     ACTIONS = '''
+    {% if perms.empresa.view_comercial %} 
     <a href="{% url 'comercial:detail' record.pk %}" class="text-info" data-toggle="tooltip" data-original-title="Ver"><i class="fa fa-eye">&nbsp;</i></a>
+    {% endif %}
+
+    {% if perms.empresa.change_comercial %} 
     <a href="{% url 'comercial:update' record.pk %}" class="text-primary" data-toggle="tooltip" data-original-title="Editar"><i class="fa fa-edit">&nbsp;</i></a>
+    {% endif %}
+
+    {% if perms.empresa.delete_comercial %} 
     <a href="{% url 'comercial:delete' record.pk %}?next={{request.get_full_path|urlencode}}" class="text-danger" data-toggle="tooltip" data-original-title="Eliminar"><i class="fa fa-trash">&nbsp;</i></a>
+    {% endif %}
     '''
+    return ACTIONS
+
+
+class ComercialTable(tables.Table):
     # id = tables.Column(orderable=False)
     # nombre = tables.Column(orderable=False)
     # razon_social = tables.LinkColumn('comercial:update', args=[A('pk')], orderable=True)
     persona = tables.Column()
     usuario = tables.Column(orderable=False)
     active = tables.BooleanColumn(orderable=False)
-    actions = tables.TemplateColumn(template_code=ACTIONS, verbose_name='Acciones', orderable=False)
+    actions = tables.TemplateColumn(template_code=actions_allowed_comercial(), verbose_name='Acciones', orderable=False)
 
     class Meta:
         model = Comercial
@@ -49,12 +75,24 @@ class ComercialTable(tables.Table):
         per_page = 20
 
 
-class EmpresaTable(tables.Table):
+def actions_allowed_comercial():
     ACTIONS = '''
+    {% if perms.empresa.view_empresa %} 
     <a href="{% url 'empresa:detail' record.pk %}" class="text-info" data-toggle="tooltip" data-original-title="Ver"><i class="fa fa-eye">&nbsp;</i></a>
+    {% endif %}
+
+    {% if perms.empresa.change_empresa %} 
     <a href="{% url 'empresa:update' record.pk %}" class="text-primary" data-toggle="tooltip" data-original-title="Editar"><i class="fa fa-edit">&nbsp;</i></a>
+    {% endif %}
+
+    {% if perms.empresa.delete_empresa %} 
     <a href="{% url 'empresa:delete' record.pk %}?next={{request.get_full_path|urlencode}}" class="text-danger" data-toggle="tooltip" data-original-title="Eliminar"><i class="fa fa-trash">&nbsp;</i></a>
+    {% endif %}
     '''
+    return ACTIONS
+
+
+class EmpresaTable(tables.Table):
     # id = tables.Column(orderable=False)
     # nombre = tables.Column(orderable=False)
     # razon_social = tables.LinkColumn('empresa:update', args=[A('pk')], orderable=True)
@@ -64,7 +102,7 @@ class EmpresaTable(tables.Table):
     actividad = tables.Column(orderable=False)
     active = tables.BooleanColumn(orderable=False)
     modified = tables.DateColumn(orderable=True)
-    actions = tables.TemplateColumn(template_code=ACTIONS, verbose_name='Acciones', orderable=False)
+    actions = tables.TemplateColumn(template_code=actions_allowed_comercial(), verbose_name='Acciones', orderable=False)
 
     class Meta:
         model = Empresa

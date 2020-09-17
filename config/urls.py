@@ -61,12 +61,6 @@ urlpatterns = [
 # -----------------------------------------------------------------------------
 from django.conf import settings
 
-if settings.ENV == 'DEV':
-    urlpatterns += [
-        path('prueba/', include('apps.prueba.urls')),
-    ]
-
-
 if settings.DEBUG:
     import debug_toolbar
     from django.conf.urls.static import static

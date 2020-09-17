@@ -11,4 +11,4 @@ class PersonaFilter(FilterSet):
 
     class Meta:
         model = Persona
-        fields = ['nombre', 'apellido', 'documento']
+        fields = ['nombre', 'apellido', 'documento', 'active']

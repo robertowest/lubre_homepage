@@ -1,7 +1,7 @@
 # from django.contrib.auth.forms import UserCreationForm
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
+from django.contrib.auth.models import Permission, User
 from django.http import HttpResponseRedirect
 from django.utils.http import urlencode
 from django.shortcuts import get_object_or_404, redirect, render
@@ -29,12 +29,11 @@ def LoginRedirect(request):
                     get_args_str = urlencode({'comercial': comercial.id, 'active': True})
                     return HttpResponseRedirect("/empresa/listado/?%s" % get_args_str)
                 else:
-                    return HttpResponseRedirect("/empleado/")
+                    return HttpResponseRedirect("/empresa/")
 
             except Comercial.DoesNotExist:
-                return HttpResponseRedirect("/empleado/")
-    else:
-        return HttpResponseRedirect("/")
+                return HttpResponseRedirect("/empresa/")
+    return HttpResponseRedirect("/")
 
 
 def login_view(request):
@@ -75,6 +74,7 @@ def signup(request):
 
 
 @login_required(login_url='/accounts/login/')
+# @permission_required('persona.change_persona', raise_exception=True)
 def profile(request):
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)

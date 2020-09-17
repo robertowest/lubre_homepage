@@ -13,6 +13,7 @@
 
 {% block content %}
     <div class="card shadow mb-4">
+        {% comment %}
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary">Listado de {{object_list|verbose_name_plural}}</h6>
             <div class="dropdown no-arrow">
@@ -23,6 +24,10 @@
                     <a class="dropdown-item" href="{% url request.resolver_match.app_name|add:':create' %}">Nuevo</a>
                 </div>
             </div>
+        </div>
+        {% endcomment %}
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Listado de {{object_list|verbose_name_plural}}</h6>
         </div>
         <div class="card-body">
             <!-- tabla de contenido -->
@@ -37,9 +42,13 @@
 
 
 {% block floating-button-action %}
-    <button class="fixed-button-add wobble" type="button">
-        <a href="{% url request.resolver_match.app_name|add:':create' %}">
-            <i class="fas fa-plus"></i>
-        </a>
-    </button>
+    {% with appdomain|add:".add_"|add:appname as permiso %}
+        {% if permiso in perms %}
+        <button class="fixed-button-add wobble" type="button">
+            <a href="{% url request.resolver_match.app_name|add:':create' %}">
+                <i class="fas fa-plus"></i>
+            </a>
+        </button>
+        {% endif %}
+    {% endwith %}
 {% endblock %}

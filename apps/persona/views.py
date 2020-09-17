@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -33,7 +33,8 @@ class PersonaTemplateView(generic.TemplateView):
         return PersonasListView.as_view()(request)
 
 
-class PersonasListView(LoginRequiredMixin, PagedFilteredTableView):
+class PersonasListView(LoginRequiredMixin, PermissionRequiredMixin, PagedFilteredTableView):
+    permission_required = 'persona.view_persona'
     model = models.Persona
     table_class = tables.PersonaTable
     filter_class = filters.PersonaFilter
@@ -49,16 +50,9 @@ class PersonasListView(LoginRequiredMixin, PagedFilteredTableView):
         return obj_list
 
 
-class PersonasListView_old(LoginRequiredMixin, SingleTableMixin, FilterView):
-    model = models.Persona  # .objects.all().order_by('nombre', 'apellido')
-    table_class = tables.PersonaTable
-    filterset_class = filters.PersonaFilter
-    template_name = 'persona/tabla_filtro.html'
-    ordering = ['nombre', 'apellido', 'id']
-    paginator_class = LazyPaginator
+class PersonaCreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.CreateView):
+    permission_required = ['persona.add_persona', 'persona.change_persona']
 
-
-class PersonaCreateView(generic.CreateView):  # LoginRequiredMixin
     model = models.Persona
     form_class = forms.PersonaForm
     template_name = 'comunes/formulario.html'
@@ -77,7 +71,8 @@ class PersonaCreateView(generic.CreateView):  # LoginRequiredMixin
         return response
 
 
-class PersonaDetailView(generic.DetailView):
+class PersonaDetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.DetailView):
+    permission_required = 'persona.view_persona'
     model = models.Persona
     # template_name = 'comunes/detalle.html'
     template_name = '{app}/detalle.html'.format(app=model._meta.verbose_name.lower())
@@ -88,7 +83,8 @@ class PersonaDetailView(generic.DetailView):
         return context
 
 
-class PersonaUpdateView(generic.UpdateView):
+class PersonaUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.UpdateView):
+    permission_required = ['persona.add_persona', 'persona.change_persona']
     model = models.Persona
     form_class = forms.PersonaForm
     template_name = 'comunes/formulario.html'
@@ -107,8 +103,8 @@ class PersonaUpdateView(generic.UpdateView):
         return response
 
 
-class PersonaDeleteView(generic.DeleteView):
-    pass
+class PersonaDeleteView(LoginRequiredMixin, PermissionRequiredMixin, generic.DeleteView):
+    permission_required = 'persona.delete_persona'
 
 
 class CreateContactView(generic.CreateView):
