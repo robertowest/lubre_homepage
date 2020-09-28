@@ -3,6 +3,7 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Permission, User
 from django.http import HttpResponseRedirect
+from django.urls import resolve, reverse, reverse_lazy
 from django.utils.http import urlencode
 from django.shortcuts import get_object_or_404, redirect, render
 
@@ -29,10 +30,12 @@ def LoginRedirect(request):
                     get_args_str = urlencode({'comercial': comercial.id, 'active': True})
                     return HttpResponseRedirect("/empresa/listado/?%s" % get_args_str)
                 else:
-                    return HttpResponseRedirect("/empresa/")
+                    # return HttpResponseRedirect("/empresa/")
+                    return HttpResponseRedirect(reverse('gestion:dashboard'))
 
             except Comercial.DoesNotExist:
-                return HttpResponseRedirect("/empresa/")
+                return HttpResponseRedirect(reverse('gestion:dashboard'))
+
     return HttpResponseRedirect("/")
 
 

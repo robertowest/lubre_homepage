@@ -33,8 +33,7 @@ class PersonaTemplateView(generic.TemplateView):
         return PersonasListView.as_view()(request)
 
 
-class PersonasListView(LoginRequiredMixin, PermissionRequiredMixin, PagedFilteredTableView):
-    permission_required = 'persona.view_persona'
+class PersonasListView(LoginRequiredMixin, PagedFilteredTableView):
     model = models.Persona
     table_class = tables.PersonaTable
     filter_class = filters.PersonaFilter
@@ -50,8 +49,8 @@ class PersonasListView(LoginRequiredMixin, PermissionRequiredMixin, PagedFiltere
         return obj_list
 
 
-class PersonaCreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.CreateView):
-    permission_required = ['persona.add_persona', 'persona.change_persona']
+class PersonaCreateView(PermissionRequiredMixin, generic.CreateView):
+    permission_required = 'persona.add_persona'
 
     model = models.Persona
     form_class = forms.PersonaForm
@@ -71,7 +70,7 @@ class PersonaCreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.Cre
         return response
 
 
-class PersonaDetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.DetailView):
+class PersonaDetailView(PermissionRequiredMixin, generic.DetailView):
     permission_required = 'persona.view_persona'
     model = models.Persona
     # template_name = 'comunes/detalle.html'
@@ -83,7 +82,7 @@ class PersonaDetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.Det
         return context
 
 
-class PersonaUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.UpdateView):
+class PersonaUpdateView(PermissionRequiredMixin, generic.UpdateView):
     permission_required = ['persona.add_persona', 'persona.change_persona']
     model = models.Persona
     form_class = forms.PersonaForm
@@ -103,11 +102,24 @@ class PersonaUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.Upd
         return response
 
 
-class PersonaDeleteView(LoginRequiredMixin, PermissionRequiredMixin, generic.DeleteView):
+class PersonaDeleteView(PermissionRequiredMixin, generic.DeleteView):
     permission_required = 'persona.delete_persona'
+    model = models.Persona
+    success_message = "Registro eliminado correctamente"
+
+    def get(self, request, *args, **kwargs):
+        return self.post(request, *args, **kwargs)
+
+    def get_success_url(self):    
+        redirect = self.request.GET.get('next')
+        if redirect:
+            return redirect
+        return reverse_lazy('persona:list')
 
 
-class CreateContactView(generic.CreateView):
+class CreateContactView(PermissionRequiredMixin, generic.CreateView):
+    permission_required = 'comunes.add_comunicacion'
+
     model = ComunicacionModel
     form_class = ComunicacionForm
     template_name = 'comunes/formulario.html'
@@ -134,7 +146,9 @@ class CreateContactView(generic.CreateView):
         return response
 
 
-class CreateAddressView(generic.CreateView):
+class CreateAddressView(PermissionRequiredMixin, generic.CreateView):
+    permission_required = 'comunes.add_domicilio'
+
     model = DomicilioModel
     form_class = DomicilioForm
     template_name = 'comunes/formulario.html'

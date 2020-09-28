@@ -4,8 +4,10 @@ from django.utils.translation import gettext_lazy as _
 
 from .models import Actividad, Comercial, Empresa
 
+# min-width: 100px;
+# name = tables.Column(attrs={"th": {"id": "foo"}})
 
-def actions_allowed_person():
+def actions_allowed_comercial():
     # href="{% url ...%}?next={{request.get_full_path|urlencode}}"
     # request.GET.next
 
@@ -28,8 +30,9 @@ class ActividadTable(tables.Table):
     nombre = tables.Column()
     parent = tables.Column(orderable=False)
     active = tables.BooleanColumn(orderable=False)
-    actions = tables.TemplateColumn(template_code=actions_allowed_person(), \
-                                    verbose_name='Acciones', orderable=False)
+    actions = tables.TemplateColumn(template_code=actions_allowed_comercial(), \
+                                    verbose_name='Acciones', orderable=False, \
+                                    attrs={'th': {'style': 'min-width: 100px;'}})
     class Meta:
         model = Actividad
         attrs = {"class": "table table-hover"}
@@ -63,8 +66,9 @@ class ComercialTable(tables.Table):
     persona = tables.Column()
     usuario = tables.Column(orderable=False)
     active = tables.BooleanColumn(orderable=False)
-    actions = tables.TemplateColumn(template_code=actions_allowed_comercial(), verbose_name='Acciones', orderable=False)
-
+    actions = tables.TemplateColumn(template_code=actions_allowed_comercial(), \
+                                    verbose_name='Acciones', orderable=False, \
+                                    attrs={'th': {'style': 'min-width: 100px;'}})
     class Meta:
         model = Comercial
         attrs = {"class": "table table-hover"}    # table-striped 
@@ -75,7 +79,7 @@ class ComercialTable(tables.Table):
         per_page = 20
 
 
-def actions_allowed_comercial():
+def actions_allowed_empresa():
     ACTIONS = '''
     {% if perms.empresa.view_empresa %} 
     <a href="{% url 'empresa:detail' record.pk %}" class="text-info" data-toggle="tooltip" data-original-title="Ver"><i class="fa fa-eye">&nbsp;</i></a>
@@ -98,16 +102,18 @@ class EmpresaTable(tables.Table):
     # razon_social = tables.LinkColumn('empresa:update', args=[A('pk')], orderable=True)
     razon_social = tables.Column()
     cuit = tables.Column(orderable=False)
-    comercial = tables.Column(orderable=False)
-    actividad = tables.Column(orderable=False)
+    # comercial = tables.Column(orderable=False)
+    # actividad = tables.Column(orderable=False)
     active = tables.BooleanColumn(orderable=False)
     modified = tables.DateColumn(orderable=True)
-    actions = tables.TemplateColumn(template_code=actions_allowed_comercial(), verbose_name='Acciones', orderable=False)
+    actions = tables.TemplateColumn(template_code=actions_allowed_empresa(), \
+                                    verbose_name='Acciones', orderable=False, \
+                                    attrs={'th': {'style': 'min-width: 100px;'}})
 
     class Meta:
         model = Empresa
         attrs = {"class": "table table-hover"}    # table-striped 
-        fields = ['razon_social', 'cuit', 'comercial', 'actividad', 'modified', 'active']
+        fields = ['razon_social', 'cuit', 'modified', 'active']
         # sequence = ['razon_social', 'cuit', 'comercial', 'actividad', 'active']
         empty_text = "No hay datos que satisfaga los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"

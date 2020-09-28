@@ -2,7 +2,8 @@ from django.urls import path
 
 from . import views
 
+app_name = 'gestion'
 
 urlpatterns = [
-     path('', views.cartera, name='cartera'),
+     path('dashboard', views.dashboard, name='dashboard'),
 ]

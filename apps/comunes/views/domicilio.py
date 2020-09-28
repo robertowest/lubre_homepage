@@ -1,6 +1,7 @@
 import json
 
 from django.contrib import messages
+from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -29,7 +30,9 @@ class DomicilioListView(ListView):
         return context
  
  
-class DomicilioCreateView(CreateView):
+class DomicilioCreateView(PermissionRequiredMixin, CreateView):
+    permission_required = 'comunes.add_domicilio'
+
     model = DomicilioModel
     form_class = DomicilioForm
     template_name = 'comunes/formulario.html'
@@ -53,7 +56,9 @@ class DomicilioDetailView(DetailView):
     template_name = 'comunes/detalle.html'
 
 
-class DomicilioUpdateView(UpdateView):
+class DomicilioUpdateView(PermissionRequiredMixin, UpdateView):
+    permission_required = 'comunes.change_domicilio'
+
     model = DomicilioModel
     form_class = DomicilioForm
     template_name = 'comunes/formulario.html'
@@ -81,7 +86,8 @@ class DomicilioUpdateView(UpdateView):
         return response
 
 
-class DomicilioDeleteView(DeleteView):
+class DomicilioDeleteView(PermissionRequiredMixin, DeleteView):
+    permission_required = 'comunes.delete_domicilio'
     pass
 
 

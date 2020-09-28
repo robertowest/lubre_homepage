@@ -35,8 +35,8 @@
                 <div class="col-md-10">
                     <h6 class="m-0 font-weight-bold text-primary">Listado de {{object_list|verbose_name_plural}}</h6>
                 </div>
-                <div class="col-md-2 float-right">
-                    <a class="btn btn-sm btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <div class="col-md-2">
+                    <a class="btn btn-sm btn-primary float-right" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Filtro
                     </a>
                     <!-- button class="btn btn-sm btn-primary float-right">Filtro</button -->
@@ -61,8 +61,9 @@
 
 
 {% block floating-button-action %}
-    {% with "perms."|add:appname|add:".add_"|add:appname as permiso %}
-        {% if permiso %}
+    {% with appdomain|default:appname|add:".add_"|add:appname as permiso %}
+        {% if permiso in perms %}
+        <!-- data-toggle="tooltip" data-placement="left" title="--permiso--" -->
         <button class="fixed-button-add wobble" type="button">
             <a href="{% url request.resolver_match.app_name|add:':create' %}">
                 <i class="fas fa-plus"></i>

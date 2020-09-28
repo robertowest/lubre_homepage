@@ -12,6 +12,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">Datos de la Empresa</h6>
+                {% comment %}
                 <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -21,17 +22,27 @@
                         <a class="dropdown-item" href="{{object.get_delete_url}}">Eliminar</a>
                     </div>
                 </div>
+                {% endcomment %}
             </div>
             <div class="card-body">
                 {% include 'includes/_detail_snippet.html' %}
             </div>
             <div class="card-footer">
-                <a href="{% url object|url_action:'update' object.pk %}" class="btn btn-primary btn-icon-split">
+                {% if perms.empresa.change_empresa %}
+                {# url object|url_action:'update' object.pk #}
+                <a href="{{object.get_update_url}}" class="btn btn-primary btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fas fa-pen"></i>
                     </span>
                     <span class="text">Modificar</span>
                 </a>
+                {% endif %}
+                {% if perms.empresa.delete_empresa %}
+                <a href="{{object.get_delete_url}}" class="btn btn-danger btn-icon-split">
+                    <span class="icon text-white-50"><i class="fas fa-trash"></i></span>
+                    <span class="text">Eliminar</span>
+                </a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -64,10 +75,15 @@
                             <tr>
                                 <td>{{registro.tipo.texto}}</td>
                                 <td>
-                                    <a href="{{registro.get_update_url}}">
+                                    {% if perms.empresa.change_empresacomunicaciones %}
+                                        <a href="{{registro.get_update_url}}">
+                                            {{registro.texto}}
+                                        </a>
+                                    {% else %}
                                         {{registro.texto}}
-                                    </a>
+                                    {% endif %}
                                 </td>
+                                {% if perms.empresa.delete_empresacomunicaciones %}
                                 <td align="right" style="white-space:nowrap;">
                                     <a href="#" style="color: rgb(252, 40, 40)"
                                        data-toggle="modal" data-target="#confirmDelete"
@@ -76,7 +92,8 @@
                                        data-url="{% url 'empresa:comunication_delete' object.pk registro.pk %}">
                                         <i class="fa fa-trash"></i>
                                     </a>
-                                </td>                                
+                                </td>
+                                {% endif %}
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -84,6 +101,7 @@
 
                     {% endif  %}
                 </div>
+                {% if perms.empresa.add_empresacomunicaciones %}
                 <div class="card-footer">
                     <!-- agregar nuevo contacto y asociarlo a la empresa -->
                     <a href="{{object.get_related_url_with_comunication}}" class="btn btn-primary btn-icon-split">
@@ -93,6 +111,7 @@
                         <span class="text">Nuevo</span>
                     </a>
                 </div>
+                {% endif %}
             </div>
         </div>
 
@@ -112,14 +131,13 @@
                             {% for registro in actividades %}
                             <tr>
                                 <td>
-                                    {% comment %}
-                                    <a href="{{registro.get_update_url}}">
+                                    {% if perms.empresa.view_empresaactividades %}
+                                        <a href="{% url 'empresa:empresa_actividad' object.pk registro.pk %}">
+                                            {{registro}}
+                                        </a>
+                                    {% else %}
                                         {{registro}}
-                                    </a>
-                                    {% endcomment %}
-                                    <a href="{% url 'empresa:empresa_actividad' object.pk registro.pk %}">
-                                        {{registro}}
-                                    </a>
+                                    {% endif %}
                                 </td>
                             </tr>
                             {% endfor %}
@@ -128,7 +146,7 @@
                     </table>
                     {% endif  %}
                 </div>
-                {% comment %}
+                {% comment %}   perms.empresa.add_empresaactividades
                 <div class="card-footer">
                     <!-- agregar nuevo contacto y asociarlo a la empresa -->
                     <a href="{{object.get_related_url_with_actividad}}" class="btn btn-primary btn-icon-split">
@@ -142,16 +160,18 @@
             </div>
         </div>
 
+        {% if perms.empresa.change_empresa %}
         <div class="card mb-4">
             <div class="card-body text-center">
-                <a href="{% url 'empresa:confirmar_empresa' object.pk %}" class="btn btn-success btn-icon-split">
+                <a href="{{object.get_update_url}}" class="btn btn-success btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fas fa-check"></i>
                     </span>
                     <span class="text"><strong>Confirmar Datos</strong></span>
                 </a>
+            </div>
         </div>
-        </div>
+        {% endif %}
         
     </div>
 

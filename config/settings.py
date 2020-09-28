@@ -105,6 +105,9 @@ INSTALLED_APPS += [
     'mathfilters',
     'social_django',
     'widget_tweaks',
+    'django_filters',
+    'django_tables2',
+    'bootstrap3',
 
     # homepage -----------------------------
     'apps.homepage',

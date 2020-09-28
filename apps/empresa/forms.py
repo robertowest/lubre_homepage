@@ -32,8 +32,8 @@ class ActividadForm(forms.ModelForm):
             self.helper.layout.append(fld)
 
         # agregamos los botones de acción
-        bSave = '<button type="submit" class="btn btn-primary btn-icon-split"><span class="icon text-white-50"><i class="fas fa-save"></i></span><span class="text">Grabar</span></button>'
-        bCancel = '<a class="btn btn-warning btn-icon-split" style="margin-left: 5px" href="{{request.META.HTTP_REFERER}}"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Cancela</span></a>'
+        bSave = '<button type="submit" class="btn btn-primary btn-icon-split mr-1"><span class="icon text-white-50"><i class="fas fa-save"></i></span><span class="text">Grabar</span></button>'
+        bCancel = '<a class="btn btn-warning btn-icon-split" href="{{request.META.HTTP_REFERER}}"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text text-dark">Cancela</span></a>'
         self.helper.layout.append(layout.HTML("<hr>"))
         self.helper.layout.append(layout.HTML(bSave))
         self.helper.layout.append(layout.HTML(bCancel))
@@ -53,6 +53,12 @@ class EmpresaForm(forms.ModelForm):
         # valores iniciales para campos especiales
         self.fields['comercial'].queryset = Comercial.objects.all().order_by('persona__nombre')
         self.fields['actividad'].queryset = Actividad.objects.filter(parent__isnull=True).order_by('nombre')
+        self.fields['actividades'].queryset = Actividad.objects.filter(parent__isnull=False).order_by('nombre')
+
+        # self.fields['comercial'].queryset = None
+        # self.fields['actividad'].queryset = None
+        # self.fields['actividades'].queryset = None
+ 
         self.fields['actividades'].widget.attrs['size'] = 13
         self.fields['actividades'].help_text = "Pulse Ctrl para seleccionar varios"
 
@@ -63,15 +69,15 @@ class EmpresaForm(forms.ModelForm):
         # creamos layouts personalizado
         self.helper.layout = layout.Layout(
             layout.Row(
-                layout.Column('nombre', css_class='col-lg-6 col-md-12 mb-0'),
-                layout.Column('razon_social'),
+                layout.Column('nombre',       css_class='col-lg-5 col-md-4 mb-0'),
+                layout.Column('razon_social', css_class='col-lg-5 col-md-4 mb-0'),
+                layout.Column('cuit',         css_class='col-lg-2 col-md-4 mb-0'),
             ),
             layout.Row(
-                layout.Column('cuit', css_class='col-lg-3 col-md-3 col-sm-6 mb-0'),
-                layout.Column('comercial'),
-                layout.Column('referencia_id', css_class='col-lg-3 col-md-3 col-sm-3 mb-0'),
+                layout.Column('actividad',     css_class='col-lg-5 col-md-5 mb-0'),
+                layout.Column('comercial',     css_class='col-lg-5 col-md-5 mb-0'),
+                layout.Column('referencia_id', css_class='col-lg-2 col-md-2 mb-0'),
             ),
-            'actividad',
             layout.Row(
                 layout.Column('actividades', css_class='col-lg-5 col-md-6 mb-0'),
                 layout.Column('observacion', css_class='col-lg-7 col-md-6 mb-0'),
@@ -80,8 +86,8 @@ class EmpresaForm(forms.ModelForm):
         )
 
         # agregamos los botones de acción
-        bSave = '<button type="submit" class="btn btn-primary btn-icon-split"><span class="icon text-white-50"><i class="fas fa-save"></i></span><span class="text">Grabar</span></button>'
-        bCancel = '<a class="btn btn-warning btn-icon-split" style="margin-left: 5px" href="{{request.META.HTTP_REFERER}}"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Cancela</span></a>'
+        bSave = '<button type="submit" class="btn btn-primary btn-icon-split mr-1"><span class="icon text-white-50"><i class="fas fa-save"></i></span><span class="text">Grabar</span></button>'
+        bCancel = '<a class="btn btn-warning btn-icon-split" href="{{request.META.HTTP_REFERER}}"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text text-dark">Cancela</span></a>'
         self.helper.layout.append(layout.HTML("<hr>"))
         self.helper.layout.append(layout.HTML(bSave))
         self.helper.layout.append(layout.HTML(bCancel))
@@ -148,8 +154,8 @@ class ComercialForm(forms.ModelForm):
             self.helper.layout.append(fld)
 
         # agregamos los botones de acción
-        bSave = '<button type="submit" class="btn btn-primary btn-icon-split"><span class="icon text-white-50"><i class="fas fa-save"></i></span><span class="text">Grabar</span></button>'
-        bCancel = '<a class="btn btn-warning btn-icon-split" style="margin-left: 5px" href="{{request.META.HTTP_REFERER}}"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Cancela</span></a>'
+        bSave = '<button type="submit" class="btn btn-primary btn-icon-split mr-1"><span class="icon text-white-50"><i class="fas fa-save"></i></span><span class="text">Grabar</span></button>'
+        bCancel = '<a class="btn btn-warning btn-icon-split" href="{{request.META.HTTP_REFERER}}"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text text-dark">Cancela</span></a>'
         self.helper.layout.append(layout.HTML("<hr>"))
         self.helper.layout.append(layout.HTML(bSave))
         self.helper.layout.append(layout.HTML(bCancel))

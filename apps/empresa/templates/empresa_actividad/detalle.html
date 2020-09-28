@@ -33,7 +33,7 @@
             <div class="card-footer">
                 <a href="{{request.META.HTTP_REFERER}}" class="btn btn-warning btn-icon-split">                   
                    <span class="icon text-white-50"><i class="fas fa-undo"></i></span>
-                   <span class="text">Regresar</span>
+                   <span class="text text-dark">Regresar</span>
                 </a>
             </div>
         </div>
@@ -56,8 +56,12 @@
                             {% for registro in domicilios %}
                             <tr>
                                 <td>
-                                    {{registro.domicilio.tipo}}&nbsp; 
-                                    <a href="{{registro.domicilio.get_update_url}}">{{registro.domicilio}}</a>&nbsp; 
+                                    {{registro.domicilio.tipo}}<br>
+                                    {% if perms.empresa.change_empresaactividaddomicilios %}
+                                    <a href="{{registro.domicilio.get_update_url}}">{{registro.domicilio}}</a>
+                                    {% else %}
+                                    {{registro.domicilio}}
+                                    {% endif %}<br>
                                     {{registro.domicilio.localidad_texto}}
                                 </td>
                                 <td align="right" style="white-space:nowrap;">
@@ -68,6 +72,7 @@
                                        data-pk="{{object.pk}}" data-type="table">
                                         <i class="fa fa-exchange-alt"></i>
                                     </a>
+                                    {% if perms.empresa.delete_empresaactividaddomicilios %}
                                     <a href="#" style="color: rgb(252, 40, 40)"
                                         data-toggle="modal" data-target="#myModal"
                                         data-title="Eliminar asociación"
@@ -76,6 +81,7 @@
                                         data-type="delete">
                                         <i class="fa fa-trash"></i>
                                     </a>
+                                    {% endif %}
                                 </td>
                             </tr>
                             {% endfor %}
@@ -83,6 +89,7 @@
                     </table>
                     {% endif  %}
                 </div>
+                {% if perms.empresa.add_empresaactividaddomicilios %}
                 <div class="card-footer">
                     <!-- agregar nuevo domicilio y asociarlo a la empresa -->
                     <a href="{% url 'empresa_actividad:emp_act_domicilio' object.pk %}" class="btn btn-primary btn-icon-split">
@@ -92,6 +99,7 @@
                         <span class="text">Nuevo</span>
                     </a>
                 </div>
+                {% endif %}                
             </div>
         </div>
 
@@ -113,23 +121,19 @@
                                     <a href="{{registro.persona.get_detail_url}}" target="_blank">{{registro.persona}}</a>
                                 </td>
                                 <td>
-                                    <a href="#"
-                                       data-toggle="modal" data-target="#myModal"
-                                       data-title="Asignar Puesto Laboral"
-                                       data-url="{% url 'empresa_actividad:eac_asignar_cargo' object.pk registro.pk %}"
-                                       data-pk="{{object.pk}}" data-type="form">
+                                    {% if perms.empresa.change_empresaactividadcontactos %}
+                                        <a href="#"
+                                        data-toggle="modal" data-target="#myModal"
+                                        data-title="Asignar Puesto Laboral"
+                                        data-url="{% url 'empresa_actividad:eac_asignar_cargo' object.pk registro.pk %}"
+                                        data-pk="{{object.pk}}" data-type="form">
+                                            {{registro.cargo}}
+                                        </a>
+                                    {% else %}
                                         {{registro.cargo}}
-                                    </a>
+                                    {% endif %}
                                 </td>
-{% comment %}
-                                <td>
-                                    {% for movil in registro.persona.comunicaciones %}
-                                        {% if movil.tipo == 'Celular' %}
-                                            {{movil.texto}}<br>
-                                        {%endif%}
-                                    {% endfor %}
-                                </td>
-{% endcomment %}
+                                {% if perms.empresa.delete_empresaactividadcontactos %}
                                 <td align="right" style="white-space:nowrap;">
                                     <a href="#" style="color: rgb(252, 40, 40)"
                                         data-toggle="modal" data-target="#myModal"
@@ -140,6 +144,7 @@
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>
+                                {% endif %}
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -147,6 +152,7 @@
                     {% endif  %}
                 </div>
                 <div class="card-footer">
+                    {% if perms.empresa.add_empresaactividadcontactos %}
                     <!-- agregar nuevo contacto y asociarlo a la empresa -->
                     <a href="{% url 'empresa_actividad:emp_act_contacto' object.pk %}" class="btn btn-primary btn-icon-split">
                         <span class="icon text-white-50">
@@ -154,6 +160,7 @@
                         </span>
                         <span class="text">Nuevo</span>
                     </a>
+                    {% endif %}
                     <!-- asociar contacto existente a la empresa -->
                     <a href="#" class="btn btn-secondary btn-icon-split"
                         data-toggle="modal" data-target="#myModal"

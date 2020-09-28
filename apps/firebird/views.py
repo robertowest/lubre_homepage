@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 from apps.empresa.models import Comercial
 
-def cartera(request):
+
+@login_required(login_url='/accounts/login/')
+def dashboard(request):
     # labels = []
     # data = []
     #
@@ -24,7 +27,7 @@ def cartera(request):
         'area_chart_data': area_chart_data,
         'pie_chart_labels': pie_chart_labels,
         'pie_chart_data': pie_chart_data,
-        'comercial': Comercial.objects.get(usuario=request.user)
+        # 'comercial': Comercial.objects.get(usuario=request.user),
     }
     return render(request, 'firebird/dashboard.html', context)
 

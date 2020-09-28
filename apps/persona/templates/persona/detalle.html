@@ -12,6 +12,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">Datos de la Persona</h6>
+                {% comment %}
                 <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -21,17 +22,29 @@
                         <a class="dropdown-item" href="{{object.get_delete_url}}">Eliminar</a>
                     </div>
                 </div>
+                {% endcomment %}
             </div>
             <div class="card-body">
                 {% include 'includes/_detail_snippet.html' %}
             </div>
             <div class="card-footer">
-                <a href="{% url object|url_action:'update' object.pk %}" class="btn btn-primary btn-icon-split">
+                {# url object|url_action:'update' object.pk #}
+                {% if perms.persona.change_persona %}
+                <a href="{{object.get_update_url}}" class="btn btn-primary btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fas fa-pen"></i>
                     </span>
                     <span class="text">Modificar</span>
                 </a>
+                {% endif %}
+                {% if perms.persona.delete_persona %}
+                <a href="{{object.get_delete_url}}" class="btn btn-danger btn-icon-split">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-trash"></i>
+                    </span>
+                    <span class="text">Eliminar</span>
+                </a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -54,8 +67,13 @@
                             <tr>
                                 <td>{{registro.tipo}}</td>
                                 <td>
-                                    <a href="{{registro.get_update_url}}">{{registro.texto}}</a>                                    
+                                    {% if perms.empresa.change_comunicacion %}
+                                    <a href="{{registro.get_update_url}}">{{registro.texto}}</a>
+                                    {% else %}
+                                    {{registro.texto}}
+                                    {% endif %}
                                 </td>
+                                {% if perms.empresa.delete_comunicacion %}
                                 <td align="right" style="white-space:nowrap;">
                                     <a href="#" style="color: rgb(252, 40, 40)"
                                        data-toggle="modal" data-target="#confirmDelete"
@@ -65,12 +83,14 @@
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>
+                                {% endif %}
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
                     {% endif %}
                 </div>
+                {% if perms.empresa.add_comunicacion %}
                 <div class="card-footer">
                     <a href="{{object.get_related_url_with_contact}}" class="btn btn-primary btn-icon-split">
                         <span class="icon text-white-50">
@@ -79,12 +99,13 @@
                         <span class="text">Nuevo</span>
                     </a>
                 </div>
+                {% endif %}
             </div>
         </div>
 
         <!-- domicilio -->
         <div class="card shadow mb-4">
-            <a href="#domicilioCard" class="d-block card-header py-3" 
+            <a href="#domicilioCard" class="d-block card-header py-3 collapsed" 
                data-toggle="collapse" role="button" aria-expanded="false" 
                aria-controls="domicilioCard">
                 <h6 class="m-0 font-weight-bold text-primary">Datos de Domicilio</h6>
@@ -94,7 +115,8 @@
                     {% with object.domicilio as object %}
                         {% include 'includes/_detail_snippet.html' %}
                     {% endwith %}
-                </div>    
+                </div>
+                {% if perms.empresa.add_comunicacion or perms.empresa.change_comunicacion %}
                 <div class="card-footer">
                     {% if object.domicilio %}
                     <a href="{{object.domicilio.get_update_url}}" class="btn btn-primary btn-icon-split">
@@ -112,6 +134,7 @@
                     </a>
                     {% endif %}
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>

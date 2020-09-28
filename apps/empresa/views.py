@@ -27,8 +27,7 @@ from apps.persona.forms import PersonaForm as ContactoForm
 # Empresa
 # -----------------------------------------------------------------------------
 
-
-class EmpresaTemplateView(LoginRequiredMixin, generic.TemplateView):
+class EmpresaTemplateView(generic.TemplateView):
     # app=__package__.split('.')[1]     --> lo obtiene de urls.py
     # model._meta.verbose_name.lower()  --> lo obtiene de models.py
     model = models.Empresa
@@ -59,19 +58,15 @@ class EmpresaTemplateView(LoginRequiredMixin, generic.TemplateView):
         return 'empresa/index.html'
 
 
-class EmpresaListView(LoginRequiredMixin, PermissionRequiredMixin, PagedFilteredTableView):
-    permission_required = 'empresa.view_empresa'
+class EmpresaListView(LoginRequiredMixin, PagedFilteredTableView):
     model = models.Empresa
     table_class = tables.EmpresaTable
     filter_class = filters.EmpresaFilter
     formhelper_class = forms.EmpresaFilterForm
     template_name = 'comunes/tabla2.html'
 
-    def get_queryset(self):
-        return models.Empresa.objects.filter(active=True)
 
-
-class EmpresaCreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.CreateView):
+class EmpresaCreateView(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'empresa.add_empresa'
     model = models.Empresa
     form_class = forms.EmpresaForm
@@ -95,8 +90,8 @@ class EmpresaCreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.Cre
         return response
 
 
-class EmpresaDetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.DetailView):
-    permission_required = 'empresa.detail_empresa'
+class EmpresaDetailView(PermissionRequiredMixin, generic.DetailView):
+    permission_required = 'empresa.view_empresa'
     model = models.Empresa
     template_name = 'empresa/detalle.html'
 
@@ -107,7 +102,7 @@ class EmpresaDetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.Det
         return context
 
 
-class EmpresaUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.UpdateView):
+class EmpresaUpdateView(PermissionRequiredMixin, generic.UpdateView):
     permission_required = 'empresa.change_empresa'
     model = models.Empresa
     form_class = forms.EmpresaForm
@@ -132,8 +127,8 @@ class EmpresaUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.Upd
         return response
 
 
-class EmpresaDeleteView(LoginRequiredMixin, PermissionRequiredMixin, generic.DeleteView):
-    permission_required = 'empresa.del_empresa'
+class EmpresaDeleteView(PermissionRequiredMixin, generic.DeleteView):
+    permission_required = 'empresa.delete_empresa'
     model = models.Empresa
     success_message = "Registro eliminado correctamente"
 
@@ -265,13 +260,12 @@ class ActividadMultiListView(LoginRequiredMixin, generic.ListView):
 # -----------------------------------------------------------------------------
 
 
-class ActividadTemplateView(LoginRequiredMixin, generic.TemplateView):
+class ActividadTemplateView(generic.TemplateView):
     def get(self, request, *args, **kwargs):
         return ActividadListView.as_view()(request)
 
 
-class ActividadListView(LoginRequiredMixin, PermissionRequiredMixin, SingleTableView):
-    permission_required = 'empresa.view_actividad'
+class ActividadListView(LoginRequiredMixin, SingleTableView):
     model = models.Actividad
     # filter_class = filters.ActividadFilter  # (initial={'active': True})
     table_class = tables.ActividadTable
@@ -289,7 +283,7 @@ class ActividadListView(LoginRequiredMixin, PermissionRequiredMixin, SingleTable
         return qs
 
 
-class ActividadCreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.CreateView):
+class ActividadCreateView(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'empresa.add_actividad'
     model = models.Actividad
     form_class = forms.ActividadForm
@@ -310,7 +304,7 @@ class ActividadCreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.C
         return response
 
 
-class ActividadDetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.DetailView):
+class ActividadDetailView(PermissionRequiredMixin, generic.DetailView):
     permission_required = 'empresa.view_actividad'
     model = models.Actividad
     template_name = 'comunes/detalle.html'
@@ -321,7 +315,7 @@ class ActividadDetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.D
         return context
 
 
-class ActividadUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.UpdateView):
+class ActividadUpdateView(PermissionRequiredMixin, generic.UpdateView):
     permission_required = 'empresa.change_actividad'
     model = models.Actividad
     form_class = forms.ActividadForm
@@ -342,8 +336,8 @@ class ActividadUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.U
         return response
 
 
-class ActividadDeleteView(LoginRequiredMixin, PermissionRequiredMixin, generic.DeleteView):
-    permission_required = 'empresa.del_actividad'
+class ActividadDeleteView(PermissionRequiredMixin, generic.DeleteView):
+    permission_required = 'empresa.delete_actividad'
     model = models.Actividad
     success_message = "Registro eliminado correctamente"
 
@@ -367,7 +361,8 @@ class ActividadDeleteView(LoginRequiredMixin, PermissionRequiredMixin, generic.D
 # -----------------------------------------------------------------------------
 
 
-class EmpActDetailView(LoginRequiredMixin, generic.DetailView):
+class EmpActDetailView(PermissionRequiredMixin, generic.DetailView):
+    permission_required = 'empresa.view_empresaactividades'
     # EmpresaActividades.objects.filter(empresa=6027).filter(actividad=7)
     model = models.EmpresaActividades
     template_name = 'empresa_actividad/detalle.html'
@@ -387,7 +382,8 @@ class EmpActDetailView(LoginRequiredMixin, generic.DetailView):
         return context
 
 
-class CreateAddressView(LoginRequiredMixin, generic.CreateView):
+class CreateAddressView(PermissionRequiredMixin, generic.CreateView):
+    permission_required = 'comunes.add_domicilio'
     model = DomicilioModel
     form_class = DomicilioForm
     template_name = 'comunes/formulario.html'
@@ -419,7 +415,8 @@ class CreateAddressView(LoginRequiredMixin, generic.CreateView):
         return response
 
 
-class CreateContactView(LoginRequiredMixin, generic.CreateView):
+class CreateContactView(PermissionRequiredMixin, generic.CreateView):
+    permission_required = 'persona.add_persona'
     model = ContactoModel
     form_class = ContactoForm
     template_name = 'comunes/formulario.html'
@@ -544,13 +541,12 @@ def ead_delete(request, eadId):
 # -----------------------------------------------------------------------------
 
 
-class ComercialTemplateView(LoginRequiredMixin, generic.TemplateView):
+class ComercialTemplateView(generic.TemplateView):
     def get(self, request, *args, **kwargs):
         return ComercialListView.as_view()(request)
 
 
-class ComercialListView(LoginRequiredMixin, PermissionRequiredMixin, PagedFilteredTableView):
-    permission_required = 'empresa.view_comercial'
+class ComercialListView(LoginRequiredMixin, PagedFilteredTableView):
     model = models.Comercial
     filter_class = filters.ComercialFilter  # (initial={'active': True})
     table_class = tables.ComercialTable
@@ -566,7 +562,7 @@ class ComercialListView(LoginRequiredMixin, PermissionRequiredMixin, PagedFilter
     #     return models.Comercial.objects.filter(active=True)
 
 
-class ComercialCreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.CreateView):
+class ComercialCreateView(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'empresa.add_comercial'
     model = models.Comercial
     form_class = forms.ComercialForm
@@ -587,7 +583,7 @@ class ComercialCreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.C
         return response
 
 
-class ComercialDetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.DetailView):
+class ComercialDetailView(PermissionRequiredMixin, generic.DetailView):
     permission_required = 'empresa.view_comercial'
     model = models.Comercial
     template_name = 'comunes/detalle.html'
@@ -598,7 +594,7 @@ class ComercialDetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.D
         return context
 
 
-class ComercialUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.UpdateView):
+class ComercialUpdateView(PermissionRequiredMixin, generic.UpdateView):
     permission_required = 'empresa.change_comercial'
     model = models.Comercial
     form_class = forms.ComercialForm
@@ -619,7 +615,7 @@ class ComercialUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.U
         return response
 
 
-class ComercialDeleteView(LoginRequiredMixin, PermissionRequiredMixin, generic.DeleteView):
+class ComercialDeleteView(PermissionRequiredMixin, generic.DeleteView):
     permission_required = 'empresa.dele_comercial'
     model = models.Comercial
     success_message = "Registro eliminado correctamente"

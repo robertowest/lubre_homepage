@@ -231,10 +231,3 @@ MESSAGE_TAGS = {
 DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': False,
 }
-
-
-INSTALLED_APPS += [
-    'django_filters',
-    'django_tables2',
-    'bootstrap3',
-]
