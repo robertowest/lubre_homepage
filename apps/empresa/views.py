@@ -153,7 +153,7 @@ def empresa_actividad(request, empId, actId):
 
 
 # -----------------------------------------------------------------------------
-# Tablas relacionadas a la empresa
+# Tablas relacionadas con la empresa
 # -----------------------------------------------------------------------------
 
 

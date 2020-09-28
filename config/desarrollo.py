@@ -96,7 +96,7 @@ DATABASES = {
     #     'HOST': '172.17.0.2',
     #     'PORT': '3306',
     #     'USER': 'root',
-    #     'PASSWORD': 'roberto',    
+    #     'PASSWORD': 'roberto',
     # },
     'firebird': {
         # lubresrl.dyndns.org:4310
