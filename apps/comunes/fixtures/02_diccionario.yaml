@@ -58,3 +58,91 @@
     active: true
     texto: "Domicilio Explotaci\xF3n"
     tabla: domicilio
+- model: comunes.diccionario
+  pk: 11
+  fields:
+    active: true
+    created: 2020-09-30 12:04:36.516083+00:00
+    modified: 2020-09-30 12:04:36.516154+00:00
+    texto: Alimenticia
+    tabla: tipoEmpresa
+- model: comunes.diccionario
+  pk: 12
+  fields:
+    active: true
+    created: 2020-09-30 12:04:45.200727+00:00
+    modified: 2020-09-30 12:04:45.200817+00:00
+    texto: Automotriz
+    tabla: tipoEmpresa
+- model: comunes.diccionario
+  pk: 13
+  fields:
+    active: true
+    created: 2020-09-30 12:04:56.177955+00:00
+    modified: 2020-09-30 12:04:56.178046+00:00
+    texto: Azucarera
+    tabla: tipoEmpresa
+- model: comunes.diccionario
+  pk: 14
+  fields:
+    active: true
+    created: 2020-09-30 12:05:01.034923+00:00
+    modified: 2020-09-30 12:07:15.406227+00:00
+    texto: "Citr\xEDcola"
+    tabla: tipoEmpresa
+- model: comunes.diccionario
+  pk: 15
+  fields:
+    active: true
+    created: 2020-09-30 12:05:14.452710+00:00
+    modified: 2020-09-30 12:05:14.452774+00:00
+    texto: "Farmac\xE9utica"
+    tabla: tipoEmpresa
+- model: comunes.diccionario
+  pk: 16
+  fields:
+    active: true
+    created: 2020-09-30 12:05:22.142949+00:00
+    modified: 2020-09-30 12:05:22.143039+00:00
+    texto: Inmobiliaria
+    tabla: tipoEmpresa
+- model: comunes.diccionario
+  pk: 17
+  fields:
+    active: true
+    created: 2020-09-30 12:05:33.385286+00:00
+    modified: 2020-09-30 12:05:33.385459+00:00
+    texto: "Metal\xFArgica"
+    tabla: tipoEmpresa
+- model: comunes.diccionario
+  pk: 18
+  fields:
+    active: true
+    created: 2020-09-30 12:05:43.796070+00:00
+    modified: 2020-09-30 12:05:43.796140+00:00
+    texto: "Petroqu\xEDmica"
+    tabla: tipoEmpresa
+- model: comunes.diccionario
+  pk: 19
+  fields:
+    active: true
+    created: 2020-09-30 12:05:55.501327+00:00
+    modified: 2020-09-30 12:05:55.501396+00:00
+    texto: "Qu\xEDmica"
+    tabla: tipoEmpresa
+- model: comunes.diccionario
+  pk: 20
+  fields:
+    active: true
+    created: 2020-09-30 12:06:36.441296+00:00
+    modified: 2020-09-30 12:06:36.441394+00:00
+    texto: "Sider\xFArgica"
+    tabla: tipoEmpresa
+- model: comunes.diccionario
+  pk: 21
+  fields:
+    active: true
+    created: 2020-09-30 12:06:55.766875+00:00
+    modified: 2020-09-30 12:06:55.766968+00:00
+    texto: Textil
+    tabla: tipoEmpresa

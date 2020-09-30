@@ -36,3 +36,6 @@ class EmpresaAdmin(admin.ModelAdmin):
         if db_field.name == 'actividad':
             kwargs['queryset'] = Diccionario.objects.filter(tabla='actividad').order_by('texto')
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
+
+# admin.site.register(models.EmpresaActividadInfo)

@@ -133,16 +133,6 @@ class Empresa(CommonStruct):
         return reverse('%s:associate_with_actividad' % self._meta.model_name, args=(self.pk,))
 
 
-class EmpresaActividades(models.Model):
-    empresa = models.ForeignKey(Empresa, models.DO_NOTHING)
-    actividad = models.ForeignKey(Actividad, models.DO_NOTHING)
-
-    class Meta:
-        managed = False
-        db_table = 'empresa_actividades'
-        unique_together = (('empresa', 'actividad'),)
-
-
 class EmpresaComunicaciones(models.Model):
     empresa = models.ForeignKey(Empresa, models.DO_NOTHING)
     comunicacion = models.ForeignKey(Comunicacion, models.DO_NOTHING)
@@ -153,9 +143,20 @@ class EmpresaComunicaciones(models.Model):
         unique_together = (('empresa', 'comunicacion'),)
 
 
+class EmpresaActividades(models.Model):
+    empresa = models.ForeignKey(Empresa, models.DO_NOTHING)
+    actividad = models.ForeignKey(Actividad, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'empresa_actividades'
+        unique_together = (('empresa', 'actividad'),)
+
+
 class EmpresaActividadContactos(models.Model):
     # Empresa-Contacto ahora depende de Empresa-Actividad-Contacto
-    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING, related_name='ea_contactos')
+    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING, 
+                                          related_name='ea_contactos')
     persona = models.ForeignKey(Persona, models.DO_NOTHING)
     cargo = models.CharField('Puesto', max_length=50, null=True, blank=True, default='¿puesto?')
 
@@ -167,13 +168,38 @@ class EmpresaActividadContactos(models.Model):
 
 class EmpresaActividadDomicilios(models.Model):
     # Empresa-Domicilio ahora depende de Empresa-Actividad-Domicilio
-    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING, related_name='ea_domicilios')
+    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING, 
+                                          related_name='ea_domicilios')
     domicilio = models.ForeignKey(Domicilio, models.DO_NOTHING)
 
     class Meta:
         managed = True  # False
         db_table = 'empresa_actividad_domicilios'
         unique_together = (('empresa_actividad', 'domicilio'),)
+
+
+class EmpresaActividadInfo(CommonStruct):
+    from apps.comunes.models import Diccionario
+
+    TAMANO = ((1, 'Pequeña'), (2, 'Mediana'), (3, 'Grande'))
+
+    # agro -------------
+    empresa_actividad = models.ForeignKey(EmpresaActividades, on_delete=models.CASCADE, 
+                                          related_name='ea_info')
+    nombre = models.CharField('Nombre o identificación', max_length=150, null=True, blank=True)
+    referencia_gps = models.CharField('Ubicación GPS', max_length=30, null=True, blank=True)
+    superficie = models.SmallIntegerField('Hectareas', null=True, blank=True)
+    # industria --------
+    tamano = models.SmallIntegerField('Tamaño', choices=TAMANO, null=True, blank=True)
+    tipo = models.ForeignKey(Diccionario, on_delete=models.CASCADE,
+                             null=True, blank=True, verbose_name='Tipo de Empresa',
+                             limit_choices_to={'tabla': 'tipoEmpresa', 'active': True})
+    # agro: tipo de cultivos
+    # industria: producto que fabrica
+    comentario = models.TextField(null=True, blank=True)
+
+    class Meta:
+        db_table = 'empresa_actividad_info'
 
 
 class Seguimiento(CommonStruct):

@@ -26,7 +26,6 @@ from apps.persona.forms import PersonaForm as ContactoForm
 # -----------------------------------------------------------------------------
 # Empresa
 # -----------------------------------------------------------------------------
-
 class EmpresaTemplateView(generic.TemplateView):
     # app=__package__.split('.')[1]     --> lo obtiene de urls.py
     # model._meta.verbose_name.lower()  --> lo obtiene de models.py
@@ -155,8 +154,6 @@ def empresa_actividad(request, empId, actId):
 # -----------------------------------------------------------------------------
 # Tablas relacionadas con la empresa
 # -----------------------------------------------------------------------------
-
-
 class CreateComunicationView(LoginRequiredMixin, generic.CreateView):
     model = ComunicacionModel
     form_class = ComunicacionForm
@@ -258,8 +255,6 @@ class ActividadMultiListView(LoginRequiredMixin, generic.ListView):
 # -----------------------------------------------------------------------------
 # Actividad
 # -----------------------------------------------------------------------------
-
-
 class ActividadTemplateView(generic.TemplateView):
     def get(self, request, *args, **kwargs):
         return ActividadListView.as_view()(request)
@@ -359,24 +354,33 @@ class ActividadDeleteView(PermissionRequiredMixin, generic.DeleteView):
 # -----------------------------------------------------------------------------
 # Empresa Actividad
 # -----------------------------------------------------------------------------
-
-
 class EmpActDetailView(PermissionRequiredMixin, generic.DetailView):
     permission_required = 'empresa.view_empresaactividades'
     # EmpresaActividades.objects.filter(empresa=6027).filter(actividad=7)
     model = models.EmpresaActividades
     template_name = 'empresa_actividad/detalle.html'
 
-    # def get_object(self):
-    #     ea = models.EmpresaActividades.objects.filter(empresa=6027).filter(actividad=7)
-    #     return get_object_or_404(models.EmpresaActividades, pk=ea[0].id)
+    def get_object(self):
+        # ea = models.EmpresaActividades.objects.filter(empresa=6027).filter(actividad=7)
+        # return get_object_or_404(models.EmpresaActividades, pk=ea[0].id)
+        modelo = models.EmpresaActividades.objects \
+                 .select_related('empresa') \
+                 .prefetch_related('ea_contactos', 'ea_domicilios', 'ea_info') \
+                 .get(id=self.kwargs['pk'])
+        return modelo
 
     def get_context_data(self, **kwargs):
         pk = self.kwargs['pk']
         context = super().get_context_data(**kwargs)
-        context['appdomain'] = "empresa" or __package__.split('.')[1] 
-        context['contactos'] = models.EmpresaActividadContactos.objects.filter(empresa_actividad_id=pk)
-        context['domicilios'] = models.EmpresaActividadDomicilios.objects.filter(empresa_actividad_id=pk)
+        context['appdomain'] = 'empresa' or __package__.split('.')[1] 
+
+        context['contactos'] = self.object.ea_contactos.all()
+        context['domicilios'] = self.object.ea_domicilios.all()
+        context['info'] = self.object.ea_info.all()
+        # context['contactos'] = models.EmpresaActividadContactos.objects.filter(empresa_actividad_id=pk)
+        # context['domicilios'] = models.EmpresaActividadDomicilios.objects.filter(empresa_actividad_id=pk)
+        # context['info'] = models.EmpresaActividadInfo.objects.get(empresa_actividad_id=pk) or None
+
         # context['contactos'] = context['empresaactividades'].ea_contactos.instance
         # context['domicilios'] = context['empresaactividades'].ea_domicilios.instance
         return context
@@ -479,7 +483,6 @@ def asociar_contacto(request, relaId, conId):
 # -----------------------------------------------------------------------------
 # Empresa Actividad Contacto
 # -----------------------------------------------------------------------------
-
 @login_required(login_url='/accounts/login/')
 def eac_delete(request, eacId):
     obj = models.EmpresaActividadContactos.objects.get(pk=eacId)
@@ -507,7 +510,6 @@ def eac_asignar_cargo(request, eaId, eacId):
 # -----------------------------------------------------------------------------
 # Empresa Actividad Domicilio
 # -----------------------------------------------------------------------------
-
 @login_required(login_url='/accounts/login/')
 def reasignar_domicilio(request, eaId, eadId):
     empresa = models.EmpresaActividades.objects.get(id=eaId).empresa_id
@@ -537,10 +539,86 @@ def ead_delete(request, eadId):
 
 
 # -----------------------------------------------------------------------------
+# Empresa Actividad Información
+# -----------------------------------------------------------------------------
+class CreateInfoView(generic.CreateView):
+    model = models.EmpresaActividadInfo
+    form_class = forms.EmpresaActividadInfoForm
+    template_name = 'comunes/formulario.html'
+    form_title = 'Agregar Información'
+
+    def get_initial(self):
+        initial = super().get_initial()
+        record = models.EmpresaActividades.objects \
+                 .select_related('empresa').get(id=self.kwargs['eaId'])
+        initial['actividad_id'] = record.empresa.actividad_id
+        return initial
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['appdomain'] = 'empresa_actividad' or __package__.split('.')[1] 
+        context['form_title'] = self.form_title
+        return context
+
+    def get_success_url(self):
+        return reverse_lazy('empresa_actividad:detail', args=(self.object.pk,))
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        # terminamos, ¿hacia dónde vamos?
+        if 'previous_url' in self.request._post:
+            return HttpResponseRedirect(self.request._post['previous_url'])
+        return response
+
+
+class UpdateInfoView(generic.UpdateView):
+    model = models.EmpresaActividadInfo
+    form_class = forms.EmpresaActividadInfoForm
+    template_name = 'comunes/formulario.html'
+    form_title = 'Actualizar Información'
+
+    # def get_object(self):
+    #     modelo = models.EmpresaActividadInfo.objects \
+    #              .select_related('empresa_actividad').get(id=self.kwargs['pk'])
+    #     return modelo
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['appdomain'] = 'empresa_actividad' or __package__.split('.')[1] 
+        context['form_title'] = self.form_title
+        return context
+
+    # def get_form_kwargs(self):
+    #     kwargs = super(UpdateInfoView, self).get_form_kwargs()
+    #     kwargs.update({'actividad_id': self.object.empresa_actividad.empresa.actividad_id})
+    #     return kwargs
+    def get_initial(self):
+        initial = super().get_initial()
+        # cpf - it's the name of the field on your current form
+        # self.args will be filled from URL. I'd suggest to use named parameters
+        # so you can access e.g. self.kwargs['cpf_initial']
+        initial['actividad_id'] = self.object.empresa_actividad.empresa.actividad_id
+        return initial
+        
+    def get_success_url(self):
+        # redirect = self.request.GET.get('next')
+        # if redirect:
+        #     return redirect
+        # return reverse_lazy('empresa_actividad:list')
+        return reverse_lazy('empresa_actividad:detail', args=(self.object.pk,))
+
+    def form_valid(self, form):
+        # 'empresaactividadinfo' is not a registered namespace
+        response = super().form_valid(form)
+        # terminamos, ¿hacia dónde vamos?
+        if 'previous_url' in self.request._post:
+            return HttpResponseRedirect(self.request._post['previous_url'])
+        return response
+
+
+# -----------------------------------------------------------------------------
 # Comercial
 # -----------------------------------------------------------------------------
-
-
 class ComercialTemplateView(generic.TemplateView):
     def get(self, request, *args, **kwargs):
         return ComercialListView.as_view()(request)

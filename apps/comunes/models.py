@@ -177,6 +177,7 @@ class Diccionario(CommonStruct):
     TABLA = (
         ('comunicacion', 'Comunicaciones'),
         ('domicilio', 'Domicilios'),
+        ('tipoEmpresa', 'Tipo de Empresa'),
     )
 
     texto = models.CharField(max_length=150)

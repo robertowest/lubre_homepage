@@ -90,7 +90,16 @@ class DomicilioAdmin(admin.ModelAdmin):
     list_filter = model.list_filter
     ordering = model.ordering
 
-admin.site.register(models.Diccionario)
+
+@admin.register(models.Diccionario)
+class DiccionarioAdmin(admin.ModelAdmin):
+    model = models.Diccionario
+    list_display = ['tabla', 'texto', 'active']
+    list_display_links = ['texto']
+    list_filter = ['tabla']
+    ordering = ['tabla', 'texto']
+
+# admin.site.register(models.Diccionario)
 admin.site.register(models.Comunicacion)
 
 

@@ -1,7 +1,7 @@
 from crispy_forms import bootstrap, helper, layout
 from django import forms
 
-from .models import Actividad, Comercial, Empresa
+from .models import Actividad, Comercial, Empresa, EmpresaActividadInfo
 
 
 class ActividadForm(forms.ModelForm):
@@ -184,3 +184,60 @@ class ComercialFilterForm(helper.FormHelper):
                 css_class="col-12 text-right align-self-center",
             )
         )
+
+
+class EmpresaActividadInfoForm(forms.ModelForm):
+    class Meta:
+        model = EmpresaActividadInfo
+        fields = ['nombre', 'referencia_gps', 'superficie', 
+                  'tamano', 'tipo',
+                  'comentario', 'active']
+
+    def __init__(self, *args, **kwargs):
+        super(EmpresaActividadInfoForm, self).__init__(*args, **kwargs)
+
+        # valores iniciales para campos especiales
+
+        # creamos helper
+        self.helper = helper.FormHelper()
+        self.helper.form_id = "myform"
+
+        # creamos layouts personalizado
+        if kwargs:
+            if kwargs['initial']['actividad_id'] == 2:
+                self.helper.layout = layout.Layout(
+                    'tamano', 
+                    'tipo',
+                    'comentario'
+                    'active',
+                )
+            elif kwargs['initial']['actividad_id'] == 3:
+                self.helper.layout = layout.Layout(
+                    'nombre',
+                    'referencia_gps', 
+                    'superficie', 
+                    'comentario'
+                    'active',
+                )
+            else:
+                self.helper.layout = layout.Layout(
+                    'active',
+                )
+        else:
+            self.helper.layout = layout.Layout(
+                'nombre',
+                'referencia_gps', 
+                'superficie', 
+                'tamano', 
+                'tipo',
+                'comentario'
+                'active',
+            )
+
+        # agregamos los botones de acción
+        bSave = '<button type="submit" class="btn btn-primary btn-icon-split mr-1"><span class="icon text-white-50"><i class="fas fa-save"></i></span><span class="text">Grabar</span></button>'
+        bCancel = '<a class="btn btn-warning btn-icon-split" href="{{request.META.HTTP_REFERER}}"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text text-dark">Cancela</span></a>'
+        self.helper.layout.append(layout.HTML("<hr>"))
+        self.helper.layout.append(layout.HTML(bSave))
+        self.helper.layout.append(layout.HTML(bCancel))
+
