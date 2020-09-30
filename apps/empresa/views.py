@@ -551,6 +551,7 @@ class CreateInfoView(generic.CreateView):
         initial = super().get_initial()
         record = models.EmpresaActividades.objects \
                  .select_related('empresa').get(id=self.kwargs['eaId'])
+        # initial['empresa_actividad_id'] = self.kwargs['eaId']
         initial['actividad_id'] = record.empresa.actividad_id
         return initial
 
@@ -564,7 +565,13 @@ class CreateInfoView(generic.CreateView):
         return reverse_lazy('empresa_actividad:detail', args=(self.object.pk,))
 
     def form_valid(self, form):
+        TODO: valor inicial de la empresa_actividad
+        form.fields['empresa_actividad'] = self.object.empresa_actividad.id
+        # self.fields['empresa_actividad'] = EmpresaActividades.objects.get(id=kwargs['initial']['empresa_actividad_id'])
+        # self.fields['empresa_actividad'].queryset = Actividad.objects.filter(parent__isnull=True).order_by('nombre')
+
         response = super().form_valid(form)
+
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
@@ -577,10 +584,10 @@ class UpdateInfoView(generic.UpdateView):
     template_name = 'comunes/formulario.html'
     form_title = 'Actualizar Información'
 
-    # def get_object(self):
-    #     modelo = models.EmpresaActividadInfo.objects \
-    #              .select_related('empresa_actividad').get(id=self.kwargs['pk'])
-    #     return modelo
+    def get_object(self):
+        modelo = models.EmpresaActividadInfo.objects \
+                 .select_related('empresa_actividad').get(id=self.kwargs['pk'])
+        return modelo
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -588,15 +595,8 @@ class UpdateInfoView(generic.UpdateView):
         context['form_title'] = self.form_title
         return context
 
-    # def get_form_kwargs(self):
-    #     kwargs = super(UpdateInfoView, self).get_form_kwargs()
-    #     kwargs.update({'actividad_id': self.object.empresa_actividad.empresa.actividad_id})
-    #     return kwargs
     def get_initial(self):
         initial = super().get_initial()
-        # cpf - it's the name of the field on your current form
-        # self.args will be filled from URL. I'd suggest to use named parameters
-        # so you can access e.g. self.kwargs['cpf_initial']
         initial['actividad_id'] = self.object.empresa_actividad.empresa.actividad_id
         return initial
         
@@ -608,7 +608,6 @@ class UpdateInfoView(generic.UpdateView):
         return reverse_lazy('empresa_actividad:detail', args=(self.object.pk,))
 
     def form_valid(self, form):
-        # 'empresaactividadinfo' is not a registered namespace
         response = super().form_valid(form)
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:

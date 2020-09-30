@@ -1,7 +1,7 @@
 from crispy_forms import bootstrap, helper, layout
 from django import forms
 
-from .models import Actividad, Comercial, Empresa, EmpresaActividadInfo
+from .models import Actividad, Comercial, Empresa, EmpresaActividades, EmpresaActividadInfo
 
 
 class ActividadForm(forms.ModelForm):
@@ -189,14 +189,13 @@ class ComercialFilterForm(helper.FormHelper):
 class EmpresaActividadInfoForm(forms.ModelForm):
     class Meta:
         model = EmpresaActividadInfo
-        fields = ['nombre', 'referencia_gps', 'superficie', 
+        fields = ['empresa_actividad',
+                  'nombre', 'referencia_gps', 'superficie', 
                   'tamano', 'tipo',
                   'comentario', 'active']
 
     def __init__(self, *args, **kwargs):
         super(EmpresaActividadInfoForm, self).__init__(*args, **kwargs)
-
-        # valores iniciales para campos especiales
 
         # creamos helper
         self.helper = helper.FormHelper()
@@ -206,6 +205,7 @@ class EmpresaActividadInfoForm(forms.ModelForm):
         if kwargs:
             if kwargs['initial']['actividad_id'] == 2:
                 self.helper.layout = layout.Layout(
+                    'empresa_actividad',
                     'tamano', 
                     'tipo',
                     'comentario'
@@ -213,6 +213,7 @@ class EmpresaActividadInfoForm(forms.ModelForm):
                 )
             elif kwargs['initial']['actividad_id'] == 3:
                 self.helper.layout = layout.Layout(
+                    'empresa_actividad',
                     'nombre',
                     'referencia_gps', 
                     'superficie', 
@@ -221,10 +222,12 @@ class EmpresaActividadInfoForm(forms.ModelForm):
                 )
             else:
                 self.helper.layout = layout.Layout(
+                    'empresa_actividad',
                     'active',
                 )
         else:
             self.helper.layout = layout.Layout(
+                'empresa_actividad',
                 'nombre',
                 'referencia_gps', 
                 'superficie', 
