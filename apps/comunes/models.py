@@ -36,7 +36,10 @@ class CommonStruct(models.Model):
                 try:
                     value = getattr(self, f.name)
                     if value:
-                        fields.append({'name':f.verbose_name, 'value':value,})
+                        if f.choices:
+                            fields.append({'name':f.verbose_name, 'value':dict(f.choices)[value],})
+                        else:
+                            fields.append({'name':f.verbose_name, 'value':value,})
                 except:
                     value = None
         return fields

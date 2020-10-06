@@ -163,7 +163,7 @@
         {% if perms.empresa.change_empresa %}
         <div class="card mb-4">
             <div class="card-body text-center">
-                <a href="{{object.get_update_url}}" class="btn btn-success btn-icon-split">
+                <a href="{% url 'empresa:confirmar_empresa' object.pk %}" class="btn btn-success btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fas fa-check"></i>
                     </span>

@@ -83,6 +83,7 @@ class EmpresaCreateView(PermissionRequiredMixin, generic.CreateView):
 
     def form_valid(self, form):
         response = super().form_valid(form)
+        self.object.impactar = True
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
@@ -120,6 +121,7 @@ class EmpresaUpdateView(PermissionRequiredMixin, generic.UpdateView):
 
     def form_valid(self, form):
         response = super().form_valid(form)
+        self.object.impactar = True
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
@@ -373,16 +375,9 @@ class EmpActDetailView(PermissionRequiredMixin, generic.DetailView):
         pk = self.kwargs['pk']
         context = super().get_context_data(**kwargs)
         context['appdomain'] = 'empresa' or __package__.split('.')[1] 
-
         context['contactos'] = self.object.ea_contactos.all()
         context['domicilios'] = self.object.ea_domicilios.all()
         context['info'] = self.object.ea_info.all()
-        # context['contactos'] = models.EmpresaActividadContactos.objects.filter(empresa_actividad_id=pk)
-        # context['domicilios'] = models.EmpresaActividadDomicilios.objects.filter(empresa_actividad_id=pk)
-        # context['info'] = models.EmpresaActividadInfo.objects.get(empresa_actividad_id=pk) or None
-
-        # context['contactos'] = context['empresaactividades'].ea_contactos.instance
-        # context['domicilios'] = context['empresaactividades'].ea_domicilios.instance
         return context
 
 
@@ -470,8 +465,6 @@ def buscar_contacto(request, pk):
 
 @login_required(login_url='/accounts/login/')
 def asociar_contacto(request, relaId, conId):
-    # empresa_actividad_id = relaId
-    # contacto_id = conId
     relacion = models.EmpresaActividadContactos()
     relacion.empresa_actividad_id = relaId
     relacion.persona_id = conId
@@ -548,12 +541,13 @@ class CreateInfoView(generic.CreateView):
     form_title = 'Agregar Información'
 
     def get_initial(self):
-        initial = super().get_initial()
-        record = models.EmpresaActividades.objects \
-                 .select_related('empresa').get(id=self.kwargs['eaId'])
-        # initial['empresa_actividad_id'] = self.kwargs['eaId']
-        initial['actividad_id'] = record.empresa.actividad_id
-        return initial
+        # actividad padre
+        ea = models.EmpresaActividades.objects \
+                .prefetch_related('actividad').get(id=self.kwargs['eaId'])
+        return {
+            'actividad_padre': ea.actividad.parent_id,
+            'empresa_actividad': ea,
+        }
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -565,13 +559,7 @@ class CreateInfoView(generic.CreateView):
         return reverse_lazy('empresa_actividad:detail', args=(self.object.pk,))
 
     def form_valid(self, form):
-        TODO: valor inicial de la empresa_actividad
-        form.fields['empresa_actividad'] = self.object.empresa_actividad.id
-        # self.fields['empresa_actividad'] = EmpresaActividades.objects.get(id=kwargs['initial']['empresa_actividad_id'])
-        # self.fields['empresa_actividad'].queryset = Actividad.objects.filter(parent__isnull=True).order_by('nombre')
-
         response = super().form_valid(form)
-
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
@@ -584,6 +572,14 @@ class UpdateInfoView(generic.UpdateView):
     template_name = 'comunes/formulario.html'
     form_title = 'Actualizar Información'
 
+    def get_initial(self):
+        # actividad padre
+        ea = models.EmpresaActividades.objects \
+                .prefetch_related('actividad').get(id=self.kwargs['eaId'])
+        return {
+            'actividad_padre': ea.actividad.parent_id,
+        }
+
     def get_object(self):
         modelo = models.EmpresaActividadInfo.objects \
                  .select_related('empresa_actividad').get(id=self.kwargs['pk'])
@@ -595,16 +591,7 @@ class UpdateInfoView(generic.UpdateView):
         context['form_title'] = self.form_title
         return context
 
-    def get_initial(self):
-        initial = super().get_initial()
-        initial['actividad_id'] = self.object.empresa_actividad.empresa.actividad_id
-        return initial
-        
     def get_success_url(self):
-        # redirect = self.request.GET.get('next')
-        # if redirect:
-        #     return redirect
-        # return reverse_lazy('empresa_actividad:list')
         return reverse_lazy('empresa_actividad:detail', args=(self.object.pk,))
 
     def form_valid(self, form):
@@ -613,6 +600,7 @@ class UpdateInfoView(generic.UpdateView):
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
         return response
+
 
 
 # -----------------------------------------------------------------------------
@@ -777,6 +765,7 @@ def asociar_comunicacion(request, empId, comId):
 
 def confirmar_empresa(request, pk):
     object = models.Empresa.objects.get(id=pk)
+    object.impactar = True
     object.save()
     messages.success(request, f'Empresa confirmada.')
     return HttpResponseRedirect(reverse('empresa:detail', args=[pk]))

@@ -193,6 +193,7 @@ class EmpresaActividadInfoForm(forms.ModelForm):
                   'nombre', 'referencia_gps', 'superficie', 
                   'tamano', 'tipo',
                   'comentario', 'active']
+        widgets = {'empresa_actividad': forms.HiddenInput()}
 
     def __init__(self, *args, **kwargs):
         super(EmpresaActividadInfoForm, self).__init__(*args, **kwargs)
@@ -202,37 +203,24 @@ class EmpresaActividadInfoForm(forms.ModelForm):
         self.helper.form_id = "myform"
 
         # creamos layouts personalizado
-        if kwargs:
-            if kwargs['initial']['actividad_id'] == 2:
-                self.helper.layout = layout.Layout(
-                    'empresa_actividad',
-                    'tamano', 
-                    'tipo',
-                    'comentario'
-                    'active',
-                )
-            elif kwargs['initial']['actividad_id'] == 3:
-                self.helper.layout = layout.Layout(
-                    'empresa_actividad',
-                    'nombre',
-                    'referencia_gps', 
-                    'superficie', 
-                    'comentario'
-                    'active',
-                )
-            else:
-                self.helper.layout = layout.Layout(
-                    'empresa_actividad',
-                    'active',
-                )
-        else:
+        self.helper.layout = layout.Layout(
+            'empresa_actividad',
+            'active',
+        )
+        if kwargs['initial']['actividad_padre'] == 2:
+            self.helper.layout = layout.Layout(
+                'empresa_actividad',
+                'tamano', 
+                'tipo',
+                'comentario'
+                'active',
+            )
+        elif kwargs['initial']['actividad_padre'] == 3:
             self.helper.layout = layout.Layout(
                 'empresa_actividad',
                 'nombre',
                 'referencia_gps', 
                 'superficie', 
-                'tamano', 
-                'tipo',
                 'comentario'
                 'active',
             )
@@ -243,4 +231,3 @@ class EmpresaActividadInfoForm(forms.ModelForm):
         self.helper.layout.append(layout.HTML("<hr>"))
         self.helper.layout.append(layout.HTML(bSave))
         self.helper.layout.append(layout.HTML(bCancel))
-

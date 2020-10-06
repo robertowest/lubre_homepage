@@ -103,6 +103,8 @@ class Empresa(CommonStruct):
     referencia_id = models.IntegerField('Referencia Externa', null=True, blank=True, unique=True)
     origen = models.IntegerField(null=True, blank=True)
     planilla = models.IntegerField(null=True, blank=True)
+    # marca el registro para impactar contra firebird
+    impactar = models.BooleanField(default=False, null=False, blank=False)
 
     # configuración para admin
     list_display = ['razon_social', 'cuit', 'nombre', 'active']

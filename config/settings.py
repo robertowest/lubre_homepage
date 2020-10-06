@@ -131,23 +131,23 @@ INSTALLED_APPS += [
 # AUTH_USER_MODEL = 'accounts.User'
 
 
-# -------------------------------------------------------------------
-# visualiza todas las consultas SQL por consula
-# muy bueno para realizar depuración desde la consola
-# -------------------------------------------------------------------
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-        }
-    },
-    'loggers': {
-        'django.db.backends': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-        },
-    }
-}
+# # -------------------------------------------------------------------
+# # visualiza todas las consultas SQL por consula
+# # muy bueno para realizar depuración desde la consola
+# # -------------------------------------------------------------------
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#         }
+#     },
+#     'loggers': {
+#         'django.db.backends': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#         },
+#     }
+# }
