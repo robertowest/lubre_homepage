@@ -119,11 +119,10 @@
                                     </a>
                                     {% if perms.empresa.delete_empresaactividaddomicilios %}
                                     <a href="#" style="color: rgb(252, 40, 40)"
-                                        data-toggle="modal" data-target="#myModal"
+                                        data-toggle="modal" data-target="#confirmDelete"
                                         data-title="Eliminar asociación"
                                         data-message="¿Está seguro de eliminar esta asociación?"
-                                        data-url="{% url 'empresa_actividad:ead_delete' registro.pk %}"
-                                        data-type="delete">
+                                        data-url="{% url 'empresa_actividad:ead_delete' registro.pk %}">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                     {% endif %}
@@ -181,11 +180,10 @@
                                 {% if perms.empresa.delete_empresaactividadcontactos %}
                                 <td align="right" style="white-space:nowrap;">
                                     <a href="#" style="color: rgb(252, 40, 40)"
-                                        data-toggle="modal" data-target="#myModal"
+                                        data-toggle="modal" data-target="#confirmDelete"
                                         data-title="Eliminar asociación"
                                         data-message="¿Está seguro de eliminar esta asociación?"
-                                        data-url="{% url 'empresa_actividad:eac_delete' registro.pk %}"
-                                        data-type="delete">
+                                        data-url="{% url 'empresa_actividad:eac_delete' registro.pk %}">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>
@@ -227,6 +225,7 @@
 {% block modal %}
     {# https://pypi.org/project/django-bootstrap-modal-forms/ #}
     {% include 'includes/_modal.html' %}
+    {% include 'includes/_modal_delete.html' %}
 {% endblock %}
 
 
@@ -279,12 +278,36 @@
         })
 
         $('#myModal').find('#myModalOk').on('click', function (event) {
+            if (event.target.href != '') {
+                $.ajax({
+                    type: 'GET',
+                    url: event.target.href,
+                    error: function(xhr, status, error) {
+                        console.log(xhr.responseText);
+                    },
+                });
+            }
+
             console.log( JSON.stringify(event, null, 2) );
+            $('#myModal').modal('hide');
         });
 
         $('#myModal').on('hidden.bs.modal', function (event) {
             $('#modalContent').html("Cargando datos ...");
             $('#myModalFooter').show();
         })
+
+        $('#confirmDelete').on('show.bs.modal', function (e) {
+            // título y mensaje personalizado
+            $title = $(e.relatedTarget).attr('data-title');
+            $(this).find('.modal-title').text($title);
+            $message = $(e.relatedTarget).attr('data-message');
+            $(this).find('.modal-body').text($message);
+
+            // url del boton Ok
+            var dataURL = $(e.relatedTarget).data('url');
+            var link = $(this).find('#btnOkModal')[0];
+            link.href = dataURL;
+        });
     </script>
 {% endblock %}

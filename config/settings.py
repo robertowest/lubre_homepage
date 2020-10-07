@@ -123,8 +123,11 @@ INSTALLED_APPS += [
     # sistema ------------------------------
     'apps.firebird',
 
-    # eess ------------------------------
+    # eess ---------------------------------
     'apps.eess',
+
+    # background ---------------------------
+    'ORM',
 ]
 
 # modelo de datos de user
