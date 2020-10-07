@@ -41,7 +41,7 @@ class DomicilioForm(forms.ModelForm):
         # for fld in self.Meta.fields:
         #     self.helper.layout.append(fld)
 
-        campo = '<div class="formColumn col-lg-1 col-md-2 col-sm-6 mb-0"><div id="div_id_hectarea" class="form-group"><label for="id_hectarea" class="col-form-label">Hectareas</label><div class=""><input type="text" name="hectarea" maxlength="2" class="textinput textInput form-control" id="id_hectarea"></div></div></div>'
+        campo = '<div class="formColumn col-lg-1 col-md-2 col-sm-6 mb-0"><div id="div_id_hectarea" class="form-group" style="display: none"><label for="id_hectarea" class="col-form-label">Hectareas</label><div class=""><input type="text" name="hectarea" maxlength="2" class="textinput textInput form-control" id="id_hectarea"></div></div></div>'
 
         # creamos layouts personalizado
         self.helper.layout = layout.Layout(

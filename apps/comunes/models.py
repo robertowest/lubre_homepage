@@ -201,7 +201,7 @@ class Diccionario(CommonStruct):
 
 class Domicilio(CommonStruct):
     TIPO = (('avda', 'Avenida'), ('barrio', 'Barrio'), ('calle', 'Calle'),
-            ('pje', 'Pasaje'), ('ruta', 'Ruta'))
+            ('gps', 'Geo Posicionamiento'), ('pje', 'Pasaje'), ('ruta', 'Ruta'))
 
     tipo = models.ForeignKey(Diccionario, on_delete=models.CASCADE,
                              null=True, blank=True, default=1,

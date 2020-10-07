@@ -30,14 +30,17 @@
                     <dd>{{object.actividad}}</dd>
                 </dl>
             </div>
+            {% comment %}
             <div class="card-footer">
                 <a href="{{request.META.HTTP_REFERER}}" class="btn btn-warning btn-icon-split">                   
                    <span class="icon text-white-50"><i class="fas fa-undo"></i></span>
                    <span class="text text-dark">Regresar</span>
                 </a>
             </div>
+            {% endcomment %}
         </div>
 
+        {% comment %}
         {% if object.empresa.actividad_id == 2 or object.empresa.actividad_id == 3 %}
         <div class="card shadow mb-4">
             <a href="#infoCard" class="d-block card-header py-3" 
@@ -78,6 +81,7 @@
             </div>
         </div>
         {% endif %}
+        {% endcomment %}
     </div>
 
     <!-- derecha -->
@@ -103,7 +107,7 @@
                                     {% else %}
                                     {{registro.domicilio}}
                                     {% endif %}<br>
-                                    {{registro.domicilio.localidad_texto}}
+                                    {{registro.domicilio.localidad.nombre}}
                                 </td>
                                 <td align="right" style="white-space:nowrap;">
                                     <a href="#" style="color: gray;"

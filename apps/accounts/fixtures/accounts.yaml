@@ -34,8 +34,8 @@
   pk: 6
   fields:
     is_superuser: false
-    username: rdehesa
-    email: rdehesa@lubresrl.com.ar
+    username: rdeheza
+    email: rdeheza@lubresrl.com.ar
     is_staff: true
     is_active: true
 - model: auth.user

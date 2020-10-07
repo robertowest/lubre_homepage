@@ -1,22 +1,9 @@
 <script>
   $("#id_tipo").change(function () {
-    var tipoId = $(this).val();
     // 10 - domicilio de explotacion  -  TODO: HARDCODE
-    $('#div_id_hectarea').hidden()
-    if (tipoId == 10) {
-      //$('#myform').append('<input type="text" name="field_name" value="value" />');
-      
-      // $('#div_id_hectarea').show()
-      document.getElementById("div_id_hectarea").style.display = "none";
-
-      // <div class="formColumn col-lg-4 col-md-4 col-sm-6 mb-0">
-      // <div id="div_id_hectarea" class="form-group">
-      // <label for="id_hectarea" class="col-form-label">Hectareas</label>
-      // <div class="">
-      // <input type="text" name="hectarea" maxlength="2" class="textinput textInput form-control" id="id_hectarea">
-      // </div>
-      // </div>
-      // </div>
+    $('#div_id_hectarea').hide();
+    if ($(this).val() == 10) {
+      $("#div_id_hectarea").show();
     }
   });  
 

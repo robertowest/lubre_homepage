@@ -41,12 +41,12 @@ class PersonasListView(LoginRequiredMixin, PagedFilteredTableView):
     template_name = 'comunes/tabla2.html'
 
     def get_queryset(self):
-        # return models.Persona.objects.filter(active=True)
-        # eliminamos las personas que son comerciales de la empresa
-        inner_qs = Comercial.objects.all()
-        obj_list = models.Persona.objects.exclude(id__in=inner_qs) \
-                        .filter(active=True).order_by('nombre', 'apellido')
-        return obj_list
+        # # eliminamos las personas que son comerciales de la empresa
+        # inner_qs = Comercial.objects.all()
+        # obj_list = models.Persona.objects.exclude(id__in=inner_qs) \
+        #                 .filter(active=True).order_by('nombre', 'apellido')
+        # return obj_list
+        return models.Persona.objects.filter(active=True)
 
 
 class PersonaCreateView(PermissionRequiredMixin, generic.CreateView):
