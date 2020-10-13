@@ -15,6 +15,7 @@
                     </h6>
                 </div>
                 <div class="card-body">
+                    <input type="hidden" value="{{object.pk}}" id="pk" readonly>
                     {% crispy form %}
                 </div>
             </div>

@@ -15,4 +15,3 @@ def get_app_name(model):
 def get_model_name(model):
     obj_content_type = ContentType.objects.get_for_model(model)
     return obj_content_type.model
-    

@@ -1,11 +1,9 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
+header("Access-Control-Allow-Origin: *");
 
 include 'src/Afip.php';
-$afip = new Afip(array(
-    'CUIT' => 30710051859,
-    'production' => true
-));
+$afip = new Afip(array('CUIT' => 30710051859, 'production' => true));
 
 function armar_cuit($cuit)
 {

@@ -45,7 +45,7 @@ class EmpresaForm(forms.ModelForm):
         model = Empresa
         fields = ['nombre', 'razon_social', 'cuit', 
                   'comercial', 'actividad', 'referencia_id', 'actividades',
-                  'observacion', 'active']
+                  'observacion', 'active', 'id']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -71,7 +71,8 @@ class EmpresaForm(forms.ModelForm):
             layout.Row(
                 layout.Column('nombre',       css_class='col-lg-5 col-md-4 mb-0'),
                 layout.Column('razon_social', css_class='col-lg-5 col-md-4 mb-0'),
-                layout.Column('cuit',         css_class='col-lg-2 col-md-4 mb-0'),
+                layout.Column('cuit',         css_class='col-lg-2 col-md-4 mb-0', 
+                              onkeypress="buscar_cliente(event)"),
             ),
             layout.Row(
                 layout.Column('actividad',     css_class='col-lg-5 col-md-5 mb-0'),
@@ -82,8 +83,12 @@ class EmpresaForm(forms.ModelForm):
                 layout.Column('actividades', css_class='col-lg-5 col-md-6 mb-0'),
                 layout.Column('observacion', css_class='col-lg-7 col-md-6 mb-0'),
             ),
-            'active',
+            'active', 
         )
+
+        # self.helper.layout = layout.Layout(
+        #     layout.Field('cuit', onkeypress="buscar_cliente(event)")
+        # )
 
         # agregamos los botones de acción
         bSave = '<button type="submit" class="btn btn-primary btn-icon-split mr-1"><span class="icon text-white-50"><i class="fas fa-save"></i></span><span class="text">Grabar</span></button>'

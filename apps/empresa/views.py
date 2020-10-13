@@ -1,4 +1,5 @@
 import os
+import json
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -151,6 +152,46 @@ def empresa_actividad(request, empId, actId):
     # http://localhost:8000/empresa_actividad/2859/
     url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': ea[0].id})
     return HttpResponseRedirect(url)
+
+
+def empresa_domicilio_afip(request):
+    # select d.*
+    # from empresa e
+    # left join empresa_actividades ea on ea.empresa_id = e.id
+    # left join empresa_actividad_domicilios ead on ead.empresa_actividad_id = ea.actividad_id
+    # left join domicilio d on d.id = ead.domicilio_id
+    # where e.id = 7049
+
+    # empresa = 7049
+    # empresa_actividades = 3339
+    # domicilio = 3567
+
+    # select id from empresa where cuit = '30715602411';	-- empresa
+    # select id from empresa_actividades where empresa_id = 7049;  -- actividades
+    # select domicilio_id from empresa_actividad_domicilios where empresa_actividad_id in (3339);  -- domicilio
+    # select * from domicilio where id = 3567;
+
+    # EmpresaActividadDomicilios.objects.select_related('empresa_actividad', 'domicilio').filter(empresa_actividad_id=3339)
+    pk = request.GET['pk']
+    datos = request.GET['datos']
+    datos = json.loads(datos)[0]
+
+    empresa = models.Empresa.objects.get(id=pk)
+    ea = models.EmpresaActividades.objects.filter(empresa_id=empresa.id).values_list('actividad_id', flat=True)[0]
+    ead = models.EmpresaActividadDomicilios.objects.select_related('empresa_actividad', 'domicilio').filter(empresa_actividad_id__in=[ea])
+    domicilio = None
+    
+    for rec in ead:
+        if rec.domicilio.tipo.id == 1:
+            domicilio = rec.domicilio
+            break
+
+    if domicilio:
+        # actualizamos domicilio fiscal
+        pass
+    else:
+        # agregamos domicilio fiscal
+        pass
 
 
 # -----------------------------------------------------------------------------

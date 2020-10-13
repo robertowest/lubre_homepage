@@ -16,6 +16,8 @@ urlpatterns = [
     path('<int:pk>/', views.EmpresaDetailView.as_view(), name='detail'),
     path('<int:pk>/modificar/', views.EmpresaUpdateView.as_view(), name='update'),
     path('<int:pk>/eliminar/', views.EmpresaDeleteView.as_view(), name='delete'),
+    
+    path('ajax/afip/domicilio/', views.empresa_domicilio_afip, name='ajax_domicilio_afip'),
 
     # alta de registros vinculados a la empresa
     path('<int:fk>/comunicacion/', views.CreateComunicationView.as_view(), name='associate_with_comunication'),

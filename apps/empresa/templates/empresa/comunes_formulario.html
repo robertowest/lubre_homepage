@@ -1,0 +1,46 @@
+<script>
+    function buscar_cliente(e) {
+        if (e.keyCode === 13 && !e.shiftKey) {
+            e.preventDefault();
+            var pk = $("#pk").val();
+            var cuit = $("#id_cuit").val();
+
+            jQuery.ajax({
+                url: 'http://192.168.1.9/nlp/buscar_cliente_afip.php',
+                type: "POST",
+                data: "cuit="+cuit,
+                dataType: "json",
+                success: function(datos) {     
+                    jQuery("#id_razon_social").val(datos[0]['RazonSocial']);
+                    // jQuery("#id_observacion").val(
+                    //     'Tipo: ' + datos[0]['TipoDomicilio'] + '\n' + 
+                    //     'Domicilio: ' + datos[0]['Domicilio'] + '\n' + 
+                    //     'Provincia: ' + datos[0]['Provincia'] + '\n' + 
+                    //     'Localidad: ' + datos[0]['Localidad'] + '\n' + 
+                    //     'CP: ' + datos[0]['CodigoPostal']
+                    // );
+                    pasar_informacion(pk, JSON.stringify(datos));
+                },
+                error: function(xhr, status, error) {
+                    console.log(xhr.responseText);
+                    alert('Error en la petición');
+                },
+            });
+        };
+    };
+
+    function pasar_informacion(pk, datos) {
+        var url = "{% url 'empresa:ajax_domicilio_afip' %}";
+        // console.log(datos);
+        jQuery.ajax({
+            url: url,
+            data: {pk: pk, datos: datos},
+            success: function(datos) {     
+                console.log('ajax_domicilio_afip: CORRECTO');
+            },
+            error: function(xhr, status, error) {
+                console.log(xhr.responseText);
+            },
+        });
+    };
+</script>
