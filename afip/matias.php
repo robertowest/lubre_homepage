@@ -137,8 +137,12 @@ header("Access-Control-Allow-Origin: *");
                         jQuery("#localidad").val(datos[0]['Localidad']);
                         jQuery("#codigo_postal").val(datos[0]['CodigoPostal']);
                         jQuery("#dni").val(datos[0]['DNI']);
-                        jQuery("#error").html(datos[0]['error']);
                         
+                        if (typeof datos[0]['error'] !== 'undefined') {
+                            jQuery("#error").html(datos[0]['error']);
+                            alert("Mensaje de AFIP \n\n" + datos[0]['error']);
+                        };
+
                         // jQuery("#cliente_bd").html(datos[0]);
                         console.log(datos[0]);
                     },

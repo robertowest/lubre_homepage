@@ -12,14 +12,21 @@
                 dataType: "json",
                 success: function(datos) {     
                     jQuery("#id_razon_social").val(datos[0]['RazonSocial']);
-                    // jQuery("#id_observacion").val(
-                    //     'Tipo: ' + datos[0]['TipoDomicilio'] + '\n' + 
-                    //     'Domicilio: ' + datos[0]['Domicilio'] + '\n' + 
-                    //     'Provincia: ' + datos[0]['Provincia'] + '\n' + 
-                    //     'Localidad: ' + datos[0]['Localidad'] + '\n' + 
-                    //     'CP: ' + datos[0]['CodigoPostal']
-                    // );
-                    pasar_informacion(pk, JSON.stringify(datos));
+                    jQuery("#id_observacion").val(
+                        'Domicilio: ' + datos[0]['TipoDomicilio'] + '\n' + 
+                        'Calle: '     + datos[0]['Domicilio'] + '\n' + 
+                        'Provincia: ' + datos[0]['Provincia'] + '\n' + 
+                        'Localidad: ' + datos[0]['Localidad'] + '\n' + 
+                        'CP: '        + datos[0]['CodigoPostal'] + '\n' + '\n' + 
+                        jQuery("#id_observacion").val()
+                    );
+                    if (typeof datos[0]['error'] !== 'undefined') {
+                        alert("Mensaje de AFIP \n\n" + datos[0]['error']);
+                    };
+                    // pasamos la información para crear la dirección
+                    // else {
+                    //     pasar_informacion(pk, JSON.stringify(datos));
+                    // };                    
                 },
                 error: function(xhr, status, error) {
                     console.log(xhr.responseText);
