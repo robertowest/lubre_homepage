@@ -1,9 +1,13 @@
 #!/home/roberto/miniconda3/envs/lubresrl/bin/python
 
 import os, sys
-# sys.path.append('/var/www/lubresrl.com.ar/')
-# os.environ['DJANGO_SETTINGS_MODULE'] = 'config.custom'
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.custom')
+
+FILE = os.path.abspath(__file__)
+BASE_DIR = os.path.dirname(os.path.dirname(FILE))
+
+sys.path.append(BASE_DIR)     # '/var/www/lubresrl.com.ar/'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'config.custom'
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.custom')
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()

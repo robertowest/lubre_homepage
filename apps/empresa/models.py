@@ -88,7 +88,7 @@ class Actividad(CommonStruct):
 
 class Empresa(CommonStruct):
     nombre = models.CharField('Nombre de Fantasía', max_length=60)
-    razon_social = models.CharField('Razón Social', max_length=60, unique=True)
+    razon_social = models.CharField('Razón Social', max_length=100, unique=True)
     cuit = models.CharField('CUIT/CUIL', max_length=13, unique=True, null=True, blank=True)
     # limit_choices_to={'active': True}
     comercial = models.ForeignKey(Comercial, on_delete=models.CASCADE, null=True, blank=True)
