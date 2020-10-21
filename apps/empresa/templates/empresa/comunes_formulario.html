@@ -5,28 +5,31 @@
             var pk = $("#pk").val();
             var cuit = $("#id_cuit").val();
 
+            // comprobar CUIT
+            // http://192.168.1.2/afip/matias.php
+
             jQuery.ajax({
                 url: 'http://192.168.1.9/nlp/buscar_cliente_afip.php',
                 type: "POST",
                 data: "cuit="+cuit,
                 dataType: "json",
                 success: function(datos) {     
-                    jQuery("#id_razon_social").val(datos[0]['RazonSocial']);
-                    jQuery("#id_observacion").val(
-                        'Domicilio: ' + datos[0]['TipoDomicilio'] + '\n' + 
-                        'Calle: '     + datos[0]['Domicilio'] + '\n' + 
-                        'Provincia: ' + datos[0]['Provincia'] + '\n' + 
-                        'Localidad: ' + datos[0]['Localidad'] + '\n' + 
-                        'CP: '        + datos[0]['CodigoPostal'] + '\n' + '\n' + 
-                        jQuery("#id_observacion").val()
-                    );
                     if (typeof datos[0]['error'] !== 'undefined') {
                         alert("Mensaje de AFIP \n\n" + datos[0]['error']);
+                    }
+                    else {
+                        jQuery("#id_razon_social").val(datos[0]['RazonSocial']);
+                        jQuery("#id_observacion").val(
+                            'Domicilio: ' + datos[0]['TipoDomicilio'] + '\n' + 
+                            'Calle: '     + datos[0]['Domicilio'] + '\n' + 
+                            'Provincia: ' + datos[0]['Provincia'] + '\n' + 
+                            'Localidad: ' + datos[0]['Localidad'] + '\n' + 
+                            'CP: '        + datos[0]['CodigoPostal'] + '\n' + '\n' + 
+                            jQuery("#id_observacion").val()
+                        );
+                        // pasamos la información para crear la dirección
+                        // pasar_informacion(pk, JSON.stringify(datos));
                     };
-                    // pasamos la información para crear la dirección
-                    // else {
-                    //     pasar_informacion(pk, JSON.stringify(datos));
-                    // };                    
                 },
                 error: function(xhr, status, error) {
                     console.log(xhr.responseText);

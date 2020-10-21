@@ -108,6 +108,7 @@ INSTALLED_APPS += [
     'django_filters',
     'django_tables2',
     'bootstrap3',
+    'django_afip',
 
     # homepage -----------------------------
     'apps.homepage',
@@ -125,6 +126,8 @@ INSTALLED_APPS += [
 
     # eess ---------------------------------
     'apps.eess',
+
+    'apps.afip_test',
 
     # background ---------------------------
     'ORM',

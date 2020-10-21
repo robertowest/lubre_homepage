@@ -200,13 +200,13 @@ class Diccionario(CommonStruct):
 
 
 class Domicilio(CommonStruct):
-    TIPO = (('avda', 'Avenida'), ('barrio', 'Barrio'), ('calle', 'Calle'),
-            ('gps', 'Geo Posicionamiento'), ('pje', 'Pasaje'), ('ruta', 'Ruta'))
+    TIPO_CALLE = (('avda', 'Avenida'), ('barrio', 'Barrio'), ('calle', 'Calle'),
+                  ('gps', 'Geo Posicionamiento'), ('pje', 'Pasaje'), ('ruta', 'Ruta'))
 
     tipo = models.ForeignKey(Diccionario, on_delete=models.CASCADE,
                              null=True, blank=True, default=1,
                              limit_choices_to={'tabla': 'domicilio', 'active': True})
-    tipo_calle = models.CharField(max_length=6, choices=TIPO, default='calle')
+    tipo_calle = models.CharField(max_length=6, choices=TIPO_CALLE, default='calle')
     nombre = models.CharField(max_length=80, null=True, blank=True)
     numero = models.IntegerField('Número', null=True, blank=True)
     piso = models.CharField(max_length=2, null=True, blank=True)

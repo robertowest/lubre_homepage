@@ -98,9 +98,9 @@ def actions_allowed_empresa():
 
 class EmpresaTable(tables.Table):
     # id = tables.Column(orderable=False)
-    # nombre = tables.Column(orderable=False)
+    nombre = tables.Column()
     # razon_social = tables.LinkColumn('empresa:update', args=[A('pk')], orderable=True)
-    razon_social = tables.Column()
+    # razon_social = tables.Column()
     cuit = tables.Column(orderable=False)
     # comercial = tables.Column(orderable=False)
     # actividad = tables.Column(orderable=False)
@@ -113,8 +113,8 @@ class EmpresaTable(tables.Table):
     class Meta:
         model = Empresa
         attrs = {"class": "table table-hover"}    # table-striped 
-        fields = ['razon_social', 'cuit', 'modified', 'active']
-        # sequence = ['razon_social', 'cuit', 'comercial', 'actividad', 'active']
+        fields = ['nombre', 'cuit', 'modified', 'active']
+        # sequence = ['nombre', 'cuit', 'comercial', 'actividad', 'active']
         empty_text = "No hay datos que satisfaga los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"
         per_page = 20

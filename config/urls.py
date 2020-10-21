@@ -53,6 +53,9 @@ urlpatterns = [
     # estación de servicios -----------------------------------------------------------
     # path('media/estacion/eess_cafeteria.pdf', include('apps.eess.urlsPDF')),
     path('eess/', include('apps.eess.urls')),
+
+    # afip ---------------------------------------------------------------------------
+    path('afip/', include('apps.afip_test.urls')),
 ]
 
 

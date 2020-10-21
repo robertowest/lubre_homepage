@@ -5,14 +5,17 @@ class Clientes(models.Model):
     idcliente = models.IntegerField(primary_key=True)
     cuit = models.CharField(max_length=13, blank=True, null=True)
 
-    # idactividad = models.ForeignKey(Actividades, models.DO_NOTHING, db_column='idactividad')
-    idactividad = models.IntegerField()
+    idactividad = models.IntegerField(blank=True, null=True)
+    idcalifica = models.IntegerField(blank=True, null=True)
+    idestadocliente = models.IntegerField(blank=True, null=True)
 
-    # idcalifica = models.ForeignKey(Califica, models.DO_NOTHING, db_column='idcalifica')
-    idcalifica = models.IntegerField()
-
-    # idestadocliente = models.ForeignKey('Estadocliente', models.DO_NOTHING, db_column='idestadocliente')
-    idestadocliente = models.IntegerField()
+    idformacobro = models.IntegerField(blank=True, null=True)
+    idlista = models.IntegerField(blank=True, null=True)
+    idtipimun = models.CharField(max_length=1, blank=True, null=True)
+    idtipodoc = models.IntegerField(blank=True, null=True)
+    idtipoingbruto = models.CharField(max_length=1, blank=True, null=True)
+    idtipoiva = models.CharField(max_length=1, blank=True, null=True)
+    iva = models.CharField(max_length=1, blank=True, null=True)
 
     nombre = models.CharField(max_length=60, blank=True, null=True)
     fantasia = models.CharField(max_length=60, blank=True, null=True)

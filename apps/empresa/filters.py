@@ -35,7 +35,7 @@ class ComercialFilter(FilterSet):
 
 
 class EmpresaFilter(FilterSet):
-    nombre = CharFilter(label='Nombre', lookup_expr='icontains')
+    nombre = CharFilter(label='Nombre de Fantasía', lookup_expr='icontains')
     razon_social = CharFilter(label='Razón Social', lookup_expr='icontains')
     cuit = CharFilter(label='C.U.I.T.', lookup_expr='icontains')
     comercial = ModelChoiceFilter(queryset=Comercial.objects.all())  # filter(active=True)

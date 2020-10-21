@@ -84,6 +84,8 @@ class EmpresaCreateView(PermissionRequiredMixin, generic.CreateView):
 
     def form_valid(self, form):
         response = super().form_valid(form)
+        self.object.nombre = self.object.nombre.title()
+        self.object.razon_social = self.object.razon_social.title()
         self.object.impactar = True
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
@@ -121,12 +123,17 @@ class EmpresaUpdateView(PermissionRequiredMixin, generic.UpdateView):
     #     return reverse_lazy('{app}:detail'.format(app=name), args=(self.object.pk,))
 
     def form_valid(self, form):
-        response = super().form_valid(form)
+        self.object.nombre = self.normalizar_nombre(self.object.nombre)
+        self.object.razon_social = self.normalizar_nombre(self.object.razon_social)
         self.object.impactar = True
+        response = super().form_valid(form)
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
         return response
+
+    def normalizar_nombre(self, texto):
+        return texto.title()
 
 
 class EmpresaDeleteView(PermissionRequiredMixin, generic.DeleteView):
