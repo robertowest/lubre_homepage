@@ -38,40 +38,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
-    'development': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'admin_desarrollo',
-        'HOST': '190.105.227.83',  # LatinCloud
-        'PORT': '3306',
-        'USER': 'admin_roberto',
-        'PASSWORD': 'roberto',
-    },
-    'test': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lubresrl_dj',
-        'HOST': '172.17.0.2',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': 'roberto',
-    },
-    'production': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'homepage_dj',
-        'HOST': '190.105.227.83',
-        'PORT': '3306',
-        'USER': 'django',
-        'PASSWORD': 'django',
-    },
-    'firebird': {
-        # lubresrl.dyndns.org:4310
-        'ENGINE': 'django.db.backends.firebird',
-        'NAME': 'P:\\PRUEBA\\DATOS\\GESTION.FDB',
-        'USER': 'SYSDBA',
-        'PASSWORD': 'masterkey',
-        'HOST': 'lubresrl.dyndns.org',
-        'PORT': '3050',
-        'OPTIONS': {'charset': 'ISO8859_1'}
-    },
+    'development': {},
+    'test': {},
+    'production': {},
+    'firebird': {},
 }
 # esta definición funciona bien pero no funciona con migrate o makemigrations
 if ENV == 'PROD':

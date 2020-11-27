@@ -12,8 +12,8 @@ def Equivalencia(request):
         # tipoId = request.POST['tipo']
         prodId = request.POST['producto']
         sql = 'SELECT a.id, a.producto, a.marca, a.tipo, b.producto equivalencia, b.marca equivalencia_marca ' +\
-              'FROM equivalencia_equivalencia a ' +\
-              'INNER JOIN equivalencia_equivalencia b ON b.id = a.parent_id ' +\
+              'FROM equivalencia a ' +\
+              'INNER JOIN equivalencia b ON b.id = a.parent_id ' +\
               'WHERE a.id = {0}'
         ypf = models.Equivalencia.objects.raw(sql.format(prodId))[0]
 

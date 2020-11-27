@@ -2,6 +2,12 @@ from django.db import models
 from django.urls import reverse
 from datetime import datetime
 
+from django_currentuser.middleware import get_current_user, get_current_authenticated_user
+
+# como campo de un modelo (ForeignKey)
+# from django_currentuser.db.models import CurrentUserField
+# class CommonStruct(models.Model):
+#    created_by = CurrentUserField()
 
 class CommonStruct(models.Model):
     active = models.BooleanField('Activo', default=True, null=False, blank=False)
@@ -16,8 +22,11 @@ class CommonStruct(models.Model):
         abstract = True
 
     def save(self, *args, **kwargs):
-        self.modified = datetime.now()
-        # self.modified_by = request.user.username
+        if self._state.adding:
+            self.created_by = get_current_user().username
+        else:
+            self.modified = datetime.now()
+            self.modified_by = get_current_user().username
         super(CommonStruct, self).save(*args, **kwargs)
 
     def delete(self):

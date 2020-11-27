@@ -27,12 +27,12 @@ def test_send_mail_template(request):
                         'mails/ejemplo.html',
                         {
                             # config
-                            'logo_url': 'http://lubresrl.com.ar/static/faviicon.png',
+                            'logo_url': 'https://lubresrl.com.ar/static/faviicon.png',
                             'footer_content': '<p>Ruta 9 km 1306 - T4101 Los Nogales - Tucuman, Argentina</p>',
                             'facebook_url': 'https://www.facebook.com/lubresrl.ypfagro/',
                             'twitter_url': 'https://ar.linkedin.com/company/lubre-srl',
                             'instagram_url': 'https://www.instagram.com/lubresrl.ypfagro/',
-                            'website_url': 'http://lubresrl.com.ar',
+                            'website_url': 'https://lubresrl.com.ar',
                             # css
                             'color_header_bg': '#f7f7f7',
                             'color_title': '#222222',
@@ -51,8 +51,8 @@ def test_send_mail_template(request):
                             'subject': subject,
                             'title': 'Título',
                             'body': message,
-                            'banner_url': 'http://lubresrl.com.ar/static/img/ypf_agro.png',
-                            'button_link': 'http://lubresrl.com.ar/',
+                            'banner_url': 'https://lubresrl.com.ar/static/img/ypf_agro.png',
+                            'button_link': 'https://lubresrl.com.ar/',
                             'button_label': 'Lubre SRL',
                             # custom
                             'user_name': 'Usuario',     # User.username,

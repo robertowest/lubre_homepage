@@ -1,3 +1,5 @@
+{% load static %}
+
 {% block subject %}
   Correo para {{username}}
 {% endblock %}
@@ -12,7 +14,7 @@
               <tbody>
                 <tr>
                   <td align="center" bgcolor="#70bbd9" style="padding: 40px 0 30px 0;">
-                    <img src="http://lubresrl.com.ar/static/img/templated_email/lubre.png" style="display:block">
+                    <img src="{% static 'img/templated_email/lubre.png' %}" style="display:block">
                   </td>
                 </tr>
                 <tr>
@@ -39,7 +41,7 @@
                                       <tbody>
                                         <tr>
                                           <td>
-                                            <img src="http://lubresrl.com.ar/static/img/templated_email/left.gif?raw=true" alt="" width="100%" height="140" style="display:block" class="CToWUd">
+                                            <img src="{% static 'img/templated_email/left.gif?raw=true' %}" alt="" width="100%" height="140" style="display:block" class="CToWUd">
                                           </td>
                                         </tr>
                                         <tr>
@@ -58,7 +60,7 @@
                                       <tbody>
                                         <tr>
                                           <td>
-                                            <img src="http://lubresrl.com.ar/static/img/templated_email/right.gif?raw=true" alt="" width="100%" height="140" style="display:block" class="CToWUd">
+                                            <img src="{% static 'img/templated_email/right.gif?raw=true' %}" alt="" width="100%" height="140" style="display:block" class="CToWUd">
                                           </td>
                                         </tr>
                                         <tr>
@@ -93,17 +95,17 @@
                                 <tr>
                                   <td style="font-family:Arial,sans-serif;font-size:12px;font-weight:bold">
                                     <a href="https://www.facebook.com/lubresrl.ypfagro/" style="color:#ffffff" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.facebook.com/lubresrl.ypfagro/&amp;source=gmail&amp;ust=1591469394941000&amp;usg=AFQjCNFE5nEhE1HgqrqHIMCuWC0pfOZ2KA">
-                                    <img src="http://lubresrl.com.ar/static/img/templated_email/social-facebook.svg" alt="Facebook" width="38" height="38" style="display:block" border="0" class="CToWUd">
+                                    <img src="{% static 'img/templated_email/social-facebook.svg' %}" alt="Facebook" width="38" height="38" style="display:block" border="0" class="CToWUd">
                                     </a>
                                   </td>
                                   <td style="font-family:Arial,sans-serif;font-size:12px;font-weight:bold;padding:0 5px 0 5px;">
                                     <a href="https://www.instagram.com/lubresrl.ypfagro/" style="color:#ffffff" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.instagram.com/lubresrl.ypfagro/&amp;source=gmail&amp;ust=1591469394941000&amp;usg=AFQjCNHZH3hG_IQz4gXeZzCR_IOml8ZNQA">
-                                    <img src="http://lubresrl.com.ar/static/img/templated_email/social-instagram.svg" alt="Instagram" width="38" height="38" style="display:block" border="0" class="CToWUd">
+                                    <img src="{% static 'img/templated_email/social-instagram.svg' %}" alt="Instagram" width="38" height="38" style="display:block" border="0" class="CToWUd">
                                     </a>
                                   </td>
                                   <td style="font-family:Arial,sans-serif;font-size:12px;font-weight:bold">
                                     <a href="https://ar.linkedin.com/company/lubre-srl" style="color:#ffffff" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://ar.linkedin.com/company/lubre-srl&amp;source=gmail&amp;ust=1591469394941000&amp;usg=AFQjCNGNRZ-tga8yt5anWpPOHyLOmzB6Pw">
-                                    <img src="http://lubresrl.com.ar/static/img/templated_email/social-linkedin.svg" alt="Instagram" width="38" height="38" style="display:block" border="0" class="CToWUd">
+                                    <img src="{% static 'img/templated_email/social-linkedin.svg' %}" alt="Instagram" width="38" height="38" style="display:block" border="0" class="CToWUd">
                                     </a>
                                   </td>
                                   <td style="font-size:0;line-height:0" width="20">&nbsp;</td>
