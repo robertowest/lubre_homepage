@@ -10,4 +10,12 @@ urlpatterns = [
     path('cartilla/cafeteria/', views.CafeteriaTemplateView.as_view(), name='cafeteria'),
     path('cartilla/combos/', views.CombosTemplateView.as_view(), name='combos'),
     path('cartilla/kiosko/', views.KioskoTemplateView.as_view(), name='kiosko'),
+
+    # carrito -----------------------------------------------------------------
+    path('carrito/agregar/<int:id>/', views.cart_add, name='cart_add'),
+    path('carrito/quitar_item/<int:id>/', views.item_clear, name='item_clear'),
+    path('carrito/sumar_item/<int:id>/', views.item_increment, name='item_increment'),
+    path('carrito/restar_item/<int:id>/', views.item_decrement, name='item_decrement'),
+    path('carrito/limpiar/', views.cart_clear, name='cart_clear'),
+    path('carrito/detalle/',views.cart_detail,name='cart_detail'),
 ]

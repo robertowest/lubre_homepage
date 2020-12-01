@@ -76,6 +76,12 @@ TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, "templates"),]
 
 
 # -------------------------------------------------------------------
+# agregamos un context_processors propio
+# -------------------------------------------------------------------
+TEMPLATES[0]['OPTIONS']['context_processors'].append('apps.homepage.contexts.appname')
+
+
+# -------------------------------------------------------------------
 # archivos estáticos
 # -------------------------------------------------------------------
 if DEBUG:
@@ -143,6 +149,13 @@ TEMPLATED_EMAIL_FILE_EXTENSION = 'email'
 
 
 # -------------------------------------------------------------------
+# configuración para social-auth-app-django
+# -------------------------------------------------------------------
+TEMPLATES[0]['OPTIONS']['context_processors'].append('social_django.context_processors.backends')
+TEMPLATES[0]['OPTIONS']['context_processors'].append('social_django.context_processors.login_redirect')
+
+
+# -------------------------------------------------------------------
 # configuración para django-social-auth
 # -------------------------------------------------------------------
 AUTHENTICATION_BACKENDS = [
@@ -165,8 +178,15 @@ SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {'fields': 'id, name, email, picture
 SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [('name', 'name'), ('email', 'email'), ('picture', 'picture'), ('link', 'profile_url'),]
 
 
+# -------------------------------------------------------------------
+# Color de fondo para los mensajes de error
+# -------------------------------------------------------------------
 from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {messages.ERROR: 'danger'}
 
-MESSAGE_TAGS = {
-    messages.ERROR: 'danger'
-}
+
+# -------------------------------------------------------------------
+# configuración para django-shopping-cart
+# -------------------------------------------------------------------
+TEMPLATES[0]['OPTIONS']['context_processors'].append('cart.context_processor.cart_total_amount')
+CART_SESSION_ID = 'cart'

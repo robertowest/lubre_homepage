@@ -55,3 +55,60 @@ class KioskoTemplateView(generic.TemplateView):
         ]
         context['object_list'] = object_list
         return context
+
+
+
+
+# -------------------------------------------------------------------
+# URL's para el carrito de compras
+# -------------------------------------------------------------------
+
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
+
+from cart.cart import Cart
+
+
+@login_required(login_url='/accounts/login/')
+def cart_add(request, id):
+    cart = Cart(request)
+    product = models.Cartilla.objects.get(id=id)
+    cart.add(product=product)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', 'cartilla/'))
+
+
+@login_required(login_url="/accounts/login/")
+def item_clear(request, id):
+    cart = Cart(request)
+    product = models.Cartilla.objects.get(id=id)
+    cart.remove(product)
+    return redirect("eess:cart_detail")
+
+
+@login_required(login_url="/accounts/login/")
+def item_increment(request, id):
+    cart = Cart(request)
+    product = models.Cartilla.objects.get(id=id)
+    cart.add(product=product)
+    return redirect("eess:cart_detail")
+
+
+@login_required(login_url="/accounts/login/")
+def item_decrement(request, id):
+    cart = Cart(request)
+    product = models.Cartilla.objects.get(id=id)
+    cart.decrement(product=product)
+    return redirect("eess:cart_detail")
+
+
+@login_required(login_url="/accounts/login/")
+def cart_clear(request):
+    cart = Cart(request)
+    cart.clear()
+    return redirect("eess:cart_detail")
+
+
+@login_required(login_url="/accounts/login/")
+def cart_detail(request):
+    return render(request, 'cartilla/carrito.html')

@@ -55,3 +55,16 @@ class Cartilla(CommonStruct):
 
     def __str__(self):
         return self.nombre
+
+    # propiedades para poder utilizar carrito de compra
+    @property
+    def name(self):
+        return self.nombre
+
+    @property
+    def image(self):
+        return self.imagen
+
+    @property
+    def price(self):
+        return self.precio

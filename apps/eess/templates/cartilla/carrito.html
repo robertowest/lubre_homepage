@@ -1,0 +1,70 @@
+{% extends 'cartilla/base.html' %}
+
+{% load static %}
+{% load cart_tag %}
+
+
+{% block style %}
+    <link href="{% static 'css/carrito.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-dark text-light">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                Carrito de Compras
+                <a href="{% url 'eess:index' %}" class="btn btn-outline-info btn-sm pull-right">Continuar comprando</a>
+                <div class="clearfix"></div>
+            </div>
+            <div class="card-body">
+                {% for key,value in request.session.cart.items %}
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-2 text-center">
+                        <img class="img-responsive" src="{{value.image}}" alt="prewiew" width="120" height="80">
+                    </div>
+                    <div class="col-12 col-sm-12 text-sm-center col-md-8 text-md-left">
+                        <h4 class="product-name"><strong>{{value.name}}</strong></h4>
+                        <h4><small>{{value.price}} x {{value.quantity}} = <strong>{{ value.price|multiply:value.quantity }}</strong></small></h4>
+                    </div>
+                    <div class="col-12 col-sm-12 text-sm-center col-md-2 text-md-right row">
+                        <!--
+                        <div class="col-6 col-sm-4 col-md-6">
+                            <h6>{{value.price}} x {{value.quantity}} = <strong>{{ value.price|multiply:value.quantity }}</strong></h6>
+                        </div>
+                        -->
+                        <div class="col-6">
+                            <a href="{% url 'eess:item_increment' value.product_id %}" class="btn btn-xs">
+                                <span class="fa fa-plus"></span>
+                            </a>
+                            <a href="{% url 'eess:item_decrement' value.product_id %}" class="btn btn-xs">
+                                <span class="fa fa-minus"></span>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="{% url 'eess:item_clear' value.product_id %}" class="btn btn-xs btn-outline-danger">
+                                <span class="fa fa-trash"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                {% endfor %}
+                <div class="pull-right" style="margin: 5px">
+                    <div class="col-12">
+                        <h4 class="text-right">Total :<strong>$ {{cart_total_amount}}</strong></h4>
+                    </div>                                                            
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="pull-left" style="margin: 10px">
+                    <a href="{% url 'eess:cart_clear' %}" class="btn btn-danger pull-right">Limpiar</a>
+                </div>
+                <div class="pull-right" style="margin: 10px">
+                    <a href="" class="btn btn-success pull-right">Confirmar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

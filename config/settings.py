@@ -67,11 +67,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                # social-auth-app-django
-                'social_django.context_processors.backends',
-                'social_django.context_processors.login_redirect',
-                # propio
-                'apps.homepage.contexts.appname',
             ],
         },
     },
@@ -110,6 +105,7 @@ INSTALLED_APPS += [
     'django_tables2',
     'bootstrap3',
     'django_afip',
+    'cart',
 
     # homepage -----------------------------
     'apps.homepage',
