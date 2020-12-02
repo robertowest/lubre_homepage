@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render, reverse
 from django.utils.http import is_safe_url
 from django.views import generic
+from django.views.generic.base import RedirectView
 
 from apps.comunes.functions import redirect_to, redirect_to_with_next, get_url_referer
 from . import models
@@ -70,7 +71,7 @@ from cart.cart import Cart
 
 # @login_required(login_url="/accounts/login/")
 def cart_detail(request):
-    return render(request, 'cartilla/carrito.html', {'next': get_url_referer(request)})
+    return render(request, 'cartilla/carrito.html', {'next': get_url_referer(request, 'eess:index')})
 
 
 # @login_required(login_url='/accounts/login/')

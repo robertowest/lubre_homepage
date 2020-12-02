@@ -15,10 +15,16 @@
             <div class="card-header bg-dark text-light">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 Carrito de Compras
-                {% if not next %}
-                    {% url 'eess:index' as next %}
+
+                {% if request.GET.next %}
+                    <a href="{{request.GET.next}}" class="btn btn-outline-info btn-sm pull-right">
+                {% elif next %}
+                    <a href="{{next}}" class="btn btn-outline-info btn-sm pull-right">
+                {% else %}
+                    <a href="{% url 'eess:index' %}" class="btn btn-outline-info btn-sm pull-right">
                 {% endif %}
-                <a href="{{next}}" class="btn btn-outline-info btn-sm pull-right">Continuar comprando</a>
+                Continuar comprando</a>
+
                 <div class="clearfix"></div>
             </div>
             <div class="card-body">

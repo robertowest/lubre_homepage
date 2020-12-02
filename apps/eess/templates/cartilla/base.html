@@ -64,25 +64,16 @@
 
         <main role="main">
 <table>
-    <tr>
-        <td>URL</td>
-        <td>{{ request.build_absolute_uri }}</td>
-    </tr>
-    <tr>
-        <td>PATH</td>
-        <td>{{ request.path|urlencode }}</td>
-    </tr>
-    <tr>
-        <td>REFERER</td>
-        <td>{{ request.META.HTTP_REFERER }}</td>
-    </tr>
-    <tr>
-        <td>NEXT PARAM</td>
-        <td>{{ next }}</td>
-    </tr>
-    <tr>
-        <td>NEXT</td>
-        <td>{{ request.GET.next }}</td>
+    <tr><td>URL</td><td>{{ request.build_absolute_uri }}</td></tr>
+    <tr><td>PATH</td><td>{{ request.path|urlencode }}</td></tr>
+    <!-- <tr><td>REFERER</td><td>{{ request.META.HTTP_REFERER }}</td></tr> -->
+    <tr><td>NEXT PARAM</td><td>{{ next }}</td></tr>
+    <tr><td>NEXT</td><td>{{ request.GET.next }}</td></tr>
+    <tr><td>firstof</td>
+        <td>
+            {% url 'eess:index' as reverse_url %}
+            {% firstof request.GET.next next reverse_url %}
+        </td>
     </tr>
 </table>
 

@@ -33,19 +33,22 @@ def redirect_to(request, reverse_url, type="GET"):
     return redirect(redirect_to)
 
 
-def redirect_with_params(request, to, *args, **kwargs):
-def redirect_to_with_next(request, reverse_url, type="GET", *args, **kwargs):
+def redirect_to_with_next(request, reverse_url, type="GET"):
     # si existe la directiva "next", la recupera pa volver a pasarla como parámetro a "reverse_url"
     if (type == "GET"):
         redirect_to = request.GET.get('next')
     else:
         redirect_to = request.POST.get('next')
 
-    # return HttpResponseRedirect(reverse(reverse_url, kwargs={'next': redirect_to}))
-    return render()
+    if redirect_to:
+        redirect_to = reverse(reverse_url) + "?next=" + redirect_to
+    else:
+        redirect_to = reverse(reverse_url)
+
+    return redirect(redirect_to)
 
 
-def get_url_referer(request):
+def get_url_referer(request, reverse_url):
     remove = request._current_scheme_host
-    referer = request.META['HTTP_REFERER']
+    referer = request.META.get('HTTP_REFERER', reverse(reverse_url))
     return referer.replace(remove, '')
