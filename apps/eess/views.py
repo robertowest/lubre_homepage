@@ -71,7 +71,7 @@ from cart.cart import Cart
 
 # @login_required(login_url="/accounts/login/")
 def cart_detail(request):
-    return render(request, 'cartilla/carrito.html', {'next': get_url_referer(request, 'eess:index')})
+    return render(request, 'carrito/carrito.html', {'next': get_url_referer(request, 'eess:index')})
 
 
 # @login_required(login_url='/accounts/login/')
@@ -113,3 +113,8 @@ def item_clear(request, id):
     product = models.Cartilla.objects.get(id=id)
     cart.remove(product)
     return redirect_to_with_next(request, 'eess:cart_detail')
+
+
+# @login_required(login_url="/accounts/login/")
+def cart_checkout(request):
+    return render(request, 'carrito/carrito_confirmar.html', {'next': reverse('eess:index')})

@@ -50,5 +50,8 @@ def redirect_to_with_next(request, reverse_url, type="GET"):
 
 def get_url_referer(request, reverse_url):
     remove = request._current_scheme_host
-    referer = request.META.get('HTTP_REFERER', reverse(reverse_url))
+    if request.GET.get('next'):
+        referer = request.GET.get('next')
+    else:
+        referer = request.META.get('HTTP_REFERER', reverse(reverse_url))
     return referer.replace(remove, '')

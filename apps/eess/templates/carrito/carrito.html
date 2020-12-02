@@ -16,13 +16,8 @@
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 Carrito de Compras
 
-                {% if request.GET.next %}
-                    <a href="{{request.GET.next}}" class="btn btn-outline-info btn-sm pull-right">
-                {% elif next %}
-                    <a href="{{next}}" class="btn btn-outline-info btn-sm pull-right">
-                {% else %}
-                    <a href="{% url 'eess:index' %}" class="btn btn-outline-info btn-sm pull-right">
-                {% endif %}
+                {% url 'eess:index' as reverse_url %}
+                <a href="{% firstof request.GET.next next reverse_url %}" class="btn btn-outline-info btn-sm pull-right">
                 Continuar comprando</a>
 
                 <div class="clearfix"></div>
@@ -71,7 +66,7 @@
                     <a href="{% url 'eess:cart_clear' %}?next={{next}}" class="btn btn-danger pull-right">Limpiar</a>
                 </div>
                 <div class="pull-right" style="margin: 10px">
-                    <a href="" class="btn btn-success pull-right">Confirmar</a>
+                    <a href="{% url 'eess:cart_checkout' %}" class="btn btn-success pull-right">Confirmar</a>
                 </div>
             </div>
         </div>
