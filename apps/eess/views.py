@@ -118,3 +118,7 @@ def item_clear(request, id):
 # @login_required(login_url="/accounts/login/")
 def cart_checkout(request):
     return render(request, 'carrito/carrito_confirmar.html', {'next': reverse('eess:index')})
+
+
+def cart_confirm(request):
+    pass
