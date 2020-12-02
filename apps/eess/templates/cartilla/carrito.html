@@ -15,9 +15,9 @@
             <div class="card-header bg-dark text-light">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 Carrito de Compras
-                {% if not next or not next.strip %}
+                {% if not next %}
                     {% url 'eess:index' as next %}
-                {% endif %}                
+                {% endif %}
                 <a href="{{next}}" class="btn btn-outline-info btn-sm pull-right">Continuar comprando</a>
                 <div class="clearfix"></div>
             </div>
@@ -38,15 +38,15 @@
                         </div>
                         -->
                         <div class="col-6">
-                            <a href="{% url 'eess:item_increment' value.product_id %}" class="btn btn-xs">
+                            <a href="{% url 'eess:item_increment' value.product_id %}?next={{next}}" class="btn btn-xs">
                                 <span class="fa fa-plus"></span>
                             </a>
-                            <a href="{% url 'eess:item_decrement' value.product_id %}" class="btn btn-xs">
+                            <a href="{% url 'eess:item_decrement' value.product_id %}?next={{next}}" class="btn btn-xs">
                                 <span class="fa fa-minus"></span>
                             </a>
                         </div>
                         <div class="col-6">
-                            <a href="{% url 'eess:item_clear' value.product_id %}" class="btn btn-xs btn-outline-danger">
+                            <a href="{% url 'eess:item_clear' value.product_id %}?next={{next}}" class="btn btn-xs btn-outline-danger">
                                 <span class="fa fa-trash"></span>
                             </a>
                         </div>
@@ -62,7 +62,7 @@
             </div>
             <div class="card-footer">
                 <div class="pull-left" style="margin: 10px">
-                    <a href="{% url 'eess:cart_clear' %}" class="btn btn-danger pull-right">Limpiar</a>
+                    <a href="{% url 'eess:cart_clear' %}?next={{next}}" class="btn btn-danger pull-right">Limpiar</a>
                 </div>
                 <div class="pull-right" style="margin: 10px">
                     <a href="" class="btn btn-success pull-right">Confirmar</a>

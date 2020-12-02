@@ -1,6 +1,9 @@
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect, render, reverse
+from django.utils.http import is_safe_url
 from django.views import generic
 
+from apps.comunes.functions import redirect_to, redirect_to_with_next, get_url_referer
 from . import models
 
 
@@ -62,12 +65,12 @@ class KioskoTemplateView(generic.TemplateView):
 # -------------------------------------------------------------------
 # URL's para el carrito de compras
 # -------------------------------------------------------------------
-
-from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
-from django.shortcuts import redirect
-
 from cart.cart import Cart
+
+
+# @login_required(login_url="/accounts/login/")
+def cart_detail(request):
+    return render(request, 'cartilla/carrito.html', {'next': get_url_referer(request)})
 
 
 # @login_required(login_url='/accounts/login/')
@@ -76,15 +79,15 @@ def cart_add(request, id):
     product = models.Cartilla.objects.get(id=id)
     cart.add(product=product)
     # return HttpResponseRedirect(request.META.get('HTTP_REFERER', 'cartilla/'))
-    return redirect("eess:cart_detail")
+    # return redirect("eess:cart_detail")
+    return redirect_to(request, 'eess:cart_detail')
 
 
 # @login_required(login_url="/accounts/login/")
-def item_clear(request, id):
+def cart_clear(request):
     cart = Cart(request)
-    product = models.Cartilla.objects.get(id=id)
-    cart.remove(product)
-    return redirect("eess:cart_detail")
+    cart.clear()
+    return redirect_to(request, 'eess:cart_detail')
 
 
 # @login_required(login_url="/accounts/login/")
@@ -92,7 +95,7 @@ def item_increment(request, id):
     cart = Cart(request)
     product = models.Cartilla.objects.get(id=id)
     cart.add(product=product)
-    return redirect("eess:cart_detail")
+    return redirect_to_with_next(request, 'eess:cart_detail')
 
 
 # @login_required(login_url="/accounts/login/")
@@ -100,16 +103,12 @@ def item_decrement(request, id):
     cart = Cart(request)
     product = models.Cartilla.objects.get(id=id)
     cart.decrement(product=product)
-    return redirect("eess:cart_detail")
+    return redirect_to_with_next(request, 'eess:cart_detail')
 
 
 # @login_required(login_url="/accounts/login/")
-def cart_clear(request):
+def item_clear(request, id):
     cart = Cart(request)
-    cart.clear()
-    return redirect("eess:cart_detail")
-
-
-# @login_required(login_url="/accounts/login/")
-def cart_detail(request):
-    return render(request, 'cartilla/carrito.html')
+    product = models.Cartilla.objects.get(id=id)
+    cart.remove(product)
+    return redirect_to_with_next(request, 'eess:cart_detail')
