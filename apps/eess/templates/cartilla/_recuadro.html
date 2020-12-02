@@ -8,7 +8,7 @@
 {% endcomment %}
 
 <div class="recuadro col-12 justify-content-center col-lg-4 col-md-6 col-sm-12">
-    <a style="text-decoration:none" href="{% url 'eess:cart_add' object.pk %}">
+    <a style="text-decoration:none" href="{% url 'eess:cart_add' object.pk %}?next={{request.path}}">
         <div class="card mb-4 shadow-sm" style="cursor: pointer;">
             <div class="card-header text-center">
                 <img src="{{ media_url }}{{ object.imagen.url }}" class="img-fluid" style="height: auto;">
