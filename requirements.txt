@@ -1,0 +1,24 @@
+# pip install "django>=2.1,<2.2"
+# 2.2.11
+wheel
+pillow
+
+python-decouple
+django-ckeditor
+django-mathfilters
+python-social-auth
+social-auth-app-django
+django-debug-toolbar
+django-crispy-forms
+django-templated-email
+django-next-prev
+fdb
+django-firebird==1.11
+# instalamos manualmente los driver 2.0 de firebird
+django-widget-tweaks
+django-tables2
+django-filter
+django-bootstrap3
+django-afip
+django-currentuser
+django-shopping-cart
