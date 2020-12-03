@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.db import IntegrityError, transaction
 from django.shortcuts import redirect, render, reverse
 from django.utils.http import is_safe_url
@@ -132,7 +133,7 @@ def cart_confirm(request):
             # creamos cabecera del pedido
             pedido = models.Pedido.create(codigo, identificador)
             pedido.items = len(cart.cart)
-            pedido.total = total_carrito(cart.cart)
+            pedido.total = __total_carrito(cart.cart)
             pedido.save()
             # creamos detalle del pedido
             for key,value in cart.cart.items():
@@ -144,7 +145,7 @@ def cart_confirm(request):
     return redirect('eess:index')
 
 
-def total_carrito(carrito):
+def __total_carrito(carrito):
     try:
         total = 0.0
         for key,value in carrito.items():
@@ -160,7 +161,7 @@ def total_carrito(carrito):
 # URL's para los pedidos realizados
 # -------------------------------------------------------------------
 
-class PedidoTemplateView(generic.TemplateView):
+class PedidoTemplateView(LoginRequiredMixin, generic.TemplateView):
     template_name = 'carrito/pedidos.html'
 
     def get_context_data(self, **kwargs):
@@ -170,6 +171,7 @@ class PedidoTemplateView(generic.TemplateView):
         return context
 
 
+@login_required(login_url="/accounts/login/")
 def pedido_cerrar(request, id):
     pedido = models.Pedido.objects.get(id=id)
     pedido.active = False
@@ -177,6 +179,7 @@ def pedido_cerrar(request, id):
     return redirect('eess:pedidos')
 
 
+@login_required(login_url="/accounts/login/")
 def pedido_borrar(request, id):
     pedido = models.Pedido.objects.get(id=id)
     pedido.anulado = True

@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime, timezone
+from dateutil.relativedelta import relativedelta
 
 from apps.comunes.models import CommonStruct
 
@@ -90,8 +91,25 @@ class Pedido(CommonStruct):
 
     @property
     def tiempo_transcurrido(self):
-        td = datetime.now(self.created.tzinfo) - self.created
-        return int((td.seconds // 60) % 60)  # minutos
+        # td = datetime.now(self.created.tzinfo) - self.created
+        # return int((td.seconds // 60) % 60)  # minutos
+
+        inicio = self.created
+        fin = datetime.now(self.created.tzinfo)
+        diff = relativedelta(fin, inicio)
+        msg = ""
+
+        # if diff.years > 0:
+        # if diff.months > 0:
+        # if diff.days > 0:
+        if diff.hours > 0:
+            msg = msg + str(diff.hours) + "h "
+        if diff.minutes > 0:
+            msg = msg + str(diff.minutes) + " minutos "
+        if diff.seconds > 0:
+            msg = msg + str(diff.seconds) + " segundos"
+        return msg
+
 
     @classmethod
     def create(self, codigo, identificador):
