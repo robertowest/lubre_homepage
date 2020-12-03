@@ -52,22 +52,22 @@ else:
     DATABASES['default'] = DATABASES['development']
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'desarrollo_dj',
-    #     'HOST': '192.168.1.2',  # lubre local
-    #     'PORT': '3306',
-    #     'USER': 'roberto',
-    #     'PASSWORD': 'roberto',
-    # },
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lubresrl_dj',
-        'HOST': '172.17.0.2',
+        'NAME': 'desarrollo_dj',
+        'HOST': '192.168.1.2',  # lubre local
         'PORT': '3306',
-        'USER': 'root',
+        'USER': 'roberto',
         'PASSWORD': 'roberto',
     },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'lubresrl_dj',
+    #     'HOST': '172.17.0.2',
+    #     'PORT': '3306',
+    #     'USER': 'root',
+    #     'PASSWORD': 'roberto',
+    # },
     'firebird': {
         # lubresrl.dyndns.org:4310
         'ENGINE': 'django.db.backends.firebird',

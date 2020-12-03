@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime, timezone
 
 from apps.comunes.models import CommonStruct
 
@@ -38,7 +39,7 @@ class Cartilla(CommonStruct):
 
     grupo = models.CharField(max_length=12, choices=GRUPO)
     nombre = models.CharField(max_length=50)
-    precio = models.DecimalField(max_digits=6, decimal_places=2)
+    precio = models.DecimalField(default=0.00, max_digits=10, decimal_places=2)
     descripcion = models.CharField(max_length=150)
     imagen = models.FileField(upload_to=upload_product_path_handler, blank=True, null=True)
 
@@ -68,3 +69,52 @@ class Cartilla(CommonStruct):
     @property
     def price(self):
         return self.precio
+
+
+class Pedido(CommonStruct):
+    # user = models.ForeignKey(User, null=True, blank=True, on_delete='CASCADE')
+    codigo = models.CharField(max_length=32)
+    identificador = models.CharField(max_length=50)
+    items = models.PositiveIntegerField(default=0)
+    total = models.DecimalField(default=0.00, max_digits=10, decimal_places=2)
+    anulado = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = 'cartilla_pedido'
+        verbose_name = 'Pedido'
+        verbose_name_plural = 'Pedidos'
+
+    def __str__(self):
+        texto = "Pedido {}: {} artículos en preparación."
+        return texto.format(self.codigo[0:5], self.items)
+
+    @property
+    def tiempo_transcurrido(self):
+        td = datetime.now(self.created.tzinfo) - self.created
+        return int((td.seconds // 60) % 60)  # minutos
+
+    @classmethod
+    def create(self, codigo, identificador):
+        pedido = self(codigo=codigo, identificador=identificador)
+        return pedido
+
+
+class PedidoItem(CommonStruct):
+    pedido = models.ForeignKey(Pedido, null=True, on_delete='CASCADE')
+    producto = models.ForeignKey(Cartilla, null=True, on_delete='CASCADE')
+    cantidad = models.PositiveIntegerField()
+    precio = models.DecimalField(default=0.00, max_digits=10, decimal_places=2)
+
+    class Meta:
+        db_table = 'cartilla_pedido_detalle'
+        verbose_name = 'Detalle de pedido'
+        verbose_name_plural = 'Detalle de pedidos'
+
+    def __str__(self):
+        return "{} - {} x ${} = ${}".format(self.producto.nombre, self.cantidad, self.producto.precio, self.cantidad * self.producto.precio)
+
+    @classmethod
+    def create(self, pedido, producto, cantidad, precio):
+        cartilla = Cartilla.objects.get(id=producto)
+        item = self(pedido=pedido, producto=cartilla, cantidad=cantidad, precio=cartilla.precio)
+        return item

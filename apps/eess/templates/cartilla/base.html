@@ -35,8 +35,15 @@
                             <ul class="list-unstyled">
                                 <li><a href="{% url 'eess:cafeteria' %}" class="text-white">Cafetería</a></li>
                                 <li><a href="{% url 'eess:combos' %}" class="text-white">Combos</a></li>
-                                <li><a href="{% url 'eess:kiosko' %}" class="text-white">Kiosko</a></li>
+                                <li><a href="{% url 'eess:kiosco' %}" class="text-white">Kiosco</a></li>
+
+                                {% if user.is_authenticated %}
+                                <hr class="border-top">
+                                <li><a href="{% url 'eess:pedidos' %}" class="text-white">Pedidos</a></li>
+                                {% endif %}
+
                                 {% if request.session.cart.items %}
+                                <hr class="border-top">
                                 <li><a href="{% url 'eess:cart_detail' %}" class="text-white">Carrito</a></li>
                                 {% endif %}
                             </ul>

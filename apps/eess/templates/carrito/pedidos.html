@@ -1,0 +1,52 @@
+{% extends 'cartilla/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-dark text-light">
+                Listado de pedidos pendientes
+            </div>
+            <div class="card-body">
+                
+                {% for object in object_list %}
+                    <div class="row">
+                        <div class="col-md-9 col-sm-6 col-xs-12">
+                            El pedido de <strong>{{object.identificador}}</strong> tiene {{object.items}} artículos en preparación.&nbsp;
+                            <strong>Total $ {{object.total}}</strong>&nbsp;&nbsp;>>>&nbsp;
+                            {{object.tiempo_transcurrido}} minutos transcurridos.&nbsp;&nbsp;
+                            <a data-toggle="collapse" href="#detalle{{object.pk}}" role="button" aria-expanded="false" aria-controls="detalle{{object.pk}}">
+                                ver
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <a href="{% url 'eess:pedido_borrar' object.pk %}" class="btn btn-danger pull-right">Borrar</a>
+                            <a href="{% url 'eess:pedido_cerrar' object.pk %}" class="btn btn-primary pull-right mr-2">Cerrar</a>
+                        </div>
+                        <div class="collapse" id="detalle{{object.pk}}" style="margin: 0 20px 0 20px">
+                            <div class="card card-body">
+                                {% for item in object.pedidoitem_set.all %}
+                                    <p><b>{{item.cantidad}}</b> {{item.producto.nombre}} - {{item.producto.descripcion}}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+<script>
+    // refresh/redirect after 5 seconds.
+    window.setTimeout(function () {
+        location.href = "/eess/pedidos/";
+    }, 10000);
+</script>
+{% endblock %}

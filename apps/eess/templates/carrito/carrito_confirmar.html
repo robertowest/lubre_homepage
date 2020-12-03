@@ -53,11 +53,12 @@
             </div>
             <div class="col-md-8 order-md-1">
                 <h4 class="mb-3">Será llamado por ...</h4>
-                <form class="needs-validation" novalidate>
+                <form action="{% url 'eess:cart_confirm' %}" method="post" class="needs-validation" novalidate>
+                    {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="firstName">Nombre</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required />
+                            <input type="text" class="form-control" name="firstName" placeholder="" value="" required />
                             <div class="invalid-feedback">
                                 Necesita una denominación para reconocer su pedido.
                             </div>
