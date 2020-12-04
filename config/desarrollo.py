@@ -35,39 +35,13 @@ ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS', default='*', cast=Csv())
 # -------------------------------------------------------------------
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-    'development': {},
-    'test': {},
-    'production': {},
-    'firebird': {},
-}
-# esta definición funciona bien pero no funciona con migrate o makemigrations
-if ENV == 'PROD':
-    DATABASES['default'] = DATABASES['production']
-elif ENV == 'TEST':
-    DATABASES['default'] = DATABASES['test']
-else:
-    DATABASES['default'] = DATABASES['development']
-
-DATABASES = {
-    'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'desarrollo_dj',
-        'HOST': '192.168.1.2',  # lubre local
+        'NAME': 'lubresrl_dj',
+        'HOST': '172.17.0.2',
         'PORT': '3306',
-        'USER': 'roberto',
+        'USER': 'root',
         'PASSWORD': 'roberto',
     },
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'lubresrl_dj',
-    #     'HOST': '172.17.0.2',
-    #     'PORT': '3306',
-    #     'USER': 'root',
-    #     'PASSWORD': 'roberto',
-    # },
     'firebird': {
         # lubresrl.dyndns.org:4310
         'ENGINE': 'django.db.backends.firebird',

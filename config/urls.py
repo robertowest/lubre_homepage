@@ -51,7 +51,7 @@ urlpatterns = [
     path('gestion/', include('apps.firebird.urls')),
 
     # estación de servicios -----------------------------------------------------------
-    # path('media/estacion/eess_cafeteria.pdf', include('apps.eess.urlsPDF')),
+    path('media/estacion/eess_cafeteria.pdf', include('apps.eess.urlsPDF')),
     path('eess/', include('apps.eess.urls')),
 
     # afip ---------------------------------------------------------------------------

@@ -22,3 +22,4 @@ django-bootstrap3
 django-afip
 django-currentuser
 django-shopping-cart
+python-dateutil

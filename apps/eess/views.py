@@ -10,9 +10,9 @@ from apps.comunes.functions import redirect_to, redirect_to_with_next, get_url_r
 from . import models
 
 
-# class PDFTemplateView(generic.TemplateView):
-#     def get(self, request, *args, **kwargs):
-#         return CartillaTemplateView.as_view()(request)
+class PDFTemplateView(generic.TemplateView):
+    def get(self, request, *args, **kwargs):
+        return CartillaTemplateView.as_view()(request)
 
 
 class CartillaTemplateView(generic.TemplateView):
