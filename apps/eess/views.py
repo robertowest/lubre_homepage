@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.db import IntegrityError, transaction
-from django.shortcuts import redirect, render, reverse
+from django.shortcuts import redirect, render, reverse, HttpResponseRedirect
 from django.utils.http import is_safe_url
 from django.views import generic
 from django.views.generic.base import RedirectView
@@ -119,7 +119,8 @@ def item_clear(request, id):
 
 # @login_required(login_url="/accounts/login/")
 def cart_checkout(request):
-    return render(request, 'carrito/carrito_confirmar.html', {'next': reverse('eess:index')})
+    # return render(request, 'carrito/carrito_confirmar.html', {'next': reverse('eess:index')})
+    return render(request, 'carrito/carrito_confirmar_mp.html', {'next': reverse('eess:index')})
 
 
 # @login_required(login_url="/accounts/login/")
@@ -128,6 +129,8 @@ def cart_confirm(request):
         codigo = request.session.session_key
         identificador = request.POST['firstName']
         cart = Cart(request)
+
+        __mercadoPago(cart.cart)
 
         with transaction.atomic():
             # creamos cabecera del pedido
@@ -155,6 +158,52 @@ def __total_carrito(carrito):
     return total
 
 
+import mercadopago
+def __mercadoPago(carrito):
+    mp = mercadopago.MP('TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137')
+
+    # user = request.user
+    # articulo_orden = ArticuloOrden.objects.filter(usuario=user, finalizado=False)
+    items=[]
+    for key,value in carrito.items():
+        datos = {
+            'title': value['name'],
+            'quantity': value['quantity'],
+            'currency_id': 'ARS',
+            'unit_price': float(value['price']),
+        }
+        items.append(datos)
+
+    preference = {
+        "items":items,
+        "back_urls": [
+            {
+                "success": reverse('eess:payment_received')
+            },
+        ],
+        "auto_return": "approved",
+    }    
+
+    preferenceResult = mp.create_preference(preference)
+    url_forward = preferenceResult['response']['init_point']
+    print(preferenceResult)
+    return HttpResponseRedirect(url_forward)
+
+
+# -------------------------------------------------------------------
+# URL's para mercadopago
+# -------------------------------------------------------------------
+
+class PaidReceivedView(generic.TemplateView):
+    template_name = 'mercadoPago/paid_received.html'
+
+
+class PaidFailureView(generic.TemplateView):
+    template_name = 'mercadoPago/paid_failure.html'
+
+
+class PaidPendingView(generic.TemplateView):
+    template_name = 'mercadoPago/paid_pending.html'
 
 
 # -------------------------------------------------------------------
@@ -186,3 +235,58 @@ def pedido_borrar(request, id):
     pedido.active = False
     pedido.save()
     return redirect('eess:pedidos')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def cart_confirm_mp(request):
+    preference = {
+        "items": [
+            {
+                "title": "Título del art.",
+                "quantity": 1,
+                "currency_id": "ARS",  # Available currencies at: https://api.mercadopago.com/currencies
+                "unit_price": 1800
+            }
+        ],
+        "payers": [
+            {
+                "name": "nombre",
+                "surname": "apellido",
+                "email": "info@correo.com",
+                "phone.number": "3816168251",
+                "identification": {
+                    "type": "DNI",
+                    "number": "20203910",
+                },
+                "address": {
+                    "zip_code": "4107",
+                    "street_name": "LA RIOJA",
+                    "street_number": "149",
+                }
+            },
+        ],
+        "back_urls": [
+            {
+                "success": reverse('eess:payment_received'),
+                "failure": reverse('eess:payment_failure'),
+                "pending": reverse('eess:payment_pending')
+            },
+        ]
+    }
+
+    # mp = mercadopago.MP(settings.CLIENT_ID, settings.CLIENT_SECRET)
+    mp = mercadopago.MP('TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137')
+    preferenceresult = mp.create_preference(preference)
+    url = preferenceresult["response"]["init_point"]
+    return url

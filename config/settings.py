@@ -106,6 +106,7 @@ INSTALLED_APPS += [
     'bootstrap3',
     'django_afip',
     'cart',
+    'django_mercadopago',
 
     # homepage -----------------------------
     'apps.homepage',
@@ -124,6 +125,7 @@ INSTALLED_APPS += [
     # eess ---------------------------------
     'apps.eess',
 
+    # AFIP ---------------------------------
     'apps.afip_test',
 
     # background ---------------------------

@@ -56,6 +56,9 @@ urlpatterns = [
 
     # afip ---------------------------------------------------------------------------
     path('afip/', include('apps.afip_test.urls')),
+
+    # MP -----------------------------------------------------------------------------
+    path('mercadopago/', include('django_mercadopago.urls')),
 ]
 
 

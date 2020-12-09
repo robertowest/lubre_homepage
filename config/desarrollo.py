@@ -35,13 +35,47 @@ ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS', default='*', cast=Csv())
 # -------------------------------------------------------------------
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lubresrl_dj',
-        'HOST': '172.17.0.2',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': 'roberto',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
+    'development': {},
+    'test': {},
+    'production': {},
+    'firebird': {},
+}
+# esta definición funciona bien pero no funciona con migrate o makemigrations
+if ENV == 'PROD':
+    DATABASES['default'] = DATABASES['production']
+elif ENV == 'TEST':
+    DATABASES['default'] = DATABASES['test']
+else:
+    DATABASES['default'] = DATABASES['development']
+
+DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'desarrollo_dj',
+    #     'HOST': '192.168.1.2',    # lubre local
+    #     'PORT': '3306',
+    #     'USER': 'roberto',
+    #     'PASSWORD': 'roberto',
+    # },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'lubresrl_dj',
+    #     'HOST': '172.17.0.2',     # mi casa
+    #     'PORT': '3306',
+    #     'USER': 'root',
+    #     'PASSWORD': 'roberto',
+    # },
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'PORT': '3306',
+        'NAME': config('DJANGO_DB', default='desarrollo_dj'),
+        'HOST': config('DJANGO_DB_HOST', default='192.168.1.2'),
+        'USER': config('DJANGO_DB_USER', default='roberto'),
+        'PASSWORD': config('DJANGO_DB_PASS', default='roberto'),
+    },    
     'firebird': {
         # lubresrl.dyndns.org:4310
         'ENGINE': 'django.db.backends.firebird',
@@ -193,3 +227,22 @@ MESSAGE_TAGS = {
 # -------------------------------------------------------------------
 TEMPLATES[0]['OPTIONS']['context_processors'].append('cart.context_processor.cart_total_amount')
 CART_SESSION_ID = 'cart'
+
+
+# credenciales de prueba para mp
+# key: TEST-fce077e4-2235-4233-8909-58c0044ebad7
+# token: TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137
+#
+# APP: mp-app-129446137-1048241
+# ID: 1534881774722776
+
+# -------------------------------------------------------------------
+# configuración para django-mercadopago
+# -------------------------------------------------------------------
+MERCADOPAGO = {
+    'autoprocess': True,
+    'success_url': 'eess:payment_received',
+    'failure_url': 'mp:payment_failure',
+    'pending_url': 'mp:payment_pending',
+    'base_host': 'https://lubresrl.com.ar',
+}
