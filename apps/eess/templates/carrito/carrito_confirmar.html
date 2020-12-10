@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-8 order-md-1">
                 <h4 class="mb-3">Por favor, ingrese su nombre para ser llamado cuando su pedido esté listo</h4>
-                <form action="{% url 'eess:cart_confirm' %}" method="post" class="needs-validation" novalidate>
+                <form action="{% url 'eess:cart_confirm_mp' %}" method="post" class="needs-validation" novalidate>
                     {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6 mb-3">
@@ -70,8 +70,7 @@
                         </div>
                     </div>
                     
-                    
-                    {% comment %}
+{% comment %}                    
                     <hr class="mb-4" style="background-color: white" />
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="same-address" />
@@ -133,7 +132,7 @@
                         </div>
                     </div>
                     <hr class="mb-4" />
-                    {% endcomment %}
+{% endcomment %}
 
                     <button class="btn btn-primary btn-lg btn-block" type="submit">Confirmar el pedido</button>
                 </form>
@@ -145,5 +144,6 @@
 
 
 {% block js %}
-    <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+    <!-- https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js -->
+    <script src="{% static 'js/mercadopago/mercadopago.js' %}"></script>
 {% endblock %}

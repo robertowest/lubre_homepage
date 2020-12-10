@@ -1,7 +1,9 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.db import IntegrityError, transaction
-from django.shortcuts import redirect, render, reverse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
+from django.shortcuts import redirect, render
+from django.urls import reverse
 from django.utils.http import is_safe_url
 from django.views import generic
 from django.views.generic.base import RedirectView
@@ -119,7 +121,6 @@ def item_clear(request, id):
 
 # @login_required(login_url="/accounts/login/")
 def cart_checkout(request):
-    # return render(request, 'carrito/carrito_confirmar.html', {'next': reverse('eess:index')})
     return render(request, 'carrito/carrito_confirmar_mp.html', {'next': reverse('eess:index')})
 
 
@@ -195,15 +196,19 @@ def __mercadoPago(carrito):
 # -------------------------------------------------------------------
 
 class PaidReceivedView(generic.TemplateView):
-    template_name = 'mercadoPago/paid_received.html'
+    # template_name = 'mercadoPago/paid_received.html'
+    def get(self, request, *args, **kwargs):
+        return render(request, 'mercadoPago/paid_received.html')
 
 
 class PaidFailureView(generic.TemplateView):
-    template_name = 'mercadoPago/paid_failure.html'
+    def get(self, request, *args, **kwargs):
+        return render(request, 'mercadoPago/paid_failure.html')
 
 
 class PaidPendingView(generic.TemplateView):
-    template_name = 'mercadoPago/paid_pending.html'
+    def get(self, request, *args, **kwargs):
+        return render(request, 'mercadoPago/paid_pending.html')
 
 
 # -------------------------------------------------------------------
@@ -250,6 +255,9 @@ def pedido_borrar(request, id):
 
 
 def cart_confirm_mp(request):
+    if request.method == 'GET':
+        pass
+
     preference = {
         "items": [
             {
@@ -261,32 +269,40 @@ def cart_confirm_mp(request):
         ],
         "payers": [
             {
-                "name": "nombre",
-                "surname": "apellido",
-                "email": "info@correo.com",
-                "phone.number": "3816168251",
+                "name": "Marcelo",
+                "surname": "Longobardi",
+                "email": "mlonog@correo.com",
+                "phone.number": "3816168252",
                 "identification": {
                     "type": "DNI",
-                    "number": "20203910",
+                    "number": "20203911",
                 },
                 "address": {
                     "zip_code": "4107",
                     "street_name": "LA RIOJA",
-                    "street_number": "149",
+                    "street_number": "150",
                 }
             },
         ],
-        "back_urls": [
-            {
-                "success": reverse('eess:payment_received'),
-                "failure": reverse('eess:payment_failure'),
-                "pending": reverse('eess:payment_pending')
-            },
-        ]
+        # "back_urls": [
+        #     {
+        #         "success": reverse('eess:payment_received'),
+        #         "failure": reverse('eess:payment_failure'),
+        #         "pending": reverse('eess:payment_pending')
+        #     },
+        # ]
     }
 
-    # mp = mercadopago.MP(settings.CLIENT_ID, settings.CLIENT_SECRET)
-    mp = mercadopago.MP('TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137')
+    access_token = "TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137"
+    mp = mercadopago.MP(access_token)
+    mp.sandbox_mode(True)                   # rw
     preferenceresult = mp.create_preference(preference)
-    url = preferenceresult["response"]["init_point"]
-    return url
+
+    # back_urls
+    preferenceresult['response']['back_urls']['success'] = reverse('eess:payment_received')
+    preferenceresult['response']['back_urls']['failure'] = reverse('eess:payment_failure')
+    preferenceresult['response']['back_urls']['pending'] = reverse('eess:payment_pending')
+
+    # url = preferenceresult["response"]["init_point"]
+    url = preferenceresult["response"]["sandbox_init_point"]
+    return redirect(url)

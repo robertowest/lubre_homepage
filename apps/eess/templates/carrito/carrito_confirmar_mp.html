@@ -9,6 +9,7 @@
 {% block content %}
     <div class="container">
         <div class="row">
+
             <div class="col-md-4 order-md-2 mb-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text-muted">Su compra</span>
@@ -35,72 +36,21 @@
                 <h4 class="mb-3">Por favor, ingrese su nombre para ser llamado cuando su pedido esté listo</h4>
                 <form action="{% url 'eess:cart_confirm_mp' %}" method="post" id="paymentForm" class="needs-validation" novalidate>
                     {% csrf_token %}
-                    <h3>Detalles del comprador</h3>
-                    <div>
-                        <div>
-                            <label for="email">E-mail</label>
-                            <input id="email" name="email" type="text" value="test@test.com"/>
-                        </div>
-                        <div>
-                            <label for="docType">Tipo de documento</label>
-                            <select id="docType" name="docType" data-checkout="docType" type="text"></select>
-                        </div>
-                        <div>
-                            <label for="docNumber">Número de documento</label>
-                            <input id="docNumber" name="docNumber" data-checkout="docNumber" type="text"/>
-                        </div>
-                    </div>
-                    <h3>Detalles de la tarjeta</h3>
-                    <div>
-                        <div>
-                            <label for="cardholderName">Titular de la tarjeta</label>
-                            <input id="cardholderName" data-checkout="cardholderName" type="text">
-                        </div>
-                        <div>
-                            <label for="">Fecha de vencimiento</label>
-                            <div>
-                            <input type="text" placeholder="MM" id="cardExpirationMonth" data-checkout="cardExpirationMonth"
-                                onselectstart="return false" onpaste="return false"
-                                oncopy="return false" oncut="return false"
-                                ondrag="return false" ondrop="return false" autocomplete=off>
-                            <span class="date-separator">/</span>
-                            <input type="text" placeholder="YY" id="cardExpirationYear" data-checkout="cardExpirationYear"
-                                onselectstart="return false" onpaste="return false"
-                                oncopy="return false" oncut="return false"
-                                ondrag="return false" ondrop="return false" autocomplete=off>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">Nombre</label>
+                            <input type="text" class="form-control" name="firstName" placeholder="" value="" required />
+                            <div class="invalid-feedback">
+                                Necesita una denominación para reconocer su pedido.
                             </div>
                         </div>
-                        <div>
-                            <label for="cardNumber">Número de la tarjeta</label>
-                            <input type="text" id="cardNumber" data-checkout="cardNumber"
-                            onselectstart="return false" onpaste="return false"
-                            oncopy="return false" oncut="return false"
-                            ondrag="return false" ondrop="return false" autocomplete=off>
-                        </div>
-                        <div>
-                            <label for="securityCode">Código de seguridad</label>
-                            <input id="securityCode" data-checkout="securityCode" type="text"
-                            onselectstart="return false" onpaste="return false"
-                            oncopy="return false" oncut="return false"
-                            ondrag="return false" ondrop="return false" autocomplete=off>
-                        </div>
-                        <div id="issuerInput">
-                            <label for="issuer">Banco emisor</label>
-                            <select id="issuer" name="issuer" data-checkout="issuer"></select>
-                        </div>
-                        <div>
-                            <label for="installments">Cuotas</label>
-                            <select type="text" id="installments" name="installments"></select>
-                        </div>
-                        <div>
-                            <input type="hidden" name="transactionAmount" id="transactionAmount" value="100" />
-                            <input type="hidden" name="paymentMethodId" id="paymentMethodId" />
-                            <input type="hidden" name="description" id="description" />
-                            <br>
-                            <button type="submit">Pagar</button>
-                            <br>
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-cvv">Pedido Nº</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="{{request.session.session_key|slice:'0:5'}}" readonly />
                         </div>
                     </div>
+
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Confirmar el pedido</button>
                 </form>
             </div>
 
@@ -112,5 +62,5 @@
 <!-- https://www.mercadopago.com.ar/developers/es/guides/online-payments/checkout-api/receiving-payment-by-card -->
 {% block js %}
     <script src="{% static 'js/mercadopago/mercadopago.js' %}"></script>
-    <script src="{% static 'js/mercadopago/funciones.js' %}"></script>
+    <!-- <script src="{% static 'js/mercadopago/funciones.js' %}"></script> -->
 {% endblock %}

@@ -229,15 +229,12 @@ TEMPLATES[0]['OPTIONS']['context_processors'].append('cart.context_processor.car
 CART_SESSION_ID = 'cart'
 
 
-# credenciales de prueba para mp
-# key: TEST-fce077e4-2235-4233-8909-58c0044ebad7
-# token: TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137
-#
-# APP: mp-app-129446137-1048241
-# ID: 1534881774722776
-
 # -------------------------------------------------------------------
 # configuración para django-mercadopago
+# ID: 1534881774722776
+# APP: mp-app-129446137-1048241
+# key: TEST-fce077e4-2235-4233-8909-58c0044ebad7
+# token: TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137
 # -------------------------------------------------------------------
 MERCADOPAGO = {
     'autoprocess': True,
