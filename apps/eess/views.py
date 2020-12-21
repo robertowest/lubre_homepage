@@ -252,57 +252,81 @@ def pedido_borrar(request, id):
 
 
 
-
+# PROBANDO EL FUNCIONAMIENTO DE MERCADO PAGO (sandbox)
 
 def cart_confirm_mp(request):
-    if request.method == 'GET':
-        pass
+    # if request.method == 'POST':
+    #     preference = {
+    #         "items": [
+    #             {
+    #                 "title": "Título del art.",
+    #                 "quantity": 1,
+    #                 "currency_id": "ARS",  # Available currencies at: https://api.mercadopago.com/currencies
+    #                 "unit_price": 1800
+    #             }
+    #         ],
+    #         "payers": [
+    #             {
+    #                 "name": "Marcelo",
+    #                 "surname": "Longobardi",
+    #                 "email": "mlonog@correo.com",
+    #                 "phone.number": "3816168252",
+    #                 "identification": {
+    #                     "type": "DNI",
+    #                     "number": "12345678",
+    #                 },
+    #                 "address": {
+    #                     "zip_code": "4107",
+    #                     "street_name": "LA RIOJA",
+    #                     "street_number": "150",
+    #                 }
+    #             },
+    #         ],
+    #     }
 
+    cart = Cart(request)
+
+    items = []
+    for key, value in cart.cart.items():
+        item = {
+            "title": value['name'],
+            "quantity": int(value['quantity']),
+            "currency_id": "ARS",
+            "unit_price": float(value['price'])
+        }
+        items.append(item)
+
+    # access_token = "TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137"
+    # mp = mercadopago.MP(access_token)
+    # preferenceresult = mp.create_preference(preference)
+    # url = preferenceresult["response"]["init_point"]
+
+    # SANDBOX
+    mp = mercadopago.MP("TEST-7820321725229373-122610-f8c19c351611443dbc0d72e296501d3d-389742581")
+    mp.sandbox_mode(True)
+    # preference = {"items": items}
     preference = {
         "items": [
             {
-                "title": "Título del art.",
+                "title": "Articulo 1",
                 "quantity": 1,
-                "currency_id": "ARS",  # Available currencies at: https://api.mercadopago.com/currencies
-                "unit_price": 1800
-            }
-        ],
-        "payers": [
+                "currency_id": "ARS",
+                "unit_price": 12
+            },
             {
-                "name": "Marcelo",
-                "surname": "Longobardi",
-                "email": "mlonog@correo.com",
-                "phone.number": "3816168252",
-                "identification": {
-                    "type": "DNI",
-                    "number": "20203911",
-                },
-                "address": {
-                    "zip_code": "4107",
-                    "street_name": "LA RIOJA",
-                    "street_number": "150",
-                }
+                "title": "Articulo 2",
+                "quantity": 2,
+                "currency_id": "ARS",
+                "unit_price": 10
             },
         ],
-        # "back_urls": [
-        #     {
-        #         "success": reverse('eess:payment_received'),
-        #         "failure": reverse('eess:payment_failure'),
-        #         "pending": reverse('eess:payment_pending')
-        #     },
-        # ]
     }
-
-    access_token = "TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137"
-    mp = mercadopago.MP(access_token)
-    mp.sandbox_mode(True)                   # rw
     preferenceresult = mp.create_preference(preference)
 
     # back_urls
     preferenceresult['response']['back_urls']['success'] = reverse('eess:payment_received')
     preferenceresult['response']['back_urls']['failure'] = reverse('eess:payment_failure')
     preferenceresult['response']['back_urls']['pending'] = reverse('eess:payment_pending')
-
-    # url = preferenceresult["response"]["init_point"]
+    
     url = preferenceresult["response"]["sandbox_init_point"]
     return redirect(url)

@@ -1,10 +1,25 @@
 # API de Mercado Pago
 https://www.mercadopago.com.ar/developers/es/reference/
 
+Aplicación : Test-1534881774722776
+
+# Credenciales de prueba
 public_key = "TEST-fce077e4-2235-4233-8909-58c0044ebad7"
 access_token = "TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137"
-client_id = "solo en produccion"
-client_secret = "solo en produccion"
+
+# Credenciales de producción
+public_key = APP_USR-ff2d17cc-9f9f-4575-ac08-e9a7bd9e4b6a
+access_token = APP_USR-1534881774722776-120914-c4014ed96f654a1cc8e2e9cd666fc9b8-129446137
+
+client_id = "1534881774722776"
+client_secret = "w1lwayutjcD0Li3axAuT0Kgsk1BHC0Y1"
+
+
+# -----------------------------------------------------------------------------
+# LUBRE SRL
+# -----------------------------------------------------------------------------
+key     TEST-5191778f-d0f0-46a9-8193-9ecb8b4a2e20
+token   TEST-7820321725229373-122610-f8c19c351611443dbc0d72e296501d3d-389742581
 
 
 # credenciales de prueba para mp (roberto.west)
@@ -17,8 +32,8 @@ client_secret = "solo en produccion"
 
 # identification_types
 curl -X GET \
-  'https://api.mercadopago.com/v1/identification_types' \
-  -H 'Authorization: Bearer TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137'
+    'https://api.mercadopago.com/v1/identification_types' \
+    -H 'Authorization: Bearer TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137'
 
 
 # payment_methods
@@ -29,10 +44,29 @@ curl -X GET \
 
 # saldo de cuenta
 curl -X GET \
-  'https://api.mercadopago.com/users/1534881774722776/mercadopago_account/balance' \
-  -H 'Authorization: Bearer TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137'
+    'https://api.mercadopago.com/users/1534881774722776/mercadopago_account/balance' \
+    -H 'Authorization: Bearer TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137'
 
 
+# crear usuario de prueba
+curl -X POST \
+    -H "Content-Type: application/json" \
+    -H 'Authorization: Bearer TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137' \
+    "https://api.mercadopago.com/users/test_user" \
+    -d '{"site_id":"MLA"}'
+
+
+# usuario de prueba 1
+{
+    "id":691616756,
+    "nickname":"TESTAPSWNVLM",
+    "password":"qatest1546",
+    "site_status":"active",
+    "email":"test_user_22427080@testuser.com"
+
+    key: TEST-b9585f8d-6aaa-43b3-bd83-c031b0a16463
+    token: TEST-6097039537413104-122115-94fd7140c48bb88a9302609ed1efdff9-691616756
+}
 
 https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=129446137-d0e6f6f6-c9ed-4442-8e74-39f76c68ab0f
 No podés pagarte a vos mismo.

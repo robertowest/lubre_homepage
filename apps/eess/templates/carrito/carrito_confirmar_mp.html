@@ -3,9 +3,6 @@
 {% load static %}
 {% load cart_tag %}
 
-{# https://getbootstrap.com/docs/4.5/examples/checkout/ #}
-
-
 {% block content %}
     <div class="container">
         <div class="row">
@@ -50,7 +47,8 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Confirmar el pedido</button>
+                    <button class="btn btn-primary btn-lg btn-block mt-3" type="submit">Ir a Mercado Pago</button>
+                    <img src="{% static 'img/mercadopago.png' %}" height="60" class="mx-auto d-block mt-1"/>
                 </form>
             </div>
 
