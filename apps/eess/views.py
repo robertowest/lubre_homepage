@@ -9,6 +9,7 @@ from django.views import generic
 from django.views.generic.base import RedirectView
 
 from apps.comunes.functions import redirect_to, redirect_to_with_next, get_url_referer
+
 from . import models
 
 
@@ -159,7 +160,6 @@ def __total_carrito(carrito):
     return total
 
 
-import mercadopago
 def __mercadoPago(carrito):
     mp = mercadopago.MP('TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137')
 
@@ -194,6 +194,7 @@ def __mercadoPago(carrito):
 # -------------------------------------------------------------------
 # URL's para mercadopago
 # -------------------------------------------------------------------
+import mercadopago
 
 class PaidReceivedView(generic.TemplateView):
     # template_name = 'mercadoPago/paid_received.html'
@@ -259,10 +260,10 @@ def cart_confirm_mp(request):
     #     preference = {
     #         "items": [
     #             {
-    #                 "title": "Título del art.",
+    #                 "title": "Artículo de prueba",
     #                 "quantity": 1,
     #                 "currency_id": "ARS",  # Available currencies at: https://api.mercadopago.com/currencies
-    #                 "unit_price": 1800
+    #                 "unit_price": 20
     #             }
     #         ],
     #         "payers": [
@@ -296,6 +297,42 @@ def cart_confirm_mp(request):
         }
         items.append(item)
 
+    # métodos de pago excluídos
+    payment_methods = {
+        "excluded_payment_methods": [
+            { "id": "master" },
+            { "id": "amex" },
+            { "id": "diners" },
+            { "id": "naranja" },
+            { "id": "nativa" },
+            { "id": "shopping" },
+            { "id": "cencosud" },
+            { "id": "cmr_master" },
+            { "id": "argencard" },
+            { "id": "cordial" },
+            { "id": "cordobesa" },
+            { "id": "cabal" },
+            { "id": "debmaster" },
+            { "id": "maestro" },
+            { "id": "debcabal" },
+            { "id": "pagofacil" },
+            { "id": "rapipago" },
+            { "id": "bapropagos" },
+            { "id": "cargavirtual" },
+            { "id": "cobroexpress" },
+            { "id": "redlink" },
+            { "id": "account_money" }
+        ],
+        "installments": 1
+    }
+    
+    # urls
+    back_urls = {
+        "success": reverse('eess:payment_received'),
+        "failure": reverse('eess:payment_failure'),
+        "pending": reverse('eess:payment_pending')
+    }
+
     # access_token = "TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137"
     # mp = mercadopago.MP(access_token)
     # preferenceresult = mp.create_preference(preference)
@@ -304,29 +341,16 @@ def cart_confirm_mp(request):
     # SANDBOX
     mp = mercadopago.MP("TEST-7820321725229373-122610-f8c19c351611443dbc0d72e296501d3d-389742581")
     mp.sandbox_mode(True)
-    # preference = {"items": items}
     preference = {
-        "items": [
-            {
-                "title": "Articulo 1",
-                "quantity": 1,
-                "currency_id": "ARS",
-                "unit_price": 12
-            },
-            {
-                "title": "Articulo 2",
-                "quantity": 2,
-                "currency_id": "ARS",
-                "unit_price": 10
-            },
-        ],
+        "items": items,
+        "back_urls": back_urls
     }
     preferenceresult = mp.create_preference(preference)
 
-    # back_urls
-    preferenceresult['response']['back_urls']['success'] = reverse('eess:payment_received')
-    preferenceresult['response']['back_urls']['failure'] = reverse('eess:payment_failure')
-    preferenceresult['response']['back_urls']['pending'] = reverse('eess:payment_pending')
+    # # back_urls
+    # preferenceresult['response']['back_urls']['success'] = reverse('eess:payment_received')
+    # preferenceresult['response']['back_urls']['failure'] = reverse('eess:payment_failure')
+    # preferenceresult['response']['back_urls']['pending'] = reverse('eess:payment_pending')
     
     url = preferenceresult["response"]["sandbox_init_point"]
     return redirect(url)

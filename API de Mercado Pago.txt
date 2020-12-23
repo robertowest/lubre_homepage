@@ -80,3 +80,97 @@ Lucas Zamorano
 Tarjeta	    Número	                Vto     CSeg
 Mastercard	5031 7557 3453 0604	    11/25   123
 Visa	    4509 9535 6623 3704	    11/25   123
+
+
+curl -X GET \
+-H "Content-Type: application/json" \
+-H 'Authorization: Bearer TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137' \
+'https://api.mercadopago.com/sites/MLA/payment_methods?marketplace=NONE&operation_type=recurring_payment'
+
+
+items = [
+    {
+        "title": "Artículo de prueba",
+        "quantity": 1,
+        "currency_id": "ARS",
+        "unit_price": 20
+    }
+]
+
+excluded_payment_methods = [
+    { "id": "master" },
+    { "id": "amex" },
+    { "id": "diners" },
+    { "id": "naranja" },
+    { "id": "nativa" },
+    { "id": "shopping" },
+    { "id": "cencosud" },
+    { "id": "cmr_master" },
+    { "id": "argencard" },
+    { "id": "cordial" },
+    { "id": "cordobesa" },
+    { "id": "cabal" },
+    { "id": "debmaster" },
+    { "id": "maestro" },
+    { "id": "debcabal" },
+    { "id": "pagofacil" },
+    { "id": "rapipago" },
+    { "id": "bapropagos" },
+    { "id": "cargavirtual" },
+    { "id": "cobroexpress" },
+    { "id": "redlink" },
+    { "id": "account_money" }
+]
+
+"installments": 1
+
+
+back_urls = {
+    "success": reverse('eess:payment_received'),
+    "failure": reverse('eess:payment_failure'),
+    "pending": reverse('eess:payment_pending')
+}
+
+preference = {
+    "items": items,
+    "payment_methods": payment_methods,
+    "back_urls": back_urls
+}
+preference = {
+    "items": items,
+    "back_urls": back_urls
+}
+preferenceresult = mp.create_preference(preference)
+
+
+
+
+payment_methods = {
+    "excluded_payment_methods": [
+        { "id": "master" },
+    ],
+    "installments": 1
+}
+payment_methods = {}
+
+
+# métodos de pago
+payment_methods = {
+    'default_card_id': None, 
+    'default_payment_method_id': None, 
+    'excluded_payment_methods': [{'id': ''}], 
+    'excluded_payment_types': [{'id': ''}], 
+    'installments': None, 
+    'default_installments': None
+}
+
+payment_methods = {
+    'default_card_id': None, 
+    'default_payment_method_id': None, 
+    'excluded_payment_methods': [{ "id": "master" }], 
+    'excluded_payment_types': [{'id': ''}], 
+    'installments': None, 
+    'default_installments': None
+}
+preferenceresult = mp.create_preference(preference)
+print( preferenceresult )
