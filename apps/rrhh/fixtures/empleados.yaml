@@ -1,0 +1,773 @@
+- model: rrhh.empleado
+  pk: 2502
+  fields:
+    legajo: 0001
+    fecha_ingreso: 2007-08-28
+    fecha_egreso: 2013-02-28
+    tarea_id: 5
+    active: 1
+- model: rrhh.empleado
+  pk: 2503
+  fields:
+    legajo: 0002
+    fecha_ingreso: 2008-01-02
+    tarea_id: 3
+    active: 1
+- model: rrhh.empleado
+  pk: 2504
+  fields:
+    legajo: 0003
+    fecha_ingreso: 2008-05-10
+    fecha_egreso: 2016-05-01
+    imagen: rrhh/empleados/Juan_Frias.jpg
+    tarea_id: 6
+    active: 1
+- model: rrhh.empleado
+  pk: 2505
+  fields:
+    legajo: 0004
+    fecha_ingreso: 2008-05-02
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2506
+  fields:
+    legajo: 0005
+    fecha_ingreso: 2008-05-05
+    fecha_egreso: 2018-06-01
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2507
+  fields:
+    legajo: 0006
+    fecha_ingreso: 2008-05-10
+    fecha_egreso: 2010-01-29
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2508
+  fields:
+    legajo: 0007
+    fecha_ingreso: 2008-10-01
+    fecha_egreso: 2010-03-26
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2509
+  fields:
+    legajo: 0008
+    fecha_ingreso: 2008-10-01
+    tarea_id: 5
+    active: 1
+- model: rrhh.empleado
+  pk: 2510
+  fields:
+    legajo: 0009
+    fecha_ingreso: 2008-11-05
+    fecha_egreso: 2014-11-30
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2511
+  fields:
+    legajo: 0010
+    fecha_ingreso: 2008-12-01
+    fecha_egreso: 2016-01-01
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2512
+  fields:
+    legajo: 0011
+    fecha_ingreso: 2009-03-01
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2513
+  fields:
+    legajo: 0012
+    fecha_ingreso: 2009-04-01
+    fecha_egreso: 2012-03-09
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2514
+  fields:
+    legajo: 0013
+    fecha_ingreso: 2009-04-15
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2515
+  fields:
+    legajo: 0014
+    fecha_ingreso: 2009-05-05
+    fecha_egreso: 2009-07-06
+    tarea_id: 6
+    active: 1
+- model: rrhh.empleado
+  pk: 2516
+  fields:
+    legajo: 0015
+    fecha_ingreso: 2009-05-05
+    fecha_egreso: 2009-07-06
+    tarea_id: 6
+    active: 1
+- model: rrhh.empleado
+  pk: 2517
+  fields:
+    legajo: 0016
+    fecha_ingreso: 2009-05-06
+    fecha_egreso: 2010-07-31
+    tarea_id: 10
+    active: 1
+- model: rrhh.empleado
+  pk: 2518
+  fields:
+    legajo: 0017
+    fecha_ingreso: 2009-05-14
+    imagen: rrhh/empleados/Hugo_Espinoza.jpg
+    tarea_id: 6
+    active: 1
+- model: rrhh.empleado
+  pk: 2519
+  fields:
+    legajo: 0018
+    fecha_ingreso: 2009-07-07
+    fecha_egreso: 2009-09-30
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2520
+  fields:
+    legajo: 0019
+    fecha_ingreso: 2009-07-07
+    fecha_egreso: 2009-09-08
+    tarea_id: 6
+    active: 1
+- model: rrhh.empleado
+  pk: 2521
+  fields:
+    legajo: 0020
+    fecha_ingreso: 2009-09-17
+    fecha_egreso: 2009-11-04
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2522
+  fields:
+    legajo: 0021
+    fecha_ingreso: 2009-09-17
+    imagen: rrhh/empleados/Walter_Diaz.jpg
+    tarea_id: 6
+    active: 1
+- model: rrhh.empleado
+  pk: 2523
+  fields:
+    legajo: 0022
+    fecha_ingreso: 2009-10-01
+    imagen: rrhh/empleados/Jose_Suarez.jpg
+    tarea_id: 5
+    active: 1
+- model: rrhh.empleado
+  pk: 2524
+  fields:
+    legajo: 0023
+    fecha_ingreso: 2009-11-01
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2525
+  fields:
+    legajo: 0024
+    fecha_ingreso: 2009-12-09
+    fecha_egreso: 2010-06-25
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2526
+  fields:
+    legajo: 0025
+    fecha_ingreso: 2010-06-09
+    fecha_egreso: 2012-06-30
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2527
+  fields:
+    legajo: 0026
+    fecha_ingreso: 2010-11-26
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2528
+  fields:
+    legajo: 0027
+    fecha_ingreso: 2011-03-19
+    fecha_egreso: 2013-01-08
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2529
+  fields:
+    legajo: 0028
+    fecha_ingreso: 2011-03-19
+    fecha_egreso: 2016-06-30
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2530
+  fields:
+    legajo: 0029
+    fecha_ingreso: 2011-03-20
+    imagen: rrhh/empleados/Corina_Mariona.jpg
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2531
+  fields:
+    legajo: 0030
+    fecha_ingreso: 2011-09-23
+    imagen: rrhh/empleados/LARA_A8jVRuB.jpg
+    tarea_id: 4
+    active: 1
+- model: rrhh.empleado
+  pk: 2532
+  fields:
+    legajo: 0031
+    fecha_ingreso: 2012-03-17
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2533
+  fields:
+    legajo: 0032
+    fecha_ingreso: 2007-09-10
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2534
+  fields:
+    legajo: 0033
+    fecha_ingreso: 2008-01-02
+    tarea_id: 12
+    active: 1
+- model: rrhh.empleado
+  pk: 2535
+  fields:
+    legajo: 0034
+    fecha_ingreso: 2008-10-01
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2536
+  fields:
+    legajo: 0035
+    fecha_ingreso: 2008-10-01
+    fecha_egreso: 2016-11-30
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2537
+  fields:
+    legajo: 0036
+    fecha_ingreso: 2008-10-01
+    imagen: rrhh/empleados/Sergio_Andjel.png
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2538
+  fields:
+    legajo: 0037
+    fecha_ingreso: 2010-02-10
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2539
+  fields:
+    legajo: 0038
+    fecha_ingreso: 2010-04-01
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2540
+  fields:
+    legajo: 0039
+    fecha_ingreso: 2012-07-10
+    fecha_egreso: 2013-10-31
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2541
+  fields:
+    legajo: 0040
+    fecha_ingreso: 2012-08-07
+    fecha_egreso: 2013-01-31
+    tarea_id: 12
+    active: 1
+- model: rrhh.empleado
+  pk: 2542
+  fields:
+    legajo: 0041
+    fecha_ingreso: 2008-01-02
+    fecha_egreso: 2014-11-17
+    tarea_id: 12
+    active: 1
+- model: rrhh.empleado
+  pk: 2543
+  fields:
+    legajo: 0042
+    fecha_ingreso: 2013-06-05
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2544
+  fields:
+    legajo: 0043
+    fecha_ingreso: 2013-08-01
+    tarea_id: 2
+    active: 0
+- model: rrhh.empleado
+  pk: 2545
+  fields:
+    legajo: 0044
+    fecha_ingreso: 2013-11-04
+    fecha_egreso: 2014-03-31
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2546
+  fields:
+    legajo: 0045
+    fecha_ingreso: 2014-02-10
+    tarea_id: 12
+    active: 1
+- model: rrhh.empleado
+  pk: 2547
+  fields:
+    legajo: 0046
+    fecha_ingreso: 2014-07-17
+    fecha_egreso: 2018-06-01
+    tarea_id: 4
+    active: 1
+- model: rrhh.empleado
+  pk: 2548
+  fields:
+    legajo: 0047
+    fecha_ingreso: 2014-07-17
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2549
+  fields:
+    legajo: 0048
+    fecha_ingreso: 2014-10-01
+    fecha_egreso: 2016-06-30
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2550
+  fields:
+    legajo: 0049
+    fecha_ingreso: 2014-10-09
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2551
+  fields:
+    legajo: 0050
+    fecha_ingreso: 2015-06-01
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2552
+  fields:
+    legajo: 0051
+    fecha_ingreso: 2015-06-09
+    fecha_egreso: 2017-06-05
+    tarea_id: 9
+    active: 1
+- model: rrhh.empleado
+  pk: 2554
+  fields:
+    legajo: 0053
+    fecha_ingreso: 2015-06-09
+    fecha_egreso: 2017-03-31
+    tarea_id: 9
+    active: 1
+- model: rrhh.empleado
+  pk: 2555
+  fields:
+    legajo: 0054
+    fecha_ingreso: 2015-06-15
+    fecha_egreso: 2016-11-30
+    tarea_id: 9
+    active: 1
+- model: rrhh.empleado
+  pk: 2556
+  fields:
+    legajo: 0055
+    fecha_ingreso: 2015-06-15
+    fecha_egreso: 2016-11-30
+    tarea_id: 9
+    active: 1
+- model: rrhh.empleado
+  pk: 2557
+  fields:
+    legajo: 0056
+    fecha_ingreso: 2015-06-15
+    fecha_egreso: 2016-11-30
+    tarea_id: 9
+    active: 1
+- model: rrhh.empleado
+  pk: 2558
+  fields:
+    legajo: 0057
+    fecha_ingreso: 2015-06-23
+    tarea_id: 9
+    active: 1
+- model: rrhh.empleado
+  pk: 2559
+  fields:
+    legajo: 0058
+    fecha_egreso: 2016-11-30
+    tarea_id: 9
+    active: 1
+- model: rrhh.empleado
+  pk: 2560
+  fields:
+    legajo: 0059
+    fecha_ingreso: 2016-05-01
+    fecha_egreso: 2016-04-21
+    tarea_id: 9
+    active: 1
+- model: rrhh.empleado
+  pk: 2561
+  fields:
+    legajo: 0060
+    fecha_ingreso: 2015-06-09
+    fecha_egreso: 2017-05-31
+    tarea_id: 9
+    active: 1
+- model: rrhh.empleado
+  pk: 2565
+  fields:
+    legajo: 0064
+    fecha_ingreso: 2016-07-12
+    tarea_id: 9
+    active: 1
+- model: rrhh.empleado
+  pk: 2566
+  fields:
+    legajo: 0065
+    fecha_ingreso: 2017-02-11
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2567
+  fields:
+    legajo: 0066
+    fecha_ingreso: 2017-04-10
+    tarea_id: 7
+    active: 0
+- model: rrhh.empleado
+  pk: 2568
+  fields:
+    legajo: 0067
+    fecha_ingreso: 2017-11-16
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2569
+  fields:
+    legajo: 0068
+    fecha_ingreso: 2018-09-01
+    fecha_egreso: 2018-11-01
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2570
+  fields:
+    legajo: 0069
+    fecha_ingreso: 2018-04-15
+    tarea_id: 11
+    active: 1
+- model: rrhh.empleado
+  pk: 2571
+  fields:
+    legajo: 0070
+    fecha_ingreso: 2018-07-03
+    tarea_id: 8
+    active: 1
+- model: rrhh.empleado
+  pk: 2572
+  fields:
+    legajo: 0071
+    fecha_ingreso: 2018-08-10
+    imagen: rrhh/empleados/Luis_Ortiz.png
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2573
+  fields:
+    legajo: 0072
+    fecha_ingreso: 2018-08-10
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2574
+  fields:
+    legajo: 0073
+    fecha_ingreso: 2018-08-10
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2575
+  fields:
+    legajo: 0074
+    fecha_ingreso: 2018-08-10
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2576
+  fields:
+    legajo: 0075
+    fecha_ingreso: 2018-08-10
+    imagen: rrhh/empleados/Berta_Julian.jpg
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2577
+  fields:
+    legajo: 0076
+    fecha_ingreso: 2018-08-10
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2578
+  fields:
+    legajo: 0077
+    fecha_ingreso: 2018-08-10
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2579
+  fields:
+    legajo: 0078
+    fecha_ingreso: 2018-08-10
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2580
+  fields:
+    legajo: 0079
+    fecha_ingreso: 2018-08-10
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2581
+  fields:
+    legajo: 0080
+    fecha_ingreso: 2018-08-10
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2582
+  fields:
+    legajo: 0081
+    fecha_ingreso: 2018-08-10
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2583
+  fields:
+    legajo: 0082
+    fecha_ingreso: 2018-08-10
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2584
+  fields:
+    legajo: 0083
+    fecha_ingreso: 2018-09-01
+    fecha_egreso: 2018-03-01
+    tarea_id: 2
+    active: 0
+- model: rrhh.empleado
+  pk: 2585
+  fields:
+    legajo: 0084
+    fecha_ingreso: 2018-09-28
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2586
+  fields:
+    legajo: 0085
+    fecha_ingreso: 2018-09-28
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2587
+  fields:
+    legajo: 0086
+    fecha_ingreso: 2018-09-28
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2588
+  fields:
+    legajo: 0087
+    fecha_ingreso: 2018-09-28
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2589
+  fields:
+    legajo: 0088
+    fecha_ingreso: 2018-11-01
+    tarea_id: 1
+    active: 1
+- model: rrhh.empleado
+  pk: 2590
+  fields:
+    legajo: 0089
+    fecha_ingreso: 2018-11-01
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2591
+  fields:
+    legajo: 0090
+    fecha_ingreso: 2018-12-01
+    tarea_id: 13
+    active: 1
+- model: rrhh.empleado
+  pk: 2592
+  fields:
+    legajo: 0091
+    fecha_ingreso: 2018-12-01
+    imagen: rrhh/empleados/Luz_Ortiz.jpg
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2593
+  fields:
+    legajo: 0092
+    fecha_ingreso: 2018-12-01
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2594
+  fields:
+    legajo: 0093
+    fecha_ingreso: 2019-02-04
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2595
+  fields:
+    legajo: 0094
+    fecha_ingreso: 2019-02-04
+    imagen: rrhh/empleados/Matias_Oliva.jpg
+    active: 1
+- model: rrhh.empleado
+  pk: 2596
+  fields:
+    legajo: 0095
+    active: 1
+- model: rrhh.empleado
+  pk: 2597
+  fields:
+    legajo: 0096
+    fecha_ingreso: 2019-03-01
+    imagen: rrhh/empleados/Lizabeth_Molina.jpg
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2598
+  fields:
+    legajo: 0097
+    fecha_ingreso: 2019-03-01
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2599
+  fields:
+    legajo: 0098
+    fecha_ingreso: 2019-03-01
+    imagen: rrhh/empleados/Sofia_Bulacio.jpg
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2600
+  fields:
+    legajo: 0059
+    fecha_ingreso: 2015-08-01
+    tarea_id: 4
+    active: 1
+- model: rrhh.empleado
+  pk: 2601
+  fields:
+    legajo: 0101
+    fecha_ingreso: 2019-08-01
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2602
+  fields:
+    legajo: 0100
+    fecha_ingreso: 2019-08-01
+    fecha_egreso: 2019-10-31
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2603
+  fields:
+    legajo: 0103
+    fecha_ingreso: 2019-08-01
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2604
+  fields:
+    legajo: 0104
+    fecha_ingreso: 2019-08-01
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2605
+  fields:
+    legajo: 0102
+    fecha_ingreso: 2019-08-01
+    tarea_id: 14
+    active: 1
+- model: rrhh.empleado
+  pk: 2606
+  fields:
+    legajo: 0106
+    fecha_ingreso: 2019-09-02
+    tarea_id: 2
+    active: 1
+- model: rrhh.empleado
+  pk: 2607
+  fields:
+    legajo: 0099
+    fecha_ingreso: 2019-08-01
+    tarea_id: 15
+    active: 1
+- model: rrhh.empleado
+  pk: 2608
+  fields:
+    legajo: 0108
+    fecha_ingreso: 2019-10-01
+    tarea_id: 12
+    active: 1
+- model: rrhh.empleado
+  pk: 2609
+  fields:
+    legajo: 107
+    fecha_ingreso: 2019-10-01
+    tarea_id: 15
+    active: 1

@@ -27,19 +27,19 @@
     descripcion: Administración
     responsable_id: 2524
 - model: rrhh.activo
-  pk: 6
-  fields:
-    active: 1
-    tipo: D
-    descripcion: H&S
-    responsable_id: 2533
-- model: rrhh.activo
   pk: 5
   fields:
     active: 1
     tipo: D
     descripcion: Planta
     responsable_id: 2503
+- model: rrhh.activo
+  pk: 6
+  fields:
+    active: 1
+    tipo: D
+    descripcion: H&S
+    responsable_id: 2533
 - model: rrhh.activo
   pk: 7
   fields:
@@ -53,20 +53,6 @@
     active: 1
     tipo: V
     descripcion: GZW951
-    responsable_id: 2503
-- model: rrhh.activo
-  pk: 26
-  fields:
-    active: 1
-    tipo: V
-    descripcion: MGW186
-    responsable_id: 2503
-- model: rrhh.activo
-  pk: 75
-  fields:
-    active: 1
-    tipo: A
-    descripcion: Carnet de Manejo
     responsable_id: 2503
 - model: rrhh.activo
   pk: 9
@@ -187,6 +173,13 @@
     tipo: V
     descripcion: KRR583
     responsable_id: 2565
+- model: rrhh.activo
+  pk: 26
+  fields:
+    active: 1
+    tipo: V
+    descripcion: MGW186
+    responsable_id: 2503
 - model: rrhh.activo
   pk: 27
   fields:
@@ -481,6 +474,13 @@
     tipo: A
     descripcion: Carnet de Manejo
     responsable_id: 2509
+- model: rrhh.activo
+  pk: 75
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2503
 - model: rrhh.activo
   pk: 76
   fields:

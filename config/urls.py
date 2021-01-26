@@ -25,6 +25,8 @@ from apps.accounts.views import LoginRedirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ejemplo/', TemplateView.as_view(template_name='default_base.html'), name='ejemplo'),
+
 
     # homepage-------------------------------------------------------------------------
     path('', include('apps.homepage.urls', namespace='homepage')),
@@ -50,7 +52,6 @@ urlpatterns = [
 
     path('persona/', include('apps.persona.urls')),
 
-    path('empleado/', TemplateView.as_view(template_name='default_base.html'), name='empleado'),
     path('gestion/', include('apps.firebird.urls')),
 
     # estación de servicios -----------------------------------------------------------
@@ -58,7 +59,7 @@ urlpatterns = [
     path('eess/', include('apps.eess.urls')),
 
     # recursos humanos ----------------------------------------------------------------
-    path('rrhh/', include('apps.rrhh.urls')),
+    path('rrhh/empleado/', include('apps.rrhh.urls.empleadoUrls')),
 
     # afip ---------------------------------------------------------------------------
     path('afip/', include('apps.afip_test.urls')),
@@ -80,8 +81,22 @@ if settings.DEBUG:
         path("403/", default_views.permission_denied, kwargs={"exception": Exception("Permiso denegado")},),
         path("404/", default_views.page_not_found, kwargs={"exception": Exception("Página no encontrada")},),
         path("500/", default_views.server_error),
-    ]
 
+        # ejemplos de interfáz gráfica
+        path('ui/blank',                TemplateView.as_view(template_name='examples/blank.html'), name='blank'),
+        path('ui/buttons',              TemplateView.as_view(template_name='examples/buttons.html'), name='buttons'),
+        path('ui/cards',                TemplateView.as_view(template_name='examples/cards.html'), name='cards'),
+        path('ui/charts',               TemplateView.as_view(template_name='examples/charts.html'), name='charts'),
+        path('ui/forgot_password',      TemplateView.as_view(template_name='examples/forgot-password.html'), name='forgot_password'),
+        path('ui/index',                TemplateView.as_view(template_name='examples/index.html'), name='index'),
+        path('ui/login',                TemplateView.as_view(template_name='examples/login.html'), name='login'),
+        path('ui/register',             TemplateView.as_view(template_name='examples/register.html'), name='register'),
+        path('ui/tables',               TemplateView.as_view(template_name='examples/tables.html'), name='tables'),
+        path('ui/utilities_animation',  TemplateView.as_view(template_name='examples/utilities-animation.html'), name='utilities_animation'),
+        path('ui/utilities_border',     TemplateView.as_view(template_name='examples/utilities-border.html'), name='utilities_border'),
+        path('ui/utilities_color',      TemplateView.as_view(template_name='examples/utilities-color.html'), name='utilities_color'),
+        path('ui/utilities_other',      TemplateView.as_view(template_name='examples/utilities-other.html'), name='utilities_other'),
+    ]
 
     # -----------------------------------------------------------------------------
     # DEBUG

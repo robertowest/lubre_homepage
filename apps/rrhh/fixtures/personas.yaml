@@ -419,6 +419,14 @@
     sexo: M
     fecha_nacimiento: 1983-01-11
 - model: persona.persona
+  pk: 2544
+  fields:
+    active: 0
+    apellido: Bustos
+    nombre: Leandro
+    sexo: M
+    fecha_nacimiento: 1973-08-24
+- model: persona.persona
   pk: 2545
   fields:
     active: 1
@@ -599,6 +607,14 @@
     sexo: M
     fecha_nacimiento: 1982-07-11
 - model: persona.persona
+  pk: 2567
+  fields:
+    active: 0
+    apellido: D Angelo
+    nombre: Vicente Atilio
+    sexo: M
+    fecha_nacimiento: 1949-12-20
+- model: persona.persona
   pk: 2568
   fields:
     active: 1
@@ -758,6 +774,14 @@
     cuil: 20-38742991-4
     sexo: M
     fecha_nacimiento: 1995-06-08
+- model: persona.persona
+  pk: 2584
+  fields:
+    active: 0
+    apellido: Albornoz
+    nombre: Luis Ignacio
+    sexo: M
+    fecha_nacimiento: 1994-06-24
 - model: persona.persona
   pk: 2585
   fields:

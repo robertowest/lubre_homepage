@@ -70,4 +70,29 @@
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 
+    {% if request.META.SERVER_PORT == "8000" %}
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>UI</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="/ui/blank">blank</a>
+                <a class="collapse-item" href="/ui/buttons">buttons</a>
+                <a class="collapse-item" href="/ui/cards">cards</a>
+                <a class="collapse-item" href="/ui/charts">charts</a>
+                <a class="collapse-item" href="/ui/forgot_password">forgot_password</a>
+                <a class="collapse-item" href="/ui/index">index</a>
+                <a class="collapse-item" href="/ui/login">login</a>
+                <a class="collapse-item" href="/ui/register">register</a>
+                <a class="collapse-item" href="/ui/tables">tables</a>
+                <a class="collapse-item" href="/ui/utilities_animation">utilities_animation</a>
+                <a class="collapse-item" href="/ui/utilities_border">utilities_border</a>
+                <a class="collapse-item" href="/ui/utilities_color">utilities_color</a>
+                <a class="collapse-item" href="/ui/utilities_other">utilities_other</a>
+            </div>
+        </div>
+    </li>
+    {% endif %}
 </ul>

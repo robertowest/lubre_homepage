@@ -24,3 +24,13 @@ django-currentuser
 django-shopping-cart
 python-dateutil
 django-mercadopago
+
+# pertenecientes a la app RRHH
+business-calendar
+reportlab
+django-bootstrap-modal-forms
+django-crispy-forms
+django-datetimepicker
+django-extensions
+django_mathfilters
+django-widget-tweaks

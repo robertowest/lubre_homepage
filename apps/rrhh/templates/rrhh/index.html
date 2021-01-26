@@ -3,6 +3,7 @@
 
 {% block content %}
     <div class="row">
+
         <div class="col-sm-3">
             <!-- proximos -->
             {% if proximos %}
@@ -13,7 +14,7 @@
                 <div class="list-group">
                     {% for obj in proximos %}
                     <a href="#" class="read-modal list-group-item"
-                                data-url="{% url 'rrhh:mantenimiento_read' obj.pk %}">
+                                data-url="#">
                         {{obj}}
                     </a>
                     {% endfor %}
@@ -30,7 +31,7 @@
                 <div class="list-group">
                     {% for obj in vencimientos %}
                     <a href="#" class="read-modal list-group-item"
-                                data-url="{% url 'rrhh:mantenimiento_read' obj.pk %}">
+                                data-url="#">
                         {{obj}}
                         <span class="badge badge-dark pull-right">{{obj.dias_vencidos}}</span>
                     </a>
@@ -48,7 +49,7 @@
                 <div class="list-group">
                     {% for obj in mantenimientos %}
                     <a href="#" class="read-modal list-group-item"
-                                data-url="{% url 'rrhh:mantenimiento_read' obj.pk %}">
+                                data-url="#">
                         {{obj}}
                     </a>
                     {% endfor %}
@@ -79,14 +80,8 @@
                     </ul>
                     {% endcomment %}
 
-                    <!--
-                    <a href="{% url 'rrhh:post_detail' post.slug %}"
-                       class="btn btn-primary pull-right"
-                       data-toggle="modal" data-target="#modal" title="edit item" data-tooltip>Leer más &rarr;</a>
-                    -->
-
                     <button type="button" class="read-modal btn btn-primary float-right"
-                            data-url="{% url 'rrhh:post_detail' post.slug %}">Leer más &rarr;</button>
+                            data-url="#">Leer más &rarr;</button>
                 </div>
             </div>
             <hr>
@@ -101,19 +96,20 @@
                 <div class="card-body">
                     <div class="progress mb-1" style="height: 20px;">
                         <div class="progress-bar bg-success" role="progressbar"
-                             style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                                style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
                     </div>
                     <div class="progress mb-1" style="height: 20px;">
                         <div class="progress-bar bg-warning" role="progressbar"
-                             style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
                     </div>
                     <div class="progress mb-1" style="height: 20px;">
                         <div class="progress-bar bg-danger" role="progressbar"
-                             style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
                     </div>
                 </div>
             </div>
 
         </div>
+
     </div>
 {% endblock %}

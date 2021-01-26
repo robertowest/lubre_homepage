@@ -1,4 +1,18 @@
-#!/usr/bin/python
+#!/usr/bin/python3
+
+# https://stackoverflow.com/questions/16283799/how-to-read-a-csv-file-from-a-url-with-python
+# Usage:
+# -i --input     ruta de archivo o enlace (si utiliza la bandera -u)
+# -o --output    ruta y nombre del archivo de salida, si no se especifica se utilizarán los datos de entrada
+# -m --model     nombre del modelo (app.tabla)
+# -d --delimiter especifica el caracter delimitador (por defecto se usará ;)
+# -u --url       bandera que indica que la entrada es una URL y debe tratarse como tal
+# -f --folder    bandera que indica que la entrada es un directorio y debe tratarse como tal
+# -h --help      muestra la forma de uso del comando
+
+# csv delimitado por ;
+# convert2yaml.py -i ../db_access/Adherentes.csv -o adherentes.yaml
+
 import yaml
 import os
 import csv
@@ -7,19 +21,18 @@ from urllib.request import urlopen
 import getopt
 import sys
 
-# https://stackoverflow.com/questions/16283799/how-to-read-a-csv-file-from-a-url-with-python
-# Usage:
-# -i --input: path/link of file (if link use url flag)
-# -o --output: path name of output, if left out will convert in this folder using its name as output
-# -u --url: url flag indicating input is a url and should be treated as such
-# -f --folder: flag indicating input is directory/folder and should be treate as such
-# -h --help: print this/help stuff.....
-
 root = os.getcwd()
+MODEL = "app_name.model_name"
+DELIMITER = ";"
+QUOTECHAR = '"'
 
 def csvToYaml2(csvFile, output):
+    global MODEL
+    global DELIMITER
+    global QUOTECHAR
+
     f = open(output, 'w', encoding="utf-8")
-    csvOpen = csv.reader(codecs.iterdecode(csvFile, 'utf-8'), delimiter=';', quotechar='"')
+    csvOpen = csv.reader(codecs.iterdecode(csvFile, 'utf-8'), delimiter=DELIMITER, quotechar=QUOTECHAR)
     data_headings = []
 
     for i, row in enumerate(csvOpen):
@@ -30,31 +43,24 @@ def csvToYaml2(csvFile, output):
                 cell_heading = data_headings[cell_index].lower().replace(" ", "_").replace("-", "")
 
                 if cell_heading == 'id':
-                    f.write('- model: app_name.Model_name\n')
+                    f.write('- model: ' + MODEL + '\n')
                     f.write('  pk: {}\n'.format(cell))
                     f.write('  fields:\n')
                 else:
                     if cell:
                         cell_text = "    " + cell_heading + ": " + cell.replace("\n", ", ") + "\n"
                         f.write(cell_text)
-
-
-        # csv_content = ' '.join(row)
-        # csv_content = csv_content.split(',')
-        # f.write('- model: app_name.Model_name\n')
-        # f.write('  pk: %d\n' % i)
-        # f.write('  fields:\n')
-        # f.write('    field_1: %s\n' % csv_content[0])
-        # f.write('    field_2: %s\n' % csv_content[1])
-        # f.write('    field_3: %s\n' % csv_content[2])
     f.close()
 
 # takes a csvFile name and output file name/path
 def csvToYaml(csvFile, output):
+    global DELIMITER
+    global QUOTECHAR
+
     stream = open(output, 'w',encoding="utf-8")
     # https://stackoverflow.com/questions/18897029/read-csv-file-from-url-into-python-3-x-csv-error-iterator-should-return-str
     # need to decode bytes
-    csvOpen = csv.reader(codecs.iterdecode(csvFile, 'utf-8'))
+    csvOpen = csv.reader(codecs.iterdecode(csvFile, 'utf-8'), delimiter=DELIMITER, quotechar=QUOTECHAR)
     keys = next(csvOpen)
     for row in csvOpen:
         yaml.dump([dict(zip(keys, row))], stream, default_flow_style=False)
@@ -83,11 +89,24 @@ def singleCSV(csvFile, output=None):
 
 # print -h --help
 def usage():
-    print('\nUsage:\n-i --input: path/link of file (if link use url flag)\n-o --output: path name of output, if left out will convert in this folder using its name as output\n-u --url: url flag indicating input is a url and should be treated as such\n-f --folder: flag indicating input is directory/folder and should be treate as such\n-h --help: print this/help stuff.....')
+    msg = "Uso: \n"
+    msg = msg + "-i --input     ruta de archivo o enlace (si utiliza la bandera -u) \n"
+    msg = msg + "-o --output    ruta y nombre del archivo de salida, si no se especifica se utilizarán los datos de entrada \n"
+    msg = msg + "-m --model     nombre del modelo (app.tabla) \n"
+    msg = msg + "-d --delimiter especifica el caracter delimitador (por defecto se usará ;) \n"
+    msg = msg + "-u --url       bandera que indica que la entrada es una URL y debe tratarse como tal \n"
+    msg = msg + "-f --folder    bandera que indica que la entrada es un directorio y debe tratarse como tal \n"
+    msg = msg + "-h --help      muestra la forma de uso del comando \n"
+    print(msg)
 
 def main():
+    global DELIMITER
+    global MODEL
+
     try:
-        opts, args = getopt.getopt(sys.argv[1:], 'hi:o:uf', ['help', 'input=','output=', 'url', 'folder'])
+        opts, args = getopt.getopt(sys.argv[1:], 
+                                   'h:i:o:m:d:u:f', 
+                                   ['help', 'input','output', 'model', 'delimiter', 'url', 'folder'])
     except getopt.GetoptError as err:
         print(str(err))
         usage()
@@ -104,15 +123,19 @@ def main():
             usage()
             sys.exit()
         elif o in ('-i', '--input'):
-            csvFile = a
+            csvFile = a.strip()
         elif o in ('-o', '--output'):
-            output = a
+            output = a.strip()
+        elif o in ('-m', '--model'):
+            MODEL = a.strip()
+        elif o in ('-d', '--delimiter'):
+            DELIMITER = a.strip()
         elif o in ('-u', '--url'):
             url = True
         elif o in ('-f', '--folder'):
             folder = True
         else:
-            print('unhandled option')
+            print('opción no controlada')
     if url:
         urlCSV(csvFile, output)
         exit()
@@ -121,5 +144,6 @@ def main():
         exit()
     singleCSV(csvFile, output)
 
-if __name__ in ("__main__", "csvyml"):
+
+if __name__ in ("__main__"):
     main()

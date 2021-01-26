@@ -1,19 +1,20 @@
 from crispy_forms import bootstrap, helper, layout
 from django import forms
 
-from .models import Persona
+from apps.rrhh.models import Empleado
 
 
-class PersonaForm(forms.ModelForm):
-    # active = forms.BooleanField(initial=True)
 
+
+
+class EmpleadoForm(forms.ModelForm):
     class Meta:
-        model = Persona
-        fields = ['nombre', 'apellido', 'documento', 'fecha_nacimiento', 'active']
+        model = Empleado
+        fields = ['persona', 'legajo', 'fecha_ingreso', 'fecha_egreso', 
+                  'imagen', 'tarea', 'usuario', 'active']
         widgets = {
-            'documento': forms.TextInput(attrs={'placeholder': '12.345.678'}),
-            'cuit': forms.TextInput(attrs={'placeholder': '20-12345678-9'}),
-            'fecha_nacimiento': forms.TextInput(attrs={'placeholder': '30/03/2010'}),
+            'fecha_egreso': forms.TextInput(attrs={'placeholder': '30/03/2010'}),
+            'fecha_ingreso': forms.TextInput(attrs={'placeholder': '30/03/2010'}),
         }
 
     def __init__(self, *args, **kwargs):
@@ -38,23 +39,22 @@ class PersonaForm(forms.ModelForm):
         self.helper.layout.append(layout.HTML(bCancel))
 
 
-class PersonaFilterForm(helper.FormHelper):
+class EmpleadoFilterForm(helper.FormHelper):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.form_method = 'get'
 
         bFilter = '<button type="submit" class="btn btn-sm btn-primary btn-icon-split mr-1"><span class="icon text-white-50"><i class="fas fa-filter"></i></span><span class="text">Filtrar</span></button>'
-        bLimpiar = '<a class="btn btn-sm btn-secondary btn-icon-split" href="/persona/listado/"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Limpiar</span></a>'
+        bLimpiar = '<a class="btn btn-sm btn-secondary btn-icon-split" href="/rrhh/empleado/listado/"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Limpiar</span></a>'
 
         self.layout = layout.Layout(
             layout.Div(
                 layout.Row(
                     layout.Div(
                         layout.Row(
-                            layout.Column('nombre', css_class='col-lg-4 col-md-4 col-sm-12 mb-0'),
-                            layout.Column('apellido', css_class='col-lg-4 col-md-4 col-sm-12 mb-0'),
-                            layout.Column('documento', css_class='col-lg-3 col-md-3 col-sm-6 mb-0'),
-                            layout.Column('active', css_class='col-lg-1 col-md-1 col-sm-3 mb-0'),
+                            layout.Column('persona', css_class='col-lg-7 col-md-4 col-sm-12 mb-0'),
+                            layout.Column('legajo', css_class='col-lg-3 col-md-4 col-sm-12 mb-0'),
+                            layout.Column('active', css_class='col-lg-2 col-md-1 col-sm-3 mb-0'),
                         ),
                         css_class="col-lg-12 col-md-12 col-sm-12",
                     ),

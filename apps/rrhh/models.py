@@ -107,8 +107,8 @@ class Empleado(CommonStruct):
         aprobadas = 0
         pendientes = 0
 
-        if (self.fec_ing != None):
-            trabajado = int((x - self.fec_ing).days / 365)
+        if (self.fecha_ingreso != None):
+            trabajado = int((x - self.fecha_ingreso).days / 365)
             if trabajado >= 1 and trabajado < 5:
                 total = 14
             elif trabajado >= 5 and trabajado < 10:
@@ -118,10 +118,10 @@ class Empleado(CommonStruct):
             elif trabajado >= 20:
                 total = 35
             else:
-                if self.fec_ing.month < 7:
+                if self.fecha_ingreso.month < 7:
                     total = 14
                 else:
-                    total = int((x - self.fec_ing).days / 30)
+                    total = int((x - self.fecha_ingreso).days / 30)
 
             habiles = int((total / 7) * 5)
 
