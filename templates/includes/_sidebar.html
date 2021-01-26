@@ -5,7 +5,7 @@
 {% url 'comercial:index' as comercial_url %}
 {% url 'persona:index'   as persona_url %}
 
-<!-- Sidebar -->
+<!-- menú lateral izquierdo -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
@@ -16,8 +16,10 @@
         <div class="sidebar-brand-text mx-3">Lubre <sub>SRL</sub></div>
     </a>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <!-- separador -->
+    <hr class="sidebar-divider my-3">
+
+    <!-- dashboard -->
     <li class="nav-item {% if '/dashboard/' in request.path %} active {%endif%}">
         <a class="nav-link" href="{% url 'gestion:dashboard' %}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -25,35 +27,11 @@
         </a>
     </li>
 
-    <hr class="sidebar-divider my-0">
-    {% if perms.empresa.view_empresa %} 
-        <li class="nav-item {% if '/empresa/' in request.path %} active {%endif%}">
-            <a class="nav-link" href="{% url 'empresa:index' %}">
-                <i class="fas fa-fw fa-building"></i>
-                <span>Empresas</span>
-            </a>
-        </li>
-    {% endif %}
-    {% if perms.empresa.view_actividad %}
-        <li class="nav-item {% if '/actividad/' in request.path %} active {%endif%}">
-            <a class="nav-link" href="{% url 'actividad:index' %}">
-                <i class="fas fa-fw fa-layer-group"></i>
-                <span>Actividades</span>
-            </a>
-        </li>
-    {% endif %}
-    {% if perms.empresa.view_comercial %}
-        <li class="nav-item {% if '/comercial/' in request.path %} active {%endif%}">
-            <a class="nav-link" href="{% url 'comercial:index' %}">
-                <i class="fas fa-fw fa-user-tie"></i>
-                <span>Comerciales</span>
-            </a>
-        </li>
-    {% endif %}
-
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <!-- personas -->
     {% if perms.persona.view_persona %}
+        <!-- separador -->
+        <hr class="sidebar-divider my-0">
+
         <li class="nav-item {% if '/persona/' in request.path %} active {%endif%}">
             <a class="nav-link" href="{% url 'persona:index' %}">
                 <i class="fas fa-fw fa-users"></i>
@@ -61,6 +39,70 @@
             </a>
         </li>
     {% endif %}
+
+    <!-- empresa / comercial / actividad -->
+    {% if perms.empleado.view_empleado %} 
+        <!-- separador -->
+        <hr class="sidebar-divider my-0">
+
+        <li class="nav-item {% if '/empresas/' in request.path %} active {%endif%}">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEMP" aria-expanded="true" aria-controls="collapseEMP">
+                <i class="fas fa-fw fa-building"></i>
+                <span>Empresas</span>
+            </a>
+            <div id="collapseEMP" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item {% if '/empresas/empresa/' in request.path %} active {%endif%}" 
+                       href="{% url 'empresa:index' %}">
+                        <i class="fas fa-fw fa-building"></i> Empresas
+                    </a>
+                    {% if perms.empresa.view_comercial %}
+                        <a class="collapse-item {% if '/empresas/comercial/' in request.path %} active {%endif%}" 
+                        href="{% url 'comercial:index' %}">
+                         <i class="fas fa-fw fa-user-tie"></i> Comerciales
+                        </a>
+                    {% endif %}
+                    {% if perms.empresa.view_actividad %}
+                        <a class="collapse-item {% if '/empresas/actividad/' in request.path %} active {%endif%}" 
+                            href="{% url 'actividad:index' %}">
+                            <i class="fas fa-fw fa-layer-group"></i> Actividades
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </li>
+    {% endif %}
+
+    <!-- rrhh -->
+    {% if perms.empleado.view_empleado %} 
+        <hr class="sidebar-divider my-0">
+
+        <li class="nav-item {% if '/rrhh/' in request.path %} active {%endif%}">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRRHH" aria-expanded="true" aria-controls="collapseRRHH">
+                <i class="fas fa-fw fa-user-tie"></i>
+                <span>RRHH</span>
+            </a>
+            <div id="collapseRRHH" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item {% if '/empleado/' in request.path %} active {%endif%}" 
+                        href="{% url 'empleado:index' %}">
+                         <i class="fas fa-fw fa-users"></i> Empleados
+                    </a>
+                </div>
+            </div>
+        </li>
+    {% endif %}
+
+    
+
+
+
+
+
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
@@ -70,13 +112,14 @@
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 
+
     {% if request.META.SERVER_PORT == "8000" %}
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUI" aria-expanded="true" aria-controls="collapseUI">
             <i class="fas fa-fw fa-cog"></i>
             <span>UI</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseUI" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="/ui/blank">blank</a>
                 <a class="collapse-item" href="/ui/buttons">buttons</a>

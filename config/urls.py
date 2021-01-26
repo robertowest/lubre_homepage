@@ -40,18 +40,21 @@ urlpatterns = [
     # redireccionamiento --------------------------------------------------------------
     path('redirect/', LoginRedirect, name='redirect'),
 
-    # cartera -------------------------------------------------------------------------
+    # comunes -------------------------------------------------------------------------
     path('comunicacion/', include('apps.comunes.urls.comunicacion')),
     path('diccionario/', include('apps.comunes.urls.diccionario')),
     path('domicilio/', include('apps.comunes.urls.domicilio')),
 
-    path('actividad/', include('apps.empresa.urls.actividad')),
-    path('comercial/', include('apps.empresa.urls.comercial')),
-    path('empresa/', include('apps.empresa.urls.empresa')),
-    path('empresa_actividad/', include('apps.empresa.urls.empresa_actividad')),
+    # cartera -------------------------------------------------------------------------
+    path('empresas/empresa/', include('apps.empresa.urls.empresa')),
+    path('empresas/actividad/', include('apps.empresa.urls.actividad')),
+    path('empresas/comercial/', include('apps.empresa.urls.comercial')),
+    path('empresas/empresa_actividad/', include('apps.empresa.urls.empresa_actividad')),
 
+    # persona -------------------------------------------------------------------------
     path('persona/', include('apps.persona.urls')),
 
+    # gestión d lubre -----------------------------------------------------------------
     path('gestion/', include('apps.firebird.urls')),
 
     # estación de servicios -----------------------------------------------------------

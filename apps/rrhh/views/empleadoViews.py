@@ -58,13 +58,7 @@ class EmpleadoCreateView(PermissionRequiredMixin, generic.CreateView):
 class EmpleadoDetailView(PermissionRequiredMixin, generic.DetailView):
     permission_required = 'empleado.view_empleado'
     model = models.Empleado
-    # template_name = 'comunes/detalle.html'
-    template_name = '{app}/detalle.html'.format(app=model._meta.verbose_name.lower())
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['comunicaciones'] = context['empleado'].comunicaciones.filter(active=True)
-        return context
+    template_name = 'comunes/detalle.html'
 
 
 class EmpleadoUpdateView(PermissionRequiredMixin, generic.UpdateView):
