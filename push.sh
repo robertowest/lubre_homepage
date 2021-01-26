@@ -1,5 +1,4 @@
 #!/bin/bash
-# 054dac776c580a3844c541fd52719757e58dd55f
 
 git add .
 git add -f requirements.txt
