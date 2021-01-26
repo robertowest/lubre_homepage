@@ -1,12 +1,5 @@
 <!DOCTYPE html>
-{# Original : https://blackrockdigital.github.io/startbootstrap-sb-admin-2/ #}
-{# sbadmin2 : https://startbootstrap.com/previews/sb-admin-2/ #}
-{# Iconos   : https://fontawesome.com/icons?d=gallery&m=free #}
-
-{# https://github.com/BlackrockDigital/startbootstrap #}
-
 {% load static %}
-
 <html lang="es">
     <head>
         <meta charset="utf-8">
@@ -14,16 +7,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-
         <title>{% block title %}Lubre SRL{% endblock %}</title>
-
         {% include 'includes/_style_sheet.html' %}
-        {% block style %}{% endblock %}
     </head>
 
     <body id="page-top">
         <div id="wrapper">
-            {% include 'includes/_sidebar.html' %}
+            
     
             <div id="content-wrapper" class="d-flex flex-column">
                 <div id="content">
@@ -36,9 +26,6 @@
                             {% for message in messages %}
                             <div class="alert alert-{{message.level_tag}} alert-dismissible text-center" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                {% comment %}
-                                <strong>{% if message.level_tag == DEFAULT_MESSAGE_LEVELS.ERROR %}Error{% else %}{{ message.level_tag|title }}{% endif %}!</strong>
-                                {% endcomment %}
                                 {{ message }}
                             </div>
                             {% endfor %}
@@ -53,24 +40,9 @@
 
                 </div>
                 
-                {% include 'includes/_footer.html' %}
-                
             </div>
 
         </div>
-
-        <!-- botón flotante de acción -->
-        {% block floating-button-action %}{% endblock %}
-
-        {% include 'includes/_scroll_top_button.html' %}
-
-        <!-- ventana modal -->
-        {% block modal %}
-            {% include 'includes/_modal.html' %}
-        {% endblock %}
-
-        {% include 'includes/_java_script.html' %}
-        {% block js %}{% endblock %}
 
     </body>
 

@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-8 order-md-1">
                 <h4 class="mb-3">Por favor, ingrese su nombre para ser llamado cuando su pedido esté listo</h4>
-                <form action="{% url 'eess:cart_confirm' %}" method="post" class="needs-validation" novalidate>
+                <form action="{% url 'eess:cart_confirm_mp' %}" method="post" class="needs-validation" novalidate>
                     {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6 mb-3">
@@ -140,4 +140,10 @@
 
         </div>
     </div>
+{% endblock %}
+
+
+{% block js %}
+    <!-- https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js -->
+    <script src="{% static 'js/mercadopago/mercadopago.js' %}"></script>
 {% endblock %}

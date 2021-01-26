@@ -1,0 +1,17 @@
+{% extends "base_error.html" %}
+{% load static %}
+
+{% block content %}
+    <header>
+        <div class='container'>
+            <a href="/"><img alt="Lubre" src="{% static 'logo.png' %}" /></a>
+        </div>
+    </header>
+    <section id='error'>
+        <div class='container mt-4'>
+            <h1>No pudimos encontrar esta página.</h1>
+            <p>Es posible que esté intentando acceder a una página inexistente.</p>
+            <a class="btn btn-primary" href="/">Regresar a la página principal</a>
+        </div>
+    </section>
+{% endblock %}

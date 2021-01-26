@@ -67,7 +67,7 @@ DATABASES = {
     #     'PORT': '3306',
     #     'USER': 'root',
     #     'PASSWORD': 'roberto',
-    # },
+    # }, 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'PORT': '3306',
@@ -118,10 +118,23 @@ TEMPLATES[0]['OPTIONS']['context_processors'].append('apps.homepage.contexts.app
 # -------------------------------------------------------------------
 # archivos estáticos
 # -------------------------------------------------------------------
-if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# if DEBUG:
+#     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+# else:
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
+
 MEDIA_URL  = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -229,15 +242,17 @@ TEMPLATES[0]['OPTIONS']['context_processors'].append('cart.context_processor.car
 CART_SESSION_ID = 'cart'
 
 
-# ------------------------------------------------------------------------------
+# -------------------------------------------------------------------
 # configuración para django-mercadopago
-# key   TEST-5191778f-d0f0-46a9-8193-9ecb8b4a2e20
-# token TEST-7820321725229373-122610-f8c19c351611443dbc0d72e296501d3d-389742581
-# ------------------------------------------------------------------------------
+# ID: 1534881774722776
+# APP: mp-app-129446137-1048241
+# key: TEST-fce077e4-2235-4233-8909-58c0044ebad7
+# token: TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137
+# -------------------------------------------------------------------
 MERCADOPAGO = {
     'autoprocess': True,
     'success_url': 'eess:payment_received',
-    'failure_url': 'eess:payment_failure',
-    'pending_url': 'eess:payment_pending',
+    'failure_url': 'mp:payment_failure',
+    'pending_url': 'mp:payment_pending',
     'base_host': 'https://lubresrl.com.ar',
 }

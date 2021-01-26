@@ -9,7 +9,6 @@ from django.views import generic
 from django.views.generic.base import RedirectView
 
 from apps.comunes.functions import redirect_to, redirect_to_with_next, get_url_referer
-
 from . import models
 
 
@@ -160,6 +159,7 @@ def __total_carrito(carrito):
     return total
 
 
+import mercadopago
 def __mercadoPago(carrito):
     mp = mercadopago.MP('TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137')
 
@@ -194,7 +194,6 @@ def __mercadoPago(carrito):
 # -------------------------------------------------------------------
 # URL's para mercadopago
 # -------------------------------------------------------------------
-import mercadopago
 
 class PaidReceivedView(generic.TemplateView):
     # template_name = 'mercadoPago/paid_received.html'
@@ -253,104 +252,57 @@ def pedido_borrar(request, id):
 
 
 
-# PROBANDO EL FUNCIONAMIENTO DE MERCADO PAGO (sandbox)
+
 
 def cart_confirm_mp(request):
-    # if request.method == 'POST':
-    #     preference = {
-    #         "items": [
-    #             {
-    #                 "title": "Artículo de prueba",
-    #                 "quantity": 1,
-    #                 "currency_id": "ARS",  # Available currencies at: https://api.mercadopago.com/currencies
-    #                 "unit_price": 20
-    #             }
-    #         ],
-    #         "payers": [
-    #             {
-    #                 "name": "Marcelo",
-    #                 "surname": "Longobardi",
-    #                 "email": "mlonog@correo.com",
-    #                 "phone.number": "3816168252",
-    #                 "identification": {
-    #                     "type": "DNI",
-    #                     "number": "12345678",
-    #                 },
-    #                 "address": {
-    #                     "zip_code": "4107",
-    #                     "street_name": "LA RIOJA",
-    #                     "street_number": "150",
-    #                 }
-    #             },
-    #         ],
-    #     }
+    if request.method == 'GET':
+        pass
 
-    cart = Cart(request)
-
-    items = []
-    for key, value in cart.cart.items():
-        item = {
-            "title": value['name'],
-            "quantity": int(value['quantity']),
-            "currency_id": "ARS",
-            "unit_price": float(value['price'])
-        }
-        items.append(item)
-
-    # métodos de pago excluídos
-    payment_methods = {
-        "excluded_payment_methods": [
-            { "id": "master" },
-            { "id": "amex" },
-            { "id": "diners" },
-            { "id": "naranja" },
-            { "id": "nativa" },
-            { "id": "shopping" },
-            { "id": "cencosud" },
-            { "id": "cmr_master" },
-            { "id": "argencard" },
-            { "id": "cordial" },
-            { "id": "cordobesa" },
-            { "id": "cabal" },
-            { "id": "debmaster" },
-            { "id": "maestro" },
-            { "id": "debcabal" },
-            { "id": "pagofacil" },
-            { "id": "rapipago" },
-            { "id": "bapropagos" },
-            { "id": "cargavirtual" },
-            { "id": "cobroexpress" },
-            { "id": "redlink" },
-            { "id": "account_money" }
-        ],
-        "installments": 1
-    }
-    
-    # urls
-    back_urls = {
-        "success": reverse('eess:payment_received'),
-        "failure": reverse('eess:payment_failure'),
-        "pending": reverse('eess:payment_pending')
-    }
-
-    # access_token = "TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137"
-    # mp = mercadopago.MP(access_token)
-    # preferenceresult = mp.create_preference(preference)
-    # url = preferenceresult["response"]["init_point"]
-
-    # SANDBOX
-    mp = mercadopago.MP("TEST-7820321725229373-122610-f8c19c351611443dbc0d72e296501d3d-389742581")
-    mp.sandbox_mode(True)
     preference = {
-        "items": items,
-        "back_urls": back_urls
+        "items": [
+            {
+                "title": "Título del art.",
+                "quantity": 1,
+                "currency_id": "ARS",  # Available currencies at: https://api.mercadopago.com/currencies
+                "unit_price": 1800
+            }
+        ],
+        "payers": [
+            {
+                "name": "Marcelo",
+                "surname": "Longobardi",
+                "email": "mlonog@correo.com",
+                "phone.number": "3816168252",
+                "identification": {
+                    "type": "DNI",
+                    "number": "20203911",
+                },
+                "address": {
+                    "zip_code": "4107",
+                    "street_name": "LA RIOJA",
+                    "street_number": "150",
+                }
+            },
+        ],
+        # "back_urls": [
+        #     {
+        #         "success": reverse('eess:payment_received'),
+        #         "failure": reverse('eess:payment_failure'),
+        #         "pending": reverse('eess:payment_pending')
+        #     },
+        # ]
     }
+
+    access_token = "TEST-1534881774722776-120914-533d8cfe4ab6b720548a020387446186-129446137"
+    mp = mercadopago.MP(access_token)
+    mp.sandbox_mode(True)                   # rw
     preferenceresult = mp.create_preference(preference)
 
-    # # back_urls
-    # preferenceresult['response']['back_urls']['success'] = reverse('eess:payment_received')
-    # preferenceresult['response']['back_urls']['failure'] = reverse('eess:payment_failure')
-    # preferenceresult['response']['back_urls']['pending'] = reverse('eess:payment_pending')
-    
+    # back_urls
+    preferenceresult['response']['back_urls']['success'] = reverse('eess:payment_received')
+    preferenceresult['response']['back_urls']['failure'] = reverse('eess:payment_failure')
+    preferenceresult['response']['back_urls']['pending'] = reverse('eess:payment_pending')
+
+    # url = preferenceresult["response"]["init_point"]
     url = preferenceresult["response"]["sandbox_init_point"]
     return redirect(url)

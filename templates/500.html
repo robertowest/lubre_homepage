@@ -1,0 +1,18 @@
+{% extends "base_error.html" %}
+{% load static %}
+
+{% block content %}
+    <header>
+        <div class='container'>
+            <a href="/"><img alt="Lubre" src="{% static 'logo.png' %}" /></a>
+        </div>
+    </header>
+    <section id='error'>
+        <div class='container mt-4'>
+            <h1>Ooops!!!</h1>
+            <p>¡Parece que algo salió mal!.</p>
+            <p>Realizamos un seguimiento de estos errores automáticamente, pero si el problema persiste, no dude en contactarnos.</p>
+            <a class="btn btn-primary" href="/">Regresar a la página principal</a>
+        </div>
+    </section>
+{% endblock %}
