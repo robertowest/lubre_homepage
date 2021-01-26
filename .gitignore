@@ -325,8 +325,6 @@ fabric.properties
 
 
 ### Mis Configuraciones ###
-.env/
-.vscode/
 *.bak
 *.tar.gz
 *.sh
