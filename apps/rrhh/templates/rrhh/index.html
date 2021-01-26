@@ -1,0 +1,119 @@
+{% extends 'default_base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-3">
+            <!-- proximos -->
+            {% if proximos %}
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5 class="card-title">Próximos</h5>
+                </div>
+                <div class="list-group">
+                    {% for obj in proximos %}
+                    <a href="#" class="read-modal list-group-item"
+                                data-url="{% url 'rrhh:mantenimiento_read' obj.pk %}">
+                        {{obj}}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- vencidos -->
+            {% if vencimientos %}
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-header">
+                    <h5 class="card-title">Vencidos</h5>
+                </div>
+                <div class="list-group">
+                    {% for obj in vencimientos %}
+                    <a href="#" class="read-modal list-group-item"
+                                data-url="{% url 'rrhh:mantenimiento_read' obj.pk %}">
+                        {{obj}}
+                        <span class="badge badge-dark pull-right">{{obj.dias_vencidos}}</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- mantenimientos -->
+            {% if mantenimientos %}
+            <div class="card border-warning mb-3">
+                <div class="card-header">
+                    <h5 class="card-title">Mantenimientos</h5>
+                </div>
+                <div class="list-group">
+                    {% for obj in mantenimientos %}
+                    <a href="#" class="read-modal list-group-item"
+                                data-url="{% url 'rrhh:mantenimiento_read' obj.pk %}">
+                        {{obj}}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+
+        <div class="col-sm-6">
+            <!-- Alert
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Synergize:</strong> Seamlessly visualize quality intellectual capital!
+            </div>
+            -->
+
+            <!-- noticias -->
+            {% for post in noticias %}
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="#">{{ post.titulo }}</a></h4>
+                    <p>{{post.contenido|slice:":200"}} ...</p>
+
+                    {% comment %}
+                    <ul class="list-inline">
+                        <li><a href="#"><span class="glyphicon glyphicon-comment"></span> 2 Comentarios</a></li>
+                    </ul>
+                    {% endcomment %}
+
+                    <!--
+                    <a href="{% url 'rrhh:post_detail' post.slug %}"
+                       class="btn btn-primary pull-right"
+                       data-toggle="modal" data-target="#modal" title="edit item" data-tooltip>Leer más &rarr;</a>
+                    -->
+
+                    <button type="button" class="read-modal btn btn-primary float-right"
+                            data-url="{% url 'rrhh:post_detail' post.slug %}">Leer más &rarr;</button>
+                </div>
+            </div>
+            <hr>
+            {% endfor %}
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5 class="card-title">Semáforo</h5>
+                </div>
+                <div class="card-body">
+                    <div class="progress mb-1" style="height: 20px;">
+                        <div class="progress-bar bg-success" role="progressbar"
+                             style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                    </div>
+                    <div class="progress mb-1" style="height: 20px;">
+                        <div class="progress-bar bg-warning" role="progressbar"
+                             style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                    </div>
+                    <div class="progress mb-1" style="height: 20px;">
+                        <div class="progress-bar bg-danger" role="progressbar"
+                             style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

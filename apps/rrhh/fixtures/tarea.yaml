@@ -1,0 +1,75 @@
+- model: rrhh.tarea
+  pk: 1
+  fields:
+    active: 1
+    descripcion: Administración
+- model: rrhh.tarea
+  pk: 2
+  fields:
+    active: 1
+    descripcion: Administrativo
+- model: rrhh.tarea
+  pk: 3
+  fields:
+    active: 1
+    descripcion: Auxiliar
+- model: rrhh.tarea
+  pk: 4
+  fields:
+    active: 1
+    descripcion: Chofer
+- model: rrhh.tarea
+  pk: 5
+  fields:
+    active: 1
+    descripcion: Chofer Combustible
+- model: rrhh.tarea
+  pk: 6
+  fields:
+    active: 1
+    descripcion: Chofer Granel
+- model: rrhh.tarea
+  pk: 7
+  fields:
+    active: 1
+    descripcion: Comercial
+- model: rrhh.tarea
+  pk: 8
+  fields:
+    active: 1
+    descripcion: Ing. Agrónomo
+- model: rrhh.tarea
+  pk: 9
+  fields:
+    active: 1
+    descripcion: Ingenio
+- model: rrhh.tarea
+  pk: 10
+  fields:
+    active: 1
+    descripcion: Inst. Colaboradora
+- model: rrhh.tarea
+  pk: 11
+  fields:
+    active: 1
+    descripcion: Jefe de Estación
+- model: rrhh.tarea
+  pk: 12
+  fields:
+    active: 1
+    descripcion: Maestranza
+- model: rrhh.tarea
+  pk: 13
+  fields:
+    active: 1
+    descripcion: Mantenimiento
+- model: rrhh.tarea
+  pk: 14
+  fields:
+    active: 1
+    descripcion: Vendedor
+- model: rrhh.tarea
+  pk: 15
+  fields:
+    active: 1
+    descripcion: Vendedor de Playa

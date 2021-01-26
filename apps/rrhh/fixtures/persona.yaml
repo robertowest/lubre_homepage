@@ -1,0 +1,1010 @@
+- model: persona.persona
+  pk: 2502
+  fields:
+    active: 1
+    apellido: Ledesma
+    nombre: Martin Alejandro
+    documento: 24803324
+    cuil: 20-24803324-0
+    sexo: M
+    fecha_nacimiento: 1975-07-17
+- model: persona.persona
+  pk: 2503
+  fields:
+    active: 1
+    apellido: Mastrizzo
+    nombre: Jose Luis Mariano
+    documento: 29081670
+    cuil: 20-29081670-0
+    sexo: M
+    fecha_nacimiento: 1981-09-21
+- model: persona.persona
+  pk: 2504
+  fields:
+    active: 1
+    apellido: Frias
+    nombre: Juan Eduardo
+    documento: 23826076
+    cuil: 20-23826076-1
+    sexo: M
+    fecha_nacimiento: 1974-02-10
+- model: persona.persona
+  pk: 2505
+  fields:
+    active: 1
+    apellido: Quinteros
+    nombre: Raul Armando
+    documento: 21335348
+    cuil: 23-21335348-9
+    sexo: M
+    fecha_nacimiento: 1970-06-18
+- model: persona.persona
+  pk: 2506
+  fields:
+    active: 1
+    apellido: Valeros
+    nombre: Miguel Anibal
+    documento: 17859577
+    cuil: 20-17859577-7
+    sexo: M
+    fecha_nacimiento: 1966-07-20
+- model: persona.persona
+  pk: 2507
+  fields:
+    active: 1
+    apellido: Tamer
+    nombre: Alejandro
+    documento: 21328072
+    cuil: 20-21328072-5
+    sexo: M
+    fecha_nacimiento: 1970-03-11
+- model: persona.persona
+  pk: 2508
+  fields:
+    active: 1
+    apellido: Bustos
+    nombre: Leandro
+    documento: 23517052
+    cuil: 20-23517052-4
+    sexo: M
+    fecha_nacimiento: 1973-08-24
+- model: persona.persona
+  pk: 2509
+  fields:
+    active: 1
+    apellido: Argañaraz
+    nombre: German David
+    documento: 30760485
+    cuil: 20-30760485-0
+    sexo: M
+    fecha_nacimiento: 1984-04-27
+- model: persona.persona
+  pk: 2510
+  fields:
+    active: 1
+    apellido: Argañaraz
+    nombre: Gabriela Marta Soledad
+    documento: 28680345
+    cuil: 27-28680345-3
+    sexo: F
+    fecha_nacimiento: 1981-01-24
+- model: persona.persona
+  pk: 2511
+  fields:
+    active: 1
+    apellido: Romano
+    nombre: Nelson Omar
+    documento: 26914708
+    cuil: 20-26914708-4
+    sexo: M
+    fecha_nacimiento: 1978-11-05
+- model: persona.persona
+  pk: 2512
+  fields:
+    active: 1
+    apellido: Gonzalez
+    nombre: Pablo Marcelo
+    documento: 24340076
+    cuil: 20-24340076-8
+    sexo: M
+    fecha_nacimiento: 1974-11-08
+- model: persona.persona
+  pk: 2513
+  fields:
+    active: 1
+    apellido: Espeche
+    nombre: Jorge Armando
+    documento: 25212795
+    cuil: 20-25212795-0
+    sexo: M
+    fecha_nacimiento: 1976-04-23
+- model: persona.persona
+  pk: 2514
+  fields:
+    active: 1
+    apellido: Sanchez
+    nombre: Eleonora
+    documento: 26684186
+    cuil: 27-26684186-3
+    sexo: F
+    fecha_nacimiento: 1978-06-13
+- model: persona.persona
+  pk: 2515
+  fields:
+    active: 1
+    apellido: Garcia
+    nombre: Manuel Humberto
+    documento: 14467692
+    cuil: 20-14467692-1
+    sexo: M
+    fecha_nacimiento: 1961-01-01
+- model: persona.persona
+  pk: 2516
+  fields:
+    active: 1
+    apellido: Garcia
+    nombre: Juan Manuel
+    documento: 31853175
+    cuil: 20-31853175-8
+    sexo: M
+    fecha_nacimiento: 1985-08-18
+- model: persona.persona
+  pk: 2517
+  fields:
+    active: 1
+    apellido: Rojas
+    nombre: Ruben Ignacio
+    documento: 22450404
+    cuil: 20-22450404-8
+    sexo: M
+    fecha_nacimiento: 1971-11-11
+- model: persona.persona
+  pk: 2518
+  fields:
+    active: 1
+    apellido: Espinoza
+    nombre: Hugo Antonio
+    documento: 32828839
+    cuil: 20-32828839-8
+    sexo: M
+    fecha_nacimiento: 1987-01-07
+- model: persona.persona
+  pk: 2519
+  fields:
+    active: 1
+    apellido: Boboli
+    nombre: Ernesto Clodomiro
+    documento: 20596901
+    cuil: 20-20596901-3
+    sexo: M
+    fecha_nacimiento: 1968-11-03
+- model: persona.persona
+  pk: 2520
+  fields:
+    active: 1
+    apellido: Ifran
+    nombre: Washigton Leonel
+    documento: 29080152
+    cuil: 20-29080152-5
+    sexo: M
+    fecha_nacimiento: 1981-09-11
+- model: persona.persona
+  pk: 2521
+  fields:
+    active: 1
+    apellido: Abalos
+    nombre: Jorge Eduardo
+    documento: 20542693
+    cuil: 20-20542693-1
+    sexo: M
+    fecha_nacimiento: 1969-01-28
+- model: persona.persona
+  pk: 2522
+  fields:
+    active: 1
+    apellido: Diaz
+    nombre: Walter Alfredo
+    documento: 20798743
+    cuil: 20-20798743-4
+    sexo: M
+    fecha_nacimiento: 1969-09-06
+- model: persona.persona
+  pk: 2523
+  fields:
+    active: 1
+    apellido: Suarez
+    nombre: Jose Manuel
+    documento: 22613719
+    cuil: 20-22613719-0
+    sexo: M
+    fecha_nacimiento: 1972-05-03
+- model: persona.persona
+  pk: 2524
+  fields:
+    active: 1
+    apellido: Saenz
+    nombre: Cristian David
+    documento: 25318501
+    cuil: 20-25318501-6
+    sexo: M
+    fecha_nacimiento: 1977-01-17
+- model: persona.persona
+  pk: 2525
+  fields:
+    active: 1
+    apellido: Durand
+    nombre: Hector Julian
+    documento: 23517041
+    cuil: 20-23517041-9
+    sexo: M
+    fecha_nacimiento: 1973-08-25
+- model: persona.persona
+  pk: 2526
+  fields:
+    active: 1
+    apellido: Franco
+    nombre: Ricardo Fidel
+    documento: 10645582
+    cuil: 20-10645582-2
+    sexo: M
+    fecha_nacimiento: 1953-02-10
+- model: persona.persona
+  pk: 2527
+  fields:
+    active: 1
+    apellido: Diambra
+    nombre: Stella Maris
+    documento: 14481200
+    cuil: 27-14481200-5
+    sexo: F
+    fecha_nacimiento: 1962-04-17
+- model: persona.persona
+  pk: 2528
+  fields:
+    active: 1
+    apellido: Lopez Gonzalez
+    nombre: Gustavo A.
+    documento: 11475624
+    cuil: 20-11475624-6
+    sexo: M
+    fecha_nacimiento: 1955-02-09
+- model: persona.persona
+  pk: 2529
+  fields:
+    active: 1
+    apellido: Bauque
+    nombre: Luis Fernando
+    documento: 13848971
+    cuil: 20-13848971-0
+    sexo: M
+    fecha_nacimiento: 1960-02-22
+- model: persona.persona
+  pk: 2530
+  fields:
+    active: 1
+    apellido: Mariona
+    nombre: Corina Emilia
+    documento: 05727767
+    cuil: 27-05727767-5
+    sexo: F
+    fecha_nacimiento: 1948-05-23
+- model: persona.persona
+  pk: 2531
+  fields:
+    active: 1
+    apellido: Lara
+    nombre: Luis Marcos
+    documento: 23019062
+    cuil: 20-23019062-4
+    sexo: M
+    fecha_nacimiento: 1972-10-22
+- model: persona.persona
+  pk: 2532
+  fields:
+    active: 1
+    apellido: Ramos
+    nombre: Juan Miguel
+    documento: 16735424
+    cuil: 20-16735424-7
+    sexo: M
+    fecha_nacimiento: 1965-01-07
+- model: persona.persona
+  pk: 2533
+  fields:
+    active: 1
+    apellido: Oliva
+    nombre: César Oscar
+    documento: 28479584
+    cuil: 23-28479584-9
+    sexo: M
+    fecha_nacimiento: 1981-02-01
+- model: persona.persona
+  pk: 2534
+  fields:
+    active: 1
+    apellido: Bazal
+    nombre: Juan Enrique
+    documento: 29114370
+    cuil: 23-29114370-9
+    sexo: M
+    fecha_nacimiento: 1981-12-21
+- model: persona.persona
+  pk: 2535
+  fields:
+    active: 1
+    apellido: Fernandez
+    nombre: Jose Emiliano
+    documento: 24802750
+    cuil: 23-24802750-9
+    sexo: M
+    fecha_nacimiento: 1975-08-24
+- model: persona.persona
+  pk: 2536
+  fields:
+    active: 1
+    apellido: D Angelo
+    nombre: Vicente Atilio
+    documento: 08036704
+    cuil: 20-08036704-0
+    sexo: M
+    fecha_nacimiento: 1949-12-20
+- model: persona.persona
+  pk: 2537
+  fields:
+    active: 1
+    apellido: Andjel
+    nombre: Sergio Fabian
+    documento: 17858969
+    cuil: 20-17858969-6
+    sexo: M
+    fecha_nacimiento: 1966-10-25
+- model: persona.persona
+  pk: 2538
+  fields:
+    active: 1
+    apellido: Tan Jun Roldan
+    nombre: Veronica Beatriz
+    documento: 24059088
+    cuil: 27-24059088-9
+    sexo: F
+    fecha_nacimiento: 1974-07-24
+- model: persona.persona
+  pk: 2539
+  fields:
+    active: 1
+    apellido: La Marca
+    nombre: Guillermo Alberto
+    documento: 17269798
+    cuil: 20-17269798-5
+    sexo: M
+    fecha_nacimiento: 1965-09-11
+- model: persona.persona
+  pk: 2540
+  fields:
+    active: 1
+    apellido: Bandeo
+    nombre: Mauro Aderito
+    documento: 27336069
+    cuil: 20-27336069-8
+    sexo: M
+    fecha_nacimiento: 1979-05-23
+- model: persona.persona
+  pk: 2541
+  fields:
+    active: 1
+    apellido: Pereyra
+    nombre: Raquel
+    documento: 22593246
+    cuil: 27-22593246-3
+    sexo: F
+    fecha_nacimiento: 1971-02-15
+- model: persona.persona
+  pk: 2542
+  fields:
+    active: 1
+    apellido: Galovard
+    nombre: Fernando
+    documento: 29242560
+    cuil: 20-29242560-1
+    sexo: M
+    fecha_nacimiento: 1982-02-08
+- model: persona.persona
+  pk: 2543
+  fields:
+    active: 1
+    apellido: Argañaraz
+    nombre: Christian Luis Guillermo
+    documento: 29997474
+    cuil: 20-29997474-0
+    sexo: M
+    fecha_nacimiento: 1983-01-11
+- model: persona.persona
+  pk: 2545
+  fields:
+    active: 1
+    apellido: Divizia
+    nombre: Mario
+    documento: 17267954
+    cuil: 20-17267954-5
+    sexo: M
+    fecha_nacimiento: 1965-02-26
+- model: persona.persona
+  pk: 2546
+  fields:
+    active: 1
+    apellido: Campos
+    nombre: Norma Noemi
+    documento: 27562938
+    cuil: 27-27562938-9
+    sexo: F
+    fecha_nacimiento: 1979-08-27
+- model: persona.persona
+  pk: 2547
+  fields:
+    active: 1
+    apellido: Gondek
+    nombre: Sebastian Alejandro
+    documento: 25543185
+    cuil: 20-25543185-5
+    sexo: M
+    fecha_nacimiento: 1976-09-19
+- model: persona.persona
+  pk: 2548
+  fields:
+    active: 1
+    apellido: Perez Barot
+    nombre: Matias
+    documento: 30758943
+    cuil: 20-30758943-6
+    sexo: M
+    fecha_nacimiento: 1984-01-10
+- model: persona.persona
+  pk: 2549
+  fields:
+    active: 1
+    apellido: Liuzi Tabuenca
+    nombre: Diego Jose
+    documento: 34185591
+    cuil: 20-34185591-9
+    sexo: M
+    fecha_nacimiento: 1989-11-23
+- model: persona.persona
+  pk: 2550
+  fields:
+    active: 1
+    apellido: Teran
+    nombre: Sebastian Augusto
+    documento: 27962205
+    cuil: 20-27962205-8
+    sexo: M
+    fecha_nacimiento: 1980-04-14
+- model: persona.persona
+  pk: 2551
+  fields:
+    active: 1
+    apellido: Deheza
+    nombre: Rodolfo
+    documento: 35523655
+    cuil: 20-35523655-3
+    sexo: M
+    fecha_nacimiento: 1990-08-24
+- model: persona.persona
+  pk: 2552
+  fields:
+    active: 1
+    apellido: Esquerra
+    nombre: Martin Arnaldo
+    documento: 25498914
+    cuil: 20-25498914-3
+    sexo: M
+    fecha_nacimiento: 1976-09-09
+- model: persona.persona
+  pk: 2554
+  fields:
+    active: 1
+    apellido: Brito
+    nombre: Ramon Antonio
+    documento: 17643282
+    cuil: 23-17643282-9
+    sexo: M
+    fecha_nacimiento: 1966-09-10
+- model: persona.persona
+  pk: 2555
+  fields:
+    active: 1
+    apellido: Villavicencio
+    nombre: Gustavo Ramon
+    documento: 28968514
+    cuil: 20-28968514-7
+    sexo: M
+    fecha_nacimiento: 1981-09-23
+- model: persona.persona
+  pk: 2556
+  fields:
+    active: 1
+    apellido: Sánchez
+    nombre: Matias Augusto
+    documento: 34132189
+    cuil: 20-34132189-2
+    sexo: M
+    fecha_nacimiento: 1989-07-20
+- model: persona.persona
+  pk: 2557
+  fields:
+    active: 1
+    apellido: Cisterna
+    nombre: Guillermo Eduardo
+    documento: 25543711
+    cuil: 23-25543711-9
+    sexo: M
+    fecha_nacimiento: 1976-11-18
+- model: persona.persona
+  pk: 2558
+  fields:
+    active: 1
+    apellido: Iturre
+    nombre: Sergio Adrian
+    documento: 28291443
+    cuil: 20-28291443-4
+    sexo: M
+    fecha_nacimiento: 1980-11-11
+- model: persona.persona
+  pk: 2559
+  fields:
+    active: 1
+    apellido: Aguirre
+    nombre: Juan Marcos
+    documento: 29310924
+    cuil: 23-29310924-9
+    sexo: M
+    fecha_nacimiento: 1982-09-30
+- model: persona.persona
+  pk: 2560
+  fields:
+    active: 1
+    apellido: Soria
+    nombre: Carlos Ignacio
+    documento: 32206753
+    cuil: 20-32206753-5
+    sexo: M
+    fecha_nacimiento: 1986-04-11
+- model: persona.persona
+  pk: 2561
+  fields:
+    active: 1
+    apellido: Frias
+    nombre: Jonathan David
+    documento: 38183509
+    cuil: 20-38183509-0
+    sexo: M
+    fecha_nacimiento: 1994-03-07
+- model: persona.persona
+  pk: 2565
+  fields:
+    active: 1
+    apellido: Vera
+    nombre: Franco Gabriel
+    documento: 36550631
+    cuil: 20-36550631-1
+    sexo: M
+    fecha_nacimiento: 1993-02-08
+- model: persona.persona
+  pk: 2566
+  fields:
+    active: 1
+    apellido: Muratore
+    nombre: Luis Martin
+    documento: 29532737
+    cuil: 20-29532737-6
+    sexo: M
+    fecha_nacimiento: 1982-07-11
+- model: persona.persona
+  pk: 2568
+  fields:
+    active: 1
+    apellido: Barbaglia
+    nombre: Nicolas Alfredo
+    documento: 39079038
+    cuil: 20-39079038-5
+    sexo: M
+    fecha_nacimiento: 1995-06-01
+- model: persona.persona
+  pk: 2569
+  fields:
+    active: 1
+    apellido: Albornoz
+    nombre: Luis Ignacio
+    documento: 38023582
+    cuil: 20-38023582-0
+    sexo: M
+    fecha_nacimiento: 1994-06-24
+- model: persona.persona
+  pk: 2570
+  fields:
+    active: 1
+    apellido: Barbaglia
+    nombre: Hugo Daniel
+    documento: 26684876
+    cuil: 20-26684876-6
+    sexo: M
+    fecha_nacimiento: 1978-07-12
+- model: persona.persona
+  pk: 2571
+  fields:
+    active: 1
+    apellido: Bocanera
+    nombre: Marcela Josefina
+    documento: 32853159
+    cuil: 27-32853159-9
+    sexo: F
+    fecha_nacimiento: 1987-02-07
+- model: persona.persona
+  pk: 2572
+  fields:
+    active: 1
+    apellido: Ortiz
+    nombre: Luis Maria
+    documento: 38743068
+    cuil: 20-38743068-8
+    sexo: M
+    fecha_nacimiento: 1995-01-05
+- model: persona.persona
+  pk: 2573
+  fields:
+    active: 1
+    apellido: Diaz
+    nombre: Camila Elizabeth
+    documento: 39572738
+    cuil: 27-39572738-4
+    sexo: F
+    fecha_nacimiento: 1996-04-03
+- model: persona.persona
+  pk: 2574
+  fields:
+    active: 1
+    apellido: Gonzalez Frau
+    nombre: Jorge Luis
+    documento: 37091527
+    cuil: 20-37091527-0
+    sexo: M
+    fecha_nacimiento: 1992-12-16
+- model: persona.persona
+  pk: 2575
+  fields:
+    active: 1
+    apellido: Zamorano
+    nombre: Lucas Sebastian
+    documento: 37091519
+    cuil: 23-37091519-9
+    sexo: M
+    fecha_nacimiento: 1992-12-21
+- model: persona.persona
+  pk: 2576
+  fields:
+    active: 1
+    apellido: Berta
+    nombre: Facundo Julian
+    documento: 41126430
+    cuil: 20-41126430-1
+    sexo: M
+    fecha_nacimiento: 1998-02-10
+- model: persona.persona
+  pk: 2577
+  fields:
+    active: 1
+    apellido: Sanchez
+    nombre: Belen Luciana
+    documento: 35806903
+    cuil: 27-35806903-2
+    sexo: F
+    fecha_nacimiento: 1992-03-10
+- model: persona.persona
+  pk: 2578
+  fields:
+    active: 1
+    apellido: Albornoz
+    nombre: Ivan Nahuel
+    documento: 41536013
+    cuil: 20-41536013-5
+    sexo: M
+    fecha_nacimiento: 1999-03-02
+- model: persona.persona
+  pk: 2579
+  fields:
+    active: 1
+    apellido: Basualdo
+    nombre: Enzo Gabriel
+    documento: 44188834
+    cuil: 20-44188834-2
+    sexo: M
+    fecha_nacimiento: 1998-05-10
+- model: persona.persona
+  pk: 2580
+  fields:
+    active: 1
+    apellido: Lescano
+    nombre: Sebastian
+    documento: 40696644
+    cuil: 20-40696644-6
+    sexo: M
+    fecha_nacimiento: 1997-09-18
+- model: persona.persona
+  pk: 2581
+  fields:
+    active: 1
+    apellido: Gramajo
+    nombre: Franco Roman
+    documento: 38743036
+    cuil: 23-38743036-9
+    sexo: M
+    fecha_nacimiento: 1995-07-03
+- model: persona.persona
+  pk: 2582
+  fields:
+    active: 1
+    apellido: Juarez
+    nombre: Enzo Jesus
+    documento: 40531472
+    cuil: 20-40531472-0
+    sexo: M
+    fecha_nacimiento: 1997-07-17
+- model: persona.persona
+  pk: 2583
+  fields:
+    active: 1
+    apellido: Acevedo
+    nombre: Diego Fernando
+    documento: 38742991
+    cuil: 20-38742991-4
+    sexo: M
+    fecha_nacimiento: 1995-06-08
+- model: persona.persona
+  pk: 2585
+  fields:
+    active: 1
+    apellido: Rueda
+    nombre: Agustin Blas
+    documento: 37527236
+    cuil: 23-37527236-9
+    sexo: M
+    fecha_nacimiento: 1993-11-08
+- model: persona.persona
+  pk: 2586
+  fields:
+    active: 1
+    apellido: Nazar
+    nombre: Federico Gabriel
+    documento: 39666759
+    cuil: 20-39666759-3
+    sexo: M
+    fecha_nacimiento: 1996-05-15
+- model: persona.persona
+  pk: 2587
+  fields:
+    active: 1
+    apellido: Monteros
+    nombre: Johana Giselle
+    documento: 36037942
+    cuil: 27-36037942-1
+    sexo: F
+    fecha_nacimiento: 1991-08-12
+- model: persona.persona
+  pk: 2588
+  fields:
+    active: 1
+    apellido: Lesmo
+    nombre: Mariana Micaela
+    documento: 39730360
+    cuil: 27-39730360-3
+    sexo: F
+    fecha_nacimiento: 1996-06-19
+- model: persona.persona
+  pk: 2589
+  fields:
+    active: 1
+    apellido: Rojas
+    nombre: Fatima Giselle
+    documento: 33048369
+    cuil: 27-33048369-0
+    sexo: F
+    fecha_nacimiento: 1987-04-23
+- model: persona.persona
+  pk: 2590
+  fields:
+    active: 1
+    apellido: Alderete
+    nombre: Maira Sara Lina
+    documento: 40435471
+    cuil: 27-40435471-5
+    sexo: F
+    fecha_nacimiento: 1997-04-01
+- model: persona.persona
+  pk: 2591
+  fields:
+    active: 1
+    apellido: Castellanos
+    nombre: Luis Alberto
+    documento: 29010512
+    cuil: 23-29010512-9
+    sexo: M
+    fecha_nacimiento: 1981-08-08
+- model: persona.persona
+  pk: 2592
+  fields:
+    active: 1
+    apellido: Ortiz
+    nombre: Maria Luz
+    documento: 35806635
+    cuil: 27-35806635-1
+    sexo: F
+    fecha_nacimiento: 1991-10-04
+- model: persona.persona
+  pk: 2593
+  fields:
+    active: 1
+    apellido: González
+    nombre: Guadalupe
+    documento: 38060872
+    cuil: 27-38060872-9
+    sexo: F
+    fecha_nacimiento: 1994-09-05
+- model: persona.persona
+  pk: 2594
+  fields:
+    active: 1
+    apellido: Olivera
+    nombre: Pablo Daniel
+    documento: 22214081
+    cuil: 20-22214081-2
+    sexo: M
+    fecha_nacimiento: 1971-09-21
+- model: persona.persona
+  pk: 2595
+  fields:
+    active: 1
+    apellido: Oliva
+    nombre: Carlos Matias
+    documento: 37503369
+    cuil: 20-37503369-1
+    sexo: M
+    fecha_nacimiento: 1993-09-05
+- model: persona.persona
+  pk: 2596
+  fields:
+    active: 1
+    apellido: Castellanos
+    nombre: Walter Daniel
+    documento: 34341013
+    cuil: 20-34341013-2
+    sexo: M
+    fecha_nacimiento: 1989-07-11
+- model: persona.persona
+  pk: 2597
+  fields:
+    active: 1
+    apellido: Molina
+    nombre: Lizabeth del Carmen
+    documento: 35519621
+    cuil: 27-35519621-1
+    sexo: F
+    fecha_nacimiento: 1991-03-02
+- model: persona.persona
+  pk: 2598
+  fields:
+    active: 1
+    apellido: Luna
+    nombre: Santiago Ariel
+    documento: 40088293
+    cuil: 20-40088293-3
+    sexo: M
+    fecha_nacimiento: 1996-12-06
+- model: persona.persona
+  pk: 2599
+  fields:
+    active: 1
+    apellido: Bulacio
+    nombre: Sofia Alejandra
+    documento: 39143378
+    cuil: 27-39143378-5
+    sexo: F
+    fecha_nacimiento: 1995-08-15
+- model: persona.persona
+  pk: 2600
+  fields:
+    active: 1
+    apellido: Quinteros
+    nombre: Franco Leonel
+    documento: 37656950
+    cuil: 20-37656950-1
+    sexo: M
+    fecha_nacimiento: 1994-02-07
+- model: persona.persona
+  pk: 2601
+  fields:
+    active: 1
+    apellido: Apino
+    nombre: Jonathan Alexis
+    documento: 37457777
+    cuil: 20-37457777-9
+    sexo: M
+    fecha_nacimiento: 1993-08-18
+- model: persona.persona
+  pk: 2602
+  fields:
+    active: 1
+    apellido: Morales
+    nombre: Alexandra del Valle
+    documento: 41373843
+    cuil: 27-41373843-7
+    sexo: F
+    fecha_nacimiento: 1998-08-24
+- model: persona.persona
+  pk: 2603
+  fields:
+    active: 1
+    apellido: Orosco
+    nombre: Hernan Osvaldo
+    documento: 36040656
+    cuil: 20-36040656-4
+    sexo: M
+    fecha_nacimiento: 1992-06-16
+- model: persona.persona
+  pk: 2604
+  fields:
+    active: 1
+    apellido: Salazar
+    nombre: Cesar Daniel
+    documento: 38060560
+    cuil: 20-38060520-1
+    sexo: M
+    fecha_nacimiento: 1994-04-26
+- model: persona.persona
+  pk: 2605
+  fields:
+    active: 1
+    apellido: Pino
+    nombre: Rosarito
+    documento: 39140889
+    cuil: 27-39140889-6
+    sexo: F
+    fecha_nacimiento: 1995-09-01
+- model: persona.persona
+  pk: 2606
+  fields:
+    active: 1
+    apellido: Torres
+    nombre: Pablo Ignacio
+    documento: 39480669
+    cuil: 20-39480669-3
+    sexo: M
+    fecha_nacimiento: 1996-02-14
+- model: persona.persona
+  pk: 2607
+  fields:
+    active: 1
+    apellido: Diaz
+    nombre: Jose Manuel
+    documento: 35806964
+    cuil: 23-35806964-9
+    sexo: M
+    fecha_nacimiento: 1992-04-04
+- model: persona.persona
+  pk: 2608
+  fields:
+    active: 1
+    apellido: Amer
+    nombre: Jessica Johana
+    documento: 32820910
+    cuil: 27-32820910-7
+    sexo: F
+    fecha_nacimiento: 1987-10-14
+- model: persona.persona
+  pk: 2609
+  fields:
+    active: 1
+    apellido: Zamorano
+    nombre: Waldo Marcelo
+    documento: 40580212
+    cuil: 20-40580212-1
+    sexo: M
+    fecha_nacimiento: 1997-06-08

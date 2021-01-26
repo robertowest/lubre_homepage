@@ -1,0 +1,553 @@
+- model: rrhh.activo
+  pk: 1
+  fields:
+    active: 1
+    tipo: D
+    descripcion: Lubricantes
+    responsable_id: 2534
+- model: rrhh.activo
+  pk: 2
+  fields:
+    active: 1
+    tipo: D
+    descripcion: Agroquímicos
+    responsable_id: 2534
+- model: rrhh.activo
+  pk: 3
+  fields:
+    active: 1
+    tipo: D
+    descripcion: Fertilizantes
+    responsable_id: 2534
+- model: rrhh.activo
+  pk: 4
+  fields:
+    active: 1
+    tipo: D
+    descripcion: Administración
+    responsable_id: 2524
+- model: rrhh.activo
+  pk: 6
+  fields:
+    active: 1
+    tipo: D
+    descripcion: H&S
+    responsable_id: 2533
+- model: rrhh.activo
+  pk: 5
+  fields:
+    active: 1
+    tipo: D
+    descripcion: Planta
+    responsable_id: 2503
+- model: rrhh.activo
+  pk: 7
+  fields:
+    active: 1
+    tipo: V
+    descripcion: HJD183
+    responsable_id: 2503
+- model: rrhh.activo
+  pk: 8
+  fields:
+    active: 1
+    tipo: V
+    descripcion: GZW951
+    responsable_id: 2503
+- model: rrhh.activo
+  pk: 26
+  fields:
+    active: 1
+    tipo: V
+    descripcion: MGW186
+    responsable_id: 2503
+- model: rrhh.activo
+  pk: 75
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2503
+- model: rrhh.activo
+  pk: 9
+  fields:
+    active: 1
+    tipo: V
+    descripcion: AA129MO
+    responsable_id: 2505
+- model: rrhh.activo
+  pk: 10
+  fields:
+    active: 1
+    tipo: V
+    descripcion: AC470YW
+    responsable_id: 2509
+- model: rrhh.activo
+  pk: 11
+  fields:
+    active: 1
+    tipo: V
+    descripcion: OIB880
+    responsable_id: 2512
+- model: rrhh.activo
+  pk: 12
+  fields:
+    active: 1
+    tipo: V
+    descripcion: IPC362
+    responsable_id: 2518
+- model: rrhh.activo
+  pk: 13
+  fields:
+    active: 1
+    tipo: V
+    descripcion: KEC943
+    responsable_id: 2522
+- model: rrhh.activo
+  pk: 14
+  fields:
+    active: 1
+    tipo: V
+    descripcion: ADO57FP
+    responsable_id: 2523
+- model: rrhh.activo
+  pk: 15
+  fields:
+    active: 1
+    tipo: V
+    descripcion: OWE856
+    responsable_id: 2531
+- model: rrhh.activo
+  pk: 16
+  fields:
+    active: 1
+    tipo: V
+    descripcion: AUT1
+    responsable_id: 2534
+- model: rrhh.activo
+  pk: 17
+  fields:
+    active: 1
+    tipo: V
+    descripcion: AUT2
+    responsable_id: 2534
+- model: rrhh.activo
+  pk: 18
+  fields:
+    active: 1
+    tipo: V
+    descripcion: NNO009
+    responsable_id: 2535
+- model: rrhh.activo
+  pk: 19
+  fields:
+    active: 1
+    tipo: V
+    descripcion: Saveiro JGY378
+    responsable_id: 2537
+- model: rrhh.activo
+  pk: 20
+  fields:
+    active: 1
+    tipo: V
+    descripcion: IWA491
+    responsable_id: 2550
+- model: rrhh.activo
+  pk: 21
+  fields:
+    active: 1
+    tipo: V
+    descripcion: OMB301
+    responsable_id: 2551
+- model: rrhh.activo
+  pk: 22
+  fields:
+    active: 1
+    tipo: V
+    descripcion: AA085IA
+    responsable_id: 2558
+- model: rrhh.activo
+  pk: 23
+  fields:
+    active: 1
+    tipo: V
+    descripcion: AA501OB
+    responsable_id: 2560
+- model: rrhh.activo
+  pk: 24
+  fields:
+    active: 1
+    tipo: V
+    descripcion: HZT572
+    responsable_id: 2565
+- model: rrhh.activo
+  pk: 25
+  fields:
+    active: 1
+    tipo: V
+    descripcion: KRR583
+    responsable_id: 2565
+- model: rrhh.activo
+  pk: 27
+  fields:
+    active: 1
+    tipo: D
+    descripcion: No Conformidades
+    responsable_id: 2533
+- model: rrhh.activo
+  pk: 28
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2583
+- model: rrhh.activo
+  pk: 29
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2535
+- model: rrhh.activo
+  pk: 36
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de manejo
+    responsable_id: 2537
+- model: rrhh.activo
+  pk: 37
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de manejo
+    responsable_id: 2550
+- model: rrhh.activo
+  pk: 38
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2503
+- model: rrhh.activo
+  pk: 39
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2505
+- model: rrhh.activo
+  pk: 40
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2512
+- model: rrhh.activo
+  pk: 41
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2578
+- model: rrhh.activo
+  pk: 42
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2590
+- model: rrhh.activo
+  pk: 43
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2608
+- model: rrhh.activo
+  pk: 44
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2601
+- model: rrhh.activo
+  pk: 45
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2570
+- model: rrhh.activo
+  pk: 46
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2579
+- model: rrhh.activo
+  pk: 47
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2576
+- model: rrhh.activo
+  pk: 48
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2599
+- model: rrhh.activo
+  pk: 49
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2573
+- model: rrhh.activo
+  pk: 50
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2607
+- model: rrhh.activo
+  pk: 51
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2593
+- model: rrhh.activo
+  pk: 52
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2574
+- model: rrhh.activo
+  pk: 53
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2581
+- model: rrhh.activo
+  pk: 54
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2582
+- model: rrhh.activo
+  pk: 55
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2580
+- model: rrhh.activo
+  pk: 56
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2588
+- model: rrhh.activo
+  pk: 57
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2598
+- model: rrhh.activo
+  pk: 58
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2597
+- model: rrhh.activo
+  pk: 59
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2587
+- model: rrhh.activo
+  pk: 60
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2586
+- model: rrhh.activo
+  pk: 61
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2594
+- model: rrhh.activo
+  pk: 62
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2603
+- model: rrhh.activo
+  pk: 63
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2572
+- model: rrhh.activo
+  pk: 64
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2592
+- model: rrhh.activo
+  pk: 65
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2605
+- model: rrhh.activo
+  pk: 66
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2589
+- model: rrhh.activo
+  pk: 67
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2585
+- model: rrhh.activo
+  pk: 68
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2604
+- model: rrhh.activo
+  pk: 69
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2577
+- model: rrhh.activo
+  pk: 70
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2606
+- model: rrhh.activo
+  pk: 71
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2609
+- model: rrhh.activo
+  pk: 72
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2575
+- model: rrhh.activo
+  pk: 73
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Sanidad
+    responsable_id: 2591
+- model: rrhh.activo
+  pk: 74
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2509
+- model: rrhh.activo
+  pk: 76
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2531
+- model: rrhh.activo
+  pk: 77
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2558
+- model: rrhh.activo
+  pk: 78
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2518
+- model: rrhh.activo
+  pk: 79
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2523
+- model: rrhh.activo
+  pk: 80
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2522
+- model: rrhh.activo
+  pk: 81
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2543
+- model: rrhh.activo
+  pk: 82
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2600
+- model: rrhh.activo
+  pk: 83
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2551
+- model: rrhh.activo
+  pk: 84
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2565
+- model: rrhh.activo
+  pk: 85
+  fields:
+    active: 1
+    tipo: A
+    descripcion: Carnet de Manejo
+    responsable_id: 2534

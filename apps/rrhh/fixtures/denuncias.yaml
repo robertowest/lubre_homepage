@@ -1,0 +1,252 @@
+- model: rrhh.denuncia_art
+  pk: 3
+  fields:
+    active: 1
+    siniestro: 417063
+    fec_siniestro: 2008-10-29
+    fec_denuncia: 2008-10-30
+    zona_afectada: Región Dorsal (Columna Vertebral y Músculos Adyacentes)
+    estado: A
+    fec_alta_medica: 2008-11-11
+    tipo_accidente_id: 9
+    tipologia_id: 7
+    empleado_id: 2505
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 4
+  fields:
+    active: 1
+    siniestro: 534256
+    fec_siniestro: 2011-06-28
+    fec_denuncia: 2011-06-30
+    zona_afectada: Boca (con inclusion de labios, dientes y lengua)
+    estado: A
+    fec_alta_medica: 2011-06-28
+    tipo_accidente_id: 8
+    tipologia_id: 1
+    empleado_id: 2502
+    motivo_alta_id: 14
+- model: rrhh.denuncia_art
+  pk: 5
+  fields:
+    active: 1
+    siniestro: 514332
+    fec_siniestro: 2010-12-30
+    fec_denuncia: 2010-12-30
+    zona_afectada: Cabeza y Cuello
+    estado: R
+    fec_alta_medica: 2011-01-01
+    tipo_accidente_id: 8
+    tipologia_id: 4
+    empleado_id: 2504
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 6
+  fields:
+    active: 1
+    siniestro: 417063
+    fec_siniestro: 2008-10-29
+    fec_denuncia: 2008-10-30
+    zona_afectada: Region Dorsal (Columna Vertebral y Musculos Adyacentes)
+    estado: A
+    fec_alta_medica: 2008-11-11
+    tipo_accidente_id: 9
+    tipologia_id: 7
+    empleado_id: 2505
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 7
+  fields:
+    active: 1
+    siniestro: 587856
+    fec_siniestro: 2012-10-15
+    fec_denuncia: 2012-10-15
+    zona_afectada: Region Lumbosacra (Columna Vertebral y Musculos Adyacentes)
+    estado: A
+    fec_alta_medica: 2012-10-15
+    tipo_accidente_id: 10
+    tipologia_id: 2
+    empleado_id: 2505
+    motivo_alta_id: 14
+- model: rrhh.denuncia_art
+  pk: 8
+  fields:
+    active: 1
+    siniestro: 675501
+    fec_siniestro: 2014-10-22
+    fec_denuncia: 2014-10-22
+    zona_afectada: Pie (con excepcion de los dedos solos)
+    estado: R
+    fec_alta_medica: 2014-10-29
+    tipo_accidente_id: 9
+    tipologia_id: 6
+    empleado_id: 2512
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 9
+  fields:
+    active: 1
+    siniestro: 504433
+    fec_siniestro: 2010-10-05
+    fec_denuncia: 2010-10-06
+    zona_afectada: Rodilla
+    estado: A
+    fec_alta_medica: 2010-10-12
+    tipo_accidente_id: 9
+    tipologia_id: 4
+    empleado_id: 2518
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 10
+  fields:
+    active: 1
+    siniestro: 651514
+    fec_siniestro: 2014-04-14
+    fec_denuncia: 2014-04-14
+    zona_afectada: Hombro (con inclusion de clavicula, omoplato y axila)
+    estado: A
+    fec_alta_medica: 2014-05-05
+    tipo_accidente_id: 8
+    tipologia_id: 2
+    empleado_id: 2522
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 11
+  fields:
+    active: 1
+    siniestro: 612468
+    fec_siniestro: 2013-05-13
+    fec_denuncia: 2013-05-13
+    zona_afectada: Ubicaciones Multiples (tres o mas)
+    estado: A
+    fec_alta_medica: 2013-05-22
+    tipo_accidente_id: 9
+    tipologia_id: 1
+    empleado_id: 2523
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 12
+  fields:
+    active: 1
+    siniestro: 628730
+    fec_siniestro: 2013-09-30
+    fec_denuncia: 2013-09-30
+    zona_afectada: Ubicaciones Multiples (tres o mas)
+    estado: A
+    fec_alta_medica: 2013-10-15
+    tipo_accidente_id: 10
+    tipologia_id: 1
+    empleado_id: 2531
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 13
+  fields:
+    active: 1
+    siniestro: 534669
+    fec_siniestro: 2011-05-04
+    fec_denuncia: 2011-07-05
+    zona_afectada: Cara(ubicación no clasificada otros epigrafes)
+    estado: A
+    fec_alta_medica: 2011-05-04
+    tipo_accidente_id: 11
+    tipologia_id: 5
+    empleado_id: 2533
+    motivo_alta_id: 14
+- model: rrhh.denuncia_art
+  pk: 14
+  fields:
+    active: 1
+    siniestro: 674543
+    fec_siniestro: 2014-10-07
+    fec_denuncia: 2014-10-16
+    zona_afectada: Hombro (con inclusion de clavicula, omoplato y axila)
+    estado: R
+    fec_alta_medica: 2015-03-06
+    tipo_accidente_id: 9
+    tipologia_id: 2
+    empleado_id: 2536
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 15
+  fields:
+    active: 1
+    siniestro: 685397
+    fec_siniestro: 2013-01-31
+    fec_denuncia: 2015-01-15
+    zona_afectada: Columna Vertebral y Medula Espinal
+    estado: A
+    fec_alta_medica: 2015-01-23
+    tipo_accidente_id: 11
+    tipologia_id: 2
+    empleado_id: 2541
+    motivo_alta_id: 14
+- model: rrhh.denuncia_art
+  pk: 16
+  fields:
+    active: 1
+    siniestro: 568846
+    fec_siniestro: 2012-05-05
+    fec_denuncia: 2012-05-05
+    zona_afectada: Tobillo
+    estado: R
+    fec_alta_medica: 2012-07-11
+    tipo_accidente_id: 10
+    tipologia_id: 3
+    empleado_id: 2542
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 17
+  fields:
+    active: 1
+    siniestro: 613929
+    fec_siniestro: 2013-04-25
+    fec_denuncia: 2013-05-23
+    zona_afectada: Dedos de la Mano
+    estado: A
+    fec_alta_medica: 2013-06-26
+    tipo_accidente_id: 9
+    tipologia_id: 1
+    empleado_id: 2542
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 18
+  fields:
+    active: 1
+    siniestro: 634841
+    fec_siniestro: 2013-11-15
+    fec_denuncia: 2013-11-15
+    zona_afectada: Muñeca
+    estado: A
+    fec_alta_medica: 2013-12-06
+    tipo_accidente_id: 9
+    tipologia_id: 6
+    empleado_id: 2542
+    motivo_alta_id: 12
+- model: rrhh.denuncia_art
+  pk: 19
+  fields:
+    active: 1
+    siniestro: 659207
+    fec_siniestro: 2014-06-14
+    fec_denuncia: 2014-06-14
+    zona_afectada: Cadera
+    estado: A
+    fec_alta_medica: 2014-07-24
+    tipo_accidente_id: 10
+    tipologia_id: 1
+    empleado_id: 2542
+    motivo_alta_id: 13
+- model: rrhh.denuncia_art
+  pk: 20
+  fields:
+    active: 1
+    siniestro: 621385
+    fec_siniestro: 2013-07-29
+    fec_denuncia: 2013-07-29
+    zona_afectada: Muslo
+    estado: A
+    fec_alta_medica: 2013-12-06
+    tipo_accidente_id: 9
+    tipologia_id: 1
+    empleado_id: 2543
+    motivo_alta_id: 13

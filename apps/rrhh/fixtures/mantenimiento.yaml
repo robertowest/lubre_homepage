@@ -1,0 +1,515 @@
+- model: rrhh.mantenimiento
+  pk: 1
+  fields:
+    active: 1
+    descripcion: Renovación
+    activo_id: 28
+    fecha_final: 2020-09-02
+    fecha_inicial: 2019-09-02
+- model: rrhh.mantenimiento
+  pk: 2
+  fields:
+    active: 1
+    descripcion: Renovación de carnet
+    estado: V
+    proximo: 2024-11-11
+    activo_id: 29
+    archivo: rrhh/activos/Emiliano_Fernandez_Vto_11-11-2024.pdf
+    fecha_final: 2024-11-11
+    fecha_inicial: 2014-11-13
+- model: rrhh.mantenimiento
+  pk: 3
+  fields:
+    active: 1
+    descripcion: Renovación de carnet
+    activo_id: 36
+    archivo: rrhh/activos/Sergio_Andjel_Vto_25-09-2020.pdf
+    fecha_final: 2020-09-25
+    fecha_inicial: 2015-09-25
+- model: rrhh.mantenimiento
+  pk: 4
+  fields:
+    active: 1
+    descripcion: Renovación de carnet
+    activo_id: 38
+    archivo: rrhh/activos/Vicente_Dangelo_Vto_19-12-2022.pdf
+    fecha_final: 2022-12-19
+    fecha_inicial: 2019-12-23
+- model: rrhh.mantenimiento
+  pk: 5
+  fields:
+    active: 1
+    descripcion: Renovación de carnet
+    activo_id: 37
+    archivo: rrhh/activos/Sebastian_Teran_Vto_17-04-2022.pdf
+    fecha_final: 2022-04-17
+    fecha_inicial: 2017-04-17
+- model: rrhh.mantenimiento
+  pk: 6
+  fields:
+    active: 1
+    descripcion: Renovación de carnet
+    estado: V
+    proximo: 2024-03-14
+    activo_id: 39
+    archivo: rrhh/activos/Armando_Quinteros_Vto_14-03-2024.pdf
+    fecha_final: 2024-03-14
+    fecha_inicial: 2019-03-14
+- model: rrhh.mantenimiento
+  pk: 7
+  fields:
+    active: 1
+    descripcion: Renovación de carnet
+    estado: V
+    proximo: 2020-07-02
+    activo_id: 40
+    archivo: rrhh/activos/Pablo_Gonzalez_Vto_02-07-2020.pdf
+    fecha_final: 2020-07-02
+    fecha_inicial: 2018-07-02
+- model: rrhh.mantenimiento
+  pk: 8
+  fields:
+    active: 1
+    descripcion: Renovacion
+    activo_id: 41
+    fecha_final: 2020-08-28
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 9
+  fields:
+    active: 1
+    descripcion: Renovacion
+    activo_id: 42
+    fecha_final: 2021-01-30
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 10
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-07-24
+    activo_id: 44
+    fecha_final: 2020-07-24
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 11
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-09-03
+    activo_id: 45
+    fecha_final: 2020-09-03
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 12
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-09-02
+    activo_id: 46
+    fecha_final: 2020-09-02
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 13
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-09-02
+    activo_id: 47
+    fecha_final: 2020-09-02
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 14
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2021-02-21
+    activo_id: 48
+    fecha_final: 2021-02-21
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 15
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-08-03
+    activo_id: 49
+    fecha_final: 2020-08-03
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 16
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-07-27
+    activo_id: 50
+    fecha_final: 2020-07-27
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 17
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-12-18
+    activo_id: 51
+    fecha_final: 2020-12-18
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 18
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-09-04
+    activo_id: 52
+    fecha_final: 2020-09-04
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 19
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-09-04
+    activo_id: 53
+    fecha_final: 2020-09-04
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 20
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-09-04
+    activo_id: 54
+    fecha_final: 2020-09-04
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 21
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-09-04
+    activo_id: 55
+    fecha_final: 2020-09-04
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 22
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-11-21
+    activo_id: 56
+    fecha_final: 2020-11-21
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 23
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2021-02-27
+    activo_id: 57
+    fecha_final: 2021-02-27
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 24
+  fields:
+    active: 1
+    descripcion: Renovacion
+    activo_id: 58
+    fecha_final: 2021-03-16
+    fecha_inicial: 2020-03-16
+- model: rrhh.mantenimiento
+  pk: 25
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-12-02
+    activo_id: 59
+    fecha_final: 2020-12-02
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 26
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-11-21
+    activo_id: 60
+    fecha_final: 2020-11-21
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 27
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2021-01-30
+    activo_id: 61
+    fecha_final: 2021-01-30
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 28
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-07-24
+    activo_id: 62
+    fecha_final: 2020-07-24
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 29
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-09-04
+    activo_id: 63
+    fecha_final: 2020-09-04
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 30
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2021-01-21
+    activo_id: 64
+    fecha_final: 2021-01-21
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 31
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-07-22
+    activo_id: 65
+    fecha_final: 2020-07-22
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 32
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2021-01-17
+    activo_id: 66
+    fecha_final: 2021-01-17
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 33
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-11-14
+    activo_id: 67
+    fecha_final: 2020-11-14
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 34
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-07-19
+    activo_id: 68
+    fecha_final: 2020-07-19
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 35
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-08-30
+    activo_id: 69
+    fecha_final: 2020-08-30
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 36
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-12-09
+    activo_id: 70
+    fecha_final: 2020-12-09
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 37
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-09-09
+    activo_id: 71
+    fecha_final: 2020-09-09
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 38
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-09-03
+    activo_id: 72
+    fecha_final: 2020-09-03
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 39
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-11-21
+    activo_id: 73
+    fecha_final: 2020-11-21
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 40
+  fields:
+    active: 1
+    descripcion: Renovacion
+    activo_id: 43
+    fecha_final: 2020-09-16
+    fecha_inicial: 2019-09-16
+- model: rrhh.mantenimiento
+  pk: 41
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-06-04
+    activo_id: 74
+    archivo: rrhh/activos/German_Argañaraz_Vto_04-06-2020.pdf
+    fecha_final: 2020-06-04
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 42
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-10-24
+    activo_id: 75
+    archivo: rrhh/activos/Jose_Mastrizzo_Vto_24-10-2020.pdf
+    fecha_final: 2020-10-24
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 43
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2021-02-05
+    activo_id: 76
+    archivo: rrhh/activos/Luis_Lara_Vto_05-02-2021.pdf
+    fecha_final: 2021-02-05
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 44
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2021-04-26
+    activo_id: 77
+    archivo: rrhh/activos/Sergio_Iturre_Vto_26-04-2021.pdf
+    fecha_final: 2021-04-26
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 45
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-10-04
+    activo_id: 78
+    archivo: rrhh/activos/Hugo_Espinoza_Vto_04-10-2020.pdf
+    fecha_final: 2020-10-04
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 46
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-08-07
+    activo_id: 79
+    archivo: rrhh/activos/Jose_Suarez_Vto_07-08-2020.pdf
+    fecha_final: 2020-08-07
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 47
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2020-06-05
+    activo_id: 80
+    archivo: rrhh/activos/Walter_Diaz_Vto_05-06-2020.pdf
+    fecha_final: 2020-06-05
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 48
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2024-03-07
+    activo_id: 81
+    archivo: rrhh/activos/Arganaraz_Christian_Vto_07-03-2024.pdf
+    fecha_final: 2024-03-07
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 49
+  fields:
+    active: 1
+    descripcion: Renovacion
+    estado: V
+    proximo: 2021-12-12
+    activo_id: 82
+    archivo: rrhh/activos/Leonel_Quinteros_Vto_12-12-2021.pdf
+    fecha_final: 2021-12-12
+    fecha_inicial: 2020-03-02
+- model: rrhh.mantenimiento
+  pk: 50
+  fields:
+    active: 1
+    descripcion: Renovacion
+    activo_id: 83
+    archivo: rrhh/activos/Deheza_Rodolfo_Vto_09-11-2022.pdf
+    fecha_final: 2022-11-09
+    fecha_inicial: 2017-11-09
+- model: rrhh.mantenimiento
+  pk: 51
+  fields:
+    active: 1
+    descripcion: Renovacion
+    activo_id: 84
+    fecha_final: 2021-02-04
+    fecha_inicial: 2019-02-06
+- model: rrhh.mantenimiento
+  pk: 52
+  fields:
+    active: 1
+    descripcion: Renovacion
+    activo_id: 85
+    archivo: rrhh/activos/Juan_Bazal_Vto_07-03-2022.pdf
+    fecha_final: 2022-03-07
+    fecha_inicial: 2017-03-07

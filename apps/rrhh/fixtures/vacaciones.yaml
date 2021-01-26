@@ -1,0 +1,990 @@
+- model: rrhh.vacaciones
+  pk: 1
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-25
+    fecha_fin: 2019-11-26
+    fec_solicitud: 2019-10-11
+    observacion: Vacaciones pendientes 2018
+    estado: A
+    empleado_id: 2532
+    periodo: 2018
+- model: rrhh.vacaciones
+  pk: 2
+  fields:
+    active: 1
+    fecha_inicio: 2019-10-10
+    fecha_fin: 2019-10-11
+    fec_solicitud: 2019-10-11
+    observacion: vacaciones pendientes 2018
+    estado: A
+    empleado_id: 2530
+    periodo: 2018
+- model: rrhh.vacaciones
+  pk: 3
+  fields:
+    active: 1
+    fecha_inicio: 2019-10-15
+    fecha_fin: 2019-10-15
+    fec_solicitud: 2019-10-11
+    observacion: vacaciones pendientes 2018
+    estado: A
+    empleado_id: 2530
+    periodo: 2018
+- model: rrhh.vacaciones
+  pk: 4
+  fields:
+    active: 1
+    fecha_inicio: 2019-01-02
+    fecha_fin: 2019-01-15
+    fec_solicitud: 2019-10-11
+    observacion: vacaciones 2018
+    estado: A
+    empleado_id: 2532
+    periodo: 2018
+- model: rrhh.vacaciones
+  pk: 5
+  fields:
+    active: 1
+    fecha_inicio: 2019-10-15
+    fecha_fin: 2019-10-17
+    fec_solicitud: 2019-10-11
+    estado: A
+    empleado_id: 2532
+    periodo: 2018
+- model: rrhh.vacaciones
+  pk: 6
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-11
+    fecha_fin: 2019-11-17
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones adeudadas 2018
+    estado: A
+    empleado_id: 2512
+    periodo: 2018
+- model: rrhh.vacaciones
+  pk: 7
+  fields:
+    active: 1
+    fecha_inicio: 2019-12-23
+    fecha_fin: 2020-01-12
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2509
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 8
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-13
+    fecha_fin: 2020-02-02
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2531
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 9
+  fields:
+    active: 0
+    fecha_inicio: 2020-01-13
+    fecha_fin: 2020-02-02
+    fec_solicitud: 2019-10-22
+    observacion: vacaciones 2019
+    estado: P
+    empleado_id: 2531
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 10
+  fields:
+    active: 1
+    fecha_inicio: 2020-10-27
+    fecha_fin: 2020-11-09
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2600
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 11
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-03
+    fecha_fin: 2020-02-16
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2565
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 12
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-17
+    fecha_fin: 2020-03-01
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2558
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 13
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-25
+    fecha_fin: 2019-12-01
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones adeudadas 2018
+    estado: A
+    empleado_id: 2503
+    periodo: 2018
+- model: rrhh.vacaciones
+  pk: 14
+  fields:
+    active: 1
+    fecha_inicio: 2019-12-23
+    fecha_fin: 2020-01-12
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2522
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 15
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-03
+    fecha_fin: 2020-02-23
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2523
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 16
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-13
+    fecha_fin: 2020-02-02
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2518
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 17
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-28
+    fecha_fin: 2020-02-10
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2538
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 18
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-26
+    fecha_fin: 2020-03-10
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2524
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 19
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-03
+    fecha_fin: 2020-02-23
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2533
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 20
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-03
+    fecha_fin: 2020-02-16
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2566
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 21
+  fields:
+    active: 1
+    fecha_inicio: 2019-12-30
+    fecha_fin: 2020-01-12
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2535
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 22
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-13
+    fecha_fin: 2020-01-26
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2550
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 23
+  fields:
+    active: 1
+    fecha_inicio: 2019-12-16
+    fecha_fin: 2019-12-29
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2590
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 24
+  fields:
+    active: 1
+    fecha_inicio: 2019-12-02
+    fecha_fin: 2019-12-15
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2579
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 25
+  fields:
+    active: 1
+    fecha_inicio: 2019-12-16
+    fecha_fin: 2019-12-29
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2582
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 26
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-06
+    fecha_fin: 2020-01-19
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2597
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 27
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-06
+    fecha_fin: 2020-01-19
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2594
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 28
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-20
+    fecha_fin: 2020-02-02
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2573
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 29
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-06
+    fecha_fin: 2020-01-19
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2587
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 30
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-20
+    fecha_fin: 2020-02-02
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2577
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 31
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-17
+    fecha_fin: 2020-02-23
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2570
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 32
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-03
+    fecha_fin: 2020-02-16
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2580
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 33
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-03
+    fecha_fin: 2020-02-16
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2586
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 34
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-03
+    fecha_fin: 2020-02-16
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2598
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 35
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-13
+    fecha_fin: 2020-01-26
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2591
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 36
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-17
+    fecha_fin: 2020-03-01
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2583
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 37
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-17
+    fecha_fin: 2020-03-01
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2588
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 38
+  fields:
+    active: 1
+    fecha_inicio: 2020-03-16
+    fecha_fin: 2020-03-29
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2599
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 39
+  fields:
+    active: 1
+    fecha_inicio: 2020-03-02
+    fecha_fin: 2020-03-15
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2593
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 40
+  fields:
+    active: 1
+    fecha_inicio: 2020-03-16
+    fecha_fin: 2020-03-29
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2576
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 41
+  fields:
+    active: 1
+    fecha_inicio: 2020-03-02
+    fecha_fin: 2020-03-15
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2572
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 42
+  fields:
+    active: 1
+    fecha_inicio: 2020-03-02
+    fecha_fin: 2020-03-15
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2575
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 43
+  fields:
+    active: 1
+    fecha_inicio: 2020-03-16
+    fecha_fin: 2020-03-29
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2585
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 44
+  fields:
+    active: 1
+    fecha_inicio: 2020-04-13
+    fecha_fin: 2020-04-26
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2589
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 45
+  fields:
+    active: 1
+    fecha_inicio: 2020-04-13
+    fecha_fin: 2020-04-26
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2578
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 46
+  fields:
+    active: 1
+    fecha_inicio: 2020-03-30
+    fecha_fin: 2020-04-12
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2592
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 47
+  fields:
+    active: 1
+    fecha_inicio: 2020-03-30
+    fecha_fin: 2020-04-12
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2574
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 48
+  fields:
+    active: 1
+    fecha_inicio: 2020-04-13
+    fecha_fin: 2020-04-26
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2581
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 49
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-04
+    fecha_fin: 2019-11-10
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2601
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 50
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-04
+    fecha_fin: 2019-11-10
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2605
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 51
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-11
+    fecha_fin: 2019-11-17
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2602
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 52
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-11
+    fecha_fin: 2019-11-17
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2607
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 53
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-25
+    fecha_fin: 2019-12-01
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2603
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 54
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-18
+    fecha_fin: 2019-11-24
+    fec_solicitud: 2019-10-22
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2604
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 55
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-11
+    fecha_fin: 2019-11-17
+    fec_solicitud: 2019-10-29
+    observacion: Vacaciones 2018 (dias adeudados)
+    estado: A
+    empleado_id: 2539
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 56
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-20
+    fecha_fin: 2020-02-02
+    fec_solicitud: 2019-11-06
+    observacion: vacaciones 2019
+    estado: A
+    empleado_id: 2551
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 57
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-06
+    fecha_fin: 2020-01-19
+    fec_solicitud: 2019-11-06
+    observacion: vacaciones 2019
+    estado: A
+    empleado_id: 2532
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 58
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-03
+    fecha_fin: 2020-02-16
+    fec_solicitud: 2019-11-06
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2514
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 59
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-20
+    fecha_fin: 2020-02-02
+    fec_solicitud: 2019-11-06
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2539
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 60
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-11
+    fecha_fin: 2019-11-17
+    fec_solicitud: 2019-11-07
+    observacion: VACACIONES PENDIENTES DE 2018
+    estado: A
+    empleado_id: 2512
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 61
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-25
+    fecha_fin: 2019-12-01
+    fec_solicitud: 2019-11-07
+    observacion: VACACIONES PENDIENTES 2018
+    estado: A
+    empleado_id: 2503
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 62
+  fields:
+    active: 1
+    fecha_inicio: 2019-11-18
+    fecha_fin: 2019-11-24
+    fec_solicitud: 2019-11-07
+    observacion: VACACIONES 2019
+    estado: A
+    empleado_id: 2522
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 63
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-20
+    fecha_fin: 2020-02-09
+    fec_solicitud: 2019-11-07
+    observacion: vacaciones 2019
+    estado: A
+    empleado_id: 2503
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 64
+  fields:
+    active: 1
+    fecha_inicio: 2020-02-10
+    fecha_fin: 2020-02-23
+    fec_solicitud: 2019-11-07
+    observacion: vacaciones 2019
+    estado: P
+    empleado_id: 2595
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 65
+  fields:
+    active: 1
+    fecha_inicio: 2019-12-23
+    fecha_fin: 2020-01-19
+    fec_solicitud: 2019-11-07
+    observacion: vacaciones 2019
+    estado: A
+    empleado_id: 2534
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 66
+  fields:
+    active: 1
+    fecha_inicio: 2019-12-23
+    fecha_fin: 2020-01-12
+    fec_solicitud: 2019-11-21
+    observacion: VACACIONES 2020
+    estado: A
+    empleado_id: 2530
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 67
+  fields:
+    active: 1
+    fecha_inicio: 2019-12-02
+    fecha_fin: 2019-12-15
+    fec_solicitud: 2019-11-25
+    observacion: vacaciones 2019
+    estado: A
+    empleado_id: 2546
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 68
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-28
+    fecha_fin: 2020-01-28
+    fec_solicitud: 2020-01-27
+    observacion: quedo en el mollar por corte en ruta 27-01-2020
+    estado: P
+    empleado_id: 2532
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 69
+  fields:
+    active: 1
+    fecha_inicio: 2020-01-29
+    fecha_fin: 2020-02-11
+    fec_solicitud: 2020-01-28
+    observacion: se tomo 13 al 27 de enero
+    estado: A
+    empleado_id: 2512
+    periodo: 2019
+- model: rrhh.vacaciones
+  pk: 70
+  fields:
+    active: 1
+    fecha_inicio: 2020-08-10
+    fecha_fin: 2020-08-16
+    fec_solicitud: 2020-08-05
+    observacion: Dias de vacaciones solicitados
+    estado: A
+    empleado_id: 2600
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 71
+  fields:
+    active: 1
+    fecha_inicio: 2020-09-14
+    fecha_fin: 2020-09-16
+    fec_solicitud: 2020-09-10
+    estado: A
+    empleado_id: 2538
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 72
+  fields:
+    active: 1
+    fecha_inicio: 2020-10-26
+    fecha_fin: 2020-11-01
+    fec_solicitud: 2020-09-10
+    estado: A
+    empleado_id: 2538
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 73
+  fields:
+    active: 1
+    fecha_inicio: 2020-12-28
+    fecha_fin: 2020-12-29
+    fec_solicitud: 2020-09-10
+    estado: P
+    empleado_id: 2538
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 74
+  fields:
+    active: 1
+    fecha_inicio: 2020-09-14
+    fecha_fin: 2020-09-20
+    fec_solicitud: 2020-09-10
+    estado: A
+    empleado_id: 2518
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 75
+  fields:
+    active: 1
+    fecha_inicio: 2020-10-19
+    fecha_fin: 2020-10-25
+    fec_solicitud: 2020-09-11
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2514
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 76
+  fields:
+    active: 1
+    fecha_inicio: 2020-10-05
+    fecha_fin: 2020-10-11
+    fec_solicitud: 2020-09-11
+    estado: A
+    empleado_id: 2532
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 77
+  fields:
+    active: 1
+    fecha_inicio: 2020-09-15
+    fecha_fin: 2020-09-21
+    fec_solicitud: 2020-09-14
+    estado: A
+    empleado_id: 2509
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 78
+  fields:
+    active: 1
+    fecha_inicio: 2020-09-28
+    fecha_fin: 2020-10-04
+    fec_solicitud: 2020-09-18
+    estado: A
+    empleado_id: 2539
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 79
+  fields:
+    active: 1
+    fecha_inicio: 2020-10-13
+    fecha_fin: 2020-10-26
+    fec_solicitud: 2020-09-23
+    observacion: vacaciones 2019
+    estado: P
+    empleado_id: 2512
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 80
+  fields:
+    active: 1
+    fecha_inicio: 2020-10-09
+    fecha_fin: 2020-10-12
+    fec_solicitud: 2020-10-08
+    estado: P
+    empleado_id: 2546
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 81
+  fields:
+    active: 1
+    fecha_inicio: 2020-11-16
+    fecha_fin: 2020-11-22
+    fec_solicitud: 2020-10-13
+    observacion: Vacaciones 2019
+    estado: A
+    empleado_id: 2514
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 82
+  fields:
+    active: 1
+    fecha_inicio: 2020-11-02
+    fecha_fin: 2020-11-08
+    fec_solicitud: 2020-10-14
+    observacion: VACACIONES 2019
+    estado: A
+    empleado_id: 2503
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 83
+  fields:
+    active: 1
+    fecha_inicio: 2020-10-26
+    fecha_fin: 2020-11-01
+    fec_solicitud: 2020-10-16
+    observacion: vacaciones 2019
+    estado: A
+    empleado_id: 2523
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 84
+  fields:
+    active: 1
+    fecha_inicio: 2020-10-20
+    fecha_fin: 2020-10-26
+    fec_solicitud: 2020-10-19
+    observacion: vacaciones 2019
+    estado: P
+    empleado_id: 2533
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 85
+  fields:
+    active: 1
+    fecha_inicio: 2020-11-24
+    fecha_fin: 2020-11-30
+    fec_solicitud: 2020-11-10
+    observacion: vacaciones 2020
+    estado: A
+    empleado_id: 2535
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 86
+  fields:
+    active: 1
+    fecha_inicio: 2020-11-11
+    fecha_fin: 2020-11-17
+    fec_solicitud: 2020-11-10
+    observacion: vacaciones periodo 2021
+    estado: P
+    empleado_id: 2522
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 87
+  fields:
+    active: 1
+    fecha_inicio: 2020-11-24
+    fecha_fin: 2020-11-30
+    fec_solicitud: 2020-11-18
+    estado: P
+    empleado_id: 2524
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 88
+  fields:
+    active: 1
+    fecha_inicio: 2020-12-14
+    fecha_fin: 2020-12-20
+    fec_solicitud: 2020-11-24
+    estado: P
+    empleado_id: 2550
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 89
+  fields:
+    active: 1
+    fecha_inicio: 2020-12-14
+    fecha_fin: 2020-12-20
+    fec_solicitud: 2020-11-25
+    observacion: vacaciones 2019 - adeudada
+    estado: P
+    empleado_id: 2570
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 90
+  fields:
+    active: 1
+    fecha_inicio: 2020-12-28
+    fecha_fin: 2021-01-03
+    fec_solicitud: 2020-12-17
+    observacion: Vacaciones pendiente
+    estado: P
+    empleado_id: 2535
+    periodo: 2020
+- model: rrhh.vacaciones
+  pk: 91
+  fields:
+    active: 1
+    fecha_inicio: 2021-01-04
+    fecha_fin: 2021-01-31
+    fec_solicitud: 2020-12-31
+    observacion: vacaciones 2020
+    estado: P
+    empleado_id: 2534
+    periodo: 2020

@@ -1,0 +1,70 @@
+- model: rrhh.diccionario_art
+  pk: 1
+  fields:
+    descripcion: Contusiones
+    diccionario: tipologia
+- model: rrhh.diccionario_art
+  pk: 2
+  fields:
+    descripcion: Distension Muscular
+    diccionario: tipologia
+- model: rrhh.diccionario_art
+  pk: 3
+  fields:
+    descripcion: Fracturas Cerradas
+    diccionario: tipologia
+- model: rrhh.diccionario_art
+  pk: 4
+  fields:
+    descripcion: Heridas Cortantes
+    diccionario: tipologia
+- model: rrhh.diccionario_art
+  pk: 5
+  fields:
+    descripcion: Otros (Elaborar Informe Especial)
+    diccionario: tipologia
+- model: rrhh.diccionario_art
+  pk: 6
+  fields:
+    descripcion: Torceduras
+    diccionario: tipologia
+- model: rrhh.diccionario_art
+  pk: 7
+  fields:
+    descripcion: Traumatismos Internos
+    diccionario: tipologia
+- model: rrhh.diccionario_art
+  pk: 8
+  fields:
+    descripcion: Acc. Desplazamiento En Su Jornada Laboral
+    diccionario: tipoAccidente
+- model: rrhh.diccionario_art
+  pk: 9
+  fields:
+    descripcion: Acc. En Centro De Trabajo
+    diccionario: tipoAccidente
+- model: rrhh.diccionario_art
+  pk: 10
+  fields:
+    descripcion: Acc. In Itinere
+    diccionario: tipoAccidente
+- model: rrhh.diccionario_art
+  pk: 11
+  fields:
+    descripcion: Enfermedad Profesional
+    diccionario: tipoAccidente
+- model: rrhh.diccionario_art
+  pk: 12
+  fields:
+    descripcion: Alta en Disconformidad
+    diccionario: motivoAlta
+- model: rrhh.diccionario_art
+  pk: 13
+  fields:
+    descripcion: Fin de Tratamiento
+    diccionario: motivoAlta
+- model: rrhh.diccionario_art
+  pk: 14
+  fields:
+    descripcion: Por no Accidente de Trabajo
+    diccionario: motivoAlta

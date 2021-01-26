@@ -62,7 +62,7 @@ def csvToYaml(csvFile, output):
 # converts single url file
 def urlCSV(url, output=None):
     csvFile = urlopen(url)
-    output = output if output else root+'/'+(url.split('/')[-1].replace('.csv','.yml'))
+    output = output if output else root+'/'+(url.split('/')[-1].replace('.csv','.yaml'))
     csvToYaml(csvFile, output)
 
 # converts all csv file in this folder
@@ -71,13 +71,13 @@ def localCSV(folder=root):
     for f in os.listdir(folder):
         if f.endswith('.csv'):
             csvFile = os.path.join(folder, f)
-            output = os.path.join(folder, f.replace('.csv','.yml'))
+            output = os.path.join(folder, f.replace('.csv','.yaml'))
             print(output)
             singleCSV(csvFile, output)
 
 # converts only one csv file
 def singleCSV(csvFile, output=None):
-    output = output if output else root+'/'+(csvFile.split('/')[-1].replace('.csv','.yml'))
+    output = output if output else root+'/'+(csvFile.split('/')[-1].replace('.csv','.yaml'))
     with open(csvFile, 'rb') as csvFile:
         csvToYaml2(csvFile, output)
 

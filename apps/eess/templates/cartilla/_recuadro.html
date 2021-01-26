@@ -3,7 +3,11 @@
     <a style="text-decoration:none" href="{% url 'eess:cart_add' object.pk %}">
         <div class="card mb-4 shadow-sm" style="cursor: pointer;">
             <div class="card-header text-center">
+                {% if object.imagen %}
                 <img src="{{ media_url }}{{ object.imagen.url }}" class="img-fluid" style="height: auto;">
+                {% else %}
+                <img src="/media/eess/cartilla/full.png" class="img-fluid" style="height: auto;">
+                {% endif %}
             </div>
             <div class="card-body">
                 <h3 class="card-titulo mbr-fonts-style display-5">

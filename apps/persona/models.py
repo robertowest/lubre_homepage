@@ -8,9 +8,13 @@ from apps.comunes.functions import get_app_name, get_model_name
 
 
 class Persona(CommonStruct):
+    SEXO = (('M', 'Masculino'), ('F', 'Femenino'))
+
     nombre = models.CharField(max_length=40)
     apellido = models.CharField(max_length=40)
+    sexo = models.CharField(max_length=1, choices=SEXO, default='M', blank=True, null=True)
     documento = models.CharField('DNI', max_length=12, null=True, blank=True, unique=True)
+    cuil = models.CharField('CUIL', max_length=13, null=True, blank=True, unique=True)
     fecha_nacimiento = models.DateField('Fecha de Nacimiento', blank=True, null=True)
     domicilio = models.ForeignKey(Domicilio, on_delete=models.CASCADE, null=True, blank=True,
                                   limit_choices_to={'active': True})

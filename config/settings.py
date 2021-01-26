@@ -125,6 +125,9 @@ INSTALLED_APPS += [
     # eess ---------------------------------
     'apps.eess',
 
+    # recursos humanos ---------------------
+    'apps.rrhh',
+
     # AFIP ---------------------------------
     'apps.afip_test',
 
@@ -137,7 +140,7 @@ INSTALLED_APPS += [
 
 
 # # -------------------------------------------------------------------
-# # visualiza todas las consultas SQL por consula
+# # visualiza todas las consultas SQL por consola
 # # muy bueno para realizar depuración desde la consola
 # # -------------------------------------------------------------------
 # LOGGING = {
