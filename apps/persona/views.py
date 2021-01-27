@@ -167,7 +167,8 @@ class CreateAddressView(PermissionRequiredMixin, generic.CreateView):
         # obtenemos el objeto primario
         persona = models.Persona.objects.get(id=self.kwargs['fk'])
         # creamos la asociación
-        persona.domicilios.add(self.object)
+        persona.domicilio = self.object
+        persona.save()
 
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:

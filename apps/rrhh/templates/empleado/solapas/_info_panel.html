@@ -1,0 +1,80 @@
+{% load custom_tags %}
+
+<div class="card card-info">
+    <div class="card-header">
+        Foto <i class="fa fa-photo fa-1x"></i>
+    </div>
+    <div class="card-body" style="text-align: center;">
+        {% if object.imagen %}
+        <img class="rounded-circle img-fluid" src="{{ object.imagen.url }}">
+        {% else %}
+        <img class="rounded-circle img-responsive" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+        {% endif %}
+    </div>
+</div>
+<br>
+
+{% if object_list %}
+<div class="card">
+    <div class="card-header">
+        Comunicación <i class="fa fa-phone fa-1x"></i>
+    </div>
+    <div class="list-group list-group-flush">
+        {% for obj in object_list %}
+            {% if obj.tipo|in_list:'movil,tel,sms,wa,email' %}
+            <div class="list-group-item">
+                {{obj.get_tipo_display}}
+                <spam class="pull-right">{{obj.texto}}</spam>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<br>
+
+<div class="card">
+    <div class="card-header">Social <i class="fa fa-link fa-1x"></i></div>
+    <div class="card-body">
+        {# https://lipis.github.io/bootstrap-social/ #}
+
+        {% for obj in object_list %}
+            {% if obj.tipo == "link"  %}
+            <a href="https://www.facebook.com/{{obj.texto}}" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>&nbsp;
+            {% endif %}
+            {% if obj.tipo == "face"  %}
+            <a href="https://www.facebook.com/{{obj.texto}}" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>&nbsp;
+            {% endif %}
+            {% if obj.tipo == "twitt" %}
+            <a href="https://twitter.com/{{obj.texto}}" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>&nbsp;
+            {% endif %}
+            {% if obj.tipo == "ytube" %}
+            <a href="https://www.youtube.com/channel/{{obj.texto}}" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>&nbsp;
+            {% endif %}
+            {% if obj.tipo == "git"   %}
+            <a href="https://github.com/{{obj.texto}}" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp;
+            {% endif %}
+            {% if obj.tipo == "pint"  %}
+            <a href="https://ar.pinterest.com/{{obj.texto}}" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a>&nbsp;
+            {% endif %}
+            {% if obj.tipo == "gmail" %}
+            <a href="https://aboutme.google.com/u/0/?referer=gplus" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>&nbsp;
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif  %}
+
+{% comment %}
+<div class="panel panel-success">
+    <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
+    <div class="panel-body"><a href="https://bootdey.com">https://bootdey.com</a></div>
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+    <li class="list-group-item text-right"><span class="pull-left"><strong>Shares</strong></span> 125</li>
+    <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13</li>
+    <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
+    <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 78</li>
+</ul>
+{% endcomment %}

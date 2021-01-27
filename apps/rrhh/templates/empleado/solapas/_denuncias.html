@@ -1,0 +1,59 @@
+{% comment %}
+<div class="table-responsive">
+</div>
+{% endcomment %}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Siniestro</th>
+            <th>Fecha</th>
+            <th>Tipo</th>
+            <th>Estado</th>
+            <th>Días</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="items">
+        {% for obj in object_list %}
+        <tr>
+            <td>{{obj.siniestro}}</td>
+            <td>{{obj.fec_siniestro|date:"d/m/Y"}}</td>
+            <td>{{obj.tipo_accidente}}</td>
+            <td>{{obj.get_estado_display}}</td>
+            <td>{{obj.dias_perdidos}}</td>
+            <td>
+                <a href="#" class="read-modal btn btn-sm btn-primary" data-url="{% url 'rrhh:art_read' obj.empleado.persona_id obj.pk %}">
+                    <span class="fa fa-eye"></span>
+                </a>
+                <a href="#" class="read-modal btn btn-sm btn-primary"
+                            data-url="{% url 'rrhh:art_update' obj.empleado.persona_id obj.pk %}">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </a>
+                <a href="#" class="read-modal btn btn-sm btn-danger" data-url="{% url 'rrhh:art_delete' obj.empleado.persona_id obj.pk %}">
+                    <span class="fa fa-trash"></span>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<hr>
+{# request.GET.pk #}
+{# object.persona.id #}
+{% with empl_id=request.GET.pk %}
+<a href="#" id="prueba" class="read-modal btn btn-success pull-right" data-url="{% url 'rrhh:art_create' empl_id %}">
+    <span class="fa fa-pencil"></span> Nueva denuncia
+</a>
+{% endwith %}
+
+
+<script type="text/javascript">
+    $(".read-modal").each(function() {
+        $(this).modalForm({
+            formURL: $(this).data('url'),
+            modalContent: ".modal-dialog",
+            modalForm: ".modal-dialog form",
+        });
+    });
+</script>

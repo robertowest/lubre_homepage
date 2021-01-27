@@ -1,0 +1,44 @@
+{% load static %}
+
+<table id="autotabla" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Activo</th>
+            <th>Mantenimiento</th>
+            <th>Estado</th>
+            <th>Próximo</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for obj in activos %}
+        <tr>
+            <td>
+                {{obj.activo}} ({{ obj.get_tipo_display }})
+                {% if obj.activo_id %}
+                <a href="#" class="read-modal" data-id="{% url 'rrhh:activo_read' obj.activo_id %}">
+                </a>
+                {% endif %}
+            </td>
+            <td>
+                {{obj.mantenimiento}}
+                {% if obj.mantenimiento_id %}
+                <a href="#" class="read-modal" data-id="{% url 'rrhh:mantenimiento_read' obj.mantenimiento_id %}">
+                </a>
+                {% endif %}
+            </td>
+            <td class="color_{{obj.estado}}">
+                {{obj.get_estado_display}}
+            </td>
+            <td>
+                {{obj.proximo|date:"d/m/Y"}}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<hr>
+{% with empl_id=request.GET.pk %}
+<a href="{% url 'rrhh:asignacion' empl_id %}" target="_blank" class="btn btn-success pull-right">
+    <span class="fa fa-pencil"></span> Asignaciones
+</a>
+{% endwith %}

@@ -1,0 +1,74 @@
+{% load group_tags %}
+{% load static %}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Solicitud</th>
+            <th>Estado</th>
+            <th>Inicio</th>
+            <th>Fin</th>
+            <th>Observación</th>
+            <th>Solicitados</th>
+            <th>Hábiles</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for obj in object_list %}
+        <tr>
+            <td>{{ obj.fec_solicitud|date:"d/m/Y" }}</td>
+            <td class="{% if obj.estado == 'P' %}text-danger{% else %}text-success{% endif %}">{{ obj.get_estado_display }}</td>
+            <td>{{ obj.fec_inicio|date:"d/m/Y" }}</td>
+            <td>{{ obj.fec_fin|date:"d/m/Y" }}</td>
+            <td>{{ obj.observacion }}</td>
+            <td align="center">{{ obj.dias_solicitados }}</td>
+            <td align="center">{{ obj.dias_habiles }}</td>
+            <td>
+                {% with empl_id=request.GET.pk %}
+                    {% if request.user|has_group:"RRHH" %}
+                        {% if obj.estado == 'P' %}
+                            <a href="{% url 'rrhh:empl_vaca_aceptar' empl_id obj.pk %}">
+                                <span class="mr-1 glyphicon glyphicon-thumbs-up text-success" data-toggle="tooltip" title="Aprobar"></span>
+                            </a>
+                            <spam class="ml-1 mr-1">|</spam>
+                        {% else %}
+                            <a href="{% url 'rrhh:empl_vaca_pendiente' empl_id obj.pk %}">
+                                <span class="mr-1 glyphicon glyphicon-thumbs-down text-danger" data-toggle="tooltip" title="Pendiente"></span>
+                            </a>
+                        {% endif %}
+                    {% endif %}
+                    {% if obj.estado == 'P' %}
+                        <a href="#" class="open-modal" data-url="{% url 'rrhh:empl_vaca_update' empl_id obj.pk %}">
+                            <span class="mr-1 glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="#" class="open-modal" data-url="{% url 'rrhh:empl_vaca_delete' obj.pk %}">
+                            <span class="mr-1 glyphicon glyphicon-trash text-danger"></span>
+                        </a>
+                    {% endif %}
+                {% endwith %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<hr>
+{% if object_list.0.empleado.vacaciones.faltan > 0 %}
+    {% with empl_id=request.GET.pk anio=object_list.0.empleado.anio %}
+        <a href="#" class="open-modal btn btn-success pull-right"
+                    data-url="{% url 'rrhh:empl_vaca_create' empl_id anio %}">
+            <span class="fa fa-plus"></span> Solicitar vacaciones
+        </a>
+    {% endwith %}
+{% endif %}
+
+
+<script type="text/javascript">
+    $(".open-modal").each(function() {
+        $(this).modalForm({
+            formURL: $(this).data('url'),
+            modalContent: ".modal-dialog",
+            modalForm: ".modal-dialog form",
+        });
+    });
+</script>

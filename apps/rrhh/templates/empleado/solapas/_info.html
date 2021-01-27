@@ -1,0 +1,90 @@
+<!-- datos personales -->
+<div>
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label>Nombre</label>
+            <input class="form-control" value="{{object.persona.nombre}}" readonly="readonly">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Apellido</label>
+            <input class="form-control" value="{{object.persona.apellido}}" readonly="readonly">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Tarea</label>
+            <input class="form-control" value="{{object.tarea}}" readonly="readonly">
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label>DNI</label>
+            <input class="form-control" value="{{object.persona.dni}}" readonly="readonly">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>CUIL</label>
+            <input class="form-control" value="{{object.persona.cuil}}" readonly="readonly">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Sexo</label>
+            <input class="form-control" value="{{object.persona.get_sexo_display}}" readonly="readonly">
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label>Fecha de Nacimiento</label>
+            <input class="form-control" value="{{object.persona.fecha_nacimiento|date:'d M Y'}}" readonly="readonly">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Fecha de Ingreso</label>
+            <input class="form-control" value="{{object.fecha_ingreso|date:'d M Y'}}" readonly="readonly">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Fecha de Egreso</label>
+            <input class="form-control" value="{{object.fecha_egreso|date:'d M Y'}}" readonly="readonly">
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<!-- domicilio -->
+<div>
+    <div class="form-group">
+        <div class="col-xs-12">
+            <h3>Domicilio</h3>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-9 mb-3">
+            <label>Calle y Número</label>
+            <input class="form-control" value="{{object.persona.domicilio.calle}}" readonly="readonly">
+        </div>
+        <div class="col-md-3 mb-3">
+            <label>Cód. Postal</label>
+            <input class="form-control" value="{{object.domicilio.cp}}" readonly="readonly">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label>Localidad</label>
+            <input class="form-control" value="{{object.domicilio.localidad}}" readonly="readonly">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Provincia</label>
+            <input class="form-control" value="{{object.domicilio.provincia}}" readonly="readonly">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>País</label>
+            <input class="form-control" value="{{object.domicilio.pais}}" readonly="readonly">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-12">
+            <br>
+        </div>
+    </div>
+</div>

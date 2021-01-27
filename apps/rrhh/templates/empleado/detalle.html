@@ -1,0 +1,126 @@
+{% extends 'default_base.html' %}
+
+{% load static mis_tags %}
+
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- mensajes del sistema -->
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#div_datos" id="datos" data-toggle="tab">Datos Personales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#div_denuncias" id="denuncias" data-toggle="tab">Denuncias ART</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#div_activos" id="activos" data-toggle="tab">Activos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#div_vacaciones" id="vacaciones" data-toggle="tab">Vacaciones</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="div_datos">
+                </div>
+
+                <div class="tab-pane fade" id="div_denuncias">
+                </div>
+
+                <div class="tab-pane fade" id="div_activos">
+                </div>
+
+                <div class="tab-pane fade" id="div_vacaciones">
+                </div>
+            </div>
+        </div>
+
+        <!-- style="max-width: 255px;"
+        <div class="col-sm-3 hidden-xs">
+        style="max-width: 300px;"
+        -->
+        <div class="col-md-3 hidden-sm hidden-xs" id="panel_derecho">
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block js %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            submitRequest('{{tab}}');
+        });
+
+        // emula pulsación de click en solapa la primera vez
+        function submitRequest(buttonId) {
+            if (document.getElementById(buttonId) == null
+                    || document.getElementById(buttonId) == undefined) {
+                return;
+            }
+            if (document.getElementById(buttonId).dispatchEvent) {
+                var e = document.createEvent("MouseEvents");
+                e.initEvent("click", true, true);
+                document.getElementById(buttonId).dispatchEvent(e);
+            } else {
+                document.getElementById(buttonId).click();
+            }
+        };
+
+        // JS para captura de navegación en solapas
+        $('.nav-link').on('click', function() {
+            var urlPath = '{% url 'empleado:empl_detail_ajax' %}';
+            var pkID = '{{ object.pk }}';
+            var href = $(this).attr('href');
+            var tab = $(this).attr('id');
+
+            if (href != '#datos') {
+                $.ajax({
+                    url: urlPath,
+                    data: {pk: pkID, tab: tab},
+                    success: function(response) {
+                        $(href).html(response);
+                        cargarInfoPanel(tab);
+                    },
+                    error: function(xhr, status, error) {
+                        // $(href).html(xhr.responseText);
+                        $(href).html('<br><b style="color: red">Error en ajax!<b>');
+                    }
+                });
+            }
+        });
+
+        function cargarInfoPanel(tabName) {
+            var urlPath = '{% url 'empleado:empl_detail_info_ajax' %}';
+            var href = '#panel_derecho';
+            var pkID = '{{ object.pk }}';
+
+            $.ajax({
+                url: urlPath,
+                data: {pk: pkID},
+                success: function(response) {
+                    $(href).html(response);
+                },
+                error: function(xhr, status, error) {
+                    $(href).html('<br><b style="color: red">Error en ajax!<b>');
+                }
+            });
+        };
+
+        // hide message
+        $(".alert").fadeTo(2000, 500).slideUp(500, function() {
+            $(".alert").slideUp(500);
+        });
+    </script>
+{% endblock %}

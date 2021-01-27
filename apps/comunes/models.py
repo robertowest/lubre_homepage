@@ -107,6 +107,7 @@ class Provincia(CommonStruct):
 
     class Meta:
         db_table = 'provincia'
+        ordering = ['nombre']
         verbose_name = 'Provincia'
         verbose_name_plural = 'Provincias'
 
@@ -126,12 +127,21 @@ class Departamento(CommonStruct):
 
     class Meta:
         db_table = 'departamento'
+        ordering = ['nombre']
         verbose_name = 'Departamento'
         verbose_name_plural = 'Departamentos'
 
     def __str__(self):
         return self.nombre
 
+
+TODO:
+# from smart_selects.db_fields import ChainedForeignKey
+# localidad = ChainedForeignKey(Localidad,
+#                                   chained_field="departamento",
+#                                   chained_model_field="departamento",
+#                                   show_all=False, auto_choose=True, sort=True,
+#                                   null=True, blank=True)    
 
 class Localidad(CommonStruct):
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
@@ -148,6 +158,7 @@ class Localidad(CommonStruct):
 
     class Meta:
         db_table = 'localidad'
+        ordering = ['nombre']
         verbose_name = 'Localidad'
         verbose_name_plural = 'Localidades'
 

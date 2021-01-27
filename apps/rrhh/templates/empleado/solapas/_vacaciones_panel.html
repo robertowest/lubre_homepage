@@ -1,0 +1,38 @@
+{% load mathfilters %}
+{% load group_tags %}
+{% load static %}
+
+<div class="card mb-3">
+    <div class="card-header">Vacaciones {{empleado.anio}}</div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <b>{{ empleado.vacaciones.totales }}</b> días totales
+        </li>
+        <li class="list-group-item">
+            <b class="text-success">{{ empleado.vacaciones.habiles }}</b> días hábiles
+        </li>
+        <li class="list-group-item">
+            <b class="text-success">{{ empleado.vacaciones.aprobadas }}</b> días aprobados
+        </li>
+        <li class="list-group-item">
+            <b class="text-danger">{{ empleado.vacaciones.pendientes }}</b> días pend. aprob.
+        </li>
+        {% if empleado.vacaciones.faltan == 1 %}
+            <li class="list-group-item">
+                <i class="text-success">falta {{ empleado.vacaciones.faltan }} día</i>
+            </li>
+        {% elif empleado.vacaciones.faltan > 1 %}
+            <li class="list-group-item">
+                <i class="text-success">faltan {{ empleado.vacaciones.faltan }} días</i>
+            </li>
+        {% elif empleado.vacaciones.faltan == -1 %}
+            <li class="list-group-item">
+                <i class="text-danger">sobra {{ empleado.vacaciones.faltan|abs }} día</i>
+            </li>
+        {% elif empleado.vacaciones.faltan < -1 %}
+            <li class="list-group-item">
+                <i class="text-danger">sobran {{ empleado.vacaciones.faltan|abs }} días</i>
+            </li>
+        {% endif %}
+    </ul>
+</div>
