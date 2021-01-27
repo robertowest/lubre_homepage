@@ -24,12 +24,20 @@ def actions_allowed_vacaciones():
 
 
 class VacacionesTable(tables.Table):
+    ESTADO = '''
+    {% if record.estado == 'A' %}
+    <span class="mr-1 far fa-thumbs-up text-success" data-toggle="tooltip" title="Aprobadas"></span>
+    {% else %}
+    <span class="mr-1 far fa-thumbs-down text-danger" data-toggle="tooltip" title="Pendientes"></span>
+    {% endif %}
+    '''
+
     empleado = tables.Column(orderable=True)
     periodo = tables.Column(orderable=False, verbose_name="Período")
-    fecha_inicio = tables.Column(orderable=False, verbose_name="F.Inicio")
-    fecha_fin = tables.Column(orderable=False, verbose_name="F.Fin")
+    fecha_inicio = tables.DateTimeColumn(format="d M Y", orderable=True, verbose_name="F.Inicio")
+    fecha_fin = tables.DateTimeColumn(format="d M Y", orderable=False, verbose_name="F.Fin")
     dias_solicitados = tables.Column(orderable=False, verbose_name="Días")
-    estado = tables.Column(orderable=False)
+    estado = tables.TemplateColumn(template_code=ESTADO, orderable=False)
     actions = tables.TemplateColumn(template_code=actions_allowed_vacaciones(), \
                                     verbose_name='Acciones', orderable=False, \
                                     attrs={'th': {'style': 'min-width: 100px;'}})

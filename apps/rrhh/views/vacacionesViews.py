@@ -1,3 +1,5 @@
+import datetime
+
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
@@ -7,9 +9,9 @@ from django_filters.views import FilterView
 from django_tables2 import SingleTableView
 
 from apps.rrhh import models
-# from apps.rrhh.filters import vacacionesFilters
-from apps.rrhh.forms import vacacionesForms
-from apps.rrhh.tables import vacacionesTables
+from apps.rrhh.filters import vacacionesFilters as filters
+from apps.rrhh.forms import vacacionesForms as forms
+from apps.rrhh.tables import vacacionesTables as tables
 
 from apps.comunes.utils import PagedFilteredTableView
 
@@ -20,20 +22,26 @@ class VacacionesTemplateView(generic.TemplateView):
         return VacacionesListView.as_view()(request)
 
 
-class VacacionesListView(LoginRequiredMixin, SingleTableView):
+class VacacionesListView(LoginRequiredMixin, PagedFilteredTableView):
     model = models.Vacaciones
-    table_class = vacacionesTables.VacacionesTable
-    template_name = 'comunes/tabla2_without_filter.html'
+    table_class = tables.VacacionesTable
+    filter_class = filters.VacacionesFilter
+    formhelper_class = filters.VacacionesFilterForm
+    template_name = 'comunes/tabla2.html'
 
-    def get_queryset(self):
-        return self.model.objects.filter(active=True)
+    # def get_queryset(self):
+    #     if 'periodo' in self.kwargs:
+    #         anio = self.kwargs['periodo']
+    #     else:
+    #         anio = datetime.datetime.now().year
+    #     return self.model.objects.filter(active=True).filter(periodo=anio)
 
 
 class VacacionesCreateView(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'vacaciones.add_vacaciones'
 
     model = models.Vacaciones
-    form_class = vacacionesForms.VacacionesForm
+    form_class = forms.VacacionesForm
     template_name = 'comunes/formulario.html'
     form_title = 'Nueva Vacaciones'
 
@@ -59,7 +67,7 @@ class VacacionesDetailView(PermissionRequiredMixin, generic.DetailView):
 class VacacionesUpdateView(PermissionRequiredMixin, generic.UpdateView):
     permission_required = ['vacaciones.add_vacaciones', 'vacaciones.change_vacaciones']
     model = models.Vacaciones
-    form_class = vacacionesForms.VacacionesForm
+    form_class = forms.VacacionesForm
     template_name = 'comunes/formulario.html'
     form_title = 'Modificación de Vacaciones'
 

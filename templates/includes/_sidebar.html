@@ -84,10 +84,16 @@
             </a>
             <div id="collapseRRHH" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item {% if '/empleado/' in request.path %} active {%endif%}" 
+                    <a class="collapse-item {% if '/rrhh/empleado/' in request.path %} active {%endif%}" 
                         href="{% url 'empleado:index' %}">
                          <i class="fas fa-fw fa-users"></i> Empleados
                     </a>
+                    {% if perms.vacaciones.view_vacaciones %}
+                    <a class="collapse-item {% if '/rrhh/vacaciones/' in request.path %} active {%endif%}" 
+                        href="{% url 'vacaciones:index' %}">
+                         <i class="fas fa-umbrella-beach"></i> Vacaciones
+                    </a>
+                    {% endif %}
                 </div>
             </div>
         </li>

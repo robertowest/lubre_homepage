@@ -220,7 +220,7 @@ class Vacaciones(CommonStruct):
     fecha_inicio = models.DateField('Fecha Inicio', blank=True, null=False)
     fecha_fin = models.DateField('Fecha Fin',blank=True, null=False)
     fecha_solicitud = models.DateField('Fecha Solicitud', blank=True, null=True)
-    periodo = models.SmallIntegerField('Año', blank=True, null=True)
+    periodo = models.SmallIntegerField('Período', blank=True, null=True)
     observacion = models.TextField('Observación', blank=True, null=True)
     estado = models.CharField(max_length=1, choices=ESTADO, default='P', blank=True, null=False)
 
