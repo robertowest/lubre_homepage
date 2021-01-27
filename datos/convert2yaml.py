@@ -11,7 +11,7 @@
 # -h --help      muestra la forma de uso del comando
 
 # csv delimitado por ;
-# convert2yaml.py -i ../db_access/Adherentes.csv -o adherentes.yaml
+# convert2yaml.py -i [path]/archivo.csv -o [path]/archivo.yaml -m [app.tabla]
 
 import yaml
 import os

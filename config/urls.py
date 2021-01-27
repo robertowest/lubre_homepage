@@ -63,6 +63,7 @@ urlpatterns = [
 
     # recursos humanos ----------------------------------------------------------------
     path('rrhh/empleado/', include('apps.rrhh.urls.empleadoUrls')),
+    path('rrhh/vacaciones/', include('apps.rrhh.urls.vacacionesUrls')),
 
     # afip ---------------------------------------------------------------------------
     path('afip/', include('apps.afip_test.urls')),

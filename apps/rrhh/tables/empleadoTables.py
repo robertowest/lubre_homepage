@@ -32,6 +32,7 @@ class EmpleadoTable(tables.Table):
     actions = tables.TemplateColumn(template_code=actions_allowed_empleado(), \
                                     verbose_name='Acciones', orderable=False, \
                                     attrs={'th': {'style': 'min-width: 100px;'}})
+
     class Meta:
         model = Empleado
         attrs = {"class": "table table-hover"}
