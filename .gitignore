@@ -340,3 +340,4 @@ config/settings.ini
 config/custom.py
 config/desarrollo.py
 config/produccion.py
+datos/*

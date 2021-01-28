@@ -1,0 +1,31 @@
+python datos/convert2yaml.py -i ~/Escritorio/exportado.csv -o /home/roberto/Programacion/django/Lubre/clientes/apps/comunes/fixtures/georef.yaml
+./manage.py loaddata georef --app comunes --settings=config.settings.development
+
+
+python datos/convert2yaml.py -i datos/csv/empresa.01.comercial.csv -o datos/yaml/empresa.01.comercial.yaml
+python datos/convert2yaml.py -i datos/csv/empresa.02.empresa.csv -o datos/yaml/empresa.02.empresa.yaml
+
+./manage.py loaddata comercial --app empresa --settings=config.settings.development
+./manage.py loaddata empresa --app empresa --settings=config.settings.development
+
+./manage.py dumpdata --format yaml -o apps/comunes/fixtures/diccionario.yaml  comunes.diccionario
+
+
+
+
+python datos/convert2yaml.py -i ~/Escritorio/domicilios.csv -o ~/Escritorio/comunes.domicilios.yaml
+
+
+
+#
+# carga de datos
+#
+./manage.py loaddata diccionario --app comunes --settings=config.settings.development
+./manage.py loaddata domicilio --app comunes --settings=config.settings.development
+./manage.py loaddata comunicacion --app comunes --settings=config.settings.development
+
+./manage.py loaddata persona --app persona --settings=config.settings.development
+
+./manage.py loaddata comercial --app empresa --settings=config.settings.development
+./manage.py loaddata actividad --app empresa --settings=config.settings.development
+./manage.py loaddata empresa --app empresa --settings=config.settings.development
