@@ -25,6 +25,8 @@ from apps.accounts.views import LoginRedirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('chaining/', include('smart_selects.urls')),   # django-smart-selects
+    
     path('ejemplo/', TemplateView.as_view(template_name='default_base.html'), name='ejemplo'),
 
 

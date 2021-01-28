@@ -188,6 +188,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 # -------------------------------------------------------------------
+# configuración para django-smart-selects
+# -------------------------------------------------------------------
+INSTALLED_APPS += ['smart_selects',]
+# JQUERY_URL = True
+USE_DJANGO_JQUERY = True
+
+
+# -------------------------------------------------------------------
 # configuración para django-templated-email
 # -------------------------------------------------------------------
 TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBackend'

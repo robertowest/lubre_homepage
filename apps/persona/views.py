@@ -50,6 +50,7 @@ class PersonasListView(LoginRequiredMixin, PagedFilteredTableView):
 
 
 class PersonaCreateView(PermissionRequiredMixin, generic.CreateView):
+    # permission_required = '{domain}/add_{app}'.format(domain='persona', app='persona')
     permission_required = 'persona.add_persona'
 
     model = models.Persona

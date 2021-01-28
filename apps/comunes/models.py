@@ -1,8 +1,10 @@
+from smart_selects.db_fields import ChainedForeignKey
+
 from django.db import models
 from django.urls import reverse
 from datetime import datetime
 
-from django_currentuser.middleware import get_current_user, get_current_authenticated_user
+from django_currentuser.middleware import get_current_user
 
 # como campo de un modelo (ForeignKey)
 # from django_currentuser.db.models import CurrentUserField
@@ -135,14 +137,6 @@ class Departamento(CommonStruct):
         return self.nombre
 
 
-TODO:
-# from smart_selects.db_fields import ChainedForeignKey
-# localidad = ChainedForeignKey(Localidad,
-#                                   chained_field="departamento",
-#                                   chained_model_field="departamento",
-#                                   show_all=False, auto_choose=True, sort=True,
-#                                   null=True, blank=True)    
-
 class Localidad(CommonStruct):
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=150)
@@ -219,6 +213,14 @@ class Diccionario(CommonStruct):
         return str(self.texto).capitalize()
 
 
+# TODO:
+# from smart_selects.db_fields import ChainedForeignKey
+# localidad = ChainedForeignKey(Localidad,
+#                                   chained_field="departamento",
+#                                   chained_model_field="departamento",
+#                                   show_all=False, auto_choose=True, sort=True,
+#                                   null=True, blank=True)    
+
 class Domicilio(CommonStruct):
     TIPO_CALLE = (('avda', 'Avenida'), ('barrio', 'Barrio'), ('calle', 'Calle'),
                   ('gps', 'Geo Posicionamiento'), ('pje', 'Pasaje'), ('ruta', 'Ruta'))
@@ -236,12 +238,22 @@ class Domicilio(CommonStruct):
     provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE,
                                   null=True, blank=True,
                                   limit_choices_to={'active': True})
-    departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE,
-                                     null=True, blank=True,
-                                     limit_choices_to={'active': True})
-    localidad = models.ForeignKey(Localidad, on_delete=models.CASCADE,
-                                  null=True, blank=True,
-                                  limit_choices_to={'active': True})
+    # departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE,
+    #                                  null=True, blank=True,
+    #                                  limit_choices_to={'active': True})
+    # localidad = models.ForeignKey(Localidad, on_delete=models.CASCADE,
+    #                               null=True, blank=True,
+    #                               limit_choices_to={'active': True})
+    departamento = ChainedForeignKey(Departamento, 
+                                     chained_field="provincia",
+                                     chained_model_field="provincia",
+                                     show_all=False, auto_choose=True, sort=True,
+                                     null=True, blank=True)    
+    localidad = ChainedForeignKey(Localidad,
+                                  chained_field="departamento",
+                                  chained_model_field="departamento",
+                                  show_all=False, auto_choose=True, sort=True,
+                                  null=True, blank=True)
     provincia_texto = models.CharField(max_length=50, null=True, blank=True)
     departamento_texto = models.CharField(max_length=50, null=True, blank=True)
     localidad_texto = models.CharField(max_length=50, null=True, blank=True)
