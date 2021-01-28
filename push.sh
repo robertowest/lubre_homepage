@@ -19,3 +19,7 @@ git push -u origin master
 # git rm -r .idea/
 # git commit -m "borrar carpeta idea"
 # git push
+
+# Limpiando archivos ignorados
+# git clean -Xn      - Vista previa de todos los archivos que serán limpiados
+# git clean -Xf      - Se eliminarán todos los archivos ignorados del directorio actual y todos los subdirectorios
