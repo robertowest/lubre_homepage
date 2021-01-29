@@ -29,6 +29,11 @@ class VacacionesListView(LoginRequiredMixin, PagedFilteredTableView):
     formhelper_class = filters.VacacionesFilterForm
     template_name = 'comunes/tabla2.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['appdomain'] = "empresa" or __package__.split('.')[1] 
+        return context
+
     # def get_queryset(self):
     #     if 'periodo' in self.kwargs:
     #         anio = self.kwargs['periodo']
@@ -39,7 +44,6 @@ class VacacionesListView(LoginRequiredMixin, PagedFilteredTableView):
 
 class VacacionesCreateView(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'vacaciones.add_vacaciones'
-
     model = models.Vacaciones
     form_class = forms.VacacionesForm
     template_name = 'comunes/formulario.html'

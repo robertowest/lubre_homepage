@@ -7,11 +7,11 @@ from django.views import generic
 from django_filters.views import FilterView
 from django_tables2 import SingleTableView
 
-from apps.comunes.models import Domicilio, Comunicacion
+from apps.comunes.models import Comunicacion
 from apps.rrhh import models
-from apps.rrhh.filters import empleadoFilters
-from apps.rrhh.forms import empleadoForms
-from apps.rrhh.tables import empleadoTables
+from apps.rrhh.filters import empleadoFilters as filters
+from apps.rrhh.forms import empleadoForms as forms
+from apps.rrhh.tables import empleadoTables as tables
 
 from apps.comunes.utils import PagedFilteredTableView
 
@@ -22,10 +22,12 @@ class EmpleadoTemplateView(generic.TemplateView):
         return EmpleadosListView.as_view()(request)
 
 
-class EmpleadosListView(LoginRequiredMixin, SingleTableView):
-    model = models.Empleado
-    table_class = empleadoTables.EmpleadoTable
-    template_name = 'comunes/tabla2_without_filter.html'
+class EmpleadosListView(LoginRequiredMixin, PagedFilteredTableView):
+    model = models.Vacaciones
+    table_class = tables.EmpleadoTable
+    filter_class = filters.EmpleadoFilter
+    formhelper_class = filters.EmpleadoFilterForm
+    template_name = 'comunes/tabla2.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -40,7 +42,7 @@ class EmpleadoCreateView(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'empleado.add_empleado'
 
     model = models.Empleado
-    form_class = empleadoForms.EmpleadoForm
+    form_class = forms.EmpleadoForm
     template_name = 'comunes/formulario.html'
     form_title = 'Nueva Empleado'
 
@@ -69,9 +71,6 @@ class EmpleadoDetailView(PermissionRequiredMixin, generic.DetailView):
             context['tab'] = self.request.session['tab']
         else:
             context['tab'] = 'datos'
-        # context['domicilio'] = Domicilio.objects.filter(
-        #     empleado_id=context['empleado'].persona_id
-        # )
         # context['comunicaciones'] = Comunicacion.objects.filter(
         #     empleado_id=context['empleado'].persona_id
         # ).order_by('tipo')
@@ -83,7 +82,7 @@ class EmpleadoDetailView(PermissionRequiredMixin, generic.DetailView):
 class EmpleadoUpdateView(PermissionRequiredMixin, generic.UpdateView):
     permission_required = ['empleado.add_empleado', 'empleado.change_empleado']
     model = models.Empleado
-    form_class = empleadoForms.EmpleadoForm
+    form_class = forms.EmpleadoForm
     template_name = 'comunes/formulario.html'
     form_title = 'Modificación de Empleado'
 

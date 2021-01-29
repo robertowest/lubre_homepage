@@ -31,6 +31,8 @@
                 </li>
             </ul>
 
+            <br>
+            
             <div class="tab-content">
                 <div class="tab-pane active" id="div_datos">
                 </div>
@@ -46,12 +48,10 @@
             </div>
         </div>
 
-        <!-- style="max-width: 255px;"
-        <div class="col-sm-3 hidden-xs">
-        style="max-width: 300px;"
-        -->
-        <div class="col-md-3 hidden-sm hidden-xs" id="panel_derecho">
+        <!--
+        <div class="col-lg-3 hidden-sm hidden-xs" id="panel_derecho">
         </div>
+        -->
     </div>
 
 {% endblock %}
@@ -91,7 +91,8 @@
                     data: {pk: pkID, tab: tab},
                     success: function(response) {
                         $(href).html(response);
-                        cargarInfoPanel(tab);
+                        // panel derecho (eliminado)
+                        // cargarInfoPanel(tab);
                     },
                     error: function(xhr, status, error) {
                         // $(href).html(xhr.responseText);

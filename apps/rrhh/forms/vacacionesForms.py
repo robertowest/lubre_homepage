@@ -1,4 +1,4 @@
-from crispy_forms import bootstrap, helper, layout
+from crispy_forms import helper, layout
 from django import forms
 
 from apps.rrhh.models import Vacaciones

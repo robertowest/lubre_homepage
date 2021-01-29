@@ -1,17 +1,19 @@
 from crispy_forms import helper, layout
 from django import forms
 
-from apps.rrhh.models import Empleado
+from apps.rrhh.models import Denuncia_ART
 
 
-class EmpleadoForm(forms.ModelForm):
+class DenunciaForm(forms.ModelForm):
     class Meta:
-        model = Empleado
-        fields = ['persona', 'legajo', 'fecha_ingreso', 'fecha_egreso', 
-                  'imagen', 'tarea', 'usuario', 'active']
+        model = Denuncia_ART
+        fields = ['empleado', 'siniestro', 'fec_siniestro', 'fec_denuncia', 
+                  'tipo_accidente', 'tipologia', 'zona_afectada', 'estado', 
+                  'fec_alta_medica', 'motivo_alta', 'active']
         widgets = {
-            'fecha_egreso': forms.TextInput(attrs={'placeholder': '30/03/2010'}),
-            'fecha_ingreso': forms.TextInput(attrs={'placeholder': '30/03/2010'}),
+            'fec_siniestro': forms.TextInput(attrs={'placeholder': '30/03/2010'}),
+            'fec_denuncia': forms.TextInput(attrs={'placeholder': '30/03/2010'}),
+            'fec_alta_medica': forms.TextInput(attrs={'placeholder': '30/03/2010'}),
         }
 
     def __init__(self, *args, **kwargs):
