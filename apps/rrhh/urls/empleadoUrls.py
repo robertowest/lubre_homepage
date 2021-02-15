@@ -12,7 +12,8 @@ urlpatterns = [
     path('<int:pk>/modificar/', views.EmpleadoUpdateView.as_view(), name='update'),
     path('<int:pk>/eliminar/', views.EmpleadoDeleteView.as_view(), name='delete'),
 
-    # información relacionada con el empleado
-    path('detalle/ajax/', views.EmpleadoDetailAjax, name='empl_detail_ajax'),
-    path('detalle/panel/ajax/', views.EmpleadoDetailPanelAjax, name='empl_detail_info_ajax'),    
+    path('<int:pk>/datos/', views.TabDatosDetailView.as_view(), name='tab_datos'),
+    path('<int:pk>/denuncias/', views.TabDenunciasListView.as_view(), name='tab_denuncias'),
+    path('<int:pk>/activos/', views.TabActivosListView.as_view(), name='tab_activos'),
+    path('<int:pk>/vacaciones/', views.TabVacacionesListView.as_view(), name='tab_vacaciones'),
 ]
