@@ -1,0 +1,19 @@
+Si tenemos problemas para acceder mediante https:// posiblemente tengamos nuestro certificado vencido.
+Al certificado gratuito hay que renovarlo cada 4 mese, por lo que debemos hacer lo siguiente:
+
+Seguimos los pasos de esta página (hasta el paso 18) para obtener un nuevo certificado
+https://www.haztupaginaweb.com/certificado-ssl-gratis/
+
+Una vez obtenido, los copiamos en el directorio `/home/roberto/www/lubresrl/ssl` del servidor
+    scp * roberto@latincloud:/home/roberto/www/lubresrl/ssl/
+
+Reiniciamos nuestro apache y listo ...
+    ssh roberto@latincloud
+    sudo ../restart_httpd.sh
+
+
+
+
+https://app.zerossl.com/certificates
+https://help.zerossl.com/hc/en-us/articles/360060120373-Installing-SSL-Certificate-on-Ubuntu
+
