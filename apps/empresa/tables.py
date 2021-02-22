@@ -37,7 +37,7 @@ class ActividadTable(tables.Table):
         model = Actividad
         attrs = {"class": "table table-hover"}
         fields = ['nombre', 'parent', 'active']
-        empty_text = "No hay datos que satisfaga los criterios de búsqueda."
+        empty_text = "No hay datos que cumplan los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"
         per_page = 100
 
@@ -74,7 +74,7 @@ class ComercialTable(tables.Table):
         attrs = {"class": "table table-hover"}    # table-striped 
         fields = ['persona', 'usuario', 'active']
         # sequence = []
-        empty_text = "No hay datos que satisfaga los criterios de búsqueda."
+        empty_text = "No hay datos que cumplan los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"
         per_page = 20
 
@@ -115,6 +115,6 @@ class EmpresaTable(tables.Table):
         attrs = {"class": "table table-hover"}    # table-striped 
         fields = ['nombre', 'cuit', 'modified', 'active']
         # sequence = ['nombre', 'cuit', 'comercial', 'actividad', 'active']
-        empty_text = "No hay datos que satisfaga los criterios de búsqueda."
+        empty_text = "No hay datos que cumplan los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"
         per_page = 20

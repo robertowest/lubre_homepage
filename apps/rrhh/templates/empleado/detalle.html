@@ -1,7 +1,8 @@
 {% extends 'default_base.html' %}
 
 {% load static mis_tags %}
-
+{% load crispy_forms_tags i18n %}
+{% load render_table from django_tables2 %}
 
 {% block content %}
 
@@ -31,6 +32,8 @@
                 </li>
             </ul>
 
+            <br>
+            
             <div class="tab-content">
                 <div class="tab-pane active" id="div_datos">
                 </div>
@@ -46,12 +49,10 @@
             </div>
         </div>
 
-        <!-- style="max-width: 255px;"
-        <div class="col-sm-3 hidden-xs">
-        style="max-width: 300px;"
-        -->
-        <div class="col-md-3 hidden-sm hidden-xs" id="panel_derecho">
+        <!--
+        <div class="col-lg-3 hidden-sm hidden-xs" id="panel_derecho">
         </div>
+        -->
     </div>
 
 {% endblock %}
@@ -80,10 +81,27 @@
 
         // JS para captura de navegación en solapas
         $('.nav-link').on('click', function() {
-            var urlPath = '{% url 'empleado:empl_detail_ajax' %}';
+            var urlPath = '';
             var pkID = '{{ object.pk }}';
             var href = $(this).attr('href');
             var tab = $(this).attr('id');
+
+            switch (tab) {
+                case 'datos':
+                    urlPath = "{% url 'empleado:tab_datos' object.pk %}";
+                    break;
+                case 'denuncias':
+                    urlPath = "{% url 'empleado:tab_denuncias' object.pk %}";
+                    break;
+                case 'activos':
+                    urlPath = "{% url 'empleado:tab_activos' object.pk %}";
+                    break;
+                case 'vacaciones':
+                    urlPath = "{% url 'empleado:tab_vacaciones' object.pk %}";
+                    break;
+                default:
+                    console.log('Lo lamentamos, por el momento no disponemos de ' + expr + '.');
+            }
 
             if (href != '#datos') {
                 $.ajax({
@@ -91,7 +109,6 @@
                     data: {pk: pkID, tab: tab},
                     success: function(response) {
                         $(href).html(response);
-                        cargarInfoPanel(tab);
                     },
                     error: function(xhr, status, error) {
                         // $(href).html(xhr.responseText);
@@ -100,23 +117,6 @@
                 });
             }
         });
-
-        function cargarInfoPanel(tabName) {
-            var urlPath = '{% url 'empleado:empl_detail_info_ajax' %}';
-            var href = '#panel_derecho';
-            var pkID = '{{ object.pk }}';
-
-            $.ajax({
-                url: urlPath,
-                data: {pk: pkID},
-                success: function(response) {
-                    $(href).html(response);
-                },
-                error: function(xhr, status, error) {
-                    $(href).html('<br><b style="color: red">Error en ajax!<b>');
-                }
-            });
-        };
 
         // hide message
         $(".alert").fadeTo(2000, 500).slideUp(500, function() {

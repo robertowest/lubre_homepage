@@ -7,11 +7,12 @@ from django.views import generic
 from django_filters.views import FilterView
 from django_tables2 import SingleTableView
 
-from apps.comunes.models import Domicilio, Comunicacion
+from apps.comunes.models import Comunicacion
 from apps.rrhh import models
-from apps.rrhh.filters import empleadoFilters
-from apps.rrhh.forms import empleadoForms
-from apps.rrhh.tables import empleadoTables
+from apps.rrhh.filters import empleadoFilters as filters
+from apps.rrhh.forms import empleadoForms as forms
+from apps.rrhh.tables import empleadoTables as tables
+from apps.rrhh.tables import denunciaTables, activoTables
 
 from apps.comunes.utils import PagedFilteredTableView
 
@@ -22,10 +23,12 @@ class EmpleadoTemplateView(generic.TemplateView):
         return EmpleadosListView.as_view()(request)
 
 
-class EmpleadosListView(LoginRequiredMixin, SingleTableView):
-    model = models.Empleado
-    table_class = empleadoTables.EmpleadoTable
-    template_name = 'comunes/tabla2_without_filter.html'
+class EmpleadosListView(LoginRequiredMixin, PagedFilteredTableView):
+    model = models.Vacaciones
+    table_class = tables.EmpleadoTable
+    filter_class = filters.EmpleadoFilter
+    formhelper_class = filters.EmpleadoFilterForm
+    template_name = 'comunes/tabla2.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -40,7 +43,7 @@ class EmpleadoCreateView(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'empleado.add_empleado'
 
     model = models.Empleado
-    form_class = empleadoForms.EmpleadoForm
+    form_class = forms.EmpleadoForm
     template_name = 'comunes/formulario.html'
     form_title = 'Nueva Empleado'
 
@@ -69,21 +72,13 @@ class EmpleadoDetailView(PermissionRequiredMixin, generic.DetailView):
             context['tab'] = self.request.session['tab']
         else:
             context['tab'] = 'datos'
-        # context['domicilio'] = Domicilio.objects.filter(
-        #     empleado_id=context['empleado'].persona_id
-        # )
-        # context['comunicaciones'] = Comunicacion.objects.filter(
-        #     empleado_id=context['empleado'].persona_id
-        # ).order_by('tipo')
-        # context['denuncias'] = models.Denuncia_ART.objects.filter(empleado_id=context['empleado'].persona_id)
-        # context['activos'] = models.ActivoMantenimientoView.objects.filter(responsable_id=context['empleado'].persona_id)
         return context
 
 
 class EmpleadoUpdateView(PermissionRequiredMixin, generic.UpdateView):
     permission_required = ['empleado.add_empleado', 'empleado.change_empleado']
     model = models.Empleado
-    form_class = empleadoForms.EmpleadoForm
+    form_class = forms.EmpleadoForm
     template_name = 'comunes/formulario.html'
     form_title = 'Modificación de Empleado'
 
@@ -115,42 +110,48 @@ class EmpleadoDeleteView(PermissionRequiredMixin, generic.DeleteView):
         return reverse_lazy('empleado:list')
 
 
-def EmpleadoDetailAjax(request):
-    empleadoId = request.GET['pk']
-    solapa = request.GET['tab']
-    request.session['tab'] = solapa
 
-    if solapa == 'datos':
-        template = 'empleado/solapas/_info.html'
-        info = models.Empleado.objects.get(persona_id=empleadoId)
-        context = {'object': info}
-        return render(request, template, context)
+# -----------------------------------------------------------------------------
+# solapas
+# -----------------------------------------------------------------------------
+class TabDatosDetailView(PermissionRequiredMixin, generic.DetailView):
+    permission_required = 'empleado.view_empleado'
+    model = models.Empleado
+    template_name = 'empleado/solapas/datos.html'
 
-    elif solapa == 'denuncias':
-        data = models.Denuncia_ART.objects.filter(empleado_id=empleadoId).filter(active=True)
-        template = 'empleado/solapas/_denuncias.html'
-
-    elif solapa == 'activos':
-        data = models.Activo.objects.filter(responsable_id=empleadoId).filter(active=True)
-        template = 'empleado/solapas/_activos.html'
-
-    elif solapa == 'vacaciones':
-        data = models.Vacaciones.objects.filter(empleado_id=empleadoId).filter(active=True)
-        template = 'empleado/solapas/_vacaciones.html'
-
-    return render(request, template, {'object_list': data, 'info_panel': 'panel'})
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        self.request.session['tab'] = self.request.GET['tab']
+        return context        
 
 
-def EmpleadoDetailPanelAjax(request):
-    empleadoId = request.GET['pk']
+class TabDenunciasListView(LoginRequiredMixin, SingleTableView):
+    model = models.Denuncia_ART
+    table_class = denunciaTables.DenunciaTable
+    template_name = 'empleado/solapas/denuncias.html'
 
-    if request.session['tab'] != 'vacaciones':
-        data = []  # models.Comunicacion.objects.filter(empleado_id=empleadoId).order_by('tipo')
-        context = {'object_list': data }
-        template = 'empleado/solapas/_info_panel.html'
-    else:
-        data = models.Empleado.objects.get(persona_id=empleadoId)
-        context = {'empleado': data}
-        template = 'empleado/solapas/_vacaciones_panel.html'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        self.request.session['tab'] = self.request.GET['tab']
+        return context        
 
-    return render(request, template, context)
+    def get_queryset(self):
+        return models.Denuncia_ART.objects.filter(empleado=self.kwargs['pk']).filter(active=True)
+
+
+class TabActivosListView(LoginRequiredMixin, SingleTableView):
+    model = models.Activo
+    table_class = activoTables.ActivoTable
+    template_name = 'empleado/solapas/activos.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        self.request.session['tab'] = self.request.GET['tab']
+        return context
+        
+    def get_queryset(self):
+        return models.Activo.objects.filter(responsable=self.kwargs['pk']).filter(active=True)
+
+
+class TabVacacionesListView(LoginRequiredMixin, SingleTableView):
+    pass

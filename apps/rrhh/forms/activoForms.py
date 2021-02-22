@@ -1,18 +1,13 @@
 from crispy_forms import helper, layout
 from django import forms
 
-from apps.rrhh.models import Empleado
+from apps.rrhh.models import Activo
 
 
-class EmpleadoForm(forms.ModelForm):
+class ActivoForm(forms.ModelForm):
     class Meta:
-        model = Empleado
-        fields = ['persona', 'legajo', 'fecha_ingreso', 'fecha_egreso', 
-                  'imagen', 'tarea', 'usuario', 'active']
-        widgets = {
-            'fecha_egreso': forms.TextInput(attrs={'placeholder': '30/03/2010'}),
-            'fecha_ingreso': forms.TextInput(attrs={'placeholder': '30/03/2010'}),
-        }
+        model = Activo
+        fields = ['tipo', 'descripcion', 'responsable', 'active']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

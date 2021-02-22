@@ -1,53 +1,43 @@
-import datetime
-
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.http import HttpResponseRedirect
+from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from django_filters.views import FilterView
 from django_tables2 import SingleTableView
 
 from apps.rrhh import models
-from apps.rrhh.filters import vacacionesFilters as filters
-from apps.rrhh.forms import vacacionesForms as forms
-from apps.rrhh.tables import vacacionesTables as tables
-
-from apps.comunes.utils import PagedFilteredTableView
+from apps.rrhh.forms import activoForms as forms
+from apps.rrhh.tables import activoTables as tables
 
 
-class VacacionesTemplateView(generic.TemplateView):
+class ActivoTemplateView(generic.TemplateView):
     # si no existe página index llamamos a otra función
     def get(self, request, *args, **kwargs):
-        return VacacionesListView.as_view()(request)
+        return ActivosListView.as_view()(request)
 
 
-class VacacionesListView(LoginRequiredMixin, PagedFilteredTableView):
-    model = models.Vacaciones
-    table_class = tables.VacacionesTable
-    filter_class = filters.VacacionesFilter
-    formhelper_class = filters.VacacionesFilterForm
+class ActivosListView(LoginRequiredMixin, SingleTableView):
+    model = models.Activo
+    table_class = tables.ActivoTable
     template_name = 'comunes/tabla2.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['appdomain'] = "empresa" or __package__.split('.')[1] 
         return context
-
-    # def get_queryset(self):
-    #     if 'periodo' in self.kwargs:
-    #         anio = self.kwargs['periodo']
-    #     else:
-    #         anio = datetime.datetime.now().year
-    #     return self.model.objects.filter(active=True).filter(periodo=anio)
+        
+    def get_queryset(self):
+        return models.Activo.objects.filter(active=True)
 
 
-class VacacionesCreateView(PermissionRequiredMixin, generic.CreateView):
-    permission_required = 'vacaciones.add_vacaciones'
-    model = models.Vacaciones
-    form_class = forms.VacacionesForm
+class ActivoCreateView(PermissionRequiredMixin, generic.CreateView):
+    permission_required = 'activo.add_activo'
+
+    model = models.Activo
+    form_class = forms.ActivoForm
     template_name = 'comunes/formulario.html'
-    form_title = 'Nueva Vacaciones'
+    form_title = 'Nueva Activo'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -62,18 +52,18 @@ class VacacionesCreateView(PermissionRequiredMixin, generic.CreateView):
         return response
 
 
-class VacacionesDetailView(PermissionRequiredMixin, generic.DetailView):
-    permission_required = 'vacaciones.view_vacaciones'
-    model = models.Vacaciones
-    template_name = 'comunes/detalle.html'
+class ActivoDetailView(PermissionRequiredMixin, generic.DetailView):
+    permission_required = 'activo.view_activo'
+    model = models.Activo
+    template_name = 'activo/detalle.html'
 
 
-class VacacionesUpdateView(PermissionRequiredMixin, generic.UpdateView):
-    permission_required = ['vacaciones.add_vacaciones', 'vacaciones.change_vacaciones']
-    model = models.Vacaciones
-    form_class = forms.VacacionesForm
+class ActivoUpdateView(PermissionRequiredMixin, generic.UpdateView):
+    permission_required = ['activo.add_activo', 'activo.change_activo']
+    model = models.Activo
+    form_class = forms.ActivoForm
     template_name = 'comunes/formulario.html'
-    form_title = 'Modificación de Vacaciones'
+    form_title = 'Modificación de Activo'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -88,9 +78,9 @@ class VacacionesUpdateView(PermissionRequiredMixin, generic.UpdateView):
         return response
 
 
-class VacacionesDeleteView(PermissionRequiredMixin, generic.DeleteView):
-    permission_required = 'vacaciones.delete_vacaciones'
-    model = models.Vacaciones
+class ActivoDeleteView(PermissionRequiredMixin, generic.DeleteView):
+    permission_required = 'activo.delete_activo'
+    model = models.Activo
     success_message = "Registro eliminado correctamente"
 
     def get(self, request, *args, **kwargs):
@@ -100,4 +90,4 @@ class VacacionesDeleteView(PermissionRequiredMixin, generic.DeleteView):
         redirect = self.request.GET.get('next')
         if redirect:
             return redirect
-        return reverse_lazy('vacaciones:list')
+        return reverse_lazy('activo:list')

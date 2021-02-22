@@ -213,14 +213,6 @@ class Diccionario(CommonStruct):
         return str(self.texto).capitalize()
 
 
-# TODO:
-# from smart_selects.db_fields import ChainedForeignKey
-# localidad = ChainedForeignKey(Localidad,
-#                                   chained_field="departamento",
-#                                   chained_model_field="departamento",
-#                                   show_all=False, auto_choose=True, sort=True,
-#                                   null=True, blank=True)    
-
 class Domicilio(CommonStruct):
     TIPO_CALLE = (('avda', 'Avenida'), ('barrio', 'Barrio'), ('calle', 'Calle'),
                   ('gps', 'Geo Posicionamiento'), ('pje', 'Pasaje'), ('ruta', 'Ruta'))
@@ -238,12 +230,6 @@ class Domicilio(CommonStruct):
     provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE,
                                   null=True, blank=True,
                                   limit_choices_to={'active': True})
-    # departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE,
-    #                                  null=True, blank=True,
-    #                                  limit_choices_to={'active': True})
-    # localidad = models.ForeignKey(Localidad, on_delete=models.CASCADE,
-    #                               null=True, blank=True,
-    #                               limit_choices_to={'active': True})
     departamento = ChainedForeignKey(Departamento, 
                                      chained_field="provincia",
                                      chained_model_field="provincia",

@@ -40,6 +40,6 @@ class PersonaTable(tables.Table):
         fields = ['id', 'nombre', 'apellido', 'documento', 
                   'fecha_nacimiento', 'edad', 'persona_similar', 
                   'active']
-        empty_text = "No hay datos que satisfaga los criterios de búsqueda."
+        empty_text = "No hay datos que cumplan los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"
         per_page = 20

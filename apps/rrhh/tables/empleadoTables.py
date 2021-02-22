@@ -37,6 +37,6 @@ class EmpleadoTable(tables.Table):
         model = Empleado
         attrs = {"class": "table table-hover"}
         fields = ['persona', 'legajo', 'usuario', 'anio', 'active']
-        empty_text = "No hay datos que satisfaga los criterios de búsqueda."
+        empty_text = "No hay datos que cumplan los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"
         per_page = 20
