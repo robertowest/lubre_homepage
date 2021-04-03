@@ -6,7 +6,15 @@ git add .
 # git reset config/settings.py
 
 git commit -m "modificaciones en casa"
-git push -u origin master
+
+# git push -u origin master
+echo "¿Quiere subir los cambios?"
+select sn in "Sí" "No"; do
+    case $sn in
+        Sí ) git push; break;;
+        No ) exit;;
+    esac
+done
 
 # para descartar todos los cambios locales
 # git reset --hard HEAD
