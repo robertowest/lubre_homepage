@@ -264,3 +264,8 @@ MERCADOPAGO = {
     'pending_url': 'mp:payment_pending',
     'base_host': 'https://lubresrl.com.ar',
 }
+
+
+INSTALLED_APPS += [
+    'prueba',
+]

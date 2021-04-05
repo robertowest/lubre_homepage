@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/roberto/.miniconda3/envs/lubresrl/bin/python",
+    "python.pythonPath": "/home/roberto/miniconda3/envs/lubresrl/bin/python",
     "files.associations": {
         "**/*.html": "html",
         "**/templates/**/*.html": "django-html",

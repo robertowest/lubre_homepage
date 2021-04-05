@@ -1,0 +1,15 @@
+{% extends 'default_base.html' %}
+
+
+{% block modal %}
+    {% include 'prueba/includes/find_modal.html' %}
+{% endblock %}
+
+
+{% block js %}
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#findModal').modal('show');
+    });
+</script>
+{% endblock %}

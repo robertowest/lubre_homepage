@@ -114,3 +114,10 @@ if settings.DEBUG:
     urlpatterns += [
         path('__debug__/', include(debug_toolbar.urls)),
     ]
+
+    # -----------------------------------------------------------------------------
+    # prueba - aplicaciones para probar lo que sea ...
+    # -----------------------------------------------------------------------------
+    urlpatterns += [
+        path('prueba/', include('prueba.urls')),
+    ]

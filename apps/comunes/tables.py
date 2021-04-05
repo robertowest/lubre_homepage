@@ -39,3 +39,38 @@ class ComunicacionTable(tables.Table):
         empty_text = "No hay datos para los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"
         per_page = 20
+
+
+
+class TextoColumn(tables.Column):
+    # https://makandracards.com/django/53365-django-tables2-custom-column
+    def render(self, record):
+        if record.active:
+            self.linkify = True
+        else:
+            self.linkify = False
+        return super().render(record)
+
+
+class ComunicacionFindTable(tables.Table):
+    id = tables.Column(orderable=False)
+    tipo = tables.Column(orderable=False)
+    # texto = tables.Column(orderable=False)
+    # texto = tables.LinkColumn('app:url', args=[A('pk')])
+    # texto = TextoLinkColumn(
+    #     'comunicacion:update',
+    #     kwargs={'pk': A('id')},
+    #     orderable=False
+    # )
+    texto = TextoColumn(orderable=False)
+    #texto = tables.Column(linkify=True, orderable=False)
+    active = tables.Column(orderable=False)
+
+    class Meta:
+        # attrs = {"class": "table table-striped table-hover cabecera-azul"}
+        attrs = {"class": "table table-hover"}
+        model = Comunicacion
+        fields = ['id', 'tipo', 'texto', 'active']
+        empty_text = "No hay datos para los criterios de búsqueda."
+        template_name = "django_tables2/bootstrap4.html"
+        per_page = 10

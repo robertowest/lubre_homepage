@@ -45,6 +45,7 @@ class ComunicacionFilterFormHelper(helper.FormHelper):
                     bootstrap.InlineField("id", wrapper_class="col-4"),
                     bootstrap.InlineField("tipo", wrapper_class="col-4"),
                     bootstrap.InlineField("texto", wrapper_class="col-4"),
+                    bootstrap.InlineField("active", wrapper_class="col-4"),
                     css_class="row",
                 ),
                 css_class="col-11 border p-3",
