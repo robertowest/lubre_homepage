@@ -33,10 +33,10 @@ class ComunicacionTableView(TemplateView):
 
 
 def comunicacion_table_view(request):
-    # # from django.template import Context, Template
-    # # t = Template("{% render_table table %}")
-    # # c = Context({'filter': filter})
-    # # return t.render(c)
+    # from django.template import Context, Template
+    # t = Template("{% render_table table %}")
+    # c = Context({'filter': filter})
+    # return t.render(c)
 
     # context = {
     #             'filter': ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all()),

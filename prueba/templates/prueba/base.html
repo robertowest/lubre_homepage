@@ -28,9 +28,11 @@
         })
     };
 
-    $('a').click(function() {
+    $(".enlace").click(function(event) {
         var dataPK = $(this).attr("data-pk");
+        alert(dataPK)
         // TODO: lamar a la función de asociación
+        event.preventDefault();
     });
 </script>
 {% endblock %}
