@@ -57,3 +57,36 @@ class ComunicacionFilterFormHelper(helper.FormHelper):
             css_class="row",
         )
     )
+
+
+class ComunicacionFilterFormModal(helper.FormHelper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.form_method = 'get'
+        self.form_id = 'frmFilter'
+        # self.form_action = "{% url 'prueba:filter_modal' %}"
+        # self.form_action = "/prueba/filter_modal"
+
+        self.layout = layout.Layout(
+            layout.Div(
+                layout.Fieldset(
+                    None,
+                    layout.Div(
+                        bootstrap.InlineField("tipo", wrapper_class="col-4"),
+                        bootstrap.InlineField("texto", wrapper_class="col-5"),
+                        bootstrap.InlineField("active", wrapper_class="col-3"),
+                        css_class="row",
+                    ),
+                    css_class="col-10",
+                ),
+                bootstrap.FormActions(
+                    # layout.Submit("submit", "Buscar", css_id="btnBuscar"),
+                    layout.Button('btnFilter', 'Buscar', 
+                                  css_id="btnFilter", 
+                                  css_class='btn btn-primary', 
+                                  onclick="ajax_modal_submit(frmFilter);"),
+                    css_class="col-2 text-right align-self-center",
+                ),
+                css_class="row",
+            )
+        )
