@@ -100,11 +100,12 @@
                     </a>
                     {% endif %}
                     <!-- asociar contacto existente a la empresa -->
-                    {# url 'empresa:buscar_contacto' object.pk #}
-                    <a href="#" class="btn btn-sm btn-secondary btn-icon-split"
-                        data-toggle="modal" data-target="#myModal"
-                        data-url="#"
-                        data-pk="{{object.pk}}">
+                    <a href="#" id="asociar_comunicacion"
+                       class="btn btn-sm btn-secondary btn-icon-split"
+                       data-toggle="modal" 
+                       data-target="#findModal"
+                       data-url="{% url 'persona:asociar_comunicacion' %}"
+                       data-pk="{{object.pk}}">
                         <span class="icon text-white-50">
                             <i class="fas fa-link"></i>
                         </span>
@@ -157,6 +158,7 @@
 
 {% block modal %}
     {% include 'includes/_modal_delete.html' %}
+    {% include 'includes/_modal_find.html' %}
 {% endblock %}
 
 
@@ -184,5 +186,70 @@
             console.log( JSON.stringify(e, null, 2) );
         });
 
+
+        // búsqueda en ventana modal
+        var dataURL = ''    // '{% url "persona:asociar_comunicacion" %}'
+        var dataPK = 0
+
+        $('#asociar_comunicacion').click(function(event) {
+            dataURL = $(this).attr('data-url')
+            dataPK = $(this).attr('data-pk')
+
+            console.log(dataURL)
+            console.log(dataPK)
+
+            // event.preventDefault()
+            // // pasamos los atributos a otro elemento
+            // $('#btnFilter').prop('data-url', dataURL)
+            // $('#btnFilter').prop('data-pk', dataPK)
+        });
+
+        function ajax_modal_submit(form) {
+            alert(dataURL)
+
+            $.ajax({
+                url: dataURL,
+                method: 'GET',
+                data: {
+                    'form': $('form').serialize(),
+                    'pk': dataPK,
+                    'url': dataURL
+                },
+                // data: $('form').serialize(),
+                beforeSend: function() {
+                    $('#findModalFooter').html('realizando consulta ...')
+                },
+                complete:function(data) {
+                    $('#findModalFooter').html('Solo se recuperarán 10 registros como máximo.')
+                },
+                success: function(response) {
+                    $('#findModalBody').html(response)
+                },
+                error: function(data) {
+                    $('#findModalFooter').html('Problemas al realizar la búsqueda')
+                }
+            })
+        };
+
+        /*
+        $('#btnFilter').click(function(event) {
+            console.log('btnFilter.click')
+            console.log(variable)
+            variable = 'paso3'
+            
+            // console.log( 'btnFilter.click' )
+            // var dataURL = $(event).attr('data-url')
+            // alert(dataURL)
+            // console.log( $(event)[0].currentTarget )
+            // event.preventDefault();
+        });
+        */
+
+        $('.enlace').click(function(event) {
+            var dataPK = $(this).attr('data-pk');
+            alert(dataPK)
+            // TODO: lamar a la función de asociación
+            event.preventDefault();
+        });
     </script>
 {% endblock %}

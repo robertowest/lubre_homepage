@@ -12,6 +12,8 @@ urlpatterns = [
     path('<int:pk>/modificar/', views.PersonaUpdateView.as_view(), name='update'),
     path('<int:pk>/eliminar/', views.PersonaDeleteView.as_view(), name='delete'),
 
+    path('asociar/comunicacion/', views.asociar_comunicacion, name='asociar_comunicacion'),
+
     path('<int:fk>/comunicacion/', views.CreateContactView.as_view(), name='associate_with_contact'),
     path('<int:fk>/domicilio/', views.CreateAddressView.as_view(), name='associate_with_address'),
 

@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.db.models import Q
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, QueryDict
 from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 from django.views import generic
@@ -19,6 +19,12 @@ from apps.comunes.models import Domicilio as DomicilioModel
 from apps.comunes.forms.comunicacion import ComunicacionForm
 from apps.comunes.forms.domicilio import DomicilioForm
 from apps.comunes.utils import PagedFilteredTableView
+
+# asociar persona con comunicación
+from apps.comunes.models import Comunicacion
+from apps.comunes.filters import ComunicacionFindFilter
+from apps.comunes.tables import ComunicacionFindTable
+from apps.comunes.forms.comunicacion import ComunicacionFilterFormModal
 
 
 # Create your views here.
@@ -80,6 +86,8 @@ class PersonaDetailView(PermissionRequiredMixin, generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['comunicaciones'] = context['persona'].comunicaciones.filter(active=True)
+        # busqueda modal
+        objetos_asociar_comunicacion(self.request, context)
         return context
 
 
@@ -183,3 +191,39 @@ def persona_contacto_eliminar(request, pk, fk):
     p.comunicaciones.remove(fk)
     url = reverse('persona:detail', args=(), kwargs={'pk': pk})
     return HttpResponseRedirect(url)
+
+
+def objetos_asociar_comunicacion(request, context):
+    if request.GET:
+        filter = ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all())
+    else:
+        from django.http import QueryDict
+        qd = QueryDict('tipo=3&texto=¿Qué busca?&active=True&submit=Filtrar')
+        filter = ComunicacionFindFilter(qd, queryset=Comunicacion.objects.all())
+
+    filter.form.helper = ComunicacionFilterFormModal()
+    table = ComunicacionFindTable(filter.qs[:10])   # solo 10 registros
+    RequestConfig(request).configure(table)
+    context['filter'] = filter
+    context['table'] = table
+    return context
+
+
+def asociar_comunicacion(request):
+    # from django.template import Context, Template
+    # t = Template("{% render_table table %}")
+    # c = Context({'filter': filter})
+    # return t.render(c)
+
+    # context = {
+    #             'filter': ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all()),
+    #             'table': ComunicacionFindTable(filter.qs[:10])
+    #           }
+    # return render(request, 'prueba/includes/find_table_modal.html', context)
+
+    filter = ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all())
+    filter.form.helper = ComunicacionFilterFormModal()
+    table = ComunicacionFindTable(filter.qs[:10])   # solo 10 registros
+    RequestConfig(request).configure(table)
+    context = {'filter': filter, 'table': table }
+    return render(request, 'includes/_modal_find_data.html', context)

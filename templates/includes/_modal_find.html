@@ -1,0 +1,21 @@
+<div class="modal fade" 
+     id="findModal" role="dialog" tabindex="-1" 
+     aria-labelledby="findModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="findModalLabel">Buscar registro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body" id="findModalBody">
+                {% include 'includes/_modal_find_data.html' %}
+            </div>
+            <div class="modal-footer" id="findModalFooter">
+                <!-- Se recuperarán 10 registros como máximo. -->
+            </div>
+        </div>
+    </div>
+</div>
