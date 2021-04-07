@@ -47,7 +47,8 @@ class ComunicacionFindTable(tables.Table):
     # texto = tables.Column(linkify=True, orderable=False)
     # texto = tables.LinkColumn('app:url', args=[A('pk')])
     # texto = tables.TemplateColumn('<a href="{{record.url}}">{{record.name}}</a>')
-    texto = tables.TemplateColumn('<a href="#" class="enlace" data-pk="{{record.id}}">{{record.texto}}</a>', orderable=False)
+    # texto = tables.TemplateColumn('<a href="#" class="enlace" data-pk="{{record.id}}">{{record.texto}}</a>', orderable=False)
+    texto = tables.TemplateColumn('<a href="#" onclick="ajax_modal_press({{record.pk}});">{{record.texto}}</a>', orderable=False)    
     active = tables.BooleanColumn(orderable=False)
 
     class Meta:

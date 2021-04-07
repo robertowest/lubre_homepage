@@ -87,7 +87,7 @@ class PersonaDetailView(PermissionRequiredMixin, generic.DetailView):
         context = super().get_context_data(**kwargs)
         context['comunicaciones'] = context['persona'].comunicaciones.filter(active=True)
         # busqueda modal
-        objetos_asociar_comunicacion(self.request, context)
+        objetos_ajax_asociar_comunicacion(self.request, context)
         return context
 
 
@@ -193,7 +193,7 @@ def persona_contacto_eliminar(request, pk, fk):
     return HttpResponseRedirect(url)
 
 
-def objetos_asociar_comunicacion(request, context):
+def objetos_ajax_asociar_comunicacion(request, context):
     if request.GET:
         filter = ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all())
     else:
@@ -209,7 +209,7 @@ def objetos_asociar_comunicacion(request, context):
     return context
 
 
-def asociar_comunicacion(request):
+def ajax_abrir_comunicacion(request):
     # from django.template import Context, Template
     # t = Template("{% render_table table %}")
     # c = Context({'filter': filter})
@@ -227,3 +227,13 @@ def asociar_comunicacion(request):
     RequestConfig(request).configure(table)
     context = {'filter': filter, 'table': table }
     return render(request, 'includes/_modal_find_data.html', context)
+
+
+def ajax_asociar_comunicacion(request, persona_id, comunicacion_id):
+    persona = models.Persona.objects.get(id=persona_id)
+    comunica = Comunicacion.objects.get(id=comunicacion_id)
+    persona.comunicaciones.add(comunica)
+    persona.save()
+    # template_name = 'comunes/detalle.html'
+    template_name = '{app}/detalle.html'.format(app=model._meta.verbose_name.lower())
+    return render(request, template_name, context={'object':persona})

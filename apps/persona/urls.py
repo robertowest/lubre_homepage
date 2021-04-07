@@ -12,7 +12,8 @@ urlpatterns = [
     path('<int:pk>/modificar/', views.PersonaUpdateView.as_view(), name='update'),
     path('<int:pk>/eliminar/', views.PersonaDeleteView.as_view(), name='delete'),
 
-    path('asociar/comunicacion/', views.asociar_comunicacion, name='asociar_comunicacion'),
+    path('ajax_abrir_comunicacion/', views.ajax_abrir_comunicacion, name='ajax_abrir_comunicacion'),
+    path('ajax_asociar_comunicacion/', views.ajax_asociar_comunicacion, name='ajax_asociar_comunicacion'),
 
     path('<int:fk>/comunicacion/', views.CreateContactView.as_view(), name='associate_with_contact'),
     path('<int:fk>/domicilio/', views.CreateAddressView.as_view(), name='associate_with_address'),

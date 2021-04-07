@@ -100,11 +100,11 @@
                     </a>
                     {% endif %}
                     <!-- asociar contacto existente a la empresa -->
-                    <a href="#" id="asociar_comunicacion"
+                    <a href="#" id="ajax_abrir_comunicacion"
                        class="btn btn-sm btn-secondary btn-icon-split"
                        data-toggle="modal" 
                        data-target="#findModal"
-                       data-url="{% url 'persona:asociar_comunicacion' %}"
+                       data-url="{% url 'persona:ajax_abrir_comunicacion' %}"
                        data-pk="{{object.pk}}">
                         <span class="icon text-white-50">
                             <i class="fas fa-link"></i>
@@ -186,37 +186,33 @@
             console.log( JSON.stringify(e, null, 2) );
         });
 
-
         // búsqueda en ventana modal
-        var dataURL = ''    // '{% url "persona:asociar_comunicacion" %}'
-        var dataPK = 0
+        let dataURL = '';
+        let dataPK = 0;
 
-        $('#asociar_comunicacion').click(function(event) {
-            dataURL = $(this).attr('data-url')
-            dataPK = $(this).attr('data-pk')
-
-            console.log(dataURL)
-            console.log(dataPK)
-
-            // event.preventDefault()
-            // // pasamos los atributos a otro elemento
-            // $('#btnFilter').prop('data-url', dataURL)
-            // $('#btnFilter').prop('data-pk', dataPK)
+        $('#ajax_abrir_comunicacion').click(function(event) {
+            dataURL = $(this).attr('data-url');
+            dataPK = $(this).attr('data-pk');
+            $('#findModalLabel').html('Buscar contacto ...')
+            /* pasamos los atributos a otro elemento (NO LO USO)
+            event.preventDefault()
+            $('#btnFilter').prop('data-url', dataURL)
+            $('#btnFilter').prop('data-pk', dataPK)
+            */
         });
 
         function ajax_modal_submit(form) {
-            alert(dataURL)
-
             $.ajax({
                 url: dataURL,
                 method: 'GET',
-                data: {
-                    'form': $('form').serialize(),
-                    'pk': dataPK,
-                    'url': dataURL
-                },
-                // data: $('form').serialize(),
+                // data: {
+                //     'filter': $('form').serialize(),
+                //     'pk': dataPK,
+                //     'url': dataURL
+                // },
+                data: $('form').serialize(),
                 beforeSend: function() {
+                    $('#findModalBody').html('')
                     $('#findModalFooter').html('realizando consulta ...')
                 },
                 complete:function(data) {
@@ -231,25 +227,28 @@
             })
         };
 
-        /*
-        $('#btnFilter').click(function(event) {
-            console.log('btnFilter.click')
-            console.log(variable)
-            variable = 'paso3'
-            
-            // console.log( 'btnFilter.click' )
-            // var dataURL = $(event).attr('data-url')
-            // alert(dataURL)
-            // console.log( $(event)[0].currentTarget )
-            // event.preventDefault();
-        });
-        */
+        function ajax_modal_press(id) {
+            dataURL = "{% url 'persona:ajax_asociar_comunicacion' %}";
 
-        $('.enlace').click(function(event) {
-            var dataPK = $(this).attr('data-pk');
-            alert(dataPK)
-            // TODO: lamar a la función de asociación
-            event.preventDefault();
-        });
+            $.ajax({
+                url: dataURL,
+                method: 'GET',
+                data: {
+                    'persona_id': dataPK,
+                    'comunicacion_id': id
+                },
+                complete:function(data) {
+                    $('#findModalFooter').html('');
+                    $('#findModal').modal('hide');
+                },
+                success: function(response) {
+                    $('#findModalBody').html(response);
+                },
+                error: function(data) {
+                    $('#findModalFooter').html('<p style="color: red;"><strong>Error: </strong> no se pudo realizar la asociación</p>');
+                }
+            })
+
+        };
     </script>
 {% endblock %}
