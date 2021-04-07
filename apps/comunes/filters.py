@@ -34,9 +34,15 @@ class ComunicacionFindFilter(django_filters.FilterSet):
         model = Comunicacion
         fields = ['tipo', 'texto', 'active']
 
-    def __init__(self, data=None, *args, **kwargs):
-        if data is not None:
-            data = data.copy()
-            data.setdefault('tipo', 3)      # Teléfono
-            data.setdefault('active', True)
-        super(ComunicacionFindFilter, self).__init__(data, *args, **kwargs)
+    # def __init__(self, data=None, *args, **kwargs):
+    #     if self.data == {}:
+    #         self.queryset = self.queryset.none()
+    #     if data is not None:
+    #         data = data.copy()
+    #         data.setdefault('tipo', 3)      # Teléfono
+    #         data.setdefault('active', True)
+    #     super(ComunicacionFindFilter, self).__init__(data, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(ComunicacionFindFilter, self).__init__(*args, **kwargs)
+        if self.data == {}:
+            self.queryset = self.queryset.none()

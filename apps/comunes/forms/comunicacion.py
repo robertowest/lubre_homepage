@@ -83,7 +83,7 @@ class ComunicacionFilterFormModal(helper.FormHelper):
                     # layout.Submit("submit", "Buscar", css_id="btnBuscar"),
                     layout.Button('btnFilter', 'Buscar', 
                                   css_id='btnFilter', 
-                                  css_class='btn btn-primary', 
+                                  css_class='btn btn-sm btn-primary', 
                                   onclick='ajax_modal_submit(frmFilter);'),
                     css_class="col-2 text-right align-self-center",
                 ),

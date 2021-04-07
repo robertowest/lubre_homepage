@@ -100,11 +100,11 @@
                     </a>
                     {% endif %}
                     <!-- asociar contacto existente a la empresa -->
-                    <a href="#" id="ajax_abrir_comunicacion"
+                    <a href="#" id="ajax_buscar_comunicacion"
                        class="btn btn-sm btn-secondary btn-icon-split"
                        data-toggle="modal" 
                        data-target="#findModal"
-                       data-url="{% url 'persona:ajax_abrir_comunicacion' %}"
+                       data-url="{% url 'persona:ajax_buscar_comunicacion' %}"
                        data-pk="{{object.pk}}">
                         <span class="icon text-white-50">
                             <i class="fas fa-link"></i>
@@ -190,10 +190,11 @@
         let dataURL = '';
         let dataPK = 0;
 
-        $('#ajax_abrir_comunicacion').click(function(event) {
+        $('#ajax_buscar_comunicacion').click(function(event) {
             dataURL = $(this).attr('data-url');
             dataPK = $(this).attr('data-pk');
             $('#findModalLabel').html('Buscar contacto ...')
+            // $('#findModalFooter').html('Limpie los campos al realizar la primera búsqueda');
             /* pasamos los atributos a otro elemento (NO LO USO)
             event.preventDefault()
             $('#btnFilter').prop('data-url', dataURL)
@@ -212,23 +213,26 @@
                 // },
                 data: $('form').serialize(),
                 beforeSend: function() {
-                    $('#findModalBody').html('')
+                    $('#findModalTable').html('')
                     $('#findModalFooter').html('realizando consulta ...')
                 },
                 complete:function(data) {
-                    $('#findModalFooter').html('Solo se recuperarán 10 registros como máximo.')
+                    console.log('complete');
                 },
                 success: function(response) {
-                    $('#findModalBody').html(response)
+                    // findModalBody
+                    $('#findModalTable').html(response)
+                    $('#findModalFooter').html('10 registros máximo.')
                 },
                 error: function(data) {
-                    $('#findModalFooter').html('Problemas al realizar la búsqueda')
+                    $('#findModalFooter').html('<p style="color: red;">Problemas al realizar la búsqueda</p>');
                 }
             })
         };
 
         function ajax_modal_press(id) {
-            dataURL = "{% url 'persona:ajax_asociar_comunicacion' %}";
+            // debugger;
+            let dataURL = "{% url 'persona:ajax_asociar_comunicacion' %}";
 
             $.ajax({
                 url: dataURL,
@@ -237,14 +241,22 @@
                     'persona_id': dataPK,
                     'comunicacion_id': id
                 },
+                beforeSend: function() {
+                    console.log('beforeSend');
+                },
                 complete:function(data) {
-                    $('#findModalFooter').html('');
-                    $('#findModal').modal('hide');
+                    console.log('complete');
                 },
                 success: function(response) {
-                    $('#findModalBody').html(response);
+                    console.log('success');
+                    // $('#findModalBody').html(response);
+                    $('#findModal').modal('hide');
+                    // window.location = 'http://localhost:8000/persona/365/';
+                    // window.location.href = xhr.getResponseHeader("Location");
+                    // window.location.href = "{# url 'persona:detail' dataPK #}";
                 },
                 error: function(data) {
+                    console.log('error');
                     $('#findModalFooter').html('<p style="color: red;"><strong>Error: </strong> no se pudo realizar la asociación</p>');
                 }
             })

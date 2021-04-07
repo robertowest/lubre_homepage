@@ -1,3 +1,5 @@
+{% load crispy_forms_tags %}
+
 <div class="modal fade" 
      id="findModal" role="dialog" tabindex="-1" 
      aria-labelledby="findModalLabel" aria-hidden="true">
@@ -11,10 +13,14 @@
                 </button>
             </div>
             <div class="modal-body" id="findModalBody">
-                {% include 'includes/_modal_find_data.html' %}
+                {% crispy filter.form filter.form.helper %}
+                <br>
+                <div class="table-responsive" id="findModalTable">
+                    {% include 'includes/_modal_find_data.html' %}
+                </div>
             </div>
-            <div class="modal-footer" id="findModalFooter">
-                Debe limpiar los campos antes de realizar la primera búsqueda.
+            <div class="modal-footer" id="findModalFooter" style="justify-content: flex-start;">
+                Defina el criterio de búsqueda
             </div>
         </div>
     </div>

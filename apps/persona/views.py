@@ -194,46 +194,39 @@ def persona_contacto_eliminar(request, pk, fk):
 
 
 def objetos_ajax_asociar_comunicacion(request, context):
-    if request.GET:
-        filter = ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all())
-    else:
-        from django.http import QueryDict
-        qd = QueryDict('tipo=3&texto=¿Qué busca?&active=True&submit=Filtrar')
-        filter = ComunicacionFindFilter(qd, queryset=Comunicacion.objects.all())
-
+    filter = ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all())
     filter.form.helper = ComunicacionFilterFormModal()
-    table = ComunicacionFindTable(filter.qs[:10])   # solo 10 registros
+    table = ComunicacionFindTable(filter.qs[:5])   # solo 10 registros
     RequestConfig(request).configure(table)
-    context['filter'] = filter
-    context['table'] = table
+    if context:
+        context['filter'] = filter
+        context['table'] = table
+    else:
+        context = {'table': table }
     return context
 
 
-def ajax_abrir_comunicacion(request):
+def ajax_buscar_comunicacion(request):
     # from django.template import Context, Template
-    # t = Template("{% render_table table %}")
+    # t = Template("{% load render_table from django_tables2 %}{% render_table table %}")
     # c = Context({'filter': filter})
     # return t.render(c)
-
-    # context = {
-    #             'filter': ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all()),
-    #             'table': ComunicacionFindTable(filter.qs[:10])
-    #           }
-    # return render(request, 'prueba/includes/find_table_modal.html', context)
-
-    filter = ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all())
-    filter.form.helper = ComunicacionFilterFormModal()
-    table = ComunicacionFindTable(filter.qs[:10])   # solo 10 registros
-    RequestConfig(request).configure(table)
-    context = {'filter': filter, 'table': table }
+    from django.template import RequestContext
+    context = objetos_ajax_asociar_comunicacion(request, None)
     return render(request, 'includes/_modal_find_data.html', context)
 
 
-def ajax_asociar_comunicacion(request, persona_id, comunicacion_id):
-    persona = models.Persona.objects.get(id=persona_id)
-    comunica = Comunicacion.objects.get(id=comunicacion_id)
-    persona.comunicaciones.add(comunica)
+def ajax_asociar_comunicacion(request):
+    persona = models.Persona.objects.get(id=request.GET['persona_id'])
+    comunicacion = Comunicacion.objects.get(id=request.GET['comunicacion_id'])
+    persona.comunicaciones.add(comunicacion)
     persona.save()
     # template_name = 'comunes/detalle.html'
-    template_name = '{app}/detalle.html'.format(app=model._meta.verbose_name.lower())
-    return render(request, template_name, context={'object':persona})
+    # template_name = '{app}/detalle.html'.format(app=model._meta.verbose_name.lower())
+    # return render(request, template_name, context={'object':persona})
+
+    # if request.is_ajax():
+    #     return HttpResponseRedirect(reverse('persona:detail', args=[persona.pk]))
+    # return render(request)
+    return HttpResponseRedirect(reverse('persona:detail', args=[persona.pk]))
+    
