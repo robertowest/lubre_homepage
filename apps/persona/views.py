@@ -217,16 +217,11 @@ def ajax_buscar_comunicacion(request):
 
 
 def ajax_asociar_comunicacion(request):
+    # template_name = 'comunes/detalle.html'
+    # template_name = '{app}/detalle.html'.format(app=model._meta.verbose_name.lower())
+    # return render(request, template_name, context={'object':persona})
     persona = models.Persona.objects.get(id=request.GET['persona_id'])
     comunicacion = Comunicacion.objects.get(id=request.GET['comunicacion_id'])
     persona.comunicaciones.add(comunicacion)
     persona.save()
-    # template_name = 'comunes/detalle.html'
-    # template_name = '{app}/detalle.html'.format(app=model._meta.verbose_name.lower())
-    # return render(request, template_name, context={'object':persona})
-
-    # if request.is_ajax():
-    #     return HttpResponseRedirect(reverse('persona:detail', args=[persona.pk]))
-    # return render(request)
     return HttpResponseRedirect(reverse('persona:detail', args=[persona.pk]))
-    

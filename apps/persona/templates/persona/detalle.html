@@ -241,26 +241,17 @@
                     'persona_id': dataPK,
                     'comunicacion_id': id
                 },
-                beforeSend: function() {
-                    console.log('beforeSend');
-                },
-                complete:function(data) {
-                    console.log('complete');
-                },
-                success: function(response) {
-                    console.log('success');
-                    // $('#findModalBody').html(response);
+                success: function(data, status, xhr) {
                     $('#findModal').modal('hide');
-                    // window.location = 'http://localhost:8000/persona/365/';
-                    // window.location.href = xhr.getResponseHeader("Location");
-                    // window.location.href = "{# url 'persona:detail' dataPK #}";
+                    location.reload()
                 },
                 error: function(data) {
-                    console.log('error');
                     $('#findModalFooter').html('<p style="color: red;"><strong>Error: </strong> no se pudo realizar la asociación</p>');
                 }
             })
-
         };
     </script>
 {% endblock %}
+
+
+https://kuttler.eu/en/post/using-django-tables2-filters-crispy-forms-together/
