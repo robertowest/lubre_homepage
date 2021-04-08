@@ -194,23 +194,12 @@
             dataURL = $(this).attr('data-url');
             dataPK = $(this).attr('data-pk');
             $('#findModalLabel').html('Buscar contacto ...')
-            // $('#findModalFooter').html('Limpie los campos al realizar la primera búsqueda');
-            /* pasamos los atributos a otro elemento (NO LO USO)
-            event.preventDefault()
-            $('#btnFilter').prop('data-url', dataURL)
-            $('#btnFilter').prop('data-pk', dataPK)
-            */
         });
 
         function ajax_modal_submit(form) {
             $.ajax({
                 url: dataURL,
                 method: 'GET',
-                // data: {
-                //     'filter': $('form').serialize(),
-                //     'pk': dataPK,
-                //     'url': dataURL
-                // },
                 data: $('form').serialize(),
                 beforeSend: function() {
                     $('#findModalTable').html('')
@@ -220,7 +209,6 @@
                     console.log('complete');
                 },
                 success: function(response) {
-                    // findModalBody
                     $('#findModalTable').html(response)
                     $('#findModalFooter').html('10 registros máximo.')
                 },
@@ -242,7 +230,8 @@
                     'comunicacion_id': id
                 },
                 success: function(data, status, xhr) {
-                    $('#findModal').modal('hide');
+                    // $('#findModal').modal('hide');
+                    $('#findModalFooter').html('realizando asociación ...');
                     location.reload()
                 },
                 error: function(data) {

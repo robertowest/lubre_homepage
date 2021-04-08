@@ -20,7 +20,13 @@
         {% block style %}{% endblock %}
     </head>
 
-    <body id="page-top">
+    {% comment %}
+    para comenzar con el sidebar ancho, debemos eliminar la clase
+    sidebar-toggled del elemento body y la clase toggled del 
+    elemento llamado accordionSidebar en includes/_sidebar.html
+    {% endcomment %}
+
+    <body id="page-top" class="sidebar-toggled">
         <div id="wrapper">
             {% include 'includes/_sidebar.html' %}
 
@@ -61,7 +67,8 @@
         <!-- botón flotante de acción -->
         {% block floating-button-action %}{% endblock %}
 
-        {% include 'includes/_scroll_top_button.html' %}
+        <!-- botón para regresar arriba -->
+        {# include 'includes/_scroll_top_button.html' #}
 
         <!-- ventana modal -->
         {% block modal %}

@@ -21,7 +21,7 @@
         {% block style %}{% endblock %}
     </head>
 
-    <body id="page-top">
+    <body id="page-top" class="sidebar-toggled">
         <div id="wrapper">
             {# include 'includes/_sidebar.html' #}
 
@@ -62,7 +62,8 @@
         <!-- botón flotante de acción -->
         {% block floating-button-action %}{% endblock %}
 
-        {% include 'includes/_scroll_top_button.html' %}
+        <!-- botón para regresar arriba -->
+        {# include 'includes/_scroll_top_button.html' #}
 
         {% block modal %}
             <!-- ventana modal -->
