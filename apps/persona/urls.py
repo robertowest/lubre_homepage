@@ -12,9 +12,18 @@ urlpatterns = [
     path('<int:pk>/modificar/', views.PersonaUpdateView.as_view(), name='update'),
     path('<int:pk>/eliminar/', views.PersonaDeleteView.as_view(), name='delete'),
 
+    # asociar contacto
     path('ajax_buscar_comunicacion/', views.ajax_buscar_comunicacion, name='ajax_buscar_comunicacion'),
     path('ajax_asociar_comunicacion/', views.ajax_asociar_comunicacion, name='ajax_asociar_comunicacion'),
 
+    # asociar domicilio
+    path('ajax_buscar_domicilio/', views.ajax_buscar_domicilio, name='ajax_buscar_domicilio'),
+    path('ajax_asociar_domicilio/', views.ajax_asociar_domicilio, name='ajax_asociar_domicilio'),
+
+
+
+
+    # TODO: comprobar si las siguientes rutas todavía se utilizan
     path('<int:fk>/comunicacion/', views.CreateContactView.as_view(), name='associate_with_contact'),
     path('<int:fk>/domicilio/', views.CreateAddressView.as_view(), name='associate_with_address'),
 

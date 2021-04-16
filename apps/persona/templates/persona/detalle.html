@@ -29,7 +29,7 @@
             <div class="card-footer">
                 {# url object|url_action:'update' object.pk #}
                 {% if perms.persona.change_persona %}
-                <a href="{{object.get_update_url}}" class="btn btn-primary btn-icon-split">
+                <a href="{{object.get_update_url}}" class="btn btn-sm btn-primary btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fas fa-pen"></i>
                     </span>
@@ -37,7 +37,7 @@
                 </a>
                 {% endif %}
                 {% if perms.persona.delete_persona %}
-                <a href="{{object.get_delete_url}}" class="btn btn-danger btn-icon-split">
+                <a href="{{object.get_delete_url}}" class="btn btn-sm btn-danger btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fas fa-trash"></i>
                     </span>
@@ -89,7 +89,7 @@
                     </table>
                     {% endif %}
                 </div>
-                {% if perms.empresa.add_comunicacion %}
+                {% if perms.persona.add_comunicacion or perms.persona.change_comunicacion %}
                 <div class="card-footer">
                     {% if perms.persona.add_comunicacion %}
                     <a href="{{object.get_related_url_with_contact}}" class="btn btn-sm btn-primary btn-icon-split">
@@ -110,7 +110,7 @@
                             <i class="fas fa-link"></i>
                         </span>
                         <span class="text">Asociar</span>
-                    </a>                    
+                    </a>
                 </div>
                 {% endif %}
             </div>
@@ -129,23 +129,35 @@
                         {% include 'includes/_detail_snippet.html' %}
                     {% endwith %}
                 </div>
-                {% if perms.empresa.add_comunicacion or perms.empresa.change_comunicacion %}
+                {% if perms.empresa.add_domicilio or perms.empresa.change_domicilio %}
                 <div class="card-footer">
                     {% if object.domicilio %}
-                    <a href="{{object.domicilio.get_update_url}}" class="btn btn-sm btn-primary btn-icon-split">
-                        <span class="icon text-white-50">
-                            <i class="fas fa-edit"></i>
-                        </span>
-                        <span class="text">Modificar</span>
-                    </a>
+                        <a href="{{object.domicilio.get_update_url}}" class="btn btn-sm btn-primary btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                            <span class="text">Modificar</span>
+                        </a>
                     {% else %}
-                    <a href="{{object.get_related_url_with_address}}" class="btn btn-primary btn-icon-split">
-                        <span class="icon text-white-50">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                        <span class="text">Nuevo</span>
-                    </a>
+                        <a href="{{object.get_related_url_with_address}}" class="btn btn-sm btn-primary btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            <span class="text">Nuevo</span>
+                        </a>
                     {% endif %}
+                    <!-- asociar domicilio existente a la empresa -->
+                    <a href="#" id="ajax_buscar_domicilio"
+                    class="btn btn-sm btn-secondary btn-icon-split"
+                    data-toggle="modal" 
+                    data-target="#findModal"
+                    data-url="{% url 'persona:ajax_buscar_domicilio' %}"
+                    data-pk="{{object.pk}}">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-link"></i>
+                        </span>
+                        <span class="text">Asociar</span>
+                    </a>
                 </div>
                 {% endif %}
             </div>
@@ -196,6 +208,12 @@
             $('#findModalLabel').html('Buscar contacto ...')
         });
 
+        $('#ajax_buscar_domicilio').click(function(event) {
+            dataURL = $(this).attr('data-url');
+            dataPK = $(this).attr('data-pk');
+            $('#findModalLabel').html('Buscar domicilio ...')
+        });
+
         function ajax_modal_submit(form) {
             $.ajax({
                 url: dataURL,
@@ -242,5 +260,4 @@
     </script>
 {% endblock %}
 
-
-https://kuttler.eu/en/post/using-django-tables2-filters-crispy-forms-together/
+{# https://kuttler.eu/en/post/using-django-tables2-filters-crispy-forms-together/ #}

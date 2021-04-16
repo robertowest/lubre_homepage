@@ -225,3 +225,17 @@ def ajax_asociar_comunicacion(request):
     persona.comunicaciones.add(comunicacion)
     persona.save()
     return HttpResponseRedirect(reverse('persona:detail', args=[persona.pk]))
+
+
+def ajax_buscar_domicilio(request):
+    from django.template import RequestContext
+    context = objetos_ajax_asociar_domicilio(request, None)
+    return render(request, 'includes/_modal_find_data.html', context)
+
+
+def ajax_asociar_domicilio(request):
+    persona = models.Persona.objects.get(id=request.GET['persona_id'])
+    domicilio = Comunicacion.objects.get(id=request.GET['domicilio_id'])
+    persona.domicilioes.add(domicilio)
+    persona.save()
+    return HttpResponseRedirect(reverse('persona:detail', args=[persona.pk]))

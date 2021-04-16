@@ -32,7 +32,7 @@
             </div>
             {% comment %}
             <div class="card-footer">
-                <a href="{{request.META.HTTP_REFERER}}" class="btn btn-warning btn-icon-split">                   
+                <a href="{{request.META.HTTP_REFERER}}" class="btn btn-sm btn-warning btn-icon-split">                   
                    <span class="icon text-white-50"><i class="fas fa-undo"></i></span>
                    <span class="text text-dark">Regresar</span>
                 </a>
@@ -63,14 +63,14 @@
                 </div>
                 <div class="card-footer">
                     {% if info %}
-                    <a href="{% url 'empresa_actividad:eai_actualizar' object.pk info.0.pk %}" class="btn btn-primary btn-icon-split">
+                    <a href="{% url 'empresa_actividad:eai_actualizar' object.pk info.0.pk %}" class="btn btn-sm btn-primary btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-edit"></i>
                         </span>
                         <span class="text">Modificar</span>
                     </a>
                     {% else %}
-                    <a href="{% url 'empresa_actividad:eai_crear' object.pk %}" class="btn btn-primary btn-icon-split">
+                    <a href="{% url 'empresa_actividad:eai_crear' object.pk %}" class="btn btn-sm btn-primary btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
@@ -136,7 +136,7 @@
                 {% if perms.empresa.add_empresaactividaddomicilios %}
                 <div class="card-footer">
                     <!-- agregar nuevo domicilio y asociarlo a la empresa -->
-                    <a href="{% url 'empresa_actividad:emp_act_domicilio' object.pk %}" class="btn btn-primary btn-icon-split">
+                    <a href="{% url 'empresa_actividad:emp_act_domicilio' object.pk %}" class="btn btn-sm btn-primary btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
@@ -197,7 +197,7 @@
                 <div class="card-footer">
                     {% if perms.empresa.add_empresaactividadcontactos %}
                     <!-- agregar nuevo contacto y asociarlo a la empresa -->
-                    <a href="{% url 'empresa_actividad:emp_act_contacto' object.pk %}" class="btn btn-primary btn-icon-split">
+                    <a href="{% url 'empresa_actividad:emp_act_contacto' object.pk %}" class="btn btn-sm btn-primary btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
@@ -205,7 +205,7 @@
                     </a>
                     {% endif %}
                     <!-- asociar contacto existente a la empresa -->
-                    <a href="#" class="btn btn-secondary btn-icon-split"
+                    <a href="#" class="btn btn-sm btn-secondary btn-icon-split"
                         data-toggle="modal" data-target="#myModal"
                         data-url="{% url 'empresa:buscar_contacto' object.pk %}"
                         data-pk="{{object.pk}}">
