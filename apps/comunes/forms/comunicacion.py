@@ -63,7 +63,7 @@ class ComunicacionFilterFormModal(helper.FormHelper):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.form_method = 'get'
-        self.form_id = 'frmFilter'
+        self.form_id = 'frmComunicacion'
         # self.form_action = "{% url 'prueba:filter_modal' %}"
         # self.form_action = "/prueba/filter_modal"
 
@@ -84,7 +84,7 @@ class ComunicacionFilterFormModal(helper.FormHelper):
                     layout.Button('btnFilter', 'Buscar', 
                                   css_id='btnFilter', 
                                   css_class='btn btn-sm btn-primary', 
-                                  onclick='ajax_modal_submit(frmFilter);'),
+                                  onclick='submit_modal(frmComunicacion);'),
                     css_class="col-2 text-right align-self-center",
                 ),
                 css_class="row",

@@ -13,10 +13,14 @@
                 </button>
             </div>
             <div class="modal-body" id="findModalBody">
-                {% crispy filter.form filter.form.helper %}
+                {% if filter %}
+                    {% crispy filter.form filter.form.helper %}
+                {% endif %}
                 <br>
                 <div class="table-responsive" id="findModalTable">
-                    {% include 'includes/_modal_find_data.html' %}
+                    {% if table %}
+                        {% include 'includes/_modal_find_data.html' %}
+                    {% endif %}
                 </div>
             </div>
             <div class="modal-footer" id="findModalFooter" style="justify-content: flex-start;">
