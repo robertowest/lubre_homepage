@@ -1,11 +1,12 @@
 #!/bin/bash
 
 git add .
+git reset HEAD push.sh
 
 # quitamos archivos que no queremos modificar
 # git reset config/settings.py
 
-git commit -m "modificaciones en casa"
+git commit -m "modificaciones en el trabajo"
 
 # git push -u origin master
 echo "¿Quiere subir los cambios?"

@@ -1,6 +1,5 @@
-from crispy_forms import helper, layout
+from crispy_forms import bootstrap, helper, layout
 from django import forms
-
 
 from apps.comunes.models import Departamento, Domicilio, Localidad, Provincia
 
@@ -79,3 +78,62 @@ class DomicilioForm(forms.ModelForm):
         self.helper.layout.append(layout.HTML("<hr>"))
         self.helper.layout.append(layout.HTML(bSave))
         self.helper.layout.append(layout.HTML(bCancel))
+
+
+class DomicilioFilterFormHelper(helper.FormHelper):
+    form_class = "form form-inline"
+    form_id = "domicilio-search-form"
+    form_method = "GET"
+    form_tag = True
+    html5_required = True
+    layout = layout.Layout(
+        layout.Div(
+            layout.Fieldset(
+                "<span class='fa fa-search'></span> Búsqueda de Domicilios",
+                layout.Div(
+                    bootstrap.InlineField("id", wrapper_class="col-4"),
+                    bootstrap.InlineField("nombre", wrapper_class="col-4"),
+                    bootstrap.InlineField("numero", wrapper_class="col-4"),
+                    bootstrap.InlineField("active", wrapper_class="col-4"),
+                    css_class="row",
+                ),
+                css_class="col-11 border p-3",
+            ),
+            bootstrap.FormActions(
+                layout.Submit("submit", "Filtrar"),
+                css_class="col-1 text-right align-self-center",
+            ),
+            css_class="row",
+        )
+    )
+
+
+class DomicilioFilterFormModal(helper.FormHelper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.form_method = 'get'
+        self.form_id = 'frmFilter'
+
+        self.layout = layout.Layout(
+            layout.Div(
+                layout.Fieldset(
+                    None,
+                    layout.Div(
+                        bootstrap.InlineField("nombre", wrapper_class="col-5"),
+                        bootstrap.InlineField("numero", wrapper_class="col-4"),
+                        bootstrap.InlineField("active", wrapper_class="col-3"),
+                        css_class="row",
+                    ),
+                    css_class="col-10",
+                ),
+                bootstrap.FormActions(
+                    # layout.Submit("submit", "Buscar", css_id="btnBuscar"),
+                    layout.Button('btnFilter', 'Buscar', 
+                                  css_id='btnFilter', 
+                                  css_class='btn btn-sm btn-primary', 
+                                  onclick='ajax_modal_submit(frmFilter);'),
+                    css_class="col-2 text-right align-self-center",
+                ),
+                css_class="row",
+            )
+        )

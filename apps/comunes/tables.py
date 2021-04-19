@@ -1,7 +1,7 @@
 import django_tables2 as tables
 from django_tables2.utils import A
 
-from .models import Comunicacion
+from .models import Comunicacion, Domicilio
 
 ACTIONS = '''
 <a href="{% url 'comunicacion:detail' record.pk %}" class="text-info" title="" data-toggle="tooltip" data-original-title="View"><i class="fa fa-eye">&nbsp;</i></a>
@@ -55,6 +55,43 @@ class ComunicacionFindTable(tables.Table):
         attrs = {"class": "table table-hover"}
         model = Comunicacion
         fields = ['id', 'tipo', 'texto', 'active']
+        empty_text = "No hay datos para los criterios de búsqueda."
+        template_name = "django_tables2/bootstrap4.html"
+        per_page = 10
+
+
+
+# -------------------------------------------------------------------
+# Domicilio
+# -------------------------------------------------------------------
+class DomicilioTable(tables.Table):
+    id = tables.Column(orderable=False)
+    nombre = tables.Column(orderable=False)
+    numero = tables.Column(orderable=False)
+    active = tables.BooleanColumn(orderable=False)
+    actions = tables.TemplateColumn(template_code=ACTIONS, verbose_name='Acciones', orderable=False)
+
+    class Meta:
+        attrs = {"class": "table table-hover"}
+        model = Domicilio
+        fields = ['id', 'nombre', 'numero', 'active']
+        # sequence = ['id', 'tipo', 'texto', 'active', 'actions']
+        empty_text = "No hay datos para los criterios de búsqueda."
+        template_name = "django_tables2/bootstrap4.html"
+        per_page = 20
+
+
+class DomicilioFindTable(tables.Table):
+    id = tables.Column(orderable=False)
+    html = '<a href="#" onclick="ajax_modal_press({{record.pk}});" id="btnComunica">{{record.numero}}</a>'
+    nombre = tables.TemplateColumn(html, orderable=False)    
+    numero = tables.Column(orderable=False)
+    active = tables.BooleanColumn(orderable=False)
+
+    class Meta:
+        attrs = {"class": "table table-hover"}
+        model = Domicilio
+        fields = ['id', 'nombre', 'numero', 'active']
         empty_text = "No hay datos para los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"
         per_page = 10

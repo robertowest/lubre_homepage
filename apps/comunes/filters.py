@@ -1,6 +1,6 @@
 import django_filters
 
-from .models import Comunicacion
+from .models import Comunicacion, Domicilio
 
 
 # -------------------------------------------------------------------
@@ -26,6 +26,7 @@ class ComunicacionListFilter(django_filters.FilterSet):
 # -------------------------------------------------------------------
 # para buscar elemento en ventana modal
 # -------------------------------------------------------------------
+
 class ComunicacionFindFilter(django_filters.FilterSet):
     texto = django_filters.CharFilter(lookup_expr='icontains')
     active = django_filters.BooleanFilter(initial=True)
@@ -44,5 +45,19 @@ class ComunicacionFindFilter(django_filters.FilterSet):
     #     super(ComunicacionFindFilter, self).__init__(data, *args, **kwargs)
     def __init__(self, *args, **kwargs):
         super(ComunicacionFindFilter, self).__init__(*args, **kwargs)
+        if self.data == {}:
+            self.queryset = self.queryset.none()
+
+
+class DomicilioFindFilter(django_filters.FilterSet):
+    texto = django_filters.CharFilter(lookup_expr='icontains')
+    active = django_filters.BooleanFilter(initial=True)
+
+    class Meta:
+        model = Domicilio
+        fields = ['nombre', 'numero', 'active']
+
+    def __init__(self, *args, **kwargs):
+        super(DomicilioFindFilter, self).__init__(*args, **kwargs)
         if self.data == {}:
             self.queryset = self.queryset.none()
