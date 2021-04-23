@@ -100,11 +100,9 @@
                     </a>
                     {% endif %}
                     <!-- asociar contacto existente a la empresa -->
-                    <a href="#" id="ajax_buscar_comunicacion"
+                    <a href="#" id="modal_comunicacion"
                        class="btn btn-sm btn-secondary btn-icon-split"
-                       data-toggle="modal" 
-                       data-target="#findModal"
-                       data-url="{% url 'persona:ajax_buscar_comunicacion' %}"
+                       data-app="comunicacion"
                        data-pk="{{object.pk}}">
                         <span class="icon text-white-50">
                             <i class="fas fa-link"></i>
@@ -147,11 +145,10 @@
                         </a>
                     {% endif %}
                     <!-- asociar domicilio existente a la empresa -->
-                    <a href="#" id="ajax_buscar_domicilio"
+                    <!-- asociar domicilio existente a la empresa -->
+                    <a href="#" id="modal_domicilio"
                     class="btn btn-sm btn-secondary btn-icon-split"
-                    data-toggle="modal" 
-                    data-target="#findModal"
-                    data-url="{% url 'persona:ajax_buscar_domicilio' %}"
+                    data-app="domicilio"
                     data-pk="{{object.pk}}">
                         <span class="icon text-white-50">
                             <i class="fas fa-link"></i>
@@ -171,6 +168,7 @@
 {% block modal %}
     {% include 'includes/_modal_delete.html' %}
     {% include 'includes/_modal_find.html' %}
+    {# include request.resolver_match.app_name|add:'/includes/_modal_find.html' #}
 {% endblock %}
 
 
@@ -198,33 +196,44 @@
             console.log( JSON.stringify(e, null, 2) );
         });
 
+
         // búsqueda en ventana modal
-        let dataURL = '';
+        let dataAPP = '';
         let dataPK = 0;
 
-        $('#ajax_buscar_comunicacion').click(function(event) {
-            dataURL = $(this).attr('data-url');
+        $("a[id^=modal_]").click(function() {
+            dataAPP = $(this).attr('data-app');
             dataPK = $(this).attr('data-pk');
-            $('#findModalLabel').html('Buscar contacto ...')
-        });
-
-        $('#ajax_buscar_domicilio').click(function(event) {
-            dataURL = $(this).attr('data-url');
-            dataPK = $(this).attr('data-pk');
-            $('#findModalLabel').html('Buscar domicilio ...')
+            
+            $.ajax({
+                url: "{% url 'prueba:ajax_cargar_filtro' %}",
+                method: 'GET',
+                data: { app: dataAPP, pk: dataPK},
+                beforeSend: function() {
+                },
+                complete:function(data) {
+                    $('#findModal').modal('show');
+                },
+                success: function(response) {
+                    $('#findModalBody').html(response)
+                },
+                error: function(data) {
+                }
+            });
         });
 
         function submit_modal(form) {
             $.ajax({
-                url: dataURL,
+                url: "{% url 'prueba:ajax_cargar_tabla' %}",
                 method: 'GET',
-                data: $('form').serialize(),
+                // data: $('form').serialize(),
+                // data: { app: dataAPP, pk: dataPK, form: $('form').serialize()},
+                data: $('form').serialize() + "&app=" + dataAPP + "&pk=" + dataPK,
                 beforeSend: function() {
                     $('#findModalTable').html('')
                     $('#findModalFooter').html('realizando consulta ...')
                 },
                 complete:function(data) {
-                    console.log('complete');
                 },
                 success: function(response) {
                     $('#findModalTable').html(response)
@@ -233,29 +242,32 @@
                 error: function(data) {
                     $('#findModalFooter').html('<p style="color: red;">Problemas al realizar la búsqueda</p>');
                 }
-            })
+            });
         };
 
-        function ajax_modal_press(id) {
-            // debugger;
-            let dataURL = "{% url 'persona:ajax_asociar_comunicacion' %}";
-
+        function ajax_modal_press(pk) {
             $.ajax({
-                url: dataURL,
+                url: "{% url 'prueba:ajax_asociar_elementos' %}",
                 method: 'GET',
-                data: {
-                    'persona_id': dataPK,
-                    'comunicacion_id': id
+                data: { app: dataAPP, pk: dataPK, fk: pk},
+                beforeSend: function() {
+                    $('#findModalFooter').html('<p style="color: green;">Realizando asociación ...</p>');
                 },
-                success: function(data, status, xhr) {
-                    // $('#findModal').modal('hide');
-                    $('#findModalFooter').html('realizando asociación ...');
-                    location.reload()
+                complete:function(data) {
+                },
+                success: function(response, status, xhr) {
+                    // JSON.parse(response["result"]) == true
+                    if(status == 'success') {
+                        $('#findModalBody').html('');
+                        // $('#findModal').modal('hide');
+                        $('#findModalFooter').html('<p style="color: black;">Recargando la página actual ...</p>');
+                        location.reload();
+                    }
                 },
                 error: function(data) {
-                    $('#findModalFooter').html('<p style="color: red;"><strong>Error: </strong> no se pudo realizar la asociación</p>');
+                    $('#findModalFooter').html('<p style="color: red;">Error al intentar asociar los elementos.</p>');
                 }
-            })
+            });
         };
     </script>
 {% endblock %}

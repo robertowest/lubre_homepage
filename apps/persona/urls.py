@@ -12,20 +12,16 @@ urlpatterns = [
     path('<int:pk>/modificar/', views.PersonaUpdateView.as_view(), name='update'),
     path('<int:pk>/eliminar/', views.PersonaDeleteView.as_view(), name='delete'),
 
-    # asociar contacto
-    path('ajax_buscar_comunicacion/', views.ajax_buscar_comunicacion, name='ajax_buscar_comunicacion'),
-    path('ajax_asociar_comunicacion/', views.ajax_asociar_comunicacion, name='ajax_asociar_comunicacion'),
-
-    # asociar domicilio
-    path('ajax_buscar_domicilio/', views.ajax_buscar_domicilio, name='ajax_buscar_domicilio'),
-    path('ajax_asociar_domicilio/', views.ajax_asociar_domicilio, name='ajax_asociar_domicilio'),
+    # modal para asociar elementos
+    path('ajax_cargar_filtro/', views.ajax_cargar_filtro, name='ajax_cargar_filtro'),
+    path('ajax_cargar_tabla/', views.ajax_cargar_tabla, name='ajax_cargar_tabla'),
+    path('ajax_asociar_elementos/', views.ajax_asociar_elementos, name='ajax_asociar_elementos'),
 
 
 
 
-    # TODO: comprobar si las siguientes rutas todavía se utilizan
+    # TODO: comprobar si las siguientes rutas todavía se utilizan o son necesarias
     path('<int:fk>/comunicacion/', views.CreateContactView.as_view(), name='associate_with_contact'),
     path('<int:fk>/domicilio/', views.CreateAddressView.as_view(), name='associate_with_address'),
-
     path('<int:pk>/contacto/<int:fk>/eliminar/', views.persona_contacto_eliminar, name='persona_contacto_eliminar'),
 ]

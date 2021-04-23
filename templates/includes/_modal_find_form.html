@@ -1,0 +1,12 @@
+{% load crispy_forms_tags %}
+
+{% if filter %}
+    <!-- crispy_forms_tags -->
+    {% crispy filter.form filter.form.helper %}
+{% else %}
+    <h1>no hay filtro</h1>
+{% endif %}
+<br>
+<div class="table-responsive" id="findModalTable">
+    {% include 'includes/_modal_find_table.html' %}
+</div>

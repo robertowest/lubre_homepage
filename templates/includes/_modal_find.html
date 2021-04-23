@@ -1,5 +1,3 @@
-{% load crispy_forms_tags %}
-
 <div class="modal fade" 
      id="findModal" role="dialog" tabindex="-1" 
      aria-labelledby="findModalLabel" aria-hidden="true">
@@ -13,18 +11,10 @@
                 </button>
             </div>
             <div class="modal-body" id="findModalBody">
-                {% if filter %}
-                    {% crispy filter.form filter.form.helper %}
-                {% endif %}
-                <br>
-                <div class="table-responsive" id="findModalTable">
-                    {% if table %}
-                        {% include 'includes/_modal_find_data.html' %}
-                    {% endif %}
-                </div>
+                {% include 'includes/_modal_find_form.html' %}
             </div>
-            <div class="modal-footer" id="findModalFooter" style="justify-content: flex-start;">
-                Defina el criterio de búsqueda
+            <div class="modal-footer" id="findModalFooter">
+                <p class="pull-left;">zona de mensaje</p>
             </div>
         </div>
     </div>
