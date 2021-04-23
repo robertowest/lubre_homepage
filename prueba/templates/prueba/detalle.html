@@ -232,7 +232,6 @@
                     $('#findModalFooter').html('realizando consulta ...')
                 },
                 complete:function(data) {
-                    console.log('complete');
                 },
                 success: function(response) {
                     $('#findModalTable').html(response)
@@ -243,5 +242,30 @@
                 }
             });
         };
+
+        function ajax_modal_press(pk) {
+            $.ajax({
+                url: "{% url 'prueba:ajax_asociar_elementos' %}",
+                method: 'GET',
+                data: { app: dataAPP, pk: dataPK, fk: pk},
+                beforeSend: function() {
+                    $('#findModalFooter').html('<p style="color: green;">Realizando asociación ...</p>');
+                },
+                complete:function(data) {
+                },
+                success: function(response, status, xhr) {
+                    // JSON.parse(response["result"]) == true
+                    if(status == 'success') {
+                        $('#findModalBody').html('');
+                        // $('#findModal').modal('hide');
+                        $('#findModalFooter').html('<p style="color: black;">Recargando la página actual ...</p>');
+                        location.reload();
+                    }
+                },
+                error: function(data) {
+                    $('#findModalFooter').html('<p style="color: red;">Error al intentar asociar los elementos.</p>');
+                }
+            });
+        }
     </script>
 {% endblock %}
