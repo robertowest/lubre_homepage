@@ -56,11 +56,13 @@ def ajax_cargar_filtro(request):
 
 
 def ajax_cargar_tabla(request):
-    filter = request.GET['filter']
     if request.GET['app'] == 'comunicacion':
+        filter = ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all())
+        filter.form.helper = ComunicacionFilterFormModal()
         table = ComunicacionFindTable(filter.qs[:5])   # solo 10 registros
-        RequestConfig(request).configure(table)
     elif request.GET['app'] == 'domicilio':
+        filter = DomicilioFindFilter(request.GET, queryset=Domicilio.objects.all())
+        filter.form.helper = DomicilioFilterFormModal()
         table = DomicilioFindTable(filter.qs[:5])   # solo 10 registros
-        RequestConfig(request).configure(table)
+    RequestConfig(request).configure(table)
     return render(request, 'prueba/includes/_modal_find_table.html', { 'table': table })

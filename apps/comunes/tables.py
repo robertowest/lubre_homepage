@@ -83,15 +83,15 @@ class DomicilioTable(tables.Table):
 
 class DomicilioFindTable(tables.Table):
     id = tables.Column(orderable=False)
-    html = '<a href="#" onclick="ajax_modal_press({{record.pk}});" id="btnComunica">{{record.numero}}</a>'
+    html = '<a href="#" onclick="ajax_modal_press({{record.pk}});" id="btnComunica">{{record}}</a>'
     nombre = tables.TemplateColumn(html, orderable=False)    
-    numero = tables.Column(orderable=False)
+    # numero = tables.Column(orderable=False)
     active = tables.BooleanColumn(orderable=False)
 
     class Meta:
         attrs = {"class": "table table-hover"}
         model = Domicilio
-        fields = ['id', 'nombre', 'numero', 'active']
+        fields = ['id', 'nombre', 'active']
         empty_text = "No hay datos para los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"
         per_page = 10

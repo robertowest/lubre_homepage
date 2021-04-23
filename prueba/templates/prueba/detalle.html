@@ -196,15 +196,17 @@
         });
 
         // búsqueda en ventana modal
+        let dataAPP = '';
+        let dataPK = 0;
 
         $("a[id^=modal_]").click(function() {
-            let data_app = $(this).attr('data-app');
-            let data_pk = $(this).attr('data-pk');
+            dataAPP = $(this).attr('data-app');
+            dataPK = $(this).attr('data-pk');
             
             $.ajax({
                 url: "{% url 'prueba:ajax_cargar_filtro' %}",
                 method: 'GET',
-                data: { app: data_app, pk: data_pk},
+                data: { app: dataAPP, pk: dataPK},
                 beforeSend: function() {
                 },
                 complete:function(data) {
@@ -222,7 +224,9 @@
             $.ajax({
                 url: "{% url 'prueba:ajax_cargar_tabla' %}",
                 method: 'GET',
-                data: $('form').serialize(),
+                // data: $('form').serialize(),
+                // data: { app: dataAPP, pk: dataPK, form: $('form').serialize()},
+                data: $('form').serialize() + "&app=" + dataAPP + "&pk=" + dataPK,
                 beforeSend: function() {
                     $('#findModalTable').html('')
                     $('#findModalFooter').html('realizando consulta ...')
@@ -231,7 +235,7 @@
                     console.log('complete');
                 },
                 success: function(response) {
-                    // $('#findModalTable').html(response)
+                    $('#findModalTable').html(response)
                     $('#findModalFooter').html('10 registros máximo.')
                 },
                 error: function(data) {

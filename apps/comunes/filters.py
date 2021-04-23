@@ -50,7 +50,7 @@ class ComunicacionFindFilter(django_filters.FilterSet):
 
 
 class DomicilioFindFilter(django_filters.FilterSet):
-    texto = django_filters.CharFilter(lookup_expr='icontains')
+    nombre = django_filters.CharFilter(lookup_expr='icontains')
     active = django_filters.BooleanFilter(initial=True)
 
     class Meta:
