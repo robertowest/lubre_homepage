@@ -1,5 +1,6 @@
 from django_filters import CharFilter, DateFilter, FilterSet, NumberFilter
 from crispy_forms import helper, layout
+from django.urls import reverse
 
 from apps.rrhh.models import Vacaciones
 
@@ -38,7 +39,7 @@ class VacacionesFilterForm(helper.FormHelper):
         self.form_method = 'get'
 
         bFilter = '<button type="submit" class="btn btn-sm btn-primary btn-icon-split mr-1"><span class="icon text-white-50"><i class="fas fa-filter"></i></span><span class="text">Filtrar</span></button>'
-        bLimpiar = '<a class="btn btn-sm btn-secondary btn-icon-split" href="/rrhh/vacaciones/listado/"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Limpiar</span></a>'
+        bLimpiar = '<a class="btn btn-sm btn-secondary btn-icon-split" href="' + reverse('vacaciones:listado') + '"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Limpiar</span></a>'
 
         self.layout = layout.Layout(
             layout.Div(

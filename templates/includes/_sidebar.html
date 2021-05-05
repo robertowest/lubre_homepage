@@ -42,7 +42,7 @@
     {% endif %}
 
     <!-- empresa / comercial / actividad -->
-    {% if perms.empleado.view_empleado %} 
+    {% if perms.empresa.view_empresa %} 
         <!-- separador -->
         <hr class="sidebar-divider my-0">
 
@@ -75,7 +75,7 @@
     {% endif %}
 
     <!-- rrhh -->
-    {% if perms.empleado.view_empleado %} 
+    {% if perms.view_empleado %} 
         <hr class="sidebar-divider my-0">
 
         <li class="nav-item {% if '/rrhh/' in request.path %} active {%endif%}">

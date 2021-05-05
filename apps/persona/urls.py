@@ -12,6 +12,9 @@ urlpatterns = [
     path('<int:pk>/modificar/', views.PersonaUpdateView.as_view(), name='update'),
     path('<int:pk>/eliminar/', views.PersonaDeleteView.as_view(), name='delete'),
 
+    # modal para eliminación de registro
+    path('<int:pk>/contacto/<int:fk>/eliminar/', views.persona_contacto_eliminar, name='persona_contacto_eliminar'),
+
     # modal para asociar elementos
     path('ajax_cargar_filtro/', views.ajax_cargar_filtro, name='ajax_cargar_filtro'),
     path('ajax_cargar_tabla/', views.ajax_cargar_tabla, name='ajax_cargar_tabla'),
@@ -19,9 +22,7 @@ urlpatterns = [
 
 
 
-
-    # TODO: comprobar si las siguientes rutas todavía se utilizan o son necesarias
+    # TODO: comprobar si las entradastodavía son utilizadas
     path('<int:fk>/comunicacion/', views.CreateContactView.as_view(), name='associate_with_contact'),
     path('<int:fk>/domicilio/', views.CreateAddressView.as_view(), name='associate_with_address'),
-    path('<int:pk>/contacto/<int:fk>/eliminar/', views.persona_contacto_eliminar, name='persona_contacto_eliminar'),
 ]

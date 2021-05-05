@@ -18,9 +18,26 @@ class ComunicacionListFilter(django_filters.FilterSet):
     def __init__(self, data=None, *args, **kwargs):
         if data is not None:
             data = data.copy()
-            data.setdefault('id', 0)
+            # data.setdefault('id', 0)
             data.setdefault('active', True)
         super(ComunicacionListFilter, self).__init__(data, *args, **kwargs)
+
+
+# -------------------------------------------------------------------
+# Domicilio
+# -------------------------------------------------------------------
+class DomicilioListFilter(django_filters.FilterSet):
+    nombre = django_filters.CharFilter(lookup_expr='icontains')
+
+    class Meta:
+        model = Domicilio
+        fields = ['id', 'nombre', 'active']
+
+    def __init__(self, data=None, *args, **kwargs):
+        if data is not None:
+            data = data.copy()
+            data.setdefault('active', True)
+        super(DomicilioListFilter, self).__init__(data, *args, **kwargs)
 
 
 # -------------------------------------------------------------------

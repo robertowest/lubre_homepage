@@ -71,7 +71,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'PORT': '3306',
-        'NAME': config('DJANGO_DB', default='desarrollo_dj'),
+        'NAME': config('DJANGO_DB', default=''),
         'HOST': config('DJANGO_DB_HOST', default='192.168.1.2'),
         'USER': config('DJANGO_DB_USER', default='roberto'),
         'PASSWORD': config('DJANGO_DB_PASS', default='roberto'),

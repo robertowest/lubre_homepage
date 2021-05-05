@@ -1,5 +1,6 @@
 from crispy_forms import bootstrap, helper, layout
 from django import forms
+from django.urls import reverse
 
 from apps.comunes.models import Departamento, Domicilio, Localidad, Provincia
 
@@ -80,7 +81,7 @@ class DomicilioForm(forms.ModelForm):
         self.helper.layout.append(layout.HTML(bCancel))
 
 
-class DomicilioFilterFormHelper(helper.FormHelper):
+class DomicilioFilterFormHelper_OLD(helper.FormHelper):
     form_class = "form form-inline"
     form_id = "domicilio-search-form"
     form_method = "GET"
@@ -91,10 +92,9 @@ class DomicilioFilterFormHelper(helper.FormHelper):
             layout.Fieldset(
                 "<span class='fa fa-search'></span> Búsqueda de Domicilios",
                 layout.Div(
-                    bootstrap.InlineField("id", wrapper_class="col-4"),
-                    bootstrap.InlineField("nombre", wrapper_class="col-4"),
-                    bootstrap.InlineField("numero", wrapper_class="col-4"),
-                    bootstrap.InlineField("active", wrapper_class="col-4"),
+                    bootstrap.InlineField("id", wrapper_class="col-2"),
+                    bootstrap.InlineField("nombre", wrapper_class="col-8"),
+                    bootstrap.InlineField("active", wrapper_class="col-2"),
                     css_class="row",
                 ),
                 css_class="col-11 border p-3",
@@ -106,6 +106,34 @@ class DomicilioFilterFormHelper(helper.FormHelper):
             css_class="row",
         )
     )
+
+
+class DomicilioFilterFormHelper(helper.FormHelper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.form_method = 'get'
+
+        bFilter = '<button type="submit" class="btn btn-sm btn-primary btn-icon-split mr-1"><span class="icon text-white-50"><i class="fas fa-filter"></i></span><span class="text">Filtrar</span></button>'
+        bLimpiar = '<a class="btn btn-sm btn-secondary btn-icon-split" href="' + reverse('domicilio:list') + '"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Limpiar</span></a>'
+
+        self.layout = layout.Layout(
+            layout.Div(
+                layout.Row(
+                    layout.Div(
+                        layout.Row(
+                            layout.Column('nombre', css_class='col-lg-10 col-md-10 col-sm-9 mb-0'),
+                            layout.Column('active', css_class='col-lg-2  col-md-2  col-sm-3 mb-0'),
+                        ),
+                        css_class="col-lg-12 col-md-12 col-sm-12",
+                    ),
+                    layout.Div(
+                        layout.HTML(bFilter),
+                        layout.HTML(bLimpiar),
+                        css_class="col-12 text-right",
+                    ),
+                )
+            )
+        )
 
 
 class DomicilioFilterFormModal(helper.FormHelper):

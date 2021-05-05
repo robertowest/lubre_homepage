@@ -4,9 +4,9 @@ from django_tables2.utils import A
 from .models import Comunicacion, Domicilio
 
 ACTIONS = '''
-<a href="{% url 'comunicacion:detail' record.pk %}" class="text-info" title="" data-toggle="tooltip" data-original-title="View"><i class="fa fa-eye">&nbsp;</i></a>
-<a href="{% url 'comunicacion:update' record.pk %}" class="text-primary" title="" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit">&nbsp;</i></a>
-<a href="{% url 'comunicacion:delete' record.pk %}?next={{request.get_full_path|urlencode}}" class="text-danger" data-toggle="tooltip" data-original-title="Eliminar"><i class="fa fa-trash">&nbsp;</i></a>
+<a href="{% url 'app:detail' record.pk %}" class="text-info" title="" data-toggle="tooltip" data-original-title="View"><i class="fa fa-eye">&nbsp;</i></a>
+<a href="{% url 'app:update' record.pk %}" class="text-primary" title="" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit">&nbsp;</i></a>
+<a href="{% url 'app:delete' record.pk %}?next={{request.get_full_path|urlencode}}" class="text-danger" data-toggle="tooltip" data-original-title="Eliminar"><i class="fa fa-trash">&nbsp;</i></a>
 '''
 # <a href="{% url 'comunicacion:delete' record.pk %}" class="text-danger" title="" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash">&nbsp;</i></a>
 # <a href="{% url 'comunicacion:delete' record.pk %}" class="text-danger"
@@ -27,7 +27,9 @@ class ComunicacionTable(tables.Table):
     tipo = tables.Column(orderable=False)
     texto = tables.Column(orderable=False)
     active = tables.BooleanColumn(orderable=False)
-    actions = tables.TemplateColumn(template_code=ACTIONS, verbose_name='Acciones', orderable=False)
+    actions = tables.TemplateColumn(
+                template_code=ACTIONS.replace('app', 'comunicacion'), 
+                verbose_name='Acciones', orderable=False)
     # id = tables.LinkColumn('comunicacion:delete', args=[A('pk')], attrs={'a': {'class': 'btn'}})
 
     class Meta:
@@ -69,13 +71,14 @@ class DomicilioTable(tables.Table):
     nombre = tables.Column(orderable=False)
     numero = tables.Column(orderable=False)
     active = tables.BooleanColumn(orderable=False)
-    actions = tables.TemplateColumn(template_code=ACTIONS, verbose_name='Acciones', orderable=False)
+    actions = tables.TemplateColumn(
+                template_code=ACTIONS.replace('app', 'domicilio'), 
+                verbose_name='Acciones', orderable=False)
 
     class Meta:
         attrs = {"class": "table table-hover"}
         model = Domicilio
         fields = ['id', 'nombre', 'numero', 'active']
-        # sequence = ['id', 'tipo', 'texto', 'active', 'actions']
         empty_text = "No hay datos para los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"
         per_page = 20
@@ -83,7 +86,7 @@ class DomicilioTable(tables.Table):
 
 class DomicilioFindTable(tables.Table):
     id = tables.Column(orderable=False)
-    html = '<a href="#" onclick="ajax_modal_press({{record.pk}});" id="btnComunica">{{record}}</a>'
+    html = '<a href="#" onclick="ajax_modal_press({{record.pk}});" id="btnDomicilio">{{record}}</a>'
     nombre = tables.TemplateColumn(html, orderable=False)    
     # numero = tables.Column(orderable=False)
     active = tables.BooleanColumn(orderable=False)

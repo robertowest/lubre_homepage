@@ -16,14 +16,6 @@ class ComunicacionTemplateView(TemplateView):
         return ComunicacionListView.as_view()(request)
 
 
-# class ComunicacionListView(ListView):
-#     model = ComunicacionModel
-#     template_name = 'comunes/tabla.html'
-
-#     def get_context_data(self, *, object_list=None, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['object_list'] = ComunicacionModel.objects.filter(active=True)[:50]
-#         return context
 class ComunicacionListView(PagedFilteredTableView):
     model = ComunicacionModel
     template_name = 'comunes/tabla2.html'

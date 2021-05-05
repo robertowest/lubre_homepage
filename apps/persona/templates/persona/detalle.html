@@ -92,7 +92,7 @@
                 {% if perms.persona.add_comunicacion or perms.persona.change_comunicacion %}
                 <div class="card-footer">
                     {% if perms.persona.add_comunicacion %}
-                    <a href="{{object.get_related_url_with_contact}}" class="btn btn-sm btn-primary btn-icon-split">
+                    <a href="{{object.get_related_url_with_contact}}" class="btn btn-sm btn-primary btn-icon-split" target="_blank">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
@@ -137,7 +137,7 @@
                             <span class="text">Modificar</span>
                         </a>
                     {% else %}
-                        <a href="{{object.get_related_url_with_address}}" class="btn btn-sm btn-primary btn-icon-split">
+                        <a href="{{object.get_related_url_with_address}}" class="btn btn-sm btn-primary btn-icon-split" target="_blank">
                             <span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                             </span>

@@ -9,27 +9,34 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView
 
 from apps.comunes.models import Domicilio as DomicilioModel
-from apps.comunes.forms.domicilio import DomicilioForm
+from apps.comunes.forms.domicilio import DomicilioForm, DomicilioFilterFormHelper
+from apps.comunes.filters import DomicilioListFilter
+from apps.comunes.tables import DomicilioTable
+from apps.comunes.utils import PagedFilteredTableView
 
-# 
-# Domicilio
-#  
+
 class DomicilioTemplateView(TemplateView):
     # si no existe página index llamamos a otra función
     def get(self, request, *args, **kwargs):
         return DomicilioListView.as_view()(request)
 
 
-class DomicilioListView(ListView):
-    model = DomicilioModel
-    template_name = 'comunes/tabla.html'
+# class DomicilioListView(ListView):
+#     model = DomicilioModel
+#     template_name = 'comunes/tabla.html'
 
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['object_list'] = DomicilioModel.objects.filter(active=True)[:50]
-        return context
+#     def get_context_data(self, *, object_list=None, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['object_list'] = DomicilioModel.objects.filter(active=True)[:50]
+#         return context
+class DomicilioListView(PagedFilteredTableView):
+    model = DomicilioModel
+    table_class = DomicilioTable
+    filter_class = DomicilioListFilter
+    formhelper_class = DomicilioFilterFormHelper 
+    template_name = 'comunes/tabla2.html'
  
- 
+
 class DomicilioCreateView(PermissionRequiredMixin, CreateView):
     permission_required = 'comunes.add_domicilio'
 
@@ -73,7 +80,6 @@ class DomicilioUpdateView(PermissionRequiredMixin, UpdateView):
             'localidad': self.object.localidad_id,
         })
         return context
-
 
     def form_valid(self, form):
         # form.data['nombre']

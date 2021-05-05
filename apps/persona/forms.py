@@ -1,5 +1,6 @@
 from crispy_forms import bootstrap, helper, layout
 from django import forms
+from django.urls import reverse
 
 from .models import Persona
 
@@ -44,7 +45,7 @@ class PersonaFilterForm(helper.FormHelper):
         self.form_method = 'get'
 
         bFilter = '<button type="submit" class="btn btn-sm btn-primary btn-icon-split mr-1"><span class="icon text-white-50"><i class="fas fa-filter"></i></span><span class="text">Filtrar</span></button>'
-        bLimpiar = '<a class="btn btn-sm btn-secondary btn-icon-split" href="/persona/listado/"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Limpiar</span></a>'
+        bLimpiar = '<a class="btn btn-sm btn-secondary btn-icon-split" href="' + reverse('persona:list') + '"><span class="icon text-white-50"><i class="fas fa-undo"></i></span><span class="text">Limpiar</span></a>'
 
         self.layout = layout.Layout(
             layout.Div(

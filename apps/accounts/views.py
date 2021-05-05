@@ -28,7 +28,7 @@ def LoginRedirect(request):
                     # return HttpResponseRedirect("/empresa/recorrer/")
                     # return HttpResponseRedirect("/empresa/filtro_comercial/" + str(comercial.id))
                     get_args_str = urlencode({'comercial': comercial.id, 'active': True})
-                    return HttpResponseRedirect("/empresa/listado/?%s" % get_args_str)
+                    return HttpResponseRedirect("/empresas/empresa/listado/?%s" % get_args_str)
                 else:
                     # return HttpResponseRedirect("/empresa/")
                     return HttpResponseRedirect(reverse('gestion:dashboard'))
