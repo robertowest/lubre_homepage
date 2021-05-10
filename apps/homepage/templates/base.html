@@ -25,22 +25,22 @@
         <!-- FONT AWESOME 4 https://fontawesome.com/v4.7.0/icons/ -->
         <link rel="stylesheet" href="{% static 'fontawesome/css/font-awesome.min.css' %}">
         <!-- OWL CAROSEL CSS -->
-        <link rel="stylesheet" href="{% static 'owlcarousel/css/owl.carousel.css' %}">
-        <link rel="stylesheet" href="{% static 'owlcarousel/css/owl.theme.css' %}">
+        <link rel="stylesheet" href="{% static 'owlcarousel/css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'owlcarousel/css/owl.theme.min.css' %}">
         <!-- LIGHTBOX CSS -->
         <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
         <!-- YOUTUBE CSS -->
-        <link rel="stylesheet" href="{% static 'css/YTPlayer.css' %}">
+        <link rel="stylesheet" href="{% static 'css/YTPlayer.min.css' %}">
         <!-- MAGNIFIC CSS -->
-        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.min.css' %}">
         <!-- ANIMATE CSS -->
         <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/component.css' %}">
-        <link rel="stylesheet" href="{% static 'css/set2.css' %}">
+        <link rel="stylesheet" href="{% static 'css/component.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/set2.min.css' %}">
         <!-- MAIN STYLE CSS -->
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
         <!-- RESPONSIVE CSS -->
-        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.min.css' %}">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -51,12 +51,14 @@
         {% endblock %}
     </head>
     <body>
-        {# muestra el gráfico de carga #}
+        {% comment %}
+        <!-- muestra el gráfico de carga -->
         <div class="preloader">
             <div class="status">
                 <div class="status-mes"></div>
             </div>
         </div>
+        {% endcomment %}
 
         {% block content %}
         {% endblock %}
@@ -73,7 +75,7 @@
         <!-- BOOTSTRAP JS -->
         <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
         <!-- PROGRESS JS  -->
-        <script src="{% static 'js/jquery.appear.js' %}"></script>
+        <script src="{% static 'js/jquery.appear.min.js' %}"></script>
         <!-- OWL CAROUSEL JS  -->
         <script src="{% static 'owlcarousel/js/owl.carousel.min.js' %}"></script>
         <!-- MAGNIFICANT JS -->
@@ -86,11 +88,11 @@
         <!-- WOW JS -->
         <script src="{% static 'js/wow.min.js' %}"></script>
         <!-- ISOTOP JS -->
-        <script src="{% static 'js/isotope.pkgd.js' %}"></script>
+        <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
         <!-- STICKY JS -->
-        <script src="{% static 'js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'js/jquery.sticky.min.js' %}"></script>
         <!-- FOEEM JS -->
-        <script src="{% static 'js/form-contact.js' %}"></script>
+        <script src="{% static 'js/form-contact.min.js' %}"></script>
         <!-- YOUTUBE JS -->
         <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
         <script type="text/javascript">
@@ -107,7 +109,7 @@
         -->
 
         <!-- scripts js -->
-        <script src="{% static 'js/scripts.js' %}"></script>
+        <script src="{% static 'js/scripts.min.js' %}"></script>
         {% block jscript %}
         {% endblock %}
     </body>

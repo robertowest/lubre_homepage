@@ -31,7 +31,7 @@ def product_path(value):
     if os.path.exists(path + file):
         return path + file
     else:
-        return path + 'none.jpg'
+        return path + 'none.webp'
 
 
 @register.filter(name='thumb_product_path')
