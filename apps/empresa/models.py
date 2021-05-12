@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 
-from apps.comunes.models import Domicilio, CommonStruct, Comunicacion
+from apps.comunes.models import Diccionario, Domicilio, CommonStruct, Comunicacion
 from apps.persona.models import Persona
 
 
@@ -105,6 +105,9 @@ class Empresa(CommonStruct):
     planilla = models.IntegerField(null=True, blank=True)
     # marca el registro para impactar contra firebird
     impactar = models.BooleanField(default=False, null=False, blank=False)
+    calificacion = models.ForeignKey(Diccionario, on_delete=models.CASCADE, verbose_name='Calificación',
+                                     null=True, blank=True, default=1,
+                                     limit_choices_to={'tabla': 'calificaEmpresa', 'active': True})
 
     # configuración para admin
     list_display = ['razon_social', 'cuit', 'nombre', 'active']
@@ -157,7 +160,7 @@ class EmpresaActividades(models.Model):
 
 class EmpresaActividadContactos(models.Model):
     # Empresa-Contacto ahora depende de Empresa-Actividad-Contacto
-    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING, 
+    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING,
                                           related_name='ea_contactos')
     persona = models.ForeignKey(Persona, models.DO_NOTHING)
     cargo = models.CharField('Puesto', max_length=50, null=True, blank=True, default='¿puesto?')
@@ -170,7 +173,7 @@ class EmpresaActividadContactos(models.Model):
 
 class EmpresaActividadDomicilios(models.Model):
     # Empresa-Domicilio ahora depende de Empresa-Actividad-Domicilio
-    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING, 
+    empresa_actividad = models.ForeignKey(EmpresaActividades, models.DO_NOTHING,
                                           related_name='ea_domicilios')
     domicilio = models.ForeignKey(Domicilio, models.DO_NOTHING)
 
@@ -181,12 +184,10 @@ class EmpresaActividadDomicilios(models.Model):
 
 
 class EmpresaActividadInfo(CommonStruct):
-    from apps.comunes.models import Diccionario
-
     TAMANO = ((1, 'Pequeña'), (2, 'Mediana'), (3, 'Grande'))
 
     # agro -------------
-    empresa_actividad = models.ForeignKey(EmpresaActividades, on_delete=models.CASCADE, 
+    empresa_actividad = models.ForeignKey(EmpresaActividades, on_delete=models.CASCADE,
                                           related_name='ea_info')
     nombre = models.CharField('Nombre o identificación', max_length=150, null=True, blank=True)
     referencia_gps = models.CharField('Ubicación GPS', max_length=30, null=True, blank=True)

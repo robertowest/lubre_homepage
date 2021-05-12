@@ -146,3 +146,27 @@
     modified: 2020-09-30 12:06:55.766968+00:00
     texto: Textil
     tabla: tipoEmpresa
+- model: comunes.diccionario
+  pk: 22
+  fields:
+    active: true
+    texto: Potencial
+    tabla: calificaEmpresa
+- model: comunes.diccionario
+  pk: 23
+  fields:
+    active: true
+    texto: Activa
+    tabla: calificaEmpresa
+- model: comunes.diccionario
+  pk: 24
+  fields:
+    active: true
+    texto: Suspendida
+    tabla: calificaEmpresa
+- model: comunes.diccionario
+  pk: 25
+  fields:
+    active: true
+    texto: Juicio por Cobranza
+    tabla: calificaEmpresa

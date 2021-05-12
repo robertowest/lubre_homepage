@@ -195,6 +195,7 @@ class Diccionario(CommonStruct):
         ('comunicacion', 'Comunicaciones'),
         ('domicilio', 'Domicilios'),
         ('tipoEmpresa', 'Tipo de Empresa'),
+        ('calificaEmpresa', 'Calificación de Empresa'),
     )
 
     texto = models.CharField(max_length=150)
@@ -230,11 +231,11 @@ class Domicilio(CommonStruct):
     provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE,
                                   null=True, blank=True,
                                   limit_choices_to={'active': True})
-    departamento = ChainedForeignKey(Departamento, 
+    departamento = ChainedForeignKey(Departamento,
                                      chained_field="provincia",
                                      chained_model_field="provincia",
                                      show_all=False, auto_choose=True, sort=True,
-                                     null=True, blank=True)    
+                                     null=True, blank=True)
     localidad = ChainedForeignKey(Localidad,
                                   chained_field="departamento",
                                   chained_model_field="departamento",

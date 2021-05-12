@@ -46,7 +46,7 @@ class EmpresaForm(forms.ModelForm):
         model = Empresa
         fields = ['nombre', 'razon_social', 'cuit', 
                   'comercial', 'actividad', 'referencia_id', 'actividades',
-                  'observacion', 'active', 'id']
+                  'observacion', 'active', 'id', 'calificacion']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -76,9 +76,10 @@ class EmpresaForm(forms.ModelForm):
                               onkeypress="buscar_cliente(event)"),
             ),
             layout.Row(
-                layout.Column('actividad',     css_class='col-lg-5 col-md-5 mb-0'),
-                layout.Column('comercial',     css_class='col-lg-5 col-md-5 mb-0'),
-                layout.Column('referencia_id', css_class='col-lg-2 col-md-2 mb-0'),
+                layout.Column('actividad',     css_class='col-lg-4 col-md-4 mb-0'),
+                layout.Column('comercial',     css_class='col-lg-3 col-md-4 mb-0'),
+                layout.Column('calificacion',  css_class='col-lg-3 col-md-4 mb-0'),
+                layout.Column('referencia_id', css_class='col-lg-2 col-md-12 mb-0'),
             ),
             layout.Row(
                 layout.Column('actividades', css_class='col-lg-5 col-md-6 mb-0'),
@@ -117,10 +118,11 @@ class EmpresaFilterForm(helper.FormHelper):
                     layout.Column('cuit',         css_class='col-lg-2 col-md-4 col-sm-6 mb-0'),
                 ),
                 layout.Row(
-                    layout.Column('comercial',     css_class='col-lg-4 col-md-4 col-sm-12 mb-0'),
-                    layout.Column('actividad',     css_class='col-lg-4 col-md-4 col-sm-12 mb-0'),
-                    layout.Column('referencia_id', css_class='col-lg-2 col-md-2 col-sm-6 mb-0'),
-                    layout.Column('active',        css_class='col-lg-2 col-md-2 col-sm-6 mb-0'),
+                    layout.Column('comercial',     css_class='col-lg-2 col-md-4 col-sm-12 mb-0'),
+                    layout.Column('actividad',     css_class='col-lg-3 col-md-4 col-sm-12 mb-0'),
+                    layout.Column('calificacion',  css_class='col-lg-3 col-md-4 col-sm-12 mb-0'),
+                    layout.Column('referencia_id', css_class='col-lg-2 col-md-6 col-sm-6 mb-0'),
+                    layout.Column('active',        css_class='col-lg-2 col-md-6 col-sm-6 mb-0'),
                 ),
                 css_class="col-12",
             ),

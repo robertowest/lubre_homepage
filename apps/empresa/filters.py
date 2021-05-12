@@ -3,6 +3,7 @@ from django_filters import FilterSet, BooleanFilter, CharFilter, ModelChoiceFilt
 from crispy_forms import helper, layout
 
 from .models import Actividad, Comercial, Empresa
+from apps.comunes.models import Diccionario
 
 
 class ActividadFilter(FilterSet):
@@ -40,10 +41,11 @@ class EmpresaFilter(FilterSet):
     cuit = CharFilter(label='C.U.I.T.', lookup_expr='icontains')
     comercial = ModelChoiceFilter(queryset=Comercial.objects.all())  # filter(active=True)
     actividad = ModelChoiceFilter(queryset=Actividad.objects.filter(parent=None))
+    calificacion = ModelChoiceFilter(queryset=Diccionario.objects.filter(tabla='calificaEmpresa'))
     referencia_id = NumberFilter(lookup_expr='iexact')
 
     class Meta:
         model = Empresa
         fields = ['nombre',  'razon_social', 'cuit', \
-                  'comercial', 'actividad', \
+                  'comercial', 'actividad', 'calificacion', \
                   'referencia_id', 'active']
