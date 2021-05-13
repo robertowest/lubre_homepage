@@ -92,11 +92,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 # -------------------------------------------------------------------
-# aplicaciones del proyecto
+# aplicaciones de terceros y configuraciones para su uso
 # -------------------------------------------------------------------
 INSTALLED_APPS += [
-    # aplicaciones de terceros -------------
     'ckeditor',
     'mathfilters',
     'social_django',
@@ -107,7 +107,20 @@ INSTALLED_APPS += [
     'django_afip',
     'cart',
     'django_mercadopago',
+]
+# django-crispy-forms  ----------------------------------------------
+INSTALLED_APPS += ['crispy_forms',]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# django-smart-selects ----------------------------------------------
+INSTALLED_APPS += ['smart_selects',]
+# JQUERY_URL = False
+USE_DJANGO_JQUERY = True
 
+
+# -------------------------------------------------------------------
+# aplicaciones del proyecto
+# -------------------------------------------------------------------
+INSTALLED_APPS += [
     # homepage -----------------------------
     'apps.homepage',
     'apps.equivalencia',

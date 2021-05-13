@@ -26,7 +26,6 @@ urlpatterns = [
     
     path('ejemplo/', TemplateView.as_view(template_name='default_base.html'), name='ejemplo'),
 
-
     # homepage-------------------------------------------------------------------------
     path('', include('apps.homepage.urls', namespace='homepage')),
     path('equivalencia/', include('apps.equivalencia.urls', namespace='equivalencia')),
