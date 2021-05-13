@@ -8,27 +8,21 @@ from apps.comunes.models import Departamento, Domicilio, Localidad, Provincia
 class DomicilioForm(forms.ModelForm):
     class Meta:
         model = Domicilio
-        fields = ['tipo', 
-                  'tipo_calle', 'nombre', 'numero', 
-                  'piso', 'puerta', 'barrio', 
-                  'provincia', 'departamento', 'localidad', 
-                  'provincia_texto', 'departamento_texto', 'localidad_texto', 
-                  'observacion_texto',
-                  'active']
+        fields = [
+            'tipo', 'tipo_calle', 'nombre', 'numero', 'piso', 'puerta', 'barrio', 
+            'provincia', 'departamento', 'localidad',
+            'provincia_texto', 'departamento_texto', 'localidad_texto', 
+            'observacion_texto', 'active'
+        ]
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(DomicilioForm, self).__init__(*args, **kwargs)
 
         # # dropdown
-        # if self.instance:
-        #     if self.instance.provincia_id:
-        #         self.fields['departamento'].queryset = (Departamento.objects.filter(provincia_id=self.instance.provincia_id))
-        #     if self.instance.departamento_id:
-        #         self.fields['localidad'].queryset = (Localidad.objects.filter(departamento_id=self.instance.departamento_id))
-        if self.instance.provincia_id:
-            self.fields['departamento'].queryset = (Departamento.objects.filter(provincia_id=self.instance.provincia_id))
-        if self.instance.departamento_id:
-            self.fields['localidad'].queryset = (Localidad.objects.filter(departamento_id=self.instance.departamento_id))
+        # if self.instance.provincia_id:
+        #     self.fields['departamento'].queryset = (Departamento.objects.filter(provincia_id=self.instance.provincia_id))
+        # if self.instance.departamento_id:
+        #     self.fields['localidad'].queryset = (Localidad.objects.filter(departamento_id=self.instance.departamento_id))
 
         # creamos helper
         self.helper = helper.FormHelper()

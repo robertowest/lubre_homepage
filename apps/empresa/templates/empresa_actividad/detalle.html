@@ -133,17 +133,29 @@
                     </table>
                     {% endif  %}
                 </div>
-                {% if perms.empresa.add_empresaactividaddomicilios %}
+                {% if perms.empresa.add_empresaactividaddomicilios or perms.empresa.change_empresaactividaddomicilios%}
                 <div class="card-footer">
-                    <!-- agregar nuevo domicilio y asociarlo a la empresa -->
-                    <a href="{% url 'empresa_actividad:emp_act_domicilio' object.pk %}" class="btn btn-sm btn-primary btn-icon-split">
+                    {% if perms.empresa.add_empresaactividaddomicilios %}
+                        <!-- agregar nuevo domicilio y asociarlo a la empresa -->
+                        <a href="{% url 'empresa_actividad:emp_act_domicilio' object.pk %}" class="btn btn-sm btn-primary btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            <span class="text">Nuevo</span>
+                        </a>
+                    {% endif %}
+                    <!-- asociar contacto existente a la empresa_actividad -->
+                    <a href="#" id="modal_domicilio"
+                        class="btn btn-sm btn-secondary btn-icon-split"
+                        data-app="ea_domicilio"
+                        data-pk="{{object.pk}}">
                         <span class="icon text-white-50">
-                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-link"></i>
                         </span>
-                        <span class="text">Nuevo</span>
+                        <span class="text">Asociar</span>
                     </a>
                 </div>
-                {% endif %}                
+                {% endif %}
             </div>
         </div>
 
@@ -194,17 +206,29 @@
                     </table>
                     {% endif  %}
                 </div>
+                {% if perms.empresa.add_empresaactividadcontactos or perms.empresa.change_empresaactividadcontactos %}
                 <div class="card-footer">
-                    {% if perms.empresa.add_empresaactividadcontactos %}
-                    <!-- agregar nuevo contacto y asociarlo a la empresa -->
-                    <a href="{% url 'empresa_actividad:emp_act_contacto' object.pk %}" class="btn btn-sm btn-primary btn-icon-split">
-                        <span class="icon text-white-50">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                        <span class="text">Nuevo</span>
-                    </a>
+                    {% if perms.empresa.add_empresacomunicaciones %}
+                        <!-- agregar nuevo contacto y asociarlo a la empresa -->
+                        <a href="{% url 'empresa_actividad:emp_act_contacto' object.pk %}" class="btn btn-sm btn-primary btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            <span class="text">Nuevo</span>
+                        </a>
                     {% endif %}
-                    <!-- asociar contacto existente a la empresa -->
+                    <!-- asociar contacto existente a la empresa_actividad -->
+                    <a href="#" id="modal_contacto"
+                       class="btn btn-sm btn-secondary btn-icon-split"
+                       data-app="ea_contacto"
+                       data-pk="{{object.pk}}">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-link"></i>
+                        </span>
+                        <span class="text">Asociar</span>
+                    </a>
+
+{% comment %}
                     <a href="#" class="btn btn-sm btn-secondary btn-icon-split"
                         data-toggle="modal" data-target="#myModal"
                         data-url="{% url 'empresa:buscar_contacto' object.pk %}"
@@ -214,7 +238,10 @@
                         </span>
                         <span class="text">Asociar</span>
                     </a>
+{% endcomment %}
+
                 </div>
+                {% endif  %}
             </div>
         </div>
     </div>
@@ -226,6 +253,7 @@
     {# https://pypi.org/project/django-bootstrap-modal-forms/ #}
     {% include 'includes/_modal.html' %}
     {% include 'includes/_modal_delete.html' %}
+    {% include 'includes/_modal_find.html' %}
 {% endblock %}
 
 
@@ -309,5 +337,75 @@
             var link = $(this).find('#btnOkModal')[0];
             link.href = dataURL;
         });
+
+        // búsqueda en ventana modal para asociaciones
+        let dataAPP = '';
+        let dataPK = 0;
+
+        $("a[id^=modal_]").click(function() {
+            dataAPP = $(this).attr('data-app');
+            dataPK = $(this).attr('data-pk');
+            
+            $.ajax({
+                url: "{% url 'empresa_actividad:ajax_cargar_filtro' %}",
+                method: 'GET',
+                data: { app: dataAPP, pk: dataPK},
+                beforeSend: function() {
+                },
+                complete:function(data) {
+                    $('#findModal').modal('show');
+                },
+                success: function(response) {
+                    $('#findModalBody').html(response)
+                },
+                error: function(data) {
+                }
+            });
+        });
+
+        function submit_modal(form) {
+            $.ajax({
+                url: "{% url 'empresa_actividad:ajax_cargar_tabla' %}",
+                method: 'GET',
+                data: $('form').serialize() + "&app=" + dataAPP + "&pk=" + dataPK,
+                beforeSend: function() {
+                    $('#findModalTable').html('')
+                    $('#findModalFooter').html('realizando consulta ...')
+                },
+                complete:function(data) {
+                },
+                success: function(response) {
+                    $('#findModalTable').html(response)
+                    $('#findModalFooter').html('10 registros máximo.')
+                },
+                error: function(data) {
+                    $('#findModalFooter').html('<p style="color: red;">Problemas al realizar la búsqueda</p>');
+                }
+            });
+        };
+
+        function ajax_modal_press(pk) {
+            $.ajax({
+                url: "{% url 'empresa_actividad:ajax_asociar_elementos' %}",
+                method: 'GET',
+                data: { app: dataAPP, pk: dataPK, fk: pk},
+                beforeSend: function() {
+                    $('#findModalFooter').html('<p style="color: green;">Realizando asociación ...</p>');
+                },
+                complete:function(data) {
+                },
+                success: function(response, status, xhr) {
+                    // JSON.parse(response["result"]) == true
+                    if(status == 'success') {
+                        $('#findModalBody').html('');
+                        $('#findModalFooter').html('<p style="color: black;">Recargando la página actual ...</p>');
+                        location.reload();
+                    }
+                },
+                error: function(data) {
+                    $('#findModalFooter').html('<p style="color: red;">Error al intentar asociar los elementos.</p>');
+                }
+            });
+        };
     </script>
 {% endblock %}

@@ -206,7 +206,7 @@
             dataPK = $(this).attr('data-pk');
             
             $.ajax({
-                url: "{% url 'prueba:ajax_cargar_filtro' %}",
+                url: "{% url 'persona:ajax_cargar_filtro' %}",
                 method: 'GET',
                 data: { app: dataAPP, pk: dataPK},
                 beforeSend: function() {
@@ -224,7 +224,7 @@
 
         function submit_modal(form) {
             $.ajax({
-                url: "{% url 'prueba:ajax_cargar_tabla' %}",
+                url: "{% url 'persona:ajax_cargar_tabla' %}",
                 method: 'GET',
                 // data: $('form').serialize(),
                 // data: { app: dataAPP, pk: dataPK, form: $('form').serialize()},
@@ -247,7 +247,7 @@
 
         function ajax_modal_press(pk) {
             $.ajax({
-                url: "{% url 'prueba:ajax_asociar_elementos' %}",
+                url: "{% url 'persona:ajax_asociar_elementos' %}",
                 method: 'GET',
                 data: { app: dataAPP, pk: dataPK, fk: pk},
                 beforeSend: function() {

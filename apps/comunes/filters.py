@@ -52,19 +52,14 @@ class ComunicacionFindFilter(django_filters.FilterSet):
         model = Comunicacion
         fields = ['tipo', 'texto', 'active']
 
-    # def __init__(self, data=None, *args, **kwargs):
-    #     if self.data == {}:
-    #         self.queryset = self.queryset.none()
-    #     if data is not None:
-    #         data = data.copy()
-    #         data.setdefault('tipo', 3)      # Teléfono
-    #         data.setdefault('active', True)
-    #     super(ComunicacionFindFilter, self).__init__(data, *args, **kwargs)
-    def __init__(self, *args, **kwargs):
-        super(ComunicacionFindFilter, self).__init__(*args, **kwargs)
-        if self.data == {}:
-            self.queryset = self.queryset.none()
-
+    def __init__(self, data=None, *args, **kwargs):
+        # valor inicial por defecto para el filtro
+        if data is not None:
+            data = data.copy()
+            data.setdefault('tipo', 3)      # Teléfono
+            data.setdefault('active', True)
+        super(ComunicacionFindFilter, self).__init__(data, *args, **kwargs)
+    
 
 class DomicilioFindFilter(django_filters.FilterSet):
     nombre = django_filters.CharFilter(lookup_expr='icontains')
@@ -74,7 +69,9 @@ class DomicilioFindFilter(django_filters.FilterSet):
         model = Domicilio
         fields = ['nombre', 'numero', 'active']
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, data=None, *args, **kwargs):
+        # valor inicial por defecto para el filtro
+        if data is not None:
+            data = data.copy()
+            data.setdefault('active', True)
         super(DomicilioFindFilter, self).__init__(*args, **kwargs)
-        if self.data == {}:
-            self.queryset = self.queryset.none()

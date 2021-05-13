@@ -20,8 +20,6 @@ urlpatterns = [
     path('ajax_cargar_tabla/', views.ajax_cargar_tabla, name='ajax_cargar_tabla'),
     path('ajax_asociar_elementos/', views.ajax_asociar_elementos, name='ajax_asociar_elementos'),
 
-
-
     # TODO: comprobar si las entradastodavía son utilizadas
     path('<int:fk>/comunicacion/', views.CreateContactView.as_view(), name='associate_with_contact'),
     path('<int:fk>/domicilio/', views.CreateAddressView.as_view(), name='associate_with_address'),

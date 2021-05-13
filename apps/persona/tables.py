@@ -34,6 +34,7 @@ class PersonaTable(tables.Table):
     actions = tables.TemplateColumn(template_code=actions_allowed_persona(), \
                                     verbose_name='Acciones', orderable=False, \
                                     attrs={'th': {'style': 'min-width: 100px;'}})
+
     class Meta:
         model = Persona
         attrs = {"class": "table table-hover"}
@@ -43,3 +44,19 @@ class PersonaTable(tables.Table):
         empty_text = "No hay datos que cumplan los criterios de búsqueda."
         template_name = "django_tables2/bootstrap4.html"
         per_page = 20
+
+
+class PersonaFindTable(tables.Table):
+    id = tables.Column(orderable=False)
+    html = '<a href="#" onclick="ajax_modal_press({{record.pk}});" id="btnDomicilio">{{record}}</a>'
+    nombre = tables.TemplateColumn(html, orderable=False)    
+    documento = tables.Column(orderable=False)
+    active = tables.BooleanColumn(orderable=False)
+
+    class Meta:
+        # attrs = {"class": "table table-striped table-hover cabecera-azul"}
+        attrs = {"class": "table table-hover"}
+        model = Persona
+        fields = ['id', 'nombre', 'documento', 'active']
+        empty_text = "No hay datos para los criterios de búsqueda."
+        template_name = "django_tables2/bootstrap4.html"

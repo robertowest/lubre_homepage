@@ -28,15 +28,21 @@ urlpatterns = [
     # baja de registros vinculados a la empresa-contacto
     path('<int:empID>/comunicacion/<int:conID>/eliminar', views.comunication_delete, name='comunication_delete'),
 
+    # modal para asociar elementos
+    path('ajax_cargar_filtro/', views.ajax_cargar_filtro, name='ajax_cargar_filtro'),
+    path('ajax_cargar_tabla/', views.ajax_cargar_tabla, name='ajax_cargar_tabla'),
+    path('ajax_asociar_elementos/', views.ajax_asociar_elementos, name='ajax_asociar_elementos'),
+
+    # redireccionamiento a empresa_actividad
+    path('<int:empId>/actividad/<int:actId>/', views.empresa_actividad, name='empresa_actividad'),
+
+
     # asociar con registro existente
     path('<int:pk>/comunicacion/buscar/', views.buscar_comunicacion, name='buscar_comunicacion'),
     path('<int:empId>/comunicacion/<int:comId>/', views.asociar_comunicacion, name='asociar_comunicacion'),
 
     path('<int:pk>/contacto/buscar/', views.buscar_contacto, name='buscar_contacto'),
     path('<int:empId>/contacto/<int:comId>/', views.asociar_contacto, name='asociar_contacto'),
-
-    # redireccionamiento a empresa_actividad
-    path('<int:empId>/actividad/<int:actId>/', views.empresa_actividad, name='empresa_actividad'),
 ]
 
 # ----------------------------------------------------------------------------------

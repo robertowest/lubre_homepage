@@ -10,18 +10,29 @@ from django.shortcuts import redirect, render, get_list_or_404, get_object_or_40
 from django.urls import resolve, reverse, reverse_lazy
 from django.utils.http import urlencode
 from django.views import generic
-from django_tables2 import SingleTableView
+from django_tables2 import RequestConfig, SingleTableView
 
 from . import filters, forms, models, tables
 
-from apps.comunes.models import Comunicacion as ComunicacionModel
-from apps.comunes.models import Domicilio as DomicilioModel
-from apps.comunes.forms.comunicacion import ComunicacionForm
-from apps.comunes.forms.domicilio import DomicilioForm
 from apps.comunes.utils import PagedFilteredTableView
 
-from apps.persona.models import Persona as ContactoModel
-from apps.persona.forms import PersonaForm as ContactoForm
+# asociar con comunicación
+from apps.comunes.models import Comunicacion
+from apps.comunes.filters import ComunicacionFindFilter
+from apps.comunes.tables import ComunicacionFindTable
+from apps.comunes.forms.comunicacion import ComunicacionForm, ComunicacionFilterFormModal
+
+# asociar con domicilio
+from apps.comunes.models import Domicilio
+from apps.comunes.filters import DomicilioFindFilter
+from apps.comunes.tables import DomicilioFindTable
+from apps.comunes.forms.domicilio import DomicilioForm, DomicilioFilterFormModal
+
+# asociar con contacto
+from apps.persona.models import Persona
+from apps.persona.filters import PersonaFindFilter
+from apps.persona.tables import PersonaFindTable
+from apps.persona.forms import PersonaForm, PersonaFilterFormModal
 
 
 # -----------------------------------------------------------------------------
@@ -173,8 +184,8 @@ def empresa_domicilio_afip(request):
           "LEFT JOIN empresa_actividad_domicilios ead ON ead.empresa_actividad_id = ea.id " + \
           "LEFT JOIN domicilio d ON d.id = ead.domicilio_id " + \
           "WHERE e.id = %s " % pk
-    domicilios = DomicilioModel.objects.raw(sql)
-    domicilio = DomicilioModel()
+    domicilios = Domicilio.objects.raw(sql)
+    domicilio = Domicilio()
     alta = True
     
     for rec in domicilios:
@@ -198,7 +209,7 @@ def empresa_domicilio_afip(request):
 # Tablas relacionadas con la empresa
 # -----------------------------------------------------------------------------
 class CreateComunicationView(LoginRequiredMixin, generic.CreateView):
-    model = ComunicacionModel
+    model = Comunicacion
     form_class = ComunicacionForm
     template_name = 'comunes/formulario.html'
     form_title = 'Nuevo Tipo de Comunicación'
@@ -232,34 +243,9 @@ def comunication_delete(request, empID, conID):
     return HttpResponseRedirect(url)
 
 
-class CreateActividadView(LoginRequiredMixin, generic.CreateView):
-    # model = models.Actividad
-    # form_class = forms.ActividadForm
-    # template_name = 'comunes/formulario.html'
-    # form_title = 'Nueva Subactividad'
-
-    # def get_context_data(self, **kwargs):
-    #     context = super(CreateActividadView, self).get_context_data(**kwargs)        
-    #     context['form_title'] = self.form_title
-    #     return context
-
-    # def form_valid(self, form):
-    #     response = super().form_valid(form)
-
-    #     # grabamos el objeto para obtener identificador
-    #     self.object = form.save()
-    #     # obtenemos el objeto primario
-    #     empresa = models.Empresa.objects.get(id=self.kwargs['fk'])
-    #     # creamos la asociación
-    #     empresa.actividades.add(self.object)
-
-    #     # terminamos, ¿hacia dónde vamos?
-    #     if 'previous_url' in self.request._post:
-    #         return HttpResponseRedirect(self.request._post['previous_url'])
-    #     return response
-    pass
-
-
+# ACTUALMENTE EN DESUSO
+# las actividades se agregan desde el formulario de empresa
+# lo dejo como ejemplo porque me gustó el diseño
 class ActividadMultiListView(LoginRequiredMixin, generic.ListView):
     # , generic.edit.ModelFormMixin
     model = models.Actividad
@@ -394,6 +380,7 @@ class ActividadDeleteView(PermissionRequiredMixin, generic.DeleteView):
         return reverse_lazy('actividad:list')
 
 
+
 # -----------------------------------------------------------------------------
 # Empresa Actividad
 # -----------------------------------------------------------------------------
@@ -424,7 +411,7 @@ class EmpActDetailView(PermissionRequiredMixin, generic.DetailView):
 
 class CreateAddressView(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'comunes.add_domicilio'
-    model = DomicilioModel
+    model = Domicilio
     form_class = DomicilioForm
     template_name = 'comunes/formulario.html'
     form_title = 'Nuevo Domicilio'
@@ -457,8 +444,8 @@ class CreateAddressView(PermissionRequiredMixin, generic.CreateView):
 
 class CreateContactView(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'persona.add_persona'
-    model = ContactoModel
-    form_class = ContactoForm
+    model = Persona
+    form_class = PersonaForm
     template_name = 'comunes/formulario.html'
     form_title = 'Nuevo Contacto'
 
@@ -491,10 +478,10 @@ class CreateContactView(PermissionRequiredMixin, generic.CreateView):
 @login_required(login_url='/accounts/login/')
 def buscar_contacto(request, pk):
     # SELECT * FROM `persona` WHERE id NOT IN (SELECT persona_id FROM comercial) 
-    # obj_list = ContactoModel.objects.filter(active=True).order_by('apellido', 'nombre')
+    # obj_list = Persona.objects.filter(active=True).order_by('apellido', 'nombre')
     # eliminamos las personas que son comerciales de la empresa
     inner_qs = models.Comercial.objects.all()
-    obj_list = ContactoModel.objects.exclude(id__in=inner_qs) \
+    obj_list = Persona.objects.exclude(id__in=inner_qs) \
                     .filter(active=True).order_by('apellido', 'nombre')
     context = {
         'tableID': 'dataTableModal',
@@ -512,6 +499,63 @@ def asociar_contacto(request, relaId, conId):
     relacion.save()
     url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': relaId})
     return HttpResponseRedirect(url)
+
+
+
+# -----------------------------------------------------------------------------
+# Empresa
+# Empresa Actividad
+#                       Asociaciones con teléfonos y direcciones
+# -----------------------------------------------------------------------------
+def ajax_cargar_filtro(request):
+    if request.GET['app'] == 'comunicacion':
+        filter = ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all())
+        filter.form.helper = ComunicacionFilterFormModal()
+    elif request.GET['app'] == 'ea_domicilio':
+        filter = DomicilioFindFilter(request.GET, queryset=Domicilio.objects.all())
+        filter.form.helper = DomicilioFilterFormModal()
+    elif request.GET['app'] == 'ea_contacto':
+        filter = PersonaFindFilter(request.GET, queryset=Persona.objects.all())
+        filter.form.helper = PersonaFilterFormModal()
+    return render(request, 'includes/_modal_find_form.html', { 'filter': filter })
+
+def ajax_cargar_tabla(request):
+    if request.GET['app'] == 'comunicacion':
+        filter = ComunicacionFindFilter(request.GET, queryset=Comunicacion.objects.all())
+        filter.form.helper = ComunicacionFilterFormModal()
+        table = ComunicacionFindTable(filter.qs[:5])   # solo 10 registros
+    elif request.GET['app'] == 'ea_domicilio':
+        filter = DomicilioFindFilter(request.GET, queryset=Domicilio.objects.all())
+        filter.form.helper = DomicilioFilterFormModal()
+        table = DomicilioFindTable(filter.qs[:5])   # solo 10 registros
+    elif request.GET['app'] == 'ea_contacto' :
+        filter = PersonaFindFilter(request.GET, queryset=Persona.objects.all())
+        filter.form.helper = PersonaFilterFormModal()
+        table = PersonaFindTable(filter.qs[:5])   # solo 10 registros
+    RequestConfig(request).configure(table)
+    return render(request, 'includes/_modal_find_table.html', { 'table': table })
+
+def ajax_asociar_elementos(request):
+    if request.GET['app'] == 'comunicacion':
+        empresa = models.Empresa.objects.get(id=request.GET['pk'])
+        comunicacion = Comunicacion.objects.get(id=request.GET['fk'])
+        empresa.comunicaciones.add(comunicacion)
+        empresa.save()
+        return HttpResponseRedirect(reverse('empresa:detail', args=[empresa.pk]))
+
+    else:
+        if request.GET['app'] == 'ea_contacto':
+            empActCon = models.EmpresaActividadContactos()
+            empActCon.empresa_actividad_id = request.GET['pk']
+            empActCon.persona_id = request.GET['fk']
+            empActCon.save()
+        elif request.GET['app'] == 'ea_domicilio':
+            empActDom = models.EmpresaActividadDomicilios()
+            empActDom.empresa_actividad_id = request.GET['pk']
+            empActDom.domicilio_id = request.GET['fk']
+            empActDom.save()
+        return HttpResponseRedirect(reverse('empresa_actividad:detail', args=[request.GET['pk']]))
+
 
 
 # -----------------------------------------------------------------------------
@@ -539,6 +583,7 @@ def eac_asignar_cargo(request, eaId, eacId):
         relacion.cargo = request.POST['cargo']
         relacion.save()
     return HttpResponseRedirect(reverse('empresa_actividad:detail', args=(), kwargs={'pk': eaId}))
+
 
 
 # -----------------------------------------------------------------------------
@@ -570,6 +615,7 @@ def ead_delete(request, eadId):
     obj.delete()
     url = reverse('empresa_actividad:detail', args=(), kwargs={'pk': pk})
     return HttpResponseRedirect(url)
+
 
 
 # -----------------------------------------------------------------------------
@@ -787,7 +833,7 @@ class EmpresaBrowseView(generic.DetailView):
 
 
 def buscar_comunicacion(request, pk):
-    obj_list = ComunicacionModel.objects.filter(active=True)
+    obj_list = Comunicacion.objects.filter(active=True)
     context = {
         'tableID': 'dataTableModal',
         'object_list': obj_list,
@@ -798,7 +844,7 @@ def buscar_comunicacion(request, pk):
 
 def asociar_comunicacion(request, empId, comId):
     empresa = models.Empresa.objects.get(id=empId)
-    comunicacion = ComunicacionModel.objects.get(id=comId)
+    comunicacion = Comunicacion.objects.get(id=comId)
     empresa.comunicaciones.add(comunicacion)
     empresa.save()
     return HttpResponseRedirect(reverse('empresa:browse', args=[empId]))

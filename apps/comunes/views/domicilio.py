@@ -72,13 +72,13 @@ class DomicilioUpdateView(PermissionRequiredMixin, UpdateView):
 
     def get_context_data(self, **kwargs):
         """Agregamos información al contexto"""
-        context = super().get_context_data(**kwargs)
+        context = super(DomicilioUpdateView, self).get_context_data(**kwargs)
         context['titulo'] = 'Modificación de Domicilio'
-        context['json_data'] = json.dumps({
-            'provincia': self.object.provincia_id,
-            'departamento': self.object.departamento_id,
-            'localidad': self.object.localidad_id,
-        })
+        # context['json_data'] = json.dumps({
+        #     'provincia': self.object.provincia_id,
+        #     'departamento': self.object.departamento_id,
+        #     'localidad': self.object.localidad_id,
+        # })
         return context
 
     def form_valid(self, form):

@@ -1,10 +1,7 @@
-import json
-
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect, QueryDict
-from django.http.response import JsonResponse
 from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 from django.views import generic
@@ -240,5 +237,4 @@ def ajax_asociar_elementos(request):
         persona = models.Persona.objects.get(id=request.GET['pk'])
         persona.domicilio = Domicilio.objects.get(id=request.GET['fk'])
         persona.save()
-    # return JsonResponse({'result': True}, status=200)
     return HttpResponseRedirect(reverse('prueba:detail', args=[persona.pk]))

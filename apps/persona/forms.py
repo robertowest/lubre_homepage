@@ -67,3 +67,34 @@ class PersonaFilterForm(helper.FormHelper):
                 )
             )
         )
+
+
+class PersonaFilterFormModal(helper.FormHelper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.form_method = 'get'
+        self.form_id = 'frmPersona'
+
+        self.layout = layout.Layout(
+            layout.Div(
+                layout.Fieldset(
+                    None,
+                    layout.Div(
+                        bootstrap.InlineField("nombre", wrapper_class="col-3"),
+                        bootstrap.InlineField("apellido", wrapper_class="col-3"),
+                        bootstrap.InlineField("documento", wrapper_class="col-3"),
+                        bootstrap.InlineField("active", wrapper_class="col-3"),
+                        css_class="row",
+                    ),
+                    css_class="col-10",
+                ),
+                bootstrap.FormActions(
+                    layout.Button('btnFilter', 'Buscar', 
+                                  css_id='btnFilter', 
+                                  css_class='btn btn-sm btn-primary', 
+                                  onclick='submit_modal(frmPersona);'),
+                    css_class="col-2 text-right align-self-center",
+                ),
+                css_class="row",
+            )
+        )
