@@ -27,6 +27,13 @@ django-smart-selects
 python-dateutil
 django-mercadopago
 
+# sudo apt install memcached libmemcached-tools
+# sudo systemctl status memcached
+pip install pymemcache
+pip install python-memcached
+# django-pymemcache
+
+
 # # pertenecientes a la app RRHH
 # business-calendar
 # reportlab

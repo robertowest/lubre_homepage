@@ -77,6 +77,34 @@ class EmpresaListView(LoginRequiredMixin, PagedFilteredTableView):
     template_name = 'comunes/tabla2.html'
 
 
+def normalizar_nombre_empresa(texto):
+    # agregamos un espacio al final para poder comprobar teminaciones
+    # normalizado = texto.title() + " "   # convertimos en minúsculas
+    normalizado = texto + " "
+    Lista = {
+            'SA': [' S.A. ', ' S.A ', ' Sa '],
+            'SRL': [' S.R.L. ', ' S.R.L ', ' Srl '],
+            'LTDA': [' Ltda. ', ' Ltda ', ' Ltd '],
+            'CIA': [' Cia '],
+            'SH': [' S.H. ', ' S.H ', ' sh '],
+            'SCA': [' Sca '],
+            'RI': [' R.I. ', ' R.I ', ' Ri '],
+            'RN': [' R.N. ', ' R.N ', ' Rn '],
+            'SAIC': [' S.A.I.C. ', ' S.A.I.C ', ' Saic '],
+            'SACI': [' S.A.C.I. ', ' S.A.C.I ', ' Saci '],
+    }
+    termina = False
+    for clave, valores in Lista.items():
+        for valor in valores:
+            if valor in normalizado:
+                normalizado = normalizado.replace(valor, " " + clave)
+                termina = True
+                break
+        if termina:
+            break
+    return normalizado.strip()
+
+
 class EmpresaCreateView(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'empresa.add_empresa'
     model = models.Empresa
@@ -95,8 +123,8 @@ class EmpresaCreateView(PermissionRequiredMixin, generic.CreateView):
 
     def form_valid(self, form):
         response = super().form_valid(form)
-        self.object.nombre = self.object.nombre.title()
-        self.object.razon_social = self.object.razon_social.title()
+        self.object.nombre = normalizar_nombre_empresa(self.object.nombre)
+        self.object.razon_social = normalizar_nombre_empresa(self.object.razon_social)
         self.object.impactar = True
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
@@ -134,17 +162,14 @@ class EmpresaUpdateView(PermissionRequiredMixin, generic.UpdateView):
     #     return reverse_lazy('{app}:detail'.format(app=name), args=(self.object.pk,))
 
     def form_valid(self, form):
-        self.object.nombre = self.normalizar_nombre(self.object.nombre)
-        self.object.razon_social = self.normalizar_nombre(self.object.razon_social)
+        self.object.nombre = normalizar_nombre_empresa(self.object.nombre)
+        self.object.razon_social = normalizar_nombre_empresa(self.object.razon_social)
         self.object.impactar = True
         response = super().form_valid(form)
         # terminamos, ¿hacia dónde vamos?
         if 'previous_url' in self.request._post:
             return HttpResponseRedirect(self.request._post['previous_url'])
         return response
-
-    def normalizar_nombre(self, texto):
-        return texto.title()
 
 
 class EmpresaDeleteView(PermissionRequiredMixin, generic.DeleteView):
