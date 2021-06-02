@@ -39,22 +39,24 @@ class IndexView(generic.TemplateView):
                     context['cataTag'] = models.Entries.objects.filter(section='cataTag').filter(active=1).order_by('ordered')
                     context['catalog'] = models.Entries.objects.filter(section='catalog').filter(active=1).order_by('ordered')
 
-                if _section == 'service':
-                    context['service'] = models.Entries.objects.filter(section='service').filter(active=1).order_by('ordered')
+                # primera opción de servicios
+                # if _section == 'service':
+                #     context['service'] = models.Entries.objects.filter(section='service').filter(active=1).order_by('ordered')
 
-                if _section == 'service2':
-                    context['dist'] = [
-                            {'categoria': 5,  'icono': 'lubricante',         'texto': 'Combustibles y Lubricantes'},
-                            {'categoria': 6,  'icono': 'fertilizante',       'texto': 'Fertilizantes<br><br>'},
-                            {'categoria': 2,  'icono': 'proteccion-cultivo', 'texto': 'Protección de Cultivos'},
-                            {'categoria': 11, 'icono': 'silo-bolsa',         'texto': 'Silo Bolsa<br><br>'},
-                    ]
-                    context['eess'] = [
-                            {'categoria': 68, 'icono': 'combustible', 'texto': 'Combustibles'},
-                            {'categoria': 69, 'icono': 'coffee',      'texto': 'YPF Full'},
-                            {'categoria': 70, 'icono': 'boxes',       'texto': 'YPF Boxes'},
-                            {'categoria': 71, 'icono': 'serviclub',   'texto': 'ServiCLUB'},
-                    ]
+                # segunda opción de servicios
+                # if _section == 'service':
+                #     context['dist'] = [
+                #             {'categoria': 5,  'icono': 'lubricante',         'texto': 'Combustibles y Lubricantes'},
+                #             {'categoria': 6,  'icono': 'fertilizante',       'texto': 'Fertilizantes<br><br>'},
+                #             {'categoria': 2,  'icono': 'proteccion-cultivo', 'texto': 'Protección de Cultivos'},
+                #             {'categoria': 11, 'icono': 'silo-bolsa',         'texto': 'Silo Bolsa<br><br>'},
+                #     ]
+                #     context['eess'] = [
+                #             {'categoria': 68, 'icono': 'combustible', 'texto': 'Combustibles'},
+                #             {'categoria': 69, 'icono': 'coffee',      'texto': 'YPF Full'},
+                #             {'categoria': 70, 'icono': 'boxes',       'texto': 'YPF Boxes'},
+                #             {'categoria': 71, 'icono': 'serviclub',   'texto': 'ServiCLUB'},
+                #     ]
 
                 if _section == 'servicesCatalog':
                     context['scLabel'] = models.Entries.objects.filter(section='scLabel').filter(active=1).order_by('ordered')

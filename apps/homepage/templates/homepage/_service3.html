@@ -1,0 +1,192 @@
+{% load static %}
+{% load mathfilters %}
+
+<section id="service" class="service-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title text-center">
+                    <h2>Servicios</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0,2s">
+                <img src="{% static '/images/lubre/agro.jpg' %}">
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <h4>YPF Agro</h4>
+                <p>
+<strong>YPF agro</strong> es el canal de venta integral de la compañía más grande de Argentina, que a través de distintos centros emplazados en todo el país y de su red de distribuidores entrega su amplia oferta de insumos y servicios directamente al público.
+<br><br>
+En un mismo lugar, el productor encuentra todos los productos necesarios para desarrollar su actividad, más el soporte técnico y el asesoramiento necesario para solucionar sus necesidades.                
+                </p>
+
+                <a id="btn-distribuidor" href="javascript:void(0)" class="read-more">Saber más</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="service-btn-distribuidor" class="about-more section-padding" style="display:none">
+    <div class="container">
+        <div class="row" style="background: rgba(166, 196, 166, 0.6);">
+            <!-- búsqueda de productos -->
+            <form method="post" action="/producto/busqueda/">
+                <input type="hidden" name="csrfmiddlewaretoken" value="pA685D1DoioNtjP1hsoKqr71kbA7tcv4TQEin5w9PCP7jjLEGNk1pGcYhhOD1yXx">
+                <table>
+                    <tbody><tr>
+                        <td style="width: 100%; padding-left: 25px; padding-top: 10px;">
+                            <input type="text" name="producto" class="form-control" placeholder="ingrese descripción del producto">
+                        </td>
+                        <td>&nbsp;</td>
+                        <td style="padding-top: 8px; padding-right: 25px; ">
+                            <input type="submit" value="Buscar" name="submit" id="submitButton" class="btn btn-lg" title="Envíe su mensaje">
+                        </td>
+                    </tr>
+                </tbody></table>
+            </form>
+        </div>        
+        <div class="row" style="background: rgba(166, 196, 166, 0.6)">
+            <div class="col-md-12">
+                
+                <div class="element-item col-xs-6 col-sm-4 col-md-3 wow fadeInUp" data-wow-delay="0,2s" style="padding-bottom: 25px; visibility: visible; animation-name: fadeInUp;"> 
+                     <div>
+                        <a href="/categoria/5/">
+                            <div class="single-service">
+                                <img class="icono" src="/static/images/svgs/lubricante.png">
+                            </div>
+                        </a>
+                     </div>
+                     <div style="text-align: center;">
+                         <br>Combustibles y Lubricantes
+                    </div>
+                </div>
+                
+                <div class="element-item col-xs-6 col-sm-4 col-md-3 wow fadeInUp" data-wow-delay="0,2s" style="padding-bottom: 25px; visibility: visible; animation-name: fadeInUp;"> 
+                     <div>
+                        <a href="/categoria/6/">
+                            <div class="single-service">
+                                <img class="icono" src="/static/images/svgs/fertilizante.png">
+                            </div>
+                        </a>
+                     </div>
+                     <div style="text-align: center;">
+                         <br>Fertilizantes
+                    </div>
+                </div>
+                
+                <div class="element-item col-xs-6 col-sm-4 col-md-3 wow fadeInUp" data-wow-delay="0,2s" style="padding-bottom: 25px; visibility: visible; animation-name: fadeInUp;"> 
+                     <div>
+                        <a href="/categoria/2/">
+                            <div class="single-service">
+                                <img class="icono" src="/static/images/svgs/proteccion-cultivo.png">
+                            </div>
+                        </a>
+                     </div>
+                     <div style="text-align: center;">
+                         <br>Protección de Cultivos
+                    </div>
+                </div>
+                
+                <div class="element-item col-xs-6 col-sm-4 col-md-3 wow fadeInUp" data-wow-delay="0,2s" style="padding-bottom: 25px; visibility: visible; animation-name: fadeInUp;"> 
+                     <div>
+                        <a href="/categoria/11/">
+                            <div class="single-service">
+                                <img class="icono" src="/static/images/svgs/silo-bolsa.png">
+                            </div>
+                        </a>
+                     </div>
+                     <div style="text-align: center;">
+                         <br>Silo Bolsa
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="service" class="service-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <h4>Estación de Servicios YPF</h4>
+                <p>
+En nuestras instalaciones podrás encontrar todos los reconocidos servicios de <strong>YPF Box</strong> para tu coche.
+<br><br>
+También podrás disfrutarás en nuestro <strong>FULL</strong> un excelente momento de descanso o reuniónes con amigos.
+                </p>
+
+                <a id="btn-estacion" href="javascript:void(0)" class="read-more">Saber más</a>
+            </div>
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0,2s">
+                <img src="{% static '/images/lubre/eess.jpg' %}">
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section id="service-btn-estacion" class="about-more section-padding" style="display:none">
+    <div class="container">
+        <div class="row" style="background: rgba(170, 203, 229, 0.6)">
+            <div class="col-md-12">
+                
+                <div class="element-item col-xs-6 col-sm-4 col-md-3 wow fadeInUp" data-wow-delay="0,2s" style="padding-bottom: 25px; visibility: visible; animation-name: fadeInUp;">
+                    <div>
+                        <a href="/service/68/">
+                            <div class="single-service">
+                                <img class="icono" src="/static/images/svgs/combustible.png">
+                            </div>
+                        </a>
+                    </div>
+                    <div style="text-align: center;">
+                        <br>Combustibles
+                   </div>
+               </div>
+                
+                <div class="element-item col-xs-6 col-sm-4 col-md-3 wow fadeInUp" data-wow-delay="0,2s" style="padding-bottom: 25px; visibility: visible; animation-name: fadeInUp;">
+                    <div>
+                        <a href="/service/69/">
+                            <div class="single-service">
+                                <img class="icono" src="/static/images/svgs/coffee.png">
+                            </div>
+                        </a>
+                    </div>
+                    <div style="text-align: center;">
+                        <br>YPF Full
+                   </div>
+               </div>
+                
+                <div class="element-item col-xs-6 col-sm-4 col-md-3 wow fadeInUp" data-wow-delay="0,2s" style="padding-bottom: 25px; visibility: visible; animation-name: fadeInUp;">
+                    <div>
+                        <a href="/service/70/">
+                            <div class="single-service">
+                                <img class="icono" src="/static/images/svgs/boxes.png">
+                            </div>
+                        </a>
+                    </div>
+                    <div style="text-align: center;">
+                        <br>YPF Boxes
+                   </div>
+               </div>
+                
+                <div class="element-item col-xs-6 col-sm-4 col-md-3 wow fadeInUp" data-wow-delay="0,2s" style="padding-bottom: 25px; visibility: visible; animation-name: fadeInUp;">
+                    <div>
+                        <a href="/service/71/">
+                            <div class="single-service">
+                                <img class="icono" src="/static/images/svgs/serviclub.png">
+                            </div>
+                        </a>
+                    </div>
+                    <div style="text-align: center;">
+                        <br>ServiCLUB
+                   </div>
+               </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
