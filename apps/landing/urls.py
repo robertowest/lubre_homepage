@@ -5,4 +5,7 @@ app_name = 'landing'   # en template: request.resolver_match.app_name
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
+    path('categoria/<int:pk>/', views.CategoriaListView.as_view(), name='categoria_list'),
+    path('producto/<int:pk>/', views.ProductoDetail.as_view(), name='producto_detail'),
+    path('service/<int:pk>/', views.ServiceDetail.as_view(), name='service_detail'),
 ]

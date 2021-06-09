@@ -1,0 +1,111 @@
+<!doctype html>
+{% load static %}
+<html lang="es">
+    <head>
+        <!-- meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Roberto West">
+        <meta name="description" content="Somos una empresa que a trav&eacute;s de la distribución de productos YPF, busca satisfacer a la clientela brindando un servicio de excelencia a partir del desarrollo de nuestros recursos humanos, de una estructura adecuada y alineada a la estrategia de nuestro principal proveedor, buscamos a partir de resultados, maximizar nuestro desempeño organizacional." />
+        <meta name="keywords" content="Lubre, YPF, Lubricantes, Fertilizantes, Agroquimicos, Combustibles, Parafinas, Asfaltos, Herbicidas, Automotores, Funguicidas, Grasas, Aceites, Tucuman, Argentina, Elaion, Insecticidas, Plasticos, Nutricion Vegetal" />
+        <meta name="google-site-verification" content="3BQjqRZAss16-xMFZRhgOfBTsfKozCVwbJ3CMpiPkIU" />
+
+        <!-- título de página -->
+        <title>Lubre SRL</title>
+        <link rel="icon" type="image/png" href="{% static '/img/faviicon.png' %}" sizes="32x32">
+
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <!--vendors styles-->
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+        <!-- Bootstrap CSS / Esquema de colores -->
+        <link rel="stylesheet" href="{% static 'css/indigo.css' %}" id="theme-color">
+
+        {% block css %}
+        {% endblock %}
+    </head>
+    <body>
+        <!-- navegación -->
+        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top sticky-navigation">
+            <a class="navbar-brand mx-auto" href="index.html">
+                Lubre SRL
+            </a>
+            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" 
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span data-feather="grid"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#distribuidor">Agro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#eess">Estación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#about">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="pt-7 pt-md-6" id="catalogo">
+            <div class="container">
+
+                {% block content %}
+                {% endblock %}
+
+            </div>
+        </section>
+    
+        <!-- pié de página / contacto -->
+        <footer class="py-6 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mx-auto text-center">
+                        <p class="text-muted small text-uppercase mt-2">
+                            Síguenos en redes sociales
+                        </p>
+                        <ul class="list-inline social social-dark social-sm">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/lubresrl.ypfagro/" target="blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/lubresrl.ypfagro/" target="blank"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://ar.linkedin.com/company/lubre-srl" target="blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-muted text-center small-xl">
+                        <i class="fa fa-copyright "></i> 2019 - <span>Lubre SRL</span> - Todos los derechos reservados
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ir arriba -->
+        <div class="scroll-top">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/feather.min.js' %}"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
+
+        {% block jscript %}
+        {% endblock %}
+    </body>
+</html>

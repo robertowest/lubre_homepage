@@ -1,0 +1,28 @@
+<div class="recuadro col-12 justify-content-center col-lg-4 col-md-6 col-sm-12">
+    {# {% url 'path' %}?next={{request.path}} #}
+    <a style="text-decoration:none" href="{% url 'eess:cart_add' object.pk %}">
+        <div class="card mb-4 shadow-sm" style="cursor: pointer;">
+            <div class="card-header text-center">
+                {% if object.imagen %}
+                <img src="{{ media_url }}{{ object.imagen.url }}" class="img-fluid" style="height: auto;">
+                {% else %}
+                <img src="/media/eess/cartilla/full.png" class="img-fluid" style="height: auto;">
+                {% endif %}
+            </div>
+            <div class="card-body">
+                <h3 class="card-titulo mbr-fonts-style display-5">
+                    {{object.nombre}}
+                </h3>
+                <div class="card-precio">
+                    <span class="precio-signo mbr-fonts-style display-5">$</span>
+                    <span class="precio-valor mbr-fonts-style display-1">{{object.precio|floatformat:"0"}}</span>
+                </div>
+                <div class="plan-list align-center">
+                    <ul class="list-unstyled mt-3 mb-4 mbr-fonts-style display-7">
+                        <li>{{object.descripcion}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

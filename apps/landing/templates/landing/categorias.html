@@ -1,0 +1,61 @@
+{% extends 'landing/layers/base_categoria.html' %}
+
+{% load static %}
+{% load mathfilters %}
+{% load homepage_tags %}
+
+{% block content %}
+
+    <!-- encabezado -->
+    <div class="row mb-4">
+        <div class="col-md-12 mx-auto my-auto text-center">
+            <h1>Productos por Categorías</h1>
+        </div>
+    </div>
+
+    <section id="catalog" class="">
+        <div class="container">
+            <div class="row">
+                <!-- categorias -->
+                <div class="filters col-xs-12 col-md-2" id="filters">
+                    <h6>Filtros</h6><hr>
+                    <a href="#" class="category_item" category="all">Todo</a><br>
+                    {% for obj in grupos %}
+                        <!-- obj.pk|stringformat:"03d" -->
+                        <a href="#" class="category_item" category="{{obj.pk|stringformat:'03d'}}">{{obj.nombre}}</a><br>
+                    {% endfor %}
+                </div>
+
+                <!-- productos -->
+                <div class="col-xs-12 col-md-10 mx-auto">
+                    <div class="row card-services">
+                        {% for obj in productos %}
+                            <div class="col-md-3 mb-3">
+                                <div class="card" category="{{obj.grupo_id|stringformat:'03d'}}" style="border: 1px solid #1a981a; border-radius: 0.8rem">
+                                    <div class="card-body text-center">
+                                        <div class="icon-box-inner small-xs text-primary">
+                                            <a href="https://lubresrl.com.ar/categoria/5/">
+                                                {% if obj.imagen %}
+                                                <img src="/media/{{obj.imagen|thumb_product_path}}" alt="" height="160" width="160">
+                                                {% else %}
+                                                <img src="/media/product/thumb/none.webp" alt="" height="160" width="160">
+                                                {% endif %}
+                                                <h6 class="mt-0 mb-3">{{obj.nombre|lower|capfirst}}</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+
+{% block jscript %}
+    <script src="{% static 'js/filtro.js' %}"/>
+{% endblock %}
