@@ -26,8 +26,11 @@ urlpatterns = [
     
     path('ejemplo/', TemplateView.as_view(template_name='default_base.html'), name='ejemplo'),
 
-    # homepage-------------------------------------------------------------------------
-    path('', include('apps.homepage.urls', namespace='homepage')),
+    # homepage ------------------------------------------------------------------------
+    path('home/', include('apps.homepage.urls', namespace='homepage')),
+    # landing page --------------------------------------------------------------------
+    path('', include('apps.landing.urls', namespace='landing')),
+    # ---------------------------------------------------------------------------------
     path('equivalencia/', include('apps.equivalencia.urls', namespace='equivalencia')),
     path('tienda/', include('apps.tienda.urls')),
 

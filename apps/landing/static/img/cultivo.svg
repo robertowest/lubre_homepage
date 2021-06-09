@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg579"
+   version="1.1"
+   viewBox="0 0 51.759556 58.476445"
+   height="58.476444mm"
+   width="51.759556mm"
+   sodipodi:docname="proteccion-cultivo.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     id="namedview9"
+     showgrid="false"
+     inkscape:zoom="0.37752745"
+     inkscape:cx="639.74149"
+     inkscape:cy="-27.248958"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg579" />
+  <defs
+     id="defs573" />
+  <metadata
+     id="metadata576">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g12384"
+     transform="matrix(0.35277777,0,0,-0.35277777,17.68122,26.867555)"
+     style="fill:#008000">
+    <path
+       inkscape:connector-curvature="0"
+       d="M 0,0 H 46.76 C 56.56,0 63,4.2 68.6,12.6 l 28,41.72 -36.68,21.84 -14,-22.12 C 43.12,49.56 39.48,47.6 34.16,47.6 H 1.68 c -4.76,0 -8.4,-0.56 -12.32,-3.92 L -44.52,15.4 c -4.48,-3.64 -5.6,-6.16 -5.6,-8.4 0,-3.08 2.52,-5.6 5.88,-5.6 1.4,0 3.08,0.28 6.72,2.52 l 31.08,19.04 c 4.48,2.8 8.4,3.08 13.16,1.68 l 26.32,-7 v -2.8 L 0,10.64 C -4.48,10.08 -6.44,7.56 -6.44,5.32 -6.44,2.52 -4.2,0 0,0 m 23.52,-87.08 c 7.84,0 14.84,2.8 20.44,7 l -30.8,30.8 c -1.4,1.4 -1.96,2.8 -1.96,4.2 0,2.8 2.24,5.04 5.04,5.04 1.4,0 2.8,-0.56 4.2,-1.96 l 30.8,-31.08 c 4.2,5.6 6.44,12.32 6.44,19.88 0,26.6 -33.32,41.44 -64.4,41.44 -3.64,0 -7.28,-0.28 -10.92,-0.56 -0.28,-2.8 -0.28,-5.88 -0.28,-8.68 0,-31.92 15.12,-66.08 41.44,-66.08 m 31.36,-2.52 c 3.08,0 5.32,1.96 5.32,5.04 0,3.08 -3.36,5.6 -6.16,8.4 l -7.28,-7 c 3.08,-3.36 5.6,-6.44 8.12,-6.44"
+       style="fill:#008000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path12386" />
+  </g>
+</svg>

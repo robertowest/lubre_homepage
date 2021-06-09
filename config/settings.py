@@ -123,6 +123,7 @@ USE_DJANGO_JQUERY = True
 INSTALLED_APPS += [
     # homepage -----------------------------
     'apps.homepage',
+    'apps.landing',
     'apps.equivalencia',
     'apps.accounts',
     'apps.tienda',

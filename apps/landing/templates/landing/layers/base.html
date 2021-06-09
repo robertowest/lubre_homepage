@@ -1,0 +1,44 @@
+<!doctype html>
+{% load static %}
+<html lang="es">
+    <head>
+        <!-- meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Roberto West">
+        <meta name="description" content="Somos una empresa que a trav&eacute;s de la distribución de productos YPF, busca satisfacer a la clientela brindando un servicio de excelencia a partir del desarrollo de nuestros recursos humanos, de una estructura adecuada y alineada a la estrategia de nuestro principal proveedor, buscamos a partir de resultados, maximizar nuestro desempeño organizacional." />
+        <meta name="keywords" content="Lubre, YPF, Lubricantes, Fertilizantes, Agroquimicos, Combustibles, Parafinas, Asfaltos, Herbicidas, Automotores, Funguicidas, Grasas, Aceites, Tucuman, Argentina, Elaion, Insecticidas, Plasticos, Nutricion Vegetal" />
+        <meta name="google-site-verification" content="3BQjqRZAss16-xMFZRhgOfBTsfKozCVwbJ3CMpiPkIU" />
+
+        <!-- título de página -->
+        <title>Lubre SRL</title>
+        <link rel="icon" type="image/png" href="{% static '/img/faviicon.png' %}" sizes="32x32">
+
+        <!--Google fonts-->
+        <!-- link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet" -->
+
+        <!--vendors styles-->
+        <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" -->
+        <link rel="stylesheet" href="{% static 'fontawesome/css/font-awesome.min.css' %}">
+
+        <!-- Bootstrap CSS / Esquema de colores -->
+        <link rel="stylesheet" href="{% static 'css/indigo.css' %}" id="theme-color">
+
+        {% block css %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+        <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.5.0/feather.min.js"></script -->
+        <script src="{% static 'js/scripts.js' %}"></script>
+
+        {% block jscript %}
+        {% endblock %}
+    </body>
+</html>
