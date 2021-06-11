@@ -1,0 +1,45 @@
+{% extends 'landing/layers/base_categoria.html' %}
+
+{% load static %}
+{% load mathfilters %}
+{% load homepage_tags %}
+
+{% block content %}
+
+    <!-- encabezado -->
+    <div class="row mb-4">
+        <div class="col-md-12 mx-auto my-auto text-center">
+            <h1>{{object.nombre|lower|title}}</h1>
+        </div>
+    </div>
+
+    <!-- descripción del producto -->
+    <div class="row">
+        <div class="col-md-4 no-padding wow fadeInUp" data-wow-delay=".8s">
+            {% if object.imagen %}
+                <img src="/media/{{object.imagen}}" width="100%">
+            {% else %}
+                <img src="/media/product/none.webp" alt="">
+            {% endif %}
+
+            {% if object.ficha_tecnica %}
+                <p>
+                    Ficha técnica&nbsp;
+                    <a href="{{object.ficha_tecnica}}"><i class="fa fa-download"></i></a>&nbsp;&nbsp;&nbsp;
+                </p>
+            {% endif %}
+
+            {% if object.ficha_seguridad %}
+                <p>
+                    Ficha de seguridad&nbsp;
+                    <a href="{{object.ficha_tecnica}}"><i class="fa fa-download"></i></a>&nbsp;&nbsp;&nbsp;
+                </p>
+            {% endif %}
+
+        </div>
+        <div class="col-md-8">
+            {{object.descripcion|safe}}
+        </div>
+    </div>
+
+{% endblock %}

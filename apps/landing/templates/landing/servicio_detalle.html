@@ -1,0 +1,33 @@
+{% extends 'landing/layers/base_categoria.html' %}
+
+{% load static %}
+{% load mathfilters %}
+{% load homepage_tags %}
+
+{% block content %}
+
+    <!-- encabezado -->
+    <div class="row mb-4">
+        <div class="col-md-12 mx-auto my-auto text-center">
+            <h1>Estación de Servicios</h1>
+        </div>
+    </div>
+
+    <!-- descripción del servicio -->
+    <div class="row">
+        <div class="col-md-5 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
+            <div class="about-image-area">
+                <img src="/media/{{ object.section }}/{{ object.image }}.jpg" alt="" class="center" width="100%">
+            </div>
+        </div>
+        <div class="col-md-7 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s" data-wow-offset="0">
+            <div class="about-text">
+                {% with object.label|split:"|" as skills %}
+                <h4>{{skills.0}}</h4>
+                {% endwith %}
+                <p>{{object.text_large|safe}}</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

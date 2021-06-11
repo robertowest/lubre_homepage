@@ -3,19 +3,17 @@ $(document).ready(function() {
     $('.category_list .category_item[category="all"]').addClass('ct_item-active');
 
     // filtro de productos
-    $('.category_item').click(function(){
+    $('.category_item').click(function() {
         var catProduct = $(this).attr('category');
         console.log(catProduct);
-
-        alert(catProduct); 
 
         // agregamos la clase active al enlace seleccionado
         $('.category_item').removeClass('ct_item-active');
         $(this).addClass('ct_item-active');
 
-        // ocultamos los productos de otras categorías (grupos)
+        // ocultamos todos los productos
         $('.product-item').css('transform', 'scale(0)');
-        function hideProduct(){
+        function hideProduct() {
             $('.product-item').hide();
         } setTimeout(hideProduct,400);
 

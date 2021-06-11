@@ -71,59 +71,62 @@
                     <div class="row card-services">
                         <div class="col-md-6 mb-3">
                             <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="icon-box border-box-green">
-                                        <div class="icon-box-inner small-xs text-primary">
-                                            <a href="https://lubresrl.com.ar/categoria/5/">
-                                                <img src="{% static 'img/lubricante.svg' %}" alt="lubricantes" height="30" width="30">
-                                            </a>
+                                <a href="{% url 'landing:categoria_list' 5 %}">
+                                    <div class="card-body text-center">
+                                        <div class="icon-box border-box-green">
+                                            <div class="icon-box-inner small-xs text-primary">
+                                                    <img src="{% static 'img/lubricante.svg' %}" alt="lubricantes" height="30" width="30">
+                                            </div>
                                         </div>
+                                        <h5 class="mt-0 mb-3">Lubricantes</h5>
+                                        Elaion, Grasas, Refrigerantes, Azul 32, Otros.
                                     </div>
-                                    <h5 class="mt-0 mb-3">Lubricantes</h5>
-                                    Elaion, Grasas, Refrigerantes, Azul 32, Otros.
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="icon-box border-box-green">
-                                        <div class="icon-box-inner small-xs text-primary">
-                                            <!-- span data-feather="monitor" width="30" height="30"></span -->
-                                            <img src="{% static 'img/fertilizante.svg' %}" alt="fertilizantes" height="30" width="30">
+                                <a href="{% url 'landing:categoria_list' 6 %}">
+                                    <div class="card-body text-center">
+                                        <div class="icon-box border-box-green">
+                                            <div class="icon-box-inner small-xs text-primary">
+                                                <img src="{% static 'img/fertilizante.svg' %}" alt="fertilizantes" height="30" width="30">
+                                            </div>
                                         </div>
+                                        <h5 class="mt-0 mb-3">Fertilizantes</h5>
+                                        Fertilizantes o mezclas específicas, asesoramiento en nutrición de cultivos.
                                     </div>
-                                    <h5 class="mt-0 mb-3">Fertilizantes</h5>
-                                    Fertilizantes o mezclas específicas, asesoramiento en nutrición de cultivos.
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="icon-box border-box-green">
-                                        <div class="icon-box-inner small-xs text-primary">
-                                            <!-- span data-feather="briefcase" width="30" height="30"></span -->
-                                            <img src="{% static 'img/cultivo.svg' %}" alt="protección de cultivo" height="30" width="30">
+                                <a href="{% url 'landing:categoria_list' 2 %}">
+                                    <div class="card-body text-center">
+                                        <div class="icon-box border-box-green">
+                                            <div class="icon-box-inner small-xs text-primary">
+                                                <img src="{% static 'img/cultivo.svg' %}" alt="protección de cultivo" height="30" width="30">
+                                            </div>
                                         </div>
+                                        <h5 class="mt-0 mb-3">Cultivo</h5>
+                                        Herbicidas, Fungicidas, Insecticidas, Coadyuvantes, Tratamiento de semillas.
                                     </div>
-                                    <h5 class="mt-0 mb-3">Cultivo</h5>
-                                    Herbicidas, Fungicidas, Insecticidas, Coadyuvantes, Tratamiento de semillas.
-                                </div>
+                                <a>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="icon-box border-box-green">
-                                        <div class="icon-box-inner small-xs text-primary">
-                                            <!-- span data-feather="smartphone" width="30" height="30"></span -->
-                                            <img src="{% static 'img/silo.svg' %}" alt="silo bolsa" height="30" width="30">
+                                <a href="{% url 'landing:categoria_list' 11 %}">
+                                    <div class="card-body text-center">
+                                        <div class="icon-box border-box-green">
+                                            <div class="icon-box-inner small-xs text-primary">
+                                                <img src="{% static 'img/silo.svg' %}" alt="silo bolsa" height="30" width="30">
+                                            </div>
                                         </div>
+                                        <h5 class="mt-0 mb-3">Silo bolsa</h5>
+                                        Almacenamiento para grano y forraje.
                                     </div>
-                                    <h5 class="mt-0 mb-3">Silo bolsa</h5>
-                                    Almacenamiento para grano y forraje.
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -157,54 +160,62 @@
                     <div class="row card-services">
                         <div class="col-md-6 mb-3">
                             <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="icon-box border-box">
-                                        <div class="icon-box-inner small-xs text-primary">
-                                            <img src="{% static 'img/combustible.svg' %}" alt="combustibles" height="30" width="30">
+                                <a href="{% url 'landing:servicio_detail' 68 %}">
+                                    <div class="card-body text-center">
+                                        <div class="icon-box border-box">
+                                            <div class="icon-box-inner small-xs text-primary">
+                                                <img src="{% static 'img/combustible.svg' %}" alt="combustibles" height="30" width="30">
+                                            </div>
                                         </div>
+                                        <h5 class="mt-0 mb-3">Combustibles</h5>
+                                        Diseñados para lograr el máximo desempeño, excelente poder de limpieza y óptimo rendimiento.
                                     </div>
-                                    <h5 class="mt-0 mb-3">Combustibles</h5>
-                                    Diseñados para lograr el máximo desempeño, excelente poder de limpieza y óptimo rendimiento.
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="icon-box border-box">
-                                        <div class="icon-box-inner small-xs text-primary">
-                                            <img src="{% static 'img/tools.svg' %}" alt="ypf boxes" height="30" width="30">
+                                <a href="{% url 'landing:servicio_detail' 69 %}">
+                                    <div class="card-body text-center">
+                                        <div class="icon-box border-box">
+                                            <div class="icon-box-inner small-xs text-primary">
+                                                <img src="{% static 'img/tools.svg' %}" alt="ypf boxes" height="30" width="30">
+                                            </div>
                                         </div>
+                                        <h5 class="mt-0 mb-3">YPF Boxes</h5>
+                                        Red con cobertura nacional ubicados en estaciones de servicio YPF.
                                     </div>
-                                    <h5 class="mt-0 mb-3">YPF Boxes</h5>
-                                    Red con cobertura nacional ubicados en estaciones de servicio YPF.
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="icon-box border-box">
-                                        <div class="icon-box-inner small-xs text-primary">
-                                            <img src="{% static 'img/coffee.svg' %}" alt="full" height="30" width="30">
+                                <a href="{% url 'landing:servicio_detail' 70 %}">
+                                    <div class="card-body text-center">
+                                        <div class="icon-box border-box">
+                                            <div class="icon-box-inner small-xs text-primary">
+                                                <img src="{% static 'img/coffee.svg' %}" alt="full" height="30" width="30">
+                                            </div>
                                         </div>
+                                        <h5 class="mt-0 mb-3">Full</h5>
+                                        Espacio de encuentro y permanencia placentera.
                                     </div>
-                                    <h5 class="mt-0 mb-3">Full</h5>
-                                    Espacio de encuentro y permanencia placentera.
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="icon-box border-box">
-                                        <div class="icon-box-inner small-xs text-primary">
-                                            <img src="{% static 'img/serviclub.svg' %}" alt="serviclub" height="30" width="30">
+                                <a href="{% url 'landing:servicio_detail' 71 %}">
+                                    <div class="card-body text-center">
+                                        <div class="icon-box border-box">
+                                            <div class="icon-box-inner small-xs text-primary">
+                                                <img src="{% static 'img/serviclub.svg' %}" alt="serviclub" height="30" width="30">
+                                            </div>
                                         </div>
+                                        <h5 class="mt-0 mb-3">Serviclub</h5>
+                                        Programa de fidelización de clientes en las estaciones de servicio YPF.
                                     </div>
-                                    <h5 class="mt-0 mb-3">Serviclub</h5>
-                                    Programa de fidelización de clientes en las estaciones de servicio YPF.
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>

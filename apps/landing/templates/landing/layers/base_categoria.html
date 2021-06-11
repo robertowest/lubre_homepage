@@ -24,6 +24,7 @@
         <!-- Bootstrap CSS / Esquema de colores -->
         <link rel="stylesheet" href="{% static 'css/indigo.css' %}" id="theme-color">
 
+        <!-- personalizaciones -->
         <link rel="stylesheet" href="{% static 'css/filtro.css' %}">
 
         {% block css %}
@@ -32,7 +33,7 @@
     <body>
         <!-- navegación -->
         <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top sticky-navigation">
-            <a class="navbar-brand mx-auto" href="index.html">
+            <a class="navbar-brand mx-auto" href="{% url 'landing:index' %}">
                 Lubre SRL
             </a>
             <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" 
@@ -42,16 +43,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#distribuidor">Agro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#eess">Estación</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#about">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#contact">Contacto</a>
+                        <a class="nav-link page-scroll" href="{{request.META.HTTP_REFERER}}">Regresar</a>
                     </li>
                 </ul>
             </div>

@@ -60,7 +60,6 @@ class IndexView(TemplateView):
 class CategoriaListView(ListView):
     model = Grupo
     template_name = 'landing/categorias.html'
-    # template_name = 'landing/ejemplo.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
@@ -86,9 +85,9 @@ class CategoriaListView(ListView):
 
 class ProductoDetail(DetailView):
     model = Producto
-    template_name = 'landing/categoria.html'     # grupo/producto_detail.html
+    template_name = 'landing/producto_detalle.html'     # grupo/producto_detail.html
 
 
-class ServiceDetail(DetailView):
+class ServicioDetail(DetailView):
     model = Entries
-    template_name = 'landing/categoria.html'     # service/service_detail.html
+    template_name = 'landing/servicio_detalle.html'     # service/service_detail.html
