@@ -22,6 +22,16 @@
         color: #ffffff;
         background-color: #3d5afe;
     }
+    .btn-gas:hover {
+        padding: 0.1rem 0.5rem;
+        color: #000000;
+        box-shadow: inset 0 -3px 0 0 rgb(130, 130, 130);
+    }
+    .btn-industria:hover {
+        padding: 0.1rem 0.5rem;
+        color: #000000;
+        box-shadow: inset 0 -3px 0 0 rgb(130, 130, 130);
+    }
 
     .card {
         min-width: 180px;
@@ -71,8 +81,8 @@
                         dónde podemos destacar 
                         <a class="btn btn-un btn-agro" href="#distribuidor">YPG Agro</a>, 
                         <a class="btn btn-un btn-eess" href="#eess">YPG Estación</a>, 
-                        <a class="btn btn-un btn-gas" href="#">YPG Gas</a> e 
-                        <a class="btn btn-un btn-industria" href="#">YPG Industria</a>, 
+                        <a class="btn btn-un btn-gas" href="javascript:void(0)">YPG Gas</a>, 
+                        <a class="btn btn-un btn-industria" href="javascript:void(0)">YPG Industria</a>, 
                         las cuales están relacionada con el mercado de combustibles, 
                         lubricantes, grasas, agroquímicos, fertilizantes, semillas, 
                         materiales, transporte y logística de cargas peligrosas.
@@ -105,90 +115,22 @@
             <div class="row mt-0">
                 <div class="col-md-10 mx-auto">
                     <div class="row card-services">
+                        {% for obj in agro %}
                         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-                            <a href="{% url 'landing:categoria_list' 5 %}">
+                            <a href="{% url 'landing:categoria_list' obj.categoria %}">
                                 <div class="card">
                                     <div class="card-body text-center">
                                         <div class="icon-box border-box-green">
                                             <div class="icon-box-inner small-xs text-primary">
-                                                    <img src="{% static 'img/landing/lubricante.svg' %}" alt="lubricantes" height="30" width="30">
+                                                <img src="{% static obj.imagen %}" alt="lubricantes" height="30" width="30">
                                             </div>
                                         </div>
-                                        <h5 class="mt-0 mb-3">Lubricantes</h5>
+                                        <h5 class="mt-0 mb-3">{{obj.texto}}</h5>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-                            <a href="{% url 'landing:categoria_list' 5 %}">
-                                <div class="card">                                
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box-green">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                    <img src="{% static 'img/landing/combustible.svg' %}" alt="lubricantes" height="30" width="30">
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">Combustibles</h5>
-                                    </a>
-                                </div>                                
-                            </div>
-                        </div>                        
-                        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-                            <a href="{% url 'landing:categoria_list' 6 %}">
-                                <div class="card">                                
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box-green">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <img src="{% static 'img/landing/fertilizante.svg' %}" alt="fertilizantes" height="30" width="30">
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">Fertilizantes</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-                            <a href="{% url 'landing:categoria_list' 2 %}">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box-green">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <img src="{% static 'img/landing/cultivo.svg' %}" alt="protección de cultivo" height="30" width="30">
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">Cultivo</h5>
-                                    </div>
-                                </div>
-                            <a>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-                            <a href="{% url 'landing:categoria_list' 11 %}">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box-green">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <img src="{% static 'img/landing/silo.svg' %}" alt="silo bolsa" height="30" width="30">
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">Silo bolsa</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-                            <a href="{% url 'landing:categoria_list' 11 %}">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box-green">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <img src="{% static 'img/landing/semilla.svg' %}" alt="silo bolsa" height="30" width="30">
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">Semillar</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -218,66 +160,23 @@
             <div class="row mt-0">
                 <div class="col-md-10 mx-auto">
                     <div class="row card-services">
+                        {% for obj in eess %}
                         <div class="col-md-6 mb-3">
-                            <a href="{% url 'landing:servicio_detail' 68 %}">
+                            <a href="{% url 'landing:servicio_detail' obj.categoria %}">
                                 <div class="card">
                                     <div class="card-body text-center">
                                         <div class="icon-box border-box">
                                             <div class="icon-box-inner small-xs text-primary">
-                                                <img src="{% static 'img/landing/surtidor.svg' %}" alt="combustibles" height="30" width="30">
+                                                <img src="{% static obj.imagen %}" alt="combustibles" height="30" width="30">
                                             </div>
                                         </div>
-                                        <h5 class="mt-0 mb-3">Combustibles</h5>
-                                        Diseñados para lograr el máximo desempeño, excelente poder de limpieza y óptimo rendimiento.
+                                        <h5 class="mt-0 mb-3">{{obj.texto}}</h5>
+                                        {{obj.descripcion}}
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <a href="{% url 'landing:servicio_detail' 69 %}">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <img src="{% static 'img/landing/tools.svg' %}" alt="ypf boxes" height="30" width="30">
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">YPF Boxes</h5>
-                                        Red con cobertura nacional ubicados en estaciones de servicio YPF.
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <a href="{% url 'landing:servicio_detail' 70 %}">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <img src="{% static 'img/landing/coffee.svg' %}" alt="full" height="30" width="30">
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">Full</h5>
-                                        Espacio de encuentro y permanencia placentera.
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <a href="{% url 'landing:servicio_detail' 71 %}">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="icon-box border-box">
-                                            <div class="icon-box-inner small-xs text-primary">
-                                                <img src="{% static 'img/landing/serviclub.svg' %}" alt="serviclub" height="30" width="30">
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-0 mb-3">Serviclub</h5>
-                                        Programa de fidelización de clientes en las estaciones de servicio YPF.
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        {% endfor %}                        
                     </div>
                 </div>
             </div>
@@ -291,7 +190,7 @@
                 <div class="col-md-8 mx-auto text-center">
                     <h2 class="text-white">Tabla de Equivalencias</h2>
                     <p class="lead text-white my-4">Consulta la equivalencia de su marca de lubricantes con los productos de YPF</p>
-                    <button class="btn btn-primary">Consultar</button>
+                    <a href="{% url 'equivalencia:form' %}" class="btn btn-primary">Consultar</a>
                 </div>
             </div>
         </div>

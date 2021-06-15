@@ -11,6 +11,30 @@ from apps.homepage.models import Entries, Grupo, Producto
 class IndexView(TemplateView):
     template_name = 'landing/index.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        # opciones de servicios
+        context['agro'] = [
+            {'texto': 'Lubricantes',   'imagen': 'img/landing/lubricante.svg',   'categoria': 5},
+            {'texto': 'Combustibles',  'imagen': 'img/landing/combustible.svg',  'categoria': 1},
+            {'texto': 'Fertilizantes', 'imagen': 'img/landing/fertilizante.svg', 'categoria': 6},
+            {'texto': 'Cultivos',      'imagen': 'img/landing/cultivo.svg',      'categoria': 2},
+            {'texto': 'Silo Bolsa',    'imagen': 'img/landing/silo.svg',         'categoria':11},
+            {'texto': 'Semillas',      'imagen': 'img/landing/semilla.svg',      'categoria':12},
+        ]
+        context['eess'] = [
+            {'texto': 'Combustible', 'imagen': 'img/landing/surtidor.svg',  'categoria': 68, 
+             'descripcion': 'Diseñados para lograr el máximo desempeño, excelente poder de limpieza y óptimo rendimiento.'},
+            {'texto': 'Full',        'imagen': 'img/landing/coffee.svg',    'categoria': 69, 
+             'descripcion': 'Red con cobertura nacional ubicados en estaciones de servicio YPF.'},
+            {'texto': 'Boxes',       'imagen': 'img/landing/tools.svg',     'categoria': 70, 
+             'descripcion': 'Espacio de encuentro y permanencia placentera.'},
+            {'texto': 'Serviclub',   'imagen': 'img/landing/serviclub.svg', 'categoria': 71, 
+             'descripcion': 'Programa de fidelización de clientes en las estaciones de servicio YPF.'},
+        ]
+        return context
+
     def post(self, request, *args, **kwargs):
         email = request.POST.get('email')
         name = request.POST.get('name')
