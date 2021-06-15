@@ -27,7 +27,7 @@ def test_send_mail_template(request):
                         'mails/ejemplo.html',
                         {
                             # config
-                            'logo_url': 'https://lubresrl.com.ar/static/faviicon.png',
+                            'logo_url': 'https://lubresrl.com.ar/static/favicon.png',
                             'footer_content': '<p>Ruta 9 km 1306 - T4101 Los Nogales - Tucuman, Argentina</p>',
                             'facebook_url': 'https://www.facebook.com/lubresrl.ypfagro/',
                             'twitter_url': 'https://ar.linkedin.com/company/lubre-srl',
