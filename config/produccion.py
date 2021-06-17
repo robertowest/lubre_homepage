@@ -87,7 +87,7 @@ TEMPLATES[0]['OPTIONS']['context_processors'].append('apps.homepage.contexts.app
 if DEBUG:
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL  = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -130,13 +130,6 @@ if DEBUG:
     INSTALLED_APPS += ['debug_toolbar',]
     MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware',]
     INTERNAL_IPS = ['localhost', '127.0.0.1', '172.19.0.1']  # gateway del docker
-
-
-# -------------------------------------------------------------------
-# configuración para django-crispy-forms
-# -------------------------------------------------------------------
-INSTALLED_APPS += ['crispy_forms',]
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 # -------------------------------------------------------------------

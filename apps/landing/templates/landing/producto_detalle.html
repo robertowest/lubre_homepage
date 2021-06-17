@@ -9,7 +9,8 @@
     <!-- encabezado -->
     <div class="row mb-4">
         <div class="col-md-12 mx-auto my-auto text-center">
-            <h1>{{object.nombre|lower|title}}</h1>
+            <!-- object.nombre|lower|title -->
+            <h1>{{object.nombre}}</h1>
         </div>
     </div>
 
@@ -19,7 +20,7 @@
             {% if object.imagen %}
                 <img src="/media/{{object.imagen}}" width="100%">
             {% else %}
-                <img src="/media/product/none.webp" alt="">
+                <img src="/media/product/none.webp" width="100%">
             {% endif %}
 
             {% if object.ficha_tecnica %}

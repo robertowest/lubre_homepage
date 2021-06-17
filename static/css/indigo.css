@@ -10189,3 +10189,11 @@ footer hr {
       display: none;
   }
 }
+
+
+.footer {
+}
+.footer>a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
