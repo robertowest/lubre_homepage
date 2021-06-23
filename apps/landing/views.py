@@ -16,21 +16,21 @@ class IndexView(TemplateView):
 
         # opciones de servicios
         context['agro'] = [
-            {'texto': 'Lubricantes',   'imagen': 'img/landing/lubricante.svg',   'categoria': 5},
-            {'texto': 'Combustibles',  'imagen': 'img/landing/combustible.svg',  'categoria': 1},
-            {'texto': 'Fertilizantes', 'imagen': 'img/landing/fertilizante.svg', 'categoria': 6},
-            {'texto': 'Cultivos',      'imagen': 'img/landing/cultivo.svg',      'categoria': 2},
-            {'texto': 'Silo Bolsa',    'imagen': 'img/landing/silo.svg',         'categoria':11},
-            {'texto': 'Semillas',      'imagen': 'img/landing/semilla.svg',      'categoria':12},
+            {'texto': 'Lubricantes',   'imagen': 'landing/img/lubricante.svg',   'categoria': 5},
+            {'texto': 'Combustibles',  'imagen': 'landing/img/combustible.svg',  'categoria': 1},
+            {'texto': 'Fertilizantes', 'imagen': 'landing/img/fertilizante.svg', 'categoria': 6},
+            {'texto': 'Cultivos',      'imagen': 'landing/img/cultivo.svg',      'categoria': 2},
+            {'texto': 'Silo Bolsa',    'imagen': 'landing/img/silo.svg',         'categoria':11},
+            {'texto': 'Semillas',      'imagen': 'landing/img/semilla.svg',      'categoria':12},
         ]
         context['eess'] = [
-            {'texto': 'Combustible', 'imagen': 'img/landing/surtidor.svg',  'categoria': 68, 
+            {'texto': 'Combustible', 'imagen': 'landing/img/surtidor.svg',  'categoria': 68, 
              'descripcion': 'Diseñados para lograr el máximo desempeño, excelente poder de limpieza y óptimo rendimiento.'},
-            {'texto': 'Full',        'imagen': 'img/landing/coffee.svg',    'categoria': 69, 
+            {'texto': 'Full',        'imagen': 'landing/img/coffee.svg',    'categoria': 69, 
              'descripcion': 'Red con cobertura nacional ubicados en estaciones de servicio YPF.'},
-            {'texto': 'Boxes',       'imagen': 'img/landing/tools.svg',     'categoria': 70, 
+            {'texto': 'Boxes',       'imagen': 'landing/img/tools.svg',     'categoria': 70, 
              'descripcion': 'Espacio de encuentro y permanencia placentera.'},
-            {'texto': 'Serviclub',   'imagen': 'img/landing/serviclub.svg', 'categoria': 71, 
+            {'texto': 'Serviclub',   'imagen': 'landing/img/serviclub.svg', 'categoria': 71, 
              'descripcion': 'Programa de fidelización de clientes en las estaciones de servicio YPF.'},
         ]
         return context

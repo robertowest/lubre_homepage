@@ -19,10 +19,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
         <!--vendors styles-->
-        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/fontawesome/css/font-awesome.min.css' %}">
 
         <!-- Bootstrap CSS / Esquema de colores -->
-        <link rel="stylesheet" href="{% static 'css/indigo.css' %}" id="theme-color">
+        <link rel="stylesheet" href="{% static 'landing/css/indigo.css' %}" id="theme-color">
 
         {% block css %}
         {% endblock %}
@@ -32,12 +32,12 @@
         {% endblock %}
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-        <script src="{% static 'js/popper.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'js/feather.min.js' %}"></script>
+        <script src="{% static 'vendors/jquery/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'vendors/popper/popper.min.js' %}"></script>
+        <script src="{% static 'vendors/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'vendors/fontawesome-free/js/feather.min.js' %}"></script>
         <!-- locales -->
-        <script src="{% static 'js/landing_scripts.js' %}"></script>
+        <script src="{% static 'landing/js/scripts.js' %}"></script>
 
         {% block jscript %}
         {% endblock %}
