@@ -101,11 +101,11 @@
             </div>
             {% if producto %}
             <div class="col-md-7 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
-                <img src="{% static '/images/marcas/' %}{{producto.marca_banner}}-banner.png">
+                <img src="{% static 'img/marcas/' %}{{producto.marca_banner}}-banner.png">
                 <h4>{{producto.producto}}</h4>
 
                 <br><p>Su equivalente YPF es:</p>
-                <!-- img src="{% static '/images/marcas/ypf-banner.png' %}" -->
+                <!-- img src="{% static 'img/marcas/ypf-banner.png' %}" -->
                 <h4>{{producto.equivalencia}}</h4>
             </div>
             {% endif %}

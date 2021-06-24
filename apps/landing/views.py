@@ -16,12 +16,12 @@ class IndexView(TemplateView):
 
         # opciones de servicios
         context['agro'] = [
-            {'texto': 'Lubricantes',   'imagen': 'landing/img/lubricante.svg',   'categoria': 5},
-            {'texto': 'Combustibles',  'imagen': 'landing/img/combustible.svg',  'categoria': 1},
             {'texto': 'Fertilizantes', 'imagen': 'landing/img/fertilizante.svg', 'categoria': 6},
             {'texto': 'Cultivos',      'imagen': 'landing/img/cultivo.svg',      'categoria': 2},
             {'texto': 'Silo Bolsa',    'imagen': 'landing/img/silo.svg',         'categoria':11},
             {'texto': 'Semillas',      'imagen': 'landing/img/semilla.svg',      'categoria':12},
+            {'texto': 'Lubricantes',   'imagen': 'landing/img/lubricante.svg',   'categoria': 5},
+            {'texto': 'Combustibles',  'imagen': 'landing/img/combustible.svg',  'categoria': 1},
         ]
         context['eess'] = [
             {'texto': 'Combustible', 'imagen': 'landing/img/surtidor.svg',  'categoria': 68, 
