@@ -10190,10 +10190,17 @@ footer hr {
   }
 }
 
-
+/* agregado por rwest */
 .footer {
 }
 .footer>a:hover {
   color: #ffffff;
   text-decoration: none;
+}
+
+.card-header {
+    padding: unset;
+}
+.card-body {
+  padding: 0 0 1.25rem;
 }

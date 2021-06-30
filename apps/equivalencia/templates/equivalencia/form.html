@@ -1,7 +1,9 @@
-{% extends 'base.html' %}
+{# extends 'base.html' #}
+{% extends 'landing/layers/base_categoria.html' %}
 {% load static %}
 
-{% block content %}
+
+{% block css %}
     <style>
         img { width: unset;  width: 100%; }
         .center {
@@ -10,108 +12,72 @@
             margin-right: auto;
         }
     </style>
+{% endblock %}
 
-    <header id="home" class="welcome-area">
-        <div class="header-top-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="logo">
-                            <img src="{% static 'logo.svg' %}" style="height: 30px; width: auto;"/> <a href="{% url 'homepage:homepage' %}">Lubre SRL</a>
-                        </div>
-                    </div>
 
-                    <div class="col-md-9">
-                        <div class="mainmenu">
-                            <div class="navbar navbar-nobg">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    </button>
-                                </div>
-                                <div class="navbar-collapse collapse">
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li>
-                                            <a class="smoth-scroll" href="{% url 'homepage:homepage' %}"><i class="fa fa-home"></i> Inicio</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+{% block content %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="section-title text-center">
-                    <h2>Tabla de Equivalencias</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
-                <div class="contact-form">
-                    <div class="row">
-                        <!--
-                        <form id="contact-form" method="post" enctype="multipart/form-data">
-                        -->
-                        <form action="." method="post">
-                            {% csrf_token %}
-                            <div class="form-group col-md-12">
-                                <select name="marca" class="form-control" id="marca" placeholder="Marca">
-                                {% for x,y in marcas %}
-                                    {% if y != 'YPF' %}
-                                    <option value="{{ x }}">{{ y }}</option>
-                                    {% endif %}
-                                {% endfor %}
-                                </select>                                    
-                                <!-- input type="text" name="marca" class="form-control" id="marca" placeholder="Marca" required="required" -->
-                            </div>
-                            <div class="form-group col-md-12">
-                                <select name="tipo" class="form-control" id="tipo" placeholder="Tipo de lubricante">
-                                {% for x,y in tipos %}
-                                    <option value="{{ x }}">{{ y }}</option>
-                                {% endfor %}
-                                </select>                                    
-                                <!-- input type="text" name="tipo" class="form-control" id="tipo" placeholder="Tipo de lubricante" -->
-                                <small id="productoHelp" class="form-text text-muted">Seleccione una opción para cargar los productos relacionados.</small>
-                            </div>
-                            <div class="form-group col-md-12">
-                                <select name="producto" class="form-control" id="producto" placeholder="Producto">
-                                    <option>---------------------</option>
-                                </select>
-                                <!-- input type="text" name="producto" class="form-control" id="producto" placeholder="Producto" -->
-                            </div>
-                            <div class="col-md-12">
-                                <div class="actions">
-                                    <input type="submit" value="Buscar" name="submit" id="submitButton" class="btn btn-lg btn-contact-bg" title="Buscar equivalencia">
-                                </div>
-                            </div>
-                        </form>
-                        <!-- / END CONTACT FORM DESIGN AREA -->
-                    </div>
-                </div>
-            </div>
-            {% if producto %}
-            <div class="col-md-7 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s" data-wow-offset="0">
-                <img src="{% static 'img/marcas/' %}{{producto.marca_banner}}-banner.png">
-                <h4>{{producto.producto}}</h4>
-
-                <br><p>Su equivalente YPF es:</p>
-                <!-- img src="{% static 'img/marcas/ypf-banner.png' %}" -->
-                <h4>{{producto.equivalencia}}</h4>
-            </div>
-            {% endif %}
+    <!-- encabezado -->
+    <div class="row mb-4">
+        <div class="col-md-12 mx-auto my-auto text-center">
+            <h1>Tabla de Equivalencias</h1>
         </div>
     </div>
+
+    <!-- formulario -->
+    <div class="row">
+        <div class="col-md-5 mx-auto order-2">
+            <form action="." method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <select name="marca" class="form-control" id="marca" placeholder="Marca">
+                            {% for x,y in marcas %}
+                                {% if y != 'YPF' %}
+                                <option value="{{ x }}">{{ y }}</option>
+                                {% endif %}
+                            {% endfor %}
+                            </select>                                    
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <select name="tipo" class="form-control" id="tipo" placeholder="Tipo de lubricante">
+                            {% for x,y in tipos %}
+                                <option value="{{ x }}">{{ y }}</option>
+                            {% endfor %}
+                            </select>                                    
+                            <small id="productoHelp" class="form-text text-muted">Seleccione una opción para cargar los productos relacionados.</small>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <select name="producto" class="form-control" id="producto" placeholder="Producto">
+                                <option>---------------------</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button class="btn btn-primary" id="submit" type="submit" disabled=true>Buscar equivalencia</button>
+                </div>
+            </form>
+        </div>
+        {% if producto %}
+        <div class="col-md-7 order-1">
+            <img src="{% static 'img/marcas/' %}{{producto.marca_banner}}-banner.png">
+            <h4>{{producto.producto}}</h4>
+
+            <br><p>Su equivalente YPF es:</p>
+            <!-- img src="{% static 'img/marcas/ypf-banner.png' %}" -->
+            <h4>{{producto.equivalencia}}</h4>
+        </div>
+        {% endif %}
+    </div>
+
 {% endblock %}
+
 
 {% block jscript %}
 <script>
@@ -128,19 +94,18 @@
         let marcaId = $('#marca').val();
         let tipoId = $('#tipo').val();
 
-        if(tipoId != 'None') {
-        }
-
         $.ajax({
             url: urlPath,
             data: {marcaId: marcaId, tipoId: tipoId},
             success: function(response) {
                 $('#producto').html(response);
+                // console.log( $('#producto option').length );
+                $('#submit').prop("disabled", $('#producto option').length==0);
             },
             error: function(xhr, status, error) {
                 alert(xhr.responseText);
             }
         })
-    }
+    };
 </script>
 {% endblock %}

@@ -43,7 +43,8 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="{{request.META.HTTP_REFERER}}">Regresar</a>
+                        <a class="nav-link page-scroll" href="{% url 'landing:index' %}">Inicio</a>
+                        {# request.META.HTTP_REFERER #}
                     </li>
                 </ul>
             </div>
@@ -94,8 +95,7 @@
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="{% static 'vendors/jquery/jquery-3.2.1.min.js' %}"></script>
-        <script src="{% static 'vendors/popper/popper.min.js' %}"></script>
-        <script src="{% static 'vendors/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
         <script src="{% static 'vendors/fontawesome-free/js/feather.min.js' %}"></script>
         <!-- locales -->
         <script src="{% static 'landing/js/scripts.js' %}"></script>
