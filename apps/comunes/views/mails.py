@@ -7,7 +7,7 @@ def test_send_mail(request):
     from_email = request.POST.get('from_email', 'info@lubresrl.com.ar')
     if subject and message and from_email:
         try:
-            send_mail(subject, message, from_email, ['roberto.west@gmail.com'])
+            send_mail(subject, message, from_email, ['info@lubresrl.com.ar'])
         except BadHeaderError:
             return HttpResponse('Encabezado inválido.')
         # return HttpResponseRedirect('/contact/thanks/')
@@ -59,7 +59,7 @@ def test_send_mail_template(request):
                         }
                    )
     try:
-        send_mail(subject, message, from_email, ['roberto.west@gmail.com'], 
+        send_mail(subject, message, from_email, ['info@lubresrl.com.ar'], 
                 fail_silently=True, html_message=html_message
         )
         return HttpResponse('Mensaje enviado correctamente.')
@@ -78,7 +78,7 @@ def test_simple_mail(request):
         send_templated_mail(
             template_name=template,
             from_email='info@lubresrl.com.ar',
-            recipient_list=['roberto.west@gmail.com'],
+            recipient_list=['info@lubresrl.com.ar'],
             context={
                 'username': request.user.username,
                 'email': request.user.email,

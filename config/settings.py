@@ -153,28 +153,6 @@ INSTALLED_APPS += [
 # AUTH_USER_MODEL = 'accounts.User'
 
 
-# # -------------------------------------------------------------------
-# # visualiza todas las consultas SQL por consola
-# # muy bueno para realizar depuración desde la consola
-# # -------------------------------------------------------------------
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'handlers': {
-#         'console': {
-#             'level': 'DEBUG',
-#             'class': 'logging.StreamHandler',
-#         }
-#     },
-#     'loggers': {
-#         'django.db.backends': {
-#             'handlers': ['console'],
-#             'level': 'DEBUG',
-#         },
-#     }
-# }
-
-
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',

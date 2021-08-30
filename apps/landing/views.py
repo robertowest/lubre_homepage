@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.views.generic import DetailView, ListView, TemplateView
 
-from django.core.mail import BadHeaderError, EmailMessage
+from django.core.mail import BadHeaderError, EmailMessage, send_mail
 from django.template.loader import render_to_string
 
 from apps.homepage.models import Entries, Grupo, Producto
@@ -70,7 +70,7 @@ class IndexView(TemplateView):
             subject = subject,
             body = body,
             from_email = email,
-            to = ['roberto.west@gmail.com']
+            to = ['info@lubresrl.com.ar']
         )
         send_mail.content_subtype = 'html'
         try:

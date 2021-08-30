@@ -67,7 +67,7 @@ DATABASES = {
     #     'PORT': '3306',
     #     'USER': 'root',
     #     'PASSWORD': 'roberto',
-    # }, 
+    # },
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'PORT': '3306',
@@ -75,7 +75,7 @@ DATABASES = {
         'HOST': config('DJANGO_DB_HOST', default='192.168.1.2'),
         'USER': config('DJANGO_DB_USER', default='roberto'),
         'PASSWORD': config('DJANGO_DB_PASS', default='roberto'),
-    },    
+    },
     'firebird': {
         # lubresrl.dyndns.org:4310
         'ENGINE': 'django.db.backends.firebird',
@@ -149,10 +149,20 @@ LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale'),]
 # para que funcione el proceso de registro de usuarios
 # esto evitará que se envíe un email e imprimirá el resultado por la consola
 # -------------------------------------------------------------------
+# # creamos un servidor de correo electrónico por consola (EMailDump)
+# # python3 -m smtpd -n -c DebuggingServer localhost:1025
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_USE_TLS = False
+# DEFAULT_FROM_EMAIL = 'WebServer <info@lubresrl.com.ar>'
 if ENV == 'DEV':
     EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
     EMAIL_FILE_PATH = os.path.join(BASE_DIR, "static/sent_emails")
 else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = config('DJANGO_EMAIL_HOST', default='localhost')
     EMAIL_PORT = config('DJANGO_EMAIL_PORT', default=25, cast=int)
     EMAIL_HOST_USER = config('DJANGO_EMAIL_HOST_USER')
@@ -249,6 +259,29 @@ MERCADOPAGO = {
     'pending_url': 'mp:payment_pending',
     'base_host': 'https://lubresrl.com.ar',
 }
+
+
+# # -------------------------------------------------------------------
+# # visualiza todas las consultas SQL por consola
+# # muy bueno para realizar depuración desde la consola
+# # -------------------------------------------------------------------
+# # logging.basicConfig(level=logging.DEBUG, format= %(asctime)s %(levelname)s %(message)s',)
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#         }
+#     },
+#     'loggers': {
+#         'django.db.backends': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#         },
+#     }
+# }
 
 
 # -------------------------------------------------------------------
